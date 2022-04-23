@@ -19,8 +19,7 @@ namespace GUI
             Application.Run(new frmDashboard_AD());
         }
         //Luan vip
-        //Hao
-        //Huu
-        //hieu1
+        //Hao 
+        //haidhifjahfgk
     }
 }
