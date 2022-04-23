@@ -18,7 +18,7 @@ namespace GUI
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmDashboard_AD());
         }
-        //hao deptrai
+        //hieu dep trai
         //Luan vip
         //Hao 
         //Huu
