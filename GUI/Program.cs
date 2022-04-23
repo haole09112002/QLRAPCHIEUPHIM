@@ -19,6 +19,6 @@ namespace GUI
             Application.Run(new frmDashboard_AD());
         }
         //hao deptrai
-        
+        //Luan vip
     }
 }
