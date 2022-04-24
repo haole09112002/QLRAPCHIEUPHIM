@@ -50,10 +50,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(142, 365);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 25);
+            this.label1.Size = new System.Drawing.Size(145, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản Lí Phim";
             // 
@@ -180,7 +180,7 @@
             // 
             // btnDMK
             // 
-            this.btnDMK.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnDMK.BackColor = System.Drawing.Color.Blue;
             this.btnDMK.ForeColor = System.Drawing.Color.Cyan;
             this.btnDMK.Location = new System.Drawing.Point(445, 558);
             this.btnDMK.Name = "btnDMK";

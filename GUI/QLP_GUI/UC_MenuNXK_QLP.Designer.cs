@@ -34,7 +34,7 @@
             // 
             // btnTaoPhieu
             // 
-            this.btnTaoPhieu.BackColor = System.Drawing.Color.Lime;
+            this.btnTaoPhieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnTaoPhieu.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnTaoPhieu.Image = global::GUI.Properties.Resources.dexuat;
             this.btnTaoPhieu.Location = new System.Drawing.Point(0, 0);
@@ -49,7 +49,7 @@
             // 
             // btnLSNX
             // 
-            this.btnLSNX.BackColor = System.Drawing.Color.Lime;
+            this.btnLSNX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnLSNX.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnLSNX.Image = global::GUI.Properties.Resources.kho;
             this.btnLSNX.Location = new System.Drawing.Point(258, 0);

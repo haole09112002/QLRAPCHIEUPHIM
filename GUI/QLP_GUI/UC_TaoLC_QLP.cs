@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
 {
-    public partial class UC_LSNX : UserControl
+    public partial class UC_TaoLC_QLP : UserControl
     {
-        public UC_LSNX()
+        public UC_TaoLC_QLP()
         {
             InitializeComponent();
         }
