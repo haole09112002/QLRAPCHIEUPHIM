@@ -179,7 +179,9 @@
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.Color.White;
-            this.btnLuu.ForeColor = System.Drawing.Color.Blue;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.Black;
             this.btnLuu.Location = new System.Drawing.Point(805, 446);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
@@ -205,7 +207,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.human;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(88, 78);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
