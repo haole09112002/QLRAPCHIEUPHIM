@@ -1,4 +1,4 @@
-﻿namespace GUI.AD_Form
+﻿namespace GUI.AD_GUI
 {
     partial class UC_Kho_AD
     {

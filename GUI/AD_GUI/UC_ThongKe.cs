@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI.AD_Form
+namespace GUI.AD_GUI
 {
     public partial class UC_ThongKe : UserControl
     {
