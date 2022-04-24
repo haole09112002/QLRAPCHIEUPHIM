@@ -70,6 +70,30 @@
     <Compile Include="AD_GUI\frmDashboard_AD.Designer.cs">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD_GUI\UC_CaLam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_CaLam.Designer.cs">
+      <DependentUpon>UC_CaLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_CaNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_CaNhan.Designer.cs">
+      <DependentUpon>UC_CaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_DeXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_DeXuat.Designer.cs">
+      <DependentUpon>UC_DeXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_HopDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_HopDong.Designer.cs">
+      <DependentUpon>UC_HopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="AD_GUI\UC_Kho_AD.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,11 +106,23 @@
     <Compile Include="AD_GUI\UC_LichChieu_AD.Designer.cs">
       <DependentUpon>UC_LichChieu_AD.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD_GUI\UC_MenuKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_MenuKho.Designer.cs">
+      <DependentUpon>UC_MenuKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="AD_GUI\UC_NCC_AD.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AD_GUI\UC_NCC_AD.Designer.cs">
       <DependentUpon>UC_NCC_AD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_PhieuNhapXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_PhieuNhapXuat.Designer.cs">
+      <DependentUpon>UC_PhieuNhapXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="AD_GUI\UC_ThongKe.cs">
       <SubType>UserControl</SubType>
@@ -99,6 +135,12 @@
     </Compile>
     <Compile Include="AD_GUI\UC_MenuNhanVien.Designer.cs">
       <DependentUpon>UC_MenuNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_ThongTinNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_ThongTinNV.Designer.cs">
+      <DependentUpon>UC_ThongTinNV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -201,17 +243,26 @@
     <EmbeddedResource Include="AD_GUI\frmDashboard_AD.resx">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_CaNhan.resx">
+      <DependentUpon>UC_CaNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_Kho_AD.resx">
       <DependentUpon>UC_Kho_AD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_LichChieu_AD.resx">
       <DependentUpon>UC_LichChieu_AD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_MenuKho.resx">
+      <DependentUpon>UC_MenuKho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_MenuNhanVien.resx">
       <DependentUpon>UC_MenuNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_NCC_AD.resx">
       <DependentUpon>UC_NCC_AD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_PhieuNhapXuat.resx">
+      <DependentUpon>UC_PhieuNhapXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_ThongKe.resx">
       <DependentUpon>UC_ThongKe.cs</DependentUpon>

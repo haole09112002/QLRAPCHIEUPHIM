@@ -18,9 +18,10 @@ namespace GUI.AD_GUI
         }
         UC_ThongKe ucThongKe = new UC_ThongKe();
         UC_LichChieu_AD ucLichChieu = new UC_LichChieu_AD();
-        UC_Kho_AD ucKho = new UC_Kho_AD();
+     
         UC_NCC_AD ucNCC = new UC_NCC_AD();
-        //UC_PhieuNhapXuatKho ucPhieuNXKHo = new UC_PhieuNhapXuatKho();
+        UC_MenuNhanVien ucMenuNhanVien = new UC_MenuNhanVien();
+        UC_MenuKho ucMenuKho = new UC_MenuKho();
         private void changeColorButton(Button btn)
         {
             btn.BackColor = Color.FromArgb(0, 144, 153);
@@ -59,12 +60,10 @@ namespace GUI.AD_GUI
         private void btnNCC_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
-       //     AddControlsToPnMenu(ucMenuPhim);
             AddControlsToPnCenter(ucNCC);
-         //   ucMenuPhim.d = new UC_MenuPhim_AD.Mydel(AddControlsToPnCenter);
             changeColorButton(btnNCC);
         }
-        void AddControlsToPnCenter(Control c)
+        private void AddControlsToPnCenter(Control c)
         {
             c.Dock = DockStyle.Fill;
             pnCenter.Controls.Clear();
@@ -80,15 +79,27 @@ namespace GUI.AD_GUI
         private void btnKho_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
-            AddControlsToPnCenter(ucKho);
+            AddControlsToPnMenu(ucMenuKho);
+            AddControlsToPnCenter(ucMenuKho.ucThongTinKho);
+            ucMenuNhanVien.d = new UC_MenuNhanVien.Mydel(AddControlsToPnCenter);
             changeColorButton(btnKho);
         }
 
         private void btnNV_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
-            AddControlsToPnCenter(ucKho);
+            AddControlsToPnMenu(ucMenuNhanVien);
+           
+            AddControlsToPnCenter(ucMenuNhanVien.ucThongTinNV);
+            ucMenuNhanVien.d = new UC_MenuNhanVien.Mydel(AddControlsToPnCenter);
             changeColorButton(btnNV);
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmDangNhap frm = new frmDangNhap();
+            frm.Show();
         }
     }
 }
