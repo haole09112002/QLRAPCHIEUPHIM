@@ -13,37 +13,30 @@ namespace GUI.QLP_GUI
 {
     public partial class UC_MenuTaoLC_QLP : UserControl
     {
-        private Panel pnCenter;
+        public delegate void MyDel(Control c);
+        public MyDel d;
         public UC_MenuTaoLC_QLP()
         {
             InitializeComponent();
         }
-        public UC_MenuTaoLC_QLP(Panel _pnCenter) :this()
-        {
-            pnCenter = _pnCenter;
-        }
-        UC_DSPhim_QLP ucDSP = new UC_DSPhim_QLP();
+        
+        UC_TaoLC_QLP ucTLC = new UC_TaoLC_QLP();
         UC_DSLCCT_QLP ucDSCT = new UC_DSLCCT_QLP();
         UC_DSLCDK_QLP ucDSDK = new UC_DSLCDK_QLP();
-        void AddControlsToPnCenter(Control c)
-        {
-            c.Dock = DockStyle.Fill;
-            pnCenter.Controls.Clear();
-            pnCenter.Controls.Add(c);
-        }
+        
         private void btnTaoLC_Click(object sender, EventArgs e)
         {
-            AddControlsToPnCenter(ucDSP);
+            d(ucTLC);
         }
 
         private void btLCDuKien_Click(object sender, EventArgs e)
         {
-            AddControlsToPnCenter(ucDSDK);
+            d(ucDSDK);
         }
 
         private void btnLCChinhThuc_Click(object sender, EventArgs e)
         {
-            AddControlsToPnCenter(ucDSCT);
+            d(ucDSCT);
         }
     }
 }

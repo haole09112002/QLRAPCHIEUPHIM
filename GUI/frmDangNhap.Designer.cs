@@ -213,7 +213,7 @@
             this.pbxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxExit.TabIndex = 1;
             this.pbxExit.TabStop = false;
-            this.pbxExit.Click += new System.EventHandler(this.pbxExit_Click);
+//            this.pbxExit.Click += new System.EventHandler(this.pbxExit_Click);
             // 
             // pictureBox2
             // 
