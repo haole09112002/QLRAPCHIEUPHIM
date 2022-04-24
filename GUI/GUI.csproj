@@ -108,11 +108,83 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLP_GUI\Form1.cs">
+    <Compile Include="QLP_GUI\frm_QLP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="QLP_GUI\frm_QLP.Designer.cs">
+      <DependentUpon>frm_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_CN_QLP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_CN_QLP.Designer.cs">
+      <DependentUpon>UC_CN_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_DSLCCT_QLP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_DSLCCT_QLP.Designer.cs">
+      <DependentUpon>UC_DSLCCT_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_DSLCDK_QLP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_DSLCDK_QLP.Designer.cs">
+      <DependentUpon>UC_DSLCDK_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_DSPDX_QLP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_DSPDX_QLP.Designer.cs">
+      <DependentUpon>UC_DSPDX_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_DSPhim_QLP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_DSPhim_QLP.Designer.cs">
+      <DependentUpon>UC_DSPhim_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_LSNX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_LSNX.Designer.cs">
+      <DependentUpon>UC_LSNX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_MenuDeXuat_QLP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_MenuDeXuat_QLP.Designer.cs">
+      <DependentUpon>UC_MenuDeXuat_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_MenuNXK_QLP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_MenuNXK_QLP.Designer.cs">
+      <DependentUpon>UC_MenuNXK_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_MenuTaoLC_QLP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_MenuTaoLC_QLP.Designer.cs">
+      <DependentUpon>UC_MenuTaoLC_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_TaoDX_QLP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_TaoDX_QLP.Designer.cs">
+      <DependentUpon>UC_TaoDX_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_TaoPhieu_QLP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_TaoPhieu_QLP.Designer.cs">
+      <DependentUpon>UC_TaoPhieu_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_TTPhim_QLP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_TTPhim_QLP.Designer.cs">
+      <DependentUpon>UC_TTPhim_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLVT_GUI\Form1.cs">
       <SubType>Form</SubType>
@@ -148,6 +220,45 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QLP_GUI\frm_QLP.resx">
+      <DependentUpon>frm_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\UC_CN_QLP.resx">
+      <DependentUpon>UC_CN_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\UC_DSLCCT_QLP.resx">
+      <DependentUpon>UC_DSLCCT_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\UC_DSLCDK_QLP.resx">
+      <DependentUpon>UC_DSLCDK_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\UC_DSPDX_QLP.resx">
+      <DependentUpon>UC_DSPDX_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\UC_DSPhim_QLP.resx">
+      <DependentUpon>UC_DSPhim_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\UC_LSNX.resx">
+      <DependentUpon>UC_LSNX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\UC_MenuDeXuat_QLP.resx">
+      <DependentUpon>UC_MenuDeXuat_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\UC_MenuNXK_QLP.resx">
+      <DependentUpon>UC_MenuNXK_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\UC_MenuTaoLC_QLP.resx">
+      <DependentUpon>UC_MenuTaoLC_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\UC_TaoDX_QLP.resx">
+      <DependentUpon>UC_TaoDX_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\UC_TaoPhieu_QLP.resx">
+      <DependentUpon>UC_TaoPhieu_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\UC_TTPhim_QLP.resx">
+      <DependentUpon>UC_TTPhim_QLP.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
