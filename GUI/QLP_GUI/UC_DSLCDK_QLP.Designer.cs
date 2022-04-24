@@ -34,18 +34,20 @@
             this.btnChinhSua = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnSapXep = new System.Windows.Forms.Button();
+            this.cBSapXep = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(37, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 25);
+            this.label1.Size = new System.Drawing.Size(351, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Danh Sách Lịch Chiếu Dự Kiến";
+            this.label1.Text = "DANH SÁCH LỊCH CHIẾU DỰ KIẾN";
             // 
             // dataGridView1
             // 
@@ -59,8 +61,8 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.BackColor = System.Drawing.Color.Red;
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.BackColor = System.Drawing.Color.White;
+            this.btnXoa.ForeColor = System.Drawing.Color.Blue;
             this.btnXoa.Location = new System.Drawing.Point(246, 680);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(94, 33);
@@ -70,8 +72,8 @@
             // 
             // btnChinhSua
             // 
-            this.btnChinhSua.BackColor = System.Drawing.Color.Blue;
-            this.btnChinhSua.ForeColor = System.Drawing.Color.White;
+            this.btnChinhSua.BackColor = System.Drawing.Color.White;
+            this.btnChinhSua.ForeColor = System.Drawing.Color.Blue;
             this.btnChinhSua.Location = new System.Drawing.Point(474, 680);
             this.btnChinhSua.Name = "btnChinhSua";
             this.btnChinhSua.Size = new System.Drawing.Size(94, 33);
@@ -81,9 +83,9 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(735, 680);
+            this.btnTimKiem.BackColor = System.Drawing.Color.White;
+            this.btnTimKiem.ForeColor = System.Drawing.Color.Blue;
+            this.btnTimKiem.Location = new System.Drawing.Point(748, 31);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(94, 33);
             this.btnTimKiem.TabIndex = 4;
@@ -93,15 +95,37 @@
             // txtTimKiem
             // 
             this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtTimKiem.Location = new System.Drawing.Point(858, 683);
+            this.txtTimKiem.Location = new System.Drawing.Point(871, 34);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(197, 26);
             this.txtTimKiem.TabIndex = 5;
+            // 
+            // btnSapXep
+            // 
+            this.btnSapXep.BackColor = System.Drawing.Color.White;
+            this.btnSapXep.ForeColor = System.Drawing.Color.Blue;
+            this.btnSapXep.Location = new System.Drawing.Point(748, 680);
+            this.btnSapXep.Name = "btnSapXep";
+            this.btnSapXep.Size = new System.Drawing.Size(94, 33);
+            this.btnSapXep.TabIndex = 6;
+            this.btnSapXep.Text = "Sắp Xếp";
+            this.btnSapXep.UseVisualStyleBackColor = false;
+            // 
+            // cBSapXep
+            // 
+            this.cBSapXep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cBSapXep.FormattingEnabled = true;
+            this.cBSapXep.Location = new System.Drawing.Point(871, 680);
+            this.cBSapXep.Name = "cBSapXep";
+            this.cBSapXep.Size = new System.Drawing.Size(197, 28);
+            this.cBSapXep.TabIndex = 7;
             // 
             // UC_DSLCDK_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cBSapXep);
+            this.Controls.Add(this.btnSapXep);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnChinhSua);
@@ -124,5 +148,7 @@
         private System.Windows.Forms.Button btnChinhSua;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button btnSapXep;
+        private System.Windows.Forms.ComboBox cBSapXep;
     }
 }

@@ -44,16 +44,17 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnDMK = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
+            this.btnChinhSua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(142, 365);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 25);
+            this.label1.Size = new System.Drawing.Size(145, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản Lí Phim";
             // 
@@ -131,6 +132,7 @@
             // txtTen
             // 
             this.txtTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtTen.Enabled = false;
             this.txtTen.Location = new System.Drawing.Point(593, 97);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(437, 26);
@@ -139,6 +141,7 @@
             // txtDiaChi
             // 
             this.txtDiaChi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtDiaChi.Enabled = false;
             this.txtDiaChi.Location = new System.Drawing.Point(593, 236);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(437, 26);
@@ -147,6 +150,7 @@
             // txtDienThoai
             // 
             this.txtDienThoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtDienThoai.Enabled = false;
             this.txtDienThoai.Location = new System.Drawing.Point(593, 310);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(437, 26);
@@ -173,6 +177,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(593, 162);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(437, 26);
@@ -180,9 +185,9 @@
             // 
             // btnDMK
             // 
-            this.btnDMK.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnDMK.ForeColor = System.Drawing.Color.Cyan;
-            this.btnDMK.Location = new System.Drawing.Point(445, 558);
+            this.btnDMK.BackColor = System.Drawing.Color.White;
+            this.btnDMK.ForeColor = System.Drawing.Color.Blue;
+            this.btnDMK.Location = new System.Drawing.Point(408, 558);
             this.btnDMK.Name = "btnDMK";
             this.btnDMK.Size = new System.Drawing.Size(124, 46);
             this.btnDMK.TabIndex = 14;
@@ -191,19 +196,31 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(835, 558);
+            this.btnLuu.BackColor = System.Drawing.Color.White;
+            this.btnLuu.ForeColor = System.Drawing.Color.Blue;
+            this.btnLuu.Location = new System.Drawing.Point(906, 558);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(124, 46);
             this.btnLuu.TabIndex = 15;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
             // 
+            // btnChinhSua
+            // 
+            this.btnChinhSua.BackColor = System.Drawing.Color.White;
+            this.btnChinhSua.ForeColor = System.Drawing.Color.Blue;
+            this.btnChinhSua.Location = new System.Drawing.Point(672, 558);
+            this.btnChinhSua.Name = "btnChinhSua";
+            this.btnChinhSua.Size = new System.Drawing.Size(124, 46);
+            this.btnChinhSua.TabIndex = 16;
+            this.btnChinhSua.Text = "Chỉnh Sửa";
+            this.btnChinhSua.UseVisualStyleBackColor = false;
+            // 
             // UC_CN_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnChinhSua);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnDMK);
             this.Controls.Add(this.textBox1);
@@ -246,5 +263,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnDMK;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnChinhSua;
     }
 }

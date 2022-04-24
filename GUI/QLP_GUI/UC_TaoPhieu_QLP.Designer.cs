@@ -45,50 +45,50 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(248, 191);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 25);
+            this.label1.Size = new System.Drawing.Size(114, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Loại Phiếu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(248, 270);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 25);
+            this.label2.Size = new System.Drawing.Size(101, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã Phim";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(248, 353);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 25);
+            this.label3.Size = new System.Drawing.Size(104, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Số Lượng";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(248, 434);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 25);
+            this.label4.Size = new System.Drawing.Size(127, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Đơn Vị Tính";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(248, 508);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 25);
+            this.label5.Size = new System.Drawing.Size(90, 25);
             this.label5.TabIndex = 4;
             this.label5.Text = "Mã Kho";
             // 
@@ -137,9 +137,9 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.BackColor = System.Drawing.Color.Red;
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(253, 619);
+            this.btnHuy.BackColor = System.Drawing.Color.White;
+            this.btnHuy.ForeColor = System.Drawing.Color.Blue;
+            this.btnHuy.Location = new System.Drawing.Point(757, 609);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(110, 37);
             this.btnHuy.TabIndex = 10;
@@ -148,9 +148,9 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(757, 619);
+            this.btnLuu.BackColor = System.Drawing.Color.White;
+            this.btnLuu.ForeColor = System.Drawing.Color.Blue;
+            this.btnLuu.Location = new System.Drawing.Point(253, 609);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(110, 37);
             this.btnLuu.TabIndex = 11;
