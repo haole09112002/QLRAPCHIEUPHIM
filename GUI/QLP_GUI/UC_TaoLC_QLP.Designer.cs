@@ -62,9 +62,9 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(35, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 25);
+            this.label1.Size = new System.Drawing.Size(193, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Danh Sách Phim";
+            this.label1.Text = "DANH SÁCH PHIM";
             // 
             // dGVDanhSachPhim
             // 
@@ -82,9 +82,9 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(403, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(261, 25);
+            this.label2.Size = new System.Drawing.Size(291, 25);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Danh Sách Phòng Chiếu";
+            this.label2.Text = "DANH SÁCH PHÒNG CHIẾU";
             // 
             // dGVDanhSachPC
             // 
@@ -102,9 +102,9 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(755, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 25);
+            this.label3.Size = new System.Drawing.Size(205, 25);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Khung Giờ Chiếu";
+            this.label3.Text = "KHUNG GIỜ CHIẾU";
             // 
             // label4
             // 
@@ -140,13 +140,14 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(35, 515);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 25);
+            this.label5.Size = new System.Drawing.Size(128, 25);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Lịch Chiếu";
+            this.label5.Text = "LỊCH CHIẾU";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtNgayGioChieu);
             this.panel1.Controls.Add(this.txtPhongChieu);
             this.panel1.Controls.Add(this.txtTenPhim);
@@ -224,7 +225,7 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.BackColor = System.Drawing.Color.White;
+            this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtTimKiem.Location = new System.Drawing.Point(760, 521);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(244, 26);
@@ -256,9 +257,9 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.BackColor = System.Drawing.Color.Red;
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(973, 702);
+            this.btnHuy.BackColor = System.Drawing.Color.White;
+            this.btnHuy.ForeColor = System.Drawing.Color.Blue;
+            this.btnHuy.Location = new System.Drawing.Point(1010, 702);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(94, 33);
             this.btnHuy.TabIndex = 17;
@@ -267,16 +268,16 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.Color.Lime;
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(760, 702);
+            this.btnLuu.BackColor = System.Drawing.Color.White;
+            this.btnLuu.ForeColor = System.Drawing.Color.Blue;
+            this.btnLuu.Location = new System.Drawing.Point(776, 702);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(94, 33);
             this.btnLuu.TabIndex = 18;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
             // 
-            // UC_DSPhim_QLP
+            // UC_TaoLC_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -296,7 +297,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dGVDanhSachPhim);
             this.Controls.Add(this.label1);
-            this.Name = "UC_DSPhim_QLP";
+            this.Name = "UC_TaoLC_QLP";
             this.Size = new System.Drawing.Size(1117, 766);
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPC)).EndInit();

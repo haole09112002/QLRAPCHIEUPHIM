@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GUI.AD_Form;
+using GUI.QLP_GUI;
 namespace GUI
 {
     internal static class Program
@@ -16,7 +17,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDashboard_AD());
+            Application.Run(new frm_QLP());
         }
         //Luan vip
         //Hao 

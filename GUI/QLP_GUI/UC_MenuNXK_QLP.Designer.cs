@@ -54,9 +54,9 @@
             this.btnLSNX.Image = global::GUI.Properties.Resources.kho;
             this.btnLSNX.Location = new System.Drawing.Point(258, 0);
             this.btnLSNX.Name = "btnLSNX";
-            this.btnLSNX.Size = new System.Drawing.Size(281, 36);
+            this.btnLSNX.Size = new System.Drawing.Size(333, 36);
             this.btnLSNX.TabIndex = 1;
-            this.btnLSNX.Text = "    Lịch Sử Nhập Xuất";
+            this.btnLSNX.Text = "    Danh Sách Phiếu Nhập Xuất";
             this.btnLSNX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLSNX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLSNX.UseVisualStyleBackColor = false;

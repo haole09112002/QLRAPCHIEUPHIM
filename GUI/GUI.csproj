@@ -132,6 +132,18 @@
     <Compile Include="QLP_GUI\frm_QLP.Designer.cs">
       <DependentUpon>frm_QLP.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLP_GUI\frm_TaoDeXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_TaoDeXuat.Designer.cs">
+      <DependentUpon>frm_TaoDeXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_ThongTinNCC_QLP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_ThongTinNCC_QLP.Designer.cs">
+      <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLP_GUI\UC_CN_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,6 +168,12 @@
     <Compile Include="QLP_GUI\UC_DSPDX_QLP.Designer.cs">
       <DependentUpon>UC_DSPDX_QLP.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLP_GUI\UC_NCC_QLP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\UC_NCC_QLP.Designer.cs">
+      <DependentUpon>UC_NCC_QLP.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLP_GUI\UC_TaoLC_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,12 +186,6 @@
     <Compile Include="QLP_GUI\UC_LSNX_QLP.Designer.cs">
       <DependentUpon>UC_LSNX_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_MenuDeXuat_QLP.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLP_GUI\UC_MenuDeXuat_QLP.Designer.cs">
-      <DependentUpon>UC_MenuDeXuat_QLP.cs</DependentUpon>
-    </Compile>
     <Compile Include="QLP_GUI\UC_MenuNXK_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,12 +197,6 @@
     </Compile>
     <Compile Include="QLP_GUI\UC_MenuTaoLC_QLP.Designer.cs">
       <DependentUpon>UC_MenuTaoLC_QLP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLP_GUI\UC_TaoDX_QLP.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLP_GUI\UC_TaoDX_QLP.Designer.cs">
-      <DependentUpon>UC_TaoDX_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLP_GUI\UC_TaoPhieu_QLP.cs">
       <SubType>UserControl</SubType>
@@ -250,6 +256,12 @@
     <EmbeddedResource Include="QLP_GUI\frm_QLP.resx">
       <DependentUpon>frm_QLP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\frm_TaoDeXuat.resx">
+      <DependentUpon>frm_TaoDeXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\frm_ThongTinNCC_QLP.resx">
+      <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_CN_QLP.resx">
       <DependentUpon>UC_CN_QLP.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,23 +274,20 @@
     <EmbeddedResource Include="QLP_GUI\UC_DSPDX_QLP.resx">
       <DependentUpon>UC_DSPDX_QLP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\UC_NCC_QLP.resx">
+      <DependentUpon>UC_NCC_QLP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_TaoLC_QLP.resx">
       <DependentUpon>UC_TaoLC_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_LSNX_QLP.resx">
       <DependentUpon>UC_LSNX_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_MenuDeXuat_QLP.resx">
-      <DependentUpon>UC_MenuDeXuat_QLP.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_MenuNXK_QLP.resx">
       <DependentUpon>UC_MenuNXK_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_MenuTaoLC_QLP.resx">
       <DependentUpon>UC_MenuTaoLC_QLP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_TaoDX_QLP.resx">
-      <DependentUpon>UC_TaoDX_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_TaoPhieu_QLP.resx">
       <DependentUpon>UC_TaoPhieu_QLP.cs</DependentUpon>

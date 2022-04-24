@@ -46,9 +46,9 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(38, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 25);
+            this.label1.Size = new System.Drawing.Size(193, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Danh Sách Phim";
+            this.label1.Text = "DANH SÁCH PHIM";
             // 
             // dGVDanhSachPhim
             // 
@@ -106,7 +106,7 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(836, 40);
             this.txtTimKiem.Name = "txtTimKiem";
@@ -126,7 +126,7 @@
             // 
             // txtSapXep
             // 
-            this.txtSapXep.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSapXep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtSapXep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSapXep.Location = new System.Drawing.Point(850, 640);
             this.txtSapXep.Name = "txtSapXep";

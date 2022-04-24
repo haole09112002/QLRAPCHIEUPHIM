@@ -32,22 +32,24 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.dGVDSLCCT = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSapXep = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDSLCCT)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTimKiem
             // 
             this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtTimKiem.Location = new System.Drawing.Point(746, 690);
+            this.txtTimKiem.Location = new System.Drawing.Point(762, 46);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(315, 26);
             this.txtTimKiem.TabIndex = 11;
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(626, 687);
+            this.btnTimKiem.BackColor = System.Drawing.Color.White;
+            this.btnTimKiem.ForeColor = System.Drawing.Color.Blue;
+            this.btnTimKiem.Location = new System.Drawing.Point(642, 43);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(94, 33);
             this.btnTimKiem.TabIndex = 10;
@@ -70,14 +72,37 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(43, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(357, 25);
+            this.label1.Size = new System.Drawing.Size(391, 25);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Danh Sách Lịch Chiếu Chính Thức";
+            this.label1.Text = "DANH SÁCH LỊCH CHIẾU CHÍNH THỨC";
+            // 
+            // btnSapXep
+            // 
+            this.btnSapXep.BackColor = System.Drawing.Color.White;
+            this.btnSapXep.ForeColor = System.Drawing.Color.Blue;
+            this.btnSapXep.Location = new System.Drawing.Point(642, 668);
+            this.btnSapXep.Name = "btnSapXep";
+            this.btnSapXep.Size = new System.Drawing.Size(94, 33);
+            this.btnSapXep.TabIndex = 12;
+            this.btnSapXep.Text = "Sắp Xếp";
+            this.btnSapXep.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.comboBox1.ForeColor = System.Drawing.Color.Blue;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(762, 673);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(312, 28);
+            this.comboBox1.TabIndex = 13;
             // 
             // UC_DSLCCT_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnSapXep);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.dGVDSLCCT);
@@ -96,5 +121,7 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.DataGridView dGVDSLCCT;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSapXep;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

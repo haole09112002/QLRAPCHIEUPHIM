@@ -18,8 +18,6 @@ namespace GUI.QLP_GUI
         }
         UC_TTPhim_QLP ucTTP = new UC_TTPhim_QLP();
         UC_CN_QLP ucCN = new UC_CN_QLP();
-        UC_TaoDX_QLP ucTDX = new UC_TaoDX_QLP();
-        UC_MenuDeXuat_QLP ucMDX = new UC_MenuDeXuat_QLP();
         UC_TaoPhieu_QLP ucTP = new UC_TaoPhieu_QLP();
         UC_LSNX_QLP ucLS = new UC_LSNX_QLP();
         UC_MenuNXK_QLP ucMNXK = new UC_MenuNXK_QLP();
@@ -27,6 +25,8 @@ namespace GUI.QLP_GUI
         UC_DSLCCT_QLP ucDSCT = new UC_DSLCCT_QLP();
         UC_DSLCDK_QLP ucDSDK = new UC_DSLCDK_QLP();
         UC_MenuTaoLC_QLP ucMTLC = new UC_MenuTaoLC_QLP();
+        UC_DSPDX_QLP ucDSPDX = new UC_DSPDX_QLP();
+        UC_NCC_QLP ucNCC = new UC_NCC_QLP();
         void AddControlsToPnCenter(Control c)
         {
             c.Dock = DockStyle.Fill;
@@ -60,10 +60,8 @@ namespace GUI.QLP_GUI
 
         private void btnDeXuatPhim_Click(object sender, EventArgs e)
         {
-            pnCenter.Controls.Clear();
-            AddControlsToPnMenu(ucMDX);
-            AddControlsToPnCenter(ucTDX);
-            ucMDX.d = new UC_MenuDeXuat_QLP.MyDel(AddControlsToPnCenter);
+            pnMenu.Controls.Clear();
+            AddControlsToPnCenter(ucDSPDX);
         }
 
         private void btnNhapXuat_Click(object sender, EventArgs e)
@@ -78,6 +76,12 @@ namespace GUI.QLP_GUI
         {
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucCN);
+        }
+
+        private void btnNCC_Click(object sender, EventArgs e)
+        {
+            pnMenu.Controls.Clear();
+            AddControlsToPnCenter(ucNCC);
         }
     }
 }

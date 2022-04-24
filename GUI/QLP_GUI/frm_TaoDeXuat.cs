@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
 {
-    public partial class UC_TaoDX_QLP : UserControl
+    public partial class frm_TaoDeXuat : Form
     {
-        public UC_TaoDX_QLP()
+        public frm_TaoDeXuat()
         {
             InitializeComponent();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
