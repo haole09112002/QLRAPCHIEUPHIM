@@ -70,6 +70,30 @@
     <Compile Include="AD_GUI\frmDashboard_AD.Designer.cs">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD_GUI\UC_CaLam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_CaLam.Designer.cs">
+      <DependentUpon>UC_CaLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_CaNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_CaNhan.Designer.cs">
+      <DependentUpon>UC_CaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_DeXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_DeXuat.Designer.cs">
+      <DependentUpon>UC_DeXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_HopDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_HopDong.Designer.cs">
+      <DependentUpon>UC_HopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="AD_GUI\UC_Kho_AD.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,17 +106,23 @@
     <Compile Include="AD_GUI\UC_LichChieu_AD.Designer.cs">
       <DependentUpon>UC_LichChieu_AD.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD_GUI\UC_MenuKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_MenuKho.Designer.cs">
+      <DependentUpon>UC_MenuKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="AD_GUI\UC_NCC_AD.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AD_GUI\UC_NCC_AD.Designer.cs">
       <DependentUpon>UC_NCC_AD.cs</DependentUpon>
     </Compile>
-    <Compile Include="AD_GUI\UC_PhieuNhapXuatKho.cs">
+    <Compile Include="AD_GUI\UC_PhieuNhapXuat.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AD_GUI\UC_PhieuNhapXuatKho.Designer.cs">
-      <DependentUpon>UC_PhieuNhapXuatKho.cs</DependentUpon>
+    <Compile Include="AD_GUI\UC_PhieuNhapXuat.Designer.cs">
+      <DependentUpon>UC_PhieuNhapXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="AD_GUI\UC_ThongKe.cs">
       <SubType>UserControl</SubType>
@@ -100,23 +130,17 @@
     <Compile Include="AD_GUI\UC_ThongKe.Designer.cs">
       <DependentUpon>UC_ThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="AD_GUI\UC_ThongTinNhanVien.cs">
+    <Compile Include="AD_GUI\UC_MenuNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AD_GUI\UC_ThongTinNhanVien.Designer.cs">
-      <DependentUpon>UC_ThongTinNhanVien.cs</DependentUpon>
+    <Compile Include="AD_GUI\UC_MenuNhanVien.Designer.cs">
+      <DependentUpon>UC_MenuNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="AD_GUI\UC_Dexuat.cs">
+    <Compile Include="AD_GUI\UC_ThongTinNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AD_GUI\UC_Dexuat.Designer.cs">
-      <DependentUpon>UC_Dexuat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AD_GUI\UC_CaLam.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AD_GUI\UC_CaLam.Designer.cs">
-      <DependentUpon>UC_CaLam.cs</DependentUpon>
+    <Compile Include="AD_GUI\UC_ThongTinNV.Designer.cs">
+      <DependentUpon>UC_ThongTinNV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -131,6 +155,18 @@
     </Compile>
     <Compile Include="QLP_GUI\frm_QLP.Designer.cs">
       <DependentUpon>frm_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_TaoDeXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_TaoDeXuat.Designer.cs">
+      <DependentUpon>frm_TaoDeXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_ThongTinNCC_QLP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_ThongTinNCC_QLP.Designer.cs">
+      <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLP_GUI\UC_CN_QLP.cs">
       <SubType>UserControl</SubType>
@@ -156,23 +192,23 @@
     <Compile Include="QLP_GUI\UC_DSPDX_QLP.Designer.cs">
       <DependentUpon>UC_DSPDX_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_DSPhim_QLP.cs">
+    <Compile Include="QLP_GUI\UC_NCC_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_DSPhim_QLP.Designer.cs">
-      <DependentUpon>UC_DSPhim_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_NCC_QLP.Designer.cs">
+      <DependentUpon>UC_NCC_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_LSNX.cs">
+    <Compile Include="QLP_GUI\UC_TaoLC_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_LSNX.Designer.cs">
-      <DependentUpon>UC_LSNX.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_TaoLC_QLP.Designer.cs">
+      <DependentUpon>UC_TaoLC_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_MenuDeXuat_QLP.cs">
+    <Compile Include="QLP_GUI\UC_LSNX_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_MenuDeXuat_QLP.Designer.cs">
-      <DependentUpon>UC_MenuDeXuat_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_LSNX_QLP.Designer.cs">
+      <DependentUpon>UC_LSNX_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLP_GUI\UC_MenuNXK_QLP.cs">
       <SubType>UserControl</SubType>
@@ -185,12 +221,6 @@
     </Compile>
     <Compile Include="QLP_GUI\UC_MenuTaoLC_QLP.Designer.cs">
       <DependentUpon>UC_MenuTaoLC_QLP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLP_GUI\UC_TaoDX_QLP.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLP_GUI\UC_TaoDX_QLP.Designer.cs">
-      <DependentUpon>UC_TaoDX_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLP_GUI\UC_TaoPhieu_QLP.cs">
       <SubType>UserControl</SubType>
@@ -333,11 +363,8 @@
     <EmbeddedResource Include="AD_GUI\frmDashboard_AD.resx">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AD_GUI\UC_CaLam.resx">
-      <DependentUpon>UC_CaLam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AD_GUI\UC_Dexuat.resx">
-      <DependentUpon>UC_Dexuat.cs</DependentUpon>
+    <EmbeddedResource Include="AD_GUI\UC_CaNhan.resx">
+      <DependentUpon>UC_CaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_Kho_AD.resx">
       <DependentUpon>UC_Kho_AD.cs</DependentUpon>
@@ -345,14 +372,20 @@
     <EmbeddedResource Include="AD_GUI\UC_LichChieu_AD.resx">
       <DependentUpon>UC_LichChieu_AD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_MenuKho.resx">
+      <DependentUpon>UC_MenuKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_MenuNhanVien.resx">
+      <DependentUpon>UC_MenuNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_NCC_AD.resx">
       <DependentUpon>UC_NCC_AD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_PhieuNhapXuat.resx">
+      <DependentUpon>UC_PhieuNhapXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_ThongKe.resx">
       <DependentUpon>UC_ThongKe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AD_GUI\UC_ThongTinNhanVien.resx">
-      <DependentUpon>UC_ThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -370,6 +403,12 @@
     <EmbeddedResource Include="QLP_GUI\frm_QLP.resx">
       <DependentUpon>frm_QLP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\frm_TaoDeXuat.resx">
+      <DependentUpon>frm_TaoDeXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\frm_ThongTinNCC_QLP.resx">
+      <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_CN_QLP.resx">
       <DependentUpon>UC_CN_QLP.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,23 +421,20 @@
     <EmbeddedResource Include="QLP_GUI\UC_DSPDX_QLP.resx">
       <DependentUpon>UC_DSPDX_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_DSPhim_QLP.resx">
-      <DependentUpon>UC_DSPhim_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_NCC_QLP.resx">
+      <DependentUpon>UC_NCC_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_LSNX.resx">
-      <DependentUpon>UC_LSNX.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_TaoLC_QLP.resx">
+      <DependentUpon>UC_TaoLC_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_MenuDeXuat_QLP.resx">
-      <DependentUpon>UC_MenuDeXuat_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_LSNX_QLP.resx">
+      <DependentUpon>UC_LSNX_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_MenuNXK_QLP.resx">
       <DependentUpon>UC_MenuNXK_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_MenuTaoLC_QLP.resx">
       <DependentUpon>UC_MenuTaoLC_QLP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_TaoDX_QLP.resx">
-      <DependentUpon>UC_TaoDX_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_TaoPhieu_QLP.resx">
       <DependentUpon>UC_TaoPhieu_QLP.cs</DependentUpon>
@@ -492,7 +528,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\cinemabackground.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tt.png" />
   </ItemGroup>
@@ -537,6 +575,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male_user_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change_user_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cinemaiccon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

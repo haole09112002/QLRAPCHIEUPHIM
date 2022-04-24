@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI.AD_GUI
 {
-    public partial class UC_Dexuat : UserControl
+    public partial class UC_CaNhan : UserControl
     {
-        public UC_Dexuat()
+        public UC_CaNhan()
         {
             InitializeComponent();
         }

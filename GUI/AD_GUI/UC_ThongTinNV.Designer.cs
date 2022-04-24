@@ -1,6 +1,6 @@
 ﻿namespace GUI.AD_GUI
 {
-    partial class UC_ThongTinNhanVien
+    partial class UC_ThongTinNV
     {
         /// <summary> 
         /// Required designer variable.
@@ -87,7 +87,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "THÊM";
             this.button1.UseVisualStyleBackColor = true;
-//            this.button1.Click += new System.EventHandler(this.button1_Click);
+            //            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -115,7 +115,7 @@
             this.button3.TabIndex = 12;
             this.button3.Text = "SẮP XẾP";
             this.button3.UseVisualStyleBackColor = true;
-          //  this.button3.Click += new System.EventHandler(this.button3_Click);
+            //  this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // comboBox1
             // 

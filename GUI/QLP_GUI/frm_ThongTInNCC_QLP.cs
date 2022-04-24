@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI.AD_GUI
+namespace GUI.QLP_GUI
 {
-    public partial class UC_Kho_AD : UserControl
+    public partial class frm_ThongTinNCC_QLP : Form
     {
-        public UC_Kho_AD()
+        public frm_ThongTinNCC_QLP()
         {
             InitializeComponent();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

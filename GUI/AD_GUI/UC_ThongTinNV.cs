@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI.AD_Form
+namespace GUI.AD_GUI
 {
-    public partial class UC_PhieuNhapXuatKho : UserControl
+    public partial class UC_ThongTinNV : UserControl
     {
-        public UC_PhieuNhapXuatKho()
+        public UC_ThongTinNV()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace GUI.AD_GUI
 {
-    partial class UC_Dexuat
+    partial class UC_DeXuat
     {
         /// <summary> 
         /// Required designer variable.

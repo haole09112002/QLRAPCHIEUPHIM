@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI.AD_GUI
 {
-    public partial class UC_Kho_AD : UserControl
+    public partial class UC_HopDong : UserControl
     {
-        public UC_Kho_AD()
+        public UC_HopDong()
         {
             InitializeComponent();
         }

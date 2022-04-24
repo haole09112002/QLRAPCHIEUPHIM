@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI.AD_GUI
+namespace GUI.QLP_GUI
 {
-    public partial class UC_Kho_AD : UserControl
+    public partial class UC_NCC_QLP : UserControl
     {
-        public UC_Kho_AD()
+        public UC_NCC_QLP()
         {
             InitializeComponent();
+        }
+
+        private void btnXemThongTin_Click(object sender, EventArgs e)
+        {
+            frm_ThongTinNCC_QLP f = new frm_ThongTinNCC_QLP();
+            f.ShowDialog();
         }
     }
 }
