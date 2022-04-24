@@ -46,6 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.pnCenter = new System.Windows.Forms.Panel();
+            this.btnNCC = new System.Windows.Forms.Button();
             this.pnLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnTop.SuspendLayout();
@@ -55,6 +56,7 @@
             // pnLeft
             // 
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(51)))), ((int)(((byte)(66)))));
+            this.pnLeft.Controls.Add(this.btnNCC);
             this.pnLeft.Controls.Add(this.pictureBox2);
             this.pnLeft.Controls.Add(this.btnThongTinPhim);
             this.pnLeft.Controls.Add(this.label1);
@@ -142,7 +144,7 @@
             this.btnCaNhan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCaNhan.Image = global::GUI.Properties.Resources.canhan;
             this.btnCaNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaNhan.Location = new System.Drawing.Point(0, 487);
+            this.btnCaNhan.Location = new System.Drawing.Point(3, 561);
             this.btnCaNhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCaNhan.Name = "btnCaNhan";
             this.btnCaNhan.Size = new System.Drawing.Size(249, 66);
@@ -161,7 +163,7 @@
             this.btnDangXuat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDangXuat.Image = global::GUI.Properties.Resources.logout;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 561);
+            this.btnDangXuat.Location = new System.Drawing.Point(3, 635);
             this.btnDangXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(249, 66);
@@ -314,6 +316,25 @@
             this.pnCenter.Size = new System.Drawing.Size(1117, 766);
             this.pnCenter.TabIndex = 5;
             // 
+            // btnNCC
+            // 
+            this.btnNCC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNCC.FlatAppearance.BorderSize = 0;
+            this.btnNCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNCC.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNCC.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNCC.Image = global::GUI.Properties.Resources.canhan;
+            this.btnNCC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNCC.Location = new System.Drawing.Point(3, 487);
+            this.btnNCC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnNCC.Name = "btnNCC";
+            this.btnNCC.Size = new System.Drawing.Size(249, 66);
+            this.btnNCC.TabIndex = 15;
+            this.btnNCC.Text = "   Nhà Cung Cấp";
+            this.btnNCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNCC.UseVisualStyleBackColor = true;
+            this.btnNCC.Click += new System.EventHandler(this.btnNCC_Click);
+            // 
             // frm_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -358,5 +379,6 @@
         public System.Windows.Forms.Panel pnMenu;
         public System.Windows.Forms.Panel pnCenter;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnNCC;
     }
 }
