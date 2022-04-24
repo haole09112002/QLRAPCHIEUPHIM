@@ -1,4 +1,4 @@
-﻿namespace GUI.AD_Form
+﻿namespace GUI.AD_GUI
 {
     partial class frmDashboard_AD
     {
@@ -48,6 +48,7 @@
             this.btnCaNhan = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnLichChieu = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnLeft.SuspendLayout();
             this.pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,7 +90,8 @@
             // 
             // pnTop
             // 
-            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(229)))), ((int)(((byte)(232)))));
+            this.pnTop.Controls.Add(this.label6);
             this.pnTop.Controls.Add(this.pictureBox1);
             this.pnTop.Controls.Add(this.label5);
             this.pnTop.Controls.Add(this.label4);
@@ -157,6 +159,7 @@
             // pnCenter
             // 
             this.pnCenter.BackColor = System.Drawing.Color.White;
+            this.pnCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCenter.Location = new System.Drawing.Point(221, 93);
             this.pnCenter.Name = "pnCenter";
@@ -236,6 +239,7 @@
             this.btnNV.Text = "   Nhân viên";
             this.btnNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNV.UseVisualStyleBackColor = true;
+            this.btnNV.Click += new System.EventHandler(this.btnNV_Click);
             // 
             // btnHopDong
             // 
@@ -343,6 +347,18 @@
             this.btnLichChieu.UseVisualStyleBackColor = true;
             this.btnLichChieu.Click += new System.EventHandler(this.btnLichChieu_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(137, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(394, 37);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Cinema Manegemenr System";
+            // 
             // frmDashboard_AD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -388,5 +404,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Panel pnMenu;
+        private System.Windows.Forms.Label label6;
     }
 }
