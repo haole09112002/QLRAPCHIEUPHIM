@@ -100,6 +100,36 @@
     <Compile Include="AD_GUI\UC_ThongKe.Designer.cs">
       <DependentUpon>UC_ThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD_GUI\UC_ThongTinNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_ThongTinNhanVien.Designer.cs">
+      <DependentUpon>UC_ThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_Dexuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_Dexuat.Designer.cs">
+      <DependentUpon>UC_Dexuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_CaLam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_CaLam.Designer.cs">
+      <DependentUpon>UC_CaLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_HopDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_HopDong.Designer.cs">
+      <DependentUpon>UC_HopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_CaNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_CaNhan.Designer.cs">
+      <DependentUpon>UC_CaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +224,18 @@
     </Compile>
     <EmbeddedResource Include="AD_GUI\frmDashboard_AD.resx">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_CaLam.resx">
+      <DependentUpon>UC_CaLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_CaNhan.resx">
+      <DependentUpon>UC_CaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_Dexuat.resx">
+      <DependentUpon>UC_Dexuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_HopDong.resx">
+      <DependentUpon>UC_HopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_Kho_AD.resx">
       <DependentUpon>UC_Kho_AD.cs</DependentUpon>
