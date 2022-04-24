@@ -169,6 +169,7 @@
             this.btnHopDong.Text = "   Hợp đồng";
             this.btnHopDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHopDong.UseVisualStyleBackColor = true;
+            this.btnHopDong.Click += new System.EventHandler(this.btnHopDong_Click);
             // 
             // btnDeXuat
             // 
@@ -186,6 +187,7 @@
             this.btnDeXuat.Text = "   Đề xuất";
             this.btnDeXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeXuat.UseVisualStyleBackColor = true;
+            this.btnDeXuat.Click += new System.EventHandler(this.btnDeXuat_Click);
             // 
             // btnNCC
             // 
@@ -222,6 +224,7 @@
             this.btnCaNhan.Text = "   Cá nhân";
             this.btnCaNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCaNhan.UseVisualStyleBackColor = true;
+            this.btnCaNhan.Click += new System.EventHandler(this.btnCaNhan_Click);
             // 
             // btnDangXuat
             // 

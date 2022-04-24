@@ -70,6 +70,12 @@
     <Compile Include="AD_GUI\frmDashboard_AD.Designer.cs">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD_GUI\frmThemCaLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\frmThemCaLam.Designer.cs">
+      <DependentUpon>frmThemCaLam.cs</DependentUpon>
+    </Compile>
     <Compile Include="AD_GUI\UC_CaLam.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -243,8 +249,20 @@
     <EmbeddedResource Include="AD_GUI\frmDashboard_AD.resx">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\frmThemCaLam.resx">
+      <DependentUpon>frmThemCaLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_CaLam.resx">
+      <DependentUpon>UC_CaLam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_CaNhan.resx">
       <DependentUpon>UC_CaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_DeXuat.resx">
+      <DependentUpon>UC_DeXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_HopDong.resx">
+      <DependentUpon>UC_HopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_Kho_AD.resx">
       <DependentUpon>UC_Kho_AD.cs</DependentUpon>
