@@ -16,5 +16,10 @@ namespace GUI.QLP_GUI
         {
             InitializeComponent();
         }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frm_TaoDeXuat frmTDX = new frm_TaoDeXuat();
+            frmTDX.ShowDialog();
+        }
     }
 }

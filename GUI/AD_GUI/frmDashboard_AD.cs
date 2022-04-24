@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GUI.AD_Form;
-namespace GUI.AD_Form
+using GUI.AD_GUI;
+namespace GUI.AD_GUI
 {
     public partial class frmDashboard_AD : Form
     {
@@ -18,16 +18,38 @@ namespace GUI.AD_Form
         }
         UC_ThongKe ucThongKe = new UC_ThongKe();
         UC_LichChieu_AD ucLichChieu = new UC_LichChieu_AD();
-        UC_Kho_AD ucKho = new UC_Kho_AD();
+     
         UC_NCC_AD ucNCC = new UC_NCC_AD();
-      //  UC_NCCPhim_AD ucNCC = new UC_NCCPhim_AD();
+        UC_MenuNhanVien ucMenuNhanVien = new UC_MenuNhanVien();
+        UC_MenuKho ucMenuKho = new UC_MenuKho();
+        UC_HopDong ucHopDong = new UC_HopDong();
+        UC_DeXuat ucDeXuat = new UC_DeXuat();
+        UC_CaNhan ucCaNhan = new UC_CaNhan();   
+        private void changeColorButton(Button btn)
+        {
+            btn.BackColor = Color.FromArgb(0, 144, 153);
+            List<Button> buttons = new List<Button> {btnCaNhan, btnDangXuat, btnHopDong, btnDeXuat, btnKho, btnLichChieu,
+            btnNCC, btnThongKe, btnNV  };
+            foreach (Button i in buttons)
+            {
+               
+                if (i.BackColor == Color.FromArgb(0, 144, 153) && i != btn) // xanh
+                {
+                    i.BackColor = Color.FromArgb(40, 51, 66); // den
+                }
+            }
+   
+            
 
 
-       // UC_MenuPhim_AD ucMenuPhim = new UC_MenuPhim_AD();
+        }
+     
         private void btnThongKe_Click(object sender, EventArgs e)
         {
+
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucThongKe);
+            changeColorButton(btnThongKe );
         
         }
 
@@ -35,17 +57,16 @@ namespace GUI.AD_Form
         {
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucLichChieu);
+            changeColorButton(btnLichChieu);
         }
 
         private void btnNCC_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
-       //     AddControlsToPnMenu(ucMenuPhim);
             AddControlsToPnCenter(ucNCC);
-         //   ucMenuPhim.d = new UC_MenuPhim_AD.Mydel(AddControlsToPnCenter);
-            
+            changeColorButton(btnNCC);
         }
-        void AddControlsToPnCenter(Control c)
+        private void AddControlsToPnCenter(Control c)
         {
             c.Dock = DockStyle.Fill;
             pnCenter.Controls.Clear();
@@ -61,7 +82,48 @@ namespace GUI.AD_Form
         private void btnKho_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
-            AddControlsToPnCenter(ucKho);
+            AddControlsToPnMenu(ucMenuKho);
+            AddControlsToPnCenter(ucMenuKho.ucThongTinKho);
+            ucMenuKho.d = new UC_MenuKho.Mydel(AddControlsToPnCenter);
+            changeColorButton(btnKho);
+        }
+
+        private void btnNV_Click(object sender, EventArgs e)
+        {
+            pnMenu.Controls.Clear();
+            AddControlsToPnMenu(ucMenuNhanVien);
+           
+            AddControlsToPnCenter(ucMenuNhanVien.ucThongTinNV);
+            ucMenuNhanVien.d = new UC_MenuNhanVien.Mydel(AddControlsToPnCenter);
+            changeColorButton(btnNV);
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmDangNhap frm = new frmDangNhap();
+            frm.Show();
+        }
+
+        private void btnHopDong_Click(object sender, EventArgs e)
+        {
+            pnMenu.Controls.Clear();
+            AddControlsToPnCenter(ucHopDong);
+            changeColorButton(btnHopDong);
+        }
+
+        private void btnDeXuat_Click(object sender, EventArgs e)
+        {
+            pnMenu.Controls.Clear();
+            AddControlsToPnCenter(ucDeXuat);
+            changeColorButton(btnDeXuat);
+        }
+
+        private void btnCaNhan_Click(object sender, EventArgs e)
+        {
+            pnMenu.Controls.Clear();
+            AddControlsToPnCenter(ucCaNhan);
+            changeColorButton(btnCaNhan);
         }
     }
 }

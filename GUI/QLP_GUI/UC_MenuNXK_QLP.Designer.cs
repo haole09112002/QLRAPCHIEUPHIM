@@ -34,7 +34,7 @@
             // 
             // btnTaoPhieu
             // 
-            this.btnTaoPhieu.BackColor = System.Drawing.Color.Lime;
+            this.btnTaoPhieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnTaoPhieu.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnTaoPhieu.Image = global::GUI.Properties.Resources.dexuat;
             this.btnTaoPhieu.Location = new System.Drawing.Point(0, 0);
@@ -49,14 +49,14 @@
             // 
             // btnLSNX
             // 
-            this.btnLSNX.BackColor = System.Drawing.Color.Lime;
+            this.btnLSNX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnLSNX.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnLSNX.Image = global::GUI.Properties.Resources.kho;
             this.btnLSNX.Location = new System.Drawing.Point(258, 0);
             this.btnLSNX.Name = "btnLSNX";
-            this.btnLSNX.Size = new System.Drawing.Size(281, 36);
+            this.btnLSNX.Size = new System.Drawing.Size(333, 36);
             this.btnLSNX.TabIndex = 1;
-            this.btnLSNX.Text = "    Lịch Sử Nhập Xuất";
+            this.btnLSNX.Text = "    Danh Sách Phiếu Nhập Xuất";
             this.btnLSNX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLSNX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLSNX.UseVisualStyleBackColor = false;
