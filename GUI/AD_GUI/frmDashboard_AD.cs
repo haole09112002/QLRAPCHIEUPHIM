@@ -22,6 +22,9 @@ namespace GUI.AD_GUI
         UC_NCC_AD ucNCC = new UC_NCC_AD();
         UC_MenuNhanVien ucMenuNhanVien = new UC_MenuNhanVien();
         UC_MenuKho ucMenuKho = new UC_MenuKho();
+        UC_HopDong ucHopDong = new UC_HopDong();
+        UC_DeXuat ucDeXuat = new UC_DeXuat();
+        UC_CaNhan ucCaNhan = new UC_CaNhan();   
         private void changeColorButton(Button btn)
         {
             btn.BackColor = Color.FromArgb(0, 144, 153);
@@ -81,7 +84,7 @@ namespace GUI.AD_GUI
             pnMenu.Controls.Clear();
             AddControlsToPnMenu(ucMenuKho);
             AddControlsToPnCenter(ucMenuKho.ucThongTinKho);
-            ucMenuNhanVien.d = new UC_MenuNhanVien.Mydel(AddControlsToPnCenter);
+            ucMenuKho.d = new UC_MenuKho.Mydel(AddControlsToPnCenter);
             changeColorButton(btnKho);
         }
 
@@ -100,6 +103,27 @@ namespace GUI.AD_GUI
             this.Close();
             frmDangNhap frm = new frmDangNhap();
             frm.Show();
+        }
+
+        private void btnHopDong_Click(object sender, EventArgs e)
+        {
+            pnMenu.Controls.Clear();
+            AddControlsToPnCenter(ucHopDong);
+            changeColorButton(btnHopDong);
+        }
+
+        private void btnDeXuat_Click(object sender, EventArgs e)
+        {
+            pnMenu.Controls.Clear();
+            AddControlsToPnCenter(ucDeXuat);
+            changeColorButton(btnDeXuat);
+        }
+
+        private void btnCaNhan_Click(object sender, EventArgs e)
+        {
+            pnMenu.Controls.Clear();
+            AddControlsToPnCenter(ucCaNhan);
+            changeColorButton(btnCaNhan);
         }
     }
 }
