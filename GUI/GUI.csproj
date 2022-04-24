@@ -70,12 +70,6 @@
     <Compile Include="AD_GUI\frmDashboard_AD.Designer.cs">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
     </Compile>
-    <Compile Include="AD_GUI\UC_Dexuat.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AD_GUI\UC_Dexuat.Designer.cs">
-      <DependentUpon>UC_Dexuat.cs</DependentUpon>
-    </Compile>
     <Compile Include="AD_GUI\UC_Kho_AD.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,12 +99,6 @@
     </Compile>
     <Compile Include="AD_GUI\UC_MenuNhanVien.Designer.cs">
       <DependentUpon>UC_MenuNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AD_GUI\UC_Dexuat.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AD_GUI\UC_Dexuat.Designer.cs">
-      <DependentUpon>UC_Dexuat.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -206,9 +194,6 @@
     </Compile>
     <EmbeddedResource Include="AD_GUI\frmDashboard_AD.resx">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AD_GUI\UC_Dexuat.resx">
-      <DependentUpon>UC_Dexuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_Kho_AD.resx">
       <DependentUpon>UC_Kho_AD.cs</DependentUpon>
