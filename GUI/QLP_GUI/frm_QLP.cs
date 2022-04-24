@@ -33,6 +33,18 @@ namespace GUI.QLP_GUI
             pnCenter.Controls.Clear();
             pnCenter.Controls.Add(c);
         }
+        private void changeColorButton(Button btn)
+        {
+            btn.BackColor = Color.FromArgb(0, 144, 153);
+            List<Button> buttons = new List<Button> {btnCaNhan, btnDangXuat,btnDeXuatPhim,btnNCC,btnNhapXuat,btnTaoLichChieu,btnThongTinPhim};
+            foreach (Button i in buttons)
+            {
+                if (i.BackColor == Color.FromArgb(0, 144, 153) && i != btn) // xanh
+                {
+                    i.BackColor = Color.FromArgb(40, 51, 66); // den
+                }
+            }
+        }
         private void AddControlsToPnMenu(Control c)
         {
             c.Dock = DockStyle.Fill;
@@ -43,6 +55,7 @@ namespace GUI.QLP_GUI
         {
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucTTP);
+            changeColorButton(btnThongTinPhim);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -56,12 +69,14 @@ namespace GUI.QLP_GUI
             AddControlsToPnMenu(ucMTLC);
             AddControlsToPnCenter(ucTLC);
             ucMTLC.d = new UC_MenuTaoLC_QLP.MyDel(AddControlsToPnCenter);
+            changeColorButton(btnTaoLichChieu);
         }
 
         private void btnDeXuatPhim_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucDSPDX);
+            changeColorButton(btnDeXuatPhim);
         }
 
         private void btnNhapXuat_Click(object sender, EventArgs e)
@@ -70,18 +85,21 @@ namespace GUI.QLP_GUI
             AddControlsToPnMenu(ucMNXK);
             AddControlsToPnCenter(ucTP);
             ucMNXK.d = new UC_MenuNXK_QLP.MyDel(AddControlsToPnCenter);
+            changeColorButton(btnNhapXuat);
         }
 
         private void btnCaNhan_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucCN);
+            changeColorButton(btnCaNhan);
         }
 
         private void btnNCC_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucNCC);
+            changeColorButton(btnNCC);
         }
     }
 }
