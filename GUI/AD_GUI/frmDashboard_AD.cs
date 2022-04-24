@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GUI.AD_Form;
-namespace GUI.AD_Form
+using GUI.AD_GUI;
+namespace GUI.AD_GUI
 {
     public partial class frmDashboard_AD : Form
     {
@@ -20,14 +20,32 @@ namespace GUI.AD_Form
         UC_LichChieu_AD ucLichChieu = new UC_LichChieu_AD();
         UC_Kho_AD ucKho = new UC_Kho_AD();
         UC_NCC_AD ucNCC = new UC_NCC_AD();
-      //  UC_NCCPhim_AD ucNCC = new UC_NCCPhim_AD();
+        //UC_PhieuNhapXuatKho ucPhieuNXKHo = new UC_PhieuNhapXuatKho();
+        private void changeColorButton(Button btn)
+        {
+            btn.BackColor = Color.FromArgb(0, 144, 153);
+            List<Button> buttons = new List<Button> {btnCaNhan, btnDangXuat, btnHopDong, btnDeXuat, btnKho, btnLichChieu,
+            btnNCC, btnThongKe, btnNV  };
+            foreach (Button i in buttons)
+            {
+               
+                if (i.BackColor == Color.FromArgb(0, 144, 153) && i != btn) // xanh
+                {
+                    i.BackColor = Color.FromArgb(40, 51, 66); // den
+                }
+            }
+   
+            
 
 
-       // UC_MenuPhim_AD ucMenuPhim = new UC_MenuPhim_AD();
+        }
+     
         private void btnThongKe_Click(object sender, EventArgs e)
         {
+
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucThongKe);
+            changeColorButton(btnThongKe );
         
         }
 
@@ -35,6 +53,7 @@ namespace GUI.AD_Form
         {
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucLichChieu);
+            changeColorButton(btnLichChieu);
         }
 
         private void btnNCC_Click(object sender, EventArgs e)
@@ -43,7 +62,7 @@ namespace GUI.AD_Form
        //     AddControlsToPnMenu(ucMenuPhim);
             AddControlsToPnCenter(ucNCC);
          //   ucMenuPhim.d = new UC_MenuPhim_AD.Mydel(AddControlsToPnCenter);
-            
+            changeColorButton(btnNCC);
         }
         void AddControlsToPnCenter(Control c)
         {
@@ -62,6 +81,14 @@ namespace GUI.AD_Form
         {
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucKho);
+            changeColorButton(btnKho);
+        }
+
+        private void btnNV_Click(object sender, EventArgs e)
+        {
+            pnMenu.Controls.Clear();
+            AddControlsToPnCenter(ucKho);
+            changeColorButton(btnNV);
         }
     }
 }

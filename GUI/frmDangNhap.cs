@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GUI.QLP_GUI;
-using GUI.AD_Form;
+using GUI.AD_GUI;
 
 using System.Windows.Forms;
 

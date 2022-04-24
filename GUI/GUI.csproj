@@ -70,6 +70,12 @@
     <Compile Include="AD_GUI\frmDashboard_AD.Designer.cs">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD_GUI\UC_Dexuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_Dexuat.Designer.cs">
+      <DependentUpon>UC_Dexuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="AD_GUI\UC_Kho_AD.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -88,17 +94,17 @@
     <Compile Include="AD_GUI\UC_NCC_AD.Designer.cs">
       <DependentUpon>UC_NCC_AD.cs</DependentUpon>
     </Compile>
-    <Compile Include="AD_GUI\UC_PhieuNhapXuatKho.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AD_GUI\UC_PhieuNhapXuatKho.Designer.cs">
-      <DependentUpon>UC_PhieuNhapXuatKho.cs</DependentUpon>
-    </Compile>
     <Compile Include="AD_GUI\UC_ThongKe.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AD_GUI\UC_ThongKe.Designer.cs">
       <DependentUpon>UC_ThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_MenuNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_MenuNhanVien.Designer.cs">
+      <DependentUpon>UC_MenuNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -201,6 +207,9 @@
     <EmbeddedResource Include="AD_GUI\UC_LichChieu_AD.resx">
       <DependentUpon>UC_LichChieu_AD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_MenuNhanVien.resx">
+      <DependentUpon>UC_MenuNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_NCC_AD.resx">
       <DependentUpon>UC_NCC_AD.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,7 +294,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\cinemabackground.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tt.png" />
   </ItemGroup>
@@ -330,6 +341,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male_user_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change_user_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cinemaiccon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
