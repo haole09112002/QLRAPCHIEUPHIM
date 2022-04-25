@@ -16,5 +16,11 @@ namespace GUI.AD_GUI
         {
             InitializeComponent();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frmThemCaLam frmThemCaLam = new frmThemCaLam();
+            frmThemCaLam.Show();
+        }
     }
 }

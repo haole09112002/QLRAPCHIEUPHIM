@@ -123,6 +123,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit_sign_64px {
+            get {
+                object obj = ResourceManager.GetObject("exit_sign_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap film_reel_26px {
             get {
                 object obj = ResourceManager.GetObject("film_reel_26px", resourceCulture);
@@ -193,6 +203,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logout_26px {
+            get {
+                object obj = ResourceManager.GetObject("Logout_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap male_user_26px {
             get {
                 object obj = ResourceManager.GetObject("male_user_26px", resourceCulture);
@@ -206,6 +226,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap ncc {
             get {
                 object obj = ResourceManager.GetObject("ncc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_copy_26px {
+            get {
+                object obj = ResourceManager.GetObject("new_copy_26px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,6 +263,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap save_26px {
+            get {
+                object obj = ResourceManager.GetObject("save_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shutdow {
             get {
                 object obj = ResourceManager.GetObject("shutdow", resourceCulture);
@@ -246,6 +286,26 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap shutdown_26px {
             get {
                 object obj = ResourceManager.GetObject("shutdown_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shutdown_26px1 {
+            get {
+                object obj = ResourceManager.GetObject("shutdown_26px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trash_can_26px {
+            get {
+                object obj = ResourceManager.GetObject("trash_can_26px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

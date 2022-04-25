@@ -31,13 +31,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -56,6 +56,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.OldLace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 27);
             this.dataGridView1.Name = "dataGridView1";
@@ -66,21 +67,31 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(36, 79);
+            this.panel1.Location = new System.Drawing.Point(36, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(921, 64);
+            this.panel1.Size = new System.Drawing.Size(921, 140);
             this.panel1.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(607, 86);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(171, 28);
+            this.textBox1.TabIndex = 4;
             // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(153, 15);
+            this.comboBox1.Location = new System.Drawing.Point(164, 84);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(265, 27);
             this.comboBox1.TabIndex = 3;
@@ -88,7 +99,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(784, 11);
+            this.button3.Location = new System.Drawing.Point(795, 80);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(131, 36);
             this.button3.TabIndex = 2;
@@ -98,7 +109,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(448, 9);
+            this.button2.Location = new System.Drawing.Point(459, 78);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 36);
             this.button2.TabIndex = 1;
@@ -108,7 +119,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(6, 11);
+            this.button1.Location = new System.Drawing.Point(17, 80);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 36);
             this.button1.TabIndex = 0;
@@ -119,36 +130,26 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(189, 34);
+            this.comboBox2.Location = new System.Drawing.Point(153, 23);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(265, 27);
+            this.comboBox2.Size = new System.Drawing.Size(276, 27);
             this.comboBox2.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(42, 42);
+            this.label1.Location = new System.Drawing.Point(29, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 19);
             this.label1.TabIndex = 5;
             this.label1.Text = "Loại kho";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(585, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 28);
-            this.textBox1.TabIndex = 4;
             // 
             // UC_Kho_AD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "UC_Kho_AD";
@@ -158,7 +159,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
