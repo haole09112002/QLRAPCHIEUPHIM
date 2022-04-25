@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
 {
-    public partial class UC_NCC_QLP : UserControl
+    public partial class UC_DanhSachPhimDeXuat_QLP : UserControl
     {
-        public UC_NCC_QLP()
+        public UC_DanhSachPhimDeXuat_QLP()
         {
             InitializeComponent();
         }
-
-        private void btnXemThongTin_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            frm_ThongTinNCC_QLP f = new frm_ThongTinNCC_QLP();
-            f.ShowDialog();
+            frm_TaoDeXuat frmTDX = new frm_TaoDeXuat();
+            frmTDX.ShowDialog();
         }
     }
 }

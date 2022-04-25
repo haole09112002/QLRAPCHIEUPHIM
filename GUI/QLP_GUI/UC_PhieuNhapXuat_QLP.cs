@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
 {
-    public partial class UC_DSPDX_QLP : UserControl
+    public partial class UC_PhieuNhapXuat_QLP : UserControl
     {
-        public UC_DSPDX_QLP()
+        public UC_PhieuNhapXuat_QLP()
         {
             InitializeComponent();
-        }
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            frm_TaoDeXuat frmTDX = new frm_TaoDeXuat();
-            frmTDX.ShowDialog();
         }
     }
 }

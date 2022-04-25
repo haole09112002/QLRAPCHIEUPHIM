@@ -38,8 +38,11 @@
             this.cBDonViTinh = new System.Windows.Forms.ComboBox();
             this.cBMaKho = new System.Windows.Forms.ComboBox();
             this.cBMaPhieu = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -135,11 +138,21 @@
             this.cBMaPhieu.Size = new System.Drawing.Size(475, 28);
             this.cBMaPhieu.TabIndex = 9;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(357, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(272, 25);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Tạo Phiếu Nhập/Xuất Kho";
+            // 
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.White;
             this.btnHuy.ForeColor = System.Drawing.Color.Blue;
-            this.btnHuy.Location = new System.Drawing.Point(757, 609);
+            this.btnHuy.Location = new System.Drawing.Point(709, 576);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(110, 37);
             this.btnHuy.TabIndex = 10;
@@ -150,19 +163,29 @@
             // 
             this.btnLuu.BackColor = System.Drawing.Color.White;
             this.btnLuu.ForeColor = System.Drawing.Color.Blue;
-            this.btnLuu.Location = new System.Drawing.Point(253, 609);
+            this.btnLuu.Location = new System.Drawing.Point(204, 576);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(110, 37);
             this.btnLuu.TabIndex = 11;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.btnLuu);
+            this.panel1.Controls.Add(this.btnHuy);
+            this.panel1.Location = new System.Drawing.Point(47, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1027, 669);
+            this.panel1.TabIndex = 12;
+            // 
             // UC_TaoPhieu_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnHuy);
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.cBMaPhieu);
             this.Controls.Add(this.cBMaKho);
             this.Controls.Add(this.cBDonViTinh);
@@ -173,8 +196,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Name = "UC_TaoPhieu_QLP";
             this.Size = new System.Drawing.Size(1117, 766);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,7 +218,9 @@
         private System.Windows.Forms.ComboBox cBDonViTinh;
         private System.Windows.Forms.ComboBox cBMaKho;
         private System.Windows.Forms.ComboBox cBMaPhieu;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Panel panel1;
     }
 }

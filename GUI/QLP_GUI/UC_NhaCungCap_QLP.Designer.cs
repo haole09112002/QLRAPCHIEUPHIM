@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLP_GUI
 {
-    partial class UC_NCC_QLP
+    partial class UC_NhaCungCap_QLP
     {
         /// <summary> 
         /// Required designer variable.
@@ -83,6 +83,7 @@
             // 
             // dGVDanhSachNhaCungUng
             // 
+            this.dGVDanhSachNhaCungUng.BackgroundColor = System.Drawing.Color.White;
             this.dGVDanhSachNhaCungUng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVDanhSachNhaCungUng.Location = new System.Drawing.Point(38, 122);
             this.dGVDanhSachNhaCungUng.Name = "dGVDanhSachNhaCungUng";
@@ -110,10 +111,11 @@
             this.cBSapXep.Size = new System.Drawing.Size(222, 28);
             this.cBSapXep.TabIndex = 17;
             // 
-            // UC_NCC_QLP
+            // UC_NhaCungCap_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.cBSapXep);
             this.Controls.Add(this.btnSapXep);
             this.Controls.Add(this.txtTimKiem);
@@ -121,7 +123,7 @@
             this.Controls.Add(this.btnXemThongTin);
             this.Controls.Add(this.dGVDanhSachNhaCungUng);
             this.Controls.Add(this.label1);
-            this.Name = "UC_NCC_QLP";
+            this.Name = "UC_NhaCungCap_QLP";
             this.Size = new System.Drawing.Size(1117, 766);
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachNhaCungUng)).EndInit();
             this.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLP_GUI
 {
-    partial class UC_DSPDX_QLP
+    partial class UC_DanhSachPhimDeXuat_QLP
     {
         /// <summary> 
         /// Required designer variable.
@@ -43,16 +43,16 @@
             // txtTimKiem
             // 
             this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtTimKiem.Location = new System.Drawing.Point(877, 46);
+            this.txtTimKiem.Location = new System.Drawing.Point(825, 46);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(197, 26);
+            this.txtTimKiem.Size = new System.Drawing.Size(242, 26);
             this.txtTimKiem.TabIndex = 11;
             // 
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.White;
             this.btnTimKiem.ForeColor = System.Drawing.Color.Blue;
-            this.btnTimKiem.Location = new System.Drawing.Point(754, 43);
+            this.btnTimKiem.Location = new System.Drawing.Point(710, 43);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(94, 33);
             this.btnTimKiem.TabIndex = 10;
@@ -83,6 +83,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(48, 89);
             this.dataGridView1.Name = "dataGridView1";
@@ -97,15 +98,15 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(43, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 25);
+            this.label1.Size = new System.Drawing.Size(267, 25);
             this.label1.TabIndex = 6;
-            this.label1.Text = "DANH SÁCH PHIM ĐỀ XUẤT";
+            this.label1.Text = "Danh Sách Phim Đề Xuất";
             // 
             // btnSapXep
             // 
             this.btnSapXep.BackColor = System.Drawing.Color.White;
             this.btnSapXep.ForeColor = System.Drawing.Color.Blue;
-            this.btnSapXep.Location = new System.Drawing.Point(754, 687);
+            this.btnSapXep.Location = new System.Drawing.Point(710, 686);
             this.btnSapXep.Name = "btnSapXep";
             this.btnSapXep.Size = new System.Drawing.Size(94, 33);
             this.btnSapXep.TabIndex = 12;
@@ -116,9 +117,9 @@
             // 
             this.cBSapXep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cBSapXep.FormattingEnabled = true;
-            this.cBSapXep.Location = new System.Drawing.Point(877, 691);
+            this.cBSapXep.Location = new System.Drawing.Point(825, 691);
             this.cBSapXep.Name = "cBSapXep";
-            this.cBSapXep.Size = new System.Drawing.Size(197, 28);
+            this.cBSapXep.Size = new System.Drawing.Size(242, 28);
             this.cBSapXep.TabIndex = 13;
             // 
             // btnThem
@@ -137,6 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.cBSapXep);
             this.Controls.Add(this.btnSapXep);
