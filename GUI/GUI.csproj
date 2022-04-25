@@ -76,6 +76,36 @@
     <Compile Include="AD_GUI\frmThemCaLam.Designer.cs">
       <DependentUpon>frmThemCaLam.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD_GUI\frmThemHopDongPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\frmThemHopDongPhim.Designer.cs">
+      <DependentUpon>frmThemHopDongPhim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\frmThemHopDongThucAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\frmThemHopDongThucAn.Designer.cs">
+      <DependentUpon>frmThemHopDongThucAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\frmThemHopDongVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\frmThemHopDongVatTu.Designer.cs">
+      <DependentUpon>frmThemHopDongVatTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\frmThemNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\frmThemNhaCungCap.Designer.cs">
+      <DependentUpon>frmThemNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\frmThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\frmThemNhanVien.Designer.cs">
+      <DependentUpon>frmThemNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="AD_GUI\UC_CaLam.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -372,6 +402,21 @@
     <EmbeddedResource Include="AD_GUI\frmThemCaLam.resx">
       <DependentUpon>frmThemCaLam.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\frmThemHopDongPhim.resx">
+      <DependentUpon>frmThemHopDongPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\frmThemHopDongThucAn.resx">
+      <DependentUpon>frmThemHopDongThucAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\frmThemHopDongVatTu.resx">
+      <DependentUpon>frmThemHopDongVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\frmThemNhaCungCap.resx">
+      <DependentUpon>frmThemNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\frmThemNhanVien.resx">
+      <DependentUpon>frmThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_CaLam.resx">
       <DependentUpon>UC_CaLam.cs</DependentUpon>
     </EmbeddedResource>
@@ -404,6 +449,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_ThongKe.resx">
       <DependentUpon>UC_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_ThongTinNV.resx">
+      <DependentUpon>UC_ThongTinNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -608,6 +656,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cinemaiccon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_sign_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_26px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

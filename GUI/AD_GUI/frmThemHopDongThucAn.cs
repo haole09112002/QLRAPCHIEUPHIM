@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace GUI.AD_GUI
 {
-    public partial class UC_ThongTinNV : UserControl
+    public partial class frmThemHopDongThucAn : Form
     {
-        public UC_ThongTinNV()
+        public frmThemHopDongThucAn()
         {
             InitializeComponent();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void tbnThoat_Click(object sender, EventArgs e)
         {
-            frmThemNhanVien frmThemNhanVien = new frmThemNhanVien();
-            frmThemNhanVien.Show();
+            this.Close();
         }
     }
 }
