@@ -32,12 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.tbnThoat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -53,7 +51,9 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.tbnThoat = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -101,18 +101,6 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(368, 28);
             this.dateTimePicker2.TabIndex = 5;
-            // 
-            // tbnThoat
-            // 
-            this.tbnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tbnThoat.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnThoat.Location = new System.Drawing.Point(819, 562);
-            this.tbnThoat.Name = "tbnThoat";
-            this.tbnThoat.Size = new System.Drawing.Size(104, 36);
-            this.tbnThoat.TabIndex = 7;
-            this.tbnThoat.Text = "Thoát";
-            this.tbnThoat.UseVisualStyleBackColor = true;
-            this.tbnThoat.Click += new System.EventHandler(this.tbnThoat_Click);
             // 
             // panel1
             // 
@@ -176,17 +164,6 @@
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nội dung";
-            // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(434, 185);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 36);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Xóa";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // textBox6
             // 
@@ -325,12 +302,23 @@
             this.textBox1.Size = new System.Drawing.Size(138, 28);
             this.textBox1.TabIndex = 8;
             // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(434, 185);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(104, 36);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Xóa";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.LightGreen;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::GUI.Properties.Resources.save_26px;
             this.button3.Location = new System.Drawing.Point(578, 185);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 36);
@@ -339,12 +327,24 @@
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // tbnThoat
+            // 
+            this.tbnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tbnThoat.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnThoat.Location = new System.Drawing.Point(819, 562);
+            this.tbnThoat.Name = "tbnThoat";
+            this.tbnThoat.Size = new System.Drawing.Size(104, 36);
+            this.tbnThoat.TabIndex = 7;
+            this.tbnThoat.Text = "Thoát";
+            this.tbnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.tbnThoat.UseVisualStyleBackColor = true;
+            this.tbnThoat.Click += new System.EventHandler(this.tbnThoat_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::GUI.Properties.Resources.save_26px;
             this.button1.Location = new System.Drawing.Point(977, 562);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 36);

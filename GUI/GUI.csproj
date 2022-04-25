@@ -663,5 +663,14 @@
   <ItemGroup>
     <None Include="Resources\save_26px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_copy_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_can_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_26px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

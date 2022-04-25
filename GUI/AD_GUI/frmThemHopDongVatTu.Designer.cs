@@ -330,7 +330,7 @@
             this.button3.BackColor = System.Drawing.Color.LightGreen;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::GUI.Properties.Resources.save_26px;
+            this.button3.Image = global::GUI.Properties.Resources.new_copy_26px;
             this.button3.Location = new System.Drawing.Point(578, 185);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 36);
