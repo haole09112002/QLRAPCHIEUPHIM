@@ -60,7 +60,7 @@ namespace GUI.QLP_GUI
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnTaoLichChieu_Click(object sender, EventArgs e)
@@ -100,6 +100,11 @@ namespace GUI.QLP_GUI
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucNCC);
             changeColorButton(btnNCC);
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
