@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLP_GUI
 {
-    partial class UC_TTPhim_QLP
+    partial class UC_ThongTinPhim_QLP
     {
         /// <summary> 
         /// Required designer variable.

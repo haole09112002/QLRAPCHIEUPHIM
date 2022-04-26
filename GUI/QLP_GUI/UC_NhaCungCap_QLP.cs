@@ -19,7 +19,7 @@ namespace GUI.QLP_GUI
 
         private void btnXemThongTin_Click(object sender, EventArgs e)
         {
-            frm_ThongTinNCC_QLP f = new frm_ThongTinNCC_QLP();
+            frm_ThongTinHSXP_QLP f = new frm_ThongTinHSXP_QLP();
             f.ShowDialog();
         }
     }

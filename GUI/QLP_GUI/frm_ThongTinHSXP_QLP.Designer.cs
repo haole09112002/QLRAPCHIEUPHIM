@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLP_GUI
 {
-    partial class frm_ThongTinNCC_QLP
+    partial class frm_ThongTinHSXP_QLP
     {
         /// <summary>
         /// Required designer variable.
@@ -54,9 +54,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(23, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 25);
+            this.label1.Size = new System.Drawing.Size(225, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "MÃ NHÀ CUNG ỨNG";
+            this.label1.Text = "MÃ NHÀ CUNG CẤP";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
@@ -65,9 +65,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(23, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 25);
+            this.label2.Size = new System.Drawing.Size(236, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "TÊN NHÀ CUNG ỨNG";
+            this.label2.Text = "TÊN NHÀ CUNG CẤP";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
@@ -230,10 +230,10 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(278, 25);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Thông Tin Nhà Cung Ứng";
+            this.label8.Text = "Thông Tin Nhà Cung Cấp";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // frm_ThongTinNCC_QLP
+            // frm_ThongTinHSXP_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -243,7 +243,7 @@
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_ThongTinNCC_QLP";
+            this.Name = "frm_ThongTinHSXP_QLP";
             this.Text = "frm_ThongTInNCC_QLP";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

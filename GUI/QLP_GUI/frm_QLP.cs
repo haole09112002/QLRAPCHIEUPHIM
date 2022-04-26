@@ -16,7 +16,7 @@ namespace GUI.QLP_GUI
         {
             InitializeComponent();
         }
-        UC_TTPhim_QLP ucTTP = new UC_TTPhim_QLP();
+        UC_ThongTinPhim_QLP ucTTP = new UC_ThongTinPhim_QLP();
         UC_CaNhan_QLP ucCN = new UC_CaNhan_QLP();
         UC_TaoPhieu_QLP ucTP = new UC_TaoPhieu_QLP();
         UC_PhieuNhapXuat_QLP ucLS = new UC_PhieuNhapXuat_QLP();

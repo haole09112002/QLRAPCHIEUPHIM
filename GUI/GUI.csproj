@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -198,11 +198,11 @@
     <Compile Include="QLP_GUI\frm_TaoDeXuat.Designer.cs">
       <DependentUpon>frm_TaoDeXuat.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\frm_ThongTinNCC_QLP.cs">
+    <Compile Include="QLP_GUI\frm_ThongTinHSXP_QLP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\frm_ThongTinNCC_QLP.Designer.cs">
-      <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\frm_ThongTinHSXP_QLP.Designer.cs">
+      <DependentUpon>frm_ThongTinHSXP_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLP_GUI\UC_CaNhan_QLP.cs">
       <SubType>UserControl</SubType>
@@ -264,11 +264,11 @@
     <Compile Include="QLP_GUI\UC_TaoPhieu_QLP.Designer.cs">
       <DependentUpon>UC_TaoPhieu_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_TTPhim_QLP.cs">
+    <Compile Include="QLP_GUI\UC_ThongTinPhim_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_TTPhim_QLP.Designer.cs">
-      <DependentUpon>UC_TTPhim_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_ThongTinPhim_QLP.Designer.cs">
+      <DependentUpon>UC_ThongTinPhim_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLVT_GUI\FormChitietNCU_QLVT.cs">
       <SubType>Form</SubType>
@@ -472,8 +472,8 @@
     <EmbeddedResource Include="QLP_GUI\frm_TaoDeXuat.resx">
       <DependentUpon>frm_TaoDeXuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\frm_ThongTinNCC_QLP.resx">
-      <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\frm_ThongTinHSXP_QLP.resx">
+      <DependentUpon>frm_ThongTinHSXP_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_CaNhan_QLP.resx">
       <DependentUpon>UC_CaNhan_QLP.cs</DependentUpon>
@@ -505,8 +505,8 @@
     <EmbeddedResource Include="QLP_GUI\UC_TaoPhieu_QLP.resx">
       <DependentUpon>UC_TaoPhieu_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_TTPhim_QLP.resx">
-      <DependentUpon>UC_TTPhim_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_ThongTinPhim_QLP.resx">
+      <DependentUpon>UC_ThongTinPhim_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLVT_GUI\frmQLVT.resx">
       <DependentUpon>frmQLVT.cs</DependentUpon>

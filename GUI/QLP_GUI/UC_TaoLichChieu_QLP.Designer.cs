@@ -275,7 +275,7 @@
             this.gBKhungGioChieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.gBKhungGioChieu.Location = new System.Drawing.Point(748, 31);
             this.gBKhungGioChieu.Name = "gBKhungGioChieu";
-            this.gBKhungGioChieu.Size = new System.Drawing.Size(356, 473);
+            this.gBKhungGioChieu.Size = new System.Drawing.Size(333, 473);
             this.gBKhungGioChieu.TabIndex = 21;
             this.gBKhungGioChieu.TabStop = false;
             this.gBKhungGioChieu.Text = "Khung Giờ Chiếu";
