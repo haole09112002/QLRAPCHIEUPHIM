@@ -198,11 +198,11 @@
     <Compile Include="QLP_GUI\frm_TaoDeXuat.Designer.cs">
       <DependentUpon>frm_TaoDeXuat.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\frm_ThongTinHSXP_QLP.cs">
+    <Compile Include="QLP_GUI\frm_ThongTinNCC_QLP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\frm_ThongTinHSXP_QLP.Designer.cs">
-      <DependentUpon>frm_ThongTinHSXP_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\frm_ThongTinNCC_QLP.Designer.cs">
+      <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLP_GUI\UC_CaNhan_QLP.cs">
       <SubType>UserControl</SubType>
@@ -472,8 +472,8 @@
     <EmbeddedResource Include="QLP_GUI\frm_TaoDeXuat.resx">
       <DependentUpon>frm_TaoDeXuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\frm_ThongTinHSXP_QLP.resx">
-      <DependentUpon>frm_ThongTinHSXP_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\frm_ThongTinNCC_QLP.resx">
+      <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_CaNhan_QLP.resx">
       <DependentUpon>UC_CaNhan_QLP.cs</DependentUpon>
