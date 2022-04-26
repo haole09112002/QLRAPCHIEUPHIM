@@ -40,7 +40,7 @@
             this.btnTaoLichChieu = new System.Windows.Forms.Button();
             this.pnTop = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pBExit = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.pnLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBExit)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLeft
@@ -82,7 +82,7 @@
             this.btnNCC.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNCC.Image = global::GUI.Properties.Resources.ncc;
             this.btnNCC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNCC.Location = new System.Drawing.Point(3, 488);
+            this.btnNCC.Location = new System.Drawing.Point(3, 498);
             this.btnNCC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNCC.Name = "btnNCC";
             this.btnNCC.Size = new System.Drawing.Size(249, 66);
@@ -147,7 +147,7 @@
             this.btnNhapXuat.Location = new System.Drawing.Point(0, 412);
             this.btnNhapXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNhapXuat.Name = "btnNhapXuat";
-            this.btnNhapXuat.Size = new System.Drawing.Size(249, 66);
+            this.btnNhapXuat.Size = new System.Drawing.Size(249, 78);
             this.btnNhapXuat.TabIndex = 5;
             this.btnNhapXuat.Text = "   Nhập/Xuất Kho Phim";
             this.btnNhapXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -163,7 +163,7 @@
             this.btnCaNhan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCaNhan.Image = global::GUI.Properties.Resources.canhan;
             this.btnCaNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaNhan.Location = new System.Drawing.Point(3, 561);
+            this.btnCaNhan.Location = new System.Drawing.Point(0, 572);
             this.btnCaNhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCaNhan.Name = "btnCaNhan";
             this.btnCaNhan.Size = new System.Drawing.Size(249, 66);
@@ -182,7 +182,7 @@
             this.btnDangXuat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDangXuat.Image = global::GUI.Properties.Resources.logout;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(3, 635);
+            this.btnDangXuat.Location = new System.Drawing.Point(3, 646);
             this.btnDangXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(249, 66);
@@ -235,7 +235,7 @@
             // 
             this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(229)))), ((int)(((byte)(232)))));
             this.pnTop.Controls.Add(this.label6);
-            this.pnTop.Controls.Add(this.pictureBox1);
+            this.pnTop.Controls.Add(this.pBExit);
             this.pnTop.Controls.Add(this.label5);
             this.pnTop.Controls.Add(this.label4);
             this.pnTop.Controls.Add(this.label3);
@@ -259,17 +259,17 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Cinema Manegemenr System";
             // 
-            // pictureBox1
+            // pBExit
             // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.shutdown_26px1;
-            this.pictureBox1.Location = new System.Drawing.Point(1082, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pBExit.Image = global::GUI.Properties.Resources.shutdown_26px1;
+            this.pBExit.Location = new System.Drawing.Point(1082, 11);
+            this.pBExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pBExit.Name = "pBExit";
+            this.pBExit.Size = new System.Drawing.Size(32, 58);
+            this.pBExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBExit.TabIndex = 4;
+            this.pBExit.TabStop = false;
+            this.pBExit.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label5
             // 
@@ -354,7 +354,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -371,7 +371,7 @@
         private System.Windows.Forms.Button btnDeXuatPhim;
         private System.Windows.Forms.Button btnTaoLichChieu;
         private System.Windows.Forms.Panel pnTop;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pBExit;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

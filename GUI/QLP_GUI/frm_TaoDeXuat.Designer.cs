@@ -62,10 +62,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.gBSoLuongPhim.SuspendLayout();
             this.gBMoTaPhim.SuspendLayout();
             this.gBThongTinPhim.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnHuy
@@ -172,7 +174,7 @@
             this.panel1.Controls.Add(this.btnHuy);
             this.panel1.Controls.Add(this.gBThongTinPhim);
             this.panel1.Controls.Add(this.btnDeXuat);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1192, 729);
@@ -405,11 +407,21 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(493, 14);
+            this.label5.Location = new System.Drawing.Point(490, 1);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(251, 34);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tạo Đề Xuất Phim";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Location = new System.Drawing.Point(-1, -1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1192, 39);
+            this.panel2.TabIndex = 30;
             // 
             // frm_TaoDeXuat
             // 
@@ -423,13 +435,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_TaoDeXuat";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.gBSoLuongPhim.ResumeLayout(false);
             this.gBSoLuongPhim.PerformLayout();
             this.gBMoTaPhim.ResumeLayout(false);
             this.gBMoTaPhim.PerformLayout();
             this.gBThongTinPhim.ResumeLayout(false);
             this.gBThongTinPhim.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -470,5 +483,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox gBSoLuongPhim;
+        private System.Windows.Forms.Panel panel2;
     }
 }

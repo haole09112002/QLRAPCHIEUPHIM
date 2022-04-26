@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLP_GUI
 {
-    partial class frm_ThongTinHSXP_QLP
+    partial class frm_ThongTinNCC_QLP
     {
         /// <summary>
         /// Required designer variable.
@@ -45,6 +45,7 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,7 +130,7 @@
             // 
             this.txtMaNCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtMaNCC.Enabled = false;
-            this.txtMaNCC.Location = new System.Drawing.Point(315, 29);
+            this.txtMaNCC.Location = new System.Drawing.Point(315, 27);
             this.txtMaNCC.Name = "txtMaNCC";
             this.txtMaNCC.Size = new System.Drawing.Size(542, 26);
             this.txtMaNCC.TabIndex = 7;
@@ -225,6 +226,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(324, 18);
             this.label8.Name = "label8";
@@ -232,6 +234,14 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Thông Tin Nhà Cung Cấp";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel2.Location = new System.Drawing.Point(24, 13);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(891, 38);
+            this.panel2.TabIndex = 16;
             // 
             // frm_ThongTinHSXP_QLP
             // 
@@ -242,6 +252,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_ThongTinHSXP_QLP";
             this.Text = "frm_ThongTInNCC_QLP";
@@ -271,5 +282,6 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel2;
     }
 }

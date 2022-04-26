@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
 {
-    public partial class frm_ThongTinHSXP_QLP : Form
+    public partial class frm_ThongTinNCC_QLP : Form
     {
-        public frm_ThongTinHSXP_QLP()
+        public frm_ThongTinNCC_QLP()
         {
             InitializeComponent();
         }

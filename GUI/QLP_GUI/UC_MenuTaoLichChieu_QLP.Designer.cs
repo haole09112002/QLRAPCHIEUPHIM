@@ -36,12 +36,11 @@
             // btnTaoLichChieu
             // 
             this.btnTaoLichChieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
-            this.btnTaoLichChieu.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnTaoLichChieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnTaoLichChieu.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTaoLichChieu.Location = new System.Drawing.Point(0, 0);
+            this.btnTaoLichChieu.Location = new System.Drawing.Point(24, 0);
             this.btnTaoLichChieu.Name = "btnTaoLichChieu";
-            this.btnTaoLichChieu.Size = new System.Drawing.Size(364, 36);
+            this.btnTaoLichChieu.Size = new System.Drawing.Size(281, 36);
             this.btnTaoLichChieu.TabIndex = 0;
             this.btnTaoLichChieu.Text = "    TẠO LỊCH CHIẾU";
             this.btnTaoLichChieu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -52,9 +51,8 @@
             // btnLichChieuDuKien
             // 
             this.btnLichChieuDuKien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
-            this.btnLichChieuDuKien.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnLichChieuDuKien.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnLichChieuDuKien.Location = new System.Drawing.Point(364, 0);
+            this.btnLichChieuDuKien.Location = new System.Drawing.Point(328, 0);
             this.btnLichChieuDuKien.Name = "btnLichChieuDuKien";
             this.btnLichChieuDuKien.Size = new System.Drawing.Size(362, 36);
             this.btnLichChieuDuKien.TabIndex = 1;
@@ -67,11 +65,10 @@
             // btnLichChieuChinhThuc
             // 
             this.btnLichChieuChinhThuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
-            this.btnLichChieuChinhThuc.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnLichChieuChinhThuc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnLichChieuChinhThuc.Location = new System.Drawing.Point(726, 0);
+            this.btnLichChieuChinhThuc.Location = new System.Drawing.Point(696, 0);
             this.btnLichChieuChinhThuc.Name = "btnLichChieuChinhThuc";
-            this.btnLichChieuChinhThuc.Size = new System.Drawing.Size(391, 36);
+            this.btnLichChieuChinhThuc.Size = new System.Drawing.Size(311, 36);
             this.btnLichChieuChinhThuc.TabIndex = 3;
             this.btnLichChieuChinhThuc.Text = "    LỊCH CHIẾU CHÍNH THỨC";
             this.btnLichChieuChinhThuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
