@@ -45,42 +45,44 @@
             // txtTimKiem
             // 
             this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtTimKiem.Location = new System.Drawing.Point(675, 551);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTimKiem.Location = new System.Drawing.Point(506, 448);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(280, 22);
+            this.txtTimKiem.Size = new System.Drawing.Size(211, 20);
             this.txtTimKiem.TabIndex = 15;
             // 
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.White;
             this.btnTimKiem.ForeColor = System.Drawing.Color.Blue;
-            this.btnTimKiem.Location = new System.Drawing.Point(568, 549);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTimKiem.Location = new System.Drawing.Point(426, 446);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(84, 26);
+            this.btnTimKiem.Size = new System.Drawing.Size(63, 21);
             this.btnTimKiem.TabIndex = 14;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
             // 
             // dGVLSNX
             // 
+            this.dGVLSNX.BackgroundColor = System.Drawing.Color.Snow;
             this.dGVLSNX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVLSNX.Location = new System.Drawing.Point(40, 147);
-            this.dGVLSNX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dGVLSNX.Location = new System.Drawing.Point(30, 119);
+            this.dGVLSNX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dGVLSNX.Name = "dGVLSNX";
             this.dGVLSNX.RowHeadersWidth = 62;
             this.dGVLSNX.RowTemplate.Height = 28;
-            this.dGVLSNX.Size = new System.Drawing.Size(912, 374);
+            this.dGVLSNX.Size = new System.Drawing.Size(684, 304);
             this.dGVLSNX.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(351, 16);
+            this.label1.Location = new System.Drawing.Point(263, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 19);
+            this.label1.Size = new System.Drawing.Size(216, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "DANH SÁCH PHIẾU NHẬP XUẤT";
             // 
@@ -88,10 +90,10 @@
             // 
             this.btnSapXep.BackColor = System.Drawing.Color.White;
             this.btnSapXep.ForeColor = System.Drawing.Color.Blue;
-            this.btnSapXep.Location = new System.Drawing.Point(40, 545);
-            this.btnSapXep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSapXep.Location = new System.Drawing.Point(30, 443);
+            this.btnSapXep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSapXep.Name = "btnSapXep";
-            this.btnSapXep.Size = new System.Drawing.Size(84, 26);
+            this.btnSapXep.Size = new System.Drawing.Size(63, 21);
             this.btnSapXep.TabIndex = 16;
             this.btnSapXep.Text = "Sắp Xếp";
             this.btnSapXep.UseVisualStyleBackColor = false;
@@ -100,10 +102,10 @@
             // 
             this.cBSapXep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cBSapXep.FormattingEnabled = true;
-            this.cBSapXep.Location = new System.Drawing.Point(147, 549);
-            this.cBSapXep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBSapXep.Location = new System.Drawing.Point(110, 446);
+            this.cBSapXep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cBSapXep.Name = "cBSapXep";
-            this.cBSapXep.Size = new System.Drawing.Size(280, 24);
+            this.cBSapXep.Size = new System.Drawing.Size(211, 21);
             this.cBSapXep.TabIndex = 17;
             // 
             // groupBox1
@@ -112,11 +114,11 @@
             this.groupBox1.Controls.Add(this.rBNhap);
             this.groupBox1.Controls.Add(this.rBTatCa);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(40, 67);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(30, 54);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(912, 60);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(684, 49);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chọn Xem Phiếu Nhập Xuất";
@@ -124,10 +126,10 @@
             // rBXuat
             // 
             this.rBXuat.AutoSize = true;
-            this.rBXuat.Location = new System.Drawing.Point(576, 26);
-            this.rBXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rBXuat.Location = new System.Drawing.Point(432, 21);
+            this.rBXuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rBXuat.Name = "rBXuat";
-            this.rBXuat.Size = new System.Drawing.Size(296, 23);
+            this.rBXuat.Size = new System.Drawing.Size(249, 21);
             this.rBXuat.TabIndex = 2;
             this.rBXuat.TabStop = true;
             this.rBXuat.Text = "Xem Danh Sách Phiếu Xuất Phim";
@@ -136,10 +138,10 @@
             // rBNhap
             // 
             this.rBNhap.AutoSize = true;
-            this.rBNhap.Location = new System.Drawing.Point(213, 26);
-            this.rBNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rBNhap.Location = new System.Drawing.Point(160, 21);
+            this.rBNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rBNhap.Name = "rBNhap";
-            this.rBNhap.Size = new System.Drawing.Size(304, 23);
+            this.rBNhap.Size = new System.Drawing.Size(254, 21);
             this.rBNhap.TabIndex = 1;
             this.rBNhap.TabStop = true;
             this.rBNhap.Text = "Xem Danh Sách Phiếu Nhập Phim";
@@ -148,10 +150,10 @@
             // rBTatCa
             // 
             this.rBTatCa.AutoSize = true;
-            this.rBTatCa.Location = new System.Drawing.Point(5, 26);
-            this.rBTatCa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rBTatCa.Location = new System.Drawing.Point(4, 21);
+            this.rBTatCa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rBTatCa.Name = "rBTatCa";
-            this.rBTatCa.Size = new System.Drawing.Size(77, 23);
+            this.rBTatCa.Size = new System.Drawing.Size(69, 21);
             this.rBTatCa.TabIndex = 0;
             this.rBTatCa.TabStop = true;
             this.rBTatCa.Text = "Tất Cả";
@@ -159,7 +161,7 @@
             // 
             // UC_PhieuNhapXuat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.groupBox1);
@@ -169,9 +171,9 @@
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.dGVLSNX);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_PhieuNhapXuat";
-            this.Size = new System.Drawing.Size(993, 613);
+            this.Size = new System.Drawing.Size(745, 498);
             ((System.ComponentModel.ISupportInitialize)(this.dGVLSNX)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

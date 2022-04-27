@@ -22,5 +22,17 @@ namespace GUI.AD_GUI
             frmThemNhanVien frmThemNhanVien = new frmThemNhanVien();
             frmThemNhanVien.Show();
         }
+
+        //private void button5_Click(object sender, EventArgs e)
+        //{
+        //    if(dataGridView1.SelectedRows.Count>0)
+        //    {
+        //        foreach(DataGridViewRow i in dataGridView1.SelectedRows)
+        //        {
+        //            string MSNV = i.Cells["MSNV"].Value.ToString();
+        //            bll.DelNV(MSNV);
+        //        }
+        //    }
+        //}
     }
 }
