@@ -36,6 +36,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -51,10 +52,9 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.tbnThoat = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -111,8 +111,6 @@
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.tbnThoat);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -123,11 +121,14 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.dataGridView2);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.tbnThoat);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(22, 396);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(771, 249);
+            this.groupBox3.Size = new System.Drawing.Size(1122, 249);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Vật tư đã thêm";
@@ -139,12 +140,11 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(745, 216);
+            this.dataGridView2.Size = new System.Drawing.Size(860, 216);
             this.dataGridView2.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Controls.Add(this.label12);
@@ -165,10 +165,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nội dung";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.LightGreen;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(524, 147);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(104, 36);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "   Thêm";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(120, 147);
+            this.textBox6.Location = new System.Drawing.Point(159, 144);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(121, 28);
             this.textBox6.TabIndex = 27;
@@ -279,16 +292,16 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(681, 43);
+            this.textBox2.Location = new System.Drawing.Point(800, 43);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(299, 28);
+            this.textBox2.Size = new System.Drawing.Size(344, 28);
             this.textBox2.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(504, 46);
+            this.label4.Location = new System.Drawing.Point(617, 46);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(156, 19);
             this.label4.TabIndex = 9;
@@ -302,36 +315,11 @@
             this.textBox1.Size = new System.Drawing.Size(138, 28);
             this.textBox1.TabIndex = 8;
             // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(434, 185);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 36);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Xóa";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.LightGreen;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(578, 185);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 36);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "   Thêm";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // tbnThoat
             // 
             this.tbnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tbnThoat.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnThoat.Location = new System.Drawing.Point(819, 562);
+            this.tbnThoat.Location = new System.Drawing.Point(953, 184);
             this.tbnThoat.Name = "tbnThoat";
             this.tbnThoat.Size = new System.Drawing.Size(104, 36);
             this.tbnThoat.TabIndex = 7;
@@ -345,13 +333,25 @@
             this.button1.BackColor = System.Drawing.Color.LightGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(977, 562);
+            this.button1.Location = new System.Drawing.Point(953, 58);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 36);
             this.button1.TabIndex = 6;
             this.button1.Text = "   Lưu";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(953, 121);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 36);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Xóa";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmThemHopDongThucAn
             // 
@@ -394,7 +394,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label12;
@@ -407,5 +406,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button2;
     }
 }

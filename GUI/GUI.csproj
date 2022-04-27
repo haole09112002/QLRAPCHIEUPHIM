@@ -148,6 +148,12 @@
     <Compile Include="AD_GUI\UC_MenuKho.Designer.cs">
       <DependentUpon>UC_MenuKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD_GUI\UC_MenuThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_MenuThongKe.Designer.cs">
+      <DependentUpon>UC_MenuThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="AD_GUI\UC_NCC_AD.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,17 +166,29 @@
     <Compile Include="AD_GUI\UC_PhieuNhapXuat.Designer.cs">
       <DependentUpon>UC_PhieuNhapXuat.cs</DependentUpon>
     </Compile>
-    <Compile Include="AD_GUI\UC_ThongKe.cs">
+    <Compile Include="AD_GUI\UC_ThongKeChung.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AD_GUI\UC_ThongKe.Designer.cs">
-      <DependentUpon>UC_ThongKe.cs</DependentUpon>
+    <Compile Include="AD_GUI\UC_ThongKeChung.Designer.cs">
+      <DependentUpon>UC_ThongKeChung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_ThongKeNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_ThongKeNhanVien.Designer.cs">
+      <DependentUpon>UC_ThongKeNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="AD_GUI\UC_MenuNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AD_GUI\UC_MenuNhanVien.Designer.cs">
       <DependentUpon>UC_MenuNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_GUI\UC_ThongKeNhapXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_ThongKeNhapXuat.Designer.cs">
+      <DependentUpon>UC_ThongKeNhapXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="AD_GUI\UC_ThongTinNV.cs">
       <SubType>UserControl</SubType>
@@ -447,14 +465,23 @@
     <EmbeddedResource Include="AD_GUI\UC_MenuNhanVien.resx">
       <DependentUpon>UC_MenuNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_MenuThongKe.resx">
+      <DependentUpon>UC_MenuThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_NCC_AD.resx">
       <DependentUpon>UC_NCC_AD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_PhieuNhapXuat.resx">
       <DependentUpon>UC_PhieuNhapXuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AD_GUI\UC_ThongKe.resx">
-      <DependentUpon>UC_ThongKe.cs</DependentUpon>
+    <EmbeddedResource Include="AD_GUI\UC_ThongKeChung.resx">
+      <DependentUpon>UC_ThongKeChung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_ThongKeNhanVien.resx">
+      <DependentUpon>UC_ThongKeNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_ThongKeNhapXuat.resx">
+      <DependentUpon>UC_ThongKeNhapXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_ThongTinNV.resx">
       <DependentUpon>UC_ThongTinNV.cs</DependentUpon>
@@ -680,6 +707,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logout_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_26px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
