@@ -17,8 +17,7 @@ namespace GUI.AD_GUI
             InitializeComponent();
         }
         UC_ThongKe ucThongKe = new UC_ThongKe();
-        UC_LichChieu_AD ucLichChieu = new UC_LichChieu_AD();
-     
+        UC_LichChieu_AD ucLichChieu = new UC_LichChieu_AD();  
         UC_NCC_AD ucNCC = new UC_NCC_AD();
         UC_MenuNhanVien ucMenuNhanVien = new UC_MenuNhanVien();
         UC_MenuKho ucMenuKho = new UC_MenuKho();

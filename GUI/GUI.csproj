@@ -270,131 +270,125 @@
     <Compile Include="QLP_GUI\UC_TTPhim_QLP.Designer.cs">
       <DependentUpon>UC_TTPhim_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\FormChitietNCU_QLVT.cs">
+    <Compile Include="QLVT_GUI\frmDashboardQLVT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\FormChitietNCU_QLVT.Designer.cs">
-      <DependentUpon>FormChitietNCU_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\frmDashboardQLVT.Designer.cs">
+      <DependentUpon>frmDashboardQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\frmQLVT.cs">
+    <Compile Include="QLVT_GUI\frmCapNhatPhongChieuQLVT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\frmQLVT.Designer.cs">
-      <DependentUpon>frmQLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\frmCapNhatPhongChieuQLVT.Designer.cs">
+      <DependentUpon>frmCapNhatPhongChieuQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\Frm_EditPhongChieu_QLVT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QLVT_GUI\Frm_EditPhongChieu_QLVT.Designer.cs">
-      <DependentUpon>Frm_EditPhongChieu_QLVT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLVT_GUI\UC_DSPNXTA_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCMenuNhaCungUngQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_DSPNXTA_QLVT.Designer.cs">
-      <DependentUpon>UC_DSPNXTA_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCMenuNhaCungUngQLVT.Designer.cs">
+      <DependentUpon>UCMenuNhaCungUngQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_DSPNXVT_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCNhapXuatThucAnQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_DSPNXVT_QLVT.Designer.cs">
-      <DependentUpon>UC_DSPNXVT_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCNhapXuatThucAnQLVT.Designer.cs">
+      <DependentUpon>UCNhapXuatThucAnQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_DSTADX_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCNhapXuatVatTuQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_DSTADX_QLVT.Designer.cs">
-      <DependentUpon>UC_DSTADX_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCNhapXuatVatTuQLVT.Designer.cs">
+      <DependentUpon>UCNhapXuatVatTuQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_DSVTDX_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCDaDeXuatThucAnQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_DSVTDX_QLVT.Designer.cs">
-      <DependentUpon>UC_DSVTDX_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCDaDeXuatThucAnQLVT.Designer.cs">
+      <DependentUpon>UCDaDeXuatThucAnQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_HoSoCN_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCDaDeXuatVatTuQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_HoSoCN_QLVT.Designer.cs">
-      <DependentUpon>UC_HoSoCN_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCDaDeXuatVatTuQLVT.Designer.cs">
+      <DependentUpon>UCDaDeXuatVatTuQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_MenuDeXuatQLVT.cs">
+    <Compile Include="QLVT_GUI\UCHoSoCaNhanQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_MenuDeXuatQLVT.Designer.cs">
-      <DependentUpon>UC_MenuDeXuatQLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCHoSoCaNhanQLVT.Designer.cs">
+      <DependentUpon>UCHoSoCaNhanQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_MenuNhapXuatQLVT.cs">
+    <Compile Include="QLVT_GUI\UCMenuDeXuatQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_MenuNhapXuatQLVT.Designer.cs">
-      <DependentUpon>UC_MenuNhapXuatQLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCMenuDeXuatQLVT.Designer.cs">
+      <DependentUpon>UCMenuDeXuatQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_MenuTTNCU.QLVT.cs">
+    <Compile Include="QLVT_GUI\UCMenuNhapXuatQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_MenuTTNCU.QLVT.Designer.cs">
-      <DependentUpon>UC_MenuTTNCU.QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCMenuNhapXuatQLVT.Designer.cs">
+      <DependentUpon>UCMenuNhapXuatQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_MenuTTSanPham_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCMenuSanPhamQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_MenuTTSanPham_QLVT.Designer.cs">
-      <DependentUpon>UC_MenuTTSanPham_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCMenuSanPhamQLVT.Designer.cs">
+      <DependentUpon>UCMenuSanPhamQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_PhongChieu_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCPhongChieuQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_PhongChieu_QLVT.Designer.cs">
-      <DependentUpon>UC_PhongChieu_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCPhongChieuQLVT.Designer.cs">
+      <DependentUpon>UCPhongChieuQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TDXTA_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCDeXuatThucAnQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TDXTA_QLVT.Designer.cs">
-      <DependentUpon>UC_TDXTA_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCDeXuatThucAnQLVT.Designer.cs">
+      <DependentUpon>UCDeXuatThucAnQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TDXVT_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCDeXuatVatTuQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TDXVT_QLVT.Designer.cs">
-      <DependentUpon>UC_TDXVT_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCDeXuatVatTuQLVT.Designer.cs">
+      <DependentUpon>UCDeXuatVatTuQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TPNXTA_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCPhieuNhapXuatThucAnQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TPNXTA_QLVT.Designer.cs">
-      <DependentUpon>UC_TPNXTA_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCPhieuNhapXuatThucAnQLVT.Designer.cs">
+      <DependentUpon>UCPhieuNhapXuatThucAnQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TPNXVT_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCPhieuNhapXuatVatTuQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TPNXVT_QLVT.Designer.cs">
-      <DependentUpon>UC_TPNXVT_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCPhieuNhapXuatVatTuQLVT.Designer.cs">
+      <DependentUpon>UCPhieuNhapXuatVatTuQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TTNCUTA.QLVT.cs">
+    <Compile Include="QLVT_GUI\UCNhaCungUngThucAnQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TTNCUTA.QLVT.Designer.cs">
-      <DependentUpon>UC_TTNCUTA.QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCNhaCungUngThucAnQLVT.Designer.cs">
+      <DependentUpon>UCNhaCungUngThucAnQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TTNCUVT_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCNhaCungUngVatTuQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TTNCUVT_QLVT.Designer.cs">
-      <DependentUpon>UC_TTNCUVT_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCNhaCungUngVatTuQLVT.Designer.cs">
+      <DependentUpon>UCNhaCungUngVatTuQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TTTA_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCThongTinThucAnQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TTTA_QLVT.Designer.cs">
-      <DependentUpon>UC_TTTA_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCThongTinThucAnQLVT.Designer.cs">
+      <DependentUpon>UCThongTinThucAnQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TTVT_QLVT.cs">
+    <Compile Include="QLVT_GUI\UCThongTinVatTuQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TTVT_QLVT.Designer.cs">
-      <DependentUpon>UC_TTVT_QLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCThongTinVatTuQLVT.Designer.cs">
+      <DependentUpon>UCThongTinVatTuQLVT.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AD_GUI\frmDashboard_AD.resx">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
@@ -508,65 +502,65 @@
     <EmbeddedResource Include="QLP_GUI\UC_TTPhim_QLP.resx">
       <DependentUpon>UC_TTPhim_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\frmQLVT.resx">
-      <DependentUpon>frmQLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\frmDashboardQLVT.resx">
+      <DependentUpon>frmDashboardQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\Frm_EditPhongChieu_QLVT.resx">
-      <DependentUpon>Frm_EditPhongChieu_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\frmCapNhatPhongChieuQLVT.resx">
+      <DependentUpon>frmCapNhatPhongChieuQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_DSPNXTA_QLVT.resx">
-      <DependentUpon>UC_DSPNXTA_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCMenuNhaCungUngQLVT.resx">
+      <DependentUpon>UCMenuNhaCungUngQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_DSPNXVT_QLVT.resx">
-      <DependentUpon>UC_DSPNXVT_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCNhapXuatThucAnQLVT.resx">
+      <DependentUpon>UCNhapXuatThucAnQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_DSTADX_QLVT.resx">
-      <DependentUpon>UC_DSTADX_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCNhapXuatVatTuQLVT.resx">
+      <DependentUpon>UCNhapXuatVatTuQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_DSVTDX_QLVT.resx">
-      <DependentUpon>UC_DSVTDX_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCDaDeXuatThucAnQLVT.resx">
+      <DependentUpon>UCDaDeXuatThucAnQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_HoSoCN_QLVT.resx">
-      <DependentUpon>UC_HoSoCN_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCDaDeXuatVatTuQLVT.resx">
+      <DependentUpon>UCDaDeXuatVatTuQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_MenuDeXuatQLVT.resx">
-      <DependentUpon>UC_MenuDeXuatQLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCHoSoCaNhanQLVT.resx">
+      <DependentUpon>UCHoSoCaNhanQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_MenuNhapXuatQLVT.resx">
-      <DependentUpon>UC_MenuNhapXuatQLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCMenuDeXuatQLVT.resx">
+      <DependentUpon>UCMenuDeXuatQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_MenuTTNCU.QLVT.resx">
-      <DependentUpon>UC_MenuTTNCU.QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCMenuNhapXuatQLVT.resx">
+      <DependentUpon>UCMenuNhapXuatQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_MenuTTSanPham_QLVT.resx">
-      <DependentUpon>UC_MenuTTSanPham_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCMenuSanPhamQLVT.resx">
+      <DependentUpon>UCMenuSanPhamQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_PhongChieu_QLVT.resx">
-      <DependentUpon>UC_PhongChieu_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCPhongChieuQLVT.resx">
+      <DependentUpon>UCPhongChieuQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_TDXTA_QLVT.resx">
-      <DependentUpon>UC_TDXTA_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCDeXuatThucAnQLVT.resx">
+      <DependentUpon>UCDeXuatThucAnQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_TDXVT_QLVT.resx">
-      <DependentUpon>UC_TDXVT_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCDeXuatVatTuQLVT.resx">
+      <DependentUpon>UCDeXuatVatTuQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_TPNXTA_QLVT.resx">
-      <DependentUpon>UC_TPNXTA_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCPhieuNhapXuatThucAnQLVT.resx">
+      <DependentUpon>UCPhieuNhapXuatThucAnQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_TPNXVT_QLVT.resx">
-      <DependentUpon>UC_TPNXVT_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCPhieuNhapXuatVatTuQLVT.resx">
+      <DependentUpon>UCPhieuNhapXuatVatTuQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_TTNCUTA.QLVT.resx">
-      <DependentUpon>UC_TTNCUTA.QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCNhaCungUngThucAnQLVT.resx">
+      <DependentUpon>UCNhaCungUngThucAnQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_TTNCUVT_QLVT.resx">
-      <DependentUpon>UC_TTNCUVT_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCNhaCungUngVatTuQLVT.resx">
+      <DependentUpon>UCNhaCungUngVatTuQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_TTTA_QLVT.resx">
-      <DependentUpon>UC_TTTA_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCThongTinThucAnQLVT.resx">
+      <DependentUpon>UCThongTinThucAnQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UC_TTVT_QLVT.resx">
-      <DependentUpon>UC_TTVT_QLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCThongTinVatTuQLVT.resx">
+      <DependentUpon>UCThongTinVatTuQLVT.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -671,6 +665,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logout_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmployeeQLVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuDeXuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuWareHouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuWareHouse1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuProduct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuCinemaRoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TabarMaterial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SubMenuFood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserProfileQLVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FoodTitleDeXuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolDeXuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MovieRoom.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
