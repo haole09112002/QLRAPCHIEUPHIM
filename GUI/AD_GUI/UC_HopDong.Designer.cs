@@ -163,7 +163,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 28);
             this.button2.TabIndex = 1;
-            this.button2.Text = "HỦY";
+            this.button2.Text = "XEM CHI TIẾT";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // btnTao
