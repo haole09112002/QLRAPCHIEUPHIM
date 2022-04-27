@@ -34,7 +34,7 @@
             // 
             // btnTaoPhieu
             // 
-            this.btnTaoPhieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
+            this.btnTaoPhieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(153)))));
             this.btnTaoPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaoPhieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnTaoPhieu.Location = new System.Drawing.Point(31, 0);
@@ -77,7 +77,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnTaoPhieu;
+        public System.Windows.Forms.Button btnTaoPhieu;
         private System.Windows.Forms.Button btnDanhSachPhieuNX;
     }
 }

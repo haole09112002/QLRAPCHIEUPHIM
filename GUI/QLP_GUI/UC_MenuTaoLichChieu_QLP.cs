@@ -25,7 +25,7 @@ namespace GUI.QLP_GUI
         UC_DanhSachLichChieuChinhThuc_QLP ucDSCT = new UC_DanhSachLichChieuChinhThuc_QLP();
         UC_DanhSachLichChieuDuKien_QLP ucDSDK = new UC_DanhSachLichChieuDuKien_QLP();
 
-        private void changeColorButton(Button btn)
+        public void changeColorButton(Button btn)
         {
             btn.BackColor = Color.FromArgb(0, 144, 153);
             List<Button> buttons = new List<Button> { btnLichChieuChinhThuc, btnTaoLichChieu,btnLichChieuDuKien };

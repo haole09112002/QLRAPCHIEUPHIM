@@ -70,6 +70,7 @@ namespace GUI.QLP_GUI
             AddControlsToPnCenter(ucTLC);
             ucMTLC.d = new UC_MenuTaoLichChieu_QLP.MyDel(AddControlsToPnCenter);
             changeColorButton(btnTaoLichChieu);
+            ucMTLC.changeColorButton(ucMTLC.btnTaoLichChieu);
         }
 
         private void btnDeXuatPhim_Click(object sender, EventArgs e)
@@ -86,6 +87,7 @@ namespace GUI.QLP_GUI
             AddControlsToPnCenter(ucTP);
             ucMNXK.d = new UC_MenuNhapXuatKho_QLP.MyDel(AddControlsToPnCenter);
             changeColorButton(btnNhapXuat);
+            ucMNXK.changeColorButton(ucMNXK.btnTaoPhieu);
         }
 
         private void btnCaNhan_Click(object sender, EventArgs e)

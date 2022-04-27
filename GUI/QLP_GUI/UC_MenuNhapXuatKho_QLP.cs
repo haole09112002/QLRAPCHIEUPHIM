@@ -21,7 +21,7 @@ namespace GUI.QLP_GUI
         }
         UC_TaoPhieu_QLP ucTP = new UC_TaoPhieu_QLP();
         UC_PhieuNhapXuat_QLP ucLS = new UC_PhieuNhapXuat_QLP();
-        private void changeColorButton(Button btn)
+        public void changeColorButton(Button btn)
         {
             btn.BackColor = Color.FromArgb(0, 144, 153);
             List<Button> buttons = new List<Button> { btnTaoPhieu,btnDanhSachPhieuNX };

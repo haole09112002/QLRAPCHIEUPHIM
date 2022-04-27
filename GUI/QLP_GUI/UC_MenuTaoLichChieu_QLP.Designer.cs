@@ -35,7 +35,8 @@
             // 
             // btnTaoLichChieu
             // 
-            this.btnTaoLichChieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
+            this.btnTaoLichChieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(153)))));
+            this.btnTaoLichChieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaoLichChieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnTaoLichChieu.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnTaoLichChieu.Location = new System.Drawing.Point(24, 0);
@@ -51,6 +52,7 @@
             // btnLichChieuDuKien
             // 
             this.btnLichChieuDuKien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
+            this.btnLichChieuDuKien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLichChieuDuKien.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnLichChieuDuKien.Location = new System.Drawing.Point(328, 0);
             this.btnLichChieuDuKien.Name = "btnLichChieuDuKien";
@@ -65,6 +67,7 @@
             // btnLichChieuChinhThuc
             // 
             this.btnLichChieuChinhThuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
+            this.btnLichChieuChinhThuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLichChieuChinhThuc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnLichChieuChinhThuc.Location = new System.Drawing.Point(696, 0);
             this.btnLichChieuChinhThuc.Name = "btnLichChieuChinhThuc";
@@ -92,7 +95,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnTaoLichChieu;
+        public System.Windows.Forms.Button btnTaoLichChieu;
         private System.Windows.Forms.Button btnLichChieuDuKien;
         private System.Windows.Forms.Button btnLichChieuChinhThuc;
     }
