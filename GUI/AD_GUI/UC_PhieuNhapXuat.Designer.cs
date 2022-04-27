@@ -44,21 +44,24 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtTimKiem.BackColor = System.Drawing.Color.White;
+            this.txtTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(675, 551);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(280, 22);
+            this.txtTimKiem.Size = new System.Drawing.Size(280, 28);
             this.txtTimKiem.TabIndex = 15;
             // 
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.White;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.Blue;
-            this.btnTimKiem.Location = new System.Drawing.Point(568, 549);
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.btnTimKiem.Location = new System.Drawing.Point(554, 549);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(84, 26);
+            this.btnTimKiem.Size = new System.Drawing.Size(98, 37);
             this.btnTimKiem.TabIndex = 14;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
@@ -87,23 +90,26 @@
             // btnSapXep
             // 
             this.btnSapXep.BackColor = System.Drawing.Color.White;
-            this.btnSapXep.ForeColor = System.Drawing.Color.Blue;
+            this.btnSapXep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSapXep.ForeColor = System.Drawing.Color.Black;
             this.btnSapXep.Location = new System.Drawing.Point(40, 545);
             this.btnSapXep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSapXep.Name = "btnSapXep";
-            this.btnSapXep.Size = new System.Drawing.Size(84, 26);
+            this.btnSapXep.Size = new System.Drawing.Size(104, 41);
             this.btnSapXep.TabIndex = 16;
             this.btnSapXep.Text = "Sắp Xếp";
             this.btnSapXep.UseVisualStyleBackColor = false;
             // 
             // cBSapXep
             // 
-            this.cBSapXep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cBSapXep.BackColor = System.Drawing.Color.White;
+            this.cBSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBSapXep.FormattingEnabled = true;
-            this.cBSapXep.Location = new System.Drawing.Point(147, 549);
+            this.cBSapXep.Location = new System.Drawing.Point(209, 551);
             this.cBSapXep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBSapXep.Name = "cBSapXep";
-            this.cBSapXep.Size = new System.Drawing.Size(280, 24);
+            this.cBSapXep.Size = new System.Drawing.Size(280, 27);
             this.cBSapXep.TabIndex = 17;
             // 
             // groupBox1

@@ -16,6 +16,7 @@ namespace GUI.AD_GUI
         public UC_MenuNhanVien()
         {
             InitializeComponent();
+            btnMenuThongTinNV.BackColor = Color.FromArgb(40, 51, 66);
         }
         public UC_ThongTinNV ucThongTinNV = new UC_ThongTinNV();
         public UC_CaLam ucCaLam = new UC_CaLam();
@@ -25,11 +26,33 @@ namespace GUI.AD_GUI
         private void btnMenuThongTinNV_Click(object sender, EventArgs e)
         {
             d(ucThongTinNV);
+            changeColorButton(btnMenuThongTinNV);
         }
 
         private void btnMenuCaLam_Click(object sender, EventArgs e)
         {
             d(ucCaLam);
+            changeColorButton(btnMenuCaLam);
+        }
+
+
+        private void changeColorButton(Button btn)
+        {
+            btn.BackColor = Color.FromArgb(0, 144, 153); // xanh
+            List<Button> buttons = new List<Button> { btnMenuThongTinNV, btnMenuCaLam};
+            foreach (Button i in buttons)
+            {
+
+                if (i.BackColor == Color.FromArgb(0, 144, 153) && i != btn) // xanh 
+                {
+                    i.BackColor = Color.FromArgb(226, 251, 242); // xanh non
+                }
+            }
+        }
+        public void setColor()
+        {
+            btnMenuThongTinNV.BackColor = Color.FromArgb(0, 144, 153);
+            btnMenuCaLam.BackColor = Color.FromArgb(226, 251, 242);
         }
     }
 }

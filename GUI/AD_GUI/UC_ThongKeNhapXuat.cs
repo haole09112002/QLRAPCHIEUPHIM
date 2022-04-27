@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI.AD_GUI
 {
-    public partial class frmThemHopDongVatTu : Form
+    public partial class UC_ThongKeNhapXuat : UserControl
     {
-        public frmThemHopDongVatTu()
+        public UC_ThongKeNhapXuat()
         {
             InitializeComponent();
         }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-       
     }
 }
