@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLP_GUI
 {
-    partial class UC_NCC_QLP
+    partial class UC_NhaCungCap_QLP
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,10 +32,10 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnXemThongTin = new System.Windows.Forms.Button();
-            this.dGVDanhSachNhaCungUng = new System.Windows.Forms.DataGridView();
+            this.dGVDanhSachNhaCungCap = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.cBSapXep = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachNhaCungUng)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachNhaCungCap)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSapXep
@@ -81,15 +81,16 @@
             this.btnXemThongTin.UseVisualStyleBackColor = false;
             this.btnXemThongTin.Click += new System.EventHandler(this.btnXemThongTin_Click);
             // 
-            // dGVDanhSachNhaCungUng
+            // dGVDanhSachNhaCungCap
             // 
-            this.dGVDanhSachNhaCungUng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVDanhSachNhaCungUng.Location = new System.Drawing.Point(38, 122);
-            this.dGVDanhSachNhaCungUng.Name = "dGVDanhSachNhaCungUng";
-            this.dGVDanhSachNhaCungUng.RowHeadersWidth = 62;
-            this.dGVDanhSachNhaCungUng.RowTemplate.Height = 28;
-            this.dGVDanhSachNhaCungUng.Size = new System.Drawing.Size(1031, 480);
-            this.dGVDanhSachNhaCungUng.TabIndex = 10;
+            this.dGVDanhSachNhaCungCap.BackgroundColor = System.Drawing.Color.White;
+            this.dGVDanhSachNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVDanhSachNhaCungCap.Location = new System.Drawing.Point(38, 122);
+            this.dGVDanhSachNhaCungCap.Name = "dGVDanhSachNhaCungCap";
+            this.dGVDanhSachNhaCungCap.RowHeadersWidth = 62;
+            this.dGVDanhSachNhaCungCap.RowTemplate.Height = 28;
+            this.dGVDanhSachNhaCungCap.Size = new System.Drawing.Size(1031, 480);
+            this.dGVDanhSachNhaCungCap.TabIndex = 10;
             // 
             // label1
             // 
@@ -97,9 +98,9 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(33, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(314, 25);
+            this.label1.Size = new System.Drawing.Size(284, 25);
             this.label1.TabIndex = 9;
-            this.label1.Text = "DANH SÁCH NHÀ CUNG ỨNG";
+            this.label1.Text = "Danh Sách Nhà Cung Cấp";
             // 
             // cBSapXep
             // 
@@ -110,20 +111,21 @@
             this.cBSapXep.Size = new System.Drawing.Size(222, 28);
             this.cBSapXep.TabIndex = 17;
             // 
-            // UC_NCC_QLP
+            // UC_NhaCungCap_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.cBSapXep);
             this.Controls.Add(this.btnSapXep);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnXemThongTin);
-            this.Controls.Add(this.dGVDanhSachNhaCungUng);
+            this.Controls.Add(this.dGVDanhSachNhaCungCap);
             this.Controls.Add(this.label1);
-            this.Name = "UC_NCC_QLP";
+            this.Name = "UC_NhaCungCap_QLP";
             this.Size = new System.Drawing.Size(1117, 766);
-            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachNhaCungUng)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachNhaCungCap)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,7 +136,7 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnXemThongTin;
-        private System.Windows.Forms.DataGridView dGVDanhSachNhaCungUng;
+        private System.Windows.Forms.DataGridView dGVDanhSachNhaCungCap;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cBSapXep;
     }

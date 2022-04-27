@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLP_GUI
 {
-    partial class UC_DSLCCT_QLP
+    partial class UC_DanhSachLichChieuChinhThuc_QLP
     {
         /// <summary> 
         /// Required designer variable.
@@ -58,6 +58,7 @@
             // 
             // dGVDSLCCT
             // 
+            this.dGVDSLCCT.BackgroundColor = System.Drawing.Color.White;
             this.dGVDSLCCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVDSLCCT.Location = new System.Drawing.Point(48, 89);
             this.dGVDSLCCT.Name = "dGVDSLCCT";
@@ -72,9 +73,9 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(43, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(391, 25);
+            this.label1.Size = new System.Drawing.Size(357, 25);
             this.label1.TabIndex = 6;
-            this.label1.Text = "DANH SÁCH LỊCH CHIẾU CHÍNH THỨC";
+            this.label1.Text = "Danh Sách Lịch Chiếu Chính Thức";
             // 
             // btnSapXep
             // 
@@ -101,6 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnSapXep);
             this.Controls.Add(this.txtTimKiem);

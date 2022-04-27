@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -204,6 +204,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLP_GUI\frmDoiMatKhau_QLP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\frmDoiMatKhau_QLP.Designer.cs">
+      <DependentUpon>frmDoiMatKhau_QLP.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLP_GUI\frm_QLP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,59 +228,59 @@
     <Compile Include="QLP_GUI\frm_ThongTinNCC_QLP.Designer.cs">
       <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_CN_QLP.cs">
+    <Compile Include="QLP_GUI\UC_CaNhan_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_CN_QLP.Designer.cs">
-      <DependentUpon>UC_CN_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_CaNhan_QLP.Designer.cs">
+      <DependentUpon>UC_CaNhan_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_DSLCCT_QLP.cs">
+    <Compile Include="QLP_GUI\UC_DanhSachLichChieuChinhThuc_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_DSLCCT_QLP.Designer.cs">
-      <DependentUpon>UC_DSLCCT_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_DanhSachLichChieuChinhThuc_QLP.Designer.cs">
+      <DependentUpon>UC_DanhSachLichChieuChinhThuc_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_DSLCDK_QLP.cs">
+    <Compile Include="QLP_GUI\UC_DanhSachLichChieuDuKien_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_DSLCDK_QLP.Designer.cs">
-      <DependentUpon>UC_DSLCDK_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_DanhSachLichChieuDuKien_QLP.Designer.cs">
+      <DependentUpon>UC_DanhSachLichChieuDuKien_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_DSPDX_QLP.cs">
+    <Compile Include="QLP_GUI\UC_DanhSachPhimDeXuat_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_DSPDX_QLP.Designer.cs">
-      <DependentUpon>UC_DSPDX_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_DanhSachPhimDeXuat_QLP.Designer.cs">
+      <DependentUpon>UC_DanhSachPhimDeXuat_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_NCC_QLP.cs">
+    <Compile Include="QLP_GUI\UC_NhaCungCap_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_NCC_QLP.Designer.cs">
-      <DependentUpon>UC_NCC_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_NhaCungCap_QLP.Designer.cs">
+      <DependentUpon>UC_NhaCungCap_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_TaoLC_QLP.cs">
+    <Compile Include="QLP_GUI\UC_TaoLichChieu_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_TaoLC_QLP.Designer.cs">
-      <DependentUpon>UC_TaoLC_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_TaoLichChieu_QLP.Designer.cs">
+      <DependentUpon>UC_TaoLichChieu_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_LSNX_QLP.cs">
+    <Compile Include="QLP_GUI\UC_PhieuNhapXuat_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_LSNX_QLP.Designer.cs">
-      <DependentUpon>UC_LSNX_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_PhieuNhapXuat_QLP.Designer.cs">
+      <DependentUpon>UC_PhieuNhapXuat_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_MenuNXK_QLP.cs">
+    <Compile Include="QLP_GUI\UC_MenuNhapXuatKho_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_MenuNXK_QLP.Designer.cs">
-      <DependentUpon>UC_MenuNXK_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_MenuNhapXuatKho_QLP.Designer.cs">
+      <DependentUpon>UC_MenuNhapXuatKho_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_MenuTaoLC_QLP.cs">
+    <Compile Include="QLP_GUI\UC_MenuTaoLichChieu_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_MenuTaoLC_QLP.Designer.cs">
-      <DependentUpon>UC_MenuTaoLC_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_MenuTaoLichChieu_QLP.Designer.cs">
+      <DependentUpon>UC_MenuTaoLichChieu_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLP_GUI\UC_TaoPhieu_QLP.cs">
       <SubType>UserControl</SubType>
@@ -282,11 +288,11 @@
     <Compile Include="QLP_GUI\UC_TaoPhieu_QLP.Designer.cs">
       <DependentUpon>UC_TaoPhieu_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\UC_TTPhim_QLP.cs">
+    <Compile Include="QLP_GUI\UC_ThongTinPhim_QLP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\UC_TTPhim_QLP.Designer.cs">
-      <DependentUpon>UC_TTPhim_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\UC_ThongTinPhim_QLP.Designer.cs">
+      <DependentUpon>UC_ThongTinPhim_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLVT_GUI\frmDashboardQLVT.cs">
       <SubType>Form</SubType>
@@ -487,6 +493,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QLP_GUI\frmDoiMatKhau_QLP.resx">
+      <DependentUpon>frmDoiMatKhau_QLP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\frm_QLP.resx">
       <DependentUpon>frm_QLP.cs</DependentUpon>
     </EmbeddedResource>
@@ -496,38 +505,38 @@
     <EmbeddedResource Include="QLP_GUI\frm_ThongTinNCC_QLP.resx">
       <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_CN_QLP.resx">
-      <DependentUpon>UC_CN_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_CaNhan_QLP.resx">
+      <DependentUpon>UC_CaNhan_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_DSLCCT_QLP.resx">
-      <DependentUpon>UC_DSLCCT_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_DanhSachLichChieuChinhThuc_QLP.resx">
+      <DependentUpon>UC_DanhSachLichChieuChinhThuc_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_DSLCDK_QLP.resx">
-      <DependentUpon>UC_DSLCDK_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_DanhSachLichChieuDuKien_QLP.resx">
+      <DependentUpon>UC_DanhSachLichChieuDuKien_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_DSPDX_QLP.resx">
-      <DependentUpon>UC_DSPDX_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_DanhSachPhimDeXuat_QLP.resx">
+      <DependentUpon>UC_DanhSachPhimDeXuat_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_NCC_QLP.resx">
-      <DependentUpon>UC_NCC_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_NhaCungCap_QLP.resx">
+      <DependentUpon>UC_NhaCungCap_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_TaoLC_QLP.resx">
-      <DependentUpon>UC_TaoLC_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_TaoLichChieu_QLP.resx">
+      <DependentUpon>UC_TaoLichChieu_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_LSNX_QLP.resx">
-      <DependentUpon>UC_LSNX_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_PhieuNhapXuat_QLP.resx">
+      <DependentUpon>UC_PhieuNhapXuat_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_MenuNXK_QLP.resx">
-      <DependentUpon>UC_MenuNXK_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_MenuNhapXuatKho_QLP.resx">
+      <DependentUpon>UC_MenuNhapXuatKho_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_MenuTaoLC_QLP.resx">
-      <DependentUpon>UC_MenuTaoLC_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_MenuTaoLichChieu_QLP.resx">
+      <DependentUpon>UC_MenuTaoLichChieu_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_TaoPhieu_QLP.resx">
       <DependentUpon>UC_TaoPhieu_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_TTPhim_QLP.resx">
-      <DependentUpon>UC_TTPhim_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\UC_ThongTinPhim_QLP.resx">
+      <DependentUpon>UC_ThongTinPhim_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLVT_GUI\frmDashboardQLVT.resx">
       <DependentUpon>frmDashboardQLVT.cs</DependentUpon>

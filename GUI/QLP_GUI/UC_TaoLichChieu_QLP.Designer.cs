@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLP_GUI
 {
-    partial class UC_TaoLC_QLP
+    partial class UC_TaoLichChieu_QLP
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.dGVDanhSachPhim = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.dGVDanhSachPC = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dGVKhungGioChieu = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtNgayGioChieu = new System.Windows.Forms.TextBox();
@@ -50,24 +47,18 @@
             this.rBDSPChieu = new System.Windows.Forms.RadioButton();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
+            this.gBDanhSachPhim = new System.Windows.Forms.GroupBox();
+            this.gBDanhSachPhongChieu = new System.Windows.Forms.GroupBox();
+            this.gBKhungGioChieu = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVKhungGioChieu)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(35, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DANH SÁCH PHIM";
-            // 
             // dGVDanhSachPhim
             // 
+            this.dGVDanhSachPhim.BackgroundColor = System.Drawing.Color.White;
             this.dGVDanhSachPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVDanhSachPhim.Location = new System.Drawing.Point(40, 75);
             this.dGVDanhSachPhim.Name = "dGVDanhSachPhim";
@@ -76,18 +67,9 @@
             this.dGVDanhSachPhim.Size = new System.Drawing.Size(307, 412);
             this.dGVDanhSachPhim.TabIndex = 1;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(403, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(291, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "DANH SÁCH PHÒNG CHIẾU";
-            // 
             // dGVDanhSachPC
             // 
+            this.dGVDanhSachPC.BackgroundColor = System.Drawing.Color.White;
             this.dGVDanhSachPC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVDanhSachPC.Location = new System.Drawing.Point(408, 75);
             this.dGVDanhSachPC.Name = "dGVDanhSachPC";
@@ -95,16 +77,6 @@
             this.dGVDanhSachPC.RowTemplate.Height = 28;
             this.dGVDanhSachPC.Size = new System.Drawing.Size(307, 412);
             this.dGVDanhSachPC.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(755, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "KHUNG GIỜ CHIẾU";
             // 
             // label4
             // 
@@ -124,15 +96,16 @@
             this.textBox1.Size = new System.Drawing.Size(198, 26);
             this.textBox1.TabIndex = 6;
             // 
-            // dataGridView1
+            // dGVKhungGioChieu
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(760, 122);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(307, 365);
-            this.dataGridView1.TabIndex = 7;
+            this.dGVKhungGioChieu.BackgroundColor = System.Drawing.Color.White;
+            this.dGVKhungGioChieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVKhungGioChieu.Location = new System.Drawing.Point(760, 122);
+            this.dGVKhungGioChieu.Name = "dGVKhungGioChieu";
+            this.dGVKhungGioChieu.RowHeadersWidth = 62;
+            this.dGVKhungGioChieu.RowTemplate.Height = 28;
+            this.dGVKhungGioChieu.Size = new System.Drawing.Size(307, 365);
+            this.dGVKhungGioChieu.TabIndex = 7;
             // 
             // label5
             // 
@@ -277,10 +250,41 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
             // 
-            // UC_TaoLC_QLP
+            // gBDanhSachPhim
+            // 
+            this.gBDanhSachPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gBDanhSachPhim.Location = new System.Drawing.Point(20, 31);
+            this.gBDanhSachPhim.Name = "gBDanhSachPhim";
+            this.gBDanhSachPhim.Size = new System.Drawing.Size(346, 473);
+            this.gBDanhSachPhim.TabIndex = 19;
+            this.gBDanhSachPhim.TabStop = false;
+            this.gBDanhSachPhim.Text = "Danh Sách Phim";
+            // 
+            // gBDanhSachPhongChieu
+            // 
+            this.gBDanhSachPhongChieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gBDanhSachPhongChieu.Location = new System.Drawing.Point(390, 31);
+            this.gBDanhSachPhongChieu.Name = "gBDanhSachPhongChieu";
+            this.gBDanhSachPhongChieu.Size = new System.Drawing.Size(335, 473);
+            this.gBDanhSachPhongChieu.TabIndex = 20;
+            this.gBDanhSachPhongChieu.TabStop = false;
+            this.gBDanhSachPhongChieu.Text = "Danh Sách Phòng Chiếu";
+            // 
+            // gBKhungGioChieu
+            // 
+            this.gBKhungGioChieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gBKhungGioChieu.Location = new System.Drawing.Point(748, 31);
+            this.gBKhungGioChieu.Name = "gBKhungGioChieu";
+            this.gBKhungGioChieu.Size = new System.Drawing.Size(333, 473);
+            this.gBKhungGioChieu.TabIndex = 21;
+            this.gBKhungGioChieu.TabStop = false;
+            this.gBKhungGioChieu.Text = "Khung Giờ Chiếu";
+            // 
+            // UC_TaoLichChieu_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.rBDSPChieu);
@@ -289,19 +293,19 @@
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dGVKhungGioChieu);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.dGVDanhSachPC);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dGVDanhSachPhim);
-            this.Controls.Add(this.label1);
-            this.Name = "UC_TaoLC_QLP";
+            this.Controls.Add(this.gBDanhSachPhim);
+            this.Controls.Add(this.gBDanhSachPhongChieu);
+            this.Controls.Add(this.gBKhungGioChieu);
+            this.Name = "UC_TaoLichChieu_QLP";
             this.Size = new System.Drawing.Size(1117, 766);
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVKhungGioChieu)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -310,15 +314,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dGVDanhSachPhim;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dGVDanhSachPC;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGVKhungGioChieu;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtNgayGioChieu;
@@ -333,5 +333,8 @@
         private System.Windows.Forms.RadioButton rBDSPChieu;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.GroupBox gBDanhSachPhim;
+        private System.Windows.Forms.GroupBox gBDanhSachPhongChieu;
+        private System.Windows.Forms.GroupBox gBKhungGioChieu;
     }
 }

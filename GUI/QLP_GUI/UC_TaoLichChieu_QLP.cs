@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
 {
-    public partial class UC_DSLCCT_QLP : UserControl
+    public partial class UC_TaoLichChieu_QLP : UserControl
     {
-        public UC_DSLCCT_QLP()
+        public UC_TaoLichChieu_QLP()
         {
             InitializeComponent();
         }

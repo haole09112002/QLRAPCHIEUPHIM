@@ -20,7 +20,6 @@ namespace GUI
         {
             InitializeComponent();
         }
-
         private void btnDN_Click(object sender, EventArgs e)
         {
             if (comboBox1.SelectedItem.ToString() == "Admin")
