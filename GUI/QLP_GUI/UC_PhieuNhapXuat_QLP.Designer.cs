@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLP_GUI
 {
-    partial class UC_LSNX_QLP
+    partial class UC_PhieuNhapXuat_QLP
     {
         /// <summary> 
         /// Required designer variable.
@@ -63,6 +63,7 @@
             // 
             // dGVLSNX
             // 
+            this.dGVLSNX.BackgroundColor = System.Drawing.Color.White;
             this.dGVLSNX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVLSNX.Location = new System.Drawing.Point(45, 184);
             this.dGVLSNX.Name = "dGVLSNX";
@@ -77,9 +78,9 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(395, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(324, 25);
+            this.label1.Size = new System.Drawing.Size(300, 25);
             this.label1.TabIndex = 12;
-            this.label1.Text = "DANH SÁCH PHIẾU NHẬP XUẤT";
+            this.label1.Text = "Danh Sách Phiếu Nhập Xuất";
             // 
             // btnSapXep
             // 
@@ -119,10 +120,10 @@
             this.rBXuat.AutoSize = true;
             this.rBXuat.Location = new System.Drawing.Point(648, 32);
             this.rBXuat.Name = "rBXuat";
-            this.rBXuat.Size = new System.Drawing.Size(372, 29);
+            this.rBXuat.Size = new System.Drawing.Size(319, 29);
             this.rBXuat.TabIndex = 2;
             this.rBXuat.TabStop = true;
-            this.rBXuat.Text = "Xem Danh Sách Phiếu Xuất Phim";
+            this.rBXuat.Text = "Danh Sách Phiếu Xuất Phim";
             this.rBXuat.UseVisualStyleBackColor = true;
             // 
             // rBNhap
@@ -130,10 +131,10 @@
             this.rBNhap.AutoSize = true;
             this.rBNhap.Location = new System.Drawing.Point(240, 32);
             this.rBNhap.Name = "rBNhap";
-            this.rBNhap.Size = new System.Drawing.Size(382, 29);
+            this.rBNhap.Size = new System.Drawing.Size(329, 29);
             this.rBNhap.TabIndex = 1;
             this.rBNhap.TabStop = true;
-            this.rBNhap.Text = "Xem Danh Sách Phiếu Nhập Phim";
+            this.rBNhap.Text = "Danh Sách Phiếu Nhập Phim";
             this.rBNhap.UseVisualStyleBackColor = true;
             // 
             // rBTatCa
@@ -151,6 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cBSapXep);
             this.Controls.Add(this.btnSapXep);

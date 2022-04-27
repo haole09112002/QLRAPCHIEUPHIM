@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
 {
-    public partial class UC_TTPhim_QLP : UserControl
+    public partial class UC_CaNhan_QLP : UserControl
     {
-        public UC_TTPhim_QLP()
+        public UC_CaNhan_QLP()
         {
             InitializeComponent();
+        }
+
+        private void btnDMK_Click(object sender, EventArgs e)
+        {
+            frmDoiMatKhau_QLP f = new frmDoiMatKhau_QLP();
+            f.ShowDialog();
         }
     }
 }
