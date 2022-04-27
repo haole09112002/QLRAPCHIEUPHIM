@@ -34,7 +34,6 @@
             // 
             // btnMenuThongTinNV
             // 
-            this.btnMenuThongTinNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(153)))));
             this.btnMenuThongTinNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuThongTinNV.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuThongTinNV.Location = new System.Drawing.Point(102, 0);
@@ -43,7 +42,7 @@
             this.btnMenuThongTinNV.Size = new System.Drawing.Size(167, 24);
             this.btnMenuThongTinNV.TabIndex = 0;
             this.btnMenuThongTinNV.Text = "THÔNG TIN NHÂN VIÊN";
-            this.btnMenuThongTinNV.UseVisualStyleBackColor = false;
+            this.btnMenuThongTinNV.UseVisualStyleBackColor = true;
             this.btnMenuThongTinNV.Click += new System.EventHandler(this.btnMenuThongTinNV_Click);
             // 
             // btnMenuCaLam

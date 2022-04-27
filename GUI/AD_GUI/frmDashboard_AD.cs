@@ -16,16 +16,15 @@ namespace GUI.AD_GUI
         {
             InitializeComponent();
         }
-      
+        UC_ThongKe ucThongKe = new UC_ThongKe();
         UC_LichChieu_AD ucLichChieu = new UC_LichChieu_AD();
+     
         UC_NCC_AD ucNCC = new UC_NCC_AD();
-        UC_HopDong ucHopDong = new UC_HopDong();
-        UC_DeXuat ucDeXuat = new UC_DeXuat();
-        UC_CaNhan ucCaNhan = new UC_CaNhan();
-
-        UC_MenuThongKe ucMenuThongKe = new UC_MenuThongKe();
         UC_MenuNhanVien ucMenuNhanVien = new UC_MenuNhanVien();
         UC_MenuKho ucMenuKho = new UC_MenuKho();
+        UC_HopDong ucHopDong = new UC_HopDong();
+        UC_DeXuat ucDeXuat = new UC_DeXuat();
+        UC_CaNhan ucCaNhan = new UC_CaNhan();   
         private void changeColorButton(Button btn)
         {
             btn.BackColor = Color.FromArgb(0, 144, 153);
@@ -39,16 +38,17 @@ namespace GUI.AD_GUI
                     i.BackColor = Color.FromArgb(40, 51, 66); // den
                 }
             }
+   
+            
+
+
         }
      
         private void btnThongKe_Click(object sender, EventArgs e)
         {
 
             pnMenu.Controls.Clear();
-            AddControlsToPnMenu(ucMenuThongKe);
-            ucMenuThongKe.setColor();
-            AddControlsToPnCenter(ucMenuThongKe.ucThongKeChung);
-            ucMenuThongKe.d = new UC_MenuThongKe.Mydel(AddControlsToPnCenter);
+            AddControlsToPnCenter(ucThongKe);
             changeColorButton(btnThongKe );
         
         }
@@ -83,7 +83,6 @@ namespace GUI.AD_GUI
         {
             pnMenu.Controls.Clear();
             AddControlsToPnMenu(ucMenuKho);
-            ucMenuKho.setColor();
             AddControlsToPnCenter(ucMenuKho.ucThongTinKho);
             ucMenuKho.d = new UC_MenuKho.Mydel(AddControlsToPnCenter);
             changeColorButton(btnKho);
@@ -93,7 +92,7 @@ namespace GUI.AD_GUI
         {
             pnMenu.Controls.Clear();
             AddControlsToPnMenu(ucMenuNhanVien);
-            ucMenuNhanVien.setColor();
+           
             AddControlsToPnCenter(ucMenuNhanVien.ucThongTinNV);
             ucMenuNhanVien.d = new UC_MenuNhanVien.Mydel(AddControlsToPnCenter);
             changeColorButton(btnNV);

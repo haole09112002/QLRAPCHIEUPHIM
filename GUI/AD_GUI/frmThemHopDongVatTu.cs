@@ -21,7 +21,5 @@ namespace GUI.AD_GUI
         {
             this.Close();
         }
-
-       
     }
 }
