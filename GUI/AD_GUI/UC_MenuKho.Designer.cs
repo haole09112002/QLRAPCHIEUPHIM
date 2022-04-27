@@ -34,6 +34,7 @@
             // 
             // btnMenuKho
             // 
+            this.btnMenuKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(153)))));
             this.btnMenuKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuKho.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuKho.Location = new System.Drawing.Point(116, 0);
@@ -42,7 +43,7 @@
             this.btnMenuKho.Size = new System.Drawing.Size(167, 24);
             this.btnMenuKho.TabIndex = 0;
             this.btnMenuKho.Text = "KHO";
-            this.btnMenuKho.UseVisualStyleBackColor = true;
+            this.btnMenuKho.UseVisualStyleBackColor = false;
             this.btnMenuKho.Click += new System.EventHandler(this.btnMenuKho_Click);
             // 
             // btnMenuPhieuNhapXuat

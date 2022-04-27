@@ -278,7 +278,6 @@
         private System.Windows.Forms.TextBox txtDienThoai;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.TextBox txtTenTK;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnDMK;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnChinhSua;

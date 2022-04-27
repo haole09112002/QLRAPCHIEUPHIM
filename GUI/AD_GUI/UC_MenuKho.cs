@@ -23,11 +23,33 @@ namespace GUI.AD_GUI
         private void btnMenuKho_Click(object sender, EventArgs e)
         {
             d(ucThongTinKho);
+            changeColorButton(btnMenuKho);
         }
 
         private void btnMenuPhieuNhapXuat_Click(object sender, EventArgs e)
         {
             d(ucPhieuNhapXuat);
+            changeColorButton(btnMenuPhieuNhapXuat);
+        }
+
+
+        private void changeColorButton(Button btn)
+        {
+            btn.BackColor = Color.FromArgb(0, 144, 153); // xanh
+            List<Button> buttons = new List<Button> { btnMenuKho, btnMenuPhieuNhapXuat};
+            foreach (Button i in buttons)
+            {
+
+                if (i.BackColor == Color.FromArgb(0, 144, 153) && i != btn) // xanh 
+                {
+                    i.BackColor = Color.FromArgb(226, 251, 242); // xanh non
+                }
+            }
+        }
+        public void setColor()
+        {
+            btnMenuKho.BackColor = Color.FromArgb(0, 144, 153);
+            btnMenuPhieuNhapXuat.BackColor = Color.FromArgb(226, 251, 242);
         }
     }
 }
