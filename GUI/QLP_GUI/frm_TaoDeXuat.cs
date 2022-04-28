@@ -21,5 +21,6 @@ namespace GUI.QLP_GUI
         {
             this.Close();
         }
+
     }
 }

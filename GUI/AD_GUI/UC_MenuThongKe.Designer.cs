@@ -36,10 +36,11 @@
             // btnMenuThongTinChung
             // 
             this.btnMenuThongTinChung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(153)))));
+            this.btnMenuThongTinChung.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuThongTinChung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuThongTinChung.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuThongTinChung.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnMenuThongTinChung.Location = new System.Drawing.Point(92, 0);
+            this.btnMenuThongTinChung.Location = new System.Drawing.Point(0, 0);
             this.btnMenuThongTinChung.Name = "btnMenuThongTinChung";
             this.btnMenuThongTinChung.Size = new System.Drawing.Size(223, 29);
             this.btnMenuThongTinChung.TabIndex = 0;
@@ -49,9 +50,10 @@
             // 
             // btnMenuNhanVien
             // 
+            this.btnMenuNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuNhanVien.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuNhanVien.Location = new System.Drawing.Point(357, 0);
+            this.btnMenuNhanVien.Location = new System.Drawing.Point(223, 0);
             this.btnMenuNhanVien.Name = "btnMenuNhanVien";
             this.btnMenuNhanVien.Size = new System.Drawing.Size(223, 29);
             this.btnMenuNhanVien.TabIndex = 1;
@@ -61,9 +63,10 @@
             // 
             // btnMenuNhapXuat
             // 
+            this.btnMenuNhapXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuNhapXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuNhapXuat.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuNhapXuat.Location = new System.Drawing.Point(619, 0);
+            this.btnMenuNhapXuat.Location = new System.Drawing.Point(446, 0);
             this.btnMenuNhapXuat.Name = "btnMenuNhapXuat";
             this.btnMenuNhapXuat.Size = new System.Drawing.Size(223, 29);
             this.btnMenuNhapXuat.TabIndex = 2;

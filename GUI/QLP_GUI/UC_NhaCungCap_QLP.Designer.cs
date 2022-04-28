@@ -28,116 +28,153 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSapXep = new System.Windows.Forms.Button();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.btnXemThongTin = new System.Windows.Forms.Button();
-            this.dGVDanhSachNhaCungCap = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cBSapXep = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachNhaCungCap)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSapXep
+            // panel1
             // 
-            this.btnSapXep.BackColor = System.Drawing.Color.White;
-            this.btnSapXep.ForeColor = System.Drawing.Color.Blue;
-            this.btnSapXep.Location = new System.Drawing.Point(718, 668);
-            this.btnSapXep.Name = "btnSapXep";
-            this.btnSapXep.Size = new System.Drawing.Size(107, 34);
-            this.btnSapXep.TabIndex = 16;
-            this.btnSapXep.Text = "Sắp Xếp";
-            this.btnSapXep.UseVisualStyleBackColor = false;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(16, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(960, 588);
+            this.panel1.TabIndex = 2;
             // 
-            // txtTimKiem
+            // button2
             // 
-            this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(831, 65);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(238, 35);
-            this.txtTimKiem.TabIndex = 15;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(384, 538);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(148, 36);
+            this.button2.TabIndex = 48;
+            this.button2.Text = "XEM CHI TIẾT";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.btnXemThongTin_Click);
             // 
-            // btnTimKiem
+            // button1
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.White;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.Blue;
-            this.btnTimKiem.Location = new System.Drawing.Point(718, 65);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(107, 34);
-            this.btnTimKiem.TabIndex = 14;
-            this.btnTimKiem.Text = "Tìm Kiém";
-            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.Cyan;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::GUI.Properties.Resources.Sort;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(530, 45);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 38);
+            this.button1.TabIndex = 47;
+            this.button1.Text = "    SẮP XẾP";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // btnXemThongTin
+            // comboBox2
             // 
-            this.btnXemThongTin.BackColor = System.Drawing.Color.White;
-            this.btnXemThongTin.ForeColor = System.Drawing.Color.Blue;
-            this.btnXemThongTin.Location = new System.Drawing.Point(471, 668);
-            this.btnXemThongTin.Name = "btnXemThongTin";
-            this.btnXemThongTin.Size = new System.Drawing.Size(163, 34);
-            this.btnXemThongTin.TabIndex = 11;
-            this.btnXemThongTin.Text = "Xem Thông Tin";
-            this.btnXemThongTin.UseVisualStyleBackColor = false;
-            this.btnXemThongTin.Click += new System.EventHandler(this.btnXemThongTin_Click);
+            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(671, 51);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(265, 27);
+            this.comboBox2.TabIndex = 46;
             // 
-            // dGVDanhSachNhaCungCap
+            // button7
             // 
-            this.dGVDanhSachNhaCungCap.BackgroundColor = System.Drawing.Color.White;
-            this.dGVDanhSachNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVDanhSachNhaCungCap.Location = new System.Drawing.Point(38, 122);
-            this.dGVDanhSachNhaCungCap.Name = "dGVDanhSachNhaCungCap";
-            this.dGVDanhSachNhaCungCap.RowHeadersWidth = 62;
-            this.dGVDanhSachNhaCungCap.RowTemplate.Height = 28;
-            this.dGVDanhSachNhaCungCap.Size = new System.Drawing.Size(1031, 480);
-            this.dGVDanhSachNhaCungCap.TabIndex = 10;
+            this.button7.BackColor = System.Drawing.Color.Cyan;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(24, 47);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(123, 36);
+            this.button7.TabIndex = 45;
+            this.button7.Text = "TÌM KIẾM";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(166, 50);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(263, 28);
+            this.textBox1.TabIndex = 44;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(33, 65);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Image = global::GUI.Properties.Resources.Nhacungcap;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(320, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 25);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Danh Sách Nhà Cung Cấp";
+            this.label1.Size = new System.Drawing.Size(381, 25);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "DANH SÁCH NHÀ CUNG CẤP PHIM";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // cBSapXep
+            // dataGridView1
             // 
-            this.cBSapXep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cBSapXep.FormattingEnabled = true;
-            this.cBSapXep.Location = new System.Drawing.Point(847, 673);
-            this.cBSapXep.Name = "cBSapXep";
-            this.cBSapXep.Size = new System.Drawing.Size(222, 28);
-            this.cBSapXep.TabIndex = 17;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(24, 100);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(912, 428);
+            this.dataGridView1.TabIndex = 40;
             // 
             // UC_NhaCungCap_QLP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.cBSapXep);
-            this.Controls.Add(this.btnSapXep);
-            this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.btnTimKiem);
-            this.Controls.Add(this.btnXemThongTin);
-            this.Controls.Add(this.dGVDanhSachNhaCungCap);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_NhaCungCap_QLP";
-            this.Size = new System.Drawing.Size(1117, 766);
-            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachNhaCungCap)).EndInit();
+            this.Size = new System.Drawing.Size(993, 613);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSapXep;
-        private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.Button btnXemThongTin;
-        private System.Windows.Forms.DataGridView dGVDanhSachNhaCungCap;
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cBSapXep;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button2;
     }
 }

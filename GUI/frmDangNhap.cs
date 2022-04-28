@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GUI.QLP_GUI;
 using GUI.AD_GUI;
+using GUI.QLVT_GUI;
 
 using System.Windows.Forms;
 
@@ -33,7 +34,8 @@ namespace GUI
             }
             if (comboBox1.SelectedItem.ToString() == "QLVT")
             {
-
+                frmDashboardQLVT frmDashboardQLVT = new frmDashboardQLVT();
+                frmDashboardQLVT.Show();
             }
                 
         }
