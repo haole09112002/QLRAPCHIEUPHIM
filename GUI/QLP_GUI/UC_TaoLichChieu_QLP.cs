@@ -16,5 +16,6 @@ namespace GUI.QLP_GUI
         {
             InitializeComponent();
         }
+
     }
 }

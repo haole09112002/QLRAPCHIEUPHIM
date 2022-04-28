@@ -35,12 +35,14 @@
             // btnMenuKho
             // 
             this.btnMenuKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(153)))));
+            this.btnMenuKho.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuKho.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuKho.Location = new System.Drawing.Point(116, 0);
-            this.btnMenuKho.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenuKho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuKho.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuKho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenuKho.Name = "btnMenuKho";
-            this.btnMenuKho.Size = new System.Drawing.Size(167, 24);
+            this.btnMenuKho.Size = new System.Drawing.Size(223, 30);
             this.btnMenuKho.TabIndex = 0;
             this.btnMenuKho.Text = "KHO";
             this.btnMenuKho.UseVisualStyleBackColor = false;
@@ -48,12 +50,13 @@
             // 
             // btnMenuPhieuNhapXuat
             // 
+            this.btnMenuPhieuNhapXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuPhieuNhapXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuPhieuNhapXuat.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuPhieuNhapXuat.Location = new System.Drawing.Point(422, 0);
-            this.btnMenuPhieuNhapXuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenuPhieuNhapXuat.Location = new System.Drawing.Point(220, 0);
+            this.btnMenuPhieuNhapXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenuPhieuNhapXuat.Name = "btnMenuPhieuNhapXuat";
-            this.btnMenuPhieuNhapXuat.Size = new System.Drawing.Size(167, 24);
+            this.btnMenuPhieuNhapXuat.Size = new System.Drawing.Size(223, 30);
             this.btnMenuPhieuNhapXuat.TabIndex = 1;
             this.btnMenuPhieuNhapXuat.Text = "PHIẾU NHẬP XUẤT";
             this.btnMenuPhieuNhapXuat.UseVisualStyleBackColor = true;
@@ -61,14 +64,14 @@
             // 
             // UC_MenuKho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
             this.Controls.Add(this.btnMenuPhieuNhapXuat);
             this.Controls.Add(this.btnMenuKho);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_MenuKho";
-            this.Size = new System.Drawing.Size(745, 24);
+            this.Size = new System.Drawing.Size(993, 30);
             this.ResumeLayout(false);
 
         }

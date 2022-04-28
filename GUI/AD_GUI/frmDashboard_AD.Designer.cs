@@ -32,12 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnTop = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.pnCenter = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnKho = new System.Windows.Forms.Button();
@@ -48,11 +49,10 @@
             this.btnCaNhan = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnLichChieu = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnLeft.SuspendLayout();
             this.pnTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLeft
@@ -91,16 +91,16 @@
             // pnTop
             // 
             this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(229)))), ((int)(((byte)(232)))));
+            this.pnTop.Controls.Add(this.label5);
+            this.pnTop.Controls.Add(this.label3);
+            this.pnTop.Controls.Add(this.label7);
             this.pnTop.Controls.Add(this.label6);
             this.pnTop.Controls.Add(this.pictureBox1);
-            this.pnTop.Controls.Add(this.label5);
             this.pnTop.Controls.Add(this.label4);
-            this.pnTop.Controls.Add(this.label3);
-            this.pnTop.Controls.Add(this.label2);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(221, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(993, 64);
+            this.pnTop.Size = new System.Drawing.Size(993, 79);
             this.pnTop.TabIndex = 2;
             // 
             // label6
@@ -109,63 +109,30 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(137, 9);
+            this.label6.Location = new System.Drawing.Point(123, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(394, 37);
             this.label6.TabIndex = 16;
             this.label6.Text = "Cinema Manegemenr System";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(795, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 20);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Admin";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(795, 9);
+            this.label4.Location = new System.Drawing.Point(814, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 2;
             this.label4.Text = "label";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(668, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Chức vụ:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(668, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Xin Chào: ";
-            // 
             // pnMenu
             // 
             this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnMenu.Location = new System.Drawing.Point(221, 64);
+            this.pnMenu.Location = new System.Drawing.Point(221, 79);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(993, 29);
+            this.pnMenu.Size = new System.Drawing.Size(993, 30);
             this.pnMenu.TabIndex = 3;
             // 
             // pnCenter
@@ -173,10 +140,56 @@
             this.pnCenter.BackColor = System.Drawing.Color.White;
             this.pnCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnCenter.Location = new System.Drawing.Point(221, 93);
+            this.pnCenter.Location = new System.Drawing.Point(221, 109);
             this.pnCenter.Name = "pnCenter";
-            this.pnCenter.Size = new System.Drawing.Size(993, 613);
+            this.pnCenter.Size = new System.Drawing.Size(993, 597);
             this.pnCenter.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(663, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 32);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Chức vụ:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(665, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 24);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Xin Chào: ";
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Image = global::GUI.Properties.Resources.EmployeeQLVT;
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Location = new System.Drawing.Point(768, 33);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label7.Size = new System.Drawing.Size(160, 41);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Admin";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.shutdown_40px;
+            this.pictureBox1.Location = new System.Drawing.Point(934, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -191,6 +204,7 @@
             // btnThongKe
             // 
             this.btnThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThongKe.FlatAppearance.BorderSize = 0;
             this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThongKe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -210,6 +224,7 @@
             // btnKho
             // 
             this.btnKho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnKho.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKho.FlatAppearance.BorderSize = 0;
             this.btnKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKho.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -228,6 +243,7 @@
             // btnNV
             // 
             this.btnNV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNV.FlatAppearance.BorderSize = 0;
             this.btnNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNV.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -246,6 +262,7 @@
             // btnHopDong
             // 
             this.btnHopDong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHopDong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHopDong.FlatAppearance.BorderSize = 0;
             this.btnHopDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHopDong.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,6 +281,7 @@
             // btnDeXuat
             // 
             this.btnDeXuat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDeXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeXuat.FlatAppearance.BorderSize = 0;
             this.btnDeXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeXuat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -282,6 +300,7 @@
             // btnNCC
             // 
             this.btnNCC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNCC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNCC.FlatAppearance.BorderSize = 0;
             this.btnNCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNCC.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,6 +320,7 @@
             // btnCaNhan
             // 
             this.btnCaNhan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCaNhan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCaNhan.FlatAppearance.BorderSize = 0;
             this.btnCaNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCaNhan.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -319,6 +339,7 @@
             // btnDangXuat
             // 
             this.btnDangXuat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangXuat.FlatAppearance.BorderSize = 0;
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -337,6 +358,7 @@
             // btnLichChieu
             // 
             this.btnLichChieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLichChieu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLichChieu.FlatAppearance.BorderSize = 0;
             this.btnLichChieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLichChieu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -352,16 +374,6 @@
             this.btnLichChieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLichChieu.UseVisualStyleBackColor = true;
             this.btnLichChieu.Click += new System.EventHandler(this.btnLichChieu_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.shutdown_26px;
-            this.pictureBox1.Location = new System.Drawing.Point(962, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // frmDashboard_AD
             // 
@@ -381,8 +393,8 @@
             this.pnLeft.PerformLayout();
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -401,13 +413,13 @@
         private System.Windows.Forms.Button btnLichChieu;
         private System.Windows.Forms.Panel pnCenter;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Panel pnMenu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
     }
 }

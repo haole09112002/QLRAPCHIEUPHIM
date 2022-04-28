@@ -29,134 +29,159 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.btnChinhSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.txtTimKiem);
-            this.panel1.Controls.Add(this.btnTimKiem);
-            this.panel1.Controls.Add(this.btnChinhSua);
-            this.panel1.Controls.Add(this.btnXoa);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(26, 22);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(16, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(938, 574);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(960, 588);
+            this.panel1.TabIndex = 2;
             // 
-            // comboBox1
+            // button4
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(126, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(179, 24);
-            this.comboBox1.TabIndex = 23;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.SeaGreen;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(23, 49);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 26);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Sắp Xếp";
-            this.button2.UseVisualStyleBackColor = false;
+            this.button4.BackColor = System.Drawing.Color.Silver;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = global::GUI.Properties.Resources.new_copy_26px;
+            this.button4.Location = new System.Drawing.Point(687, 536);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(123, 36);
+            this.button4.TabIndex = 48;
+            this.button4.Text = " Thêm";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(13, 534);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.BackColor = System.Drawing.Color.Cyan;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::GUI.Properties.Resources.Sort;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(530, 45);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 26);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Tạo đề xuất";
+            this.button1.Size = new System.Drawing.Size(123, 38);
+            this.button1.TabIndex = 47;
+            this.button1.Text = "    SẮP XẾP";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // txtTimKiem
+            // comboBox2
             // 
-            this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtTimKiem.Location = new System.Drawing.Point(640, 51);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(176, 22);
-            this.txtTimKiem.TabIndex = 20;
+            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(671, 51);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(265, 27);
+            this.comboBox2.TabIndex = 46;
             // 
-            // btnTimKiem
+            // button7
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(841, 49);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(84, 26);
-            this.btnTimKiem.TabIndex = 19;
-            this.btnTimKiem.Text = "Tìm Kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.button7.BackColor = System.Drawing.Color.Cyan;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(24, 47);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(123, 36);
+            this.button7.TabIndex = 45;
+            this.button7.Text = "TÌM KIẾM";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.UseVisualStyleBackColor = false;
             // 
-            // btnChinhSua
+            // textBox1
             // 
-            this.btnChinhSua.BackColor = System.Drawing.Color.Blue;
-            this.btnChinhSua.ForeColor = System.Drawing.Color.White;
-            this.btnChinhSua.Location = new System.Drawing.Point(385, 534);
-            this.btnChinhSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnChinhSua.Name = "btnChinhSua";
-            this.btnChinhSua.Size = new System.Drawing.Size(126, 26);
-            this.btnChinhSua.TabIndex = 18;
-            this.btnChinhSua.Text = "Cập Nhật";
-            this.btnChinhSua.UseVisualStyleBackColor = false;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(166, 50);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(263, 28);
+            this.textBox1.TabIndex = 44;
             // 
-            // btnXoa
+            // label1
             // 
-            this.btnXoa.BackColor = System.Drawing.Color.Red;
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(790, 534);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(126, 26);
-            this.btnXoa.TabIndex = 17;
-            this.btnXoa.Text = "Xóa ";
-            this.btnXoa.UseVisualStyleBackColor = false;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Image = global::GUI.Properties.Resources.ToolDeXuat;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(320, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(313, 25);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "DANH SÁCH VẬT TƯ ĐỀ XUẤT";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Image = global::GUI.Properties.Resources.Edit;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(397, 536);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(138, 36);
+            this.button6.TabIndex = 42;
+            this.button6.Text = "CHỈNH SỬA";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::GUI.Properties.Resources.trash_can_26px;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(118, 536);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(123, 36);
+            this.button3.TabIndex = 41;
+            this.button3.Text = "   Xóa";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 89);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 100);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(912, 428);
-            this.dataGridView1.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = global::GUI.Properties.Resources.ToolDeXuat;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(283, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(365, 27);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Danh Sách Vật Tư Đã Được Đề Xuất";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dataGridView1.TabIndex = 40;
             // 
             // UCDaDeXuatVatTuQLVT
             // 
@@ -176,14 +201,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.Button btnChinhSua;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

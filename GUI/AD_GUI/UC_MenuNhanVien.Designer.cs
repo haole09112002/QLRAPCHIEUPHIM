@@ -35,12 +35,13 @@
             // btnMenuThongTinNV
             // 
             this.btnMenuThongTinNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(153)))));
+            this.btnMenuThongTinNV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuThongTinNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuThongTinNV.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuThongTinNV.Location = new System.Drawing.Point(102, 0);
-            this.btnMenuThongTinNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenuThongTinNV.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuThongTinNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenuThongTinNV.Name = "btnMenuThongTinNV";
-            this.btnMenuThongTinNV.Size = new System.Drawing.Size(167, 24);
+            this.btnMenuThongTinNV.Size = new System.Drawing.Size(223, 30);
             this.btnMenuThongTinNV.TabIndex = 0;
             this.btnMenuThongTinNV.Text = "THÔNG TIN NHÂN VIÊN";
             this.btnMenuThongTinNV.UseVisualStyleBackColor = false;
@@ -48,12 +49,13 @@
             // 
             // btnMenuCaLam
             // 
+            this.btnMenuCaLam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuCaLam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuCaLam.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuCaLam.Location = new System.Drawing.Point(411, 0);
-            this.btnMenuCaLam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenuCaLam.Location = new System.Drawing.Point(220, 0);
+            this.btnMenuCaLam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenuCaLam.Name = "btnMenuCaLam";
-            this.btnMenuCaLam.Size = new System.Drawing.Size(167, 24);
+            this.btnMenuCaLam.Size = new System.Drawing.Size(223, 30);
             this.btnMenuCaLam.TabIndex = 1;
             this.btnMenuCaLam.Text = "THÔNG TIN CA LÀM";
             this.btnMenuCaLam.UseVisualStyleBackColor = true;
@@ -61,14 +63,14 @@
             // 
             // UC_MenuNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
             this.Controls.Add(this.btnMenuCaLam);
             this.Controls.Add(this.btnMenuThongTinNV);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_MenuNhanVien";
-            this.Size = new System.Drawing.Size(745, 24);
+            this.Size = new System.Drawing.Size(993, 30);
             this.ResumeLayout(false);
 
         }

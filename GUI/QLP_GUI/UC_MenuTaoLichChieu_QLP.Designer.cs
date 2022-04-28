@@ -36,15 +36,16 @@
             // btnTaoLichChieu
             // 
             this.btnTaoLichChieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(153)))));
+            this.btnTaoLichChieu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTaoLichChieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaoLichChieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnTaoLichChieu.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTaoLichChieu.Location = new System.Drawing.Point(24, 0);
+            this.btnTaoLichChieu.Location = new System.Drawing.Point(0, 0);
+            this.btnTaoLichChieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTaoLichChieu.Name = "btnTaoLichChieu";
-            this.btnTaoLichChieu.Size = new System.Drawing.Size(281, 36);
+            this.btnTaoLichChieu.Size = new System.Drawing.Size(250, 29);
             this.btnTaoLichChieu.TabIndex = 0;
-            this.btnTaoLichChieu.Text = "    TẠO LỊCH CHIẾU";
-            this.btnTaoLichChieu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaoLichChieu.Text = "TẠO LỊCH CHIẾU";
             this.btnTaoLichChieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTaoLichChieu.UseVisualStyleBackColor = false;
             this.btnTaoLichChieu.Click += new System.EventHandler(this.btnTaoLC_Click);
@@ -52,14 +53,15 @@
             // btnLichChieuDuKien
             // 
             this.btnLichChieuDuKien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
+            this.btnLichChieuDuKien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLichChieuDuKien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLichChieuDuKien.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnLichChieuDuKien.Location = new System.Drawing.Point(328, 0);
+            this.btnLichChieuDuKien.Location = new System.Drawing.Point(250, 0);
+            this.btnLichChieuDuKien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLichChieuDuKien.Name = "btnLichChieuDuKien";
-            this.btnLichChieuDuKien.Size = new System.Drawing.Size(362, 36);
+            this.btnLichChieuDuKien.Size = new System.Drawing.Size(322, 29);
             this.btnLichChieuDuKien.TabIndex = 1;
-            this.btnLichChieuDuKien.Text = "     LỊCH CHIẾU DỰ KIẾN";
-            this.btnLichChieuDuKien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLichChieuDuKien.Text = "LỊCH CHIẾU DỰ KIẾN";
             this.btnLichChieuDuKien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLichChieuDuKien.UseVisualStyleBackColor = false;
             this.btnLichChieuDuKien.Click += new System.EventHandler(this.btLCDuKien_Click);
@@ -67,28 +69,30 @@
             // btnLichChieuChinhThuc
             // 
             this.btnLichChieuChinhThuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
+            this.btnLichChieuChinhThuc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLichChieuChinhThuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLichChieuChinhThuc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnLichChieuChinhThuc.Location = new System.Drawing.Point(696, 0);
+            this.btnLichChieuChinhThuc.Location = new System.Drawing.Point(572, 0);
+            this.btnLichChieuChinhThuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLichChieuChinhThuc.Name = "btnLichChieuChinhThuc";
-            this.btnLichChieuChinhThuc.Size = new System.Drawing.Size(311, 36);
+            this.btnLichChieuChinhThuc.Size = new System.Drawing.Size(276, 29);
             this.btnLichChieuChinhThuc.TabIndex = 3;
-            this.btnLichChieuChinhThuc.Text = "    LỊCH CHIẾU CHÍNH THỨC";
-            this.btnLichChieuChinhThuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLichChieuChinhThuc.Text = "LỊCH CHIẾU CHÍNH THỨC";
             this.btnLichChieuChinhThuc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLichChieuChinhThuc.UseVisualStyleBackColor = false;
             this.btnLichChieuChinhThuc.Click += new System.EventHandler(this.btnLCChinhThuc_Click);
             // 
             // UC_MenuTaoLichChieu_QLP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
             this.Controls.Add(this.btnLichChieuChinhThuc);
             this.Controls.Add(this.btnLichChieuDuKien);
             this.Controls.Add(this.btnTaoLichChieu);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_MenuTaoLichChieu_QLP";
-            this.Size = new System.Drawing.Size(1117, 36);
+            this.Size = new System.Drawing.Size(993, 29);
             this.ResumeLayout(false);
 
         }

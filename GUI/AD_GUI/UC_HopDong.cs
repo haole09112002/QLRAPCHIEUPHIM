@@ -35,5 +35,6 @@ namespace GUI.AD_GUI
                 frmThemHopDongThucAn.Show();
             }
         }
+
     }
 }

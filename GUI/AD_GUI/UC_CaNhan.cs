@@ -16,5 +16,6 @@ namespace GUI.AD_GUI
         {
             InitializeComponent();
         }
+
     }
 }
