@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI.QLVT_GUI
 {
-    public partial class UCPhieuNhapXuatThucAnQLVT : UserControl
+    public partial class frmTaoPhieuDeXuatThucAnQLVT : Form
     {
-        public UCPhieuNhapXuatThucAnQLVT()
+        public frmTaoPhieuDeXuatThucAnQLVT()
         {
             InitializeComponent();
         }

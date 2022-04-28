@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI.QLVT_GUI
 {
-    public partial class UCPhieuNhapXuatVatTuQLVT : UserControl
+    public partial class frmTaoPhieuDeXuatVatTuQLVT : Form
     {
-        public UCPhieuNhapXuatVatTuQLVT()
+        public frmTaoPhieuDeXuatVatTuQLVT()
         {
             InitializeComponent();
         }
-
     }
 }

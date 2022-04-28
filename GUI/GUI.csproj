@@ -317,6 +317,24 @@
     <Compile Include="QLVT_GUI\FrmDoiMatKhauQLVT.Designer.cs">
       <DependentUpon>FrmDoiMatKhauQLVT.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLVT_GUI\frmTaoPhieuDeXuatThucAnQLVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLVT_GUI\frmTaoPhieuDeXuatThucAnQLVT.Designer.cs">
+      <DependentUpon>frmTaoPhieuDeXuatThucAnQLVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLVT_GUI\frmTaoPhieuDeXuatVatTuQLVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLVT_GUI\frmTaoPhieuDeXuatVatTuQLVT.Designer.cs">
+      <DependentUpon>frmTaoPhieuDeXuatVatTuQLVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLVT_GUI\FrmTaoPhieuNhapXuatKhoQLVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLVT_GUI\FrmTaoPhieuNhapXuatKhoQLVT.Designer.cs">
+      <DependentUpon>FrmTaoPhieuNhapXuatKhoQLVT.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLVT_GUI\UCMenuNhaCungUngQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -376,30 +394,6 @@
     </Compile>
     <Compile Include="QLVT_GUI\UCPhongChieuQLVT.Designer.cs">
       <DependentUpon>UCPhongChieuQLVT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCDeXuatThucAnQLVT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCDeXuatThucAnQLVT.Designer.cs">
-      <DependentUpon>UCDeXuatThucAnQLVT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCDeXuatVatTuQLVT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCDeXuatVatTuQLVT.Designer.cs">
-      <DependentUpon>UCDeXuatVatTuQLVT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCPhieuNhapXuatThucAnQLVT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCPhieuNhapXuatThucAnQLVT.Designer.cs">
-      <DependentUpon>UCPhieuNhapXuatThucAnQLVT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCPhieuNhapXuatVatTuQLVT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCPhieuNhapXuatVatTuQLVT.Designer.cs">
-      <DependentUpon>UCPhieuNhapXuatVatTuQLVT.cs</DependentUpon>
     </Compile>
     <Compile Include="QLVT_GUI\UCNhaCungUngThucAnQLVT.cs">
       <SubType>UserControl</SubType>
@@ -553,6 +547,15 @@
     <EmbeddedResource Include="QLVT_GUI\FrmDoiMatKhauQLVT.resx">
       <DependentUpon>FrmDoiMatKhauQLVT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QLVT_GUI\frmTaoPhieuDeXuatThucAnQLVT.resx">
+      <DependentUpon>frmTaoPhieuDeXuatThucAnQLVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLVT_GUI\frmTaoPhieuDeXuatVatTuQLVT.resx">
+      <DependentUpon>frmTaoPhieuDeXuatVatTuQLVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLVT_GUI\FrmTaoPhieuNhapXuatKhoQLVT.resx">
+      <DependentUpon>FrmTaoPhieuNhapXuatKhoQLVT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLVT_GUI\UCMenuNhaCungUngQLVT.resx">
       <DependentUpon>UCMenuNhaCungUngQLVT.cs</DependentUpon>
     </EmbeddedResource>
@@ -582,18 +585,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLVT_GUI\UCPhongChieuQLVT.resx">
       <DependentUpon>UCPhongChieuQLVT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UCDeXuatThucAnQLVT.resx">
-      <DependentUpon>UCDeXuatThucAnQLVT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UCDeXuatVatTuQLVT.resx">
-      <DependentUpon>UCDeXuatVatTuQLVT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UCPhieuNhapXuatThucAnQLVT.resx">
-      <DependentUpon>UCPhieuNhapXuatThucAnQLVT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UCPhieuNhapXuatVatTuQLVT.resx">
-      <DependentUpon>UCPhieuNhapXuatVatTuQLVT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLVT_GUI\UCNhaCungUngThucAnQLVT.resx">
       <DependentUpon>UCNhaCungUngThucAnQLVT.cs</DependentUpon>

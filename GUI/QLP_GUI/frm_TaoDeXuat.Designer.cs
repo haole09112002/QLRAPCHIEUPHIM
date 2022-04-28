@@ -62,7 +62,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.gBSoLuongPhim.SuspendLayout();
             this.gBMoTaPhim.SuspendLayout();
@@ -536,7 +535,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox gBMoTaPhim;
         private System.Windows.Forms.RichTextBox rtxtNoiDung;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TextBox txtDienVienChinh;
         private System.Windows.Forms.RichTextBox rtxtDienVienPhu;
         private System.Windows.Forms.RichTextBox rtxtTheLoai;

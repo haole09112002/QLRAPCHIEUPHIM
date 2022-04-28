@@ -28,226 +28,224 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnListPhongChieu = new System.Windows.Forms.Panel();
+            this.btnXoaPhongChieu = new System.Windows.Forms.Button();
+            this.lblVatTu = new System.Windows.Forms.Label();
+            this.btnTimKiemVatTu = new System.Windows.Forms.Button();
+            this.btnTimKiemPhongChieu = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnXoaVatTu = new System.Windows.Forms.Button();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.lblPhongChieu = new System.Windows.Forms.Label();
+            this.lblListPhongChieu = new System.Windows.Forms.Label();
+            this.dgvListVatTu = new System.Windows.Forms.DataGridView();
+            this.dgvListPhongChieu = new System.Windows.Forms.DataGridView();
+            this.txtVatTu = new System.Windows.Forms.TextBox();
+            this.pnListPhongChieu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListVatTu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListPhongChieu)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnListPhongChieu
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.maskedTextBox1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(9, 14);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(972, 579);
-            this.panel1.TabIndex = 0;
+            this.pnListPhongChieu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnListPhongChieu.Controls.Add(this.txtVatTu);
+            this.pnListPhongChieu.Controls.Add(this.btnXoaPhongChieu);
+            this.pnListPhongChieu.Controls.Add(this.lblVatTu);
+            this.pnListPhongChieu.Controls.Add(this.btnTimKiemVatTu);
+            this.pnListPhongChieu.Controls.Add(this.btnTimKiemPhongChieu);
+            this.pnListPhongChieu.Controls.Add(this.btnThem);
+            this.pnListPhongChieu.Controls.Add(this.btnXoaVatTu);
+            this.pnListPhongChieu.Controls.Add(this.txtTimKiem);
+            this.pnListPhongChieu.Controls.Add(this.lblPhongChieu);
+            this.pnListPhongChieu.Controls.Add(this.lblListPhongChieu);
+            this.pnListPhongChieu.Controls.Add(this.dgvListVatTu);
+            this.pnListPhongChieu.Controls.Add(this.dgvListPhongChieu);
+            this.pnListPhongChieu.Location = new System.Drawing.Point(9, 14);
+            this.pnListPhongChieu.Name = "pnListPhongChieu";
+            this.pnListPhongChieu.Size = new System.Drawing.Size(972, 579);
+            this.pnListPhongChieu.TabIndex = 0;
             // 
-            // maskedTextBox1
+            // btnXoaPhongChieu
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(701, 78);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(120, 22);
-            this.maskedTextBox1.TabIndex = 21;
+            this.btnXoaPhongChieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnXoaPhongChieu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoaPhongChieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaPhongChieu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaPhongChieu.Image = global::GUI.Properties.Resources.trash_can_26px;
+            this.btnXoaPhongChieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoaPhongChieu.Location = new System.Drawing.Point(335, 507);
+            this.btnXoaPhongChieu.Name = "btnXoaPhongChieu";
+            this.btnXoaPhongChieu.Size = new System.Drawing.Size(104, 36);
+            this.btnXoaPhongChieu.TabIndex = 47;
+            this.btnXoaPhongChieu.Text = "   Xóa";
+            this.btnXoaPhongChieu.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // lblVatTu
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 22);
-            this.textBox1.TabIndex = 20;
+            this.lblVatTu.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.lblVatTu.Image = global::GUI.Properties.Resources.ToolDeXuat;
+            this.lblVatTu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblVatTu.Location = new System.Drawing.Point(600, 75);
+            this.lblVatTu.Name = "lblVatTu";
+            this.lblVatTu.Size = new System.Drawing.Size(93, 33);
+            this.lblVatTu.TabIndex = 46;
+            this.lblVatTu.Text = "VẬT TƯ";
+            this.lblVatTu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // btnTimKiemVatTu
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.Image = global::GUI.Properties.Resources.MovieRoom;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(10, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 33);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "PHÒNG CHIẾU";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiemVatTu.BackColor = System.Drawing.Color.Cyan;
+            this.btnTimKiemVatTu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimKiemVatTu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemVatTu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemVatTu.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.btnTimKiemVatTu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiemVatTu.Location = new System.Drawing.Point(839, 70);
+            this.btnTimKiemVatTu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTimKiemVatTu.Name = "btnTimKiemVatTu";
+            this.btnTimKiemVatTu.Size = new System.Drawing.Size(123, 36);
+            this.btnTimKiemVatTu.TabIndex = 45;
+            this.btnTimKiemVatTu.Text = "TÌM KIẾM";
+            this.btnTimKiemVatTu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiemVatTu.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // btnTimKiemPhongChieu
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Image = global::GUI.Properties.Resources.MovieRoom;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(335, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 37);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "DANH SÁCH PHÒNG CHIẾU";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiemPhongChieu.BackColor = System.Drawing.Color.Cyan;
+            this.btnTimKiemPhongChieu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimKiemPhongChieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemPhongChieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemPhongChieu.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.btnTimKiemPhongChieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiemPhongChieu.Location = new System.Drawing.Point(454, 70);
+            this.btnTimKiemPhongChieu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTimKiemPhongChieu.Name = "btnTimKiemPhongChieu";
+            this.btnTimKiemPhongChieu.Size = new System.Drawing.Size(123, 36);
+            this.btnTimKiemPhongChieu.TabIndex = 44;
+            this.btnTimKiemPhongChieu.Text = "TÌM KIẾM";
+            this.btnTimKiemPhongChieu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiemPhongChieu.UseVisualStyleBackColor = false;
             // 
-            // dataGridView2
+            // btnThem
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(603, 117);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(359, 367);
-            this.dataGridView2.TabIndex = 13;
+            this.btnThem.BackColor = System.Drawing.Color.Silver;
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = global::GUI.Properties.Resources.new_copy_26px;
+            this.btnThem.Location = new System.Drawing.Point(113, 507);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(104, 36);
+            this.btnThem.TabIndex = 30;
+            this.btnThem.Text = " Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThem.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // btnXoaVatTu
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 117);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(564, 367);
-            this.dataGridView1.TabIndex = 12;
+            this.btnXoaVatTu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnXoaVatTu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoaVatTu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaVatTu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaVatTu.Image = global::GUI.Properties.Resources.trash_can_26px;
+            this.btnXoaVatTu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoaVatTu.Location = new System.Drawing.Point(741, 507);
+            this.btnXoaVatTu.Name = "btnXoaVatTu";
+            this.btnXoaVatTu.Size = new System.Drawing.Size(104, 36);
+            this.btnXoaVatTu.TabIndex = 29;
+            this.btnXoaVatTu.Text = "   Xóa";
+            this.btnXoaVatTu.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // txtTimKiem
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = global::GUI.Properties.Resources.trash_can_26px;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(740, 507);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(104, 36);
-            this.button6.TabIndex = 29;
-            this.button6.Text = "   Xóa";
-            this.button6.UseVisualStyleBackColor = false;
+            this.txtTimKiem.Location = new System.Drawing.Point(174, 77);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(265, 22);
+            this.txtTimKiem.TabIndex = 20;
             // 
-            // button1
+            // lblPhongChieu
             // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.button1.Location = new System.Drawing.Point(56, 508);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 36);
-            this.button1.TabIndex = 30;
-            this.button1.Text = " Thêm";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.lblPhongChieu.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.lblPhongChieu.Image = global::GUI.Properties.Resources.MovieRoom;
+            this.lblPhongChieu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPhongChieu.Location = new System.Drawing.Point(10, 72);
+            this.lblPhongChieu.Name = "lblPhongChieu";
+            this.lblPhongChieu.Size = new System.Drawing.Size(158, 33);
+            this.lblPhongChieu.TabIndex = 15;
+            this.lblPhongChieu.Text = "PHÒNG CHIẾU";
+            this.lblPhongChieu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button2
+            // lblListPhongChieu
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::GUI.Properties.Resources.Edit;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(393, 508);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 36);
-            this.button2.TabIndex = 43;
-            this.button2.Text = "CHỈNH SỬA";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.lblListPhongChieu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblListPhongChieu.Image = global::GUI.Properties.Resources.MovieRoom;
+            this.lblListPhongChieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblListPhongChieu.Location = new System.Drawing.Point(335, 17);
+            this.lblListPhongChieu.Name = "lblListPhongChieu";
+            this.lblListPhongChieu.Size = new System.Drawing.Size(305, 37);
+            this.lblListPhongChieu.TabIndex = 14;
+            this.lblListPhongChieu.Text = "DANH SÁCH PHÒNG CHIẾU";
+            this.lblListPhongChieu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button3
+            // dgvListVatTu
             // 
-            this.button3.BackColor = System.Drawing.Color.Cyan;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::GUI.Properties.Resources.SearchIcon;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(454, 70);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 36);
-            this.button3.TabIndex = 44;
-            this.button3.Text = "TÌM KIẾM";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.dgvListVatTu.BackgroundColor = System.Drawing.Color.White;
+            this.dgvListVatTu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListVatTu.Location = new System.Drawing.Point(603, 117);
+            this.dgvListVatTu.Name = "dgvListVatTu";
+            this.dgvListVatTu.RowHeadersWidth = 51;
+            this.dgvListVatTu.RowTemplate.Height = 24;
+            this.dgvListVatTu.Size = new System.Drawing.Size(359, 367);
+            this.dgvListVatTu.TabIndex = 13;
             // 
-            // button4
+            // dgvListPhongChieu
             // 
-            this.button4.BackColor = System.Drawing.Color.Cyan;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::GUI.Properties.Resources.SearchIcon;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(839, 70);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 36);
-            this.button4.TabIndex = 45;
-            this.button4.Text = "TÌM KIẾM";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
+            this.dgvListPhongChieu.BackgroundColor = System.Drawing.Color.White;
+            this.dgvListPhongChieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListPhongChieu.Location = new System.Drawing.Point(13, 117);
+            this.dgvListPhongChieu.Name = "dgvListPhongChieu";
+            this.dgvListPhongChieu.RowHeadersWidth = 51;
+            this.dgvListPhongChieu.RowTemplate.Height = 24;
+            this.dgvListPhongChieu.Size = new System.Drawing.Size(564, 367);
+            this.dgvListPhongChieu.TabIndex = 12;
             // 
-            // label3
+            // txtVatTu
             // 
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.Image = global::GUI.Properties.Resources.ToolDeXuat;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(600, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 33);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "VẬT TƯ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtVatTu.Location = new System.Drawing.Point(702, 79);
+            this.txtVatTu.Name = "txtVatTu";
+            this.txtVatTu.Size = new System.Drawing.Size(130, 22);
+            this.txtVatTu.TabIndex = 48;
             // 
             // UCPhongChieuQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnListPhongChieu);
             this.Name = "UCPhongChieuQLVT";
             this.Size = new System.Drawing.Size(993, 613);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pnListPhongChieu.ResumeLayout(false);
+            this.pnListPhongChieu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListVatTu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListPhongChieu)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel pnListPhongChieu;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label lblPhongChieu;
+        private System.Windows.Forms.Label lblListPhongChieu;
+        private System.Windows.Forms.DataGridView dgvListVatTu;
+        private System.Windows.Forms.DataGridView dgvListPhongChieu;
+        private System.Windows.Forms.Button btnXoaVatTu;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnTimKiemVatTu;
+        private System.Windows.Forms.Button btnTimKiemPhongChieu;
+        private System.Windows.Forms.Label lblVatTu;
+        private System.Windows.Forms.Button btnXoaPhongChieu;
+        private System.Windows.Forms.TextBox txtVatTu;
     }
 }

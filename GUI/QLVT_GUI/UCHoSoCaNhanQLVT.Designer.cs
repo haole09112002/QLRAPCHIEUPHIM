@@ -28,123 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pnThongTinCaNhan = new System.Windows.Forms.Panel();
+            this.lblChucVu = new System.Windows.Forms.Label();
+            this.grpThongTinCaNhan = new System.Windows.Forms.GroupBox();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnChinhSua = new System.Windows.Forms.Button();
+            this.lblTen = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtNgaySinh = new System.Windows.Forms.TextBox();
+            this.lblNgaySinh = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtDienThoai = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.txtTenTK = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnDMK = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
+            this.lblDiaChi = new System.Windows.Forms.Label();
+            this.lblDienThoai = new System.Windows.Forms.Label();
+            this.btnDoiMatKhau = new System.Windows.Forms.Button();
+            this.lblMatKhau = new System.Windows.Forms.Label();
+            this.lblTenTaiKhoan = new System.Windows.Forms.Label();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
+            this.pnThongTinCaNhan.SuspendLayout();
+            this.grpThongTinCaNhan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnThongTinCaNhan
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(36, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(920, 532);
-            this.panel1.TabIndex = 1;
+            this.pnThongTinCaNhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnThongTinCaNhan.Controls.Add(this.lblChucVu);
+            this.pnThongTinCaNhan.Controls.Add(this.grpThongTinCaNhan);
+            this.pnThongTinCaNhan.Controls.Add(this.picAvatar);
+            this.pnThongTinCaNhan.Location = new System.Drawing.Point(36, 40);
+            this.pnThongTinCaNhan.Name = "pnThongTinCaNhan";
+            this.pnThongTinCaNhan.Size = new System.Drawing.Size(920, 532);
+            this.pnThongTinCaNhan.TabIndex = 1;
             // 
-            // label1
+            // lblChucVu
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Image = global::GUI.Properties.Resources.avatar;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(57, 247);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 30);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Quản lý vật tư";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChucVu.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblChucVu.Image = global::GUI.Properties.Resources.avatar;
+            this.lblChucVu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblChucVu.Location = new System.Drawing.Point(57, 247);
+            this.lblChucVu.Name = "lblChucVu";
+            this.lblChucVu.Size = new System.Drawing.Size(186, 30);
+            this.lblChucVu.TabIndex = 38;
+            this.lblChucVu.Text = "Quản lý vật tư";
+            this.lblChucVu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox1
+            // grpThongTinCaNhan
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtTen);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtDiaChi);
-            this.groupBox1.Controls.Add(this.txtDienThoai);
-            this.groupBox1.Controls.Add(this.txtMatKhau);
-            this.groupBox1.Controls.Add(this.txtTenTK);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.btnDMK);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(276, 36);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(607, 466);
-            this.groupBox1.TabIndex = 36;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "THÔNG TIN CÁ NHÂN";
+            this.grpThongTinCaNhan.Controls.Add(this.btnLuu);
+            this.grpThongTinCaNhan.Controls.Add(this.btnChinhSua);
+            this.grpThongTinCaNhan.Controls.Add(this.lblTen);
+            this.grpThongTinCaNhan.Controls.Add(this.txtTen);
+            this.grpThongTinCaNhan.Controls.Add(this.txtNgaySinh);
+            this.grpThongTinCaNhan.Controls.Add(this.lblNgaySinh);
+            this.grpThongTinCaNhan.Controls.Add(this.txtDiaChi);
+            this.grpThongTinCaNhan.Controls.Add(this.txtDienThoai);
+            this.grpThongTinCaNhan.Controls.Add(this.txtMatKhau);
+            this.grpThongTinCaNhan.Controls.Add(this.txtTenTaiKhoan);
+            this.grpThongTinCaNhan.Controls.Add(this.lblDiaChi);
+            this.grpThongTinCaNhan.Controls.Add(this.lblDienThoai);
+            this.grpThongTinCaNhan.Controls.Add(this.btnDoiMatKhau);
+            this.grpThongTinCaNhan.Controls.Add(this.lblMatKhau);
+            this.grpThongTinCaNhan.Controls.Add(this.lblTenTaiKhoan);
+            this.grpThongTinCaNhan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpThongTinCaNhan.Location = new System.Drawing.Point(276, 36);
+            this.grpThongTinCaNhan.Margin = new System.Windows.Forms.Padding(4);
+            this.grpThongTinCaNhan.Name = "grpThongTinCaNhan";
+            this.grpThongTinCaNhan.Padding = new System.Windows.Forms.Padding(4);
+            this.grpThongTinCaNhan.Size = new System.Drawing.Size(607, 466);
+            this.grpThongTinCaNhan.TabIndex = 36;
+            this.grpThongTinCaNhan.TabStop = false;
+            this.grpThongTinCaNhan.Text = "THÔNG TIN CÁ NHÂN";
             // 
-            // button1
+            // btnLuu
             // 
-            this.button1.BackColor = System.Drawing.Color.LightGreen;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::GUI.Properties.Resources.save_26px;
-            this.button1.Location = new System.Drawing.Point(467, 370);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 36);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "    Lưu";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLuu.BackColor = System.Drawing.Color.LightGreen;
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = global::GUI.Properties.Resources.save_26px;
+            this.btnLuu.Location = new System.Drawing.Point(467, 370);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(127, 36);
+            this.btnLuu.TabIndex = 19;
+            this.btnLuu.Text = "    Lưu";
+            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuu.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnChinhSua
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::GUI.Properties.Resources.Edit;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(267, 369);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 36);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Chỉnh sửa";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnChinhSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnChinhSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChinhSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChinhSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhSua.Image = global::GUI.Properties.Resources.Edit;
+            this.btnChinhSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChinhSua.Location = new System.Drawing.Point(267, 369);
+            this.btnChinhSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChinhSua.Name = "btnChinhSua";
+            this.btnChinhSua.Size = new System.Drawing.Size(127, 36);
+            this.btnChinhSua.TabIndex = 18;
+            this.btnChinhSua.Text = "Chỉnh sửa";
+            this.btnChinhSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChinhSua.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lblTen
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Image = global::GUI.Properties.Resources.UserProfileQLVT;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(27, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "TÊN";
+            this.lblTen.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTen.Image = global::GUI.Properties.Resources.UserProfileQLVT;
+            this.lblTen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTen.Location = new System.Drawing.Point(27, 62);
+            this.lblTen.Name = "lblTen";
+            this.lblTen.Size = new System.Drawing.Size(64, 19);
+            this.lblTen.TabIndex = 2;
+            this.lblTen.Text = "TÊN";
             // 
             // txtTen
             // 
@@ -156,26 +156,26 @@
             this.txtTen.Size = new System.Drawing.Size(389, 27);
             this.txtTen.TabIndex = 8;
             // 
-            // textBox2
+            // txtNgaySinh
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(205, 108);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(389, 27);
-            this.textBox2.TabIndex = 17;
+            this.txtNgaySinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtNgaySinh.Enabled = false;
+            this.txtNgaySinh.Location = new System.Drawing.Point(205, 108);
+            this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Size = new System.Drawing.Size(389, 27);
+            this.txtNgaySinh.TabIndex = 17;
             // 
-            // label3
+            // lblNgaySinh
             // 
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Image = global::GUI.Properties.Resources.Birthday;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(27, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 19);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "NGÀY SINH";
+            this.lblNgaySinh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgaySinh.Image = global::GUI.Properties.Resources.Birthday;
+            this.lblNgaySinh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblNgaySinh.Location = new System.Drawing.Point(27, 116);
+            this.lblNgaySinh.Name = "lblNgaySinh";
+            this.lblNgaySinh.Size = new System.Drawing.Size(133, 19);
+            this.lblNgaySinh.TabIndex = 3;
+            this.lblNgaySinh.Text = "NGÀY SINH";
             // 
             // txtDiaChi
             // 
@@ -207,129 +207,129 @@
             this.txtMatKhau.Size = new System.Drawing.Size(389, 27);
             this.txtMatKhau.TabIndex = 11;
             // 
-            // txtTenTK
+            // txtTenTaiKhoan
             // 
-            this.txtTenTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtTenTK.Enabled = false;
-            this.txtTenTK.Location = new System.Drawing.Point(205, 304);
-            this.txtTenTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTenTK.Name = "txtTenTK";
-            this.txtTenTK.Size = new System.Drawing.Size(389, 27);
-            this.txtTenTK.TabIndex = 12;
+            this.txtTenTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtTenTaiKhoan.Enabled = false;
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(205, 304);
+            this.txtTenTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
+            this.txtTenTaiKhoan.Size = new System.Drawing.Size(389, 27);
+            this.txtTenTaiKhoan.TabIndex = 12;
             // 
-            // label4
+            // lblDiaChi
             // 
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Image = global::GUI.Properties.Resources.Location;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(27, 155);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 27);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "ĐỊA CHỈ";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDiaChi.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiaChi.Image = global::GUI.Properties.Resources.Location;
+            this.lblDiaChi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDiaChi.Location = new System.Drawing.Point(27, 155);
+            this.lblDiaChi.Name = "lblDiaChi";
+            this.lblDiaChi.Size = new System.Drawing.Size(112, 27);
+            this.lblDiaChi.TabIndex = 4;
+            this.lblDiaChi.Text = "ĐỊA CHỈ";
+            this.lblDiaChi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label5
+            // lblDienThoai
             // 
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Image = global::GUI.Properties.Resources.Phone;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(27, 204);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(141, 26);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "ĐIỆN THOẠI";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDienThoai.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDienThoai.Image = global::GUI.Properties.Resources.Phone;
+            this.lblDienThoai.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDienThoai.Location = new System.Drawing.Point(27, 204);
+            this.lblDienThoai.Name = "lblDienThoai";
+            this.lblDienThoai.Size = new System.Drawing.Size(141, 26);
+            this.lblDienThoai.TabIndex = 5;
+            this.lblDienThoai.Text = "ĐIỆN THOẠI";
+            this.lblDienThoai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnDMK
+            // btnDoiMatKhau
             // 
-            this.btnDMK.BackColor = System.Drawing.Color.Peru;
-            this.btnDMK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDMK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDMK.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDMK.ForeColor = System.Drawing.Color.Black;
-            this.btnDMK.Image = global::GUI.Properties.Resources.Password;
-            this.btnDMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDMK.Location = new System.Drawing.Point(31, 369);
-            this.btnDMK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDMK.Name = "btnDMK";
-            this.btnDMK.Size = new System.Drawing.Size(159, 37);
-            this.btnDMK.TabIndex = 14;
-            this.btnDMK.Text = "Đổi Mật Khẩu";
-            this.btnDMK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDMK.UseVisualStyleBackColor = false;
+            this.btnDoiMatKhau.BackColor = System.Drawing.Color.Peru;
+            this.btnDoiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoiMatKhau.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiMatKhau.ForeColor = System.Drawing.Color.Black;
+            this.btnDoiMatKhau.Image = global::GUI.Properties.Resources.Password;
+            this.btnDoiMatKhau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(31, 369);
+            this.btnDoiMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(159, 37);
+            this.btnDoiMatKhau.TabIndex = 14;
+            this.btnDoiMatKhau.Text = "Đổi Mật Khẩu";
+            this.btnDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDoiMatKhau.UseVisualStyleBackColor = false;
             // 
-            // label6
+            // lblMatKhau
             // 
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Image = global::GUI.Properties.Resources.Security;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(27, 251);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 29);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "MẬT KHẨU";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblMatKhau.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMatKhau.Image = global::GUI.Properties.Resources.Security;
+            this.lblMatKhau.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblMatKhau.Location = new System.Drawing.Point(27, 251);
+            this.lblMatKhau.Name = "lblMatKhau";
+            this.lblMatKhau.Size = new System.Drawing.Size(133, 29);
+            this.lblMatKhau.TabIndex = 6;
+            this.lblMatKhau.Text = "MẬT KHẨU";
+            this.lblMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label7
+            // lblTenTaiKhoan
             // 
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Image = global::GUI.Properties.Resources.UserProfileQLVT;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label7.Location = new System.Drawing.Point(27, 307);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(163, 19);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "TÊN TÀI KHOẢN";
+            this.lblTenTaiKhoan.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenTaiKhoan.Image = global::GUI.Properties.Resources.UserProfileQLVT;
+            this.lblTenTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTenTaiKhoan.Location = new System.Drawing.Point(27, 307);
+            this.lblTenTaiKhoan.Name = "lblTenTaiKhoan";
+            this.lblTenTaiKhoan.Size = new System.Drawing.Size(163, 19);
+            this.lblTenTaiKhoan.TabIndex = 7;
+            this.lblTenTaiKhoan.Text = "TÊN TÀI KHOẢN";
             // 
-            // pictureBox1
+            // picAvatar
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 80);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(199, 153);
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
+            this.picAvatar.BackColor = System.Drawing.Color.Silver;
+            this.picAvatar.ErrorImage = null;
+            this.picAvatar.InitialImage = null;
+            this.picAvatar.Location = new System.Drawing.Point(39, 80);
+            this.picAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(199, 153);
+            this.picAvatar.TabIndex = 35;
+            this.picAvatar.TabStop = false;
             // 
             // UCHoSoCaNhanQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnThongTinCaNhan);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCHoSoCaNhanQLVT";
             this.Size = new System.Drawing.Size(993, 613);
-            this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnThongTinCaNhan.ResumeLayout(false);
+            this.grpThongTinCaNhan.ResumeLayout(false);
+            this.grpThongTinCaNhan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnThongTinCaNhan;
+        private System.Windows.Forms.Label lblChucVu;
+        private System.Windows.Forms.GroupBox grpThongTinCaNhan;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnChinhSua;
+        private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.TextBox txtTen;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNgaySinh;
+        private System.Windows.Forms.Label lblNgaySinh;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtDienThoai;
         private System.Windows.Forms.TextBox txtMatKhau;
-        private System.Windows.Forms.TextBox txtTenTK;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnDMK;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtTenTaiKhoan;
+        private System.Windows.Forms.Label lblDiaChi;
+        private System.Windows.Forms.Label lblDienThoai;
+        private System.Windows.Forms.Button btnDoiMatKhau;
+        private System.Windows.Forms.Label lblMatKhau;
+        private System.Windows.Forms.Label lblTenTaiKhoan;
+        private System.Windows.Forms.PictureBox picAvatar;
     }
 }

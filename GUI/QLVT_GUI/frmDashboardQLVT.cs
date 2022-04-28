@@ -28,7 +28,7 @@ namespace GUI.QLVT_GUI
         private void changeColorButton(Button btn)
         {
             btn.BackColor = Color.FromArgb(0, 144, 153);
-            List<Button> buttons = new List<Button> {btnDeXuat,btnNhapXuatKho,btnNhaCungCap,btnSanPham,btnPhongChieu,btnCaNhan,btnDangXuat};
+            List<Button> buttons = new List<Button> {btnDeXuat,btnNhapXuatKho,btnNhaCungUng,btnSanPham,btnPhongChieu,btnCaNhan,btnDangXuat};
             foreach (Button i in buttons)
             {
 
@@ -41,8 +41,8 @@ namespace GUI.QLVT_GUI
         private void AddControlsToPnCenter(Control c)
         {
             c.Dock = DockStyle.Fill;
-            pnCenter.Controls.Clear();
-            pnCenter.Controls.Add(c);
+            pnMenuContent.Controls.Clear();
+            pnMenuContent.Controls.Add(c);
         }
         private void AddControlsToPnMenu(Control c)
         {
@@ -75,7 +75,7 @@ namespace GUI.QLVT_GUI
             AddControlsToPnMenu(ucMenuNhaCungUngQLVT);
             AddControlsToPnCenter(ucMenuNhaCungUngQLVT.ucNhaCungUngThucAnQLVT);
             ucMenuNhaCungUngQLVT.d = new UCMenuNhaCungUngQLVT.Mydel(AddControlsToPnCenter);
-            changeColorButton(btnNhaCungCap);
+            changeColorButton(btnNhaCungUng);
         }
 
         private void btnSanPham_Click(object sender, EventArgs e)
