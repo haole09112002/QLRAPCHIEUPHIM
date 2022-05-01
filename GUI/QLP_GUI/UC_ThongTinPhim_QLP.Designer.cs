@@ -28,220 +28,173 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnThemPhim = new System.Windows.Forms.Button();
-            this.btnXoaPhim = new System.Windows.Forms.Button();
-            this.btnChinhSua = new System.Windows.Forms.Button();
-            this.btnSapXep = new System.Windows.Forms.Button();
-            this.txtSapXep = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnXemChiTiet = new System.Windows.Forms.Button();
+            this.btnSapXep = new System.Windows.Forms.Button();
+            this.cBSapXep = new System.Windows.Forms.ComboBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dGVDanhSachPhim = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnThemPhim
-            // 
-            this.btnThemPhim.BackColor = System.Drawing.Color.White;
-            this.btnThemPhim.ForeColor = System.Drawing.Color.Blue;
-            this.btnThemPhim.Location = new System.Drawing.Point(111, 643);
-            this.btnThemPhim.Name = "btnThemPhim";
-            this.btnThemPhim.Size = new System.Drawing.Size(95, 27);
-            this.btnThemPhim.TabIndex = 2;
-            this.btnThemPhim.Text = "Thêm Phim";
-            this.btnThemPhim.UseVisualStyleBackColor = false;
-            // 
-            // btnXoaPhim
-            // 
-            this.btnXoaPhim.BackColor = System.Drawing.Color.White;
-            this.btnXoaPhim.ForeColor = System.Drawing.Color.Blue;
-            this.btnXoaPhim.Location = new System.Drawing.Point(314, 643);
-            this.btnXoaPhim.Name = "btnXoaPhim";
-            this.btnXoaPhim.Size = new System.Drawing.Size(95, 27);
-            this.btnXoaPhim.TabIndex = 3;
-            this.btnXoaPhim.Text = "Xóa Phim";
-            this.btnXoaPhim.UseVisualStyleBackColor = false;
-            // 
-            // btnChinhSua
-            // 
-            this.btnChinhSua.BackColor = System.Drawing.Color.White;
-            this.btnChinhSua.ForeColor = System.Drawing.Color.Blue;
-            this.btnChinhSua.Location = new System.Drawing.Point(520, 643);
-            this.btnChinhSua.Name = "btnChinhSua";
-            this.btnChinhSua.Size = new System.Drawing.Size(95, 27);
-            this.btnChinhSua.TabIndex = 4;
-            this.btnChinhSua.Text = "Chỉnh Sửa";
-            this.btnChinhSua.UseVisualStyleBackColor = false;
-            // 
-            // btnSapXep
-            // 
-            this.btnSapXep.BackColor = System.Drawing.Color.White;
-            this.btnSapXep.ForeColor = System.Drawing.Color.Blue;
-            this.btnSapXep.Location = new System.Drawing.Point(723, 643);
-            this.btnSapXep.Name = "btnSapXep";
-            this.btnSapXep.Size = new System.Drawing.Size(107, 34);
-            this.btnSapXep.TabIndex = 7;
-            this.btnSapXep.Text = "Sắp Xếp";
-            this.btnSapXep.UseVisualStyleBackColor = false;
-            // 
-            // txtSapXep
-            // 
-            this.txtSapXep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtSapXep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSapXep.Location = new System.Drawing.Point(850, 640);
-            this.txtSapXep.Name = "txtSapXep";
-            this.txtSapXep.Size = new System.Drawing.Size(238, 30);
-            this.txtSapXep.TabIndex = 8;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.btnXemChiTiet);
+            this.panel1.Controls.Add(this.btnSapXep);
+            this.panel1.Controls.Add(this.cBSapXep);
+            this.panel1.Controls.Add(this.btnTimKiem);
+            this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(16, 12);
+            this.panel1.Controls.Add(this.dGVDanhSachPhim);
+            this.panel1.Location = new System.Drawing.Point(18, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 588);
+            this.panel1.Size = new System.Drawing.Size(1080, 734);
             this.panel1.TabIndex = 9;
             // 
-            // button2
+            // btnXemChiTiet
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::GUI.Properties.Resources.SearchIcon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(384, 538);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 36);
-            this.button2.TabIndex = 48;
-            this.button2.Text = "XEM CHI TIẾT";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnXemChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnXemChiTiet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXemChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemChiTiet.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemChiTiet.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.btnXemChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXemChiTiet.Location = new System.Drawing.Point(432, 672);
+            this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnXemChiTiet.Name = "btnXemChiTiet";
+            this.btnXemChiTiet.Size = new System.Drawing.Size(166, 45);
+            this.btnXemChiTiet.TabIndex = 48;
+            this.btnXemChiTiet.Text = "XEM CHI TIẾT";
+            this.btnXemChiTiet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXemChiTiet.UseVisualStyleBackColor = false;
+            this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
-            // button1
+            // btnSapXep
             // 
-            this.button1.BackColor = System.Drawing.Color.Cyan;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::GUI.Properties.Resources.Sort;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(530, 45);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 38);
-            this.button1.TabIndex = 47;
-            this.button1.Text = "    SẮP XẾP";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSapXep.BackColor = System.Drawing.Color.Cyan;
+            this.btnSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSapXep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSapXep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSapXep.Image = global::GUI.Properties.Resources.Sort;
+            this.btnSapXep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSapXep.Location = new System.Drawing.Point(596, 56);
+            this.btnSapXep.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSapXep.Name = "btnSapXep";
+            this.btnSapXep.Size = new System.Drawing.Size(138, 48);
+            this.btnSapXep.TabIndex = 47;
+            this.btnSapXep.Text = "    SẮP XẾP";
+            this.btnSapXep.UseVisualStyleBackColor = false;
+            this.btnSapXep.Click += new System.EventHandler(this.btnSapXep_Click);
             // 
-            // comboBox2
+            // cBSapXep
             // 
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(671, 51);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(265, 27);
-            this.comboBox2.TabIndex = 46;
+            this.cBSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBSapXep.FormattingEnabled = true;
+            this.cBSapXep.Items.AddRange(new object[] {
+            "MaPhim",
+            "TenPhim",
+            "ThoiLuong",
+            "NamSanXuat",
+            "QuocGia",
+            "TenHangPhim",
+            "TheLoai"});
+            this.cBSapXep.Location = new System.Drawing.Point(755, 64);
+            this.cBSapXep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBSapXep.Name = "cBSapXep";
+            this.cBSapXep.Size = new System.Drawing.Size(298, 31);
+            this.cBSapXep.TabIndex = 46;
             // 
-            // button7
+            // btnTimKiem
             // 
-            this.button7.BackColor = System.Drawing.Color.Cyan;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Image = global::GUI.Properties.Resources.SearchIcon;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(24, 47);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(123, 36);
-            this.button7.TabIndex = 45;
-            this.button7.Text = "TÌM KIẾM";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnTimKiem.BackColor = System.Drawing.Color.Cyan;
+            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.Location = new System.Drawing.Point(27, 59);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(138, 45);
+            this.btnTimKiem.TabIndex = 45;
+            this.btnTimKiem.Text = "TÌM KIẾM";
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // textBox1
+            // txtTimKiem
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(166, 50);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 28);
-            this.textBox1.TabIndex = 44;
+            this.txtTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(187, 62);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(295, 33);
+            this.txtTimKiem.TabIndex = 44;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Image = global::GUI.Properties.Resources.film_reel_26px;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(348, 9);
+            this.label1.Location = new System.Drawing.Point(392, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 25);
+            this.label1.Size = new System.Drawing.Size(246, 31);
             this.label1.TabIndex = 43;
             this.label1.Text = "DANH SÁCH PHIM";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dataGridView1
+            // dGVDanhSachPhim
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 100);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(912, 428);
-            this.dataGridView1.TabIndex = 40;
+            this.dGVDanhSachPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVDanhSachPhim.BackgroundColor = System.Drawing.Color.White;
+            this.dGVDanhSachPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVDanhSachPhim.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dGVDanhSachPhim.Location = new System.Drawing.Point(27, 125);
+            this.dGVDanhSachPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dGVDanhSachPhim.Name = "dGVDanhSachPhim";
+            this.dGVDanhSachPhim.RowHeadersWidth = 62;
+            this.dGVDanhSachPhim.RowTemplate.Height = 28;
+            this.dGVDanhSachPhim.Size = new System.Drawing.Size(1026, 535);
+            this.dGVDanhSachPhim.TabIndex = 40;
             // 
             // UC_ThongTinPhim_QLP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtSapXep);
-            this.Controls.Add(this.btnSapXep);
-            this.Controls.Add(this.btnChinhSua);
-            this.Controls.Add(this.btnXoaPhim);
-            this.Controls.Add(this.btnThemPhim);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_ThongTinPhim_QLP";
-            this.Size = new System.Drawing.Size(993, 613);
+            this.Size = new System.Drawing.Size(1117, 766);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnThemPhim;
-        private System.Windows.Forms.Button btnXoaPhim;
-        private System.Windows.Forms.Button btnChinhSua;
-        private System.Windows.Forms.Button btnSapXep;
-        private System.Windows.Forms.TextBox txtSapXep;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnXemChiTiet;
+        private System.Windows.Forms.Button btnSapXep;
+        private System.Windows.Forms.ComboBox cBSapXep;
+        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGVDanhSachPhim;
     }
 }
