@@ -47,9 +47,9 @@ namespace BLL
 
             return data;
         }
-        public List<NhaCungCapView> GetNCCViewMaLoaiNCC(string maLoaiNCC)
+        public List<NhaCungCapViewDTO> GetNCCViewMaLoaiNCC(string maLoaiNCC)
         {
-            List<NhaCungCapView> data = new List<NhaCungCapView>();
+            List<NhaCungCapViewDTO> data = new List<NhaCungCapViewDTO>();
             string tenLoaiNCC = "";
             foreach (NhaCungCapDTO j in GetNCCByMaLoaiNCC(maLoaiNCC))
             {
@@ -58,7 +58,7 @@ namespace BLL
                     if (i.MaLoaiNhaCungCap == j.MaLoaiNhaCungCap)
                         tenLoaiNCC = i.TenLoaiNhaCungCap;
                 }
-                data.Add(new NhaCungCapView
+                data.Add(new NhaCungCapViewDTO
                 {
                     MaNhaCungCap = j.MaNhaCungCap,
                     TenNhaCungCap = j.TenNhaCungCap,

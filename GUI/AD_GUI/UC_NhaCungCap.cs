@@ -19,12 +19,14 @@ namespace GUI.AD_GUI
             InitializeComponent();
             cbLoaiNhaCungCap.Items.Add(new CBBItem { Text = "Tất cả", Value = "0" });
             cbLoaiNhaCungCap.Items.AddRange(LoaiNhaCungCapBLL.Instance.GetCBBLoaiNhaCungCap().ToArray());
-            loadDGVDanhSachNCC();
+            
+            loadDGVDanhSachNCC();SetGUI();
         }
 
         public void SetGUI()
         {
-           
+            dgvDSNhaCungCap.Columns["MaNhaCungCap"].HeaderText = "Mã nhà cung cấp";
+          
         }
         public void loadDGVDanhSachNCC(string maLoaiNCC = "0")
         {

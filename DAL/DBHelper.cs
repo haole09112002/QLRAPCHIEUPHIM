@@ -13,7 +13,7 @@ namespace DAL
     {
         private static DBHelper _Instance;
         private SqlConnection cnn;
-        private DBHelper(string s)
+        public DBHelper(string s)
         {
             cnn = new SqlConnection(s);
         }
@@ -23,7 +23,13 @@ namespace DAL
             {
                 if (_Instance == null)
                 {
+                    //string cnnstr = @"Data Source=LAPTOP-MAJKSJMC\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
                     string cnnstr = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
+
+
+
+
+
                     _Instance = new DBHelper(cnnstr);
                 }
                 return _Instance;
@@ -58,7 +64,6 @@ namespace DAL
                 cnn.Open();
                 da.Fill(data);
                 cnn.Close();
-                //  }
             }
             catch (Exception e)
             {

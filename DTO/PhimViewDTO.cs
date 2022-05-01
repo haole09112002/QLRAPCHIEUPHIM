@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class PhimDTO
+    public class PhimViewDTO
     {
         private string maPhim;
         private string tenPhim;
@@ -17,10 +17,6 @@ namespace DTO
         private string tenHangPhim;
         private int doTuoiXem;
         private string theLoai;
-        private string noiDung;
-        private string dienVienChinh;
-        private string dienVienPhu;
-        private string daoDien;
 
         public string MaPhim { get => maPhim; set => maPhim = value; }
         public string TenPhim { get => tenPhim; set => tenPhim = value; }
@@ -31,10 +27,5 @@ namespace DTO
         public string TenHangPhim { get => tenHangPhim; set => tenHangPhim = value; }
         public int DoTuoiXem { get => doTuoiXem; set => doTuoiXem = value; }
         public string TheLoai { get => theLoai; set => theLoai = value; }
-        public string NoiDung { get => noiDung; set => noiDung = value; }
-        public string DienVienChinh { get => dienVienChinh; set => dienVienChinh = value; }
-        public string DienVienPhu { get => dienVienPhu; set => dienVienPhu = value; }
-        public string DaoDien { get => daoDien; set => daoDien = value; }
     }
 }
-
