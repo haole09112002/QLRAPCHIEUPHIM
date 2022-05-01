@@ -154,11 +154,11 @@
     <Compile Include="AD_GUI\UC_MenuThongKe.Designer.cs">
       <DependentUpon>UC_MenuThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="AD_GUI\UC_NCC_AD.cs">
+    <Compile Include="AD_GUI\UC_NhaCungCap.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AD_GUI\UC_NCC_AD.Designer.cs">
-      <DependentUpon>UC_NCC_AD.cs</DependentUpon>
+    <Compile Include="AD_GUI\UC_NhaCungCap.Designer.cs">
+      <DependentUpon>UC_NhaCungCap.cs</DependentUpon>
     </Compile>
     <Compile Include="AD_GUI\UC_PhieuNhapXuat.cs">
       <SubType>UserControl</SubType>
@@ -473,8 +473,8 @@
     <EmbeddedResource Include="AD_GUI\UC_MenuThongKe.resx">
       <DependentUpon>UC_MenuThongKe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AD_GUI\UC_NCC_AD.resx">
-      <DependentUpon>UC_NCC_AD.cs</DependentUpon>
+    <EmbeddedResource Include="AD_GUI\UC_NhaCungCap.resx">
+      <DependentUpon>UC_NhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_PhieuNhapXuat.resx">
       <DependentUpon>UC_PhieuNhapXuat.cs</DependentUpon>
@@ -863,6 +863,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\NhaKho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{1ca149db-4213-4f61-a64e-9352059ea6aa}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
