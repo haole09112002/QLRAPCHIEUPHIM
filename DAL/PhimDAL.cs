@@ -16,10 +16,12 @@ namespace DAL
             get
             {
                 if (instance == null)
+                {
                     instance = new PhimDAL();
+                }
                 return instance;
             }
-            set { }
+            private set { }
         }
         public List<PhimDTO> GetALLPhim()
         {

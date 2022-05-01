@@ -18,7 +18,7 @@ namespace GUI.AD_GUI
         }
       
         UC_LichChieu_AD ucLichChieu = new UC_LichChieu_AD();
-        UC_NCC_AD ucNCC = new UC_NCC_AD();
+        UC_NhaCungCap ucNCC = new UC_NhaCungCap();
         UC_HopDong ucHopDong = new UC_HopDong();
         UC_DeXuat ucDeXuat = new UC_DeXuat();
         UC_CaNhan ucCaNhan = new UC_CaNhan();
