@@ -15,7 +15,7 @@ namespace GUI.AD_GUI
     public partial class frmThemNhaCungCap : Form
     {
         private string maNhaCungCap;
-        public delegate void Mydel(string maNhaCungCap);
+        public delegate void Mydel(string maNhaCungCap, string txt);
         public Mydel d { get; set; }
          
         public frmThemNhaCungCap(string maNhaCungCap = "")
@@ -84,7 +84,7 @@ namespace GUI.AD_GUI
                     NhaCungCapBLL.Instance.AddUpdateNhaCungCap(nhaCungCap);
                     DialogResult result2 = MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     {
-                        d("0");
+                        d("0", "");
                         this.Close();
                     }
                 }

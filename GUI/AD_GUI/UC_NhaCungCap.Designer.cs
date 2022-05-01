@@ -42,7 +42,6 @@
             this.cbLoaiNhaCungCap = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnXemChiTiet = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.dgvDSNhaCungCap = new System.Windows.Forms.DataGridView();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -96,6 +95,7 @@
             this.btnExcel.Text = "XUẤT EXCEL";
             this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // btnSapXep
             // 
@@ -129,6 +129,7 @@
             this.btnTimKiem.Text = "TÌM KIẾM";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // cbSapXep
             // 
@@ -140,6 +141,7 @@
             this.cbSapXep.Name = "cbSapXep";
             this.cbSapXep.Size = new System.Drawing.Size(215, 27);
             this.cbSapXep.TabIndex = 3;
+            this.cbSapXep.SelectedIndexChanged += new System.EventHandler(this.cbSapXep_SelectedIndexChanged);
             // 
             // txtTimKiem
             // 
@@ -149,6 +151,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(227, 28);
             this.txtTimKiem.TabIndex = 4;
+            this.txtTimKiem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyDown);
             // 
             // dgvDSSanPham
             // 
@@ -178,7 +181,6 @@
             // 
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.btnXemChiTiet);
-            this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.dgvDSNhaCungCap);
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -233,7 +235,7 @@
             this.btnXemChiTiet.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemChiTiet.Image = global::GUI.Properties.Resources.Edit;
             this.btnXemChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXemChiTiet.Location = new System.Drawing.Point(211, 435);
+            this.btnXemChiTiet.Location = new System.Drawing.Point(327, 432);
             this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.btnXemChiTiet.Name = "btnXemChiTiet";
             this.btnXemChiTiet.Size = new System.Drawing.Size(139, 39);
@@ -242,21 +244,6 @@
             this.btnXemChiTiet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXemChiTiet.UseVisualStyleBackColor = false;
             this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Image = global::GUI.Properties.Resources.trash_can_26px;
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(432, 435);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(102, 36);
-            this.btnXoa.TabIndex = 30;
-            this.btnXoa.Text = "   Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
             // 
             // dgvDSNhaCungCap
             // 
@@ -280,7 +267,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.btnThem.Location = new System.Drawing.Point(11, 435);
+            this.btnThem.Location = new System.Drawing.Point(87, 435);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(104, 36);
             this.btnThem.TabIndex = 27;
@@ -313,7 +300,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.Button btnSapXep;
