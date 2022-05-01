@@ -16,5 +16,10 @@ namespace GUI.QLVT_GUI
         {
             InitializeComponent();
         }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            FrmCapNhatPhongChieuQLVT frmCapNhatPhongChieuQLVT = new FrmCapNhatPhongChieuQLVT();
+            frmCapNhatPhongChieuQLVT.Show();
+        }
     }
 }

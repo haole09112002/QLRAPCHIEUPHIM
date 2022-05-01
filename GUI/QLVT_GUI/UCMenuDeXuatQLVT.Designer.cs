@@ -28,47 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDanhSachPhieuNX = new System.Windows.Forms.Button();
-            this.btnTaoPhieu = new System.Windows.Forms.Button();
+            this.btnMenuListDXVatTu = new System.Windows.Forms.Button();
+            this.btnMenuListDXThucAn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnDanhSachPhieuNX
+            // btnMenuListDXVatTu
             // 
-            this.btnDanhSachPhieuNX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
-            this.btnDanhSachPhieuNX.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDanhSachPhieuNX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDanhSachPhieuNX.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnDanhSachPhieuNX.Location = new System.Drawing.Point(350, 0);
-            this.btnDanhSachPhieuNX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDanhSachPhieuNX.Name = "btnDanhSachPhieuNX";
-            this.btnDanhSachPhieuNX.Size = new System.Drawing.Size(341, 29);
-            this.btnDanhSachPhieuNX.TabIndex = 3;
-            this.btnDanhSachPhieuNX.Text = "DANH SÁCH ĐỀ XUẤT VẬT TƯ";
-            this.btnDanhSachPhieuNX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDanhSachPhieuNX.UseVisualStyleBackColor = false;
+            this.btnMenuListDXVatTu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
+            this.btnMenuListDXVatTu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenuListDXVatTu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuListDXVatTu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnMenuListDXVatTu.Location = new System.Drawing.Point(350, 0);
+            this.btnMenuListDXVatTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMenuListDXVatTu.Name = "btnMenuListDXVatTu";
+            this.btnMenuListDXVatTu.Size = new System.Drawing.Size(341, 29);
+            this.btnMenuListDXVatTu.TabIndex = 3;
+            this.btnMenuListDXVatTu.Text = "DANH SÁCH ĐỀ XUẤT VẬT TƯ";
+            this.btnMenuListDXVatTu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuListDXVatTu.UseVisualStyleBackColor = false;
+            this.btnMenuListDXVatTu.Click += new System.EventHandler(this.btnMenuListDXVatTu_Click);
             // 
-            // btnTaoPhieu
+            // btnMenuListDXThucAn
             // 
-            this.btnTaoPhieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(153)))));
-            this.btnTaoPhieu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTaoPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaoPhieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnTaoPhieu.Location = new System.Drawing.Point(0, 0);
-            this.btnTaoPhieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTaoPhieu.Name = "btnTaoPhieu";
-            this.btnTaoPhieu.Size = new System.Drawing.Size(350, 29);
-            this.btnTaoPhieu.TabIndex = 2;
-            this.btnTaoPhieu.Text = "DANH SÁCH ĐỀ XUẤT THỨC ĂN";
-            this.btnTaoPhieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTaoPhieu.UseVisualStyleBackColor = false;
+            this.btnMenuListDXThucAn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(153)))));
+            this.btnMenuListDXThucAn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenuListDXThucAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuListDXThucAn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnMenuListDXThucAn.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuListDXThucAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMenuListDXThucAn.Name = "btnMenuListDXThucAn";
+            this.btnMenuListDXThucAn.Size = new System.Drawing.Size(350, 29);
+            this.btnMenuListDXThucAn.TabIndex = 2;
+            this.btnMenuListDXThucAn.Text = "DANH SÁCH ĐỀ XUẤT THỨC ĂN";
+            this.btnMenuListDXThucAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuListDXThucAn.UseVisualStyleBackColor = false;
+            this.btnMenuListDXThucAn.Click += new System.EventHandler(this.btnMenuListDXThucAn_Click);
             // 
             // UCMenuDeXuatQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
-            this.Controls.Add(this.btnDanhSachPhieuNX);
-            this.Controls.Add(this.btnTaoPhieu);
+            this.Controls.Add(this.btnMenuListDXVatTu);
+            this.Controls.Add(this.btnMenuListDXThucAn);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCMenuDeXuatQLVT";
             this.Size = new System.Drawing.Size(993, 29);
@@ -78,7 +80,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnDanhSachPhieuNX;
-        public System.Windows.Forms.Button btnTaoPhieu;
+        private System.Windows.Forms.Button btnMenuListDXVatTu;
+        public System.Windows.Forms.Button btnMenuListDXThucAn;
     }
 }
