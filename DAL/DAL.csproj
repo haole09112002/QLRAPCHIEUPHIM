@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBHelper.cs" />
+    <Compile Include="LoaiNhaCungCapDAL.cs" />
     <Compile Include="NhaCungCapDAL.cs" />
     <Compile Include="PhimDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

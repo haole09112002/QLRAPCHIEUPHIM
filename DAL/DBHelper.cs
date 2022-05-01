@@ -23,19 +23,18 @@ namespace DAL
             {
                 if (_Instance == null)
                 {
-                    string cnnstr = @"Data Source=LAPTOP-MAJKSJMC\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
+                    //string cnnstr = @"Data Source=LAPTOP-MAJKSJMC\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
+                    string cnnstr = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
+
+
+
+
+
                     _Instance = new DBHelper(cnnstr);
                 }
                 return _Instance;
             }
             private set { }
-        }
-        public void ExcuteDB(string sql)
-        {
-            SqlCommand cmd = new SqlCommand(sql, cnn);
-            cnn.Open();
-            cmd.ExecuteNonQuery();
-            cnn.Close();
         }
 
         public DataTable ExcuteQuery(string query, object[] parameter = null)
@@ -65,7 +64,6 @@ namespace DAL
                 cnn.Open();
                 da.Fill(data);
                 cnn.Close();
-                //  }
             }
             catch (Exception e)
             {
@@ -132,7 +130,6 @@ namespace DAL
                         }
                     }
                 }
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 cnn.Open();
                 data = cmd.ExecuteScalar();
                 cnn.Close();

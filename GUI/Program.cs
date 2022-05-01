@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GUI;
+using GUI.AD_GUI;           /// 
 namespace GUI
 {
     internal static class Program
@@ -16,7 +17,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDangNhap());
+            Application.Run(new frmDashboard_AD());
         }
         //Luan vip
         //Hao 

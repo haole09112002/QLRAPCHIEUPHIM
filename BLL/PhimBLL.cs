@@ -18,7 +18,9 @@ namespace BLL
             get
             {
                 if (instance == null)
+                {
                     instance = new PhimBLL();
+                }
                 return instance;
             }
             set { }
