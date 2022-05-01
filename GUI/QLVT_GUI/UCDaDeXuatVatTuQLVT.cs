@@ -16,5 +16,17 @@ namespace GUI.QLVT_GUI
         {
             InitializeComponent();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            FrmTaoPhieuDeXuatVatTuQLVT frmTaoPhieuDeXuatVatTuQLVT = new FrmTaoPhieuDeXuatVatTuQLVT();
+            frmTaoPhieuDeXuatVatTuQLVT.Show();
+        }
+
+        private void btnChinhSua_Click(object sender, EventArgs e)
+        {
+            FrmTaoPhieuDeXuatVatTuQLVT frmTaoPhieuDeXuatVatTuQLVT = new FrmTaoPhieuDeXuatVatTuQLVT();
+            frmTaoPhieuDeXuatVatTuQLVT.Show();
+        }
     }
 }

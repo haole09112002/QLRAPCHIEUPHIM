@@ -34,7 +34,7 @@ namespace GUI
             }
             if (comboBox1.SelectedItem.ToString() == "QLVT")
             {
-                frmDashboardQLVT frmDashboardQLVT = new frmDashboardQLVT();
+                FrmDashboardQLVT frmDashboardQLVT = new FrmDashboardQLVT();
                 frmDashboardQLVT.Show();
             }
                 
