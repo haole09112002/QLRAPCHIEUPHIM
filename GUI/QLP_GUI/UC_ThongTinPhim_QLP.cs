@@ -76,7 +76,7 @@ namespace GUI.QLP_GUI
         {
             if(dGVDanhSachPhim.SelectedRows.Count == 1)
             {
-                frmThongTinPhim f = new frmThongTinPhim(dGVDanhSachPhim.SelectedRows[0].Cells["MaPhim"].Value.ToString());
+                frmThongTinPhim f = new frmThongTinPhim(dGVDanhSachPhim.SelectedRows[0].Cells["MaPhim"].Value.ToString(),dGVDanhSachPhim.SelectedRows[0].Cells["TheLoai"].Value.ToString());
                 f.ShowDialog();
             }
         }

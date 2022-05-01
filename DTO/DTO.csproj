@@ -45,6 +45,7 @@
     <Compile Include="PhimDTO.cs" />
     <Compile Include="PhimViewDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheLoaiPhimDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

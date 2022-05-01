@@ -16,7 +16,7 @@ namespace DTO
         private DateTime namSanXuat;
         private string tenHangPhim;
         private int doTuoiXem;
-        private string theLoai;
+        private string maTheLoai;
         private string noiDung;
         private string dienVienChinh;
         private string dienVienPhu;
@@ -30,7 +30,7 @@ namespace DTO
         public DateTime NamSanXuat { get => namSanXuat; set => namSanXuat = value; }
         public string TenHangPhim { get => tenHangPhim; set => tenHangPhim = value; }
         public int DoTuoiXem { get => doTuoiXem; set => doTuoiXem = value; }
-        public string TheLoai { get => theLoai; set => theLoai = value; }
+        public string MaTheLoai { get => maTheLoai; set => maTheLoai = value; }
         public string NoiDung { get => noiDung; set => noiDung = value; }
         public string DienVienChinh { get => dienVienChinh; set => dienVienChinh = value; }
         public string DienVienPhu { get => dienVienPhu; set => dienVienPhu = value; }

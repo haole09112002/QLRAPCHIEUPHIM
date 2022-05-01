@@ -24,7 +24,7 @@ namespace DAL
         public List<PhimDTO> GetALLPhim()
         {
             List<PhimDTO> listPhim = new List<PhimDTO>();
-            string query = "Select * from PHIM,THE_LOAI_PHIM where PHIM.MaTheLoai = THE_LOAI_PHIM.MaTheLoaiPhim";
+            string query = "Select * from PHIM";
             foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
             {
                 listPhim.Add(GetPhimByDataRow(i));
@@ -43,7 +43,7 @@ namespace DAL
                 NamSanXuat = Convert.ToDateTime(i["NamSanXuat"].ToString()),
                 TenHangPhim = i["TenHangPhim"].ToString(),
                 DoTuoiXem = Convert.ToInt32(i["DoTuoiXem"].ToString()),
-                TheLoai = i["TenTheLoaiPhim"].ToString(),
+                MaTheLoai = i["MaTheLoai"].ToString(),
                 NoiDung = i["NoiDung"].ToString(),
                 DienVienChinh = i["DienVienCHinh"].ToString(),
                 DienVienPhu = i["DienVienPhu"].ToString(),

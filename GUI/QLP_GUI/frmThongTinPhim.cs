@@ -16,9 +16,11 @@ namespace GUI.QLP_GUI
     public partial class frmThongTinPhim : Form
     {
         public string MaPhim { get; set; }
-        public frmThongTinPhim(string MaPhim)
+        public string TheLoaiPhim { get; set; }
+        public frmThongTinPhim(string MaPhim, string TheLoaiPhim)
         {
             this.MaPhim = MaPhim;
+            this.TheLoaiPhim = TheLoaiPhim;
             InitializeComponent();
             GUI();
         }
@@ -40,7 +42,7 @@ namespace GUI.QLP_GUI
                 cBDoTuoiXem.Enabled = false;
                 cBDoTuoiXem.Text = phim.DoTuoiXem.ToString();
                 txtTheLoai.Enabled = false;
-                txtTheLoai.Text = phim.TheLoai;
+                txtTheLoai.Text = TheLoaiPhim;
                 rtxtNoiDung.Enabled = false;
                 rtxtNoiDung.Text = phim.NoiDung;
                 txtDienVienChinh.Enabled = false;

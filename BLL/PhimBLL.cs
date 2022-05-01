@@ -26,10 +26,20 @@ namespace BLL
         public List<PhimViewDTO> GetPhimViews(string txt)
         {
             List<PhimViewDTO> data = new List<PhimViewDTO>();
+            List<TheLoaiPhimDTO> TLP = new List<TheLoaiPhimDTO>();
+            TLP = TheLoaiPhimDAL.Instance.GetAllTheLoaiPhim();
             foreach (PhimDTO i in PhimDAL.Instance.GetALLPhim())
             {
+                string TheLoaiPhim = "";
                 if(i.TenPhim.Contains(txt))
                 {
+                    foreach(TheLoaiPhimDTO j in TLP.ToArray())
+                    {
+                        if(i.MaTheLoai == j.MaTheLoaiPhim)
+                        {
+                            TheLoaiPhim = j.TenTheLoaiPhim;
+                        }
+                    }
                     data.Add(new PhimViewDTO
                     {
                         MaPhim = i.MaPhim,
@@ -40,7 +50,7 @@ namespace BLL
                         NamSanXuat = i.NamSanXuat,
                         TenHangPhim = i.TenHangPhim,
                         DoTuoiXem = i.DoTuoiXem,
-                        TheLoai = i.TheLoai
+                        TheLoai = TheLoaiPhim
                     });
                 }
             }
@@ -61,7 +71,7 @@ namespace BLL
                     data.NamSanXuat = i.NamSanXuat;
                     data.TenHangPhim = i.TenHangPhim;
                     data.DoTuoiXem = i.DoTuoiXem;
-                    data.TheLoai = i.TheLoai;
+                    data.MaTheLoai = i.MaTheLoai;
                     data.NoiDung = i.NoiDung;
                     data.DienVienChinh = i.DienVienChinh;
                     data.DienVienPhu = i.DienVienPhu;
