@@ -10,15 +10,10 @@ using System.Windows.Forms;
 
 namespace GUI.QLVT_GUI
 {
-<<<<<<< HEAD:GUI/QLVT_GUI/UCNhaCungUngVatTuQLVT.cs
+
     public partial class UCNhaCungUngVatTuQLVT : UserControl
     {
         public UCNhaCungUngVatTuQLVT()
-=======
-    public partial class UCPhongChieuQLVT : UserControl
-    {
-        public UCPhongChieuQLVT()
->>>>>>> master:GUI/QLVT_GUI/UCPhongChieuQLVT.cs
         {
             InitializeComponent();
         }

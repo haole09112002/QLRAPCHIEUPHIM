@@ -426,12 +426,6 @@
     <Compile Include="QLVT_GUI\UCThongTinVatTuQLVT.Designer.cs">
       <DependentUpon>UCThongTinVatTuQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UC_TTVT_QLVT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLVT_GUI\UC_TTVT_QLVT.Designer.cs">
-      <DependentUpon>UC_TTVT_QLVT.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AD_GUI\frmDashboard_AD.resx">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
     </EmbeddedResource>

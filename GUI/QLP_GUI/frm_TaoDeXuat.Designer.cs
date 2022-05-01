@@ -69,29 +69,6 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnHuy
-            // 
-            this.btnHuy.BackColor = System.Drawing.Color.White;
-            this.btnHuy.ForeColor = System.Drawing.Color.Blue;
-            this.btnHuy.Location = new System.Drawing.Point(751, 649);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(116, 39);
-            this.btnHuy.TabIndex = 19;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // btnDeXuat
-            // 
-            this.btnDeXuat.BackColor = System.Drawing.Color.White;
-            this.btnDeXuat.ForeColor = System.Drawing.Color.Blue;
-            this.btnDeXuat.Location = new System.Drawing.Point(353, 649);
-            this.btnDeXuat.Name = "btnDeXuat";
-            this.btnDeXuat.Size = new System.Drawing.Size(116, 39);
-            this.btnDeXuat.TabIndex = 18;
-            this.btnDeXuat.Text = "Đề Xuất";
-            this.btnDeXuat.UseVisualStyleBackColor = false;
-            // 
             // txtHangSanXuat
             // 
             this.txtHangSanXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -324,7 +301,7 @@
             this.rtxtNoiDung.Location = new System.Drawing.Point(11, 81);
             this.rtxtNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rtxtNoiDung.Name = "rtxtNoiDung";
-            this.rtxtNoiDung.Size = new System.Drawing.Size(455, 125);
+            this.rtxtNoiDung.Size = new System.Drawing.Size(511, 155);
             this.rtxtNoiDung.TabIndex = 0;
             this.rtxtNoiDung.Text = "";
             // 
@@ -470,7 +447,7 @@
             this.cBQuocGia.Location = new System.Drawing.Point(176, 160);
             this.cBQuocGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBQuocGia.Name = "cBQuocGia";
-            this.cBQuocGia.Size = new System.Drawing.Size(121, 27);
+            this.cBQuocGia.Size = new System.Drawing.Size(136, 31);
             this.cBQuocGia.TabIndex = 18;
             // 
             // txtThoiLuong
@@ -519,10 +496,10 @@
             // 
             // frm_TaoDeXuat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1082, 603);
+            this.ClientSize = new System.Drawing.Size(1217, 754);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
