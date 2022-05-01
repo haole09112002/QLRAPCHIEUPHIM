@@ -46,6 +46,7 @@
             this.btnMenuListDXVatTu.Text = "DANH SÁCH ĐỀ XUẤT VẬT TƯ";
             this.btnMenuListDXVatTu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenuListDXVatTu.UseVisualStyleBackColor = false;
+            this.btnMenuListDXVatTu.Click += new System.EventHandler(this.btnMenuListDXVatTu_Click);
             // 
             // btnMenuListDXThucAn
             // 
@@ -61,6 +62,7 @@
             this.btnMenuListDXThucAn.Text = "DANH SÁCH ĐỀ XUẤT THỨC ĂN";
             this.btnMenuListDXThucAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenuListDXThucAn.UseVisualStyleBackColor = false;
+            this.btnMenuListDXThucAn.Click += new System.EventHandler(this.btnMenuListDXThucAn_Click);
             // 
             // UCMenuDeXuatQLVT
             // 

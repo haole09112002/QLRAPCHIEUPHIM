@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLVT_GUI
 {
-    partial class frmTaoPhieuDeXuatVatTuQLVT
+    partial class FrmTaoPhieuDeXuatVatTuQLVT
     {
         /// <summary>
         /// Required designer variable.
@@ -181,6 +181,7 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // grpThongTinVatTu
             // 
@@ -354,14 +355,14 @@
             this.lblTitleDeXuatVatTu.Text = "TẠO ĐỀ XUẤT VẬT TƯ";
             this.lblTitleDeXuatVatTu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // frmTaoPhieuDeXuatVatTuQLVT
+            // FrmTaoPhieuDeXuatVatTuQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 710);
             this.Controls.Add(this.pnDeXuatVatTu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmTaoPhieuDeXuatVatTuQLVT";
+            this.Name = "FrmTaoPhieuDeXuatVatTuQLVT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTaoPhieuDeXuatQLVT";
             this.pnDeXuatVatTu.ResumeLayout(false);

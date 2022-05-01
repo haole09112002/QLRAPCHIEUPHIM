@@ -258,6 +258,7 @@
             this.btnDoiMatKhau.Text = "Đổi Mật Khẩu";
             this.btnDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDoiMatKhau.UseVisualStyleBackColor = false;
+            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
             // 
             // lblMatKhau
             // 

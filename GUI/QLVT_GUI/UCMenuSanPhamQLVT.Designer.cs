@@ -46,6 +46,7 @@
             this.btnMenuListTTVatTu.Text = "DANH SÁCH THÔNG TIN VẬT TƯ";
             this.btnMenuListTTVatTu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenuListTTVatTu.UseVisualStyleBackColor = false;
+            this.btnMenuListTTVatTu.Click += new System.EventHandler(this.btnMenuListTTVatTu_Click);
             // 
             // btnMenuListTTThucAn
             // 
@@ -61,6 +62,7 @@
             this.btnMenuListTTThucAn.Text = "DANH SÁCH THÔNG TIN THỨC ĂN NHANH";
             this.btnMenuListTTThucAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenuListTTThucAn.UseVisualStyleBackColor = false;
+            this.btnMenuListTTThucAn.Click += new System.EventHandler(this.btnMenuListTTThucAn_Click);
             // 
             // UCMenuSanPhamQLVT
             // 

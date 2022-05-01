@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnMenuListNhapXuatVatTu = new System.Windows.Forms.Button();
+            this.btnMenuListNXVatTu = new System.Windows.Forms.Button();
             this.btnMenuListNXThucAn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnMenuListNhapXuatVatTu
+            // btnMenuListNXVatTu
             // 
-            this.btnMenuListNhapXuatVatTu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
-            this.btnMenuListNhapXuatVatTu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenuListNhapXuatVatTu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuListNhapXuatVatTu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnMenuListNhapXuatVatTu.Location = new System.Drawing.Point(373, 0);
-            this.btnMenuListNhapXuatVatTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnMenuListNhapXuatVatTu.Name = "btnMenuListNhapXuatVatTu";
-            this.btnMenuListNhapXuatVatTu.Size = new System.Drawing.Size(361, 29);
-            this.btnMenuListNhapXuatVatTu.TabIndex = 7;
-            this.btnMenuListNhapXuatVatTu.Text = "DANH SÁCH PHIẾU NHẬP/XUẤT VẬT TƯ";
-            this.btnMenuListNhapXuatVatTu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMenuListNhapXuatVatTu.UseVisualStyleBackColor = false;
+            this.btnMenuListNXVatTu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
+            this.btnMenuListNXVatTu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenuListNXVatTu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuListNXVatTu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnMenuListNXVatTu.Location = new System.Drawing.Point(373, 0);
+            this.btnMenuListNXVatTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMenuListNXVatTu.Name = "btnMenuListNXVatTu";
+            this.btnMenuListNXVatTu.Size = new System.Drawing.Size(361, 29);
+            this.btnMenuListNXVatTu.TabIndex = 7;
+            this.btnMenuListNXVatTu.Text = "DANH SÁCH PHIẾU NHẬP/XUẤT VẬT TƯ";
+            this.btnMenuListNXVatTu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuListNXVatTu.UseVisualStyleBackColor = false;
+            this.btnMenuListNXVatTu.Click += new System.EventHandler(this.btnMenuListNXVatTu_Click);
             // 
             // btnMenuListNXThucAn
             // 
@@ -61,13 +62,14 @@
             this.btnMenuListNXThucAn.Text = "DANH SÁCH PHIẾU NHẬP/XUẤT THỨC ĂN";
             this.btnMenuListNXThucAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenuListNXThucAn.UseVisualStyleBackColor = false;
+            this.btnMenuListNXThucAn.Click += new System.EventHandler(this.btnMenuListNXThucAn_Click);
             // 
             // UCMenuNhapXuatQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
-            this.Controls.Add(this.btnMenuListNhapXuatVatTu);
+            this.Controls.Add(this.btnMenuListNXVatTu);
             this.Controls.Add(this.btnMenuListNXThucAn);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCMenuNhapXuatQLVT";
@@ -78,7 +80,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnMenuListNhapXuatVatTu;
+        private System.Windows.Forms.Button btnMenuListNXVatTu;
         public System.Windows.Forms.Button btnMenuListNXThucAn;
     }
 }

@@ -81,6 +81,7 @@
             this.btnTaoPhieu.Text = " Tạo Phiếu";
             this.btnTaoPhieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTaoPhieu.UseVisualStyleBackColor = false;
+            this.btnTaoPhieu.Click += new System.EventHandler(this.btnTaoPhieu_Click);
             // 
             // btnSapXep
             // 

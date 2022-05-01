@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace GUI.QLVT_GUI
 {
-    public partial class frmTaoPhieuDeXuatThucAnQLVT : Form
+    public partial class FrmTaoPhieuDeXuatThucAnQLVT : Form
     {
-        public frmTaoPhieuDeXuatThucAnQLVT()
+        public FrmTaoPhieuDeXuatThucAnQLVT()
         {
             InitializeComponent();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

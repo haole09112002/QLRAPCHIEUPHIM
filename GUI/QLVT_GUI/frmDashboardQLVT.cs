@@ -11,9 +11,9 @@ using GUI.QLVT_GUI;
 
 namespace GUI.QLVT_GUI
 {
-    public partial class frmDashboardQLVT : Form
+    public partial class FrmDashboardQLVT : Form
     {
-        public frmDashboardQLVT()
+        public FrmDashboardQLVT()
         {
             InitializeComponent();
             
@@ -55,6 +55,7 @@ namespace GUI.QLVT_GUI
         {
             pnMenu.Controls.Clear();
             AddControlsToPnMenu(ucMenuDeXuatQLVT);
+            ucMenuDeXuatQLVT.setColor();
             AddControlsToPnCenter(ucMenuDeXuatQLVT.ucDaDeXuatThucAnQLVT);
             ucMenuDeXuatQLVT.d = new UCMenuDeXuatQLVT.Mydel(AddControlsToPnCenter);
             changeColorButton(btnDeXuat);
@@ -64,6 +65,7 @@ namespace GUI.QLVT_GUI
         {
             pnMenu.Controls.Clear();
             AddControlsToPnMenu(ucMenuNhapXuatQLVT);
+            ucMenuNhapXuatQLVT.setColor();
             AddControlsToPnCenter(ucMenuNhapXuatQLVT.ucNhapXuatThucAnQLVT);
             ucMenuNhapXuatQLVT.d = new UCMenuNhapXuatQLVT.Mydel(AddControlsToPnCenter);
             changeColorButton(btnNhapXuatKho);
@@ -73,6 +75,7 @@ namespace GUI.QLVT_GUI
         {
             pnMenu.Controls.Clear();
             AddControlsToPnMenu(ucMenuNhaCungUngQLVT);
+            ucMenuNhaCungUngQLVT.setColor();
             AddControlsToPnCenter(ucMenuNhaCungUngQLVT.ucNhaCungUngThucAnQLVT);
             ucMenuNhaCungUngQLVT.d = new UCMenuNhaCungUngQLVT.Mydel(AddControlsToPnCenter);
             changeColorButton(btnNhaCungUng);
@@ -82,6 +85,7 @@ namespace GUI.QLVT_GUI
         {
             pnMenu.Controls.Clear();
             AddControlsToPnMenu(ucMenuSanPhamQLVT);
+            ucMenuSanPhamQLVT.setColor();
             AddControlsToPnCenter(ucMenuSanPhamQLVT.ucThongTinThucAnQLVT);
             ucMenuSanPhamQLVT.d = new UCMenuSanPhamQLVT.Mydel(AddControlsToPnCenter);
             changeColorButton(btnSanPham);

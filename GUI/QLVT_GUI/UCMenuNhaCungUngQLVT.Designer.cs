@@ -46,6 +46,7 @@
             this.btnMenuListNCCVatTu.Text = "NHÀ CUNG CẤP VẬT TƯ";
             this.btnMenuListNCCVatTu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenuListNCCVatTu.UseVisualStyleBackColor = false;
+            this.btnMenuListNCCVatTu.Click += new System.EventHandler(this.btnMenuListNCCVatTu_Click);
             // 
             // btnMenuListNCCThucAn
             // 
@@ -61,6 +62,7 @@
             this.btnMenuListNCCThucAn.Text = "NHÀ CUNG ỨNG THỨC ĂN NHANH";
             this.btnMenuListNCCThucAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenuListNCCThucAn.UseVisualStyleBackColor = false;
+            this.btnMenuListNCCThucAn.Click += new System.EventHandler(this.btnMenuListNCCThucAn_Click);
             // 
             // UCMenuNhaCungUngQLVT
             // 

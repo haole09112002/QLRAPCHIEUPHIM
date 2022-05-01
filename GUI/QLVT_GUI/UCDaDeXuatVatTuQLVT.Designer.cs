@@ -73,6 +73,7 @@
             this.btnThem.Text = " Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSapXep
             // 
@@ -155,6 +156,7 @@
             this.btnChinhSua.Text = "CHỈNH SỬA";
             this.btnChinhSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnChinhSua.UseVisualStyleBackColor = false;
+            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
             // 
             // btnXoa
             // 

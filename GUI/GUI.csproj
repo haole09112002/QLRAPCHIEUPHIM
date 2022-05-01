@@ -299,17 +299,17 @@
     <Compile Include="QLP_GUI\UC_ThongTinPhim_QLP.Designer.cs">
       <DependentUpon>UC_ThongTinPhim_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\frmDashboardQLVT.cs">
+    <Compile Include="QLVT_GUI\FrmDashboardQLVT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\frmDashboardQLVT.Designer.cs">
-      <DependentUpon>frmDashboardQLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\FrmDashboardQLVT.Designer.cs">
+      <DependentUpon>FrmDashboardQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\frmCapNhatPhongChieuQLVT.cs">
+    <Compile Include="QLVT_GUI\FrmCapNhatPhongChieuQLVT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\frmCapNhatPhongChieuQLVT.Designer.cs">
-      <DependentUpon>frmCapNhatPhongChieuQLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\FrmCapNhatPhongChieuQLVT.Designer.cs">
+      <DependentUpon>FrmCapNhatPhongChieuQLVT.cs</DependentUpon>
     </Compile>
     <Compile Include="QLVT_GUI\FrmDoiMatKhauQLVT.cs">
       <SubType>Form</SubType>
@@ -317,17 +317,17 @@
     <Compile Include="QLVT_GUI\FrmDoiMatKhauQLVT.Designer.cs">
       <DependentUpon>FrmDoiMatKhauQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\frmTaoPhieuDeXuatThucAnQLVT.cs">
+    <Compile Include="QLVT_GUI\FrmTaoPhieuDeXuatThucAnQLVT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\frmTaoPhieuDeXuatThucAnQLVT.Designer.cs">
-      <DependentUpon>frmTaoPhieuDeXuatThucAnQLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\FrmTaoPhieuDeXuatThucAnQLVT.Designer.cs">
+      <DependentUpon>FrmTaoPhieuDeXuatThucAnQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\frmTaoPhieuDeXuatVatTuQLVT.cs">
+    <Compile Include="QLVT_GUI\FrmTaoPhieuDeXuatVatTuQLVT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\frmTaoPhieuDeXuatVatTuQLVT.Designer.cs">
-      <DependentUpon>frmTaoPhieuDeXuatVatTuQLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\FrmTaoPhieuDeXuatVatTuQLVT.Designer.cs">
+      <DependentUpon>FrmTaoPhieuDeXuatVatTuQLVT.cs</DependentUpon>
     </Compile>
     <Compile Include="QLVT_GUI\FrmTaoPhieuNhapXuatKhoQLVT.cs">
       <SubType>Form</SubType>
@@ -538,20 +538,20 @@
     <EmbeddedResource Include="QLP_GUI\UC_ThongTinPhim_QLP.resx">
       <DependentUpon>UC_ThongTinPhim_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\frmDashboardQLVT.resx">
-      <DependentUpon>frmDashboardQLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\FrmDashboardQLVT.resx">
+      <DependentUpon>FrmDashboardQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\frmCapNhatPhongChieuQLVT.resx">
-      <DependentUpon>frmCapNhatPhongChieuQLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\FrmCapNhatPhongChieuQLVT.resx">
+      <DependentUpon>FrmCapNhatPhongChieuQLVT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLVT_GUI\FrmDoiMatKhauQLVT.resx">
       <DependentUpon>FrmDoiMatKhauQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\frmTaoPhieuDeXuatThucAnQLVT.resx">
-      <DependentUpon>frmTaoPhieuDeXuatThucAnQLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\FrmTaoPhieuDeXuatThucAnQLVT.resx">
+      <DependentUpon>FrmTaoPhieuDeXuatThucAnQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\frmTaoPhieuDeXuatVatTuQLVT.resx">
-      <DependentUpon>frmTaoPhieuDeXuatVatTuQLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\FrmTaoPhieuDeXuatVatTuQLVT.resx">
+      <DependentUpon>FrmTaoPhieuDeXuatVatTuQLVT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLVT_GUI\FrmTaoPhieuNhapXuatKhoQLVT.resx">
       <DependentUpon>FrmTaoPhieuNhapXuatKhoQLVT.cs</DependentUpon>

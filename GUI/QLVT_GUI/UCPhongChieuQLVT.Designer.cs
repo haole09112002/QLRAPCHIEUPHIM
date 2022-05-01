@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnListPhongChieu = new System.Windows.Forms.Panel();
+            this.txtVatTu = new System.Windows.Forms.TextBox();
             this.btnXoaPhongChieu = new System.Windows.Forms.Button();
             this.lblVatTu = new System.Windows.Forms.Label();
             this.btnTimKiemVatTu = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.lblListPhongChieu = new System.Windows.Forms.Label();
             this.dgvListVatTu = new System.Windows.Forms.DataGridView();
             this.dgvListPhongChieu = new System.Windows.Forms.DataGridView();
-            this.txtVatTu = new System.Windows.Forms.TextBox();
             this.pnListPhongChieu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListVatTu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListPhongChieu)).BeginInit();
@@ -65,6 +65,13 @@
             this.pnListPhongChieu.Name = "pnListPhongChieu";
             this.pnListPhongChieu.Size = new System.Drawing.Size(972, 579);
             this.pnListPhongChieu.TabIndex = 0;
+            // 
+            // txtVatTu
+            // 
+            this.txtVatTu.Location = new System.Drawing.Point(702, 79);
+            this.txtVatTu.Name = "txtVatTu";
+            this.txtVatTu.Size = new System.Drawing.Size(130, 22);
+            this.txtVatTu.TabIndex = 48;
             // 
             // btnXoaPhongChieu
             // 
@@ -141,6 +148,7 @@
             this.btnThem.Text = " Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoaVatTu
             // 
@@ -209,13 +217,6 @@
             this.dgvListPhongChieu.RowTemplate.Height = 24;
             this.dgvListPhongChieu.Size = new System.Drawing.Size(564, 367);
             this.dgvListPhongChieu.TabIndex = 12;
-            // 
-            // txtVatTu
-            // 
-            this.txtVatTu.Location = new System.Drawing.Point(702, 79);
-            this.txtVatTu.Name = "txtVatTu";
-            this.txtVatTu.Size = new System.Drawing.Size(130, 22);
-            this.txtVatTu.TabIndex = 48;
             // 
             // UCPhongChieuQLVT
             // 

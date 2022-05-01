@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLVT_GUI
 {
-    partial class frmCapNhatPhongChieuQLVT
+    partial class FrmCapNhatPhongChieuQLVT
     {
         /// <summary> 
         /// Required designer variable.
@@ -141,6 +141,7 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // cboPhongChieu
             // 
@@ -353,7 +354,7 @@
             this.dgvVatTuDaThem.Size = new System.Drawing.Size(285, 242);
             this.dgvVatTuDaThem.TabIndex = 44;
             // 
-            // frmCapNhatPhongChieuQLVT
+            // FrmCapNhatPhongChieuQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -362,7 +363,7 @@
             this.Controls.Add(this.pnThemPhongChieu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frmCapNhatPhongChieuQLVT";
+            this.Name = "FrmCapNhatPhongChieuQLVT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnThemPhongChieu.ResumeLayout(false);
             this.pnTitleThemPhongChieu.ResumeLayout(false);

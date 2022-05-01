@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLVT_GUI
 {
-    partial class frmDashboardQLVT
+    partial class FrmDashboardQLVT
     {
         /// <summary>
         /// Required designer variable.
