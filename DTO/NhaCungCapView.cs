@@ -6,25 +6,18 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class NhaCungCapDTO
+    public class NhaCungCapView
     {
 		private string maNhaCungCap;
 		private string tenNhaCungCap;
 		private string maSoThue;
-		private string diaChi;
-		private string email;
 		private string soDienThoai;
-		private string tenGiamDoc;
-		private string maLoaiNhaCungCap;
+		private string tenLoaiNhaCungCap;
 
         public string MaNhaCungCap { get => maNhaCungCap; set => maNhaCungCap = value; }
         public string TenNhaCungCap { get => tenNhaCungCap; set => tenNhaCungCap = value; }
         public string MaSoThue { get => maSoThue; set => maSoThue = value; }
-        public string DiaChi { get => diaChi; set => diaChi = value; }
-        public string Email { get => email; set => email = value; }
         public string SoDienThoai { get => soDienThoai; set => soDienThoai = value; }
-        public string TenGiamDoc { get => tenGiamDoc; set => tenGiamDoc = value; }
-        public string MaLoaiNhaCungCap { get => maLoaiNhaCungCap; set => maLoaiNhaCungCap = value; }
+        public string TenLoaiNhaCungCap { get => tenLoaiNhaCungCap; set => tenLoaiNhaCungCap = value; }
     }
 }
-

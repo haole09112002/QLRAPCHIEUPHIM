@@ -8,18 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI.AD_GUI
+namespace GUI.QLVT_GUI
 {
-    public partial class UC_NCC_AD : UserControl
+    public partial class UCPhieuNhapXuatVatTuQLVT : UserControl
     {
-        public UC_NCC_AD()
+        public UCPhieuNhapXuatVatTuQLVT()
         {
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            frmThemNhaCungCap frmThemNhaCungCap = new frmThemNhaCungCap();
-        }
     }
 }

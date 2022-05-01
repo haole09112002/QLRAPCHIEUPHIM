@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLVT_GUI
 {
-    partial class FrmDashboardQLVT
+    partial class frmDashboardQLVT
     {
         /// <summary>
         /// Required designer variable.
@@ -29,39 +29,39 @@
         private void InitializeComponent()
         {
             this.pnLeft = new System.Windows.Forms.Panel();
-            this.picCinema = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnDeXuat = new System.Windows.Forms.Button();
-            this.lblTitleCinema = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnSanPham = new System.Windows.Forms.Button();
             this.btnPhongChieu = new System.Windows.Forms.Button();
-            this.btnNhaCungUng = new System.Windows.Forms.Button();
+            this.btnNhaCungCap = new System.Windows.Forms.Button();
             this.btnCaNhan = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnNhapXuatKho = new System.Windows.Forms.Button();
             this.pnTop = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.picShutDown = new System.Windows.Forms.PictureBox();
-            this.lblQuanLyVatTu = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblChucVu = new System.Windows.Forms.Label();
-            this.lblXinChao = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
-            this.pnMenuContent = new System.Windows.Forms.Panel();
+            this.pnCenter = new System.Windows.Forms.Panel();
             this.pnLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCinema)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picShutDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLeft
             // 
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(51)))), ((int)(((byte)(66)))));
-            this.pnLeft.Controls.Add(this.picCinema);
+            this.pnLeft.Controls.Add(this.pictureBox2);
             this.pnLeft.Controls.Add(this.btnDeXuat);
-            this.pnLeft.Controls.Add(this.lblTitleCinema);
+            this.pnLeft.Controls.Add(this.label1);
             this.pnLeft.Controls.Add(this.btnSanPham);
             this.pnLeft.Controls.Add(this.btnPhongChieu);
-            this.pnLeft.Controls.Add(this.btnNhaCungUng);
+            this.pnLeft.Controls.Add(this.btnNhaCungCap);
             this.pnLeft.Controls.Add(this.btnCaNhan);
             this.pnLeft.Controls.Add(this.btnDangXuat);
             this.pnLeft.Controls.Add(this.btnNhapXuatKho);
@@ -72,15 +72,15 @@
             this.pnLeft.Size = new System.Drawing.Size(221, 706);
             this.pnLeft.TabIndex = 1;
             // 
-            // picCinema
+            // pictureBox2
             // 
-            this.picCinema.Image = global::GUI.Properties.Resources.logo;
-            this.picCinema.Location = new System.Drawing.Point(57, 3);
-            this.picCinema.Name = "picCinema";
-            this.picCinema.Size = new System.Drawing.Size(74, 76);
-            this.picCinema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picCinema.TabIndex = 14;
-            this.picCinema.TabStop = false;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.logo;
+            this.pictureBox2.Location = new System.Drawing.Point(57, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(74, 76);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
             // 
             // btnDeXuat
             // 
@@ -102,17 +102,17 @@
             this.btnDeXuat.UseVisualStyleBackColor = true;
             this.btnDeXuat.Click += new System.EventHandler(this.btnDeXuat_Click);
             // 
-            // lblTitleCinema
+            // label1
             // 
-            this.lblTitleCinema.AutoSize = true;
-            this.lblTitleCinema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTitleCinema.Font = new System.Drawing.Font("MV Boli", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleCinema.ForeColor = System.Drawing.Color.SpringGreen;
-            this.lblTitleCinema.Location = new System.Drawing.Point(12, 76);
-            this.lblTitleCinema.Name = "lblTitleCinema";
-            this.lblTitleCinema.Size = new System.Drawing.Size(172, 49);
-            this.lblTitleCinema.TabIndex = 13;
-            this.lblTitleCinema.Text = "CINEMA";
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("MV Boli", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label1.Location = new System.Drawing.Point(12, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 49);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "CINEMA";
             // 
             // btnSanPham
             // 
@@ -152,25 +152,25 @@
             this.btnPhongChieu.UseVisualStyleBackColor = true;
             this.btnPhongChieu.Click += new System.EventHandler(this.btnPhongChieu_Click);
             // 
-            // btnNhaCungUng
+            // btnNhaCungCap
             // 
-            this.btnNhaCungUng.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnNhaCungUng.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNhaCungUng.FlatAppearance.BorderSize = 0;
-            this.btnNhaCungUng.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhaCungUng.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhaCungUng.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNhaCungUng.Image = global::GUI.Properties.Resources.ncc;
-            this.btnNhaCungUng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhaCungUng.Location = new System.Drawing.Point(0, 241);
-            this.btnNhaCungUng.Name = "btnNhaCungUng";
-            this.btnNhaCungUng.Size = new System.Drawing.Size(221, 53);
-            this.btnNhaCungUng.TabIndex = 6;
-            this.btnNhaCungUng.Text = "   Nhà Cung Ứng";
-            this.btnNhaCungUng.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNhaCungUng.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhaCungUng.UseVisualStyleBackColor = true;
-            this.btnNhaCungUng.Click += new System.EventHandler(this.btnNhaCungCap_Click);
+            this.btnNhaCungCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNhaCungCap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNhaCungCap.FlatAppearance.BorderSize = 0;
+            this.btnNhaCungCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhaCungCap.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhaCungCap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNhaCungCap.Image = global::GUI.Properties.Resources.ncc;
+            this.btnNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhaCungCap.Location = new System.Drawing.Point(0, 241);
+            this.btnNhaCungCap.Name = "btnNhaCungCap";
+            this.btnNhaCungCap.Size = new System.Drawing.Size(221, 53);
+            this.btnNhaCungCap.TabIndex = 6;
+            this.btnNhaCungCap.Text = "   Nhà Cung Ứng";
+            this.btnNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNhaCungCap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNhaCungCap.UseVisualStyleBackColor = true;
+            this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
             // 
             // btnCaNhan
             // 
@@ -233,86 +233,86 @@
             // pnTop
             // 
             this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(229)))), ((int)(((byte)(232)))));
-            this.pnTop.Controls.Add(this.lblTitle);
-            this.pnTop.Controls.Add(this.picShutDown);
-            this.pnTop.Controls.Add(this.lblQuanLyVatTu);
-            this.pnTop.Controls.Add(this.lblName);
-            this.pnTop.Controls.Add(this.lblChucVu);
-            this.pnTop.Controls.Add(this.lblXinChao);
+            this.pnTop.Controls.Add(this.label6);
+            this.pnTop.Controls.Add(this.pictureBox1);
+            this.pnTop.Controls.Add(this.label5);
+            this.pnTop.Controls.Add(this.label4);
+            this.pnTop.Controls.Add(this.label3);
+            this.pnTop.Controls.Add(this.label2);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(221, 0);
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(993, 64);
             this.pnTop.TabIndex = 2;
             // 
-            // lblTitle
+            // label6
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTitle.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(100, 13);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(397, 37);
-            this.lblTitle.TabIndex = 17;
-            this.lblTitle.Text = "Cinema Manegement System";
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(100, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(394, 37);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Cinema Manegemenr System";
             // 
-            // picShutDown
+            // pictureBox1
             // 
-            this.picShutDown.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picShutDown.Image = global::GUI.Properties.Resources.shutdown_40px;
-            this.picShutDown.Location = new System.Drawing.Point(934, 12);
-            this.picShutDown.Name = "picShutDown";
-            this.picShutDown.Size = new System.Drawing.Size(37, 46);
-            this.picShutDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picShutDown.TabIndex = 4;
-            this.picShutDown.TabStop = false;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.shutdown_40px;
+            this.pictureBox1.Location = new System.Drawing.Point(934, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
-            // lblQuanLyVatTu
+            // label5
             // 
-            this.lblQuanLyVatTu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuanLyVatTu.ForeColor = System.Drawing.Color.Black;
-            this.lblQuanLyVatTu.Image = global::GUI.Properties.Resources.EmployeeQLVT;
-            this.lblQuanLyVatTu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblQuanLyVatTu.Location = new System.Drawing.Point(718, 23);
-            this.lblQuanLyVatTu.Name = "lblQuanLyVatTu";
-            this.lblQuanLyVatTu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblQuanLyVatTu.Size = new System.Drawing.Size(178, 39);
-            this.lblQuanLyVatTu.TabIndex = 3;
-            this.lblQuanLyVatTu.Text = "Quản lý vật tư";
-            this.lblQuanLyVatTu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Image = global::GUI.Properties.Resources.EmployeeQLVT;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Location = new System.Drawing.Point(718, 23);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label5.Size = new System.Drawing.Size(178, 39);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Quản lý vật tư";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblName
+            // label4
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.Black;
-            this.lblName.Location = new System.Drawing.Point(783, 6);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(49, 20);
-            this.lblName.TabIndex = 2;
-            this.lblName.Text = "label";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(783, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "label";
             // 
-            // lblChucVu
+            // label3
             // 
-            this.lblChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChucVu.ForeColor = System.Drawing.Color.Black;
-            this.lblChucVu.Location = new System.Drawing.Point(613, 34);
-            this.lblChucVu.Name = "lblChucVu";
-            this.lblChucVu.Size = new System.Drawing.Size(99, 27);
-            this.lblChucVu.TabIndex = 1;
-            this.lblChucVu.Text = "Chức vụ:";
-            this.lblChucVu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(613, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 27);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Chức vụ:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblXinChao
+            // label2
             // 
-            this.lblXinChao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblXinChao.ForeColor = System.Drawing.Color.Black;
-            this.lblXinChao.Location = new System.Drawing.Point(614, 5);
-            this.lblXinChao.Name = "lblXinChao";
-            this.lblXinChao.Size = new System.Drawing.Size(111, 24);
-            this.lblXinChao.TabIndex = 0;
-            this.lblXinChao.Text = "Xin Chào: ";
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(614, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Xin Chào: ";
             // 
             // pnMenu
             // 
@@ -323,21 +323,21 @@
             this.pnMenu.Size = new System.Drawing.Size(993, 29);
             this.pnMenu.TabIndex = 3;
             // 
-            // pnMenuContent
+            // pnCenter
             // 
-            this.pnMenuContent.BackColor = System.Drawing.Color.White;
-            this.pnMenuContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMenuContent.Location = new System.Drawing.Point(221, 93);
-            this.pnMenuContent.Name = "pnMenuContent";
-            this.pnMenuContent.Size = new System.Drawing.Size(993, 613);
-            this.pnMenuContent.TabIndex = 4;
+            this.pnCenter.BackColor = System.Drawing.Color.White;
+            this.pnCenter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnCenter.Location = new System.Drawing.Point(221, 93);
+            this.pnCenter.Name = "pnCenter";
+            this.pnCenter.Size = new System.Drawing.Size(993, 613);
+            this.pnCenter.TabIndex = 4;
             // 
             // frmDashboardQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1214, 706);
-            this.Controls.Add(this.pnMenuContent);
+            this.Controls.Add(this.pnCenter);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.pnTop);
             this.Controls.Add(this.pnLeft);
@@ -348,10 +348,10 @@
             this.Text = "frmDashboard_AD";
             this.pnLeft.ResumeLayout(false);
             this.pnLeft.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCinema)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picShutDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -363,18 +363,18 @@
         private System.Windows.Forms.Button btnCaNhan;
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Button btnPhongChieu;
-        private System.Windows.Forms.Button btnNhaCungUng;
+        private System.Windows.Forms.Button btnNhaCungCap;
         private System.Windows.Forms.Button btnSanPham;
         private System.Windows.Forms.Button btnNhapXuatKho;
-        private System.Windows.Forms.Panel pnMenuContent;
-        private System.Windows.Forms.Label lblTitleCinema;
-        private System.Windows.Forms.Label lblQuanLyVatTu;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblChucVu;
-        private System.Windows.Forms.Label lblXinChao;
-        private System.Windows.Forms.PictureBox picShutDown;
-        private System.Windows.Forms.PictureBox picCinema;
+        private System.Windows.Forms.Panel pnCenter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Panel pnMenu;
-        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label label6;
     }
 }

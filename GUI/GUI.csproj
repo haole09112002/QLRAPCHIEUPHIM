@@ -154,11 +154,11 @@
     <Compile Include="AD_GUI\UC_MenuThongKe.Designer.cs">
       <DependentUpon>UC_MenuThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="AD_GUI\UC_NCC_AD.cs">
+    <Compile Include="AD_GUI\UC_NhaCungCap.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AD_GUI\UC_NCC_AD.Designer.cs">
-      <DependentUpon>UC_NCC_AD.cs</DependentUpon>
+    <Compile Include="AD_GUI\UC_NhaCungCap.Designer.cs">
+      <DependentUpon>UC_NhaCungCap.cs</DependentUpon>
     </Compile>
     <Compile Include="AD_GUI\UC_PhieuNhapXuat.cs">
       <SubType>UserControl</SubType>
@@ -202,6 +202,7 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhimViewDTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -214,6 +215,12 @@
     </Compile>
     <Compile Include="QLP_GUI\frmDoiMatKhau_QLP.Designer.cs">
       <DependentUpon>frmDoiMatKhau_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\frmThongTinPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\frmThongTinPhim.Designer.cs">
+      <DependentUpon>frmThongTinPhim.cs</DependentUpon>
     </Compile>
     <Compile Include="QLP_GUI\frm_QLP.cs">
       <SubType>Form</SubType>
@@ -299,7 +306,7 @@
     <Compile Include="QLP_GUI\UC_ThongTinPhim_QLP.Designer.cs">
       <DependentUpon>UC_ThongTinPhim_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\FrmDashboardQLVT.cs">
+    <Compile Include="QLVT_GUI\frmDashboardQLVT.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QLVT_GUI\FrmDashboardQLVT.Designer.cs">
@@ -419,6 +426,12 @@
     <Compile Include="QLVT_GUI\UCThongTinVatTuQLVT.Designer.cs">
       <DependentUpon>UCThongTinVatTuQLVT.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLVT_GUI\UC_TTVT_QLVT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLVT_GUI\UC_TTVT_QLVT.Designer.cs">
+      <DependentUpon>UC_TTVT_QLVT.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AD_GUI\frmDashboard_AD.resx">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
     </EmbeddedResource>
@@ -467,8 +480,8 @@
     <EmbeddedResource Include="AD_GUI\UC_MenuThongKe.resx">
       <DependentUpon>UC_MenuThongKe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AD_GUI\UC_NCC_AD.resx">
-      <DependentUpon>UC_NCC_AD.cs</DependentUpon>
+    <EmbeddedResource Include="AD_GUI\UC_NhaCungCap.resx">
+      <DependentUpon>UC_NhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_PhieuNhapXuat.resx">
       <DependentUpon>UC_PhieuNhapXuat.cs</DependentUpon>
@@ -493,8 +506,16 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <EmbeddedResource Include="QLP_GUI\frmDoiMatKhau_QLP.resx">
       <DependentUpon>frmDoiMatKhau_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\frmThongTinPhim.resx">
+      <DependentUpon>frmThongTinPhim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\frm_QLP.resx">
       <DependentUpon>frm_QLP.cs</DependentUpon>
@@ -703,6 +724,171 @@
     <None Include="Resources\Logout_26px.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\shutdown_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmployeeQLVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuDeXuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuWareHouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuWareHouse1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuProduct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuCinemaRoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TabarMaterial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SubMenuFood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserProfileQLVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FoodTitleDeXuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolDeXuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MovieRoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddHopDongPhim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScheduleTitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refund.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NhapXuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Birthday.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nhacungcap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Renew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chucvu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CCCD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaSoThue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoaiNhaCungCap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dotuoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DienVien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Soluong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DonViTinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Noidung.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DienVien1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Giatien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeXuat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopdong1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NhaKho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{1ca149db-4213-4f61-a64e-9352059ea6aa}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{58c109a1-adce-4998-9f06-f750c4a61a0c}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
     <None Include="Resources\shutdown_40px.png" />
   </ItemGroup>
   <ItemGroup>
