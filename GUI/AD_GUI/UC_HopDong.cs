@@ -19,17 +19,17 @@ namespace GUI.AD_GUI
 
         private void btnTao_Click(object sender, EventArgs e)
         {
-            if(comboBox1.SelectedItem.ToString() == "Hợp Đồng Phim")
+            if(cbLoaiHopDong.SelectedItem.ToString() == "Hợp Đồng Phim")
             {
                 frmThemHopDongPhim frmThemHopDongPhim = new frmThemHopDongPhim();
                 frmThemHopDongPhim.Show();
             }
-            if (comboBox1.SelectedItem.ToString() == "Hợp Đồng Vật Tư")
+            if (cbLoaiHopDong.SelectedItem.ToString() == "Hợp Đồng Vật Tư")
             {
                 frmThemHopDongVatTu frmThemHopDongVatTu = new frmThemHopDongVatTu();
                 frmThemHopDongVatTu.Show();
             }
-            if (comboBox1.SelectedItem.ToString() == "Hợp Đồng Thức Ăn")
+            if (cbLoaiHopDong.SelectedItem.ToString() == "Hợp Đồng Thức Ăn")
             {
                 frmThemHopDongThucAn frmThemHopDongThucAn = new frmThemHopDongThucAn();
                 frmThemHopDongThucAn.Show();

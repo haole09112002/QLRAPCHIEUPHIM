@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CBBItem.cs" />
+    <Compile Include="ChiTietCungCapThucAnDTO.cs" />
+    <Compile Include="ChiTietCungCapVatTuDTO.cs" />
+    <Compile Include="HopDongPhimDTO.cs" />
     <Compile Include="LoaiNhaCungCapDTO.cs" />
     <Compile Include="NhaCungCapDTO.cs" />
     <Compile Include="NhaCungCapViewDTO.cs" />

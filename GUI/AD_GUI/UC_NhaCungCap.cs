@@ -33,29 +33,29 @@ namespace GUI.AD_GUI
             dgvDSNhaCungCap.Columns["MaSoThue"].HeaderText = "Mã số thuế";
             dgvDSNhaCungCap.Columns["SoDienThoai"].HeaderText = "Điện thoại";
             dgvDSNhaCungCap.Columns["TenLoaiNhaCungCap"].HeaderText = "Loại SP cung cấp";
-    }
-    public void loadDGVDanhSachNCC(string maLoaiNCC = "0", string txt = "" )
+        }
+        public void loadDGVDanhSachNCC(string maLoaiNCC = "0", string txt = "" )
         {
             dgvDSNhaCungCap.DataSource = NhaCungCapBLL.Instance.GetNCCViewMaLoaiNCC(maLoaiNCC, txt );
         }
-        public void setDGVDanhSachSanPham(DataGridView dgvDSSanPham, string maNhaCungCap)
-        {
-           
-        }
+
         private void cbLoaiNhaCungCap_SelectedValueChanged(object sender, EventArgs e)
         {
             if (cbLoaiNhaCungCap.SelectedItem != null)
             {
                 loadDGVDanhSachNCC(((CBBItem)cbLoaiNhaCungCap.SelectedItem).Value);
+                dgvDSSanPham.DataSource = NhaCungCapBLL.Instance.GetSPByMaNhaCungCap(dgvDSNhaCungCap.Rows[0].Cells["MaNhaCungCap"].Value.ToString());
             }
+            
+           
         }
-
-   
         private void dgvDSNhaCungCap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvDSNhaCungCap.SelectedRows.Count == 1)
             {
                 string maNhaCungCap = dgvDSNhaCungCap.SelectedRows[0].Cells["MaNhaCungCap"].Value.ToString();
+               
+                dgvDSSanPham.DataSource =    NhaCungCapBLL.Instance.GetSPByMaNhaCungCap(maNhaCungCap);
             }
                 
         }
@@ -106,7 +106,9 @@ namespace GUI.AD_GUI
                     now.Add(row.Cells["MaNhaCungCap"].Value.ToString());
                 }
                 dgvDSNhaCungCap.DataSource =   NhaCungCapBLL.Instance.SortNhaCungCap(NhaCungCapBLL.Instance.GetNhaCungCapViewDGV(now), dkSapXep);
+                dgvDSSanPham.DataSource = NhaCungCapBLL.Instance.GetSPByMaNhaCungCap(dgvDSNhaCungCap.Rows[0].Cells["MaNhaCungCap"].Value.ToString());
             }
+            
         }
 
         private void txtTimKiem_KeyDown(object sender, KeyEventArgs e)
@@ -119,13 +121,13 @@ namespace GUI.AD_GUI
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
-            //List<string> now = new List<string>();
-           
-            //foreach (DataGridViewRow row in dgvDSNhaCungCap.Rows)
-            //{
-            //    now.Add(row.Cells["MaNhaCungCap"].Value.ToString());
-            //}
-            //NhaCungCapBLL.Instance.ToExcel(NhaCungCapBLL.Instance.GetNhaCungCapViewDGV(now));
+            List<string> now = new List<string>();
+            foreach (DataGridViewRow row in dgvDSNhaCungCap.Rows)
+            {
+                now.Add(row.Cells["MaNhaCungCap"].Value.ToString());
+            }
+            //NhaCungCapBLL.Instance.ExportToExcelFromListEntity<NhaCungCapViewDTO>(NhaCungCapBLL.Instance.GetNhaCungCapViewDGV(now), @"D:\test", "test11");
+           Helper.Instance.ExportDataToExcel<NhaCungCapDTO>(NhaCungCapBLL.Instance.GetNhaCungCapDGV(now));
         }
     }
 }

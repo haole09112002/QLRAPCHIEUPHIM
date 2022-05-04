@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper.cs" />
     <Compile Include="LoaiNhaCungCapBLL.cs" />
     <Compile Include="NhaCungCapBLL.cs" />
     <Compile Include="PhimBLL.cs" />

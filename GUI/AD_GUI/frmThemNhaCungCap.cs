@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using BLL;
 using DTO;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI.AD_GUI
@@ -55,7 +48,17 @@ namespace GUI.AD_GUI
         
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (btnLuu.Enabled == true)
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn thoát!, Dữ liệu chưa được lưu lại", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(result == DialogResult.Yes)
+                    this.Close();
+            }
+            else
+            {
+                this.Close();
+            }
+            
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
