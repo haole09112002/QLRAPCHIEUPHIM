@@ -62,11 +62,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.gBSoLuongPhim.SuspendLayout();
             this.gBMoTaPhim.SuspendLayout();
             this.gBThongTinPhim.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtHangSanXuat
@@ -128,7 +131,7 @@
             this.btnHuy.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.Black;
             this.btnHuy.Image = global::GUI.Properties.Resources.Logout_26px;
-            this.btnHuy.Location = new System.Drawing.Point(232, 661);
+            this.btnHuy.Location = new System.Drawing.Point(19, 661);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(117, 45);
@@ -187,7 +190,7 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = global::GUI.Properties.Resources.save_26px;
-            this.btnLuu.Location = new System.Drawing.Point(720, 661);
+            this.btnLuu.Location = new System.Drawing.Point(521, 662);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(117, 45);
@@ -198,6 +201,8 @@
             // 
             // gBMoTaPhim
             // 
+            this.gBMoTaPhim.Controls.Add(this.pictureBox1);
+            this.gBMoTaPhim.Controls.Add(this.label5);
             this.gBMoTaPhim.Controls.Add(this.txtTheLoai);
             this.gBMoTaPhim.Controls.Add(this.txtDienVienPhu);
             this.gBMoTaPhim.Controls.Add(this.label14);
@@ -211,7 +216,7 @@
             this.gBMoTaPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBMoTaPhim.Name = "gBMoTaPhim";
             this.gBMoTaPhim.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gBMoTaPhim.Size = new System.Drawing.Size(528, 572);
+            this.gBMoTaPhim.Size = new System.Drawing.Size(528, 635);
             this.gBMoTaPhim.TabIndex = 20;
             this.gBMoTaPhim.TabStop = false;
             this.gBMoTaPhim.Text = "MÔ TẢ PHIM";
@@ -487,12 +492,34 @@
             this.lbName.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.lbName.Image = global::GUI.Properties.Resources.AddHopDongPhim;
             this.lbName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbName.Location = new System.Drawing.Point(490, 1);
+            this.lbName.Location = new System.Drawing.Point(532, 1);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(247, 37);
+            this.lbName.Size = new System.Drawing.Size(174, 37);
             this.lbName.TabIndex = 0;
-            this.lbName.Text = "Tạo Đề Xuất Phim";
+            this.lbName.Text = " Đề Xuất ";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Image = global::GUI.Properties.Resources.NhapXuat;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.Location = new System.Drawing.Point(8, 482);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 31);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Ảnh";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox1.Location = new System.Drawing.Point(93, 482);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(160, 148);
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
             // 
             // frm_TaoDeXuat
             // 
@@ -514,6 +541,7 @@
             this.gBThongTinPhim.ResumeLayout(false);
             this.gBThongTinPhim.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -553,5 +581,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtDienVienPhu;
         private System.Windows.Forms.TextBox txtTheLoai;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label5;
     }
 }
