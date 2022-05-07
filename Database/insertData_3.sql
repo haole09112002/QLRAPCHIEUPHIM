@@ -1,6 +1,8 @@
 ﻿go
 use QuanLyRapChieuPhim
 go
+
+
 ------1. Thể loại phim
 insert into THE_LOAI_PHIM (TenTheLoaiPhim) values (N'Hài');
 insert into THE_LOAI_PHIM (TenTheLoaiPhim) values (N'Cổ trang');
@@ -23,28 +25,48 @@ insert into NHA_CUNG_CAP(TenNhaCungCap,MaSoThue,DiaChi,Email,SoDienThoai,TenGiam
 values (N'Hải Quỳnh','CC004',N'Quảng Nam','haiquynh@gmail.com','0992737521',N'Phạm Phú Trung','LNCC03');
 insert into NHA_CUNG_CAP(TenNhaCungCap,MaSoThue,DiaChi,Email,SoDienThoai,TenGiamDoc,MaLoaiNCC)
 values (N'Tân Quang Dũng','CC005',N'Đông Hà','fptdung@gmail.com','0973989821',N'Trần Trung Hiếu','LNCC01');
-------4. Mô tả phim
-
+-----18. Thức ăn TA0001
+insert into THUC_AN(TenThucAn) values (N'Bỏng ngô');
+insert into THUC_AN(TenThucAn) values (N'Cocacola');
+insert into THUC_AN(TenThucAn) values (N'Kẹo');
+insert into THUC_AN(TenThucAn) values (N'Pepsi');
+insert into THUC_AN(TenThucAn) values (N'Nước lọc');
+-----19. Vật tư VT0001
+insert into VAT_TU(TenVatTu) values (N'Đèn sáng');
+insert into VAT_TU(TenVatTu) values (N'Ghế');
+insert into VAT_TU(TenVatTu) values (N'Điều hòa');
+insert into VAT_TU(TenVatTu) values (N'Máy chiếu');
+insert into VAT_TU(TenVatTu) values (N'Loa');
 -----5. Phim P00001
 insert into PHIM (TenPhim,AnhPhim,ThoiLuong,QuocGia,NamSanXuat,TenHangPhim ,DoTuoiXem,MaTheLoai ,NoiDung,DienVienChinh,DienVienPhu,DaoDien) values
-(N'Gia đình đức hạnh',null,'90',N'Thái Lan','2020-12-22',N'K Entertainment',18,'TLP001','Noi dung1', N'Lưu Học Nghĩa', N'Tôn Trung Sơn', N'Uông Tàng Hải');
+(N'Gia đình đức hạnh',null,'90',N'Thái Lan','2020-12-22',N'K Entertainment',18,'TLP001',N'Noi dung1', N'Lưu Học Nghĩa', N'Tôn Trung Sơn', N'Uông Tàng Hải');
 insert into PHIM (TenPhim,AnhPhim,ThoiLuong,QuocGia,NamSanXuat,TenHangPhim ,DoTuoiXem,MaTheLoai ,NoiDung,DienVienChinh,DienVienPhu,DaoDien) values
-(N'Mắt Biếc',null,'97',N'Việt Nam','2020-12-22',N'Hao Entertainment',18,'TLP003','Kể về câu chuyện giữa Ngạn và Hà Lan', N'Phạm Khắc Luận', N'Trần Trung Hiếu', N'Nguyễn Ánh');
+(N'Mắt Biếc',null,'97',N'Việt Nam','2020-12-22',N'Hao Entertainment',18,'TLP003',N'Kể về câu chuyện giữa Ngạn và Hà Lan', N'Phạm Khắc Luận', N'Trần Trung Hiếu', N'Nguyễn Ánh');
 insert into PHIM (TenPhim,AnhPhim,ThoiLuong,QuocGia,NamSanXuat,TenHangPhim ,DoTuoiXem,MaTheLoai ,NoiDung,DienVienChinh,DienVienPhu,DaoDien) values
-(N'Nhà có khách',null,'90',N'Việt Nam','2021-12-22',N'BH Media',18,'TLP001','Noi dung 2', N'Trần Văn Hữu', N'Phạm Khắc Luận', N'Lê Văn Hào');
+(N'Nhà có khách',null,'90',N'Việt Nam','2021-12-22',N'BH Media',18,'TLP001',N'Noi dung 2', N'Trần Văn Hữu', N'Phạm Khắc Luận', N'Lê Văn Hào');
 insert into PHIM (TenPhim,AnhPhim,ThoiLuong,QuocGia,NamSanXuat,TenHangPhim ,DoTuoiXem,MaTheLoai ,NoiDung,DienVienChinh,DienVienPhu,DaoDien) values
-(N'Em chưa 18',null,'90',N'Việt Nam','2019-12-20',N'Star Entertainment',18,'TLP003','Noi dung1', N'Lưu Học Nghĩa', N'Tôn Trung Sơn', N'Đặng Tiểu Bình');
+(N'Em chưa 18',null,'90',N'Việt Nam','2019-12-20',N'Star Entertainment',18,'TLP003',N'Noi dung1', N'Lưu Học Nghĩa', N'Tôn Trung Sơn', N'Đặng Tiểu Bình');
 insert into PHIM (TenPhim,AnhPhim,ThoiLuong,QuocGia,NamSanXuat,TenHangPhim ,DoTuoiXem,MaTheLoai ,NoiDung,DienVienChinh,DienVienPhu,DaoDien) values
-(N'Bố già',null,'90',N'Việt Nam','2020-12-22',N'K Entertainment',18,'TLP001','Noi dung1', N'Trấn Thành', N'Tuấn Trần', N'Trấn Thành');
+(N'Bố già',null,'90',N'Việt Nam','2020-12-22',N'K Entertainment',18,'TLP001',N'Noi dung1', N'Trấn Thành', N'Tuấn Trần', N'Trấn Thành');
 insert into PHIM (TenPhim,AnhPhim,ThoiLuong,QuocGia,NamSanXuat,TenHangPhim ,DoTuoiXem,MaTheLoai ,NoiDung,DienVienChinh,DienVienPhu,DaoDien) values
-(N'Bẫy ngọt ngào',null,'90',N'Thái Lan','2020-09-22',N'K Entertainment',18,'TLP003','Noi dung1', N'Lưu Học Nghĩa', N'Tôn Trung Sơn', N'Uông Tàng Hải');
-------6. Hợp đồng phim
-insert into HOP_DONG_PHIM(MaNhaCungCap,MaPhim,NgayKiKetHD,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
-values ('NCC001','P00001','2020-12-28','2020-12-30','2022-12-30',N'Đĩa','10','20000');
-insert into HOP_DONG_PHIM(MaNhaCungCap,MaPhim,NgayKiKetHD,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
-values ('NCC002','P00002','2020-09-15','2020-09-17','2022-09-17',N'Đĩa','8','15000');
-insert into HOP_DONG_PHIM(MaNhaCungCap,MaPhim,NgayKiKetHD,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
-values ('NCC002','P00003','2020-07-20','2020-07-22','2022-07-22',N'Đĩa','10','17000');
+(N'Bẫy ngọt ngào',null,'90',N'Thái Lan','2020-09-22',N'K Entertainment',18,'TLP003',N'Noi dung1', N'Lưu Học Nghĩa', N'Tôn Trung Sơn', N'Uông Tàng Hải');
+insert into PHIM (TenPhim,AnhPhim,ThoiLuong,QuocGia,NamSanXuat,TenHangPhim ,DoTuoiXem,MaTheLoai ,NoiDung,DienVienChinh,DienVienPhu,DaoDien) values
+(N'Em và Trịnh',null,'90',N'Việt Nam','2020-09-22',N'Trịnh Entertainment',18,'TLP003',N'Kí ức Trịnh Công Sơn', N'Lan Ngọc', N'Hải Tú', N'Trịnh Bá Tuấn');
+
+--35 Loai Hop Dong
+insert into LOAI_HOP_DONG(TenLoaiHopDong) values (N'Hợp đồng phim');
+insert into LOAI_HOP_DONG(TenLoaiHopDong) values (N'Hợp đồng vật tư');
+insert into LOAI_HOP_DONG(TenLoaiHopDong) values (N'Hợp đồng thức ăn');
+--36 Hop dong------------
+go
+insert into HOP_DONG(TenHopDong ,MaNhaCungCap ,NgayKiKetHD , MaLoaiHopDong) values (N'Hợp đồng 1', 'NCC001', '2020-09-30', 'LHD001' );
+insert into HOP_DONG(TenHopDong ,MaNhaCungCap ,NgayKiKetHD , MaLoaiHopDong) values (N'Hợp đồng 2', 'NCC002', '2020-08-30', 'LHD001' );
+insert into HOP_DONG(TenHopDong ,MaNhaCungCap ,NgayKiKetHD , MaLoaiHopDong) values (N'Hợp đồng 3', 'NCC003', '2020-12-30', 'LHD002' );
+insert into HOP_DONG(TenHopDong ,MaNhaCungCap ,NgayKiKetHD , MaLoaiHopDong) values (N'Hợp đồng 4', 'NCC003', '2020-12-30', 'LHD002' );
+insert into HOP_DONG(TenHopDong ,MaNhaCungCap ,NgayKiKetHD , MaLoaiHopDong) values (N'Hợp đồng 5', 'NCC004', '2020-11-30', 'LHD003' );
+insert into HOP_DONG(TenHopDong ,MaNhaCungCap ,NgayKiKetHD , MaLoaiHopDong) values (N'Hợp đồng 6', 'NCC004', '2020-12-30', 'LHD003' );
+
+go
 -----7. Phòng chiếu PC0001
 insert into PHONG_CHIEU(TenPhong,TinhTrangPhong) values (N'Phòng số 1','0');
 insert into PHONG_CHIEU(TenPhong,TinhTrangPhong) values (N'Phòng số 2','1');
@@ -102,16 +124,7 @@ insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0004',
 insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00002',N'Bộ','1');
 insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00004',N'Bộ','2');
 insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00005',N'Bộ','1');
------18. Thức ăn TA0001
-insert into THUC_AN(TenThucAn) values (N'Bắp ngô');
-insert into THUC_AN(TenThucAn) values (N'Cocacola');
-insert into THUC_AN(TenThucAn) values (N'Kẹo');
------19. Vật tư VT0001
-insert into VAT_TU(TenVatTu) values (N'Đèn sáng');
-insert into VAT_TU(TenVatTu) values (N'Ghế');
-insert into VAT_TU(TenVatTu) values (N'Điều hòa');
-insert into VAT_TU(TenVatTu) values (N'Máy chiếu');
-insert into VAT_TU(TenVatTu) values (N'Loa');
+
 ----20. Chi tiết kho vật tư
 insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0002','VT0001',N'Cái','12');
 insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0002','VT0002',N'Cái','10');
@@ -188,24 +201,44 @@ insert into CHI_TIET_PHIEU_THUC_AN(MaPhieu,MaThucAn,DonViTinh,SoLuong,NgayHetHan
 values('PH0003','TA0002',N'Chai','5','2022-04-14');
 insert into CHI_TIET_PHIEU_THUC_AN(MaPhieu,MaThucAn,DonViTinh,SoLuong,NgayHetHang)
 values('PH0004','TA0003',N'Gói','5','2022-04-12');
------32. Chi tiết cung cấp vật tư
-insert into CHI_TIET_CUNG_CAP_VAT_TU(MaVatTu,MaNhaCungCap,GiaTien,DonViTinh,SoLuong)
-values ('VT0001','NCC003','20',N'Cái','20');
-insert into CHI_TIET_CUNG_CAP_VAT_TU(MaVatTu,MaNhaCungCap,GiaTien,DonViTinh,SoLuong)
-values ('VT0002','NCC003','30',N'Bộ','20');
-insert into CHI_TIET_CUNG_CAP_VAT_TU(MaVatTu,MaNhaCungCap,GiaTien,DonViTinh,SoLuong)
-values ('VT0003','NCC003','40',N'Cái','25');
-insert into CHI_TIET_CUNG_CAP_VAT_TU(MaVatTu,MaNhaCungCap,GiaTien,DonViTinh,SoLuong)
-values ('VT0004','NCC003','50',N'Bộ','30');
-insert into CHI_TIET_CUNG_CAP_VAT_TU(MaVatTu,MaNhaCungCap,GiaTien,DonViTinh,SoLuong)
-values ('VT0005','NCC003','10',N'Cái','15');
------33. Chi tiết cung cấp thức ăn
-insert into CHI_TIET_CUNG_CAP_THUC_AN(MaThucAn,MaNhaCungCap,GiaTien,DonViTinh,SoLuong)
-values ('TA0001','NCC004','5',N'Thùng','20');
-insert into CHI_TIET_CUNG_CAP_THUC_AN(MaThucAn,MaNhaCungCap,GiaTien,DonViTinh,SoLuong)
-values ('TA0002','NCC004','10',N'Thùng','20');
-insert into CHI_TIET_CUNG_CAP_THUC_AN(MaThucAn,MaNhaCungCap,GiaTien,DonViTinh,SoLuong)
-values ('TA0003','NCC004','10',N'Thùng','25');
+-----32. Hop dong cung cấp vật tư
+go
+insert into HOP_DONG_VAT_TU(MaHopDong,MaVatTu,GiaTien,DonViTinh,SoLuong)
+values ('HD0003','VT0001','200000',N'Cái','20');
+insert into HOP_DONG_VAT_TU(MaHopDong,MaVatTu,GiaTien,DonViTinh,SoLuong)
+values ('HD0003','VT0002','200000',N'Cái','50');
+insert into HOP_DONG_VAT_TU(MaHopDong,MaVatTu,GiaTien,DonViTinh,SoLuong)
+values ('HD0004','VT0005','400000',N'Cái','20');
+insert into HOP_DONG_VAT_TU(MaHopDong,MaVatTu,GiaTien,DonViTinh,SoLuong)
+values ('HD0004','VT0003','400000',N'Cái','20');
+insert into HOP_DONG_VAT_TU(MaHopDong,MaVatTu,GiaTien,DonViTinh,SoLuong)
+values ('HD0004','VT0004','300000',N'Cái','20');
+
+------6. Hợp đồng phim
+go
+insert into HOP_DONG_PHIM(MaHopDong,MaPhim,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
+values ('HD0001','P00001','2020-12-30','2022-12-30',N'Đĩa','10','20000');
+insert into HOP_DONG_PHIM(MaHopDong,MaPhim,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
+values ('HD0001','P00002','2020-08-30','2022-11-30',N'Đĩa','10','30000');
+insert into HOP_DONG_PHIM(MaHopDong,MaPhim,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
+values ('HD0001','P00003','2020-12-30','2022-12-30',N'Đĩa','10','50000');
+
+insert into HOP_DONG_PHIM(MaHopDong,MaPhim,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
+values ('HD0002','P00004','2020-12-30','2022-12-30',N'Đĩa','10','45000');
+insert into HOP_DONG_PHIM(MaHopDong,MaPhim,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
+values ('HD0002','P00005','2020-12-30','2022-12-30',N'Đĩa','10','45000');
+go
+-----33. HOP dong cung cấp thức ăn
+insert into HOP_DONG_THUC_AN(MaHopDong,MaThucAn,GiaTien,DonViTinh,SoLuong)
+values ('HD0005','TA0001','50000',N'Thùng','20');
+insert into HOP_DONG_THUC_AN(MaHopDong,MaThucAn,GiaTien,DonViTinh,SoLuong)
+values ('HD0005','TA0002','50000',N'Thùng','20');
+insert into HOP_DONG_THUC_AN(MaHopDong,MaThucAn,GiaTien,DonViTinh,SoLuong)
+values ('HD0006','TA0004','55000',N'Thùng','40');
+insert into HOP_DONG_THUC_AN(MaHopDong,MaThucAn,GiaTien,DonViTinh,SoLuong)
+values ('HD0006','TA0003','65000',N'Thùng','20');
+insert into HOP_DONG_THUC_AN(MaHopDong,MaThucAn,GiaTien,DonViTinh,SoLuong)
+values ('HD0006','TA0001','56000',N'Thùng','20');
 -----34. Vật tư trong phòng chiếu PC0001
 insert into CHI_TIET_PHONG_CHIEU(MaPhongChieu,MaVatTu,DonViTinh,SoLuongSP)
 values ('PC0001','VT0001',N'Cái','8');
