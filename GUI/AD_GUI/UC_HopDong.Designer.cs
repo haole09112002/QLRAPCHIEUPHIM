@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDSHopDong = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnTao = new System.Windows.Forms.Button();
+            this.btnXemChiTiet = new System.Windows.Forms.Button();
+            this.btnGiaHan = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.cbSapXep = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnSapXep = new System.Windows.Forms.Button();
-            this.btnExcel = new System.Windows.Forms.Button();
-            this.btnGiaHan = new System.Windows.Forms.Button();
-            this.btnXemChiTiet = new System.Windows.Forms.Button();
             this.cbLoaiHopDong = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHopDong)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHopDong)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,18 +63,16 @@
             this.panel1.Size = new System.Drawing.Size(951, 566);
             this.panel1.TabIndex = 0;
             // 
-            // label2
+            // groupBox1
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Image = global::GUI.Properties.Resources.Hopdong1;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(22, 7);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 27);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "HỢP ĐỒNG";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.groupBox1.Controls.Add(this.dgvDSHopDong);
+            this.groupBox1.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(9, 110);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(926, 368);
+            this.groupBox1.TabIndex = 35;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh sách hợp đồng";
             // 
             // dgvDSHopDong
             // 
@@ -86,18 +84,18 @@
             this.dgvDSHopDong.RowHeadersWidth = 51;
             this.dgvDSHopDong.Size = new System.Drawing.Size(894, 326);
             this.dgvDSHopDong.TabIndex = 7;
+            this.dgvDSHopDong.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSHopDong_CellDoubleClick);
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.Controls.Add(this.btnTimKiem);
-            this.panel2.Controls.Add(this.cbSapXep);
-            this.panel2.Controls.Add(this.txtTimKiem);
-            this.panel2.Controls.Add(this.btnSapXep);
-            this.panel2.Location = new System.Drawing.Point(26, 43);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(894, 60);
-            this.panel2.TabIndex = 6;
+            this.panel3.Controls.Add(this.btnTao);
+            this.panel3.Controls.Add(this.btnXemChiTiet);
+            this.panel3.Controls.Add(this.btnGiaHan);
+            this.panel3.Controls.Add(this.btnExcel);
+            this.panel3.Location = new System.Drawing.Point(26, 490);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(894, 62);
+            this.panel3.TabIndex = 34;
             // 
             // btnTao
             // 
@@ -114,6 +112,82 @@
             this.btnTao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTao.UseVisualStyleBackColor = false;
             this.btnTao.Click += new System.EventHandler(this.btnTao_Click);
+            // 
+            // btnXemChiTiet
+            // 
+            this.btnXemChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnXemChiTiet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXemChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemChiTiet.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemChiTiet.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.btnXemChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXemChiTiet.Location = new System.Drawing.Point(229, 15);
+            this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXemChiTiet.Name = "btnXemChiTiet";
+            this.btnXemChiTiet.Size = new System.Drawing.Size(148, 36);
+            this.btnXemChiTiet.TabIndex = 1;
+            this.btnXemChiTiet.Text = "XEM CHI TIẾT";
+            this.btnXemChiTiet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXemChiTiet.UseVisualStyleBackColor = false;
+            // 
+            // btnGiaHan
+            // 
+            this.btnGiaHan.BackColor = System.Drawing.Color.Silver;
+            this.btnGiaHan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGiaHan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGiaHan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiaHan.Image = global::GUI.Properties.Resources.Refund;
+            this.btnGiaHan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGiaHan.Location = new System.Drawing.Point(513, 14);
+            this.btnGiaHan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGiaHan.Name = "btnGiaHan";
+            this.btnGiaHan.Size = new System.Drawing.Size(123, 38);
+            this.btnGiaHan.TabIndex = 3;
+            this.btnGiaHan.Text = "GIA HẠN";
+            this.btnGiaHan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGiaHan.UseVisualStyleBackColor = false;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcel.Image = global::GUI.Properties.Resources.Download;
+            this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcel.Location = new System.Drawing.Point(746, 12);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(148, 40);
+            this.btnExcel.TabIndex = 4;
+            this.btnExcel.Text = "XUẤT EXCEL";
+            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcel.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Image = global::GUI.Properties.Resources.Hopdong1;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Location = new System.Drawing.Point(22, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 27);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "HỢP ĐỒNG";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnTimKiem);
+            this.panel2.Controls.Add(this.cbSapXep);
+            this.panel2.Controls.Add(this.txtTimKiem);
+            this.panel2.Controls.Add(this.btnSapXep);
+            this.panel2.Location = new System.Drawing.Point(26, 43);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(894, 60);
+            this.panel2.TabIndex = 6;
             // 
             // btnTimKiem
             // 
@@ -166,57 +240,6 @@
             this.btnSapXep.Text = "    SẮP XẾP";
             this.btnSapXep.UseVisualStyleBackColor = false;
             // 
-            // btnExcel
-            // 
-            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcel.Image = global::GUI.Properties.Resources.Download;
-            this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcel.Location = new System.Drawing.Point(746, 12);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(148, 40);
-            this.btnExcel.TabIndex = 4;
-            this.btnExcel.Text = "XUẤT EXCEL";
-            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcel.UseVisualStyleBackColor = false;
-            // 
-            // btnGiaHan
-            // 
-            this.btnGiaHan.BackColor = System.Drawing.Color.Silver;
-            this.btnGiaHan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGiaHan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGiaHan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiaHan.Image = global::GUI.Properties.Resources.Refund;
-            this.btnGiaHan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGiaHan.Location = new System.Drawing.Point(513, 14);
-            this.btnGiaHan.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGiaHan.Name = "btnGiaHan";
-            this.btnGiaHan.Size = new System.Drawing.Size(123, 38);
-            this.btnGiaHan.TabIndex = 3;
-            this.btnGiaHan.Text = "GIA HẠN";
-            this.btnGiaHan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGiaHan.UseVisualStyleBackColor = false;
-            // 
-            // btnXemChiTiet
-            // 
-            this.btnXemChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnXemChiTiet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXemChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXemChiTiet.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemChiTiet.Image = global::GUI.Properties.Resources.SearchIcon;
-            this.btnXemChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXemChiTiet.Location = new System.Drawing.Point(229, 15);
-            this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXemChiTiet.Name = "btnXemChiTiet";
-            this.btnXemChiTiet.Size = new System.Drawing.Size(148, 36);
-            this.btnXemChiTiet.TabIndex = 1;
-            this.btnXemChiTiet.Text = "XEM CHI TIẾT";
-            this.btnXemChiTiet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnXemChiTiet.UseVisualStyleBackColor = false;
-            // 
             // cbLoaiHopDong
             // 
             this.cbLoaiHopDong.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -231,28 +254,6 @@
             this.cbLoaiHopDong.Size = new System.Drawing.Size(288, 24);
             this.cbLoaiHopDong.TabIndex = 5;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnTao);
-            this.panel3.Controls.Add(this.btnXemChiTiet);
-            this.panel3.Controls.Add(this.btnGiaHan);
-            this.panel3.Controls.Add(this.btnExcel);
-            this.panel3.Location = new System.Drawing.Point(26, 490);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(894, 62);
-            this.panel3.TabIndex = 34;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dgvDSHopDong);
-            this.groupBox1.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(9, 110);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(926, 368);
-            this.groupBox1.TabIndex = 35;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách hợp đồng";
-            // 
             // UC_HopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -263,11 +264,11 @@
             this.Name = "UC_HopDong";
             this.Size = new System.Drawing.Size(993, 597);
             this.panel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHopDong)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
