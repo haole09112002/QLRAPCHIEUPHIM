@@ -1,4 +1,4 @@
-go
+﻿go
 use QuanLyRapChieuPhim
 go
 --Bang The Loai Phim
@@ -46,19 +46,7 @@ Create table PHIM(
 	DaoDien nvarchar(30)
 )
 go
--- Bang Hop Dong Phim
-Create table HOP_DONG_PHIM(
-	MaNhaCungCap varchar(6) foreign key(MaNhaCungCap) references NHA_CUNG_CAP,
-	MaPhim varchar(6) foreign key(MaPhim) references PHIM,
-	NgayKiKetHD date,
-	NgayBatDauBanQuyen date,
-	NgayKetThucBanQuyen date,
-	Donvitinh nvarchar(15),
-	SoLuong int,
-	GiaTien money,
-	constraint pk_HopDongPhim primary key(MaNhaCungCap,MaPhim)
-)
-go
+
 -- Bang Phong Chieu
 
 Create table PHONG_CHIEU(
@@ -296,27 +284,58 @@ Create table CHI_TIET_PHIEU_THUC_AN(
 	constraint pk_CTPhieuThucAn primary key(MaPhieu,MaThucAn)
 )
 go
+-- Bảng loại Hợp đồng
+
+create table LOAI_HOP_DONG
+(
+	MaLoaiHopDong varchar(6) primary key not null constraint IDLHD default dbo.AUTO_IDLOAIHOPDONG(), 
+	TenLoaiHopDong nvarchar(50) not null
+)
+go
+--- Bảng Hợp đồng
+create table HOP_DONG
+(
+	MaHopDong varchar(6) primary key not null  constraint IDHD default dbo.AUTO_IDHOPDONG(), 
+	TenHopDong nvarchar(50),
+	MaNhaCungCap varchar(6) foreign key(MaNhaCungCap) references NHA_CUNG_CAP,
+	NgayKiKetHD date,
+	MaLoaiHopDong varchar(6) foreign key (MaLoaiHopDong) references LOAI_HOP_DONG
+)
+go
+
 --Bang Chi Tiet Cung Cap Vat Tu
 
-Create table CHI_TIET_CUNG_CAP_VAT_TU(
+Create table HOP_DONG_VAT_TU(
+	MaHopDong varchar(6) foreign key(MaHopDong) references HOP_DONG,
 	MaVatTu varchar(6) foreign key(MaVatTu) references VAT_TU,
-	MaNhaCungCap varchar(6) foreign key(MaNhaCungCap) references NHA_CUNG_CAP,
 	GiaTien money,
 	DonViTinh nvarchar(30),
 	SoLuong int,
-	constraint pk_CTCungCapVatTu primary key(MaVatTu,MaNhaCungCap)
+	constraint pk_HopDongVatTu primary key(MaVatTu,MaHopDong)
 )
 go
 --Bang Chi Tiet Cung Cap Thuc An
 
-Create table CHI_TIET_CUNG_CAP_THUC_AN(
+Create table HOP_DONG_THUC_AN(
+	MaHopDong varchar(6) foreign key(MaHopDong) references HOP_DONG,
 	MaThucAn varchar(6) foreign key(MaThucAn) references THUC_AN,
-	MaNhaCungCap varchar(6) foreign key(MaNhaCungCap) references NHA_CUNG_CAP,
 	GiaTien money,
 	DonViTinh nvarchar(30),
 	SoLuong int,
-	constraint pk_CTCungCapThucAn primary key(MaThucAn,MaNhaCungCap)
+	constraint pk_HopDongThucAn primary key(MaThucAn,MaHopDong)
 )
+-- Bang Hop Dong Phim
+Create table HOP_DONG_PHIM(
+	MaHopDong varchar(6) foreign key(MaHopDong) references HOP_DONG,
+	MaPhim varchar(6) foreign key(MaPhim) references PHIM,
+	NgayBatDauBanQuyen date,
+	NgayKetThucBanQuyen date,
+	Donvitinh nvarchar(15),
+	SoLuong int,
+	GiaTien money,
+	constraint pk_HopDongPhim primary key(MaHopDong,MaPhim)
+)
+go
 go
 --Bang Chi Tiet Cung Cap Phong Chieu
 
@@ -327,3 +346,4 @@ Create table CHI_TIET_PHONG_CHIEU(
 	SoLuongSP int,
 	constraint pk_CTPhongChieu primary key(MaPhongChieu,MaVatTu)
 )
+go
