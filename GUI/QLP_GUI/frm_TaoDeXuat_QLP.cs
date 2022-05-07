@@ -10,17 +10,22 @@ using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
 {
-    public partial class frm_TaoDeXuat : Form
+    public partial class frm_TaoDeXuat_QLP : Form
     {
-        public frm_TaoDeXuat()
+        public frm_TaoDeXuat_QLP()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frm_DeXuatPhim frmDXP = new frm_DeXuatPhim();
+            frmDXP.ShowDialog();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }

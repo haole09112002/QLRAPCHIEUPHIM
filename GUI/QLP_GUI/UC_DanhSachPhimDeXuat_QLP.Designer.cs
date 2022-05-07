@@ -54,9 +54,10 @@
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(16, 12);
+            this.panel1.Location = new System.Drawing.Point(18, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 588);
+            this.panel1.Size = new System.Drawing.Size(1080, 734);
             this.panel1.TabIndex = 1;
             // 
             // button4
@@ -66,9 +67,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.button4.Location = new System.Drawing.Point(687, 536);
+            this.button4.Location = new System.Drawing.Point(773, 670);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 36);
+            this.button4.Size = new System.Drawing.Size(138, 45);
             this.button4.TabIndex = 48;
             this.button4.Text = " Thêm";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -83,10 +85,10 @@
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::GUI.Properties.Resources.Sort;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(530, 45);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(596, 56);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 38);
+            this.button1.Size = new System.Drawing.Size(138, 48);
             this.button1.TabIndex = 47;
             this.button1.Text = "    SẮP XẾP";
             this.button1.UseVisualStyleBackColor = false;
@@ -96,10 +98,10 @@
             this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(671, 51);
+            this.comboBox2.Location = new System.Drawing.Point(755, 64);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(265, 27);
+            this.comboBox2.Size = new System.Drawing.Size(298, 31);
             this.comboBox2.TabIndex = 46;
             // 
             // button7
@@ -110,10 +112,10 @@
             this.button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Image = global::GUI.Properties.Resources.SearchIcon;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(24, 47);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Location = new System.Drawing.Point(27, 59);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(123, 36);
+            this.button7.Size = new System.Drawing.Size(138, 45);
             this.button7.TabIndex = 45;
             this.button7.Text = "TÌM KIẾM";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -122,10 +124,10 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(166, 50);
+            this.textBox1.Location = new System.Drawing.Point(187, 62);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 28);
+            this.textBox1.Size = new System.Drawing.Size(295, 33);
             this.textBox1.TabIndex = 44;
             // 
             // label1
@@ -133,9 +135,9 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Image = global::GUI.Properties.Resources.film_reel_26px;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(320, 9);
+            this.label1.Location = new System.Drawing.Point(360, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 25);
+            this.label1.Size = new System.Drawing.Size(346, 31);
             this.label1.TabIndex = 43;
             this.label1.Text = "DANH SÁCH PHIM ĐỀ XUẤT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -148,10 +150,10 @@
             this.button6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Image = global::GUI.Properties.Resources.Edit;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(397, 536);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Location = new System.Drawing.Point(447, 670);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(138, 36);
+            this.button6.Size = new System.Drawing.Size(155, 45);
             this.button6.TabIndex = 42;
             this.button6.Text = "CHỈNH SỬA";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -165,9 +167,10 @@
             this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = global::GUI.Properties.Resources.trash_can_26px;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(118, 536);
+            this.button3.Location = new System.Drawing.Point(133, 670);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 36);
+            this.button3.Size = new System.Drawing.Size(138, 45);
             this.button3.TabIndex = 41;
             this.button3.Text = "   Xóa";
             this.button3.UseVisualStyleBackColor = false;
@@ -176,23 +179,23 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 125);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(912, 428);
+            this.dataGridView1.Size = new System.Drawing.Size(1026, 535);
             this.dataGridView1.TabIndex = 40;
             // 
             // UC_DanhSachPhimDeXuat_QLP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_DanhSachPhimDeXuat_QLP";
-            this.Size = new System.Drawing.Size(993, 613);
+            this.Size = new System.Drawing.Size(1117, 766);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

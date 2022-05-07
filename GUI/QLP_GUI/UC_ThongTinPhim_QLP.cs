@@ -75,9 +75,16 @@ namespace GUI.QLP_GUI
         {
             if(dGVDanhSachPhim.SelectedRows.Count == 1)
             {
-                frmThongTinPhim f = new frmThongTinPhim(dGVDanhSachPhim.SelectedRows[0].Cells["MaPhim"].Value.ToString(),dGVDanhSachPhim.SelectedRows[0].Cells["TheLoai"].Value.ToString());
-                f.ShowDialog();
+                var frmTTP = new frmThongTinPhim(dGVDanhSachPhim.SelectedRows[0].Cells["MaPhim"].Value.ToString(), dGVDanhSachPhim.SelectedRows[0].Cells["TheLoai"].Value.ToString());
+                frmTTP.ShowDialog();
             }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frm_DeXuatPhim frmDXP = new frm_DeXuatPhim();
+            frmDXP.ShowDialog();
+            Reload();
         }
     }
 }

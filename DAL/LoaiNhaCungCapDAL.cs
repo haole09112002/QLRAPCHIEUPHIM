@@ -29,7 +29,7 @@ namespace DAL
         public List<LoaiNhaCungCapDTO> GetAllLoaiNhaCungCap()
         {
             List<LoaiNhaCungCapDTO> dsLoaiNhaCungCap = new List<LoaiNhaCungCapDTO>();
-            string query = "select * from LoaiNhaCungCap";
+            string query = "select * from LOAI_NHA_CUNG_CAP";
             foreach(DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
             {
                 dsLoaiNhaCungCap.Add(GetLoaiNhaCungCapByDataRow(i));

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using DTO;
 using DAL;
 using System.Windows.Forms;
+using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace BLL
 {
@@ -46,7 +49,6 @@ namespace BLL
                     {
                         MaPhim = i.MaPhim,
                         TenPhim = i.TenPhim,
-                        AnhPhim = i.AnhPhim,
                         ThoiLuong = i.ThoiLuong,
                         QuocGia = i.QuocGia,
                         NamSanXuat = i.NamSanXuat,
@@ -125,6 +127,22 @@ namespace BLL
         public bool CompareTheLoai(object o1, object o2)
         {
             return String.Compare(((PhimViewDTO)o1).TheLoai, ((PhimViewDTO)o2).TheLoai) > 0;
+        }
+        public byte[] ChuyenAnhThanhMangByte(PictureBox pictureBox)
+        {
+            MemoryStream memoryStream = new MemoryStream();
+            pictureBox.Image.Save(memoryStream,ImageFormat.Jpeg);
+            return memoryStream.ToArray();
+        }
+        public Image ChuyeMangByteSangAnh(byte[] byteArray)
+        {
+            MemoryStream memoryStream = new MemoryStream(byteArray,0,byteArray.Length);
+            memoryStream.Write(byteArray,0,byteArray.Length);
+            return Image.FromStream(memoryStream,true);
+        }
+        public void LuuPhim(PhimDTO phim)
+        {
+            PhimDAL.Instance.LuuDuLieuPhim(phim);
         }
     }
 }

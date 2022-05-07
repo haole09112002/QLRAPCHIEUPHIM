@@ -37,6 +37,7 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dGVDanhSachPhim = new System.Windows.Forms.DataGridView();
+            this.btnThem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +45,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnXemChiTiet);
             this.panel1.Controls.Add(this.btnSapXep);
             this.panel1.Controls.Add(this.cBSapXep);
@@ -65,7 +67,7 @@
             this.btnXemChiTiet.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemChiTiet.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnXemChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXemChiTiet.Location = new System.Drawing.Point(432, 672);
+            this.btnXemChiTiet.Location = new System.Drawing.Point(727, 672);
             this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnXemChiTiet.Name = "btnXemChiTiet";
             this.btnXemChiTiet.Size = new System.Drawing.Size(166, 45);
@@ -171,6 +173,23 @@
             this.dGVDanhSachPhim.Size = new System.Drawing.Size(1026, 535);
             this.dGVDanhSachPhim.TabIndex = 40;
             // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.Silver;
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = global::GUI.Properties.Resources.new_copy_26px;
+            this.btnThem.Location = new System.Drawing.Point(228, 672);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(138, 45);
+            this.btnThem.TabIndex = 49;
+            this.btnThem.Text = " Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // UC_ThongTinPhim_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -196,5 +215,6 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dGVDanhSachPhim;
+        private System.Windows.Forms.Button btnThem;
     }
 }

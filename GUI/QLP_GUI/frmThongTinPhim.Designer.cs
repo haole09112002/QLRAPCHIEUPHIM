@@ -42,7 +42,7 @@
             this.txtDienVienChinh = new System.Windows.Forms.TextBox();
             this.rtxtNoiDung = new System.Windows.Forms.RichTextBox();
             this.gBThongTinPhim = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pBAnhPhim = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             this.panel1.SuspendLayout();
             this.gBMoTaPhim.SuspendLayout();
             this.gBThongTinPhim.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -225,7 +225,7 @@
             // 
             // gBThongTinPhim
             // 
-            this.gBThongTinPhim.Controls.Add(this.pictureBox1);
+            this.gBThongTinPhim.Controls.Add(this.pBAnhPhim);
             this.gBThongTinPhim.Controls.Add(this.label2);
             this.gBThongTinPhim.Controls.Add(this.label10);
             this.gBThongTinPhim.Controls.Add(this.label9);
@@ -251,14 +251,15 @@
             this.gBThongTinPhim.TabStop = false;
             this.gBThongTinPhim.Text = "THÔNG TIN PHIM";
             // 
-            // pictureBox1
+            // pBAnhPhim
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox1.Location = new System.Drawing.Point(227, 411);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 156);
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
+            this.pBAnhPhim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pBAnhPhim.Location = new System.Drawing.Point(227, 411);
+            this.pBAnhPhim.Name = "pBAnhPhim";
+            this.pBAnhPhim.Size = new System.Drawing.Size(161, 156);
+            this.pBAnhPhim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBAnhPhim.TabIndex = 37;
+            this.pBAnhPhim.TabStop = false;
             // 
             // label2
             // 
@@ -453,7 +454,7 @@
             this.gBMoTaPhim.PerformLayout();
             this.gBThongTinPhim.ResumeLayout(false);
             this.gBThongTinPhim.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -489,6 +490,6 @@
         private System.Windows.Forms.TextBox txtDienVienPhu;
         private System.Windows.Forms.TextBox txtTheLoai;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pBAnhPhim;
     }
 }

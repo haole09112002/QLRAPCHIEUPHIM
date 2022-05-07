@@ -10,7 +10,7 @@ namespace DTO
     {
         private string maPhim;
         private string tenPhim;
-        private string anhPhim;
+        private byte[] anhPhim;
         private int thoiLuong;
         private string quocGia;
         private DateTime namSanXuat;
@@ -24,7 +24,7 @@ namespace DTO
 
         public string MaPhim { get => maPhim; set => maPhim = value; }
         public string TenPhim { get => tenPhim; set => tenPhim = value; }
-        public string AnhPhim { get => anhPhim; set => anhPhim = value; }
+        public byte[] AnhPhim { get => anhPhim; set => anhPhim = value; }
         public int ThoiLuong { get => thoiLuong; set => thoiLuong = value; }
         public string QuocGia { get => quocGia; set => quocGia = value; }
         public DateTime NamSanXuat { get => namSanXuat; set => namSanXuat = value; }

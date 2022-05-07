@@ -228,11 +228,17 @@
     <Compile Include="QLP_GUI\frm_QLP.Designer.cs">
       <DependentUpon>frm_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\frm_TaoDeXuat.cs">
+    <Compile Include="QLP_GUI\frm_DeXuatPhim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\frm_TaoDeXuat.Designer.cs">
-      <DependentUpon>frm_TaoDeXuat.cs</DependentUpon>
+    <Compile Include="QLP_GUI\frm_DeXuatPhim.Designer.cs">
+      <DependentUpon>frm_DeXuatPhim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_TaoDeXuat_QLP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_TaoDeXuat_QLP.Designer.cs">
+      <DependentUpon>frm_TaoDeXuat_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLP_GUI\frm_ThongTinNCC_QLP.cs">
       <SubType>Form</SubType>
@@ -515,8 +521,11 @@
     <EmbeddedResource Include="QLP_GUI\frm_QLP.resx">
       <DependentUpon>frm_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\frm_TaoDeXuat.resx">
-      <DependentUpon>frm_TaoDeXuat.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\frm_DeXuatPhim.resx">
+      <DependentUpon>frm_DeXuatPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\frm_TaoDeXuat_QLP.resx">
+      <DependentUpon>frm_TaoDeXuat_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\frm_ThongTinNCC_QLP.resx">
       <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>

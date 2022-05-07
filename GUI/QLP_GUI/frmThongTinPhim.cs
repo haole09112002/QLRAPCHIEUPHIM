@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,6 +51,18 @@ namespace GUI.QLP_GUI
                 txtDienVienPhu.Text = phim.DienVienPhu;
                 txtDaoDien.Enabled = false;
                 txtDaoDien.Text = phim.DaoDien;
+                if(phim.AnhPhim !=null)
+                {
+                    MemoryStream memoryStream = new MemoryStream(phim.AnhPhim);
+                    if (memoryStream == null) MessageBox.Show("rong1");
+                    if(pBAnhPhim.Image != null) pBAnhPhim.Image.Dispose();
+                    pBAnhPhim.Image = Image.FromStream(memoryStream);
+
+                }
+                else if(phim.AnhPhim == null)
+                {
+                    pBAnhPhim.Image = null;
+                }
             }
         }
 
