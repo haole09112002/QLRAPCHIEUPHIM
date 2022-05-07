@@ -28,23 +28,24 @@ namespace DAL
 
         public List<LoaiNhaCungCapDTO> GetAllLoaiNhaCungCap()
         {
-            List<LoaiNhaCungCapDTO> dsLoaiNhaCungCap = new List<LoaiNhaCungCapDTO>();
+            List<LoaiNhaCungCapDTO> ds = new List<LoaiNhaCungCapDTO>();
             string query = "select * from LoaiNhaCungCap";
             foreach(DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
             {
-                dsLoaiNhaCungCap.Add(GetLoaiNhaCungCapByDataRow(i));
+                ds.Add(GetLoaiNhaCungCap(i));
             }
-            return dsLoaiNhaCungCap;
+            return ds;
         }
-        public LoaiNhaCungCapDTO GetLoaiNhaCungCapByDataRow(DataRow i)
+        public LoaiNhaCungCapDTO GetLoaiNhaCungCap(DataRow i)
         {
             return new LoaiNhaCungCapDTO
             { 
-                MaLoaiNhaCungCap = i["MaLoaiNCC"].ToString(),
+                MaLoaiNhaCungCap= i["MaLoaiNCC"].ToString(),
                 TenLoaiNhaCungCap = i["TenLoaiNCC"].ToString()
             };
 
         }
+       
 
     }
 }
