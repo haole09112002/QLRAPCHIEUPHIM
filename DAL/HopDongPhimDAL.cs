@@ -42,15 +42,30 @@ namespace DAL
         {
             return new HopDongPhimDTO()
             {
-                //MaNhaCungCap = i["MaNhaCungCap"].ToString(),
-                //MaPhim = i["MaPhim"].ToString(),
-                //NgayKiKetHD =   Convert.ToDateTime( i["NgayKiKetHD"]),
-                //SoLuong = Convert.ToInt32(i["SoLuong"]),
-                //DonViTinh = i["DonViTinh"].ToString(),
-                //GiaTien = Convert.ToDouble(i["GiaTien"]),
-                //NgayBatDauBanQuyen = Convert.ToDateTime(i["NgayBatDauBanQuyen"]),
-                //NgayKetThucBanQuyen = Convert.ToDateTime(i["NgayKetThucBanQuyen"]),
+                MaHopDong = i["MaHopDong"].ToString(),
+                MaPhim = i["MaPhim"].ToString(),
+                SoLuong = Convert.ToInt32(i["SoLuong"]),
+                DonViTinh = i["DonViTinh"].ToString(),
+                GiaTien = Convert.ToDouble(i["GiaTien"]),
+                NgayBatDauBanQuyen = Convert.ToDateTime(i["NgayBatDauBanQuyen"]),
+                NgayKetThucBanQuyen = Convert.ToDateTime(i["NgayKetThucBanQuyen"]),
             };
+        }
+        public void ThemHopDongPhim(HopDongPhimDTO hopDongPhim)
+        {
+            string query = "EXEC ThemHopDong @MaHopDong , @MaPhim , @NgayBatDauBanQuyen , @NgayKetThucBanQuyen , @Donvitinh , @SoLuong , @GiaTien";
+            object[] parameter = new object[] {hopDongPhim.MaHopDong, hopDongPhim.MaPhim,
+                hopDongPhim.NgayBatDauBanQuyen, hopDongPhim.NgayKetThucBanQuyen,
+                hopDongPhim.DonViTinh, hopDongPhim.SoLuong, hopDongPhim.GiaTien};
+            DBHelper.Instance.ExcuteNonQuery(query, parameter);
+        }
+        public void CapNhatHopDongPhim(HopDongPhimDTO hopDongPhim)
+        {
+            string query = "EXEC CapNhatHopDong @MaHopDong , @MaPhim , @NgayBatDauBanQuyen , @NgayKetThucBanQuyen , @Donvitinh , @SoLuong , @GiaTien";
+            object[] parameter = new object[] {hopDongPhim.MaHopDong, hopDongPhim.MaPhim,
+                hopDongPhim.NgayBatDauBanQuyen, hopDongPhim.NgayKetThucBanQuyen,
+                hopDongPhim.DonViTinh, hopDongPhim.SoLuong, hopDongPhim.GiaTien};
+            DBHelper.Instance.ExcuteNonQuery(query, parameter);
         }
     }
 }

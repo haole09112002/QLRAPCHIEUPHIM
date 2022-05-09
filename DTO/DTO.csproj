@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CBBItem.cs" />
+    <Compile Include="DeXuatDTO.cs" />
+    <Compile Include="DeXuatPhimDTO.cs" />
     <Compile Include="HopDongDTO.cs" />
     <Compile Include="HopDongPhimViewDTO.cs" />
     <Compile Include="HopDongThucAnDTO.cs" />

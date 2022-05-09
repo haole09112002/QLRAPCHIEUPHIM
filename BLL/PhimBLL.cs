@@ -116,5 +116,16 @@ namespace BLL
         {
             return String.Compare(((PhimViewDTO)o1).TheLoai, ((PhimViewDTO)o2).TheLoai) > 0;
         }
+
+        public List<CBBItem> GetCBBPhim()
+        {
+            List<CBBItem> data = new List<CBBItem>();
+            foreach (PhimDTO i in PhimDAL.Instance.GetALLPhim())
+            {
+                data.Add(new CBBItem
+                { Value = i.MaPhim, Text = i.TenPhim });
+            }
+            return data;
+        }
     }
 }

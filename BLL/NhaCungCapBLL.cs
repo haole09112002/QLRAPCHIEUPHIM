@@ -117,7 +117,6 @@ namespace BLL
                 }
             }
             return add;
-
         }
         public void AddUpdateNhaCungCap(NhaCungCapDTO nhaCungCap)
         {
@@ -210,10 +209,31 @@ namespace BLL
                 }
             return data;
         }
-
         public System.Data.DataTable GetSPByMaNhaCungCap(string maNhaCungCap)
         {
             return NhaCungCapDAL.Instance.GetSPByMaNhaCungCap(maNhaCungCap, GetNCCByMaNCC(maNhaCungCap).MaLoaiNhaCungCap);
+        }
+        public List<CBBItem> GetCBBNhaCungCap(string maLoaiNhaCungCap = "")
+        {
+            List<CBBItem> data = new List<CBBItem>();
+            if (maLoaiNhaCungCap == "")
+            {
+                foreach (NhaCungCapDTO i in NhaCungCapDAL.Instance.GetAllNhaCungCap())
+                {
+                        data.Add(new CBBItem
+                        { Value = i.MaNhaCungCap, Text = i.TenNhaCungCap });
+                }
+            }
+            else
+            {
+                foreach (NhaCungCapDTO i in NhaCungCapDAL.Instance.GetAllNhaCungCap())
+                {
+                    if (i.MaLoaiNhaCungCap == maLoaiNhaCungCap)
+                        data.Add(new CBBItem
+                        { Value = i.MaNhaCungCap, Text = i.TenNhaCungCap });
+                }
+            }    
+            return data;
         }
     }
 }

@@ -183,6 +183,26 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Close_24px {
+            get {
+                object obj = ResourceManager.GetObject("Close_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Close_26px {
+            get {
+                object obj = ResourceManager.GetObject("Close_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dexuat {
             get {
                 object obj = ResourceManager.GetObject("dexuat", resourceCulture);
@@ -756,6 +776,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap SubMenuFood {
             get {
                 object obj = ResourceManager.GetObject("SubMenuFood", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap subtract_24px {
+            get {
+                object obj = ResourceManager.GetObject("subtract_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

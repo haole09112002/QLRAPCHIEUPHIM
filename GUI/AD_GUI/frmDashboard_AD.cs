@@ -126,5 +126,15 @@ namespace GUI.AD_GUI
             AddControlsToPnCenter(ucCaNhan);
             changeColorButton(btnCaNhan);
         }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pbMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
