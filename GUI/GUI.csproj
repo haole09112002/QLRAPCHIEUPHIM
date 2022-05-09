@@ -1034,5 +1034,14 @@
   <ItemGroup>
     <None Include="Resources\NhaKho.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subtract_24px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

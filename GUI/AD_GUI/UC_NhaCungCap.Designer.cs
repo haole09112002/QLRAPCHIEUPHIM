@@ -47,6 +47,7 @@
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSanPham)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhaCungCap)).BeginInit();
@@ -56,16 +57,17 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.groupBox4);
-            this.panel1.Controls.Add(this.dgvDSSanPham);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(12, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(970, 582);
+            this.panel1.Size = new System.Drawing.Size(1303, 744);
             this.panel1.TabIndex = 0;
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.btnExcel);
             this.groupBox4.Controls.Add(this.btnSapXep);
             this.groupBox4.Controls.Add(this.btnTimKiem);
@@ -75,7 +77,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(957, 74);
+            this.groupBox4.Size = new System.Drawing.Size(1290, 74);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
             // 
@@ -87,7 +89,7 @@
             this.btnExcel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcel.Image = global::GUI.Properties.Resources.Download;
             this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcel.Location = new System.Drawing.Point(792, 23);
+            this.btnExcel.Location = new System.Drawing.Point(1134, 19);
             this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(148, 40);
@@ -121,7 +123,7 @@
             this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(399, 25);
+            this.btnTimKiem.Location = new System.Drawing.Point(425, 22);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(123, 36);
@@ -146,7 +148,7 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(546, 31);
+            this.txtTimKiem.Location = new System.Drawing.Point(572, 28);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(227, 28);
@@ -155,30 +157,35 @@
             // 
             // dgvDSSanPham
             // 
+            this.dgvDSSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDSSanPham.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvDSSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSSanPham.Location = new System.Drawing.Point(573, 116);
+            this.dgvDSSanPham.Location = new System.Drawing.Point(6, 25);
             this.dgvDSSanPham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDSSanPham.Name = "dgvDSSanPham";
             this.dgvDSSanPham.RowHeadersWidth = 51;
             this.dgvDSSanPham.RowTemplate.Height = 24;
-            this.dgvDSSanPham.Size = new System.Drawing.Size(384, 442);
+            this.dgvDSSanPham.Size = new System.Drawing.Size(622, 601);
             this.dgvDSSanPham.TabIndex = 13;
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.dgvDSSanPham);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(561, 84);
+            this.groupBox2.Location = new System.Drawing.Point(658, 110);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(403, 474);
+            this.groupBox2.Size = new System.Drawing.Size(636, 630);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Các sản phẩm cung cấp";
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.btnXemChiTiet);
             this.groupBox1.Controls.Add(this.dgvDSNhaCungCap);
@@ -188,7 +195,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(549, 494);
+            this.groupBox1.Size = new System.Drawing.Size(632, 656);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách nhà cung cấp";
@@ -235,7 +242,7 @@
             this.btnXemChiTiet.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemChiTiet.Image = global::GUI.Properties.Resources.Edit;
             this.btnXemChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXemChiTiet.Location = new System.Drawing.Point(327, 432);
+            this.btnXemChiTiet.Location = new System.Drawing.Point(368, 593);
             this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.btnXemChiTiet.Name = "btnXemChiTiet";
             this.btnXemChiTiet.Size = new System.Drawing.Size(139, 39);
@@ -255,7 +262,7 @@
             this.dgvDSNhaCungCap.RowHeadersWidth = 51;
             this.dgvDSNhaCungCap.RowTemplate.Height = 24;
             this.dgvDSNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSNhaCungCap.Size = new System.Drawing.Size(523, 335);
+            this.dgvDSNhaCungCap.Size = new System.Drawing.Size(580, 495);
             this.dgvDSNhaCungCap.TabIndex = 0;
             this.dgvDSNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSNhaCungCap_CellClick);
             this.dgvDSNhaCungCap.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSNhaCungCap_CellDoubleClick);
@@ -267,7 +274,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.btnThem.Location = new System.Drawing.Point(87, 435);
+            this.btnThem.Location = new System.Drawing.Point(83, 596);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(104, 36);
             this.btnThem.TabIndex = 27;
@@ -280,15 +287,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_NhaCungCap";
-            this.Size = new System.Drawing.Size(993, 597);
+            this.Size = new System.Drawing.Size(1333, 766);
             this.panel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSanPham)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhaCungCap)).EndInit();

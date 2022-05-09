@@ -126,7 +126,6 @@ namespace GUI.AD_GUI
             {
                 now.Add(row.Cells["MaNhaCungCap"].Value.ToString());
             }
-            //NhaCungCapBLL.Instance.ExportToExcelFromListEntity<NhaCungCapViewDTO>(NhaCungCapBLL.Instance.GetNhaCungCapViewDGV(now), @"D:\test", "test11");
            Helper.Instance.ExportDataToExcel<NhaCungCapDTO>(NhaCungCapBLL.Instance.GetNhaCungCapDGV(now));
         }
     }

@@ -28,7 +28,7 @@ namespace BLL
         {
 
         }
-        public List<CBBItem> GetCBBLoaiNhaCungCap()
+        public List<CBBItem> GetCBBLoaiHopDong()
         {
             List<CBBItem> data = new List<CBBItem>();
             foreach (LoaiHopDongDTO i in LoaiHopDongDAL.Instance.GetAllLoaiHopDong())

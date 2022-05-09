@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeXuatBLL.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="HopDongBLL.cs" />
     <Compile Include="LoaiHopDongBLL.cs" />

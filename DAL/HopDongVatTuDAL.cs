@@ -8,7 +8,7 @@ using System.Data;
 
 namespace DAL
 {
-    internal class HopDongVatTuDAL
+    public class HopDongVatTuDAL
     {
         private static HopDongVatTuDAL instance;
 
@@ -28,7 +28,7 @@ namespace DAL
         {
 
         }
-        public List<HopDongVatTuDTO> GetAllHopDongPhim()
+        public List<HopDongVatTuDTO> GetAllHopDongVatTu()
         {
             List<HopDongVatTuDTO> data = new List<HopDongVatTuDTO>();
             string query = "select * from HOP_DONG_VAT_TU";
@@ -42,12 +42,11 @@ namespace DAL
         {
             return new HopDongVatTuDTO()
             {
-                //MaNhaCungCap = i["MaNhaCungCap"].ToString(),
-                //MaVatTu = i["MaVatTu"].ToString(),
-                //NgayKiKetHD = Convert.ToDateTime(i["NgayKiKetHD"]),
-                //SoLuong = Convert.ToInt32(i["SoLuong"]),
-                //DonViTinh = i["DonViTinh"].ToString(),
-                //GiaTien = Convert.ToDouble(i["GiaTien"]),
+                MaHopDong = i["MaHopDong"].ToString(),
+                MaVatTu = i["MaVatTu"].ToString(),
+                SoLuong = Convert.ToInt32(i["SoLuong"]),
+                DonViTinh = i["DonViTinh"].ToString(),
+                GiaTien = Convert.ToDouble(i["GiaTien"]),
             };
         }
     }

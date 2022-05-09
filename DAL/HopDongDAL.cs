@@ -47,9 +47,13 @@ namespace DAL
                 MaNhaCungCap = i["MaNhaCungCap"].ToString(),
                 MaLoaiHopDong = i["MaLoaiHopDong"].ToString()
             };
-
         }
-    
+        public void ThemHopDong(HopDongDTO hopDong)
+        {
+            string query = "EXEC ThemHopDong @TenHopDong , @MaNhaCungCap , @NgayKiKetHD , @MaLoaiHopDong";
+            object[] parameter = {hopDong.TenHopDong, hopDong.MaNhaCungCap, hopDong.NgayKiKetHD, hopDong.MaLoaiHopDong };
+            DBHelper.Instance.ExcuteNonQuery(query, parameter);
+        }
 
     }
 }
