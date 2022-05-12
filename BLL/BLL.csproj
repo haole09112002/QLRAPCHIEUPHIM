@@ -47,8 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeXuatBLL.cs" />
+    <Compile Include="DeXuatPhimBLL.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="HopDongBLL.cs" />
+    <Compile Include="HopDongPhimBLL.cs" />
+    <Compile Include="HopDongThucAnBLL.cs" />
+    <Compile Include="HopDongVatTuBLL.cs" />
     <Compile Include="LoaiHopDongBLL.cs" />
     <Compile Include="LoaiNhaCungCapBLL.cs" />
     <Compile Include="NhaCungCapBLL.cs" />

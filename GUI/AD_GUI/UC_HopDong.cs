@@ -54,6 +54,11 @@ namespace GUI.AD_GUI
             cbSapXep.Items.AddRange(new string[] { "Tên A->Z", "Tên Z->A" });
             cbLoaiHopDong.SelectedItem = cbLoaiHopDong.Items[0];
             dgvDSHopDong.DataSource = HopDongBLL.Instance.GetListHopDongView(HopDongBLL.Instance.GetHopDongByMaLoaiHopDong());
+            dgvDSHopDong.Columns["MaHopDong"].HeaderText = "Mã hợp đồng";
+            dgvDSHopDong.Columns["TenHopDong"].HeaderText = "Tên hợp đồng";
+            dgvDSHopDong.Columns["TenNhaCungCap"].HeaderText = "Tên nhà cung cấp";
+            dgvDSHopDong.Columns["NgayKiKetHD"].HeaderText = "Ngày kí kết";
+            dgvDSHopDong.Columns["TenLoaiHopDong"].HeaderText = "Loại hợp đồng";
         }
         public void loadDGV(string maLoaiHopDong = "0", string txt = "")
         {

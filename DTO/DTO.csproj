@@ -54,6 +54,7 @@
     <Compile Include="LoaiNhaCungCapDTO.cs" />
     <Compile Include="NhaCungCapDTO.cs" />
     <Compile Include="NhaCungCapViewDTO.cs" />
+    <Compile Include="PhimCanTaoHopDongDTO.cs" />
     <Compile Include="PhimDTO.cs" />
     <Compile Include="PhimViewDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

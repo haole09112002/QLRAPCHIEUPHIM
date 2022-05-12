@@ -43,9 +43,37 @@ namespace DAL
             {
                 MaDeXuat = i["MaDeXuat"].ToString(),
                 MaPhim = i["MaPhim"].ToString(),
-                TinhTrang = Convert.ToBoolean(i["TinhTrang"]),
-                Noidung = i["Noidung"].ToString()
+                TinhTrang = i["TinhTrang"].ToString(),
+                Noidung = i["Noidung"].ToString(),
+                DonViTinh =i["DonViTinh"].ToString(),
+                SoLuong = Convert.ToInt32(i["SoLuong"])
             };
+        }
+        public List<PhimCanTaoHopDongDTO> DanhSachPhimCanThemHopDong()
+        {
+            List<PhimCanTaoHopDongDTO> data = new List<PhimCanTaoHopDongDTO>();
+            string query = "select ct.MaDeXuat, PHIM.MaPhim, PHIM.TenPhim, ct.SoLuong, ct.DonViTinh from CHI_TIET_DE_XUAT_PHIM ct inner join PHIM on PHIM.MaPhim = ct.MaPhim where ct.TinhTrang = '2'";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                data.Add(GetPhimCanTaoHopDongByDataRow(i));
+            }
+            return data;
+        }
+        public PhimCanTaoHopDongDTO GetPhimCanTaoHopDongByDataRow(DataRow i)
+        {
+            return new PhimCanTaoHopDongDTO
+            {
+                MaDeXuat = i["MaDeXuat"].ToString(),
+                MaPhim = i["MaPhim"].ToString(),
+                TenPhim = i["TenPhim"].ToString(),
+                SoLuong = Convert.ToInt32(i["SoLuong"]),
+                DonViTinh = i["DonViTinh"].ToString(),
+            };
+        }
+        public void CapNhatTinhTrangDeXuat(string maPhim, string maDeXuat,string tinhTrang)
+        {
+            string query = string.Format("Update CHI_TIET_DE_XUAT_PHIM set TinhTrang = '{0}' where MaDeXuat ='{1}' and MaPhim = '{2}' ", tinhTrang, maDeXuat, maPhim); 
+            DBHelper.Instance.ExcuteNonQuery(query);
         }
     }
 }

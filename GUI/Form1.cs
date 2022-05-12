@@ -8,18 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI.AD_GUI
+namespace GUI
 {
-    public partial class frmThemHopDongThucAn : Form
+    public partial class Form1 : Form
     {
-        public frmThemHopDongThucAn()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
+           
         }
     }
 }

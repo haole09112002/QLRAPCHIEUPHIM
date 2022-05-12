@@ -160,7 +160,7 @@
             this.button4.Text = "Thoát";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.tbnThoat_Click);
+            this.button4.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // button2
             // 

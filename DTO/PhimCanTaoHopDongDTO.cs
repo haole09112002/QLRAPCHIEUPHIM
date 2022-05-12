@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class DeXuatPhimDTO
+    public class PhimCanTaoHopDongDTO
     {
         private string maDeXuat;
         private string maPhim;
-        private string noidung;
-        private string tinhTrang;
+        private string tenPhim;
         private int soLuong;
         private string donViTinh;
+
         public string MaDeXuat { get => maDeXuat; set => maDeXuat = value; }
         public string MaPhim { get => maPhim; set => maPhim = value; }
-        public string Noidung { get => noidung; set => noidung = value; }
-        public string TinhTrang { get => tinhTrang; set => tinhTrang = value; }
+        public string TenPhim { get => tenPhim; set => tenPhim = value; }
         public int SoLuong { get => soLuong; set => soLuong = value; }
         public string DonViTinh { get => donViTinh; set => donViTinh = value; }
+        
     }
 }
