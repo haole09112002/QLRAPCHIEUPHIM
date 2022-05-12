@@ -10,6 +10,7 @@ namespace DTO
     {
 		private string maHopDong;
 		private string maPhim;
+        private string phienBan;
 		private DateTime ngayBatDauBanQuyen;
 		private DateTime ngayKetThucBanQuyen;
 		private string donViTinh;
@@ -23,6 +24,6 @@ namespace DTO
         public string DonViTinh { get => donViTinh; set => donViTinh = value; }
         public int SoLuong { get => soLuong; set => soLuong = value; }
         public double GiaTien { get => giaTien; set => giaTien = value; }
-        
+        public string PhienBan { get => phienBan; set => phienBan = value; }
     }
 }

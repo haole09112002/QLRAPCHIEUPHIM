@@ -28,7 +28,7 @@ namespace DAL
         {
 
         }
-        public List<HopDongThucAnDTO> GetAllHopDongPhim()
+        public List<HopDongThucAnDTO> GetAllHopDongThucAn()
         {
             List<HopDongThucAnDTO> data = new List<HopDongThucAnDTO>();
             string query = "select * from HOP_DONG_THUC_AN";
@@ -42,12 +42,11 @@ namespace DAL
         {
             return new HopDongThucAnDTO()
             {
-                //MaNhaCungCap = i["MaNhaCungCap"].ToString(),
-                //MaThucAn = i["MaThucAn"].ToString(),
-                //NgayKiKetHD = Convert.ToDateTime(i["NgayKiKetHD"]),
-                //SoLuong = Convert.ToInt32(i["SoLuong"]),
-                //DonViTinh = i["DonViTinh"].ToString(),
-                //GiaTien = Convert.ToDouble(i["GiaTien"]),
+                MaHopDong = i["MaHopDong"].ToString(),
+                MaThucAn = i["MaThucAn"].ToString(),
+                SoLuong = Convert.ToInt32(i["SoLuong"]),
+                DonViTinh = i["DonViTinh"].ToString(),
+                GiaTien = Convert.ToDouble(i["GiaTien"]),
             };
         }
     }

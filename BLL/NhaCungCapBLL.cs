@@ -117,7 +117,6 @@ namespace BLL
                 }
             }
             return add;
-
         }
         public void AddUpdateNhaCungCap(NhaCungCapDTO nhaCungCap)
         {
@@ -134,15 +133,20 @@ namespace BLL
         public string KiemTraDuLieu(NhaCungCapDTO nhaCungCap)
         {
 
-            if (nhaCungCap.TenNhaCungCap == "" ||
-                nhaCungCap.MaLoaiNhaCungCap == "" ||
-                nhaCungCap.MaSoThue == "" ||
-                nhaCungCap.Email == "" ||
-                nhaCungCap.SoDienThoai == "" ||
-                nhaCungCap.DiaChi == "")
-            {
-                return "Dữ liệu còn trống !";
-            }
+            if (nhaCungCap.TenNhaCungCap == "")
+                return "Tên Nhà cung cấp còn trống!";
+            if (nhaCungCap.MaLoaiNhaCungCap == "")
+                return "Loại nhà cung cấp còn trống!";
+            if (nhaCungCap.MaSoThue == "")
+                return "Mã số thuế còn trống!";
+            if (nhaCungCap.Email == "")
+                return "Email còn trống";
+            if(nhaCungCap.SoDienThoai == "")
+                return "Số điện thoại còn trống!";  
+            if(nhaCungCap.DiaChi == "")
+                return "Địa chỉ còn trống!";
+            if(nhaCungCap.TenGiamDoc == "")
+                return "Người đại diện còn trống!";  
             if (!CheckAddUpdateNhaCungCap(nhaCungCap))
             {
                 if (nhaCungCap.MaSoThue != GetNCCByMaNCC(nhaCungCap.MaNhaCungCap).MaSoThue && (int)NhaCungCapDAL.Instance.KiemTraMaSoThue(nhaCungCap) > 0)
@@ -210,10 +214,31 @@ namespace BLL
                 }
             return data;
         }
-
         public System.Data.DataTable GetSPByMaNhaCungCap(string maNhaCungCap)
         {
             return NhaCungCapDAL.Instance.GetSPByMaNhaCungCap(maNhaCungCap, GetNCCByMaNCC(maNhaCungCap).MaLoaiNhaCungCap);
+        }
+        public List<CBBItem> GetCBBNhaCungCap(string maLoaiNhaCungCap = "")
+        {
+            List<CBBItem> data = new List<CBBItem>();
+            if (maLoaiNhaCungCap == "")
+            {
+                foreach (NhaCungCapDTO i in NhaCungCapDAL.Instance.GetAllNhaCungCap())
+                {
+                        data.Add(new CBBItem
+                        { Value = i.MaNhaCungCap, Text = i.TenNhaCungCap });
+                }
+            }
+            else
+            {
+                foreach (NhaCungCapDTO i in NhaCungCapDAL.Instance.GetAllNhaCungCap())
+                {
+                    if (i.MaLoaiNhaCungCap == maLoaiNhaCungCap)
+                        data.Add(new CBBItem
+                        { Value = i.MaNhaCungCap, Text = i.TenNhaCungCap });
+                }
+            }    
+            return data;
         }
     }
 }

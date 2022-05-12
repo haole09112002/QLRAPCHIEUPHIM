@@ -92,5 +92,9 @@ namespace BLL
                 MessageBox.Show(ex.Message);
             }
         }
+        //public void AddToList<T>(List<T> list,T data)
+        //{
+        //    list.Add(data);
+        //}
     }
 }

@@ -33,6 +33,12 @@ namespace GUI.AD_GUI
             dgvDSNhaCungCap.Columns["MaSoThue"].HeaderText = "Mã số thuế";
             dgvDSNhaCungCap.Columns["SoDienThoai"].HeaderText = "Điện thoại";
             dgvDSNhaCungCap.Columns["TenLoaiNhaCungCap"].HeaderText = "Loại SP cung cấp";
+
+            dgvDSSanPham.Columns["MaPhim"].HeaderText = "Mã phim";
+            dgvDSSanPham.Columns["TenPhim"].HeaderText = "Tên phim";
+            dgvDSSanPham.Columns["SoLuong"].HeaderText = "Số lượng";
+            dgvDSSanPham.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+            dgvDSSanPham.Columns["GiaTien"].HeaderText = "Giá tiền(VND)";
         }
         public void loadDGVDanhSachNCC(string maLoaiNCC = "0", string txt = "" )
         {
@@ -126,7 +132,6 @@ namespace GUI.AD_GUI
             {
                 now.Add(row.Cells["MaNhaCungCap"].Value.ToString());
             }
-            //NhaCungCapBLL.Instance.ExportToExcelFromListEntity<NhaCungCapViewDTO>(NhaCungCapBLL.Instance.GetNhaCungCapViewDGV(now), @"D:\test", "test11");
            Helper.Instance.ExportDataToExcel<NhaCungCapDTO>(NhaCungCapBLL.Instance.GetNhaCungCapDGV(now));
         }
     }

@@ -10,7 +10,7 @@ Create table THE_LOAI_PHIM
 
 --Bang Loai Nha Cung Cap
 go
-Create table LoaiNhaCungCap(
+Create table LOAI_NHA_CUNG_CAP(
 	MaLoaiNCC varchar(6) primary key not null constraint IDLNCC default dbo.AUTO_IDLOAINCC(),
 	TenLoaiNCC nvarchar(40)
 )
@@ -20,12 +20,20 @@ go
 Create table NHA_CUNG_CAP(
 	MaNhaCungCap varchar(6) primary key not null constraint IDNCC default dbo.AUTO_IDNCC(),
 	TenNhaCungCap nvarchar(40),
-	MaSoThue varchar(15),
+	MaSoThue varchar(10),
 	DiaChi nvarchar(50),
 	Email varchar(50),
 	SoDienThoai varchar(15),
 	TenGiamDoc nvarchar(30),
-	MaLoaiNCC varchar(6) foreign key(MaLoaiNCC) references LoaiNhaCungCap
+	MaLoaiNCC varchar(6) foreign key(MaLoaiNCC) references LOAI_NHA_CUNG_CAP
+)
+go
+--Bang Hang san xuat phim
+
+Create table HANG_SAN_XUAT_PHIM(
+	MaHangSanXuatPhim varchar(9) primary key not null constraint IDHSXP default dbo.AUTO_IDHSXP(),
+	TenHangSanXuatPhim nvarchar(30),
+	Link text
 )
 go
 --Bang Phim
@@ -37,16 +45,30 @@ Create table PHIM(
 	ThoiLuong int,
 	QuocGia nvarchar(20),
 	NamSanXuat date,
-	TenHangPhim nvarchar(30),
 	DoTuoiXem int,
 	MaTheLoai varchar(6) foreign key(MaTheLoai) references THE_LOAI_PHIM,
 	NoiDung ntext,
-	DienVienChinh ntext,
-	DienVienPhu ntext,
-	DaoDien nvarchar(30)
+	MaHangSanXuatPhim varchar(9) foreign key(MaHangSanXuatPhim) references HANG_SAN_XUAT_PHIM
 )
 go
 
+--Bang Dien Vien,Dao dien
+Create table DIEN_VIEN_DAO_DIEN(
+	MaDienVienDaoDien varchar(9) primary key not null constraint IDDVDD default dbo.AUTO_IDDVDD(),
+	TenDienVienDaoDien nvarchar(30),
+	Link text
+)
+go
+--Bang Chi Tiet Dien Vien, Dao Dien Phim
+
+Create table CHI_TIET_DIEN_VIEN_DAO_DIEN_PHIM
+(
+	MaPhim varchar(6) foreign key(MaPhim) references PHIM,
+	MaDienVienDaoDien varchar(9) foreign key(MaDienVienDaoDien) references DIEN_VIEN_DAO_DIEN,
+	VaiTro varchar(1) --(1) dien vien chinh (2) dien vien phu (3) dao dien
+	constraint pk_CTDienVienDaoDien primary key(MaPhim,MaDienVienDaoDien)
+)
+go
 -- Bang Phong Chieu
 
 Create table PHONG_CHIEU(
@@ -204,7 +226,6 @@ Create table DE_XUAT(
 	MaNhanVien varchar(6) foreign key(MaNhanVien) references NHAN_VIEN,
 	NgayDeXuat Date,
 	MaLoaiDeXuat varchar(5) foreign key(MaLoaiDeXuat) references LOAI_DE_XUAT,
-	MaKho varchar(5) foreign key(MaKho) references KHO
 )
 go
 --Bang Chi Tiet De Xuat Phim
@@ -213,7 +234,9 @@ Create table CHI_TIET_DE_XUAT_PHIM(
 	MaDeXuat varchar(6) foreign key(MaDeXuat) references DE_XUAT,
 	MaPhim varchar(6) foreign key(MaPhim) references PHIM,
 	Noidung ntext,
-	TinhTrang bit,
+	SoLuong int,
+	DonViTinh nvarchar(20),
+	TinhTrang varchar(1),
 	constraint pk_CTDeXuatPhim primary key(MaDeXuat,MaPhim)
 )
 go
@@ -223,7 +246,9 @@ Create table CHI_TIET_DE_XUAT_TA(
 	MaDeXuat varchar(6) foreign key(MaDeXuat) references DE_XUAT,
 	MaThucAn varchar(6) foreign key(MaThucAn) references THUC_AN,
 	Noidung ntext,
-	TinhTrang bit,
+	SoLuong int,
+	DonViTinh nvarchar(20),
+	TinhTrang varchar(1),
 	constraint pk_CTDeXuatTA primary key(MaDeXuat,MaThucAn)
 )
 go
@@ -233,7 +258,9 @@ Create table CHI_TIET_DE_XUAT_VT(
 	MaDeXuat varchar(6) foreign key(MaDeXuat) references DE_XUAT,
 	MaVatTu varchar(6) foreign key(MaVatTu) references VAT_TU,
 	Noidung ntext,
-	TinhTrang bit,
+	SoLuong int,
+	DonViTinh nvarchar(20),
+	TinhTrang varchar(1),
 	constraint pk_CTDeXuatVT primary key(MaDeXuat,MaVatTu)
 )
 go
@@ -308,6 +335,7 @@ go
 Create table HOP_DONG_VAT_TU(
 	MaHopDong varchar(6) foreign key(MaHopDong) references HOP_DONG,
 	MaVatTu varchar(6) foreign key(MaVatTu) references VAT_TU,
+	MaNhaCungCap varchar(6) foreign key(MaNhaCungCap) references NHA_CUNG_CAP,
 	GiaTien money,
 	DonViTinh nvarchar(30),
 	SoLuong int,
@@ -319,22 +347,26 @@ go
 Create table HOP_DONG_THUC_AN(
 	MaHopDong varchar(6) foreign key(MaHopDong) references HOP_DONG,
 	MaThucAn varchar(6) foreign key(MaThucAn) references THUC_AN,
+	MaNhaCungCap varchar(6) foreign key(MaNhaCungCap) references NHA_CUNG_CAP,
 	GiaTien money,
 	DonViTinh nvarchar(30),
 	SoLuong int,
 	constraint pk_HopDongThucAn primary key(MaThucAn,MaHopDong)
 )
+go
 -- Bang Hop Dong Phim
 Create table HOP_DONG_PHIM(
 	MaHopDong varchar(6) foreign key(MaHopDong) references HOP_DONG,
 	MaPhim varchar(6) foreign key(MaPhim) references PHIM,
+	PhienBan varchar(1),			-- 0:Phiên bản mới nhất, 1: Phiên bản cũ .....
 	NgayBatDauBanQuyen date,
 	NgayKetThucBanQuyen date,
 	Donvitinh nvarchar(15),
 	SoLuong int,
 	GiaTien money,
-	constraint pk_HopDongPhim primary key(MaHopDong,MaPhim)
+	constraint pk_HopDongPhim primary key(MaHopDong,MaPhim, PhienBan)
 )
+
 go
 go
 --Bang Chi Tiet Cung Cap Phong Chieu

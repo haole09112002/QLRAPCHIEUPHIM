@@ -5,6 +5,7 @@ using System.Text;
 using DAL;
 using DTO;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace BLL
 {
@@ -29,12 +30,21 @@ namespace BLL
         {
 
         }
-        public List<HopDongDTO> GetAllHopDong(string txt = "")
+        public List<HopDongDTO> GetHopDongByMaLoaiHopDong(string maLoaiHopDong = "0", string txt = "")
         {
             List<HopDongDTO> data = new List<HopDongDTO>();
-            foreach(HopDongDTO i in HopDongDAL.Instance.GetAllHopDong())
+            if(maLoaiHopDong == "0")
+            foreach (HopDongDTO i in HopDongDAL.Instance.GetAllHopDong())
             {
-                if(i.TenHopDong.Contains(txt))
+                if (i.TenHopDong.Contains(txt))
+                {
+                    data.Add(i);
+                }
+            }
+            else
+            foreach (HopDongDTO i in HopDongDAL.Instance.GetAllHopDong())
+            {
+                if(i.MaLoaiHopDong == maLoaiHopDong && i.TenHopDong.Contains(txt))
                 {
                     data.Add(i);
                 }
@@ -77,6 +87,47 @@ namespace BLL
                 data.Add(GetHopDongViewByHopDongDTO(i));
             }
             return data;
+        }
+   
+        public HopDongDTO GetHopDongByMaHopDong(string maHopDong)
+        {
+            foreach (HopDongDTO i in HopDongDAL.Instance.GetAllHopDong())
+            {
+                if (i.MaHopDong == maHopDong)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+        
+        
+        //-------------------------------Hop_Dong
+        public void ThemHopDong(HopDongDTO hopDong)
+        {
+            if(hopDong.MaHopDong == "")
+            HopDongDAL.Instance.ThemHopDong(hopDong);
+        }
+        
+        //-------------------------------PHIM
+      
+        public string KiemTraDuLieuHopDong(HopDongDTO hd)
+        {
+            string txt = "";
+            if (hd.TenHopDong == "")
+                txt = "tên hợp đồng";
+            if(hd.MaNhaCungCap == "")
+                txt = "nhà cung cấp";
+            if (hd.NgayKiKetHD == null)
+                txt = "ngày kí kết";
+            if (txt != "")
+                return "Dữ liệu " + txt + " còn trống! Vui lòng kiểm tra lại!";
+            else
+                return null;
+        }
+        public string GetMaHopDongMoiNhat()
+        {
+            return HopDongDAL.Instance.GetMaHopDongMoiNhat();
         }
     }
 }

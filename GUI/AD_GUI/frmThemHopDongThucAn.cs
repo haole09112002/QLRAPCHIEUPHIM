@@ -17,7 +17,7 @@ namespace GUI.AD_GUI
             InitializeComponent();
         }
 
-        private void tbnThoat_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }

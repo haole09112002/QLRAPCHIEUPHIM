@@ -48,9 +48,10 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.dGVDSLCCT);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(23, 16);
+            this.panel1.Location = new System.Drawing.Point(26, 20);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(945, 579);
+            this.panel1.Size = new System.Drawing.Size(1288, 723);
             this.panel1.TabIndex = 0;
             // 
             // button2
@@ -61,10 +62,10 @@
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::GUI.Properties.Resources.Sort;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(522, 73);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(822, 91);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 38);
+            this.button2.Size = new System.Drawing.Size(138, 48);
             this.button2.TabIndex = 34;
             this.button2.Text = "    SẮP XẾP";
             this.button2.UseVisualStyleBackColor = false;
@@ -74,10 +75,10 @@
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(663, 79);
+            this.comboBox1.Location = new System.Drawing.Point(967, 100);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(265, 27);
+            this.comboBox1.Size = new System.Drawing.Size(298, 31);
             this.comboBox1.TabIndex = 33;
             // 
             // button7
@@ -88,10 +89,10 @@
             this.button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Image = global::GUI.Properties.Resources.SearchIcon;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(16, 75);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Location = new System.Drawing.Point(18, 94);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(123, 36);
+            this.button7.Size = new System.Drawing.Size(138, 45);
             this.button7.TabIndex = 32;
             this.button7.Text = "TÌM KIẾM";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,22 +101,24 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(158, 78);
+            this.textBox1.Location = new System.Drawing.Point(163, 100);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 28);
+            this.textBox1.Size = new System.Drawing.Size(295, 33);
             this.textBox1.TabIndex = 31;
             // 
             // dGVDSLCCT
             // 
+            this.dGVDSLCCT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVDSLCCT.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dGVDSLCCT.BackgroundColor = System.Drawing.Color.White;
             this.dGVDSLCCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVDSLCCT.Location = new System.Drawing.Point(16, 129);
+            this.dGVDSLCCT.Location = new System.Drawing.Point(18, 161);
             this.dGVDSLCCT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDSLCCT.Name = "dGVDSLCCT";
             this.dGVDSLCCT.RowHeadersWidth = 62;
             this.dGVDSLCCT.RowTemplate.Height = 28;
-            this.dGVDSLCCT.Size = new System.Drawing.Size(912, 428);
+            this.dGVDSLCCT.Size = new System.Drawing.Size(1247, 535);
             this.dGVDSLCCT.TabIndex = 30;
             // 
             // label1
@@ -123,22 +126,22 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Image = global::GUI.Properties.Resources.ScheduleTitle;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(261, 22);
+            this.label1.Location = new System.Drawing.Point(430, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(414, 25);
+            this.label1.Size = new System.Drawing.Size(491, 31);
             this.label1.TabIndex = 29;
             this.label1.Text = "DANH SÁCH LỊCH CHIẾU CHÍNH THỨC";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // UC_DanhSachLichChieuChinhThuc_QLP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_DanhSachLichChieuChinhThuc_QLP";
-            this.Size = new System.Drawing.Size(993, 613);
+            this.Size = new System.Drawing.Size(1333, 766);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDSLCCT)).EndInit();
