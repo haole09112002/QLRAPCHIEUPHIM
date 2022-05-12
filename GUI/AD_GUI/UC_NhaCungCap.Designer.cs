@@ -35,8 +35,8 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.cbSapXep = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.dgvDSSanPham = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvDSSanPham = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbLoaiNhaCungCap = new System.Windows.Forms.ComboBox();
@@ -46,8 +46,8 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSanPham)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSanPham)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhaCungCap)).BeginInit();
@@ -155,19 +155,6 @@
             this.txtTimKiem.TabIndex = 4;
             this.txtTimKiem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyDown);
             // 
-            // dgvDSSanPham
-            // 
-            this.dgvDSSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvDSSanPham.BackgroundColor = System.Drawing.Color.Snow;
-            this.dgvDSSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSSanPham.Location = new System.Drawing.Point(6, 25);
-            this.dgvDSSanPham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvDSSanPham.Name = "dgvDSSanPham";
-            this.dgvDSSanPham.RowHeadersWidth = 51;
-            this.dgvDSSanPham.RowTemplate.Height = 24;
-            this.dgvDSSanPham.Size = new System.Drawing.Size(622, 601);
-            this.dgvDSSanPham.TabIndex = 13;
-            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -181,6 +168,20 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Các sản phẩm cung cấp";
+            // 
+            // dgvDSSanPham
+            // 
+            this.dgvDSSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDSSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSSanPham.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvDSSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSSanPham.Location = new System.Drawing.Point(6, 25);
+            this.dgvDSSanPham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDSSanPham.Name = "dgvDSSanPham";
+            this.dgvDSSanPham.RowHeadersWidth = 51;
+            this.dgvDSSanPham.RowTemplate.Height = 24;
+            this.dgvDSSanPham.Size = new System.Drawing.Size(622, 601);
+            this.dgvDSSanPham.TabIndex = 13;
             // 
             // groupBox1
             // 
@@ -254,6 +255,7 @@
             // 
             // dgvDSNhaCungCap
             // 
+            this.dgvDSNhaCungCap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSNhaCungCap.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvDSNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSNhaCungCap.Location = new System.Drawing.Point(11, 78);
@@ -262,7 +264,7 @@
             this.dgvDSNhaCungCap.RowHeadersWidth = 51;
             this.dgvDSNhaCungCap.RowTemplate.Height = 24;
             this.dgvDSNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSNhaCungCap.Size = new System.Drawing.Size(580, 495);
+            this.dgvDSNhaCungCap.Size = new System.Drawing.Size(615, 495);
             this.dgvDSNhaCungCap.TabIndex = 0;
             this.dgvDSNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSNhaCungCap_CellClick);
             this.dgvDSNhaCungCap.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSNhaCungCap_CellDoubleClick);
@@ -296,8 +298,8 @@
             this.panel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSanPham)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSanPham)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhaCungCap)).EndInit();

@@ -43,13 +43,13 @@ namespace DAL
                 ThoiLuong = Convert.ToInt32(i["ThoiLuong"].ToString()),
                 QuocGia = i["QuocGia"].ToString(),
                 NamSanXuat = Convert.ToDateTime(i["NamSanXuat"].ToString()),
-                TenHangPhim = i["TenHangPhim"].ToString(),
+               // TenHangPhim = i["TenHangPhim"].ToString(),
                 DoTuoiXem = Convert.ToInt32(i["DoTuoiXem"].ToString()),
                 TheLoai = i["TenTheLoaiPhim"].ToString(),
                 NoiDung = i["NoiDung"].ToString(),
-                DienVienChinh = i["DienVienCHinh"].ToString(),
-                DienVienPhu = i["DienVienPhu"].ToString(),
-                DaoDien = i["DaoDien"].ToString()
+                //DienVienChinh = i["DienVienCHinh"].ToString(),
+                //DienVienPhu = i["DienVienPhu"].ToString(),
+                //DaoDien = i["DaoDien"].ToString()
             };
         }
     }

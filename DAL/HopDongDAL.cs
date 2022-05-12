@@ -54,6 +54,11 @@ namespace DAL
             object[] parameter = {hopDong.TenHopDong, hopDong.MaNhaCungCap, hopDong.NgayKiKetHD, hopDong.MaLoaiHopDong };
             DBHelper.Instance.ExcuteNonQuery(query, parameter);
         }
+        public string GetMaHopDongMoiNhat()
+        {
+            string query = "SELECT MAX(MaHopDong) as MaHopDong FROM HOP_DONG";
+            return (string)DBHelper.Instance.ExcuteScalar(query);
+        }
 
     }
 }

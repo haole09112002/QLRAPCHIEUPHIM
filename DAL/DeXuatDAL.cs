@@ -48,7 +48,7 @@ namespace DAL
                 MaLoaiDeXuat = i["MaLoaiDeXuat"].ToString(),
                 MaKho = i["MaKho"].ToString()
             };
-
         }
+        
     }
 }
