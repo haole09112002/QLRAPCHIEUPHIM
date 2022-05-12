@@ -18,11 +18,11 @@ namespace GUI.QLVT_GUI
             InitializeComponent();
             
         }
+        UCThongTinSanPhamQLVT ucThongTinSanPhamQLVT = new UCThongTinSanPhamQLVT();
         UCPhongChieuQLVT ucPhongChieuQLVT = new UCPhongChieuQLVT();
         UCMenuDeXuatQLVT ucMenuDeXuatQLVT = new UCMenuDeXuatQLVT();
         UCMenuNhaCungUngQLVT ucMenuNhaCungUngQLVT = new UCMenuNhaCungUngQLVT();
         UCMenuNhapXuatQLVT ucMenuNhapXuatQLVT = new UCMenuNhapXuatQLVT();
-        UCMenuSanPhamQLVT ucMenuSanPhamQLVT = new UCMenuSanPhamQLVT();
         UCHoSoCaNhanQLVT ucHoSoCaNhanQLVT = new UCHoSoCaNhanQLVT();
 
         private void changeColorButton(Button btn)
@@ -84,11 +84,7 @@ namespace GUI.QLVT_GUI
         private void btnSanPham_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
-            AddControlsToPnMenu(ucMenuSanPhamQLVT);
-            ucMenuSanPhamQLVT.setColor();
-            AddControlsToPnCenter(ucMenuSanPhamQLVT.ucThongTinThucAnQLVT);
-            ucMenuSanPhamQLVT.d = new UCMenuSanPhamQLVT.Mydel(AddControlsToPnCenter);
-            changeColorButton(btnSanPham);
+            AddControlsToPnCenter(ucThongTinSanPhamQLVT);
         }
 
         private void btnPhongChieu_Click(object sender, EventArgs e)

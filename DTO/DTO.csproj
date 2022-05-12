@@ -55,6 +55,10 @@
     <Compile Include="PhimDTO.cs" />
     <Compile Include="PhimViewDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThucAnDTO.cs" />
+    <Compile Include="ThucAnViewDTO.cs" />
+    <Compile Include="VatTuDTO.cs" />
+    <Compile Include="VatTuViewDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
