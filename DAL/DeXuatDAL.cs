@@ -49,6 +49,6 @@ namespace DAL
                 MaKho = i["MaKho"].ToString()
             };
         }
-        
+
+        }
     }
-}

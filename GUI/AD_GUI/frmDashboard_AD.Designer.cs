@@ -75,7 +75,7 @@
             this.pnLeft.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pnLeft.Location = new System.Drawing.Point(0, 0);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(240, 875);
+            this.pnLeft.Size = new System.Drawing.Size(221, 706);
             this.pnLeft.TabIndex = 1;
             // 
             // pictureBox2

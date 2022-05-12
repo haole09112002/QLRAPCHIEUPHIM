@@ -52,7 +52,6 @@ begin
 	)
 	if(@MaLoaiNhaCungCap = 'LNCC03')
 	(
-		
 		select THUC_AN.MaThucAn, THUC_AN.TenThucAn, ct.SoLuong, ct.DonViTinh, ct.GiaTien
 		from HOP_DONG_THUC_AN ct, THUC_AN,  HOP_DONG
 		where  ct.MaHopDong = HOP_DONG.MaHopDong  and THUC_AN.MaThucAn =ct.MaThucAn and HOP_DONG.MaNhaCungCap =  @MaNhaCungCap

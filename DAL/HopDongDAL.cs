@@ -59,6 +59,7 @@ namespace DAL
             string query = "SELECT MAX(MaHopDong) as MaHopDong FROM HOP_DONG";
             return (string)DBHelper.Instance.ExcuteScalar(query);
         }
+    
 
     }
 }
