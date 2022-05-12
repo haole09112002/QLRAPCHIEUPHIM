@@ -912,14 +912,6 @@
     <None Include="Resources\NhaKho.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{1ca149db-4213-4f61-a64e-9352059ea6aa}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
     <None Include="Resources\shutdown_40px.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1080,6 +1072,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\subtract_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{1ca149db-4213-4f61-a64e-9352059ea6aa}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
