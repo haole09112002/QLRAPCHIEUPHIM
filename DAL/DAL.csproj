@@ -43,10 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietDienVienDaoDienPhimDAL.cs" />
     <Compile Include="DBHelper.cs" />
+    <Compile Include="DienVienDaoDienDAL.cs" />
+    <Compile Include="HangSanXuatPhimDAL.cs" />
+    <Compile Include="KhungGioChieuDAL.cs" />
+    <Compile Include="LichChieuDAL.cs" />
     <Compile Include="LoaiNhaCungCapDAL.cs" />
     <Compile Include="NhaCungCapDAL.cs" />
     <Compile Include="PhimDAL.cs" />
+    <Compile Include="PhongChieuDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheLoaiPhimDAL.cs" />
   </ItemGroup>

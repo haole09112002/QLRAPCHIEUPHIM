@@ -34,34 +34,36 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.gBMoTaPhim = new System.Windows.Forms.GroupBox();
-            this.txtTheLoai = new System.Windows.Forms.TextBox();
-            this.txtDienVienPhu = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.dGVDaoDien = new System.Windows.Forms.DataGridView();
+            this.dGVDienVienPhu = new System.Windows.Forms.DataGridView();
+            this.dGVDienVienChinh = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtDienVienChinh = new System.Windows.Forms.TextBox();
             this.rtxtNoiDung = new System.Windows.Forms.RichTextBox();
             this.gBThongTinPhim = new System.Windows.Forms.GroupBox();
+            this.txtDoTuoiXem = new System.Windows.Forms.TextBox();
             this.pBAnhPhim = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.cBTheLoai = new System.Windows.Forms.ComboBox();
+            this.dTPNamSanXuat = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtDaoDien = new System.Windows.Forms.TextBox();
-            this.cBDoTuoiXem = new System.Windows.Forms.ComboBox();
             this.cBQuocGia = new System.Windows.Forms.ComboBox();
             this.txtThoiLuong = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dTPNamSanXuat = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.gBMoTaPhim.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDaoDien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDienVienPhu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDienVienChinh)).BeginInit();
             this.gBThongTinPhim.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).BeginInit();
             this.panel2.SuspendLayout();
@@ -96,7 +98,7 @@
             this.panel1.Location = new System.Drawing.Point(14, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1192, 730);
+            this.panel1.Size = new System.Drawing.Size(1192, 842);
             this.panel1.TabIndex = 20;
             // 
             // btnHuy
@@ -107,7 +109,7 @@
             this.btnHuy.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.Black;
             this.btnHuy.Image = global::GUI.Properties.Resources.Logout_26px;
-            this.btnHuy.Location = new System.Drawing.Point(246, 661);
+            this.btnHuy.Location = new System.Drawing.Point(236, 791);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(117, 45);
@@ -124,7 +126,7 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = global::GUI.Properties.Resources.save_26px;
-            this.btnLuu.Location = new System.Drawing.Point(868, 662);
+            this.btnLuu.Location = new System.Drawing.Point(878, 791);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(117, 45);
@@ -136,64 +138,80 @@
             // 
             // gBMoTaPhim
             // 
-            this.gBMoTaPhim.Controls.Add(this.pBAnhPhim);
-            this.gBMoTaPhim.Controls.Add(this.label5);
-            this.gBMoTaPhim.Controls.Add(this.dateTimePicker1);
-            this.gBMoTaPhim.Controls.Add(this.txtTheLoai);
-            this.gBMoTaPhim.Controls.Add(this.txtDienVienPhu);
-            this.gBMoTaPhim.Controls.Add(this.label14);
+            this.gBMoTaPhim.Controls.Add(this.dGVDaoDien);
+            this.gBMoTaPhim.Controls.Add(this.dGVDienVienPhu);
+            this.gBMoTaPhim.Controls.Add(this.dGVDienVienChinh);
+            this.gBMoTaPhim.Controls.Add(this.label10);
             this.gBMoTaPhim.Controls.Add(this.label13);
             this.gBMoTaPhim.Controls.Add(this.label12);
             this.gBMoTaPhim.Controls.Add(this.label11);
-            this.gBMoTaPhim.Controls.Add(this.txtDienVienChinh);
             this.gBMoTaPhim.Controls.Add(this.rtxtNoiDung);
             this.gBMoTaPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.gBMoTaPhim.Location = new System.Drawing.Point(644, 71);
             this.gBMoTaPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBMoTaPhim.Name = "gBMoTaPhim";
             this.gBMoTaPhim.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gBMoTaPhim.Size = new System.Drawing.Size(528, 584);
+            this.gBMoTaPhim.Size = new System.Drawing.Size(528, 714);
             this.gBMoTaPhim.TabIndex = 20;
             this.gBMoTaPhim.TabStop = false;
             this.gBMoTaPhim.Text = "MÔ TẢ PHIM";
             // 
-            // txtTheLoai
+            // dGVDaoDien
             // 
-            this.txtTheLoai.BackColor = System.Drawing.Color.White;
-            this.txtTheLoai.Location = new System.Drawing.Point(11, 363);
-            this.txtTheLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTheLoai.Name = "txtTheLoai";
-            this.txtTheLoai.Size = new System.Drawing.Size(511, 33);
-            this.txtTheLoai.TabIndex = 35;
+            this.dGVDaoDien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVDaoDien.BackgroundColor = System.Drawing.Color.White;
+            this.dGVDaoDien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVDaoDien.Location = new System.Drawing.Point(13, 524);
+            this.dGVDaoDien.Name = "dGVDaoDien";
+            this.dGVDaoDien.RowHeadersWidth = 62;
+            this.dGVDaoDien.RowTemplate.Height = 28;
+            this.dGVDaoDien.Size = new System.Drawing.Size(509, 106);
+            this.dGVDaoDien.TabIndex = 41;
             // 
-            // txtDienVienPhu
+            // dGVDienVienPhu
             // 
-            this.txtDienVienPhu.BackColor = System.Drawing.Color.White;
-            this.txtDienVienPhu.Location = new System.Drawing.Point(11, 295);
-            this.txtDienVienPhu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDienVienPhu.Name = "txtDienVienPhu";
-            this.txtDienVienPhu.Size = new System.Drawing.Size(511, 33);
-            this.txtDienVienPhu.TabIndex = 34;
+            this.dGVDienVienPhu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVDienVienPhu.BackgroundColor = System.Drawing.Color.White;
+            this.dGVDienVienPhu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVDienVienPhu.Location = new System.Drawing.Point(13, 370);
+            this.dGVDienVienPhu.Name = "dGVDienVienPhu";
+            this.dGVDienVienPhu.RowHeadersWidth = 62;
+            this.dGVDienVienPhu.RowTemplate.Height = 28;
+            this.dGVDienVienPhu.Size = new System.Drawing.Size(509, 106);
+            this.dGVDienVienPhu.TabIndex = 40;
             // 
-            // label14
+            // dGVDienVienChinh
             // 
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Image = global::GUI.Properties.Resources.NhapXuat;
-            this.label14.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label14.Location = new System.Drawing.Point(8, 330);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(120, 31);
-            this.label14.TabIndex = 33;
-            this.label14.Text = "Thể loại";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dGVDienVienChinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVDienVienChinh.BackgroundColor = System.Drawing.Color.White;
+            this.dGVDienVienChinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVDienVienChinh.Location = new System.Drawing.Point(13, 233);
+            this.dGVDienVienChinh.Name = "dGVDienVienChinh";
+            this.dGVDienVienChinh.RowHeadersWidth = 62;
+            this.dGVDienVienChinh.RowTemplate.Height = 28;
+            this.dGVDienVienChinh.Size = new System.Drawing.Size(509, 106);
+            this.dGVDienVienChinh.TabIndex = 39;
+            this.dGVDienVienChinh.Click += new System.EventHandler(this.dGVDienVienChinh_Click);
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Image = global::GUI.Properties.Resources.DienVien;
+            this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label10.Location = new System.Drawing.Point(15, 487);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(129, 34);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Đạo diễn";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Image = global::GUI.Properties.Resources.DienVien;
             this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label13.Location = new System.Drawing.Point(8, 267);
+            this.label13.Location = new System.Drawing.Point(8, 342);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(174, 25);
@@ -227,15 +245,6 @@
             this.label11.Text = "Nội dung";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtDienVienChinh
-            // 
-            this.txtDienVienChinh.BackColor = System.Drawing.Color.White;
-            this.txtDienVienChinh.Location = new System.Drawing.Point(11, 232);
-            this.txtDienVienChinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDienVienChinh.Name = "txtDienVienChinh";
-            this.txtDienVienChinh.Size = new System.Drawing.Size(511, 33);
-            this.txtDienVienChinh.TabIndex = 25;
-            // 
             // rtxtNoiDung
             // 
             this.rtxtNoiDung.BackColor = System.Drawing.Color.White;
@@ -248,16 +257,18 @@
             // 
             // gBThongTinPhim
             // 
+            this.gBThongTinPhim.Controls.Add(this.txtDoTuoiXem);
+            this.gBThongTinPhim.Controls.Add(this.pBAnhPhim);
+            this.gBThongTinPhim.Controls.Add(this.cBTheLoai);
             this.gBThongTinPhim.Controls.Add(this.dTPNamSanXuat);
-            this.gBThongTinPhim.Controls.Add(this.label10);
+            this.gBThongTinPhim.Controls.Add(this.label5);
             this.gBThongTinPhim.Controls.Add(this.label9);
+            this.gBThongTinPhim.Controls.Add(this.label14);
             this.gBThongTinPhim.Controls.Add(this.label4);
             this.gBThongTinPhim.Controls.Add(this.label8);
             this.gBThongTinPhim.Controls.Add(this.label7);
             this.gBThongTinPhim.Controls.Add(this.label6);
-            this.gBThongTinPhim.Controls.Add(this.txtDaoDien);
             this.gBThongTinPhim.Controls.Add(this.txtHangSanXuat);
-            this.gBThongTinPhim.Controls.Add(this.cBDoTuoiXem);
             this.gBThongTinPhim.Controls.Add(this.cBQuocGia);
             this.gBThongTinPhim.Controls.Add(this.txtThoiLuong);
             this.gBThongTinPhim.Controls.Add(this.label1);
@@ -267,41 +278,57 @@
             this.gBThongTinPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBThongTinPhim.Name = "gBThongTinPhim";
             this.gBThongTinPhim.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gBThongTinPhim.Size = new System.Drawing.Size(619, 584);
+            this.gBThongTinPhim.Size = new System.Drawing.Size(619, 714);
             this.gBThongTinPhim.TabIndex = 18;
             this.gBThongTinPhim.TabStop = false;
             this.gBThongTinPhim.Text = "THÔNG TIN PHIM";
             // 
+            // txtDoTuoiXem
+            // 
+            this.txtDoTuoiXem.BackColor = System.Drawing.Color.White;
+            this.txtDoTuoiXem.Location = new System.Drawing.Point(227, 295);
+            this.txtDoTuoiXem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDoTuoiXem.Name = "txtDoTuoiXem";
+            this.txtDoTuoiXem.Size = new System.Drawing.Size(380, 33);
+            this.txtDoTuoiXem.TabIndex = 32;
+            // 
             // pBAnhPhim
             // 
-            this.pBAnhPhim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pBAnhPhim.Location = new System.Drawing.Point(234, 419);
+            this.pBAnhPhim.BackColor = System.Drawing.Color.White;
+            this.pBAnhPhim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBAnhPhim.Location = new System.Drawing.Point(286, 487);
             this.pBAnhPhim.Name = "pBAnhPhim";
-            this.pBAnhPhim.Size = new System.Drawing.Size(160, 148);
+            this.pBAnhPhim.Size = new System.Drawing.Size(187, 198);
             this.pBAnhPhim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBAnhPhim.TabIndex = 37;
             this.pBAnhPhim.TabStop = false;
             this.pBAnhPhim.Click += new System.EventHandler(this.pBAnhPhim_Click);
             // 
-            // label10
+            // cBTheLoai
             // 
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Image = global::GUI.Properties.Resources.DienVien;
-            this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label10.Location = new System.Drawing.Point(24, 354);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(129, 34);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "Đạo diễn";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cBTheLoai.BackColor = System.Drawing.Color.White;
+            this.cBTheLoai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBTheLoai.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBTheLoai.FormattingEnabled = true;
+            this.cBTheLoai.Location = new System.Drawing.Point(227, 362);
+            this.cBTheLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBTheLoai.Name = "cBTheLoai";
+            this.cBTheLoai.Size = new System.Drawing.Size(381, 31);
+            this.cBTheLoai.TabIndex = 32;
+            // 
+            // dTPNamSanXuat
+            // 
+            this.dTPNamSanXuat.Location = new System.Drawing.Point(227, 423);
+            this.dTPNamSanXuat.Name = "dTPNamSanXuat";
+            this.dTPNamSanXuat.Size = new System.Drawing.Size(380, 33);
+            this.dTPNamSanXuat.TabIndex = 31;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Image = global::GUI.Properties.Resources.NhapXuat;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(20, 419);
+            this.label5.Location = new System.Drawing.Point(52, 487);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 31);
@@ -321,6 +348,19 @@
             this.label9.TabIndex = 29;
             this.label9.Text = "Độ tuổi xem";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Image = global::GUI.Properties.Resources.NhapXuat;
+            this.label14.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label14.Location = new System.Drawing.Point(24, 360);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(120, 31);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Thể loại";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
@@ -343,7 +383,7 @@
             this.label8.Location = new System.Drawing.Point(24, 419);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(173, 34);
+            this.label8.Size = new System.Drawing.Size(184, 34);
             this.label8.TabIndex = 27;
             this.label8.Text = "Năm sản xuất";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -373,35 +413,140 @@
             this.label6.Text = "Thời lượng";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtDaoDien
-            // 
-            this.txtDaoDien.BackColor = System.Drawing.Color.White;
-            this.txtDaoDien.Location = new System.Drawing.Point(227, 358);
-            this.txtDaoDien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDaoDien.Name = "txtDaoDien";
-            this.txtDaoDien.Size = new System.Drawing.Size(382, 33);
-            this.txtDaoDien.TabIndex = 24;
-            // 
-            // cBDoTuoiXem
-            // 
-            this.cBDoTuoiXem.BackColor = System.Drawing.Color.White;
-            this.cBDoTuoiXem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cBDoTuoiXem.FormattingEnabled = true;
-            this.cBDoTuoiXem.Items.AddRange(new object[] {
-            "18"});
-            this.cBDoTuoiXem.Location = new System.Drawing.Point(227, 295);
-            this.cBDoTuoiXem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cBDoTuoiXem.Name = "cBDoTuoiXem";
-            this.cBDoTuoiXem.Size = new System.Drawing.Size(382, 31);
-            this.cBDoTuoiXem.TabIndex = 22;
-            // 
             // cBQuocGia
             // 
             this.cBQuocGia.BackColor = System.Drawing.Color.White;
             this.cBQuocGia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBQuocGia.DropDownHeight = 300;
+            this.cBQuocGia.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBQuocGia.FormattingEnabled = true;
+            this.cBQuocGia.IntegralHeight = false;
             this.cBQuocGia.Items.AddRange(new object[] {
-            "Viet Nam"});
+            "Ả Rập",
+            "Ả Rập Xê Út",
+            "Afghanistan",
+            "Ai Cập",
+            "Albania Bosnia",
+            "Algeria",
+            "Ấn Độ",
+            "Andorra",
+            "Angola",
+            "Anh",
+            "Áo",
+            "Armenia",
+            "Australia, Fiji",
+            "Azerbaijan",
+            "Ba Lan",
+            "Bahrain",
+            "Bangladesh",
+            "Belarus, Romania",
+            "Bhutan",
+            "Bỉ",
+            "Bồ Đào Nha",
+            "Botswana",
+            "Brunei",
+            "Bulgaria",
+            "Cameroon",
+            "Campuchia",
+            "CH Séc",
+            "Chad",
+            "Chireland",
+            "Cộng hòa Congo",
+            "Cộng hòa dân chủ Congo Gabon",
+            "Cộng hòa Séc",
+            "Cộng hòa Trung Phi",
+            "Croatia",
+            "Đài Loan",
+            "Đan Mạch",
+            "Đông Timor",
+            "Đức",
+            "Estonia",
+            "Georgia",
+            "Guinea Xích đạo",
+            "Hà Lan",
+            "Hàn Quốc",
+            "Herzegovina",
+            "Hungary",
+            "Hy Lạp",
+            "Iceland",
+            "Indonesia",
+            "Iran",
+            "Iraq",
+            "Israel",
+            "Jordan",
+            "Kazakhstan",
+            "Kiribati",
+            "Kuwait",
+            "Kyrgyzstan",
+            "Lào",
+            "Latvia",
+            "Lesotho",
+            "Liban",
+            "Libya",
+            "Liechtenstein",
+            "Lithuania",
+            "Luxembourg",
+            "Macedonia",
+            "Malaysia",
+            "Maldives",
+            "MaltaMontenegro",
+            "Ma-rốc",
+            "Marshall Islands",
+            "Micronesia",
+            "Moldova",
+            "Monaco",
+            "Mông Cổ",
+            "Myanmar",
+            "Na Uy",
+            "Nam Phi",
+            "Namibia",
+            "Nauru",
+            "Nepal",
+            "New Zealand",
+            "Nga",
+            "Nhật Bản",
+            "Oman",
+            "Pakistan",
+            "Palau",
+            "Palestine",
+            "Papua New Guinea",
+            "Phần Lan",
+            "Pháp",
+            "Philippines",
+            "Príncipe Chad",
+            "Qatar",
+            "Samoa",
+            "San Marino",
+            "São Tomé",
+            "Serbia",
+            "Singapore",
+            "Slovakia",
+            "Slovenia",
+            "Solomon Islands",
+            "Sri, Lanka",
+            "Sudan",
+            "Swaziland",
+            "Syria",
+            "Tajikistan",
+            "Tây Ban Nha",
+            "Tây Sahara",
+            "Thái Lan",
+            "Thổ Nhĩ Kỳ",
+            "Thuỵ Điển",
+            "Thuỵ Sĩ",
+            "Tonga",
+            "Triều Tiên",
+            "Trung Quốc",
+            "Tunisia",
+            "Turkmenistan",
+            "Tuvalu",
+            "Ukraine",
+            "Uzbekistan",
+            "Vanuatu",
+            "Vatican",
+            "Việt Nam",
+            "Ý",
+            "Yemen"});
             this.cBQuocGia.Location = new System.Drawing.Point(227, 160);
             this.cBQuocGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBQuocGia.Name = "cBQuocGia";
@@ -452,26 +597,12 @@
             this.lbName.Text = " Thêm Phim";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(-138, 161);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(120, 33);
-            this.dateTimePicker1.TabIndex = 38;
-            // 
-            // dTPNamSanXuat
-            // 
-            this.dTPNamSanXuat.Location = new System.Drawing.Point(227, 423);
-            this.dTPNamSanXuat.Name = "dTPNamSanXuat";
-            this.dTPNamSanXuat.Size = new System.Drawing.Size(380, 33);
-            this.dTPNamSanXuat.TabIndex = 31;
-            // 
             // frm_DeXuatPhim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1217, 754);
+            this.ClientSize = new System.Drawing.Size(1219, 875);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -480,7 +611,9 @@
             this.Text = "frm_TaoDeXuat";
             this.panel1.ResumeLayout(false);
             this.gBMoTaPhim.ResumeLayout(false);
-            this.gBMoTaPhim.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDaoDien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDienVienPhu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDienVienChinh)).EndInit();
             this.gBThongTinPhim.ResumeLayout(false);
             this.gBThongTinPhim.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).EndInit();
@@ -498,11 +631,8 @@
         private System.Windows.Forms.GroupBox gBThongTinPhim;
         private System.Windows.Forms.ComboBox cBQuocGia;
         private System.Windows.Forms.TextBox txtThoiLuong;
-        private System.Windows.Forms.TextBox txtDaoDien;
-        private System.Windows.Forms.ComboBox cBDoTuoiXem;
         private System.Windows.Forms.GroupBox gBMoTaPhim;
         private System.Windows.Forms.RichTextBox rtxtNoiDung;
-        private System.Windows.Forms.TextBox txtDienVienChinh;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
@@ -516,11 +646,13 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtDienVienPhu;
-        private System.Windows.Forms.TextBox txtTheLoai;
         private System.Windows.Forms.PictureBox pBAnhPhim;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dTPNamSanXuat;
+        private System.Windows.Forms.ComboBox cBTheLoai;
+        private System.Windows.Forms.TextBox txtDoTuoiXem;
+        private System.Windows.Forms.DataGridView dGVDaoDien;
+        private System.Windows.Forms.DataGridView dGVDienVienPhu;
+        private System.Windows.Forms.DataGridView dGVDienVienChinh;
     }
 }

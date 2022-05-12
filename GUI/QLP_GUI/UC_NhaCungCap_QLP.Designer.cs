@@ -53,7 +53,7 @@
             this.panel1.Location = new System.Drawing.Point(18, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1080, 734);
+            this.panel1.Size = new System.Drawing.Size(1300, 734);
             this.panel1.TabIndex = 2;
             // 
             // btnXemChiTiet
@@ -64,7 +64,7 @@
             this.btnXemChiTiet.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemChiTiet.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnXemChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXemChiTiet.Location = new System.Drawing.Point(432, 672);
+            this.btnXemChiTiet.Location = new System.Drawing.Point(585, 667);
             this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnXemChiTiet.Name = "btnXemChiTiet";
             this.btnXemChiTiet.Size = new System.Drawing.Size(166, 45);
@@ -82,7 +82,7 @@
             this.btnSapXep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSapXep.Image = global::GUI.Properties.Resources.Sort;
             this.btnSapXep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSapXep.Location = new System.Drawing.Point(596, 56);
+            this.btnSapXep.Location = new System.Drawing.Point(835, 57);
             this.btnSapXep.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSapXep.Name = "btnSapXep";
             this.btnSapXep.Size = new System.Drawing.Size(138, 48);
@@ -99,7 +99,7 @@
             this.cBSapXep.Items.AddRange(new object[] {
             "Tên A->Z",
             "Tên Z->A"});
-            this.cBSapXep.Location = new System.Drawing.Point(755, 64);
+            this.cBSapXep.Location = new System.Drawing.Point(980, 67);
             this.cBSapXep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBSapXep.Name = "cBSapXep";
             this.cBSapXep.Size = new System.Drawing.Size(298, 31);
@@ -137,9 +137,9 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Image = global::GUI.Properties.Resources.Nhacungcap;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(360, 11);
+            this.label1.Location = new System.Drawing.Point(455, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(429, 31);
+            this.label1.Size = new System.Drawing.Size(441, 31);
             this.label1.TabIndex = 43;
             this.label1.Text = "DANH SÁCH NHÀ CUNG CẤP PHIM";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -154,7 +154,7 @@
             this.dGVNhaCungCapPhim.Name = "dGVNhaCungCapPhim";
             this.dGVNhaCungCapPhim.RowHeadersWidth = 62;
             this.dGVNhaCungCapPhim.RowTemplate.Height = 28;
-            this.dGVNhaCungCapPhim.Size = new System.Drawing.Size(1026, 535);
+            this.dGVNhaCungCapPhim.Size = new System.Drawing.Size(1251, 535);
             this.dGVNhaCungCapPhim.TabIndex = 40;
             // 
             // UC_NhaCungCap_QLP
@@ -165,7 +165,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_NhaCungCap_QLP";
-            this.Size = new System.Drawing.Size(1117, 766);
+            this.Size = new System.Drawing.Size(1333, 766);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVNhaCungCapPhim)).EndInit();

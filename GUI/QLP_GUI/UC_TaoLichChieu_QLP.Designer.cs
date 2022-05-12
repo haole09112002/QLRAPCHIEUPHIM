@@ -55,6 +55,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).BeginInit();
+            this.gBDanhSachPhongChieu.SuspendLayout();
             this.gBKhungGioChieu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVKhungGioChieu)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +71,6 @@
             this.panel1.Controls.Add(this.rBDSPChieu);
             this.panel1.Controls.Add(this.rBDSPhim);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.dGVDanhSachPC);
             this.panel1.Controls.Add(this.dGVDanhSachPhim);
             this.panel1.Controls.Add(this.gBDanhSachPhim);
             this.panel1.Controls.Add(this.gBDanhSachPhongChieu);
@@ -78,7 +78,7 @@
             this.panel1.Location = new System.Drawing.Point(14, 16);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1093, 733);
+            this.panel1.Size = new System.Drawing.Size(1297, 733);
             this.panel1.TabIndex = 0;
             // 
             // label5
@@ -118,7 +118,7 @@
             this.button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Image = global::GUI.Properties.Resources.SearchIcon;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(943, 499);
+            this.button7.Location = new System.Drawing.Point(1135, 498);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(138, 45);
@@ -134,7 +134,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = global::GUI.Properties.Resources.save_26px;
-            this.button3.Location = new System.Drawing.Point(909, 652);
+            this.button3.Location = new System.Drawing.Point(1135, 652);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 45);
@@ -146,10 +146,10 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(721, 504);
+            this.textBox2.Location = new System.Drawing.Point(738, 504);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(209, 33);
+            this.textBox2.Size = new System.Drawing.Size(390, 33);
             this.textBox2.TabIndex = 52;
             // 
             // rBDSPChieu
@@ -158,7 +158,7 @@
             this.rBDSPChieu.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rBDSPChieu.Image = global::GUI.Properties.Resources.MovieRoom;
             this.rBDSPChieu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rBDSPChieu.Location = new System.Drawing.Point(721, 598);
+            this.rBDSPChieu.Location = new System.Drawing.Point(987, 554);
             this.rBDSPChieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rBDSPChieu.Name = "rBDSPChieu";
             this.rBDSPChieu.Size = new System.Drawing.Size(284, 48);
@@ -268,12 +268,12 @@
             // 
             this.dGVDanhSachPC.BackgroundColor = System.Drawing.Color.White;
             this.dGVDanhSachPC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVDanhSachPC.Location = new System.Drawing.Point(397, 59);
+            this.dGVDanhSachPC.Location = new System.Drawing.Point(24, 42);
             this.dGVDanhSachPC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDanhSachPC.Name = "dGVDanhSachPC";
             this.dGVDanhSachPC.RowHeadersWidth = 62;
             this.dGVDanhSachPC.RowTemplate.Height = 28;
-            this.dGVDanhSachPC.Size = new System.Drawing.Size(307, 412);
+            this.dGVDanhSachPC.Size = new System.Drawing.Size(353, 412);
             this.dGVDanhSachPC.TabIndex = 42;
             // 
             // dGVDanhSachPhim
@@ -285,7 +285,7 @@
             this.dGVDanhSachPhim.Name = "dGVDanhSachPhim";
             this.dGVDanhSachPhim.RowHeadersWidth = 62;
             this.dGVDanhSachPhim.RowTemplate.Height = 28;
-            this.dGVDanhSachPhim.Size = new System.Drawing.Size(307, 412);
+            this.dGVDanhSachPhim.Size = new System.Drawing.Size(348, 412);
             this.dGVDanhSachPhim.TabIndex = 41;
             // 
             // gBDanhSachPhim
@@ -295,19 +295,20 @@
             this.gBDanhSachPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBDanhSachPhim.Name = "gBDanhSachPhim";
             this.gBDanhSachPhim.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gBDanhSachPhim.Size = new System.Drawing.Size(346, 472);
+            this.gBDanhSachPhim.Size = new System.Drawing.Size(382, 472);
             this.gBDanhSachPhim.TabIndex = 49;
             this.gBDanhSachPhim.TabStop = false;
             this.gBDanhSachPhim.Text = "DANH SÁCH PHIM";
             // 
             // gBDanhSachPhongChieu
             // 
+            this.gBDanhSachPhongChieu.Controls.Add(this.dGVDanhSachPC);
             this.gBDanhSachPhongChieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.gBDanhSachPhongChieu.Location = new System.Drawing.Point(369, 15);
+            this.gBDanhSachPhongChieu.Location = new System.Drawing.Point(419, 19);
             this.gBDanhSachPhongChieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBDanhSachPhongChieu.Name = "gBDanhSachPhongChieu";
             this.gBDanhSachPhongChieu.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gBDanhSachPhongChieu.Size = new System.Drawing.Size(335, 472);
+            this.gBDanhSachPhongChieu.Size = new System.Drawing.Size(398, 472);
             this.gBDanhSachPhongChieu.TabIndex = 50;
             this.gBDanhSachPhongChieu.TabStop = false;
             this.gBDanhSachPhongChieu.Text = "DANH SÁCH PHÒNG CHIẾU";
@@ -318,11 +319,11 @@
             this.gBKhungGioChieu.Controls.Add(this.textBox1);
             this.gBKhungGioChieu.Controls.Add(this.dGVKhungGioChieu);
             this.gBKhungGioChieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.gBKhungGioChieu.Location = new System.Drawing.Point(722, 15);
+            this.gBKhungGioChieu.Location = new System.Drawing.Point(842, 19);
             this.gBKhungGioChieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBKhungGioChieu.Name = "gBKhungGioChieu";
             this.gBKhungGioChieu.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gBKhungGioChieu.Size = new System.Drawing.Size(357, 472);
+            this.gBKhungGioChieu.Size = new System.Drawing.Size(429, 472);
             this.gBKhungGioChieu.TabIndex = 51;
             this.gBKhungGioChieu.TabStop = false;
             this.gBKhungGioChieu.Text = "KHUNG GIỜ CHIẾU";
@@ -346,7 +347,7 @@
             this.textBox1.Location = new System.Drawing.Point(201, 44);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 33);
+            this.textBox1.Size = new System.Drawing.Size(208, 33);
             this.textBox1.TabIndex = 6;
             // 
             // dGVKhungGioChieu
@@ -358,7 +359,7 @@
             this.dGVKhungGioChieu.Name = "dGVKhungGioChieu";
             this.dGVKhungGioChieu.RowHeadersWidth = 62;
             this.dGVKhungGioChieu.RowTemplate.Height = 28;
-            this.dGVKhungGioChieu.Size = new System.Drawing.Size(321, 365);
+            this.dGVKhungGioChieu.Size = new System.Drawing.Size(393, 365);
             this.dGVKhungGioChieu.TabIndex = 44;
             // 
             // UC_TaoLichChieu_QLP
@@ -369,13 +370,14 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_TaoLichChieu_QLP";
-            this.Size = new System.Drawing.Size(1117, 766);
+            this.Size = new System.Drawing.Size(1333, 766);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).EndInit();
+            this.gBDanhSachPhongChieu.ResumeLayout(false);
             this.gBKhungGioChieu.ResumeLayout(false);
             this.gBKhungGioChieu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVKhungGioChieu)).EndInit();

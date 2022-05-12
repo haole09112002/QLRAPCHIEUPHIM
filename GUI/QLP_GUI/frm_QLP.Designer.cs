@@ -70,7 +70,7 @@
             this.pnLeft.Location = new System.Drawing.Point(0, 0);
             this.pnLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(249, 882);
+            this.pnLeft.Size = new System.Drawing.Size(240, 875);
             this.pnLeft.TabIndex = 2;
             // 
             // btnNCC
@@ -249,17 +249,17 @@
             this.pnTop.Controls.Add(this.label6);
             this.pnTop.Controls.Add(this.pBExit);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTop.Location = new System.Drawing.Point(249, 0);
+            this.pnTop.Location = new System.Drawing.Point(240, 0);
             this.pnTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1117, 80);
+            this.pnTop.Size = new System.Drawing.Size(1333, 79);
             this.pnTop.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(705, 4);
+            this.label5.Location = new System.Drawing.Point(868, 11);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 30);
             this.label5.TabIndex = 16;
@@ -269,7 +269,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(710, 36);
+            this.label3.Location = new System.Drawing.Point(868, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 40);
             this.label3.TabIndex = 17;
@@ -282,7 +282,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Image = global::GUI.Properties.Resources.EmployeeQLVT;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(852, 26);
+            this.label7.Location = new System.Drawing.Point(1068, 28);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(184, 51);
@@ -295,7 +295,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(903, 6);
+            this.label4.Location = new System.Drawing.Point(1149, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 25);
             this.label4.TabIndex = 18;
@@ -317,7 +317,7 @@
             // 
             this.pBExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBExit.Image = global::GUI.Properties.Resources.shutdown_40px;
-            this.pBExit.Location = new System.Drawing.Point(1062, 11);
+            this.pBExit.Location = new System.Drawing.Point(1279, 13);
             this.pBExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pBExit.Name = "pBExit";
             this.pBExit.Size = new System.Drawing.Size(42, 58);
@@ -330,27 +330,27 @@
             // 
             this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnMenu.Location = new System.Drawing.Point(249, 80);
+            this.pnMenu.Location = new System.Drawing.Point(240, 79);
             this.pnMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(1117, 36);
+            this.pnMenu.Size = new System.Drawing.Size(1333, 30);
             this.pnMenu.TabIndex = 4;
             // 
             // pnCenter
             // 
             this.pnCenter.BackColor = System.Drawing.Color.White;
             this.pnCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnCenter.Location = new System.Drawing.Point(249, 116);
+            this.pnCenter.Location = new System.Drawing.Point(240, 109);
             this.pnCenter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnCenter.Name = "pnCenter";
-            this.pnCenter.Size = new System.Drawing.Size(1117, 766);
+            this.pnCenter.Size = new System.Drawing.Size(1333, 766);
             this.pnCenter.TabIndex = 5;
             // 
             // frm_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1366, 882);
+            this.ClientSize = new System.Drawing.Size(1573, 875);
             this.Controls.Add(this.pnCenter);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.pnTop);

@@ -13,8 +13,6 @@ namespace DAL
 {
     public class PhimDAL
     {
-        private SqlConnection sqlConnection;
-        private SqlCommand sqlCommand;
         private static PhimDAL instance;
         public static PhimDAL Instance
         {
@@ -50,13 +48,10 @@ namespace DAL
                     ThoiLuong = Convert.ToInt32(i["ThoiLuong"].ToString()),
                     QuocGia = i["QuocGia"].ToString(),
                     NamSanXuat = Convert.ToDateTime(i["NamSanXuat"].ToString()),
-                    TenHangPhim = i["TenHangPhim"].ToString(),
                     DoTuoiXem = Convert.ToInt32(i["DoTuoiXem"].ToString()),
                     MaTheLoai = i["MaTheLoai"].ToString(),
                     NoiDung = i["NoiDung"].ToString(),
-                    DienVienChinh = i["DienVienCHinh"].ToString(),
-                    DienVienPhu = i["DienVienPhu"].ToString(),
-                    DaoDien = i["DaoDien"].ToString()
+                    MaHangSanXuatPhim = i["MaHangSanXuatPhim"].ToString()
                 };
             }
             else
@@ -69,19 +64,17 @@ namespace DAL
                     ThoiLuong = Convert.ToInt32(i["ThoiLuong"].ToString()),
                     QuocGia = i["QuocGia"].ToString(),
                     NamSanXuat = Convert.ToDateTime(i["NamSanXuat"].ToString()),
-                    TenHangPhim = i["TenHangPhim"].ToString(),
                     DoTuoiXem = Convert.ToInt32(i["DoTuoiXem"].ToString()),
                     MaTheLoai = i["MaTheLoai"].ToString(),
                     NoiDung = i["NoiDung"].ToString(),
-                    DienVienChinh = i["DienVienCHinh"].ToString(),
-                    DienVienPhu = i["DienVienPhu"].ToString(),
-                    DaoDien = i["DaoDien"].ToString()
+                    MaHangSanXuatPhim = i["MaHangSanXuatPhim"].ToString()
                 };
             }
         }
         public void LuuDuLieuPhim(PhimDTO phim)
         {
-            string query = "Insert into PHIM (TenPhim,ThoiLuong,QuocGia,AnhPhim,NamSanXuat,TenHangPhim,DoTuoiXem,MaTheLoai,NoiDung,DienVienChinh,DienVienPhu,DaoDien) " + $"values('{phim.TenPhim}',{phim.ThoiLuong},'{phim.QuocGia}',@AnhPhim,'{phim.NamSanXuat.Year}-{phim.NamSanXuat.Month}-{phim.NamSanXuat.Day}','{phim.TenHangPhim}',{phim.DoTuoiXem},'{phim.MaTheLoai}','{phim.NoiDung}','{phim.DienVienChinh}','{phim.DienVienPhu}','{phim.DaoDien}')";
+            string query = "Insert into PHIM (TenPhim,ThoiLuong,QuocGia,AnhPhim,NamSanXuat,DoTuoiXem,MaTheLoai,NoiDung,MaHangSanXuatPhim) " 
+                + $"values(N'{phim.TenPhim}',{phim.ThoiLuong},N'{phim.QuocGia}',@AnhPhim,'{phim.NamSanXuat.Year}-{phim.NamSanXuat.Month}-{phim.NamSanXuat.Day}',{phim.DoTuoiXem},'{phim.MaTheLoai}',N'{phim.NoiDung}','{phim.MaHangSanXuatPhim}')";
             try
             {
                 DBHelper.Instance.Command(phim, query);

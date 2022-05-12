@@ -28,7 +28,7 @@ namespace BLL
             }
             set { }
         }
-        public List<PhimViewDTO> GetPhimViews(string txt)
+        public List<PhimViewDTO> GetPhimViews(string txt = "")
         {
             List<PhimViewDTO> data = new List<PhimViewDTO>();
             List<TheLoaiPhimDTO> TLP = new List<TheLoaiPhimDTO>();
@@ -36,6 +36,7 @@ namespace BLL
             foreach (PhimDTO i in PhimDAL.Instance.GetALLPhim())
             {
                 string TheLoaiPhim = "";
+                string TenHangSanXuatPhim = "";
                 if(i.TenPhim.Contains(txt))
                 {
                     foreach(TheLoaiPhimDTO j in TLP.ToArray())
@@ -45,6 +46,13 @@ namespace BLL
                             TheLoaiPhim = j.TenTheLoaiPhim;
                         }
                     }
+                    foreach (HangSanXuatPhimDTO k in HangSanXuatPhimDAL.Instance.GetAllHangSanXuatPhim())
+                    {
+                        if (k.MaHangSanXuatPhim == i.MaHangSanXuatPhim)
+                        {
+                            TenHangSanXuatPhim = k.TenHangSanXuatPhim;
+                        }
+                    }
                     data.Add(new PhimViewDTO
                     {
                         MaPhim = i.MaPhim,
@@ -52,7 +60,7 @@ namespace BLL
                         ThoiLuong = i.ThoiLuong,
                         QuocGia = i.QuocGia,
                         NamSanXuat = i.NamSanXuat,
-                        TenHangPhim = i.TenHangPhim,
+                        TenHangSanXuatPhim = TenHangSanXuatPhim,
                         DoTuoiXem = i.DoTuoiXem,
                         TheLoai = TheLoaiPhim
                     });
@@ -73,13 +81,10 @@ namespace BLL
                     data.ThoiLuong = i.ThoiLuong;
                     data.QuocGia = i.QuocGia;
                     data.NamSanXuat = i.NamSanXuat;
-                    data.TenHangPhim = i.TenHangPhim;
+                    data.MaHangSanXuatPhim = i.MaHangSanXuatPhim;
                     data.DoTuoiXem = i.DoTuoiXem;
                     data.MaTheLoai = i.MaTheLoai;
                     data.NoiDung = i.NoiDung;
-                    data.DienVienChinh = i.DienVienChinh;
-                    data.DienVienPhu = i.DienVienPhu;
-                    data.DaoDien = i.DaoDien;
                 }
             }
             return data;
@@ -119,10 +124,6 @@ namespace BLL
         public bool CompareNamSanXuat(object o1, object o2)
         {
             return DateTime.Compare(((PhimViewDTO)o1).NamSanXuat, ((PhimViewDTO)o2).NamSanXuat) > 0;
-        }
-        public bool CompareTenHangPhim(object o1, object o2)
-        {
-            return String.Compare(((PhimViewDTO)o1).TenHangPhim, ((PhimViewDTO)o2).TenHangPhim) > 0;
         }
         public bool CompareTheLoai(object o1, object o2)
         {
