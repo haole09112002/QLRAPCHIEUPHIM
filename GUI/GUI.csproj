@@ -239,11 +239,29 @@
     <Compile Include="QLP_GUI\frm_QLP.Designer.cs">
       <DependentUpon>frm_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\frm_TaoDeXuat.cs">
+    <Compile Include="QLP_GUI\frm_DeXuatPhim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\frm_TaoDeXuat.Designer.cs">
-      <DependentUpon>frm_TaoDeXuat.cs</DependentUpon>
+    <Compile Include="QLP_GUI\frm_DeXuatPhim.Designer.cs">
+      <DependentUpon>frm_DeXuatPhim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_TaoDeXuat_QLP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_TaoDeXuat_QLP.Designer.cs">
+      <DependentUpon>frm_TaoDeXuat_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_ThemDienVienDaoDien_QLP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_ThemDienVienDaoDien_QLP.Designer.cs">
+      <DependentUpon>frm_ThemDienVienDaoDien_QLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_ThemMoiDienVienDaoDien_QLP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLP_GUI\frm_ThemMoiDienVienDaoDien_QLP.Designer.cs">
+      <DependentUpon>frm_ThemMoiDienVienDaoDien_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLP_GUI\frm_ThongTinNCC_QLP.cs">
       <SubType>Form</SubType>
@@ -528,8 +546,17 @@
     <EmbeddedResource Include="QLP_GUI\frm_QLP.resx">
       <DependentUpon>frm_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\frm_TaoDeXuat.resx">
-      <DependentUpon>frm_TaoDeXuat.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\frm_DeXuatPhim.resx">
+      <DependentUpon>frm_DeXuatPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\frm_TaoDeXuat_QLP.resx">
+      <DependentUpon>frm_TaoDeXuat_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\frm_ThemDienVienDaoDien_QLP.resx">
+      <DependentUpon>frm_ThemDienVienDaoDien_QLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLP_GUI\frm_ThemMoiDienVienDaoDien_QLP.resx">
+      <DependentUpon>frm_ThemMoiDienVienDaoDien_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\frm_ThongTinNCC_QLP.resx">
       <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>
@@ -885,18 +912,6 @@
     <None Include="Resources\NhaKho.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{1ca149db-4213-4f61-a64e-9352059ea6aa}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{58c109a1-adce-4998-9f06-f750c4a61a0c}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
     <None Include="Resources\shutdown_40px.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1057,6 +1072,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\subtract_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{1ca149db-4213-4f61-a64e-9352059ea6aa}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

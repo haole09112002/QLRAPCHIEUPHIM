@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DAL;
 using BLL;
 
 namespace GUI.QLP_GUI
@@ -59,11 +58,11 @@ namespace GUI.QLP_GUI
                         dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareNamSanXuat);
                         break;
                     }
-                case "TenHangPhim":
-                    {
-                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTenHangPhim);
-                        break;
-                    }
+                //case "TenHangPhim":
+                //    {
+                //        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTenHangPhim);
+                //        break;
+                //    }
                 case "TheLoai":
                     {
                         dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTheLoai);
@@ -76,9 +75,16 @@ namespace GUI.QLP_GUI
         {
             if(dGVDanhSachPhim.SelectedRows.Count == 1)
             {
-                frmThongTinPhim f = new frmThongTinPhim(dGVDanhSachPhim.SelectedRows[0].Cells["MaPhim"].Value.ToString());
-                f.ShowDialog();
+                var frmTTP = new frmThongTinPhim(dGVDanhSachPhim.SelectedRows[0].Cells["MaPhim"].Value.ToString());
+                frmTTP.ShowDialog();
             }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frm_DeXuatPhim frmDXP = new frm_DeXuatPhim();
+            frmDXP.ShowDialog();
+            Reload();
         }
     }
 }

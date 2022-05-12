@@ -51,13 +51,22 @@
     <Compile Include="HopDongPhimDTO.cs" />
     <Compile Include="HopDongViewDTO.cs" />
     <Compile Include="LoaiHopDongDTO.cs" />
+    <Compile Include="ChiTietDeXuatPhimDTO.cs" />
+    <Compile Include="ChiTietDienVienDaoDienPhimDTO.cs" />
+    <Compile Include="DienVienDaoDienDTO.cs" />
+    <Compile Include="HangSanXuatPhimDTO.cs" />
+    <Compile Include="KhungGioChieuDTO.cs" />
+    <Compile Include="LichChieuDTO.cs" />
+    <Compile Include="LichChieuViewDTO.cs" />
     <Compile Include="LoaiNhaCungCapDTO.cs" />
     <Compile Include="NhaCungCapDTO.cs" />
     <Compile Include="NhaCungCapViewDTO.cs" />
     <Compile Include="PhimCanTaoHopDongDTO.cs" />
     <Compile Include="PhimDTO.cs" />
     <Compile Include="PhimViewDTO.cs" />
+    <Compile Include="PhongChieuDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheLoaiPhimDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

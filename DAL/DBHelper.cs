@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -23,8 +24,8 @@ namespace DAL
             {
                 if (_Instance == null)
                 {
-                    //string cnnstr = @"Data Source=LAPTOP-MAJKSJMC\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
-                    string cnnstr = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
+                    string cnnstr = @"Data Source=LAPTOP-MAJKSJMC\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
+                    //string cnnstr = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
 
 
 
@@ -140,6 +141,14 @@ namespace DAL
                 MessageBox.Show("Loi" + e.Message);
             }
             return data;
+        }
+        public void Command(PhimDTO Phim, string query)
+        {
+            cnn.Open();
+            SqlCommand sqlCommand = new SqlCommand(query, cnn);
+            sqlCommand.Parameters.Add("@AnhPhim", Phim.AnhPhim);
+            sqlCommand.ExecuteNonQuery();
+            cnn.Close();
         }
     }
 }
