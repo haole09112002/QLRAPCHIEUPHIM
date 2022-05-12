@@ -1,6 +1,6 @@
 ﻿namespace GUI.QLVT_GUI
 {
-    partial class frmDashboardQLVT
+    partial class FrmDashboardQLVT
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSanPham = new System.Windows.Forms.Button();
             this.btnPhongChieu = new System.Windows.Forms.Button();
-            this.btnNhaCungCap = new System.Windows.Forms.Button();
+            this.btnNhaCungUng = new System.Windows.Forms.Button();
             this.btnCaNhan = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnNhapXuatKho = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
-            this.pnCenter = new System.Windows.Forms.Panel();
+            this.pnMenuContent = new System.Windows.Forms.Panel();
             this.pnLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnTop.SuspendLayout();
@@ -61,7 +61,7 @@
             this.pnLeft.Controls.Add(this.label1);
             this.pnLeft.Controls.Add(this.btnSanPham);
             this.pnLeft.Controls.Add(this.btnPhongChieu);
-            this.pnLeft.Controls.Add(this.btnNhaCungCap);
+            this.pnLeft.Controls.Add(this.btnNhaCungUng);
             this.pnLeft.Controls.Add(this.btnCaNhan);
             this.pnLeft.Controls.Add(this.btnDangXuat);
             this.pnLeft.Controls.Add(this.btnNhapXuatKho);
@@ -152,25 +152,25 @@
             this.btnPhongChieu.UseVisualStyleBackColor = true;
             this.btnPhongChieu.Click += new System.EventHandler(this.btnPhongChieu_Click);
             // 
-            // btnNhaCungCap
+            // btnNhaCungUng
             // 
-            this.btnNhaCungCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnNhaCungCap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNhaCungCap.FlatAppearance.BorderSize = 0;
-            this.btnNhaCungCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhaCungCap.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhaCungCap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNhaCungCap.Image = global::GUI.Properties.Resources.ncc;
-            this.btnNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhaCungCap.Location = new System.Drawing.Point(0, 241);
-            this.btnNhaCungCap.Name = "btnNhaCungCap";
-            this.btnNhaCungCap.Size = new System.Drawing.Size(221, 53);
-            this.btnNhaCungCap.TabIndex = 6;
-            this.btnNhaCungCap.Text = "   Nhà Cung Ứng";
-            this.btnNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNhaCungCap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhaCungCap.UseVisualStyleBackColor = true;
-            this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
+            this.btnNhaCungUng.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNhaCungUng.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNhaCungUng.FlatAppearance.BorderSize = 0;
+            this.btnNhaCungUng.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhaCungUng.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhaCungUng.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNhaCungUng.Image = global::GUI.Properties.Resources.ncc;
+            this.btnNhaCungUng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhaCungUng.Location = new System.Drawing.Point(0, 241);
+            this.btnNhaCungUng.Name = "btnNhaCungUng";
+            this.btnNhaCungUng.Size = new System.Drawing.Size(221, 53);
+            this.btnNhaCungUng.TabIndex = 6;
+            this.btnNhaCungUng.Text = "   Nhà Cung Ứng";
+            this.btnNhaCungUng.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNhaCungUng.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNhaCungUng.UseVisualStyleBackColor = true;
+            this.btnNhaCungUng.Click += new System.EventHandler(this.btnNhaCungCap_Click);
             // 
             // btnCaNhan
             // 
@@ -323,27 +323,27 @@
             this.pnMenu.Size = new System.Drawing.Size(993, 29);
             this.pnMenu.TabIndex = 3;
             // 
-            // pnCenter
+            // pnMenuContent
             // 
-            this.pnCenter.BackColor = System.Drawing.Color.White;
-            this.pnCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnCenter.Location = new System.Drawing.Point(221, 93);
-            this.pnCenter.Name = "pnCenter";
-            this.pnCenter.Size = new System.Drawing.Size(993, 613);
-            this.pnCenter.TabIndex = 4;
+            this.pnMenuContent.BackColor = System.Drawing.Color.White;
+            this.pnMenuContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMenuContent.Location = new System.Drawing.Point(221, 93);
+            this.pnMenuContent.Name = "pnMenuContent";
+            this.pnMenuContent.Size = new System.Drawing.Size(993, 613);
+            this.pnMenuContent.TabIndex = 4;
             // 
-            // frmDashboardQLVT
+            // FrmDashboardQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1214, 706);
-            this.Controls.Add(this.pnCenter);
+            this.Controls.Add(this.pnMenuContent);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.pnTop);
             this.Controls.Add(this.pnLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.Name = "frmDashboardQLVT";
+            this.Name = "FrmDashboardQLVT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDashboard_AD";
             this.pnLeft.ResumeLayout(false);
@@ -363,10 +363,10 @@
         private System.Windows.Forms.Button btnCaNhan;
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Button btnPhongChieu;
-        private System.Windows.Forms.Button btnNhaCungCap;
+        private System.Windows.Forms.Button btnNhaCungUng;
         private System.Windows.Forms.Button btnSanPham;
         private System.Windows.Forms.Button btnNhapXuatKho;
-        private System.Windows.Forms.Panel pnCenter;
+        private System.Windows.Forms.Panel pnMenuContent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

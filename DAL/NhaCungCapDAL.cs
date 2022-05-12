@@ -49,25 +49,16 @@ namespace DAL
                 MaLoaiNhaCungCap = i["MaLoaiNCC"].ToString()
             };
         }
-        //public DataTable GetSanPhamByMaNhaCungCap(string maNCC )
-        //{
-        //    string str = "", query = "";
-        //    string sql = "select NHA_CUNG_CAP.MaLoaiNCC from NHA_CUNG_CAP where NHA_CUNG_CAP.MaNhaCungCap = '"+maNCC+"'";
-        //    foreach(DataRow row in DBHelper.Instance.ExcuteQuery(sql).Rows)
-        //    {
-        //         str = row["MaLoaiNCC"].ToString();
-        //        break;
-        //    }
-        //    if(str == "LNCC01")
-        //    {
-        //        query = "select PHIM.MaPhim ,PHIM.TenPhim from PHIM, HOP_DONG_PHIM where HOP_DONG_PHIM.MaNhaCungCap = '" + maNCC + "' and HOP_DONG_PHIM.MaPhim = PHIM.MaPhim";
-        //    }
-        //    if(str == "LNCC02")
-        //        query = "select ct.MaVatTu ,VAT_TU.TenVatTu from VAT_TU, CHI_TIET_CUNG_CAP_VAT_TU ct where ct.MaNhaCungCap = '" + maNCC + "' and ct.MaVatTu =VAT_TU.MaVatTu";
-        //    if (str == "LNCC03")
-        //        query = "select ct.MaThucAn ,THUC_AN.TenThucAn from THUC_AN,  CHI_TIET_CUNG_CAP_THUC_AN ct where ct.MaNhaCungCap = '" + maNCC + "' and ct.MaThucAn =THUC_AN.MaThucAn";
-        //    return DBHelper.Instance.ExcuteQuery(query);
-        //}
+        public DataTable GetSPByMaNhaCungCap(string maNhaCungCap, string maLoaiNhaCungCap)
+        {
+            string query = "EXEC LaySanPhamByMaNhaCungCap @MaNhaCungCap , @MaLoaiNhaCungCap";
+            object[] parameter = new object[]
+            {
+                maNhaCungCap, maLoaiNhaCungCap
+            };
+            return DBHelper.Instance.ExcuteQuery(query, parameter);
+        }
+        
 
         public void ThemNhaCungCap(NhaCungCapDTO nhaCungCap)
         {

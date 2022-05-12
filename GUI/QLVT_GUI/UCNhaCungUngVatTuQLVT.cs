@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace GUI.QLVT_GUI
 {
+
     public partial class UCNhaCungUngVatTuQLVT : UserControl
     {
         public UCNhaCungUngVatTuQLVT()

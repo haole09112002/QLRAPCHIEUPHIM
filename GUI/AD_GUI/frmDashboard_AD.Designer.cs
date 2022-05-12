@@ -29,18 +29,9 @@
         private void InitializeComponent()
         {
             this.pnLeft = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnTop = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pnMenu = new System.Windows.Forms.Panel();
-            this.pnCenter = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnThongKe = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnKho = new System.Windows.Forms.Button();
             this.btnNV = new System.Windows.Forms.Button();
             this.btnHopDong = new System.Windows.Forms.Button();
@@ -49,10 +40,21 @@
             this.btnCaNhan = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnLichChieu = new System.Windows.Forms.Button();
+            this.pnTop = new System.Windows.Forms.Panel();
+            this.pbMinimize = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pbClose = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pnMenu = new System.Windows.Forms.Panel();
+            this.pnCenter = new System.Windows.Forms.Panel();
             this.pnLeft.SuspendLayout();
-            this.pnTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLeft
@@ -76,133 +78,22 @@
             this.pnLeft.Size = new System.Drawing.Size(221, 706);
             this.pnLeft.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("MV Boli", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label1.Location = new System.Drawing.Point(12, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 49);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "CINEMA";
-            // 
-            // pnTop
-            // 
-            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(229)))), ((int)(((byte)(232)))));
-            this.pnTop.Controls.Add(this.label5);
-            this.pnTop.Controls.Add(this.label3);
-            this.pnTop.Controls.Add(this.label7);
-            this.pnTop.Controls.Add(this.label6);
-            this.pnTop.Controls.Add(this.pictureBox1);
-            this.pnTop.Controls.Add(this.label4);
-            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTop.Location = new System.Drawing.Point(221, 0);
-            this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(993, 79);
-            this.pnTop.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(123, 18);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(394, 37);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Cinema Manegemenr System";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(814, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label";
-            // 
-            // pnMenu
-            // 
-            this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
-            this.pnMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnMenu.Location = new System.Drawing.Point(221, 79);
-            this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(993, 30);
-            this.pnMenu.TabIndex = 3;
-            // 
-            // pnCenter
-            // 
-            this.pnCenter.BackColor = System.Drawing.Color.White;
-            this.pnCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pnCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnCenter.Location = new System.Drawing.Point(221, 109);
-            this.pnCenter.Name = "pnCenter";
-            this.pnCenter.Size = new System.Drawing.Size(993, 597);
-            this.pnCenter.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(663, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 32);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Chức vụ:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(665, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 24);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Xin Chào: ";
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Image = global::GUI.Properties.Resources.EmployeeQLVT;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(768, 33);
-            this.label7.Name = "label7";
-            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(160, 41);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Admin";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.shutdown_40px;
-            this.pictureBox1.Location = new System.Drawing.Point(934, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::GUI.Properties.Resources.logo;
             this.pictureBox2.Location = new System.Drawing.Point(57, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(74, 76);
+            this.pictureBox2.Size = new System.Drawing.Size(93, 76);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
             // btnThongKe
             // 
+            this.btnThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThongKe.FlatAppearance.BorderSize = 0;
@@ -213,7 +104,7 @@
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongKe.Location = new System.Drawing.Point(0, 123);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(221, 53);
+            this.btnThongKe.Size = new System.Drawing.Size(240, 53);
             this.btnThongKe.TabIndex = 11;
             this.btnThongKe.Text = "   Thống Kê";
             this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -221,8 +112,24 @@
             this.btnThongKe.UseVisualStyleBackColor = true;
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("MV Boli", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label1.Location = new System.Drawing.Point(26, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 49);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "CINEMA";
+            // 
             // btnKho
             // 
+            this.btnKho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnKho.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKho.FlatAppearance.BorderSize = 0;
@@ -233,7 +140,7 @@
             this.btnKho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKho.Location = new System.Drawing.Point(0, 300);
             this.btnKho.Name = "btnKho";
-            this.btnKho.Size = new System.Drawing.Size(221, 53);
+            this.btnKho.Size = new System.Drawing.Size(240, 53);
             this.btnKho.TabIndex = 5;
             this.btnKho.Text = "   Kho";
             this.btnKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -242,6 +149,8 @@
             // 
             // btnNV
             // 
+            this.btnNV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnNV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNV.FlatAppearance.BorderSize = 0;
@@ -252,7 +161,7 @@
             this.btnNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNV.Location = new System.Drawing.Point(0, 359);
             this.btnNV.Name = "btnNV";
-            this.btnNV.Size = new System.Drawing.Size(221, 53);
+            this.btnNV.Size = new System.Drawing.Size(240, 53);
             this.btnNV.TabIndex = 7;
             this.btnNV.Text = "   Nhân viên";
             this.btnNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -261,6 +170,8 @@
             // 
             // btnHopDong
             // 
+            this.btnHopDong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHopDong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnHopDong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHopDong.FlatAppearance.BorderSize = 0;
@@ -271,7 +182,7 @@
             this.btnHopDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHopDong.Location = new System.Drawing.Point(0, 418);
             this.btnHopDong.Name = "btnHopDong";
-            this.btnHopDong.Size = new System.Drawing.Size(221, 53);
+            this.btnHopDong.Size = new System.Drawing.Size(240, 53);
             this.btnHopDong.TabIndex = 12;
             this.btnHopDong.Text = "   Hợp đồng";
             this.btnHopDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -280,6 +191,8 @@
             // 
             // btnDeXuat
             // 
+            this.btnDeXuat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeXuat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDeXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeXuat.FlatAppearance.BorderSize = 0;
@@ -290,7 +203,7 @@
             this.btnDeXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeXuat.Location = new System.Drawing.Point(0, 477);
             this.btnDeXuat.Name = "btnDeXuat";
-            this.btnDeXuat.Size = new System.Drawing.Size(221, 53);
+            this.btnDeXuat.Size = new System.Drawing.Size(240, 53);
             this.btnDeXuat.TabIndex = 10;
             this.btnDeXuat.Text = "   Đề xuất";
             this.btnDeXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -299,6 +212,8 @@
             // 
             // btnNCC
             // 
+            this.btnNCC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNCC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnNCC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNCC.FlatAppearance.BorderSize = 0;
@@ -309,7 +224,7 @@
             this.btnNCC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNCC.Location = new System.Drawing.Point(0, 241);
             this.btnNCC.Name = "btnNCC";
-            this.btnNCC.Size = new System.Drawing.Size(221, 53);
+            this.btnNCC.Size = new System.Drawing.Size(240, 53);
             this.btnNCC.TabIndex = 6;
             this.btnNCC.Text = "   Nhà Cung Cấp";
             this.btnNCC.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -319,6 +234,8 @@
             // 
             // btnCaNhan
             // 
+            this.btnCaNhan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCaNhan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCaNhan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCaNhan.FlatAppearance.BorderSize = 0;
@@ -329,7 +246,7 @@
             this.btnCaNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCaNhan.Location = new System.Drawing.Point(0, 536);
             this.btnCaNhan.Name = "btnCaNhan";
-            this.btnCaNhan.Size = new System.Drawing.Size(221, 53);
+            this.btnCaNhan.Size = new System.Drawing.Size(240, 53);
             this.btnCaNhan.TabIndex = 9;
             this.btnCaNhan.Text = "   Cá nhân";
             this.btnCaNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -338,6 +255,8 @@
             // 
             // btnDangXuat
             // 
+            this.btnDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDangXuat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangXuat.FlatAppearance.BorderSize = 0;
@@ -348,7 +267,7 @@
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangXuat.Location = new System.Drawing.Point(0, 595);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(221, 53);
+            this.btnDangXuat.Size = new System.Drawing.Size(240, 53);
             this.btnDangXuat.TabIndex = 8;
             this.btnDangXuat.Text = "   Đăng xuất";
             this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -357,6 +276,8 @@
             // 
             // btnLichChieu
             // 
+            this.btnLichChieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLichChieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLichChieu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLichChieu.FlatAppearance.BorderSize = 0;
@@ -367,7 +288,7 @@
             this.btnLichChieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLichChieu.Location = new System.Drawing.Point(0, 182);
             this.btnLichChieu.Name = "btnLichChieu";
-            this.btnLichChieu.Size = new System.Drawing.Size(221, 53);
+            this.btnLichChieu.Size = new System.Drawing.Size(240, 53);
             this.btnLichChieu.TabIndex = 4;
             this.btnLichChieu.Text = "   Lịch Chiếu Phim";
             this.btnLichChieu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -375,11 +296,143 @@
             this.btnLichChieu.UseVisualStyleBackColor = true;
             this.btnLichChieu.Click += new System.EventHandler(this.btnLichChieu_Click);
             // 
+            // pnTop
+            // 
+            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(229)))), ((int)(((byte)(232)))));
+            this.pnTop.Controls.Add(this.pbMinimize);
+            this.pnTop.Controls.Add(this.label5);
+            this.pnTop.Controls.Add(this.label3);
+            this.pnTop.Controls.Add(this.label7);
+            this.pnTop.Controls.Add(this.label6);
+            this.pnTop.Controls.Add(this.pbClose);
+            this.pnTop.Controls.Add(this.label4);
+            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTop.Location = new System.Drawing.Point(240, 0);
+            this.pnTop.Name = "pnTop";
+            this.pnTop.Size = new System.Drawing.Size(1333, 79);
+            this.pnTop.TabIndex = 2;
+            // 
+            // pbMinimize
+            // 
+            this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMinimize.Image = global::GUI.Properties.Resources.subtract_24px;
+            this.pbMinimize.Location = new System.Drawing.Point(1244, 10);
+            this.pbMinimize.Name = "pbMinimize";
+            this.pbMinimize.Size = new System.Drawing.Size(30, 30);
+            this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMinimize.TabIndex = 17;
+            this.pbMinimize.TabStop = false;
+            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(875, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 24);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Xin Chào: ";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(873, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 32);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Chức vụ:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Image = global::GUI.Properties.Resources.EmployeeQLVT;
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Location = new System.Drawing.Point(1001, 34);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label7.Size = new System.Drawing.Size(160, 41);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Admin";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(123, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(394, 37);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Cinema Manegemenr System";
+            // 
+            // pbClose
+            // 
+            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbClose.Image = global::GUI.Properties.Resources.Close_24px;
+            this.pbClose.Location = new System.Drawing.Point(1291, 10);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(30, 30);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClose.TabIndex = 4;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(1024, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "label";
+            // 
+            // pnMenu
+            // 
+            this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
+            this.pnMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnMenu.Location = new System.Drawing.Point(240, 79);
+            this.pnMenu.Name = "pnMenu";
+            this.pnMenu.Size = new System.Drawing.Size(1333, 30);
+            this.pnMenu.TabIndex = 3;
+            // 
+            // pnCenter
+            // 
+            this.pnCenter.BackColor = System.Drawing.Color.White;
+            this.pnCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnCenter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnCenter.Location = new System.Drawing.Point(240, 109);
+            this.pnCenter.Name = "pnCenter";
+            this.pnCenter.Size = new System.Drawing.Size(1333, 766);
+            this.pnCenter.TabIndex = 4;
+            // 
             // frmDashboard_AD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1214, 706);
+            this.ClientSize = new System.Drawing.Size(1573, 875);
             this.Controls.Add(this.pnCenter);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.pnTop);
@@ -391,10 +444,11 @@
             this.Text = "frmDashboard_AD";
             this.pnLeft.ResumeLayout(false);
             this.pnLeft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -417,9 +471,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Panel pnMenu;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbClose;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pbMinimize;
     }
 }

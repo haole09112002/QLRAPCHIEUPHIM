@@ -145,5 +145,16 @@ namespace BLL
         {
             PhimDAL.Instance.LuuDuLieuPhim(phim);
         }
+
+        public List<CBBItem> GetCBBPhim()
+        {
+            List<CBBItem> data = new List<CBBItem>();
+            foreach (PhimDTO i in PhimDAL.Instance.GetALLPhim())
+            {
+                data.Add(new CBBItem
+                { Value = i.MaPhim, Text = i.TenPhim });
+            }
+            return data;
+        }
     }
 }

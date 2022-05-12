@@ -142,6 +142,12 @@
     <Compile Include="AD_GUI\UC_LichChieu_AD.Designer.cs">
       <DependentUpon>UC_LichChieu_AD.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD_GUI\UC_LichSuGiaHanHDPhim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_GUI\UC_LichSuGiaHanHDPhim.Designer.cs">
+      <DependentUpon>UC_LichSuGiaHanHDPhim.cs</DependentUpon>
+    </Compile>
     <Compile Include="AD_GUI\UC_MenuKho.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -195,6 +201,12 @@
     </Compile>
     <Compile Include="AD_GUI\UC_ThongTinNV.Designer.cs">
       <DependentUpon>UC_ThongTinNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -326,20 +338,38 @@
     <Compile Include="QLVT_GUI\frmDashboardQLVT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\frmDashboardQLVT.Designer.cs">
-      <DependentUpon>frmDashboardQLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\FrmDashboardQLVT.Designer.cs">
+      <DependentUpon>FrmDashboardQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\frmCapNhatPhongChieuQLVT.cs">
+    <Compile Include="QLVT_GUI\FrmCapNhatPhongChieuQLVT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\frmCapNhatPhongChieuQLVT.Designer.cs">
-      <DependentUpon>frmCapNhatPhongChieuQLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\FrmCapNhatPhongChieuQLVT.Designer.cs">
+      <DependentUpon>FrmCapNhatPhongChieuQLVT.cs</DependentUpon>
     </Compile>
     <Compile Include="QLVT_GUI\FrmDoiMatKhauQLVT.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QLVT_GUI\FrmDoiMatKhauQLVT.Designer.cs">
       <DependentUpon>FrmDoiMatKhauQLVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLVT_GUI\FrmTaoPhieuDeXuatThucAnQLVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLVT_GUI\FrmTaoPhieuDeXuatThucAnQLVT.Designer.cs">
+      <DependentUpon>FrmTaoPhieuDeXuatThucAnQLVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLVT_GUI\FrmTaoPhieuDeXuatVatTuQLVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLVT_GUI\FrmTaoPhieuDeXuatVatTuQLVT.Designer.cs">
+      <DependentUpon>FrmTaoPhieuDeXuatVatTuQLVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLVT_GUI\FrmTaoPhieuNhapXuatKhoQLVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLVT_GUI\FrmTaoPhieuNhapXuatKhoQLVT.Designer.cs">
+      <DependentUpon>FrmTaoPhieuNhapXuatKhoQLVT.cs</DependentUpon>
     </Compile>
     <Compile Include="QLVT_GUI\UCMenuNhaCungUngQLVT.cs">
       <SubType>UserControl</SubType>
@@ -400,30 +430,6 @@
     </Compile>
     <Compile Include="QLVT_GUI\UCPhongChieuQLVT.Designer.cs">
       <DependentUpon>UCPhongChieuQLVT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCDeXuatThucAnQLVT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCDeXuatThucAnQLVT.Designer.cs">
-      <DependentUpon>UCDeXuatThucAnQLVT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCDeXuatVatTuQLVT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCDeXuatVatTuQLVT.Designer.cs">
-      <DependentUpon>UCDeXuatVatTuQLVT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCPhieuNhapXuatThucAnQLVT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCPhieuNhapXuatThucAnQLVT.Designer.cs">
-      <DependentUpon>UCPhieuNhapXuatThucAnQLVT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCPhieuNhapXuatVatTuQLVT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCPhieuNhapXuatVatTuQLVT.Designer.cs">
-      <DependentUpon>UCPhieuNhapXuatVatTuQLVT.cs</DependentUpon>
     </Compile>
     <Compile Include="QLVT_GUI\UCNhaCungUngThucAnQLVT.cs">
       <SubType>UserControl</SubType>
@@ -488,6 +494,9 @@
     <EmbeddedResource Include="AD_GUI\UC_LichChieu_AD.resx">
       <DependentUpon>UC_LichChieu_AD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AD_GUI\UC_LichSuGiaHanHDPhim.resx">
+      <DependentUpon>UC_LichSuGiaHanHDPhim.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_MenuKho.resx">
       <DependentUpon>UC_MenuKho.cs</DependentUpon>
     </EmbeddedResource>
@@ -523,6 +532,11 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <EmbeddedResource Include="QLP_GUI\frmDoiMatKhau_QLP.resx">
       <DependentUpon>frmDoiMatKhau_QLP.cs</DependentUpon>
     </EmbeddedResource>
@@ -580,14 +594,23 @@
     <EmbeddedResource Include="QLP_GUI\UC_ThongTinPhim_QLP.resx">
       <DependentUpon>UC_ThongTinPhim_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\frmDashboardQLVT.resx">
-      <DependentUpon>frmDashboardQLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\FrmDashboardQLVT.resx">
+      <DependentUpon>FrmDashboardQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\frmCapNhatPhongChieuQLVT.resx">
-      <DependentUpon>frmCapNhatPhongChieuQLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\FrmCapNhatPhongChieuQLVT.resx">
+      <DependentUpon>FrmCapNhatPhongChieuQLVT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLVT_GUI\FrmDoiMatKhauQLVT.resx">
       <DependentUpon>FrmDoiMatKhauQLVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLVT_GUI\FrmTaoPhieuDeXuatThucAnQLVT.resx">
+      <DependentUpon>FrmTaoPhieuDeXuatThucAnQLVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLVT_GUI\FrmTaoPhieuDeXuatVatTuQLVT.resx">
+      <DependentUpon>FrmTaoPhieuDeXuatVatTuQLVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLVT_GUI\FrmTaoPhieuNhapXuatKhoQLVT.resx">
+      <DependentUpon>FrmTaoPhieuNhapXuatKhoQLVT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLVT_GUI\UCMenuNhaCungUngQLVT.resx">
       <DependentUpon>UCMenuNhaCungUngQLVT.cs</DependentUpon>
@@ -618,18 +641,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLVT_GUI\UCPhongChieuQLVT.resx">
       <DependentUpon>UCPhongChieuQLVT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UCDeXuatThucAnQLVT.resx">
-      <DependentUpon>UCDeXuatThucAnQLVT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UCDeXuatVatTuQLVT.resx">
-      <DependentUpon>UCDeXuatVatTuQLVT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UCPhieuNhapXuatThucAnQLVT.resx">
-      <DependentUpon>UCPhieuNhapXuatThucAnQLVT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UCPhieuNhapXuatVatTuQLVT.resx">
-      <DependentUpon>UCPhieuNhapXuatVatTuQLVT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLVT_GUI\UCNhaCungUngThucAnQLVT.resx">
       <DependentUpon>UCNhaCungUngThucAnQLVT.cs</DependentUpon>
@@ -909,6 +920,166 @@
       <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+    <None Include="Resources\shutdown_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmployeeQLVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuDeXuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuWareHouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuWareHouse1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuProduct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuCinemaRoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TabarMaterial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SubMenuFood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserProfileQLVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FoodTitleDeXuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolDeXuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MovieRoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddHopDongPhim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScheduleTitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refund.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NhapXuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Birthday.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nhacungcap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Renew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chucvu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CCCD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaSoThue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoaiNhaCungCap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dotuoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DienVien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Soluong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DonViTinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Noidung.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DienVien1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Giatien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeXuat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopdong1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NhaKho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subtract_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
