@@ -75,7 +75,7 @@
             this.pnLeft.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pnLeft.Location = new System.Drawing.Point(0, 0);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(221, 706);
+            this.pnLeft.Size = new System.Drawing.Size(221, 875);
             this.pnLeft.TabIndex = 1;
             // 
             // pictureBox2
@@ -307,9 +307,9 @@
             this.pnTop.Controls.Add(this.pbClose);
             this.pnTop.Controls.Add(this.label4);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTop.Location = new System.Drawing.Point(240, 0);
+            this.pnTop.Location = new System.Drawing.Point(221, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1333, 79);
+            this.pnTop.Size = new System.Drawing.Size(1352, 79);
             this.pnTop.TabIndex = 2;
             // 
             // pbMinimize
@@ -318,7 +318,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMinimize.Image = global::GUI.Properties.Resources.subtract_24px;
-            this.pbMinimize.Location = new System.Drawing.Point(1244, 10);
+            this.pbMinimize.Location = new System.Drawing.Point(1263, 10);
             this.pbMinimize.Name = "pbMinimize";
             this.pbMinimize.Size = new System.Drawing.Size(30, 30);
             this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -332,7 +332,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(875, 10);
+            this.label5.Location = new System.Drawing.Point(894, 10);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 24);
             this.label5.TabIndex = 1;
@@ -344,7 +344,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(873, 40);
+            this.label3.Location = new System.Drawing.Point(892, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 32);
             this.label3.TabIndex = 2;
@@ -359,7 +359,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Image = global::GUI.Properties.Resources.EmployeeQLVT;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(1001, 34);
+            this.label7.Location = new System.Drawing.Point(1020, 34);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(160, 41);
@@ -388,7 +388,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbClose.Image = global::GUI.Properties.Resources.Close_24px;
-            this.pbClose.Location = new System.Drawing.Point(1291, 10);
+            this.pbClose.Location = new System.Drawing.Point(1310, 10);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(30, 30);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -403,7 +403,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(1024, 14);
+            this.label4.Location = new System.Drawing.Point(1043, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 2;
@@ -413,9 +413,9 @@
             // 
             this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnMenu.Location = new System.Drawing.Point(240, 79);
+            this.pnMenu.Location = new System.Drawing.Point(221, 79);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(1333, 30);
+            this.pnMenu.Size = new System.Drawing.Size(1352, 30);
             this.pnMenu.TabIndex = 3;
             // 
             // pnCenter
@@ -423,9 +423,9 @@
             this.pnCenter.BackColor = System.Drawing.Color.White;
             this.pnCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnCenter.Location = new System.Drawing.Point(240, 109);
+            this.pnCenter.Location = new System.Drawing.Point(221, 109);
             this.pnCenter.Name = "pnCenter";
-            this.pnCenter.Size = new System.Drawing.Size(1333, 766);
+            this.pnCenter.Size = new System.Drawing.Size(1352, 766);
             this.pnCenter.TabIndex = 4;
             // 
             // frmDashboard_AD

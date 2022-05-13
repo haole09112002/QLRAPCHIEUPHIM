@@ -75,22 +75,27 @@ namespace BLL
             }
             return data;
         }
-        public string KiemTraDuLieuHopDongPhim(HopDongPhimDTO hopDongPhim)
+        public string KiemTraDuLieuHopDongPhim(string maPhim, int soLuong, string donViTinh, string giaTien, DateTime ngayBDBQ, DateTime ngayKTBQ)
         {
-            string txt = "";
-            if (hopDongPhim.MaPhim == "")
-                txt = "mã phim";
-            if (hopDongPhim.SoLuong == 0)
-                txt = "số lượng";
-            if (hopDongPhim.DonViTinh == "")
-                txt = "đơn vị tính";
-            if (hopDongPhim.GiaTien == 0)
-                txt = "giá tiền";
-            if (DateTime.Compare(hopDongPhim.NgayKetThucBanQuyen, hopDongPhim.NgayBatDauBanQuyen) < 0)
+            if (maPhim == "")
+                return "Dữ liệu phim còn trống! Vui lòng kiểm tra lại";
+            if (soLuong == 0)
+                return "Dữ liệu số lượng còn trống! Vui lòng kiểm tra lại";
+            if (donViTinh == "")
+                return "Dữ liệu đơn vị tính còn trống! Vui lòng kiểm tra lại";
+            if (giaTien == "")
+                return "Dữ liệu giá tiền còn trống! Vui lòng kiểm tra lại";
+            try
+            {
+                Convert.ToDouble(giaTien);
+            }
+            catch (Exception)
+            {
+                return "Định dạng giá tiền không hợp lệ! Vui lòng kiểm tra lại!";
+            }
+            if (DateTime.Compare(ngayBDBQ, ngayKTBQ) != -1)
                 return "Thời gian bản quyền không hợp lệ! Vui lòng kiểm tra lại!";
-            if (txt != "")
-                return "Dữ liệu " + txt + " còn trống! Vui lòng kiểm tra lại";
-            else return null;
+            return null;
         }
         public void AddUpdateHopDongPhim(List<HopDongPhimViewDTO> dsHopDong, string maHopDong)
         {

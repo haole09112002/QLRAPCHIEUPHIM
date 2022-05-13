@@ -31,6 +31,7 @@ namespace GUI.AD_GUI
                 if (((CBBItem)cbLoaiHopDongMuonTao.SelectedItem).Value == "LHD001")
                 {
                     frmThemHopDongPhim frmThemHopDongPhim = new frmThemHopDongPhim();
+                    frmThemHopDongPhim.d = new frmThemHopDongPhim.Mydel(loadDGV);
                     frmThemHopDongPhim.ShowDialog();
                 }
                 if (((CBBItem)cbLoaiHopDongMuonTao.SelectedItem).Value == "LHD002")
@@ -53,7 +54,7 @@ namespace GUI.AD_GUI
             cbLoaiHopDong.Items.AddRange(LoaiHopDongBLL.Instance.GetCBBLoaiHopDong().ToArray());
             cbSapXep.Items.AddRange(new string[] { "Tên A->Z", "Tên Z->A" });
             cbLoaiHopDong.SelectedItem = cbLoaiHopDong.Items[0];
-            dgvDSHopDong.DataSource = HopDongBLL.Instance.GetListHopDongView(HopDongBLL.Instance.GetHopDongByMaLoaiHopDong());
+            loadDGV();
             dgvDSHopDong.Columns["MaHopDong"].HeaderText = "Mã hợp đồng";
             dgvDSHopDong.Columns["TenHopDong"].HeaderText = "Tên hợp đồng";
             dgvDSHopDong.Columns["TenNhaCungCap"].HeaderText = "Tên nhà cung cấp";
@@ -72,17 +73,17 @@ namespace GUI.AD_GUI
                 if(LoaiHopDongBLL.Instance.KiemTraLoaiHopDong(maHopDong) == "LHD001")
                 {
                     frmThemHopDongPhim frmThemHopDongPhim = new frmThemHopDongPhim(maHopDong);
-                    frmThemHopDongPhim.Show();
+                    frmThemHopDongPhim.ShowDialog();
                 }
                 if (LoaiHopDongBLL.Instance.KiemTraLoaiHopDong(maHopDong) == "LHD002")
                 {
                     frmThemHopDongVatTu frmThemHopDongVatTu = new frmThemHopDongVatTu();
-                    frmThemHopDongVatTu.Show();
+                    frmThemHopDongVatTu.ShowDialog();
                 }
                 if(LoaiHopDongBLL.Instance.KiemTraLoaiHopDong(maHopDong) == "LHD003")
                 {
                     frmThemHopDongThucAn frmThemHopDongThucAn = new frmThemHopDongThucAn();
-                    frmThemHopDongThucAn.Show();
+                    frmThemHopDongThucAn.ShowDialog();
                 }
             }
         }

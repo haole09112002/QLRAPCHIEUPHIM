@@ -43,6 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CaLamViecDAL.cs" />
+    <Compile Include="ChinhSachDAL.cs" />
+    <Compile Include="ChiTietCaLamViecDAL.cs" />
+    <Compile Include="ChiTietDeXuatThucAnDAL.cs" />
+    <Compile Include="ChiTietDeXuatVatTuDAL.cs" />
+    <Compile Include="ChiTietDienVienDaoDienPhimDAL.cs" />
+    <Compile Include="ChiTietKhoPhimDAL.cs" />
+    <Compile Include="ChiTietKhoThucAnDAL.cs" />
+    <Compile Include="ChiTietKhoVatTuDAL.cs" />
+    <Compile Include="ChiTietPhieuPhimDAL.cs" />
+    <Compile Include="ChiTietPhieuThucAnDAL.cs" />
+    <Compile Include="ChiTietPhieuVatTuDAL.cs" />
+    <Compile Include="ChiTietPhongChieuDAL.cs" />
+    <Compile Include="ChucVuDAL.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="DeXuatDAL.cs" />
     <Compile Include="DeXuatPhimDAL.cs" />
@@ -50,11 +64,26 @@
     <Compile Include="HopDongPhimDAL.cs" />
     <Compile Include="HopDongThucAnDAL.cs" />
     <Compile Include="HopDongVatTuDAL.cs" />
+    <Compile Include="KhoDAL.cs" />
+    <Compile Include="LoaiDeXuatDAL.cs" />
     <Compile Include="LoaiHopDongDAL.cs" />
+    <Compile Include="DienVienDaoDienDAL.cs" />
+    <Compile Include="HangSanXuatPhimDAL.cs" />
+    <Compile Include="KhungGioChieuDAL.cs" />
+    <Compile Include="LichChieuDAL.cs" />
+    <Compile Include="LoaiKhoDAL.cs" />
     <Compile Include="LoaiNhaCungCapDAL.cs" />
+    <Compile Include="LoaiPhieuDAL.cs" />
+    <Compile Include="NgayLamViecDAL.cs" />
     <Compile Include="NhaCungCapDAL.cs" />
+    <Compile Include="NhanVienDAL.cs" />
+    <Compile Include="PhieuDAL.cs" />
     <Compile Include="PhimDAL.cs" />
+    <Compile Include="PhongChieuDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheLoaiPhimDAL.cs" />
+    <Compile Include="ThucAnDAL.cs" />
+    <Compile Include="VatTuDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

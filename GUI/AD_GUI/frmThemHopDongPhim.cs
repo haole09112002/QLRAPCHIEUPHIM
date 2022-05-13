@@ -14,7 +14,8 @@ namespace GUI.AD_GUI
 {
     public partial class frmThemHopDongPhim : Form
     {
-    
+        public delegate void Mydel(string maLoaiHD, string txt);
+        public Mydel d { get; set; }
         private string maHopDong;
         private string maDeXuat;
         Panel pnLichSuGiaHan;
@@ -28,10 +29,6 @@ namespace GUI.AD_GUI
            
             this.maHopDong = maHopDong;
             setGUI(maHopDong);
-           
-            
-            
-           
         }
         public void setGUI(string maHopDong)
         {
@@ -48,11 +45,11 @@ namespace GUI.AD_GUI
             txtTenPhim.Enabled = false;
             btnGiaHan.Visible = false;
             cbDonViTinh.Items.AddRange(HopDongPhimBLL.Instance.GetAllDonViTinh().ToArray());
-            dgvPhim.DataSource = dsPhimCanTaoHopDong;
+            ReLoadDGVPhimLuaChon();
             if (maHopDong != "")        //  xem chi tiet
             {
                 txtTenHopDong.Text = HopDongBLL.Instance.GetHopDongByMaHopDong(maHopDong).TenHopDong;
-                dgvPhimDaThem.DataSource = dsPhimDaChon;
+                ReLoadDGVPhimDaChon();
                 foreach (CBBItem i in cbTenCungCap.Items)
                 {
                     if (i.Value == HopDongBLL.Instance.GetHopDongByMaHopDong(maHopDong).MaNhaCungCap)
@@ -76,22 +73,7 @@ namespace GUI.AD_GUI
                 pnLichSuGiaHan.Controls.Add(uc_LichSuGiaHan);
                 uc_LichSuGiaHan.Dock = DockStyle.Fill;
                 pnCenter.Controls.Add(pnLichSuGiaHan);
-                dgvPhimDaThem.Columns["MaPhim"].HeaderText = "Mã phim";
-                dgvPhimDaThem.Columns["TenPhim"].HeaderText = "Tên phim";
-                dgvPhimDaThem.Columns["NgayBatDauBanQuyen"].HeaderText = "Ngày bắt đầu bản quyền";
-                dgvPhimDaThem.Columns["NgayKetThucBanQuyen"].HeaderText = "Ngày kết thúc bản quyền";
-                dgvPhimDaThem.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
-                dgvPhimDaThem.Columns["SoLuong"].HeaderText = "Số lượng";
-                dgvPhimDaThem.Columns["GiaTien"].HeaderText = "Giá tiền";
             }
-
-            dgvPhim.Columns["MaDeXuat"].Visible = false;
-            dgvPhim.Columns["MaPhim"].HeaderText = "Mã phim";
-            dgvPhim.Columns["TenPhim"].HeaderText = "Tên phim";
-            dgvPhim.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
-            dgvPhim.Columns["SoLuong"].HeaderText = "Số lượng";
-
-          
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -142,30 +124,36 @@ namespace GUI.AD_GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            HopDongPhimDTO hopDongPhim = new HopDongPhimDTO();
             cbDonViTinh.SelectedItem = cbDonViTinh.Items[0].ToString();
-            try
+
+            string MaPhim = txtMaPhim.Text;
+            string DonViTinh = cbDonViTinh.SelectedItem.ToString();
+            string GiaTien = txtGiaTien.Text;
+            int SoLuong = Convert.ToInt32(numUpDowSoLuong.Value);
+            DateTime NgayBatDauBanQuyen = dtpBanQuyenBatDau.Value;
+            DateTime NgayKetThucBanQuyen = dtpBanQuyenKetThuc.Value;
+            HopDongPhimDTO hopDongPhim = new HopDongPhimDTO();
+           
+
+            string result = HopDongPhimBLL.Instance.KiemTraDuLieuHopDongPhim(MaPhim, SoLuong, DonViTinh, GiaTien, NgayBatDauBanQuyen, NgayKetThucBanQuyen);
+            if(result == null)
             {
-                hopDongPhim = new HopDongPhimDTO
+                try
                 {
-                    MaPhim = txtMaPhim.Text,
-                    DonViTinh = cbDonViTinh.SelectedItem.ToString(),
-                    GiaTien = Convert.ToDouble(txtGiaTien.Text),
-                    SoLuong = Convert.ToInt32(numUpDowSoLuong.Value),
-                    NgayBatDauBanQuyen = dtpBanQuyenBatDau.Value,
-                    NgayKetThucBanQuyen = dtpBanQuyenKetThuc.Value,
-                    MaHopDong = maHopDong,
-                    PhienBan = "0"
-                };
-            }
-            catch (Exception){}
-            if (HopDongPhimBLL.Instance.KiemTraDuLieuHopDongPhim(hopDongPhim) != null)
-            {
-                MessageBox.Show(HopDongPhimBLL.Instance.KiemTraDuLieuHopDongPhim(hopDongPhim),"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                if(maHopDong == "")    //Them
+                    hopDongPhim = new HopDongPhimDTO
+                    {
+                        MaPhim = MaPhim,
+                        DonViTinh = DonViTinh,
+                        GiaTien = Convert.ToDouble(GiaTien),
+                        SoLuong = SoLuong,
+                        NgayBatDauBanQuyen = NgayBatDauBanQuyen,
+                        NgayKetThucBanQuyen = NgayKetThucBanQuyen,
+                        MaHopDong = maHopDong,
+                        PhienBan = "0"
+                    };
+                }
+                catch (Exception){ }
+                if (maHopDong == "")    //Them
                 {
                     dsPhimDaChon.Add(HopDongPhimBLL.Instance.GetHopDongPhimViewByHopDongPhimDTO(hopDongPhim));
                     var item = dsPhimCanTaoHopDong.Single(x => x.MaPhim == txtMaPhim.Text);
@@ -182,6 +170,10 @@ namespace GUI.AD_GUI
                 ReLoadDGVPhimDaChon();
                 ReLoadDGVPhimLuaChon();
             }
+            else
+            {
+                MessageBox.Show(result,"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }    
         }
       
         private void dgvPhimDaThem_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -220,38 +212,36 @@ namespace GUI.AD_GUI
                     MaLoaiHopDong = "LHD001",
                     NgayKiKetHD = dtpThoiGianKiKet.Value
                 };
+                if (HopDongBLL.Instance.KiemTraDuLieuHopDong(hopDong, dsPhimDaChon.Count) == null)
+                {
+                    DialogResult result = MessageBox.Show("Bạn muốn lưu?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        if (maHopDong == "")
+                        {
+                            HopDongBLL.Instance.ThemHopDong(hopDong);
+                            foreach (PhimCanTaoHopDongDTO i in HopDongPhimBLL.Instance.DSPhimCanThemHopDong())
+                            {
+                                foreach (HopDongPhimViewDTO j in dsPhimDaChon)
+                                {
+                                    if (i.MaPhim == j.MaPhim)
+                                        DeXuatPhimBLL.Instance.CapNhatTinhTrangDeXuat(i.MaPhim, i.MaDeXuat, "3");//
+                                }
+                            }
+                        }
+                        HopDongPhimBLL.Instance.AddUpdateHopDongPhim(dsPhimDaChon, maHopDong);
+                        MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnLuu.Enabled = false;
+                        d("0", "");
+                        this.Close();
+                    }
+                }
+                else
+                    MessageBox.Show(HopDongBLL.Instance.KiemTraDuLieuHopDong(hopDong, dsPhimDaChon.Count), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
                 MessageBox.Show("Dữ liệu Nhà cung cấp còn trống! Vui lòng kiểm tra lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
            
-            if(dsPhimDaChon.Count <= 0)
-            {
-                MessageBox.Show("Danh sách phim trong hợp đồng trống! Vui lòng kiểm tra lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }    
-            if(HopDongBLL.Instance.KiemTraDuLieuHopDong(hopDong) != null)
-                MessageBox.Show(HopDongBLL.Instance.KiemTraDuLieuHopDong(hopDong), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            if (dsPhimDaChon.Count > 0 && HopDongBLL.Instance.KiemTraDuLieuHopDong(hopDong) == null)
-            {
-                DialogResult result = MessageBox.Show("Bạn muốn lưu?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    if (maHopDong == "")
-                    {
-                        HopDongBLL.Instance.ThemHopDong(hopDong);
-                        foreach(PhimCanTaoHopDongDTO i in HopDongPhimBLL.Instance.DSPhimCanThemHopDong())
-                        {
-                            foreach(HopDongPhimViewDTO j in dsPhimDaChon)
-                            {
-                                if(i.MaPhim == j.MaPhim)
-                                    DeXuatPhimBLL.Instance.CapNhatTinhTrangDeXuat(i.MaPhim, i.MaDeXuat, "3");//
-                            }    
-                        }    
-                    }    
-                    HopDongPhimBLL.Instance.AddUpdateHopDongPhim(dsPhimDaChon, maHopDong);
-                    MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    btnLuu.Enabled = false;
-                }
-            }
         }
         private void dgvPhimDaThem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -279,11 +269,28 @@ namespace GUI.AD_GUI
         {
             dgvPhimDaThem.DataSource = null;
             dgvPhimDaThem.DataSource = dsPhimDaChon;
+            dgvPhimDaThem.FirstDisplayedCell = null;
+            dgvPhimDaThem.ClearSelection();
+            dgvPhimDaThem.Columns["MaPhim"].HeaderText = "Mã phim";
+            dgvPhimDaThem.Columns["TenPhim"].HeaderText = "Tên phim";
+            dgvPhimDaThem.Columns["NgayBatDauBanQuyen"].HeaderText = "Ngày bắt đầu bản quyền";
+            dgvPhimDaThem.Columns["NgayKetThucBanQuyen"].HeaderText = "Ngày kết thúc bản quyền";
+            dgvPhimDaThem.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+            dgvPhimDaThem.Columns["SoLuong"].HeaderText = "Số lượng";
+            dgvPhimDaThem.Columns["GiaTien"].HeaderText = "Giá tiền";
+
         }
         private void ReLoadDGVPhimLuaChon()
         {
             dgvPhim.DataSource = null;
             dgvPhim.DataSource = dsPhimCanTaoHopDong;
+            dgvPhim.FirstDisplayedCell = null;
+            dgvPhim.ClearSelection();
+            dgvPhim.Columns["MaDeXuat"].Visible = false;
+            dgvPhim.Columns["MaPhim"].HeaderText = "Mã phim";
+            dgvPhim.Columns["TenPhim"].HeaderText = "Tên phim";
+            dgvPhim.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+            dgvPhim.Columns["SoLuong"].HeaderText = "Số lượng";
         }
 
         private void RefreshTextBox()

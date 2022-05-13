@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace GUI.QLP_GUI
         public UC_DanhSachLichChieuChinhThuc_QLP()
         {
             InitializeComponent();
+            Reload();
+        }
+        public void Reload()
+        {
+            dGVDSLCCT.DataSource = LichChieuBLL.Instance.GetAllLichChieuViews(true);
         }
     }
 }

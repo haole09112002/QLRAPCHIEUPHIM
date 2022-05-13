@@ -101,7 +101,33 @@ namespace BLL
             return null;
         }
         
-        
+        public HopDongPhimDTO GetHopDongPhimByMaHopDong(string maHopDong)
+        {
+            foreach(HopDongPhimDTO i in HopDongPhimDAL.Instance.GetAllHopDongPhim())
+            {
+                if (i.MaHopDong == maHopDong)
+                    return i;
+            }
+            return null;
+        }
+        public HopDongVatTuDTO GetHopDongVatTuByMaHopDong(string maHopDong)
+        {
+            foreach (HopDongVatTuDTO i in HopDongVatTuDAL.Instance.GetAllHopDongVatTu())
+            {
+                if (i.MaHopDong == maHopDong)
+                    return i;
+            }
+            return null;
+        }
+        public HopDongThucAnDTO GetHopDongThucAnByMaHopDong(string maHopDong)
+        {
+            foreach (HopDongThucAnDTO i in HopDongThucAnDAL.Instance.GetAllHopDongThucAn())
+            {
+                if (i.MaHopDong == maHopDong)
+                    return i;
+            }
+            return null;
+        }
         //-------------------------------Hop_Dong
         public void ThemHopDong(HopDongDTO hopDong)
         {
@@ -111,19 +137,17 @@ namespace BLL
         
         //-------------------------------PHIM
       
-        public string KiemTraDuLieuHopDong(HopDongDTO hd)
+        public string KiemTraDuLieuHopDong(HopDongDTO hd, int soLuongPhimTrongHopDong)
         {
-            string txt = "";
             if (hd.TenHopDong == "")
-                txt = "tên hợp đồng";
-            if(hd.MaNhaCungCap == "")
-                txt = "nhà cung cấp";
+                return "Dữ liệu tên hợp đồng còn trống! Vui lòng kiểm tra lại!";
+            if (hd.MaNhaCungCap == "")
+                return "Dữ liệu nhà cung cấp còn trống! Vui lòng kiểm tra lại!";
             if (hd.NgayKiKetHD == null)
-                txt = "ngày kí kết";
-            if (txt != "")
-                return "Dữ liệu " + txt + " còn trống! Vui lòng kiểm tra lại!";
-            else
-                return null;
+                return "Dữ liệu ngày kí kết còn trống! Vui lòng kiểm tra lại!";
+            if (soLuongPhimTrongHopDong == 0)
+                return "Chưa có phim trong hợp đồng! Vui lòng kiểm tra lại!";
+            return null;
         }
         public string GetMaHopDongMoiNhat()
         {
