@@ -35,13 +35,13 @@
         private void InitializeComponent()
         {
             this.pnListNCCVatTu = new System.Windows.Forms.Panel();
+            this.cboSapXep = new System.Windows.Forms.ComboBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.dgvListNCCVatTu = new System.Windows.Forms.DataGridView();
             this.btnXemChiTiet = new System.Windows.Forms.Button();
             this.btnSapXep = new System.Windows.Forms.Button();
-            this.cboSapXep = new System.Windows.Forms.ComboBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lblTitleListNCCVatTu = new System.Windows.Forms.Label();
-            this.dgvListNCCVatTu = new System.Windows.Forms.DataGridView();
             this.pnListNCCVatTu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListNCCVatTu)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,38 @@
             this.pnListNCCVatTu.Size = new System.Drawing.Size(960, 588);
             this.pnListNCCVatTu.TabIndex = 3;
             // 
+            // cboSapXep
+            // 
+            this.cboSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSapXep.FormattingEnabled = true;
+            this.cboSapXep.Location = new System.Drawing.Point(671, 51);
+            this.cboSapXep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboSapXep.Name = "cboSapXep";
+            this.cboSapXep.Size = new System.Drawing.Size(265, 27);
+            this.cboSapXep.TabIndex = 46;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(166, 50);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(263, 28);
+            this.txtTimKiem.TabIndex = 44;
+            // 
+            // dgvListNCCVatTu
+            // 
+            this.dgvListNCCVatTu.BackgroundColor = System.Drawing.Color.White;
+            this.dgvListNCCVatTu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListNCCVatTu.Location = new System.Drawing.Point(24, 100);
+            this.dgvListNCCVatTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListNCCVatTu.Name = "dgvListNCCVatTu";
+            this.dgvListNCCVatTu.RowHeadersWidth = 62;
+            this.dgvListNCCVatTu.RowTemplate.Height = 28;
+            this.dgvListNCCVatTu.Size = new System.Drawing.Size(912, 428);
+            this.dgvListNCCVatTu.TabIndex = 40;
+            // 
             // btnXemChiTiet
             // 
             this.btnXemChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -77,6 +109,7 @@
             this.btnXemChiTiet.Text = "XEM CHI TIẾT";
             this.btnXemChiTiet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXemChiTiet.UseVisualStyleBackColor = false;
+            this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
             // btnSapXep
             // 
@@ -94,17 +127,6 @@
             this.btnSapXep.Text = "    SẮP XẾP";
             this.btnSapXep.UseVisualStyleBackColor = false;
             // 
-            // cboSapXep
-            // 
-            this.cboSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cboSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboSapXep.FormattingEnabled = true;
-            this.cboSapXep.Location = new System.Drawing.Point(671, 51);
-            this.cboSapXep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboSapXep.Name = "cboSapXep";
-            this.cboSapXep.Size = new System.Drawing.Size(265, 27);
-            this.cboSapXep.TabIndex = 46;
-            // 
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.Cyan;
@@ -121,15 +143,7 @@
             this.btnTimKiem.Text = "TÌM KIẾM";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = false;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(166, 50);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(263, 28);
-            this.txtTimKiem.TabIndex = 44;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // lblTitleListNCCVatTu
             // 
@@ -142,18 +156,6 @@
             this.lblTitleListNCCVatTu.TabIndex = 43;
             this.lblTitleListNCCVatTu.Text = "DANH SÁCH NHÀ CUNG CẤP VẬT TƯ";
             this.lblTitleListNCCVatTu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // dgvListNCCVatTu
-            // 
-            this.dgvListNCCVatTu.BackgroundColor = System.Drawing.Color.White;
-            this.dgvListNCCVatTu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListNCCVatTu.Location = new System.Drawing.Point(24, 100);
-            this.dgvListNCCVatTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvListNCCVatTu.Name = "dgvListNCCVatTu";
-            this.dgvListNCCVatTu.RowHeadersWidth = 62;
-            this.dgvListNCCVatTu.RowTemplate.Height = 28;
-            this.dgvListNCCVatTu.Size = new System.Drawing.Size(912, 428);
-            this.dgvListNCCVatTu.TabIndex = 40;
             // 
             // UCNhaCungUngVatTuQLVT
             // 

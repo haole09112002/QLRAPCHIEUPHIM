@@ -41,7 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CaLamViecDTO.cs" />
     <Compile Include="CBBItem.cs" />
+    <Compile Include="ChinhSachDTO.cs" />
+    <Compile Include="ChiTietCaLamViecDTO.cs" />
+    <Compile Include="ChiTietDeXuatThucAnDTO.cs" />
+    <Compile Include="ChiTietDeXuatVatTuDTO.cs" />
+    <Compile Include="ChiTietKhoPhimDTO.cs" />
+    <Compile Include="ChiTietKhoThucAnDTO.cs" />
+    <Compile Include="ChiTietKhoVatTuDTO.cs" />
+    <Compile Include="ChiTietPhieuPhimDTO.cs" />
+    <Compile Include="ChiTietPhieuThucAnDTO.cs" />
+    <Compile Include="ChiTietPhieuVatTuDTO.cs" />
+    <Compile Include="ChiTietPhongChieuDTO.cs" />
+    <Compile Include="ChucVuDTO.cs" />
     <Compile Include="DeXuatDTO.cs" />
     <Compile Include="DeXuatPhimDTO.cs" />
     <Compile Include="HopDongDTO.cs" />
@@ -50,6 +63,8 @@
     <Compile Include="HopDongVatTuDTO.cs" />
     <Compile Include="HopDongPhimDTO.cs" />
     <Compile Include="HopDongViewDTO.cs" />
+    <Compile Include="KhoDTO.cs" />
+    <Compile Include="LoaiDeXuatDTO.cs" />
     <Compile Include="LoaiHopDongDTO.cs" />
     <Compile Include="ChiTietDeXuatPhimDTO.cs" />
     <Compile Include="ChiTietDienVienDaoDienPhimDTO.cs" />
@@ -58,15 +73,24 @@
     <Compile Include="KhungGioChieuDTO.cs" />
     <Compile Include="LichChieuDTO.cs" />
     <Compile Include="LichChieuViewDTO.cs" />
+    <Compile Include="LoaiKhoDTO.cs" />
     <Compile Include="LoaiNhaCungCapDTO.cs" />
+    <Compile Include="LoaiPhieuDTO.cs" />
+    <Compile Include="NgayLamViecDTO.cs" />
     <Compile Include="NhaCungCapDTO.cs" />
     <Compile Include="NhaCungCapViewDTO.cs" />
+    <Compile Include="NhanVienDTO.cs" />
+    <Compile Include="PhieuDTO.cs" />
     <Compile Include="PhimCanTaoHopDongDTO.cs" />
     <Compile Include="PhimDTO.cs" />
     <Compile Include="PhimViewDTO.cs" />
     <Compile Include="PhongChieuDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheLoaiPhimDTO.cs" />
+    <Compile Include="ThucAnDTO.cs" />
+    <Compile Include="ThucAnViewDTO.cs" />
+    <Compile Include="VatTuDTO.cs" />
+    <Compile Include="VatTuViewDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

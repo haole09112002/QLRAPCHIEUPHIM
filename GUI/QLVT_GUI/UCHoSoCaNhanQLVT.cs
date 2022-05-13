@@ -19,7 +19,8 @@ namespace GUI.QLVT_GUI
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
-
+            FrmDoiMatKhauQLVT frmDoiMatKhauQLVT = new FrmDoiMatKhauQLVT();
+            frmDoiMatKhauQLVT.Show();
         }
     }
 }
