@@ -24,8 +24,8 @@ namespace DAL
             {
                 if (_Instance == null)
                 {
-                    string cnnstr = @"Data Source=LAPTOP-MAJKSJMC\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
-                    //string cnnstr = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
+                    
+                    string cnnstr = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
 
 
 

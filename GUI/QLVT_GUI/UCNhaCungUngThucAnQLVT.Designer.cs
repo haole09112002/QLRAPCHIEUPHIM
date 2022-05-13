@@ -77,6 +77,7 @@
             this.btnXemChiTiet.Text = "XEM CHI TIẾT";
             this.btnXemChiTiet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXemChiTiet.UseVisualStyleBackColor = false;
+            this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
             // btnSapXep
             // 
@@ -104,6 +105,7 @@
             this.cboSapXep.Name = "cboSapXep";
             this.cboSapXep.Size = new System.Drawing.Size(265, 27);
             this.cboSapXep.TabIndex = 46;
+            this.cboSapXep.SelectedIndexChanged += new System.EventHandler(this.cbSapXep_SelectedIndexChanged);
             // 
             // btnTimKiem
             // 
@@ -121,6 +123,7 @@
             this.btnTimKiem.Text = "TÌM KIẾM";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
