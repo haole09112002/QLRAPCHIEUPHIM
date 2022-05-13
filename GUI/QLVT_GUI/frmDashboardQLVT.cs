@@ -85,6 +85,7 @@ namespace GUI.QLVT_GUI
         {
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucThongTinSanPhamQLVT);
+            changeColorButton(btnSanPham);
         }
 
         private void btnPhongChieu_Click(object sender, EventArgs e)
