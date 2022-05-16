@@ -8,28 +8,28 @@ using System.Data;
 
 namespace DAL
 {
-    public class DeXuatPhimDAL
+    public class ChiTietDeXuatPhimDAL
     {
-        private static DeXuatPhimDAL instance;
-        public static DeXuatPhimDAL Instance
+        private static ChiTietDeXuatPhimDAL instance;
+        public static ChiTietDeXuatPhimDAL Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new DeXuatPhimDAL();
+                    instance = new ChiTietDeXuatPhimDAL();
                 }
                 return instance;
             }
             private set { }
         }
-        private DeXuatPhimDAL()
+        private ChiTietDeXuatPhimDAL()
         {
 
         }
-        public List<DeXuatPhimDTO> GetllDeXuatPhim()
+        public List<ChiTietDeXuatPhimDTO> GetllDeXuatPhim()
         {
-            List <DeXuatPhimDTO > data = new List<DeXuatPhimDTO> ();
+            List <ChiTietDeXuatPhimDTO > data = new List<ChiTietDeXuatPhimDTO> ();
            string query = "Select * from CHI_TIET_DE_XUAT_PHIM";
             foreach(DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
             {
@@ -37,9 +37,9 @@ namespace DAL
             }
             return data;
         }
-        public DeXuatPhimDTO GetDeXuatPhimByDataRow(DataRow i)
+        public ChiTietDeXuatPhimDTO GetDeXuatPhimByDataRow(DataRow i)
         {
-            return new DeXuatPhimDTO
+            return new ChiTietDeXuatPhimDTO
             {
                 MaDeXuat = i["MaDeXuat"].ToString(),
                 MaPhim = i["MaPhim"].ToString(),
@@ -49,9 +49,9 @@ namespace DAL
                 SoLuong = Convert.ToInt32(i["SoLuong"])
             };
         }
-        public List<PhimCanTaoHopDongDTO> DanhSachPhimCanThemHopDong()
+        public List<ChiTietDeXuatPhimViewDTO> DanhSachPhimCanThemHopDong()
         {
-            List<PhimCanTaoHopDongDTO> data = new List<PhimCanTaoHopDongDTO>();
+            List<ChiTietDeXuatPhimViewDTO> data = new List<ChiTietDeXuatPhimViewDTO>();
             string query = "select ct.MaDeXuat, PHIM.MaPhim, PHIM.TenPhim, ct.SoLuong, ct.DonViTinh from CHI_TIET_DE_XUAT_PHIM ct inner join PHIM on PHIM.MaPhim = ct.MaPhim where ct.TinhTrang = '2'";
             foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
             {
@@ -59,9 +59,9 @@ namespace DAL
             }
             return data;
         }
-        public PhimCanTaoHopDongDTO GetPhimCanTaoHopDongByDataRow(DataRow i)
+        public ChiTietDeXuatPhimViewDTO GetPhimCanTaoHopDongByDataRow(DataRow i)
         {
-            return new PhimCanTaoHopDongDTO
+            return new ChiTietDeXuatPhimViewDTO
             {
                 MaDeXuat = i["MaDeXuat"].ToString(),
                 MaPhim = i["MaPhim"].ToString(),

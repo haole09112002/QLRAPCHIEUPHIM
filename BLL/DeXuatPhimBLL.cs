@@ -31,15 +31,12 @@ namespace BLL
 
         public void CapNhatTinhTrangDeXuat(string maPhim, string maDeXuat, string tinhTrang)
         {
-            
-                        DeXuatPhimDAL.Instance.CapNhatTinhTrangDeXuat(maPhim, maDeXuat,tinhTrang);
-            
-            
+             ChiTietDeXuatPhimDAL.Instance.CapNhatTinhTrangDeXuat(maPhim, maDeXuat,tinhTrang);
         }
         //0: ko chap nhan. //1: đg chờ duyetj, //2 Đã duyệt chờ tạo hóa đơn, //3 đã tạo hóa đơn
-        public DeXuatPhimDTO GetChiTietDeXuatPhim(string maDeXuat, string maPhim)
+        public ChiTietDeXuatPhimDTO GetChiTietDeXuatPhim(string maDeXuat, string maPhim)
         {
-            foreach (DeXuatPhimDTO j in DeXuatPhimDAL.Instance.GetllDeXuatPhim())
+            foreach (ChiTietDeXuatPhimDTO j in ChiTietDeXuatPhimDAL.Instance.GetllDeXuatPhim())
             {
                 if (j.MaPhim == maPhim && j.MaDeXuat == maDeXuat)
                 {

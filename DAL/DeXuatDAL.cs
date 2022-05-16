@@ -45,8 +45,7 @@ namespace DAL
                 MaDeXuat = i["MaDeXuat"].ToString(),
                 MaNhanVien = i["MaNhanVien"].ToString(),
                 NgayDeXuat = Convert.ToDateTime(i["NgayDeXuat"]),
-                MaLoaiDeXuat = i["MaLoaiDeXuat"].ToString(),
-                MaKho = i["MaKho"].ToString()
+                MaLoaiDeXuat = i["MaLoaiDeXuat"].ToString()
             };
         }
 

@@ -21,7 +21,7 @@ namespace GUI.AD_GUI
         Panel pnLichSuGiaHan;
         UC_LichSuGiaHanHDPhim uc_LichSuGiaHan = new UC_LichSuGiaHanHDPhim();
         List<HopDongPhimViewDTO> dsPhimDaChon = new List<HopDongPhimViewDTO>();
-        List<PhimCanTaoHopDongDTO> dsPhimCanTaoHopDong = new List<PhimCanTaoHopDongDTO>();
+        List<ChiTietDeXuatPhimViewDTO> dsPhimCanTaoHopDong = new List<ChiTietDeXuatPhimViewDTO>();
 
         public frmThemHopDongPhim(string maHopDong = "")
         {
@@ -63,7 +63,7 @@ namespace GUI.AD_GUI
                 gbLuaChonPhim.Visible = false;
                 btnGiaHan.Visible = true;
                 btnThem.Visible = false;
-                btnLuu.Enabled = false;
+                btnLuu.Visible = false;
                 btnGiaHan.Enabled = true;
 
                 pnLichSuGiaHan = new Panel();
@@ -77,7 +77,7 @@ namespace GUI.AD_GUI
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            if (btnLuu.Enabled == true)
+            if (btnLuu.Visible == true)
             {
                 DialogResult result = MessageBox.Show("Bạn có chắc muốn thoát!, Dữ liệu chưa được lưu lại", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
@@ -105,7 +105,7 @@ namespace GUI.AD_GUI
                 btnThem.Visible = true;
                 btnThem.Enabled = true;
                 btnThem.Text = "Cập nhật";
-                btnLuu.Enabled = true;
+                btnLuu.Visible = true;
             }    
         }
 
@@ -155,9 +155,23 @@ namespace GUI.AD_GUI
                 catch (Exception){ }
                 if (maHopDong == "")    //Them
                 {
+                    HopDongPhimViewDTO item1 = null;
+                    ChiTietDeXuatPhimViewDTO item = null;
+                    foreach (HopDongPhimViewDTO i in dsPhimDaChon)
+                    {
+                        if (i.MaPhim == MaPhim)
+                            item1 = i;
+                    }    
+                    if(item1!= null)
+                        dsPhimDaChon.Remove(item1);
+                    foreach (ChiTietDeXuatPhimViewDTO j in dsPhimCanTaoHopDong)
+                    {
+                        if (j.MaPhim == MaPhim)
+                            item = j;
+                    }
+                    if (item != null)
+                        dsPhimCanTaoHopDong.Remove(item);
                     dsPhimDaChon.Add(HopDongPhimBLL.Instance.GetHopDongPhimViewByHopDongPhimDTO(hopDongPhim));
-                    var item = dsPhimCanTaoHopDong.Single(x => x.MaPhim == txtMaPhim.Text);
-                    dsPhimCanTaoHopDong.Remove(item);
                     RefreshTextBox();
                     cbDonViTinh.SelectedItem = cbDonViTinh.Items[0];
                 }
@@ -220,7 +234,7 @@ namespace GUI.AD_GUI
                         if (maHopDong == "")
                         {
                             HopDongBLL.Instance.ThemHopDong(hopDong);
-                            foreach (PhimCanTaoHopDongDTO i in HopDongPhimBLL.Instance.DSPhimCanThemHopDong())
+                            foreach (ChiTietDeXuatPhimViewDTO i in HopDongPhimBLL.Instance.DSPhimCanThemHopDong())
                             {
                                 foreach (HopDongPhimViewDTO j in dsPhimDaChon)
                                 {
@@ -251,7 +265,7 @@ namespace GUI.AD_GUI
                 {
                     var item = dsPhimDaChon.Single(x => x.MaPhim == txtMaPhim.Text);
                     dsPhimDaChon.Remove(item);
-                    dsPhimCanTaoHopDong.Add(new PhimCanTaoHopDongDTO
+                    dsPhimCanTaoHopDong.Add(new ChiTietDeXuatPhimViewDTO
                     {
                         MaDeXuat = maDeXuat,
                         MaPhim = txtMaPhim.Text,

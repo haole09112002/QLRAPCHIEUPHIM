@@ -136,9 +136,9 @@ namespace BLL
                 }
             }
         }
-        public List<PhimCanTaoHopDongDTO> DSPhimCanThemHopDong()
+        public List<ChiTietDeXuatPhimViewDTO> DSPhimCanThemHopDong()
         {
-            return DeXuatPhimDAL.Instance.DanhSachPhimCanThemHopDong();
+            return ChiTietDeXuatPhimDAL.Instance.DanhSachPhimCanThemHopDong();
         }
 
         public HopDongPhimDTO ConvertHopDongPhimViewToDTO(HopDongPhimViewDTO hdView, string maHopDong)
@@ -161,7 +161,7 @@ namespace BLL
             {
                 list.Add(i.DonViTinh);
             }    
-            return list;
+            return list.Distinct().ToList();
         }
         public DataTable GetLichSuGiaHan(string maHopDong, string maPhim)
         {
