@@ -44,6 +44,8 @@ namespace GUI
             if (result == 1)
             {
                 FrmDashboardQLVT frmDashboardQLVT = new FrmDashboardQLVT();
+                //frmDashboardQLVT.WindowState = FormWindowState.Maximized;
+                //frmDashboardQLVT.TopMost = true;
                 frmDashboardQLVT.Show();
                 this.Hide();
             }
