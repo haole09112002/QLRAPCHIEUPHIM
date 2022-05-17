@@ -10,7 +10,7 @@ namespace DAL
 {
     public class DienVienDaoDienDAL
     {
-        public static DienVienDaoDienDAL instance;
+        private static DienVienDaoDienDAL instance;
         public static DienVienDaoDienDAL Instance
         {
             get
@@ -41,7 +41,7 @@ namespace DAL
         public void LuuDienVienDaoDien(string TenDienVienDAoDien,string Link)
         {
             string query = "Insert into DIEN_VIEN_DAO_DIEN (TenDienVienDaoDIen,Link) values" +
-                $"('{TenDienVienDAoDien}','{Link}')";
+                $"(N'{TenDienVienDAoDien}','{Link}')";
             DBHelper.Instance.ExcuteQuery(query);
         }
     }

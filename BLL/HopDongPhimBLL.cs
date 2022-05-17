@@ -133,7 +133,7 @@ namespace BLL
         }
         public List<PhimCanTaoHopDongDTO> DSPhimCanThemHopDong()
         {
-            return DeXuatPhimDAL.Instance.DanhSachPhimCanThemHopDong();
+            return ChiTietDeXuatPhimDAL.Instance.DanhSachPhimCanThemHopDong();
         }
 
         public HopDongPhimDTO ConvertHopDongPhimViewToDTO(HopDongPhimViewDTO hdView, string maHopDong)

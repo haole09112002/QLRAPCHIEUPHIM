@@ -18,14 +18,20 @@ namespace GUI.QLP_GUI
             InitializeComponent();
             Reload();
         }
-        public void Reload(string txt = "")
+        public void Reload(string txt = "", string TimKiem = "")
         {
-            dGVDanhSachPhim.DataSource = PhimBLL.Instance.GetPhimViews(txt);
+            dGVDanhSachPhim.DataSource = PhimBLL.Instance.GetPhimViews(txt,TimKiem);
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            string txtSearch = txtTimKiem.Text;
-            Reload(txtSearch);
+            if(cBTimKiem.SelectedIndex < 0)
+            {
+                Reload(txtTimKiem.Text);
+            }
+            else
+            {
+                Reload(txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
+            }
         }
 
         private void btnSapXep_Click(object sender, EventArgs e)
@@ -35,37 +41,32 @@ namespace GUI.QLP_GUI
             {
                 case "MaPhim":
                     {
-                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareMaPhim);
+                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareMaPhim,txtTimKiem.Text,cBTimKiem.SelectedItem.ToString());
                         break;
                     }
                 case "TenPhim":
                     {
-                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTenPhim);
+                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTenPhim, txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
                         break;
                     }
                 case "ThoiLuong":
                     {
-                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareThoiLuong);
+                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareThoiLuong, txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
                         break;
                     }
                 case "QuocGia":
                     {
-                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareQuocGia);
+                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareQuocGia, txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
                         break;
                     }
                 case "NamSanXuat":
                     {
-                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareNamSanXuat);
+                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareNamSanXuat, txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
                         break;
                     }
-                //case "TenHangPhim":
-                //    {
-                //        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTenHangPhim);
-                //        break;
-                //    }
                 case "TheLoai":
                     {
-                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTheLoai);
+                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTheLoai, txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
                         break;
                     }
             }

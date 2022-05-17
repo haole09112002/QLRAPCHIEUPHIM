@@ -25,13 +25,13 @@ namespace DAL
         }
         private DeXuatDAL()
         {
-            
+
         }
         public List<DeXuatDTO> GetAllDeXuat()
         {
             List<DeXuatDTO> data = new List<DeXuatDTO>();
             string query = "select * from DE_XUAT";
-            foreach(DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
             {
                 data.Add(GetDeXuatByDataRow(i));
             }
@@ -46,9 +46,25 @@ namespace DAL
                 MaNhanVien = i["MaNhanVien"].ToString(),
                 NgayDeXuat = Convert.ToDateTime(i["NgayDeXuat"]),
                 MaLoaiDeXuat = i["MaLoaiDeXuat"].ToString(),
-                MaKho = i["MaKho"].ToString()
             };
         }
 
+        public void LuuDeXuat(string MaNhanVien, DateTime NgayDeXuat, string MaLoaiDeXuat)
+        {
+            string query = "Insert into DE_XUAT (MaNhanVien,NgayDeXuat,MaLoaiDeXuat) values" +
+                $"('{MaNhanVien}','{NgayDeXuat.Year}-{NgayDeXuat.Month}-{NgayDeXuat.Day}','{MaLoaiDeXuat}')";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
+
+        public string GetMaDeXuatAddNew()
+        {
+            string MaDeXuat = "";
+            string query = "Select Max(MaDeXuat) from DE_XUAT";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                MaDeXuat = i[0].ToString();
+            }
+            return MaDeXuat;
         }
     }
+}

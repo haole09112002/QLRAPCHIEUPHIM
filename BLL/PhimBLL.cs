@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DAL;
 using DTO;
-using DAL;
-using System.Windows.Forms;
-using System.IO;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
+using System.Windows.Forms;
 
 namespace BLL
 {
@@ -28,7 +25,7 @@ namespace BLL
             }
             set { }
         }
-        public List<PhimViewDTO> GetPhimViews(string txt = "")
+        public List<PhimViewDTO> GetPhimViews(string txt = "", string TimKiem = "")
         {
             List<PhimViewDTO> data = new List<PhimViewDTO>();
             List<TheLoaiPhimDTO> TLP = new List<TheLoaiPhimDTO>();
@@ -37,34 +34,122 @@ namespace BLL
             {
                 string TheLoaiPhim = "";
                 string TenHangSanXuatPhim = "";
-                if(i.TenPhim.Contains(txt))
-                {
-                    foreach(TheLoaiPhimDTO j in TLP.ToArray())
+                if (TimKiem == "TenPhim" || TimKiem == "")
+                    if (i.TenPhim.Contains(txt))
                     {
-                        if(i.MaTheLoai == j.MaTheLoaiPhim)
+                        foreach (TheLoaiPhimDTO j in TLP.ToArray())
                         {
-                            TheLoaiPhim = j.TenTheLoaiPhim;
+                            if (i.MaTheLoai == j.MaTheLoaiPhim)
+                            {
+                                TheLoaiPhim = j.TenTheLoaiPhim;
+                            }
                         }
-                    }
-                    foreach (HangSanXuatPhimDTO k in HangSanXuatPhimDAL.Instance.GetAllHangSanXuatPhim())
-                    {
-                        if (k.MaHangSanXuatPhim == i.MaHangSanXuatPhim)
+                        foreach (HangSanXuatPhimDTO k in HangSanXuatPhimDAL.Instance.GetAllHangSanXuatPhim())
                         {
-                            TenHangSanXuatPhim = k.TenHangSanXuatPhim;
+                            if (k.MaHangSanXuatPhim == i.MaHangSanXuatPhim)
+                            {
+                                TenHangSanXuatPhim = k.TenHangSanXuatPhim;
+                            }
                         }
+                        data.Add(new PhimViewDTO
+                        {
+                            MaPhim = i.MaPhim,
+                            TenPhim = i.TenPhim,
+                            ThoiLuong = i.ThoiLuong,
+                            QuocGia = i.QuocGia,
+                            NamSanXuat = i.NamSanXuat,
+                            TenHangSanXuatPhim = TenHangSanXuatPhim,
+                            DoTuoiXem = i.DoTuoiXem,
+                            TheLoai = TheLoaiPhim
+                        });
                     }
-                    data.Add(new PhimViewDTO
+                if (TimKiem == "QuocGia")
+                    if (i.QuocGia.Contains(txt))
                     {
-                        MaPhim = i.MaPhim,
-                        TenPhim = i.TenPhim,
-                        ThoiLuong = i.ThoiLuong,
-                        QuocGia = i.QuocGia,
-                        NamSanXuat = i.NamSanXuat,
-                        TenHangSanXuatPhim = TenHangSanXuatPhim,
-                        DoTuoiXem = i.DoTuoiXem,
-                        TheLoai = TheLoaiPhim
-                    });
-                }
+                        foreach (TheLoaiPhimDTO j in TLP.ToArray())
+                        {
+                            if (i.MaTheLoai == j.MaTheLoaiPhim)
+                            {
+                                TheLoaiPhim = j.TenTheLoaiPhim;
+                            }
+                        }
+                        foreach (HangSanXuatPhimDTO k in HangSanXuatPhimDAL.Instance.GetAllHangSanXuatPhim())
+                        {
+                            if (k.MaHangSanXuatPhim == i.MaHangSanXuatPhim)
+                            {
+                                TenHangSanXuatPhim = k.TenHangSanXuatPhim;
+                            }
+                        }
+                        data.Add(new PhimViewDTO
+                        {
+                            MaPhim = i.MaPhim,
+                            TenPhim = i.TenPhim,
+                            ThoiLuong = i.ThoiLuong,
+                            QuocGia = i.QuocGia,
+                            NamSanXuat = i.NamSanXuat,
+                            TenHangSanXuatPhim = TenHangSanXuatPhim,
+                            DoTuoiXem = i.DoTuoiXem,
+                            TheLoai = TheLoaiPhim
+                        });
+                    }
+                if (TimKiem == "ThoiLuong")
+                    if (i.ThoiLuong.ToString().Contains(txt))
+                    {
+                        foreach (TheLoaiPhimDTO j in TLP.ToArray())
+                        {
+                            if (i.MaTheLoai == j.MaTheLoaiPhim)
+                            {
+                                TheLoaiPhim = j.TenTheLoaiPhim;
+                            }
+                        }
+                        foreach (HangSanXuatPhimDTO k in HangSanXuatPhimDAL.Instance.GetAllHangSanXuatPhim())
+                        {
+                            if (k.MaHangSanXuatPhim == i.MaHangSanXuatPhim)
+                            {
+                                TenHangSanXuatPhim = k.TenHangSanXuatPhim;
+                            }
+                        }
+                        data.Add(new PhimViewDTO
+                        {
+                            MaPhim = i.MaPhim,
+                            TenPhim = i.TenPhim,
+                            ThoiLuong = i.ThoiLuong,
+                            QuocGia = i.QuocGia,
+                            NamSanXuat = i.NamSanXuat,
+                            TenHangSanXuatPhim = TenHangSanXuatPhim,
+                            DoTuoiXem = i.DoTuoiXem,
+                            TheLoai = TheLoaiPhim
+                        });
+                    }
+                if (TimKiem == "NamSanXuat")
+                    if (i.NamSanXuat.Day.ToString().Contains(txt) || i.NamSanXuat.Month.ToString().Contains(txt) || i.NamSanXuat.Year.ToString().Contains(txt))
+                    {
+                        foreach (TheLoaiPhimDTO j in TLP.ToArray())
+                        {
+                            if (i.MaTheLoai == j.MaTheLoaiPhim)
+                            {
+                                TheLoaiPhim = j.TenTheLoaiPhim;
+                            }
+                        }
+                        foreach (HangSanXuatPhimDTO k in HangSanXuatPhimDAL.Instance.GetAllHangSanXuatPhim())
+                        {
+                            if (k.MaHangSanXuatPhim == i.MaHangSanXuatPhim)
+                            {
+                                TenHangSanXuatPhim = k.TenHangSanXuatPhim;
+                            }
+                        }
+                        data.Add(new PhimViewDTO
+                        {
+                            MaPhim = i.MaPhim,
+                            TenPhim = i.TenPhim,
+                            ThoiLuong = i.ThoiLuong,
+                            QuocGia = i.QuocGia,
+                            NamSanXuat = i.NamSanXuat,
+                            TenHangSanXuatPhim = TenHangSanXuatPhim,
+                            DoTuoiXem = i.DoTuoiXem,
+                            TheLoai = TheLoaiPhim
+                        });
+                    }
             }
             return data;
         }
@@ -73,7 +158,7 @@ namespace BLL
             PhimDTO data = new PhimDTO();
             foreach (PhimDTO i in PhimDAL.Instance.GetALLPhim())
             {
-                if(i.MaPhim == MaPhim)
+                if (i.MaPhim == MaPhim)
                 {
                     data.MaPhim = i.MaPhim;
                     data.TenPhim = i.TenPhim;
@@ -89,14 +174,14 @@ namespace BLL
             }
             return data;
         }
-        public List<PhimViewDTO> SortPhimView(Compare compare)
+        public List<PhimViewDTO> SortPhimView(Compare compare, string txt = "", string TimKiem = "")
         {
             List<PhimViewDTO> data = new List<PhimViewDTO>();
-            data = GetPhimViews("");
-            for(int i = 0; i < data.Count - 1; i++)
-                for(int j = i + 1; j < data.Count; j++)
+            data = GetPhimViews(txt,TimKiem);
+            for (int i = 0; i < data.Count - 1; i++)
+                for (int j = i + 1; j < data.Count; j++)
                 {
-                    if(compare(data[i], data[j]))
+                    if (compare(data[i], data[j]))
                     {
                         PhimViewDTO temp = data[i];
                         data[i] = data[j];
@@ -132,20 +217,19 @@ namespace BLL
         public byte[] ChuyenAnhThanhMangByte(PictureBox pictureBox)
         {
             MemoryStream memoryStream = new MemoryStream();
-            pictureBox.Image.Save(memoryStream,ImageFormat.Jpeg);
+            pictureBox.Image.Save(memoryStream, ImageFormat.Jpeg);
             return memoryStream.ToArray();
         }
         public Image ChuyeMangByteSangAnh(byte[] byteArray)
         {
-            MemoryStream memoryStream = new MemoryStream(byteArray,0,byteArray.Length);
-            memoryStream.Write(byteArray,0,byteArray.Length);
-            return Image.FromStream(memoryStream,true);
+            MemoryStream memoryStream = new MemoryStream(byteArray, 0, byteArray.Length);
+            memoryStream.Write(byteArray, 0, byteArray.Length);
+            return Image.FromStream(memoryStream, true);
         }
         public void LuuPhim(PhimDTO phim)
         {
             PhimDAL.Instance.LuuDuLieuPhim(phim);
         }
-
         public List<CBBItem> GetCBBPhim()
         {
             List<CBBItem> data = new List<CBBItem>();
@@ -153,6 +237,19 @@ namespace BLL
             {
                 data.Add(new CBBItem
                 { Value = i.MaPhim, Text = i.TenPhim });
+            }
+            return data;
+        }
+        public string GetMaPhimAddNew()
+        {
+            return PhimDAL.Instance.GetMaPhimAddNew();
+        }
+        public List<PhimDTO> GetAllPhim()
+        {
+            List<PhimDTO> data = new List<PhimDTO>();
+            foreach(PhimDTO i in PhimDAL.Instance.GetALLPhim())
+            {
+                data.Add(i);
             }
             return data;
         }

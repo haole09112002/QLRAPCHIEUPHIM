@@ -50,7 +50,7 @@ namespace GUI.QLP_GUI
                 txtTheLoai.Text = TheLoaiPhimBLL.Instance.GetTenTLByMaTL(phim.MaTheLoai);
                 rtxtNoiDung.Enabled = false;
                 rtxtNoiDung.Text = phim.NoiDung;
-                MaDienVienDaoDien = ChiTIetDienVienDaoDienPhimBLL.Instance.GetMaDVDDByMaPhimVaVaiTro(phim.MaPhim, "C");
+                MaDienVienDaoDien = ChiTietDienVienDaoDienPhimBLL.Instance.GetMaDVDDByMaPhimVaVaiTro(phim.MaPhim, "C");
                 dtDienVienChinh.Columns.Add("Tên Diễn Viên Chính");
                 foreach (string i in MaDienVienDaoDien)
                 {
@@ -58,7 +58,7 @@ namespace GUI.QLP_GUI
                 }
                 dGVDienVienChinh.DataSource = dtDienVienChinh;
                 MaDienVienDaoDien.Clear();
-                MaDienVienDaoDien = ChiTIetDienVienDaoDienPhimBLL.Instance.GetMaDVDDByMaPhimVaVaiTro(phim.MaPhim, "P");
+                MaDienVienDaoDien = ChiTietDienVienDaoDienPhimBLL.Instance.GetMaDVDDByMaPhimVaVaiTro(phim.MaPhim, "P");
                 dtDienVienPhu.Columns.Add("Tên Diễn Viên Phụ");
                 foreach (string i in MaDienVienDaoDien)
                 {
@@ -66,7 +66,7 @@ namespace GUI.QLP_GUI
                 }
                 dGVDienVienPhu.DataSource = dtDienVienPhu;
                 MaDienVienDaoDien.Clear();
-                MaDienVienDaoDien = ChiTIetDienVienDaoDienPhimBLL.Instance.GetMaDVDDByMaPhimVaVaiTro(phim.MaPhim, "D");
+                MaDienVienDaoDien = ChiTietDienVienDaoDienPhimBLL.Instance.GetMaDVDDByMaPhimVaVaiTro(phim.MaPhim, "D");
                 dtDaoDien.Columns.Add("Tên Đạo Diễn");
                 foreach (string i in MaDienVienDaoDien)
                 {

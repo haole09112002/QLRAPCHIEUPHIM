@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,24 +16,35 @@ namespace GUI.QLP_GUI
     {
         public delegate void MyDel(Control c);
         public MyDel d;
+        DataTable dtDanhSachLichChieuDuKien = new DataTable();
         public UC_DanhSachLichChieuDuKien_QLP()
         {
             InitializeComponent();
+            SetDaTaTable();
             Reload();
+            btnChinhSua.Hide();
+            btnXoa.Hide();
         }
         UC_TaoLichChieu_QLP ucTLC = new UC_TaoLichChieu_QLP();
+        public void SetDaTaTable()
+        {
+            dtDanhSachLichChieuDuKien.Columns.Add("Tên Phim");
+            dtDanhSachLichChieuDuKien.Columns.Add("Tên Phòng Chiếu");
+            dtDanhSachLichChieuDuKien.Columns.Add("Giờ Bắt Đầu");
+            dtDanhSachLichChieuDuKien.Columns.Add("Giờ Kết Thúc"); 
+            dtDanhSachLichChieuDuKien.Columns.Add("Ngày Chiếu"); 
+        }
         public void Reload()
         {
-            dGVDanhSachLichChieuDuKien.DataSource = LichChieuBLL.Instance.GetAllLichChieuViews(false);
+            foreach (LichChieuDTO i in LichChieuBLL.Instance.GetListLichChieuByTrangThai(false))
+            {
+                dtDanhSachLichChieuDuKien.Rows.Add(PhimBLL.Instance.GetPhimByMaPhim(i.MaPhim).TenPhim, PhongChieuBLL.Instance.GetPhongChieuByMaPC(i.MaPhongChieu).TenPhong, KhungGioChieuBLL.Instance.GetKhungGioChieuByMaKGC(i.MaKhungGioChieu).TGBatDau,KhungGioChieuBLL.Instance.GetKhungGioChieuByMaKGC(i.MaKhungGioChieu).TGKetThuc,i.NgayChieu.ToShortDateString());
+            }
+            dGVDanhSachLichChieuDuKien.DataSource = dtDanhSachLichChieuDuKien;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string MaPhim = dGVDanhSachLichChieuDuKien.SelectedRows[0].Cells["MaPhim"].Value.ToString();
-            string MaPhongChieu = dGVDanhSachLichChieuDuKien.SelectedRows[0].Cells["MaPhongChieu"].Value.ToString();
-            string MaKhungGioChieu = dGVDanhSachLichChieuDuKien.SelectedRows[0].Cells["MaKhungGioChieu"].Value.ToString();
-            LichChieuBLL.Instance.XoaLichChieu(MaPhim,MaKhungGioChieu,MaPhongChieu);
-            Reload();
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)

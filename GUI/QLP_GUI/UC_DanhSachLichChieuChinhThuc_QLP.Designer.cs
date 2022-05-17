@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button7 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dGVDSLCCT = new System.Windows.Forms.DataGridView();
+            this.dGVDanhSachLichChieuChinhThuc = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVDSLCCT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachLichChieuChinhThuc)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -46,7 +48,7 @@
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.dGVDSLCCT);
+            this.panel1.Controls.Add(this.dGVDanhSachLichChieuChinhThuc);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(26, 20);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -107,19 +109,34 @@
             this.textBox1.Size = new System.Drawing.Size(295, 33);
             this.textBox1.TabIndex = 31;
             // 
-            // dGVDSLCCT
+            // dGVDanhSachLichChieuChinhThuc
             // 
-            this.dGVDSLCCT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dGVDSLCCT.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dGVDSLCCT.BackgroundColor = System.Drawing.Color.White;
-            this.dGVDSLCCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVDSLCCT.Location = new System.Drawing.Point(18, 161);
-            this.dGVDSLCCT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dGVDSLCCT.Name = "dGVDSLCCT";
-            this.dGVDSLCCT.RowHeadersWidth = 62;
-            this.dGVDSLCCT.RowTemplate.Height = 28;
-            this.dGVDSLCCT.Size = new System.Drawing.Size(1247, 535);
-            this.dGVDSLCCT.TabIndex = 30;
+            this.dGVDanhSachLichChieuChinhThuc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGVDanhSachLichChieuChinhThuc.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVDanhSachLichChieuChinhThuc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dGVDanhSachLichChieuChinhThuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVDanhSachLichChieuChinhThuc.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dGVDanhSachLichChieuChinhThuc.Location = new System.Drawing.Point(18, 161);
+            this.dGVDanhSachLichChieuChinhThuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dGVDanhSachLichChieuChinhThuc.Name = "dGVDanhSachLichChieuChinhThuc";
+            this.dGVDanhSachLichChieuChinhThuc.RowHeadersWidth = 62;
+            this.dGVDanhSachLichChieuChinhThuc.RowTemplate.Height = 28;
+            this.dGVDanhSachLichChieuChinhThuc.Size = new System.Drawing.Size(1247, 535);
+            this.dGVDanhSachLichChieuChinhThuc.TabIndex = 30;
             // 
             // label1
             // 
@@ -144,7 +161,7 @@
             this.Size = new System.Drawing.Size(1333, 766);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVDSLCCT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachLichChieuChinhThuc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,7 +173,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dGVDSLCCT;
+        private System.Windows.Forms.DataGridView dGVDanhSachLichChieuChinhThuc;
         private System.Windows.Forms.Label label1;
     }
 }

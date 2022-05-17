@@ -243,7 +243,7 @@ namespace GUI.AD_GUI
                             foreach(HopDongPhimViewDTO j in dsPhimDaChon)
                             {
                                 if(i.MaPhim == j.MaPhim)
-                                    DeXuatPhimBLL.Instance.CapNhatTinhTrangDeXuat(i.MaPhim, i.MaDeXuat, "3");//
+                                    ChiTietDeXuatPhimBLL.Instance.CapNhatTinhTrangDeXuat(i.MaPhim, i.MaDeXuat, "3");//
                             }    
                         }    
                     }    

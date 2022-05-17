@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="CBBItem.cs" />
     <Compile Include="DeXuatDTO.cs" />
-    <Compile Include="DeXuatPhimDTO.cs" />
+    <Compile Include="ChiTietDeXuatPhimDTO.cs" />
     <Compile Include="HopDongDTO.cs" />
     <Compile Include="HopDongPhimViewDTO.cs" />
     <Compile Include="HopDongThucAnDTO.cs" />
@@ -51,7 +51,6 @@
     <Compile Include="HopDongPhimDTO.cs" />
     <Compile Include="HopDongViewDTO.cs" />
     <Compile Include="LoaiHopDongDTO.cs" />
-    <Compile Include="ChiTietDeXuatPhimDTO.cs" />
     <Compile Include="ChiTietDienVienDaoDienPhimDTO.cs" />
     <Compile Include="DienVienDaoDienDTO.cs" />
     <Compile Include="HangSanXuatPhimDTO.cs" />

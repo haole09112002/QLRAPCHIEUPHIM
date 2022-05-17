@@ -251,11 +251,11 @@
     <Compile Include="QLP_GUI\frm_TaoDeXuat_QLP.Designer.cs">
       <DependentUpon>frm_TaoDeXuat_QLP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLP_GUI\frm_ThemDienVienDaoDien_QLP.cs">
+    <Compile Include="QLP_GUI\frm_ThemHangSanXuatMoi_QLP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLP_GUI\frm_ThemDienVienDaoDien_QLP.Designer.cs">
-      <DependentUpon>frm_ThemDienVienDaoDien_QLP.cs</DependentUpon>
+    <Compile Include="QLP_GUI\frm_ThemHangSanXuatMoi_QLP.Designer.cs">
+      <DependentUpon>frm_ThemHangSanXuatMoi_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLP_GUI\frm_ThemMoiDienVienDaoDien_QLP.cs">
       <SubType>Form</SubType>
@@ -552,8 +552,8 @@
     <EmbeddedResource Include="QLP_GUI\frm_TaoDeXuat_QLP.resx">
       <DependentUpon>frm_TaoDeXuat_QLP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\frm_ThemDienVienDaoDien_QLP.resx">
-      <DependentUpon>frm_ThemDienVienDaoDien_QLP.cs</DependentUpon>
+    <EmbeddedResource Include="QLP_GUI\frm_ThemHangSanXuatMoi_QLP.resx">
+      <DependentUpon>frm_ThemHangSanXuatMoi_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\frm_ThemMoiDienVienDaoDien_QLP.resx">
       <DependentUpon>frm_ThemMoiDienVienDaoDien_QLP.cs</DependentUpon>
@@ -1082,6 +1082,9 @@
       <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

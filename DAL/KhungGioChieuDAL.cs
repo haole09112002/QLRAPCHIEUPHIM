@@ -10,7 +10,7 @@ namespace DAL
 {
     public class KhungGioChieuDAL
     {
-        public static KhungGioChieuDAL instance;
+        private static KhungGioChieuDAL instance;
         public static KhungGioChieuDAL Instance
         {
             get
