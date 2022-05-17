@@ -41,6 +41,7 @@
             this.cbLoaiHopDongMuonTao = new System.Windows.Forms.ComboBox();
             this.btnTao = new System.Windows.Forms.Button();
             this.btnXemChiTiet = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHopDong)).BeginInit();
@@ -171,6 +172,7 @@
             this.panel3.Controls.Add(this.cbLoaiHopDongMuonTao);
             this.panel3.Controls.Add(this.btnTao);
             this.panel3.Controls.Add(this.btnXemChiTiet);
+            this.panel3.Controls.Add(this.btnExcel);
             this.panel3.Location = new System.Drawing.Point(25, 643);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1263, 62);
@@ -220,6 +222,24 @@
             this.btnXemChiTiet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXemChiTiet.UseVisualStyleBackColor = false;
             // 
+            // btnExcel
+            // 
+            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcel.Image = global::GUI.Properties.Resources.Download;
+            this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcel.Location = new System.Drawing.Point(965, 18);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(148, 40);
+            this.btnExcel.TabIndex = 4;
+            this.btnExcel.Text = "XUẤT EXCEL";
+            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // UC_HopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -247,6 +267,7 @@
         private System.Windows.Forms.ComboBox cbSapXep;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnSapXep;
+        private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.Button btnXemChiTiet;
         private System.Windows.Forms.ComboBox cbLoaiHopDong;
         private System.Windows.Forms.Label label2;

@@ -39,10 +39,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxHidePass = new System.Windows.Forms.PictureBox();
-            this.pictureBoxShowPass = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pbxExit = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
@@ -51,27 +47,21 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHidePass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.pictureBoxHidePass);
-            this.panel3.Controls.Add(this.pictureBoxShowPass);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.btnDN);
             this.panel3.Controls.Add(this.txtMatKhau);
             this.panel3.Controls.Add(this.txtTenTaiKhoan);
-            this.panel3.Location = new System.Drawing.Point(12, 187);
+            this.panel3.Location = new System.Drawing.Point(22, 156);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(349, 254);
+            this.panel3.Size = new System.Drawing.Size(320, 283);
             this.panel3.TabIndex = 0;
             // 
             // button1
@@ -79,7 +69,7 @@
             this.button1.BackColor = System.Drawing.Color.LightGray;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(10, 192);
+            this.button1.Location = new System.Drawing.Point(18, 214);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 50);
             this.button1.TabIndex = 8;
@@ -112,7 +102,7 @@
             this.btnDN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(134)))), ((int)(((byte)(37)))));
             this.btnDN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDN.Location = new System.Drawing.Point(190, 192);
+            this.btnDN.Location = new System.Drawing.Point(178, 214);
             this.btnDN.Name = "btnDN";
             this.btnDN.Size = new System.Drawing.Size(126, 50);
             this.btnDN.TabIndex = 3;
@@ -122,7 +112,7 @@
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(66, 95);
+            this.txtMatKhau.Location = new System.Drawing.Point(74, 117);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(230, 28);
@@ -130,7 +120,7 @@
             // 
             // txtTenTaiKhoan
             // 
-            this.txtTenTaiKhoan.Location = new System.Drawing.Point(66, 38);
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(74, 60);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(230, 28);
             this.txtTenTaiKhoan.TabIndex = 0;
@@ -140,10 +130,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(229)))), ((int)(((byte)(232)))));
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("MV Boli", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(84, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 79);
+            this.label1.Size = new System.Drawing.Size(213, 69);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sign in";
             // 
@@ -180,48 +170,6 @@
             this.pictureBox6.TabIndex = 15;
             this.pictureBox6.TabStop = false;
             // 
-            // pictureBoxHidePass
-            // 
-            this.pictureBoxHidePass.Image = global::GUI.Properties.Resources.hidePass_26px;
-            this.pictureBoxHidePass.Location = new System.Drawing.Point(302, 92);
-            this.pictureBoxHidePass.Name = "pictureBoxHidePass";
-            this.pictureBoxHidePass.Size = new System.Drawing.Size(35, 35);
-            this.pictureBoxHidePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxHidePass.TabIndex = 11;
-            this.pictureBoxHidePass.TabStop = false;
-            this.pictureBoxHidePass.Click += new System.EventHandler(this.pictureBoxHidePass_Click);
-            // 
-            // pictureBoxShowPass
-            // 
-            this.pictureBoxShowPass.Image = global::GUI.Properties.Resources.eye_26px;
-            this.pictureBoxShowPass.Location = new System.Drawing.Point(302, 92);
-            this.pictureBoxShowPass.Name = "pictureBoxShowPass";
-            this.pictureBoxShowPass.Size = new System.Drawing.Size(35, 35);
-            this.pictureBoxShowPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxShowPass.TabIndex = 10;
-            this.pictureBoxShowPass.TabStop = false;
-            this.pictureBoxShowPass.Click += new System.EventHandler(this.pictureBoxShowPass_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::GUI.Properties.Resources.password_26px;
-            this.pictureBox4.Location = new System.Drawing.Point(13, 88);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::GUI.Properties.Resources.male_user_26px;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 31);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
             // pbxExit
             // 
             this.pbxExit.Image = global::GUI.Properties.Resources.shutdown_40px;
@@ -232,6 +180,17 @@
             this.pbxExit.TabIndex = 1;
             this.pbxExit.TabStop = false;
             this.pbxExit.Click += new System.EventHandler(this.pbxExit_Click_1);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.cinemaiccon;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(394, 500);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // frmDangNhap
             // 
@@ -252,10 +211,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHidePass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -276,7 +231,5 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBoxShowPass;
-        private System.Windows.Forms.PictureBox pictureBoxHidePass;
     }
 }

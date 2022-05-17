@@ -1068,11 +1068,5 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eye_26px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hidePass_26px.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

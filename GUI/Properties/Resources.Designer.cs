@@ -303,16 +303,6 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap eye_26px {
-            get {
-                object obj = ResourceManager.GetObject("eye_26px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Female {
             get {
                 object obj = ResourceManager.GetObject("Female", resourceCulture);
@@ -346,16 +336,6 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap Giatien {
             get {
                 object obj = ResourceManager.GetObject("Giatien", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hidePass_26px {
-            get {
-                object obj = ResourceManager.GetObject("hidePass_26px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
