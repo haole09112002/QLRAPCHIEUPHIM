@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using System.Data;
+using System.Security.Cryptography;
 
 namespace DAL
 {
@@ -55,6 +56,13 @@ namespace DAL
                 MaChinhSach = i["MaChinhSach"].ToString(),
                 MaChucVu = i["MaChucVu"].ToString(),
             };
+        }
+        public int KiemTraDangNhap(string tenTaiKhoan, string matKhau)
+        {
+           
+            string query = "EXEC KiemTraDangNhap @TenTaiKhoan , @MatKhau";
+            object[] parameter = new object[] { tenTaiKhoan, matKhau };
+            return Convert.ToInt32(DBHelper.Instance.ExcuteScalar(query,parameter));
         }
     }
 }

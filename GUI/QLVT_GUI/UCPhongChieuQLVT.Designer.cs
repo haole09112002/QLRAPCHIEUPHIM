@@ -217,6 +217,7 @@
             this.dgvListPhongChieu.RowTemplate.Height = 24;
             this.dgvListPhongChieu.Size = new System.Drawing.Size(564, 367);
             this.dgvListPhongChieu.TabIndex = 12;
+            this.dgvListPhongChieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListPhongChieu_CellClick);
             // 
             // UCPhongChieuQLVT
             // 

@@ -202,12 +202,6 @@
     <Compile Include="AD_GUI\UC_ThongTinNV.Designer.cs">
       <DependentUpon>UC_ThongTinNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
