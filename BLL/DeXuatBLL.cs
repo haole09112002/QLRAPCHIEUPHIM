@@ -57,7 +57,7 @@ namespace BLL
         public List<CBBItem> GetCBBPhimDeXuat()
         {
             List<CBBItem> data = new List<CBBItem>();
-            foreach (DeXuatPhimDTO i in DeXuatPhimDAL.Instance.GetllDeXuatPhim())
+            foreach (ChiTietDeXuatPhimDTO i in ChiTietDeXuatPhimDAL.Instance.GetllDeXuatPhim())
             {
                 foreach (CBBItem j in PhimBLL.Instance.GetCBBPhim())
                 {

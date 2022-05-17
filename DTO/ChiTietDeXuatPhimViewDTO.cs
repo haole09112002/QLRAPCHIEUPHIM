@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class PhimCanTaoHopDongDTO
+    public class ChiTietDeXuatPhimViewDTO
     {
         private string maDeXuat;
         private string maPhim;

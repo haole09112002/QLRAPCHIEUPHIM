@@ -84,6 +84,7 @@
             this.cbSapXep.Name = "cbSapXep";
             this.cbSapXep.Size = new System.Drawing.Size(215, 30);
             this.cbSapXep.TabIndex = 7;
+            this.cbSapXep.SelectedIndexChanged += new System.EventHandler(this.cbSapXep_SelectedIndexChanged);
             // 
             // btnSapXep
             // 
@@ -151,6 +152,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(216, 27);
             this.txtTimKiem.TabIndex = 6;
+            this.txtTimKiem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyDown);
             // 
             // label2
             // 

@@ -52,6 +52,7 @@ begin
 	)
 	if(@MaLoaiNhaCungCap = 'LNCC03')
 	(
+		
 		select THUC_AN.MaThucAn, THUC_AN.TenThucAn, ct.SoLuong, ct.DonViTinh, ct.GiaTien
 		from HOP_DONG_THUC_AN ct, THUC_AN,  HOP_DONG
 		where  ct.MaHopDong = HOP_DONG.MaHopDong  and THUC_AN.MaThucAn =ct.MaThucAn and HOP_DONG.MaNhaCungCap =  @MaNhaCungCap
@@ -70,6 +71,7 @@ begin
 end
 go
 
+---- hd phim
 create Proc ThemHopDongPhim
 	@MaHopDong varchar(6),
 	@MaPhim varchar(6),
@@ -104,6 +106,7 @@ begin
 	values (@MaHopDong,@MaPhim,0,@NgayBatDauBanQuyen,@NgayKetThucBanQuyen,@Donvitinh,@SoLuong,@GiaTien);
 end
 go
+
 create proc LayMaPhienBanHopDongPhimLonNhat
 	@MaHopDong varchar(6),
 	@MaPhim varchar(6)
@@ -112,4 +115,52 @@ begin
 select COUNT(PhienBan)
 from HOP_DONG_PHIM
 where MaPhim = @MaPhim and MaHopDong = @MaHopDong
+end
+-- hp thuc an
+go
+
+create Proc ThemHopDongThucAn
+	@MaHopDong varchar(6),
+	@MaThucAn varchar(6),
+	@Donvitinh nvarchar(15),
+	@SoLuong int,
+	@GiaTien money
+as
+begin
+	insert into HOP_DONG_THUC_AN (MaHopDong,MaThucAn,Donvitinh,SoLuong,GiaTien)
+	values (@MaHopDong,@MaThucAn,@Donvitinh,@SoLuong,@GiaTien);
+end
+go
+
+-- hp vattu
+go
+
+create Proc ThemHopDongVatTu
+	@MaHopDong varchar(6),
+	@MaVatTu varchar(6),
+	@Donvitinh nvarchar(15),
+	@SoLuong int,
+	@GiaTien money
+as
+begin
+	insert into HOP_DONG_VAT_TU(MaHopDong,MaVatTu,Donvitinh,SoLuong,GiaTien)
+	values (@MaHopDong,@MaVatTu,@Donvitinh,@SoLuong,@GiaTien);
+end
+go
+
+--- dang nhap
+create proc KiemTraDangNhap
+	@TenTaiKhoan varchar(30),
+	@MatKhau varchar(32)
+as
+begin
+    if exists (select * from NHAN_VIEN where TenTaiKhoan = @TenTaiKhoan and MatKhau = @MatKhau and MaChucVu = 'CV0003')
+        select 3 as code
+    else if exists (select * from NHAN_VIEN where TenTaiKhoan = @TenTaiKhoan and MatKhau = @MatKhau and MaChucVu = 'CV0002')
+        select 2 as code
+    else if exists (select * from NHAN_VIEN where TenTaiKhoan = @TenTaiKhoan and MatKhau = @MatKhau and MaChucVu = 'CV0001')
+        select 1 as code
+	else if exists (select * from NHAN_VIEN where TenTaiKhoan = @TenTaiKhoan and MatKhau != @MatKhau)
+        select 0 as code
+    else select -1 as code
 end

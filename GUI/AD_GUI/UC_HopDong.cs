@@ -37,11 +37,13 @@ namespace GUI.AD_GUI
                 if (((CBBItem)cbLoaiHopDongMuonTao.SelectedItem).Value == "LHD002")
                 {
                     frmThemHopDongVatTu frmThemHopDongVatTu = new frmThemHopDongVatTu();
+                    frmThemHopDongVatTu.d = new frmThemHopDongVatTu.Mydel(loadDGV);
                     frmThemHopDongVatTu.ShowDialog();
                 }
                 if (((CBBItem)cbLoaiHopDongMuonTao.SelectedItem).Value == "LHD003")
                 {
                     frmThemHopDongThucAn frmThemHopDongThucAn = new frmThemHopDongThucAn();
+                    frmThemHopDongThucAn.d = new frmThemHopDongThucAn.Mydel(loadDGV);
                     frmThemHopDongThucAn.ShowDialog();
                 }
             }
@@ -52,18 +54,18 @@ namespace GUI.AD_GUI
             cbLoaiHopDong.Items.Add(new CBBItem { Text = "Tất cả", Value = "0" });
             cbLoaiHopDongMuonTao.Items.AddRange(LoaiHopDongBLL.Instance.GetCBBLoaiHopDong().ToArray());
             cbLoaiHopDong.Items.AddRange(LoaiHopDongBLL.Instance.GetCBBLoaiHopDong().ToArray());
-            cbSapXep.Items.AddRange(new string[] { "Tên A->Z", "Tên Z->A" });
+            cbSapXep.Items.AddRange(new string[] { "Tên A->Z", "Tên Z->A", "Ngày kí kết tăng", "Ngày kí kết giảm" });
             cbLoaiHopDong.SelectedItem = cbLoaiHopDong.Items[0];
-            loadDGV();
+            loadDGV();  
+        }
+        public void loadDGV(string maLoaiHopDong = "0", string txt = "")
+        {
+            dgvDSHopDong.DataSource = HopDongBLL.Instance.GetHopDongViewByMaLoaiHopDong(maLoaiHopDong, txt);
             dgvDSHopDong.Columns["MaHopDong"].HeaderText = "Mã hợp đồng";
             dgvDSHopDong.Columns["TenHopDong"].HeaderText = "Tên hợp đồng";
             dgvDSHopDong.Columns["TenNhaCungCap"].HeaderText = "Tên nhà cung cấp";
             dgvDSHopDong.Columns["NgayKiKetHD"].HeaderText = "Ngày kí kết";
             dgvDSHopDong.Columns["TenLoaiHopDong"].HeaderText = "Loại hợp đồng";
-        }
-        public void loadDGV(string maLoaiHopDong = "0", string txt = "")
-        {
-            dgvDSHopDong.DataSource = HopDongBLL.Instance.GetListHopDongView(HopDongBLL.Instance.GetHopDongByMaLoaiHopDong(maLoaiHopDong, txt));
         }
         private void dgvDSHopDong_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -77,12 +79,12 @@ namespace GUI.AD_GUI
                 }
                 if (LoaiHopDongBLL.Instance.KiemTraLoaiHopDong(maHopDong) == "LHD002")
                 {
-                    frmThemHopDongVatTu frmThemHopDongVatTu = new frmThemHopDongVatTu();
+                    frmThemHopDongVatTu frmThemHopDongVatTu = new frmThemHopDongVatTu(maHopDong);
                     frmThemHopDongVatTu.ShowDialog();
                 }
                 if(LoaiHopDongBLL.Instance.KiemTraLoaiHopDong(maHopDong) == "LHD003")
                 {
-                    frmThemHopDongThucAn frmThemHopDongThucAn = new frmThemHopDongThucAn();
+                    frmThemHopDongThucAn frmThemHopDongThucAn = new frmThemHopDongThucAn(maHopDong);
                     frmThemHopDongThucAn.ShowDialog();
                 }
             }
@@ -93,6 +95,8 @@ namespace GUI.AD_GUI
             if (cbLoaiHopDong.SelectedItem != null)
             {
                 loadDGV(((CBBItem)cbLoaiHopDong.SelectedItem).Value);
+                Sort();
+                loadDGV(((CBBItem)cbLoaiHopDong.SelectedItem).Value, txtTimKiem.Text);
             }
         }
 
@@ -104,6 +108,31 @@ namespace GUI.AD_GUI
         private void btnExcel_Click(object sender, EventArgs e)
         {
 
+        }
+        private void txtTimKiem_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+               loadDGV(((CBBItem)cbLoaiHopDong.SelectedItem).Value, txtTimKiem.Text);
+            }
+        }
+
+        private void cbSapXep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Sort();
+        }
+        private void Sort()
+        {
+            if (cbSapXep.SelectedIndex >= 0)
+            {
+                List<string> now = new List<string>();
+                string dkSapXep = cbSapXep.SelectedItem.ToString();
+                foreach (DataGridViewRow row in dgvDSHopDong.Rows)
+                {
+                    now.Add(row.Cells["MaHopDong"].Value.ToString());
+                }
+                dgvDSHopDong.DataSource = HopDongBLL.Instance.SortHopDong(HopDongBLL.Instance.GetHopDongDGV(now), dkSapXep);
+            }
         }
     }
 }

@@ -50,5 +50,31 @@ namespace DAL
                 TinhTrang = Convert.ToBoolean(i["TinhTrang"].ToString()),
             };
         }
+        public List<ChiTietDeXuatVatTuView> DanhSachVatTuCanThemHopDong()
+        {
+            List<ChiTietDeXuatVatTuView> data = new List<ChiTietDeXuatVatTuView>();
+            string query = "select ct.MaDeXuat, VAT_TU.MaVatTu, VAT_TU.TenVatTu, ct.SoLuong, ct.DonViTinh from CHI_TIET_DE_XUAT_VT ct inner join VAT_TU on VAT_TU.MaVatTu = ct.MaVatTu where ct.TinhTrang = '2'";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                data.Add(GetVatTuCanTaoHopDongByDataRow(i));
+            }
+            return data;
+        }
+        public ChiTietDeXuatVatTuView GetVatTuCanTaoHopDongByDataRow(DataRow i)
+        {
+            return new ChiTietDeXuatVatTuView
+            {
+                MaDeXuat = i["MaDeXuat"].ToString(),
+                MaVatTu = i["MaVatTu"].ToString(),
+                TenVatTu = i["TenVatTu"].ToString(),
+                SoLuong = Convert.ToInt32(i["SoLuong"]),
+                DonViTinh = i["DonViTinh"].ToString(),
+            };
+        }
+        public void CapNhatTinhTrangDeXuat(string maVatTu, string maDeXuat, string tinhTrang)
+        {
+            string query = string.Format("Update CHI_TIET_DE_XUAT_VT set TinhTrang = '{0}' where MaDeXuat ='{1}' and MaVatTu= '{2}' ", tinhTrang, maDeXuat, maVatTu);
+            DBHelper.Instance.ExcuteNonQuery(query);
+        }
     }
 }
