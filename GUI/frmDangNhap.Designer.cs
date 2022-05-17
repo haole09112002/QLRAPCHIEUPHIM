@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBoxHidePass = new System.Windows.Forms.PictureBox();
+            this.pictureBoxShowPass = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -39,22 +41,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxHidePass = new System.Windows.Forms.PictureBox();
-            this.pictureBoxShowPass = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pbxExit = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHidePass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHidePass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -74,12 +70,34 @@
             this.panel3.Size = new System.Drawing.Size(349, 254);
             this.panel3.TabIndex = 0;
             // 
+            // pictureBoxHidePass
+            // 
+            this.pictureBoxHidePass.Image = global::GUI.Properties.Resources.hidePass_26px;
+            this.pictureBoxHidePass.Location = new System.Drawing.Point(302, 92);
+            this.pictureBoxHidePass.Name = "pictureBoxHidePass";
+            this.pictureBoxHidePass.Size = new System.Drawing.Size(35, 35);
+            this.pictureBoxHidePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxHidePass.TabIndex = 11;
+            this.pictureBoxHidePass.TabStop = false;
+            this.pictureBoxHidePass.Click += new System.EventHandler(this.pictureBoxHidePass_Click);
+            // 
+            // pictureBoxShowPass
+            // 
+            this.pictureBoxShowPass.Image = global::GUI.Properties.Resources.eye_26px;
+            this.pictureBoxShowPass.Location = new System.Drawing.Point(302, 92);
+            this.pictureBoxShowPass.Name = "pictureBoxShowPass";
+            this.pictureBoxShowPass.Size = new System.Drawing.Size(35, 35);
+            this.pictureBoxShowPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxShowPass.TabIndex = 10;
+            this.pictureBoxShowPass.TabStop = false;
+            this.pictureBoxShowPass.Click += new System.EventHandler(this.pictureBoxShowPass_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightGray;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(10, 192);
+            this.button1.Location = new System.Drawing.Point(18, 186);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 50);
             this.button1.TabIndex = 8;
@@ -90,7 +108,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GUI.Properties.Resources.password_26px;
-            this.pictureBox4.Location = new System.Drawing.Point(18, 110);
+            this.pictureBox4.Location = new System.Drawing.Point(18, 92);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(35, 35);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -100,7 +118,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GUI.Properties.Resources.male_user_26px;
-            this.pictureBox3.Location = new System.Drawing.Point(18, 53);
+            this.pictureBox3.Location = new System.Drawing.Point(18, 34);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -112,7 +130,7 @@
             this.btnDN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(134)))), ((int)(((byte)(37)))));
             this.btnDN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDN.Location = new System.Drawing.Point(190, 192);
+            this.btnDN.Location = new System.Drawing.Point(200, 186);
             this.btnDN.Name = "btnDN";
             this.btnDN.Size = new System.Drawing.Size(126, 50);
             this.btnDN.TabIndex = 3;
@@ -180,48 +198,6 @@
             this.pictureBox6.TabIndex = 15;
             this.pictureBox6.TabStop = false;
             // 
-            // pictureBoxHidePass
-            // 
-            this.pictureBoxHidePass.Image = global::GUI.Properties.Resources.hidePass_26px;
-            this.pictureBoxHidePass.Location = new System.Drawing.Point(302, 92);
-            this.pictureBoxHidePass.Name = "pictureBoxHidePass";
-            this.pictureBoxHidePass.Size = new System.Drawing.Size(35, 35);
-            this.pictureBoxHidePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxHidePass.TabIndex = 11;
-            this.pictureBoxHidePass.TabStop = false;
-            this.pictureBoxHidePass.Click += new System.EventHandler(this.pictureBoxHidePass_Click);
-            // 
-            // pictureBoxShowPass
-            // 
-            this.pictureBoxShowPass.Image = global::GUI.Properties.Resources.eye_26px;
-            this.pictureBoxShowPass.Location = new System.Drawing.Point(302, 92);
-            this.pictureBoxShowPass.Name = "pictureBoxShowPass";
-            this.pictureBoxShowPass.Size = new System.Drawing.Size(35, 35);
-            this.pictureBoxShowPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxShowPass.TabIndex = 10;
-            this.pictureBoxShowPass.TabStop = false;
-            this.pictureBoxShowPass.Click += new System.EventHandler(this.pictureBoxShowPass_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::GUI.Properties.Resources.password_26px;
-            this.pictureBox4.Location = new System.Drawing.Point(13, 88);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::GUI.Properties.Resources.male_user_26px;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 31);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
             // pbxExit
             // 
             this.pbxExit.Image = global::GUI.Properties.Resources.shutdown_40px;
@@ -232,6 +208,17 @@
             this.pbxExit.TabIndex = 1;
             this.pbxExit.TabStop = false;
             this.pbxExit.Click += new System.EventHandler(this.pbxExit_Click_1);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.cinemaiccon;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(392, 500);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // frmDangNhap
             // 
@@ -246,16 +233,14 @@
             this.Text = "frmDangNhap";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHidePass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHidePass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
