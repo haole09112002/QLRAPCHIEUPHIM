@@ -44,13 +44,15 @@ namespace GUI
             if (result == 1)
             {
                 FrmDashboardQLVT frmDashboardQLVT = new FrmDashboardQLVT();
+                //frmDashboardQLVT.WindowState = FormWindowState.Maximized;
+                //frmDashboardQLVT.TopMost = true;
                 frmDashboardQLVT.Show();
                 this.Hide();
             }
             if (result == 0)
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu! Vui lòng kiểm tra lại!");
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu! Vui lòng kiểm tra lại!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (result == -1)
-                MessageBox.Show("Tài khoản chưa tồn tại! Vui lòng kiểm tra lại!");
+                MessageBox.Show("Tài khoản chưa tồn tại! Vui lòng kiểm tra lại!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -64,6 +66,24 @@ namespace GUI
         {
             txtMatKhau.Text = "";
             txtTenTaiKhoan.Text = "";
+        }
+
+        private void pictureBoxHidePass_Click(object sender, EventArgs e)
+        {
+            if(txtMatKhau.PasswordChar == '*')
+            {
+                pictureBoxShowPass.BringToFront();
+                txtMatKhau.PasswordChar = '\0';
+            }    
+        }
+
+        private void pictureBoxShowPass_Click(object sender, EventArgs e)
+        {
+            if (txtMatKhau.PasswordChar == '\0')
+            {
+                pictureBoxHidePass.BringToFront();
+                txtMatKhau.PasswordChar = '*';
+            }
         }
     }
 }
