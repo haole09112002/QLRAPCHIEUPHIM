@@ -31,15 +31,32 @@ namespace BLL
         {
             return ChiTietPhongChieuDAL.Instance.GetAllChiTietPhongChieu();
         }
-        public List<VatTuDTO> GetAllVatTuByMaPhongChieu(string maPhongChieu)
+        public List<ChiTietPhongChieuDTO> GetAllVatTuByMaPhongChieu(string maPhongChieu)
         {
-            List<VatTuDTO> data = new List<VatTuDTO>();
+            List<ChiTietPhongChieuDTO> data = new List<ChiTietPhongChieuDTO>();
             foreach (ChiTietPhongChieuDTO i in GetAllChiTietPhongChieu())
             {
                     if(i.MaPhongChieu == maPhongChieu)
-                       data.Add(VatTuBLL.Instance.GetVatTuByMaVatTu(i.MaVatTu));
+                       data.Add(i);
             }
             return data;
         }
+        public void ThemChiTietPhongChieuToDSVatTuDaChon(ChiTietPhongChieuDTO pc,ref List<ChiTietPhongChieuDTO> dsVatTuDaChon)
+        {
+            bool daTonTai = false;
+            foreach(ChiTietPhongChieuDTO i in dsVatTuDaChon)
+            {
+                if (i.MaVatTu == pc.MaVatTu)
+                {
+                    daTonTai = true;
+                    i.SoLuongSP += pc.SoLuongSP;
+                }
+            }
+            if(!daTonTai)
+            {
+                dsVatTuDaChon.Add(pc);
+            }
+        }
+        
     }
 }

@@ -69,12 +69,22 @@ Create table CHI_TIET_DIEN_VIEN_DAO_DIEN_PHIM
 	constraint pk_CTDienVienDaoDien primary key(MaPhim,MaDienVienDaoDien)
 )
 go
+create table LOAI_PHONG_CHIEU
+(
+	MaLoaiPhongChieu  varchar(6) primary key not null constraint IDLPC default dbo.AUTO_IDLOAIPHONGCHIEU(),
+	TenLoaiPhongChieu nvarchar(40) 
+)
 -- Bang Phong Chieu
-
+create table TINH_TRANG_PHONG_CHIEU
+(
+	MaTinhTrang  int identity(1,1) primary key not null,
+	TenTinhTrang nvarchar(40) 
+)
 Create table PHONG_CHIEU(
 	MaPhongChieu varchar(6) primary key not null constraint IDPC default dbo.AUTO_IDPC(),
 	TenPhong nvarchar(20),
-	TinhTrangPhong bit
+	MaTinhTrang int foreign key(MaTinhTrang) references TINH_TRANG_PHONG_CHIEU,
+	MaLoaiPhongChieu  varchar(6) foreign key(MaLoaiPhongChieu) references LOAI_PHONG_CHIEU
 )
 go
 --Bang Khung Gio Chieu

@@ -75,16 +75,19 @@ namespace GUI.AD_GUI
                 if(LoaiHopDongBLL.Instance.KiemTraLoaiHopDong(maHopDong) == "LHD001")
                 {
                     frmThemHopDongPhim frmThemHopDongPhim = new frmThemHopDongPhim(maHopDong);
+                    frmThemHopDongPhim.d = new frmThemHopDongPhim.Mydel(loadDGV);
                     frmThemHopDongPhim.ShowDialog();
                 }
                 if (LoaiHopDongBLL.Instance.KiemTraLoaiHopDong(maHopDong) == "LHD002")
                 {
                     frmThemHopDongVatTu frmThemHopDongVatTu = new frmThemHopDongVatTu(maHopDong);
+                    frmThemHopDongVatTu.d = new frmThemHopDongVatTu.Mydel(loadDGV);
                     frmThemHopDongVatTu.ShowDialog();
                 }
                 if(LoaiHopDongBLL.Instance.KiemTraLoaiHopDong(maHopDong) == "LHD003")
                 {
                     frmThemHopDongThucAn frmThemHopDongThucAn = new frmThemHopDongThucAn(maHopDong);
+                    frmThemHopDongThucAn.d = new frmThemHopDongThucAn.Mydel(loadDGV);
                     frmThemHopDongThucAn.ShowDialog();
                 }
             }
