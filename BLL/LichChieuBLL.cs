@@ -41,40 +41,6 @@ namespace BLL
             }
             return data;
         }
-        public List<LichChieuViewDTO> GetAllLichChieuViews(bool TrangThai)
-        {
-            List<LichChieuViewDTO> data = new List<LichChieuViewDTO>();
-            LichChieuViewDTO LichChieuView = new LichChieuViewDTO();
-            foreach(LichChieuDTO i in GetListLichChieuByTrangThai(TrangThai))
-            {
-                foreach(PhimViewDTO j in PhimBLL.Instance.GetPhimViews())
-                {
-                    if (i.MaPhim == j.MaPhim)
-                    {
-                        LichChieuView.MaPhim = j.MaPhim;
-                        LichChieuView.TenPhim = j.TenPhim;
-                    }
-                }
-                foreach(KhungGioChieuDTO j in KhungGioChieuDAL.Instance.GetAllKhungGioChieu())
-                {
-                    if(i.MaKhungGioChieu == j.MaKhungGioChieu)
-                    {
-                        LichChieuView.MaKhungGioChieu = j.MaKhungGioChieu;
-                        LichChieuView.TenKhungGio = j.TenKhungGio;
-                    }
-                }
-                foreach (PhongChieuDTO j in PhongChieuDAL.Instance.GetAllPhongChieu())
-                {
-                    if (i.MaPhongChieu == j.MaPhongChieu)
-                    {
-                        LichChieuView.MaPhongChieu = j.MaPhongChieu;
-                        LichChieuView.TenPhongChieu = j.TenPhong;
-                    }
-                }
-                data.Add(LichChieuView);
-            }
-            return data;
-        }
         public void XoaLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu)
         {
             LichChieuDAL.instance.XoaLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu);

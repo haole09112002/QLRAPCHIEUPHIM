@@ -38,5 +38,11 @@ namespace DAL
             }
             return listChiTietDienVienDaoDien;
         }
+        public void LuuCTDVDDP(string MaPhim, string MaDienVienDaoDien, string VaiTro)
+        {
+            string query = "Insert into CHI_TIET_DIEN_VIEN_DAO_DIEN_PHIM values " +
+                $"('{MaPhim}','{MaDienVienDaoDien}','{VaiTro}')";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
     }
 }

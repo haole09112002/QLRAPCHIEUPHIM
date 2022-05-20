@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cBTimKiem = new System.Windows.Forms.ComboBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXemChiTiet = new System.Windows.Forms.Button();
             this.btnSapXep = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cBTimKiem);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnXemChiTiet);
             this.panel1.Controls.Add(this.btnSapXep);
@@ -58,6 +60,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1296, 734);
             this.panel1.TabIndex = 9;
+            // 
+            // cBTimKiem
+            // 
+            this.cBTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBTimKiem.FormattingEnabled = true;
+            this.cBTimKiem.Items.AddRange(new object[] {
+            "TenPhim",
+            "ThoiLuong",
+            "NamSanXuat",
+            "QuocGia",
+            "TenHangSanXuatPhim",
+            "TheLoai"});
+            this.cBTimKiem.Location = new System.Drawing.Point(488, 64);
+            this.cBTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBTimKiem.Name = "cBTimKiem";
+            this.cBTimKiem.Size = new System.Drawing.Size(203, 31);
+            this.cBTimKiem.TabIndex = 50;
             // 
             // btnThem
             // 
@@ -174,14 +194,14 @@
             this.dGVDanhSachPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dGVDanhSachPhim.BackgroundColor = System.Drawing.Color.White;
             this.dGVDanhSachPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGVDanhSachPhim.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVDanhSachPhim.DefaultCellStyle = dataGridViewCellStyle2;
             this.dGVDanhSachPhim.Location = new System.Drawing.Point(27, 125);
             this.dGVDanhSachPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDanhSachPhim.Name = "dGVDanhSachPhim";
@@ -216,5 +236,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dGVDanhSachPhim;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.ComboBox cBTimKiem;
     }
 }

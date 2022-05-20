@@ -84,5 +84,15 @@ namespace DAL
                 MessageBox.Show("loi " + ex.Message);
             }
         }
+        public string GetMaPhimAddNew()
+        {
+            string MaPhim ="";
+            string query = "Select Max(MaPhim) from PHIM";
+            foreach(DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                MaPhim = i[0].ToString();
+            }
+            return MaPhim;
+        }
     }
 }
