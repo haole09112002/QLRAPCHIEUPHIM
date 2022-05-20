@@ -48,7 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChiTietKhoVatTuBLL.cs" />
+    <Compile Include="ChinhSachBLL.cs" />
     <Compile Include="ChiTietPhongChieuBLL.cs" />
+    <Compile Include="ChucVuBLL.cs" />
     <Compile Include="DeXuatBLL.cs" />
     <Compile Include="ChiTietDeXuatPhimBLL.cs" />
     <Compile Include="Helper.cs" />
