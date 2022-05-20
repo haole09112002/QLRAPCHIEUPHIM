@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class PhongChieuDTO
+    public class PhongChieuView
     {
         private string maPhongChieu;
         private string tenPhong;
-        private int maTinhTrang;
-        private string maLoaiPhongChieu;
+        private string tenTinhTrang;
+        private string tenLoaiPhongChieu;
 
         public string MaPhongChieu { get => maPhongChieu; set => maPhongChieu = value; }
         public string TenPhong { get => tenPhong; set => tenPhong = value; }
-        public int MaTinhTrang { get => maTinhTrang; set => maTinhTrang = value; }
-        public string MaLoaiPhongChieu { get => maLoaiPhongChieu; set => maLoaiPhongChieu = value; }
+        public string TenTinhTrang { get => tenTinhTrang; set => tenTinhTrang = value; }
+        public string TenLoaiPhongChieu { get => tenLoaiPhongChieu; set => tenLoaiPhongChieu = value; }
     }
 }

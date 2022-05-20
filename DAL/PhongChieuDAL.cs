@@ -33,8 +33,9 @@ namespace DAL
                 {
                     MaPhongChieu = i["MaPhongChieu"].ToString(),
                     TenPhong = i["TenPhong"].ToString(),
-                    TinhTrangPhong = Convert.ToBoolean(i["TinhTrangPhong"].ToString())
-                });
+                    MaTinhTrang = Convert.ToInt32(i["MaTinhTrang"].ToString()),
+                    MaLoaiPhongChieu = i["MaLoaiPhongChieu"].ToString()
+                }) ;
             }
             return listPhongChieu;
         }

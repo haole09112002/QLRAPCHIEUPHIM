@@ -74,6 +74,7 @@
     <Compile Include="LoaiKhoDAL.cs" />
     <Compile Include="LoaiNhaCungCapDAL.cs" />
     <Compile Include="LoaiPhieuDAL.cs" />
+    <Compile Include="LoaiPhongChieuDAL.cs" />
     <Compile Include="NgayLamViecDAL.cs" />
     <Compile Include="NhaCungCapDAL.cs" />
     <Compile Include="NhanVienDAL.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheLoaiPhimDAL.cs" />
     <Compile Include="ThucAnDAL.cs" />
+    <Compile Include="TinhTrangPhongChieuDAL.cs" />
     <Compile Include="VatTuDAL.cs" />
   </ItemGroup>
   <ItemGroup>
