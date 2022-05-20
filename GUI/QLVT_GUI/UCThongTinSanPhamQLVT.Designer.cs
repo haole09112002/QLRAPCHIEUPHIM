@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnListThucAn = new System.Windows.Forms.Panel();
+            this.lblTitleListVatTu = new System.Windows.Forms.Label();
             this.dgvListVatTu = new System.Windows.Forms.DataGridView();
             this.cboSapXepVatTu = new System.Windows.Forms.ComboBox();
             this.btnSapXepVatTu = new System.Windows.Forms.Button();
@@ -40,7 +45,6 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lblTitleListThucAn = new System.Windows.Forms.Label();
             this.dgvListThucAn = new System.Windows.Forms.DataGridView();
-            this.lblTitleListVatTu = new System.Windows.Forms.Label();
             this.pnListThucAn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListVatTu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListThucAn)).BeginInit();
@@ -61,21 +65,44 @@
             this.pnListThucAn.Controls.Add(this.txtTimKiem);
             this.pnListThucAn.Controls.Add(this.lblTitleListThucAn);
             this.pnListThucAn.Controls.Add(this.dgvListThucAn);
-            this.pnListThucAn.Location = new System.Drawing.Point(16, 12);
+            this.pnListThucAn.Location = new System.Drawing.Point(16, 15);
             this.pnListThucAn.Name = "pnListThucAn";
-            this.pnListThucAn.Size = new System.Drawing.Size(960, 588);
+            this.pnListThucAn.Size = new System.Drawing.Size(1314, 734);
             this.pnListThucAn.TabIndex = 10;
+            // 
+            // lblTitleListVatTu
+            // 
+            this.lblTitleListVatTu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTitleListVatTu.Image = global::GUI.Properties.Resources.ToolDeXuat;
+            this.lblTitleListVatTu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTitleListVatTu.Location = new System.Drawing.Point(518, 407);
+            this.lblTitleListVatTu.Name = "lblTitleListVatTu";
+            this.lblTitleListVatTu.Size = new System.Drawing.Size(240, 25);
+            this.lblTitleListVatTu.TabIndex = 54;
+            this.lblTitleListVatTu.Text = "DANH SÁCH VẬT TƯ";
+            this.lblTitleListVatTu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dgvListVatTu
             // 
+            this.dgvListVatTu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListVatTu.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListVatTu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListVatTu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListVatTu.Location = new System.Drawing.Point(24, 387);
+            this.dgvListVatTu.Location = new System.Drawing.Point(22, 452);
             this.dgvListVatTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvListVatTu.Name = "dgvListVatTu";
             this.dgvListVatTu.RowHeadersWidth = 62;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvListVatTu.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListVatTu.RowTemplate.Height = 28;
-            this.dgvListVatTu.Size = new System.Drawing.Size(912, 158);
+            this.dgvListVatTu.Size = new System.Drawing.Size(1263, 256);
             this.dgvListVatTu.TabIndex = 53;
             // 
             // cboSapXepVatTu
@@ -84,14 +111,15 @@
             this.cboSapXepVatTu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSapXepVatTu.FormattingEnabled = true;
             this.cboSapXepVatTu.Items.AddRange(new object[] {
-            "MaVatTu",
-            "TenVatTu",
-            "DonViTinh",
-            "SoLuong"});
-            this.cboSapXepVatTu.Location = new System.Drawing.Point(671, 328);
+            "Mã Vật Tư",
+            "Tên Vật Tư",
+            "Đơn Vị Tính",
+            "Số Lượng",
+            "Giá Tiền"});
+            this.cboSapXepVatTu.Location = new System.Drawing.Point(985, 403);
             this.cboSapXepVatTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboSapXepVatTu.Name = "cboSapXepVatTu";
-            this.cboSapXepVatTu.Size = new System.Drawing.Size(265, 27);
+            this.cboSapXepVatTu.Size = new System.Drawing.Size(288, 27);
             this.cboSapXepVatTu.TabIndex = 52;
             // 
             // btnSapXepVatTu
@@ -102,7 +130,7 @@
             this.btnSapXepVatTu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSapXepVatTu.Image = global::GUI.Properties.Resources.Sort;
             this.btnSapXepVatTu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSapXepVatTu.Location = new System.Drawing.Point(530, 322);
+            this.btnSapXepVatTu.Location = new System.Drawing.Point(822, 397);
             this.btnSapXepVatTu.Margin = new System.Windows.Forms.Padding(4);
             this.btnSapXepVatTu.Name = "btnSapXepVatTu";
             this.btnSapXepVatTu.Size = new System.Drawing.Size(123, 38);
@@ -114,7 +142,7 @@
             // txtTimKiemVatTu
             // 
             this.txtTimKiemVatTu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiemVatTu.Location = new System.Drawing.Point(166, 328);
+            this.txtTimKiemVatTu.Location = new System.Drawing.Point(181, 406);
             this.txtTimKiemVatTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimKiemVatTu.Name = "txtTimKiemVatTu";
             this.txtTimKiemVatTu.Size = new System.Drawing.Size(263, 28);
@@ -128,7 +156,7 @@
             this.btnTimKiemVatTu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiemVatTu.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnTimKiemVatTu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemVatTu.Location = new System.Drawing.Point(24, 322);
+            this.btnTimKiemVatTu.Location = new System.Drawing.Point(35, 399);
             this.btnTimKiemVatTu.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiemVatTu.Name = "btnTimKiemVatTu";
             this.btnTimKiemVatTu.Size = new System.Drawing.Size(123, 36);
@@ -146,7 +174,7 @@
             this.btnSapXep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSapXep.Image = global::GUI.Properties.Resources.Sort;
             this.btnSapXep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSapXep.Location = new System.Drawing.Point(530, 45);
+            this.btnSapXep.Location = new System.Drawing.Point(822, 48);
             this.btnSapXep.Margin = new System.Windows.Forms.Padding(4);
             this.btnSapXep.Name = "btnSapXep";
             this.btnSapXep.Size = new System.Drawing.Size(123, 38);
@@ -161,14 +189,15 @@
             this.cboSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSapXep.FormattingEnabled = true;
             this.cboSapXep.Items.AddRange(new object[] {
-            "MaThucAn",
-            "TenThucAn",
-            "DonViTinh",
-            "SoLuong"});
-            this.cboSapXep.Location = new System.Drawing.Point(671, 51);
+            "Mã Thức Ăn",
+            "Tên Thức Ăn",
+            "Đơn Vị Tính",
+            "Số Lượng",
+            "Giá Tiền"});
+            this.cboSapXep.Location = new System.Drawing.Point(973, 55);
             this.cboSapXep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboSapXep.Name = "cboSapXep";
-            this.cboSapXep.Size = new System.Drawing.Size(265, 27);
+            this.cboSapXep.Size = new System.Drawing.Size(300, 27);
             this.cboSapXep.TabIndex = 46;
             // 
             // btnTimKiem
@@ -179,7 +208,7 @@
             this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(24, 47);
+            this.btnTimKiem.Location = new System.Drawing.Point(35, 50);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(123, 36);
@@ -192,7 +221,7 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(166, 50);
+            this.txtTimKiem.Location = new System.Drawing.Point(181, 54);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(263, 28);
@@ -203,7 +232,7 @@
             this.lblTitleListThucAn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.lblTitleListThucAn.Image = global::GUI.Properties.Resources.FoodTitleDeXuat;
             this.lblTitleListThucAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTitleListThucAn.Location = new System.Drawing.Point(323, 9);
+            this.lblTitleListThucAn.Location = new System.Drawing.Point(465, 52);
             this.lblTitleListThucAn.Name = "lblTitleListThucAn";
             this.lblTitleListThucAn.Size = new System.Drawing.Size(338, 25);
             this.lblTitleListThucAn.TabIndex = 43;
@@ -212,36 +241,35 @@
             // 
             // dgvListThucAn
             // 
+            this.dgvListThucAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListThucAn.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListThucAn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListThucAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListThucAn.Location = new System.Drawing.Point(24, 100);
+            this.dgvListThucAn.Location = new System.Drawing.Point(22, 102);
             this.dgvListThucAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvListThucAn.Name = "dgvListThucAn";
             this.dgvListThucAn.RowHeadersWidth = 62;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvListThucAn.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListThucAn.RowTemplate.Height = 28;
-            this.dgvListThucAn.Size = new System.Drawing.Size(912, 158);
+            this.dgvListThucAn.Size = new System.Drawing.Size(1263, 266);
             this.dgvListThucAn.TabIndex = 40;
             // 
-            // lblTitleListVatTu
-            // 
-            this.lblTitleListVatTu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTitleListVatTu.Image = global::GUI.Properties.Resources.ToolDeXuat;
-            this.lblTitleListVatTu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTitleListVatTu.Location = new System.Drawing.Point(359, 281);
-            this.lblTitleListVatTu.Name = "lblTitleListVatTu";
-            this.lblTitleListVatTu.Size = new System.Drawing.Size(240, 25);
-            this.lblTitleListVatTu.TabIndex = 54;
-            this.lblTitleListVatTu.Text = "DANH SÁCH VẬT TƯ";
-            this.lblTitleListVatTu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // UCThongTinThucAnQLVT
+            // UCThongTinSanPhamQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnListThucAn);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "UCThongTinThucAnQLVT";
-            this.Size = new System.Drawing.Size(993, 613);
+            this.Name = "UCThongTinSanPhamQLVT";
+            this.Size = new System.Drawing.Size(1352, 766);
             this.pnListThucAn.ResumeLayout(false);
             this.pnListThucAn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListVatTu)).EndInit();

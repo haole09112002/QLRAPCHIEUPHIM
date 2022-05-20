@@ -29,14 +29,23 @@ namespace BLL
             List<VatTuViewDTO> data = new List<VatTuViewDTO>();
             foreach (VatTuDTO i in VatTuDAL.Instance.GetALLVatTu())
             {
+                double GiaTienVatTu = 0;
                 if (i.TenVatTu.Contains(txt))
                 {
+                    foreach (HopDongVatTuDTO k in HopDongVatTuDAL.Instance.GetAllHopDongVatTu())
+                    {
+                        if (k.MaVatTu == i.MaVatTu)
+                        {
+                            GiaTienVatTu = k.GiaTien;
+                        }
+                    }
                     data.Add(new VatTuViewDTO
                     {
                         MaVatTu = i.MaVatTu,
                         TenVatTu = i.TenVatTu,
                         DonViTinh = i.DonViTinh,
                         SoLuong = i.SoLuong,
+                        GiaTien = GiaTienVatTu
                     });
                 }
             }
@@ -88,6 +97,10 @@ namespace BLL
         public bool CompareSoLuong(object o1, object o2)
         {
             return ((VatTuViewDTO)o1).SoLuong > ((VatTuViewDTO)o2).SoLuong;
+        }
+        public bool CompareGiaTien(object o1, object o2)
+        {
+            return ((VatTuViewDTO)o1).GiaTien > ((VatTuViewDTO)o2).GiaTien;
         }
     }
 }
