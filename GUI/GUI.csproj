@@ -202,12 +202,6 @@
     <Compile Include="AD_GUI\UC_ThongTinNV.Designer.cs">
       <DependentUpon>UC_ThongTinNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +329,12 @@
     <Compile Include="QLP_GUI\UC_ThongTinPhim_QLP.Designer.cs">
       <DependentUpon>UC_ThongTinPhim_QLP.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLVT_GUI\FrmChiTietNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLVT_GUI\FrmChiTietNhaCungCap.Designer.cs">
+      <DependentUpon>FrmChiTietNhaCungCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLVT_GUI\frmDashboardQLVT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -419,12 +419,6 @@
     <Compile Include="QLVT_GUI\UCMenuNhapXuatQLVT.Designer.cs">
       <DependentUpon>UCMenuNhapXuatQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UCMenuSanPhamQLVT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCMenuSanPhamQLVT.Designer.cs">
-      <DependentUpon>UCMenuSanPhamQLVT.cs</DependentUpon>
-    </Compile>
     <Compile Include="QLVT_GUI\UCPhongChieuQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -443,17 +437,11 @@
     <Compile Include="QLVT_GUI\UCNhaCungUngVatTuQLVT.Designer.cs">
       <DependentUpon>UCNhaCungUngVatTuQLVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLVT_GUI\UCThongTinThucAnQLVT.cs">
+    <Compile Include="QLVT_GUI\UCThongTinSanPhamQLVT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QLVT_GUI\UCThongTinThucAnQLVT.Designer.cs">
-      <DependentUpon>UCThongTinThucAnQLVT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCThongTinVatTuQLVT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLVT_GUI\UCThongTinVatTuQLVT.Designer.cs">
-      <DependentUpon>UCThongTinVatTuQLVT.cs</DependentUpon>
+    <Compile Include="QLVT_GUI\UCThongTinSanPhamQLVT.Designer.cs">
+      <DependentUpon>UCThongTinSanPhamQLVT.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AD_GUI\frmDashboard_AD.resx">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
@@ -594,6 +582,9 @@
     <EmbeddedResource Include="QLP_GUI\UC_ThongTinPhim_QLP.resx">
       <DependentUpon>UC_ThongTinPhim_QLP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QLVT_GUI\FrmChiTietNhaCungCap.resx">
+      <DependentUpon>FrmChiTietNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLVT_GUI\FrmDashboardQLVT.resx">
       <DependentUpon>FrmDashboardQLVT.cs</DependentUpon>
     </EmbeddedResource>
@@ -636,9 +627,6 @@
     <EmbeddedResource Include="QLVT_GUI\UCMenuNhapXuatQLVT.resx">
       <DependentUpon>UCMenuNhapXuatQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UCMenuSanPhamQLVT.resx">
-      <DependentUpon>UCMenuSanPhamQLVT.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="QLVT_GUI\UCPhongChieuQLVT.resx">
       <DependentUpon>UCPhongChieuQLVT.cs</DependentUpon>
     </EmbeddedResource>
@@ -648,11 +636,8 @@
     <EmbeddedResource Include="QLVT_GUI\UCNhaCungUngVatTuQLVT.resx">
       <DependentUpon>UCNhaCungUngVatTuQLVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UCThongTinThucAnQLVT.resx">
-      <DependentUpon>UCThongTinThucAnQLVT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLVT_GUI\UCThongTinVatTuQLVT.resx">
-      <DependentUpon>UCThongTinVatTuQLVT.cs</DependentUpon>
+    <EmbeddedResource Include="QLVT_GUI\UCThongTinSanPhamQLVT.resx">
+      <DependentUpon>UCThongTinSanPhamQLVT.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -1083,6 +1068,13 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidePass_26px.png" />
+  </ItemGroup>
+  
   <ItemGroup>
     <None Include="Resources\add_24px.png" />
   </ItemGroup>

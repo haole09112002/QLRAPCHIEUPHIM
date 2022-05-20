@@ -46,6 +46,7 @@
             this.txtNgayGioChieu = new System.Windows.Forms.TextBox();
             this.txtPhongChieu = new System.Windows.Forms.TextBox();
             this.txtTenPhim = new System.Windows.Forms.TextBox();
+            this.dGVDanhSachPC = new System.Windows.Forms.DataGridView();
             this.dGVDanhSachPhim = new System.Windows.Forms.DataGridView();
             this.gBDanhSachPhim = new System.Windows.Forms.GroupBox();
             this.gBDanhSachPhongChieu = new System.Windows.Forms.GroupBox();
@@ -55,10 +56,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dGVKhungGioChieu = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVKhungGioChieu)).BeginInit();
             this.gBDanhSachPhongChieu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).BeginInit();
             this.gBKhungGioChieu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVKhungGioChieu)).BeginInit();
             this.SuspendLayout();
@@ -130,8 +132,6 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // btnLuu
-            // 
             this.btnLuu.BackColor = System.Drawing.Color.LightGreen;
             this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -146,6 +146,8 @@
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // textBox2
             // 
@@ -266,8 +268,28 @@
             this.txtTenPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenPhim.Name = "txtTenPhim";
             this.txtTenPhim.Size = new System.Drawing.Size(440, 27);
-            this.txtTenPhim.TabIndex = 3;
+            this.dGVKhungGioChieu.TabIndex = 44;
             // 
+            // dGVDanhSachPC
+            // 
+            this.dGVDanhSachPC.BackgroundColor = System.Drawing.Color.White;
+            this.dGVDanhSachPC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVDanhSachPC.Location = new System.Drawing.Point(353, 47);
+            this.dGVDanhSachPC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dGVDanhSachPC.Name = "dGVDanhSachPC";
+            this.dGVDanhSachPC.RowHeadersWidth = 62;
+            this.dGVDanhSachPC.RowTemplate.Height = 28;
+            this.dGVDanhSachPC.Size = new System.Drawing.Size(273, 330);
+            this.dGVDanhSachPC.TabIndex = 42;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVDanhSachPhim.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dGVDanhSachPhim.Location = new System.Drawing.Point(29, 59);
             // dGVDanhSachPhim
             // 
             this.dGVDanhSachPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -281,15 +303,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dGVDanhSachPhim.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dGVDanhSachPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGVDanhSachPhim.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dGVDanhSachPhim.Location = new System.Drawing.Point(29, 59);
+            this.dGVDanhSachPhim.Location = new System.Drawing.Point(26, 47);
             this.dGVDanhSachPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDanhSachPhim.Name = "dGVDanhSachPhim";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -368,20 +382,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(183, 34);
             this.label2.TabIndex = 38;
-            this.label2.Text = "Ngày giờ chiếu";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox1.Location = new System.Drawing.Point(201, 44);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 33);
-            this.textBox1.TabIndex = 6;
-            // 
-            // dGVKhungGioChieu
-            // 
             this.dGVKhungGioChieu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVKhungGioChieu.BackgroundColor = System.Drawing.Color.White;
             this.dGVKhungGioChieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -392,9 +392,23 @@
             this.dGVKhungGioChieu.RowTemplate.Height = 28;
             this.dGVKhungGioChieu.Size = new System.Drawing.Size(393, 365);
             this.dGVKhungGioChieu.TabIndex = 44;
+            this.textBox1.Size = new System.Drawing.Size(208, 33);
+            this.textBox1.TabIndex = 6;
             // 
+            // dGVKhungGioChieu
+            // 
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label5.Image = global::GUI.Properties.Resources.ScheduleTitle;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.Location = new System.Drawing.Point(12, 398);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(136, 33);
+            this.label5.TabIndex = 56;
+            this.label5.Text = "LỊCH CHIẾU";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).EndInit();
+            this.gBDanhSachPhongChieu.ResumeLayout(false);
             // UC_TaoLichChieu_QLP
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -406,9 +420,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).EndInit();
-            this.gBDanhSachPhongChieu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dGVKhungGioChieu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).EndInit();
             this.gBKhungGioChieu.ResumeLayout(false);
             this.gBKhungGioChieu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVKhungGioChieu)).EndInit();

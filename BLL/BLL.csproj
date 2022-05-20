@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietPhongChieuBLL.cs" />
     <Compile Include="DeXuatBLL.cs" />
     <Compile Include="ChiTietDeXuatPhimBLL.cs" />
     <Compile Include="Helper.cs" />
@@ -63,10 +64,13 @@
     <Compile Include="LichChieuBLL.cs" />
     <Compile Include="LoaiNhaCungCapBLL.cs" />
     <Compile Include="NhaCungCapBLL.cs" />
+    <Compile Include="NhanVienBLL.cs" />
     <Compile Include="PhimBLL.cs" />
     <Compile Include="PhongChieuBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheLoaiPhimBLL.cs" />
+    <Compile Include="ThucAnBLL.cs" />
+    <Compile Include="VatTuBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

@@ -66,6 +66,18 @@ namespace GUI.QLP_GUI
             else
                 ReLoad(txtTimKiem.Text,cBTimKiem.SelectedItem.ToString());
         }
+        public void ReLoad(string s = "")
+        {
+            dGVNhaCungCapPhim.DataSource = NhaCungCapBLL.Instance.GetNCCViewMaLoaiNCC("LNCC01",s);
+        }
+        private void btnXemThongTin_Click(object sender, EventArgs e)
+        {
+            if(dGVNhaCungCapPhim.SelectedRows.Count == 1)
+            {
+                frm_ThongTinNCC_QLP frmThongTinNhaCungCap = new frm_ThongTinNCC_QLP(dGVNhaCungCapPhim.SelectedRows[0].Cells["MaNhaCungCap"].Value.ToString());
+                frmThongTinNhaCungCap.ShowDialog();
+            }
+        }
 
         private void btnSapXep_Click(object sender, EventArgs e)
         {

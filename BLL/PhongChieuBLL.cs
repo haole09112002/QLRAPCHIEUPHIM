@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DAL;
+using DTO;
 using System.Threading.Tasks;
 using DTO;
 using DAL;
@@ -23,14 +25,13 @@ namespace BLL
             }
             private set { }
         }
+        private PhongChieuBLL()
+        {
+
+        }
         public List<PhongChieuDTO> GetAllPhongChieu()
         {
-            List<PhongChieuDTO> data = new List<PhongChieuDTO>();
-            foreach (PhongChieuDTO i in PhongChieuDAL.Instance.GetAllPhongChieu())
-            {
-                data.Add(i);
-            }
-            return data;
+            return PhongChieuDAL.Instance.GetAllPhongChieu();
         }
         public PhongChieuDTO GetPhongChieuByMaPC(string MaPhongChieu)
         {
@@ -43,5 +44,6 @@ namespace BLL
             }
             return null;
         }
+        
     }
 }

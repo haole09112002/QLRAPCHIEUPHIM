@@ -28,21 +28,38 @@ namespace GUI.AD_GUI
             cbSapXep.Items.AddRange(new string[] { "Tên A->Z", "Tên Z->A" });
             cbLoaiNhaCungCap.SelectedItem = cbLoaiNhaCungCap.Items[0];
             loadDGVDanhSachNCC();
+            loadDGVDanhSachSanPham(dgvDSNhaCungCap.Rows[0].Cells["MaNhaCungCap"].Value.ToString());
+        }
+        public void loadDGVDanhSachNCC(string maLoaiNCC = "0", string txt = "" )
+        {
+            dgvDSNhaCungCap.DataSource = NhaCungCapBLL.Instance.GetNCCViewMaLoaiNCC(maLoaiNCC, txt );
             dgvDSNhaCungCap.Columns["MaNhaCungCap"].HeaderText = "Mã nhà cung cấp";
             dgvDSNhaCungCap.Columns["TenNhaCungCap"].HeaderText = "Tên nhà cung cấp";
             dgvDSNhaCungCap.Columns["MaSoThue"].HeaderText = "Mã số thuế";
             dgvDSNhaCungCap.Columns["SoDienThoai"].HeaderText = "Điện thoại";
             dgvDSNhaCungCap.Columns["TenLoaiNhaCungCap"].HeaderText = "Loại SP cung cấp";
-
-            dgvDSSanPham.Columns["MaPhim"].HeaderText = "Mã phim";
-            dgvDSSanPham.Columns["TenPhim"].HeaderText = "Tên phim";
+        }
+        public void loadDGVDanhSachSanPham(string maNhaCungCap)
+        {
+            dgvDSSanPham.DataSource = NhaCungCapBLL.Instance.GetSPByMaNhaCungCap(maNhaCungCap);
+            if(NhaCungCapBLL.Instance.GetNCCByMaNCC(maNhaCungCap).MaLoaiNhaCungCap == "LNCC01")
+            {
+                dgvDSSanPham.Columns["MaPhim"].HeaderText = "Mã phim";
+                dgvDSSanPham.Columns["TenPhim"].HeaderText = "Tên phim";
+            }
+            if (NhaCungCapBLL.Instance.GetNCCByMaNCC(maNhaCungCap).MaLoaiNhaCungCap == "LNCC02")
+            {
+                dgvDSSanPham.Columns["MaVatTu"].HeaderText = "Mã vật tư";
+                dgvDSSanPham.Columns["TenVatTu"].HeaderText = "Tên vật tư";
+            }
+            if (NhaCungCapBLL.Instance.GetNCCByMaNCC(maNhaCungCap).MaLoaiNhaCungCap == "LNCC03")
+            {
+                dgvDSSanPham.Columns["MaThucAn"].HeaderText = "Mã thức ăn";
+                dgvDSSanPham.Columns["TenThucAn"].HeaderText = "Tên thức ăn";
+            }
             dgvDSSanPham.Columns["SoLuong"].HeaderText = "Số lượng";
             dgvDSSanPham.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
             dgvDSSanPham.Columns["GiaTien"].HeaderText = "Giá tiền(VND)";
-        }
-        public void loadDGVDanhSachNCC(string maLoaiNCC = "0", string txt = "" )
-        {
-            dgvDSNhaCungCap.DataSource = NhaCungCapBLL.Instance.GetNCCViewMaLoaiNCC(maLoaiNCC, txt );
         }
 
         private void cbLoaiNhaCungCap_SelectedValueChanged(object sender, EventArgs e)
@@ -50,7 +67,8 @@ namespace GUI.AD_GUI
             if (cbLoaiNhaCungCap.SelectedItem != null)
             {
                 loadDGVDanhSachNCC(((CBBItem)cbLoaiNhaCungCap.SelectedItem).Value);
-                dgvDSSanPham.DataSource = NhaCungCapBLL.Instance.GetSPByMaNhaCungCap(dgvDSNhaCungCap.Rows[0].Cells["MaNhaCungCap"].Value.ToString());
+                Sort();
+                loadDGVDanhSachNCC(((CBBItem)cbLoaiNhaCungCap.SelectedItem).Value, txtTimKiem.Text);
             }
             
            
@@ -60,8 +78,7 @@ namespace GUI.AD_GUI
             if (dgvDSNhaCungCap.SelectedRows.Count == 1)
             {
                 string maNhaCungCap = dgvDSNhaCungCap.SelectedRows[0].Cells["MaNhaCungCap"].Value.ToString();
-               
-                dgvDSSanPham.DataSource =    NhaCungCapBLL.Instance.GetSPByMaNhaCungCap(maNhaCungCap);
+               loadDGVDanhSachSanPham(maNhaCungCap);
             }
                 
         }
@@ -103,18 +120,7 @@ namespace GUI.AD_GUI
 
         private void cbSapXep_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbSapXep.SelectedIndex >= 0)
-            {
-                List<string> now = new List<string>();
-                string dkSapXep = cbSapXep.SelectedItem.ToString();
-                foreach (DataGridViewRow row in dgvDSNhaCungCap.Rows)
-                {
-                    now.Add(row.Cells["MaNhaCungCap"].Value.ToString());
-                }
-                dgvDSNhaCungCap.DataSource =   NhaCungCapBLL.Instance.SortNhaCungCap(NhaCungCapBLL.Instance.GetNhaCungCapViewDGV(now), dkSapXep);
-                dgvDSSanPham.DataSource = NhaCungCapBLL.Instance.GetSPByMaNhaCungCap(dgvDSNhaCungCap.Rows[0].Cells["MaNhaCungCap"].Value.ToString());
-            }
-            
+            Sort();
         }
 
         private void txtTimKiem_KeyDown(object sender, KeyEventArgs e)
@@ -133,6 +139,20 @@ namespace GUI.AD_GUI
                 now.Add(row.Cells["MaNhaCungCap"].Value.ToString());
             }
            Helper.Instance.ExportDataToExcel<NhaCungCapDTO>(NhaCungCapBLL.Instance.GetNhaCungCapDGV(now));
+        }
+        private void Sort()
+        {
+            if (cbSapXep.SelectedIndex >= 0)
+            {
+                List<string> now = new List<string>();
+                string dkSapXep = cbSapXep.SelectedItem.ToString();
+                foreach (DataGridViewRow row in dgvDSNhaCungCap.Rows)
+                {
+                    now.Add(row.Cells["MaNhaCungCap"].Value.ToString());
+                }
+                dgvDSNhaCungCap.DataSource = NhaCungCapBLL.Instance.SortNhaCungCap(NhaCungCapBLL.Instance.GetNhaCungCapViewDGV(now), dkSapXep);
+                loadDGVDanhSachSanPham(dgvDSNhaCungCap.Rows[0].Cells["MaNhaCungCap"].Value.ToString());
+            }
         }
     }
 }

@@ -28,8 +28,8 @@ namespace BLL
             {
                 if(i.TenDienVienDaoDien.ToLower().Contains(txt) || i.TenDienVienDaoDien.ToUpper().Contains(txt))
                 {
-                    data.Add(i);
-                }
+                data.Add(i);
+            }
             }
             return data;
         }

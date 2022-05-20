@@ -1,6 +1,13 @@
 ﻿using BLL;
+using DTO;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
@@ -27,6 +34,7 @@ namespace GUI.QLP_GUI
             dtDeXuatPhim.Columns.Add("Đơn Vị Tính");
             dtDeXuatPhim.Columns.Add("Nội Dung");
         }
+
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -110,7 +118,7 @@ namespace GUI.QLP_GUI
                 cBDonViTinh.Text = dGVDeXuatPhim.CurrentRow.Cells["Đơn Vị Tính"].Value.ToString();
             }
         }
-
+            
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (dGVDeXuatPhim.SelectedRows.Count <= 0)
@@ -122,7 +130,7 @@ namespace GUI.QLP_GUI
                 DialogResult dialogResult = MessageBox.Show("Xác Nhận Xóa", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question); ;
                 if (dialogResult == DialogResult.OK)
                     foreach (DataGridViewRow i in dGVDeXuatPhim.SelectedRows)
-                    {
+            {
                         dGVDeXuatPhim.Rows.RemoveAt(i.Index);
                     }
             }
@@ -140,7 +148,7 @@ namespace GUI.QLP_GUI
                 string DonViTinh = "";
                 int SoLuong;
                 for(int i = 0; i <dGVDeXuatPhim.Rows.Count - 1; i++)
-                {
+        {
                     MaPhim = dGVDeXuatPhim.Rows[i].Cells["Mã Phim"].Value.ToString();
                     NoiDung = dGVDeXuatPhim.Rows[i].Cells["Nội Dung"].Value.ToString();
                     DonViTinh = dGVDeXuatPhim.Rows[i].Cells["Đơn Vị Tính"].Value.ToString();

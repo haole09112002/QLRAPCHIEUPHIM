@@ -49,5 +49,13 @@ namespace DAL
                 GiaTien = Convert.ToDouble(i["GiaTien"]),
             };
         }
+        public void ThemHopDongThucAn(HopDongThucAnDTO hdTA)
+        {
+
+            string query = "EXEC ThemHopDongThucAn @MaHopDong , @MaThucAn , @Donvitinh , @SoLuong , @GiaTien";
+            object[] parameter = new object[] {hdTA.MaHopDong, hdTA.MaThucAn,
+                hdTA.DonViTinh, hdTA.SoLuong, hdTA.GiaTien};
+            DBHelper.Instance.ExcuteNonQuery(query, parameter);
+        }
     }
 }

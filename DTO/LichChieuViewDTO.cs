@@ -8,6 +8,7 @@ namespace DTO
 {
     public class LichChieuViewDTO
     {
+        private string tenPhim;
         private string maPhim;
         private string tenPhim;
         private string maPhongChieu;
