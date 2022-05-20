@@ -18,6 +18,20 @@ namespace GUI.QLVT_GUI
             InitializeComponent();
             ReloadListThucAn();
             ReloadListVatTu();
+            SetGUI();
+        }
+        public void SetGUI()
+        {
+            dgvListVatTu.Columns["MaVatTu"].HeaderText = "Mã Vật Tư";
+            dgvListVatTu.Columns["TenVatTu"].HeaderText = "Tên Vật Tư";
+            dgvListVatTu.Columns["DonViTinh"].HeaderText = "Đơn Vị Tính";
+            dgvListVatTu.Columns["SoLuong"].HeaderText = "Số Lượng";
+            dgvListVatTu.Columns["GiaTien"].HeaderText = "Giá Tiền";
+            dgvListThucAn.Columns["MaThucAn"].HeaderText = "Mã Thức Ăn";
+            dgvListThucAn.Columns["TenThucAn"].HeaderText = "Tên Thức Ăn";
+            dgvListThucAn.Columns["DonViTinh"].HeaderText = "Đơn Vị Tính";
+            dgvListThucAn.Columns["SoLuong"].HeaderText = "Số Lượng";
+            dgvListThucAn.Columns["GiaTien"].HeaderText = "Giá Tiền";
         }
         public void ReloadListThucAn(string txt = "")
         {
@@ -44,24 +58,29 @@ namespace GUI.QLVT_GUI
             string selectSort = cboSapXep.SelectedItem.ToString();
             switch (selectSort)
             {
-                case "MaThucAn":
+                case "Mã Thức Ăn":
                     {
                         dgvListThucAn.DataSource = ThucAnBLL.Instance.SortThucAnView(ThucAnBLL.Instance.CompareMaThucAn);
                         break;
                     }
-                case "TenThucAn":
+                case "Tên Thức Ăn":
                     {
                         dgvListThucAn.DataSource = ThucAnBLL.Instance.SortThucAnView(ThucAnBLL.Instance.CompareTenThucAn);
                         break;
                     }
-                case "DonViTinh":
+                case "Đơn Vị Tính":
                     {
                         dgvListThucAn.DataSource = ThucAnBLL.Instance.SortThucAnView(ThucAnBLL.Instance.CompareDonViTinh);
                         break;
                     }
-                case "SoLuong":
+                case "Số Lượng":
                     {
                         dgvListThucAn.DataSource = ThucAnBLL.Instance.SortThucAnView(ThucAnBLL.Instance.CompareSoLuong);
+                        break;
+                    }
+                case "Giá Tiền":
+                    {
+                        dgvListThucAn.DataSource = ThucAnBLL.Instance.SortThucAnView(ThucAnBLL.Instance.CompareGiaTien);
                         break;
                     }
             }
@@ -71,24 +90,29 @@ namespace GUI.QLVT_GUI
             string selectSort = cboSapXepVatTu.SelectedItem.ToString();
             switch (selectSort)
             {
-                case "MaVatTu":
+                case "Mã Vật Tư":
                     {
                         dgvListVatTu.DataSource = VatTuBLL.Instance.SortVatTuView(VatTuBLL.Instance.CompareMaVatTu);
                         break;
                     }
-                case "TenVatTu":
+                case "Tên Vật Tư":
                     {
                         dgvListVatTu.DataSource = VatTuBLL.Instance.SortVatTuView(VatTuBLL.Instance.CompareTenVatTu);
                         break;
                     }
-                case "DonViTinh":
+                case "Đơn Vị Tính":
                     {
                         dgvListVatTu.DataSource = VatTuBLL.Instance.SortVatTuView(VatTuBLL.Instance.CompareDonViTinh);
                         break;
                     }
-                case "SoLuong":
+                case "Số Lượng":
                     {
                         dgvListVatTu.DataSource = VatTuBLL.Instance.SortVatTuView(VatTuBLL.Instance.CompareSoLuong);
+                        break;
+                    }
+                case "Giá Tiền":
+                    {
+                        dgvListVatTu.DataSource = VatTuBLL.Instance.SortVatTuView(VatTuBLL.Instance.CompareGiaTien);
                         break;
                     }
             }

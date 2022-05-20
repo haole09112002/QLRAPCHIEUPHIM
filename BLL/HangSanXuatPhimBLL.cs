@@ -32,5 +32,19 @@ namespace BLL
             }
             return null;
         }
+        public List<HangSanXuatPhimDTO> GetAllHSXP()
+        {
+            List<HangSanXuatPhimDTO> data = new List<HangSanXuatPhimDTO>();
+            foreach(HangSanXuatPhimDTO i in HangSanXuatPhimDAL.Instance.GetAllHangSanXuatPhim())
+            {
+                data.Add(i);
+            }
+            return data;
+        }
+
+        public void LuuHangSanXuatPhim(string TenHSXP, string Link)
+        {
+            HangSanXuatPhimDAL.Instance.LuuHangSanXuatPhim(TenHSXP, Link);
+        }
     }
 }

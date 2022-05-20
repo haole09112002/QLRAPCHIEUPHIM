@@ -27,7 +27,7 @@ namespace BLL
         {
 
         }
-        public List<DeXuatDTO> GetDeXuatByMaLoaiDeXuat(string maLoaiDeXuat, string txt)
+        public List<DeXuatDTO> GetDeXuatByMaLoaiDeXuat(string maLoaiDeXuat, string txt = "")
         {
             List<DeXuatDTO> data = new List<DeXuatDTO>();
             if(maLoaiDeXuat == "0")
@@ -69,6 +69,13 @@ namespace BLL
             }
             return data;
         }
-        
+        public void LuuDeXuat(string MaNhanVien, DateTime NgayDeXuat, string MaLoaiDeXuat)
+        {
+            DeXuatDAL.Instance.LuuDeXuat(MaNhanVien,NgayDeXuat, MaLoaiDeXuat);
+        }
+        public string GetMaDeXuatAddNew()
+        {
+            return DeXuatDAL.Instance.GetMaDeXuatAddNew();
+        }
     }
 }

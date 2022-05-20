@@ -107,6 +107,8 @@ namespace GUI.QLP_GUI
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             this.Close();
+            frmDangNhap frm = new frmDangNhap();
+            frm.Show();
         }
     }
 }

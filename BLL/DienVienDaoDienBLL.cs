@@ -21,12 +21,15 @@ namespace BLL
             }
             private set { }
         }
-        public List<DienVienDaoDienDTO> GetAllDienVienDaoDien()
+        public List<DienVienDaoDienDTO> GetAllDienVienDaoDien(string txt = "")
         {
             List<DienVienDaoDienDTO> data = new List<DienVienDaoDienDTO>();
             foreach (DienVienDaoDienDTO i in DienVienDaoDienDAL.Instance.GetAllDienVienDaoDien())
             {
+                if(i.TenDienVienDaoDien.ToLower().Contains(txt) || i.TenDienVienDaoDien.ToUpper().Contains(txt))
+                {
                 data.Add(i);
+            }
             }
             return data;
         }

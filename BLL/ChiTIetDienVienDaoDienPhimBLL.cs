@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class ChiTIetDienVienDaoDienPhimBLL
+    public class ChiTietDienVienDaoDienPhimBLL
     {
-        public static ChiTIetDienVienDaoDienPhimBLL instance;
-        public static ChiTIetDienVienDaoDienPhimBLL Instance
+        public static ChiTietDienVienDaoDienPhimBLL instance;
+        public static ChiTietDienVienDaoDienPhimBLL Instance
         {
             get
             {
                 if(instance == null)
-                    instance = new ChiTIetDienVienDaoDienPhimBLL();
+                    instance = new ChiTietDienVienDaoDienPhimBLL();
                 return instance;
             }
             private set { }
@@ -41,6 +41,10 @@ namespace BLL
                 }
             }
             return data;
+        }
+        public void LuuCTDVDDP(string MaPhim, string MaDienVienDaoDien, string VaiTro)
+        {
+            ChiTietDienVienDaoDienPhimDAL.Instance.LuuCTDVDDP(MaPhim, MaDienVienDaoDien, VaiTro);
         }
     }
 }

@@ -34,7 +34,8 @@ namespace DAL
                     MaPhim = i["MaPhim"].ToString(),
                     MaKhungGioChieu = i["MaKhungGioChieu"].ToString(),
                     MaPhongChieu = i["MaPhongChieu"].ToString(),
-                    TrangThai = Convert.ToBoolean(i["TrangThai"].ToString())
+                    TrangThai = Convert.ToBoolean(i["TrangThai"].ToString()),
+                    NgayChieu = Convert.ToDateTime(i["NgayChieu"].ToString())
                 });
             }
             return listLichChieu;

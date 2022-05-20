@@ -190,7 +190,7 @@ namespace GUI.AD_GUI
                             foreach (HopDongThucAnView j in dsThucAnDaChon)
                             {
                                 if (i.MaThucAn == j.MaThucAn)
-                                        DeXuatPhimBLL.Instance.CapNhatTinhTrangDeXuat(i.MaThucAn, i.MaDeXuat, "3");//
+                                        ChiTietDeXuatPhimBLL.Instance.CapNhatTinhTrangDeXuat(i.MaThucAn, i.MaDeXuat, "3");//
                             }
                         }
                         HopDongThucAnBLL.Instance.AddHopDongThucAn(dsThucAnDaChon, maHopDong);

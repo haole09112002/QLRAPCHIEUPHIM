@@ -47,22 +47,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietKhoVatTuBLL.cs" />
     <Compile Include="ChinhSachBLL.cs" />
     <Compile Include="ChiTietPhongChieuBLL.cs" />
     <Compile Include="ChucVuBLL.cs" />
     <Compile Include="DeXuatBLL.cs" />
-    <Compile Include="DeXuatPhimBLL.cs" />
+    <Compile Include="ChiTietDeXuatPhimBLL.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="HopDongBLL.cs" />
     <Compile Include="HopDongPhimBLL.cs" />
     <Compile Include="HopDongThucAnBLL.cs" />
     <Compile Include="HopDongVatTuBLL.cs" />
+    <Compile Include="KhungGioChieuBLL.cs" />
+    <Compile Include="LichChieuViewBLL.cs" />
     <Compile Include="LoaiHopDongBLL.cs" />
-    <Compile Include="ChiTIetDienVienDaoDienPhimBLL.cs" />
+    <Compile Include="ChiTietDienVienDaoDienPhimBLL.cs" />
     <Compile Include="DienVienDaoDienBLL.cs" />
     <Compile Include="HangSanXuatPhimBLL.cs" />
     <Compile Include="LichChieuBLL.cs" />
     <Compile Include="LoaiNhaCungCapBLL.cs" />
+    <Compile Include="LoaiPhongChieuBLL.cs" />
     <Compile Include="NhaCungCapBLL.cs" />
     <Compile Include="NhanVienBLL.cs" />
     <Compile Include="PhimBLL.cs" />
@@ -70,6 +74,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheLoaiPhimBLL.cs" />
     <Compile Include="ThucAnBLL.cs" />
+    <Compile Include="TinhTrangPhongChieuBLL.cs" />
     <Compile Include="VatTuBLL.cs" />
   </ItemGroup>
   <ItemGroup>

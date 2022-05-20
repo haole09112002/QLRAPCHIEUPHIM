@@ -10,7 +10,7 @@ namespace DAL
 {
     public class HangSanXuatPhimDAL
     {
-        public static HangSanXuatPhimDAL instance;
+        private static HangSanXuatPhimDAL instance;
         public static HangSanXuatPhimDAL Instance
         {
             get
@@ -37,6 +37,13 @@ namespace DAL
                 });
             }
             return listHangSanXuatPhim;
+        }
+
+        public void LuuHangSanXuatPhim(string TenHSXP, string Link)
+        {
+            string query = "Insert into HANG_SAN_XUAT_PHIM (TenHangSanXuatPhim,Link) values " +
+                $"(N'{TenHSXP}','{Link}')";
+            DBHelper.Instance.ExcuteQuery(query);
         }
     }
 }

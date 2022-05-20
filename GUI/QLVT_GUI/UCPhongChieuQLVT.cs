@@ -21,11 +21,13 @@ namespace GUI.QLVT_GUI
         }
         private void setGUI()
         {
-            dgvListPhongChieu.DataSource = PhongChieuBLL.Instance.GetAllPhongChieu();
+            cbLoaiPhong.Items.AddRange(LoaiPhongChieuBLL.Instance.GetCBBLoaiPhongChieu().ToArray());
+            cbTinhTrangPhong.Items.AddRange(TinhTrangPhongChieuBLL.Instance.GetCBBTinhTrangPhongChieu().ToArray());
+            dgvListPhongChieu.DataSource = PhongChieuBLL.Instance.GetAllPhongChieuView();
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            FrmCapNhatPhongChieuQLVT frmCapNhatPhongChieuQLVT = new FrmCapNhatPhongChieuQLVT();
+            FrmCapNhatPhongChieuQLVT frmCapNhatPhongChieuQLVT = new FrmCapNhatPhongChieuQLVT(txtMaPhongChieu.Text);
             frmCapNhatPhongChieuQLVT.Show();
         }
 
@@ -34,8 +36,19 @@ namespace GUI.QLVT_GUI
             if(dgvListPhongChieu.SelectedRows.Count == 1)
             {
                 string maPhongChieu = dgvListPhongChieu.SelectedRows[0].Cells["MaPhongChieu"].Value.ToString();
-                MessageBox.Show(maPhongChieu);
                 LoadDGVListVatTu(maPhongChieu);
+                txtMaPhongChieu.Text = maPhongChieu;
+                txtTenPhongChieu.Text = dgvListPhongChieu.SelectedRows[0].Cells["TenPhong"].Value.ToString();
+                foreach(CBBItem i in cbLoaiPhong.Items)
+                {
+                    if(i.Text == dgvListPhongChieu.SelectedRows[0].Cells["TenLoaiPhongChieu"].Value.ToString())
+                        cbLoaiPhong.SelectedItem = i;
+                }
+                foreach (CBBItem i in cbTinhTrangPhong.Items)
+                {
+                    if (i.Text == dgvListPhongChieu.SelectedRows[0].Cells["TenTinhTrang"].Value.ToString())
+                        cbTinhTrangPhong.SelectedItem = i;
+                }
             }    
         }
 
@@ -44,5 +57,7 @@ namespace GUI.QLVT_GUI
             dgvListVatTu.DataSource = null;
             dgvListVatTu.DataSource = ChiTietPhongChieuBLL.Instance.GetAllVatTuByMaPhongChieu(maPhongChieu);
         }
+
+      
     }
 }

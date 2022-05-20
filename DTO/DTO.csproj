@@ -48,6 +48,7 @@
     <Compile Include="ChiTietDeXuatThucAnDTO.cs" />
     <Compile Include="ChiTietDeXuatVatTuDTO.cs" />
     <Compile Include="ChiTietDeXuatVatTuView.cs" />
+    <Compile Include="ChiTietKhoVatTuView.cs" />
     <Compile Include="HopDongThucAnView.cs" />
     <Compile Include="ChiTietKhoPhimDTO.cs" />
     <Compile Include="ChiTietKhoThucAnDTO.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="LoaiKhoDTO.cs" />
     <Compile Include="LoaiNhaCungCapDTO.cs" />
     <Compile Include="LoaiPhieuDTO.cs" />
+    <Compile Include="LoaiPhongChieuDTO.cs" />
     <Compile Include="NgayLamViecDTO.cs" />
     <Compile Include="NhaCungCapDTO.cs" />
     <Compile Include="NhaCungCapViewDTO.cs" />
@@ -88,11 +90,13 @@
     <Compile Include="PhimDTO.cs" />
     <Compile Include="PhimViewDTO.cs" />
     <Compile Include="PhongChieuDTO.cs" />
+    <Compile Include="PhongChieuView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheLoaiPhimDTO.cs" />
     <Compile Include="ChiTietDeXuatThucAnViewDTO.cs" />
     <Compile Include="ThucAnDTO.cs" />
     <Compile Include="ThucAnViewDTO.cs" />
+    <Compile Include="TinhTrangPhongChieuDTO.cs" />
     <Compile Include="VatTuDTO.cs" />
     <Compile Include="VatTuViewDTO.cs" />
   </ItemGroup>
