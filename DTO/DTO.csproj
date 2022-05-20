@@ -82,6 +82,7 @@
     <Compile Include="NhaCungCapDTO.cs" />
     <Compile Include="NhaCungCapViewDTO.cs" />
     <Compile Include="NhanVienDTO.cs" />
+    <Compile Include="NhanVienViewDTO.cs" />
     <Compile Include="PhieuDTO.cs" />
     <Compile Include="ChiTietDeXuatPhimViewDTO.cs" />
     <Compile Include="PhimDTO.cs" />

@@ -113,8 +113,10 @@ create table NGAY_LAM_VIEC
 )
 go
 --Bang Chinh Sach
+
 Create table CHINH_SACH(
 	MaChinhSach varchar(6) primary key not null constraint IDCS default dbo.AUTO_IDCS(),
+	TenChinhSach nvarchar(30),
 	HeSoLuong Float(4),
 	BHXH varchar(20),
 	TienThuong int

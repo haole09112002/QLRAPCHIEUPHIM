@@ -57,6 +57,38 @@ namespace DAL
                 MaChucVu = i["MaChucVu"].ToString(),
             };
         }
+        public DataTable GetNVByMaChucVu(string maNhanVien, string maChucVu)
+        {
+            string query = "EXEC LayNhanVienByMaChucVu @maNhanVien , @maChucVu";
+            object[] parameter = new object[]
+            {
+                maNhanVien, maChucVu
+            };
+            return DBHelper.Instance.ExcuteQuery(query, parameter);
+        }
+        public void ThemNhanVien(NhanVienDTO nhanVien)
+        {
+           // nhanVien.Anh1 = null;
+            string query = "EXEC themnhanvien @TenNhanVien , @NgaySinh , @GioiTinh , @DiaChi , @SoDienThoai , @CCCD , @TenTaiKhoan , @MatKhau , @MaChinhSach , @MaChucVu";
+            object[] parameter = new object[]
+            {
+                nhanVien.TenNhanVien, nhanVien.NgaySinh, nhanVien.GioiTinh , nhanVien.DiaChi , nhanVien.SoDienThoai, nhanVien.CCCD1, nhanVien.TenTaiKhoan,nhanVien.MatKhau ,nhanVien.MaChinhSach,
+                nhanVien.MaChucVu
+            };
+            DBHelper.Instance.ExcuteNonQuery(query, parameter);
+
+        }
+        public void CapNhatNhanVien(NhanVienDTO nhanVien)
+        {
+            string query = "EXEC CapNhatNhanVien @MaNhanVien , @TenNhanVien , @NgaySinh , @GioiTinh , @DiaChi , @SoDienThoai , @CCCD , @TenTaiKhoan , @MatKhau , @MaChinhSach , @MaChucVu";
+            object[] parameter = new object[]
+            {
+                nhanVien.MaNhanVien,nhanVien.TenNhanVien, nhanVien.NgaySinh, nhanVien.GioiTinh , nhanVien.DiaChi , nhanVien.SoDienThoai, nhanVien.CCCD1, nhanVien.TenTaiKhoan,nhanVien.MatKhau ,nhanVien.MaChinhSach,
+                nhanVien.MaChucVu
+            };
+            DBHelper.Instance.ExcuteNonQuery(query, parameter);
+        }
+
         public int KiemTraDangNhap(string tenTaiKhoan, string matKhau)
         {
            
