@@ -336,7 +336,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1214, 706);
+            this.ClientSize = new System.Drawing.Size(1573, 875);
             this.Controls.Add(this.pnMenuContent);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.pnTop);

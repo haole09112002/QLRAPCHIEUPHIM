@@ -134,17 +134,26 @@ values (N'Hợp đồng 5', 'NCC010', '2020-11-30', 'LHD003' );
 insert into HOP_DONG(TenHopDong ,MaNhaCungCap ,NgayKiKetHD , MaLoaiHopDong)
 values (N'Hợp đồng 6', 'NCC011', '2020-12-30', 'LHD003' );
 ---- Đã xong
+--Loai phong chieu LPC001
+insert into LOAI_PHONG_CHIEU(TenLoaiPhongChieu) values (N'Thông thường' );
+insert into LOAI_PHONG_CHIEU(TenLoaiPhongChieu) values (N'Dolby Atmos' );
+insert into LOAI_PHONG_CHIEU(TenLoaiPhongChieu) values (N'4Dx' );
+insert into LOAI_PHONG_CHIEU(TenLoaiPhongChieu) values (N'ScreenX' );
+-- tinh trang phong chieu
+insert into TINH_TRANG_PHONG_CHIEU(TenTinhTrang) values (N'Tốt');
+insert into TINH_TRANG_PHONG_CHIEU(TenTinhTrang) values (N'Hỏng');
+insert into TINH_TRANG_PHONG_CHIEU(TenTinhTrang) values (N'Bảo trì');
 -----11. Phòng chiếu PC0001
-insert into PHONG_CHIEU(TenPhong,TinhTrangPhong) values (N'Phòng số 1','0');
-insert into PHONG_CHIEU(TenPhong,TinhTrangPhong) values (N'Phòng số 2','1');
-insert into PHONG_CHIEU(TenPhong,TinhTrangPhong) values (N'Phòng số 3','1');
-insert into PHONG_CHIEU(TenPhong,TinhTrangPhong) values (N'Phòng số 4','0');
-insert into PHONG_CHIEU(TenPhong,TinhTrangPhong) values (N'Phòng số 5','1');
-insert into PHONG_CHIEU(TenPhong,TinhTrangPhong) values (N'Phòng số 6','0');
-insert into PHONG_CHIEU(TenPhong,TinhTrangPhong) values (N'Phòng số 7','1');
-insert into PHONG_CHIEU(TenPhong,TinhTrangPhong) values (N'Phòng số 8','0');
-insert into PHONG_CHIEU(TenPhong,TinhTrangPhong) values (N'Phòng số 9','1');
-insert into PHONG_CHIEU(TenPhong,TinhTrangPhong) values (N'Phòng số 10','1');
+insert into PHONG_CHIEU(TenPhong,MaTinhTrang, MaLoaiPhongChieu) values (N'Phòng số 1','3','LPC001');
+insert into PHONG_CHIEU(TenPhong,MaTinhTrang, MaLoaiPhongChieu) values (N'Phòng số 2','1','LPC001');
+insert into PHONG_CHIEU(TenPhong,MaTinhTrang, MaLoaiPhongChieu) values (N'Phòng số 3','1','LPC002');
+insert into PHONG_CHIEU(TenPhong,MaTinhTrang, MaLoaiPhongChieu) values (N'Phòng số 4','2','LPC002');
+insert into PHONG_CHIEU(TenPhong,MaTinhTrang, MaLoaiPhongChieu) values (N'Phòng số 5','1','LPC003');
+insert into PHONG_CHIEU(TenPhong,MaTinhTrang, MaLoaiPhongChieu) values (N'Phòng số 6','2','LPC004');
+insert into PHONG_CHIEU(TenPhong,MaTinhTrang, MaLoaiPhongChieu) values (N'Phòng số 7','1','LPC004');
+insert into PHONG_CHIEU(TenPhong,MaTinhTrang, MaLoaiPhongChieu) values (N'Phòng số 8','2','LPC001');
+insert into PHONG_CHIEU(TenPhong,MaTinhTrang, MaLoaiPhongChieu) values (N'Phòng số 9','1','LPC003');
+insert into PHONG_CHIEU(TenPhong,MaTinhTrang, MaLoaiPhongChieu) values (N'Phòng số 10','1','LPC002');
 ---- Đã xong
 ------12. Khung giờ chiếu -----------KGC00001  
 insert into KHUNG_GIO_CHIEU(TenKhungGio,TGBatDau,TGKetThuc) values(N'Khung giờ số 1','08:00:00.0000000','11:00:00.0000000');

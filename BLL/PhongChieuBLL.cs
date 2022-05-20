@@ -31,6 +31,48 @@ namespace BLL
         {
             return PhongChieuDAL.Instance.GetAllPhongChieu();
         }
+
+        public PhongChieuView ConvertPhongChieuDTOToView(PhongChieuDTO pc)
+        {
+            string tenTinhTrang = "";
+            string tenLoaiPhongChieu = "";
+            foreach(TinhTrangPhongChieuDTO i  in TinhTrangPhongChieuDAL.Instance.GetAllTinhTrangPhongChieu())
+            {
+                if (i.MaTinhTrang == pc.MaTinhTrang.ToString())
+                    tenTinhTrang = i.TenTinhTrang;
+            }
+            foreach (LoaiPhongChieuDTO i in LoaiPhongChieuDAL.Instance.GetAllLoaiPhongChieu())
+            {
+                if (i.MaLoaiPhongChieu == pc.MaLoaiPhongChieu)
+                    tenLoaiPhongChieu = i.TenLoaiPhongChieu;
+            }
+            return new PhongChieuView
+            {
+                MaPhongChieu = pc.MaPhongChieu,
+                TenPhong = pc.TenPhong,
+                TenLoaiPhongChieu = tenLoaiPhongChieu,
+                TenTinhTrang = tenTinhTrang
+            };
+        }
+        public List<PhongChieuView> GetAllPhongChieuView()
+        {
+            List<PhongChieuView> data = new List<PhongChieuView>();
+            foreach (PhongChieuDTO i in GetAllPhongChieu())
+            {
+                data.Add(ConvertPhongChieuDTOToView(i));
+            }
+            return data;
+        }
+        public PhongChieuView GetPhongChieuViewByMaPhongChieu(string maPhongChieu)
+        {
+            foreach(PhongChieuView i in GetAllPhongChieuView())
+            {
+                if(i.MaPhongChieu == maPhongChieu)
+                    return i;
+            }
+            return null;
+        }
+        
         public PhongChieuDTO GetPhongChieuByMaPC(string MaPhongChieu)
         {
             foreach (PhongChieuDTO i in PhongChieuDAL.Instance.GetAllPhongChieu())
