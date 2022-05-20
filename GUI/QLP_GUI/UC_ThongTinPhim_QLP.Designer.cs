@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cBTimKiem = new System.Windows.Forms.ComboBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXemChiTiet = new System.Windows.Forms.Button();
             this.btnSapXep = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dGVDanhSachPhim = new System.Windows.Forms.DataGridView();
-            this.cBTimKiem = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +60,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1296, 734);
             this.panel1.TabIndex = 9;
+            // 
+            // cBTimKiem
+            // 
+            this.cBTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBTimKiem.FormattingEnabled = true;
+            this.cBTimKiem.Items.AddRange(new object[] {
+            "TenPhim",
+            "ThoiLuong",
+            "NamSanXuat",
+            "QuocGia",
+            "TenHangSanXuatPhim",
+            "TheLoai"});
+            this.cBTimKiem.Location = new System.Drawing.Point(488, 64);
+            this.cBTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBTimKiem.Name = "cBTimKiem";
+            this.cBTimKiem.Size = new System.Drawing.Size(203, 31);
+            this.cBTimKiem.TabIndex = 50;
             // 
             // btnThem
             // 
@@ -191,24 +209,6 @@
             this.dGVDanhSachPhim.RowTemplate.Height = 28;
             this.dGVDanhSachPhim.Size = new System.Drawing.Size(1242, 535);
             this.dGVDanhSachPhim.TabIndex = 40;
-            // 
-            // cBTimKiem
-            // 
-            this.cBTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cBTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBTimKiem.FormattingEnabled = true;
-            this.cBTimKiem.Items.AddRange(new object[] {
-            "TenPhim",
-            "ThoiLuong",
-            "NamSanXuat",
-            "QuocGia",
-            "TenHangPhim",
-            "TheLoai"});
-            this.cBTimKiem.Location = new System.Drawing.Point(488, 64);
-            this.cBTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cBTimKiem.Name = "cBTimKiem";
-            this.cBTimKiem.Size = new System.Drawing.Size(203, 31);
-            this.cBTimKiem.TabIndex = 50;
             // 
             // UC_ThongTinPhim_QLP
             // 

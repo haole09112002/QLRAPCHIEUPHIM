@@ -150,6 +150,70 @@ namespace BLL
                             TheLoai = TheLoaiPhim
                         });
                     }
+                if(TimKiem == "TenHangSanXuatPhim")
+                {
+                    foreach(HangSanXuatPhimDTO j in HangSanXuatPhimDAL.Instance.GetAllHangSanXuatPhim())
+                    {
+                        if(i.MaHangSanXuatPhim == j.MaHangSanXuatPhim)
+                        {
+                            TenHangSanXuatPhim = j.TenHangSanXuatPhim;
+                            break;
+                        }
+                    }
+                    if(TenHangSanXuatPhim.Contains(txt))
+                    {
+                        foreach (TheLoaiPhimDTO j in TLP.ToArray())
+                        {
+                            if (i.MaTheLoai == j.MaTheLoaiPhim)
+                            {
+                                TheLoaiPhim = j.TenTheLoaiPhim;
+                            }
+                        }
+                        data.Add(new PhimViewDTO
+                        {
+                            MaPhim = i.MaPhim,
+                            TenPhim = i.TenPhim,
+                            ThoiLuong = i.ThoiLuong,
+                            QuocGia = i.QuocGia,
+                            NamSanXuat = i.NamSanXuat,
+                            TenHangSanXuatPhim = TenHangSanXuatPhim,
+                            DoTuoiXem = i.DoTuoiXem,
+                            TheLoai = TheLoaiPhim
+                        });
+                    }
+                }
+                if(TimKiem == "TheLoai")
+                {
+                    foreach (TheLoaiPhimDTO j in TLP.ToArray())
+                    {
+                        if (i.MaTheLoai == j.MaTheLoaiPhim)
+                        {
+                            TheLoaiPhim = j.TenTheLoaiPhim;
+                        }
+                    }
+                    if (TheLoaiPhim.Contains(txt))
+                    {
+                        foreach (HangSanXuatPhimDTO j in HangSanXuatPhimDAL.Instance.GetAllHangSanXuatPhim())
+                        {
+                            if (i.MaHangSanXuatPhim == j.MaHangSanXuatPhim)
+                            {
+                                TenHangSanXuatPhim = j.TenHangSanXuatPhim;
+                                break;
+                            }
+                        }
+                        data.Add(new PhimViewDTO
+                        {
+                            MaPhim = i.MaPhim,
+                            TenPhim = i.TenPhim,
+                            ThoiLuong = i.ThoiLuong,
+                            QuocGia = i.QuocGia,
+                            NamSanXuat = i.NamSanXuat,
+                            TenHangSanXuatPhim = TenHangSanXuatPhim,
+                            DoTuoiXem = i.DoTuoiXem,
+                            TheLoai = TheLoaiPhim
+                        });
+                    }
+                }
             }
             return data;
         }

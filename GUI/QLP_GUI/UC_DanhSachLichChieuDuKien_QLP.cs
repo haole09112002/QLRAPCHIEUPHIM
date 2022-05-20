@@ -22,25 +22,30 @@ namespace GUI.QLP_GUI
             InitializeComponent();
             SetDaTaTable();
             Reload();
-            btnChinhSua.Hide();
-            btnXoa.Hide();
         }
         UC_TaoLichChieu_QLP ucTLC = new UC_TaoLichChieu_QLP();
         public void SetDaTaTable()
         {
+            dtDanhSachLichChieuDuKien.Columns.Add("Mã Phim");
             dtDanhSachLichChieuDuKien.Columns.Add("Tên Phim");
+            dtDanhSachLichChieuDuKien.Columns.Add("Mã Phòng Chiếu");
             dtDanhSachLichChieuDuKien.Columns.Add("Tên Phòng Chiếu");
+            dtDanhSachLichChieuDuKien.Columns.Add("Mã Khung Giờ Chiếu");
             dtDanhSachLichChieuDuKien.Columns.Add("Giờ Bắt Đầu");
             dtDanhSachLichChieuDuKien.Columns.Add("Giờ Kết Thúc"); 
-            dtDanhSachLichChieuDuKien.Columns.Add("Ngày Chiếu"); 
+            dtDanhSachLichChieuDuKien.Columns.Add("Ngày Chiếu");
         }
-        public void Reload()
+        public void Reload(string TimKiem = "", string LoaiTimKiem = "")
         {
-            foreach (LichChieuDTO i in LichChieuBLL.Instance.GetListLichChieuByTrangThai(false))
+            dtDanhSachLichChieuDuKien.Rows.Clear();
+            foreach (LichChieuViewDTO i in LichChieuViewBLL.Instance.GetLichChieuViewByTrangThai(false,TimKiem,LoaiTimKiem))
             {
-                dtDanhSachLichChieuDuKien.Rows.Add(PhimBLL.Instance.GetPhimByMaPhim(i.MaPhim).TenPhim, PhongChieuBLL.Instance.GetPhongChieuByMaPC(i.MaPhongChieu).TenPhong, KhungGioChieuBLL.Instance.GetKhungGioChieuByMaKGC(i.MaKhungGioChieu).TGBatDau,KhungGioChieuBLL.Instance.GetKhungGioChieuByMaKGC(i.MaKhungGioChieu).TGKetThuc,i.NgayChieu.ToShortDateString());
+                dtDanhSachLichChieuDuKien.Rows.Add(i.MaPhim,i.TenPhim,i.MaPhongChieu,i.TenPhongChieu,i.MaKhungGioChieu,i.GioBatDau.ToShortTimeString(),i.GioKetThuc.ToShortTimeString(),i.NgayChieu.ToShortDateString());
             }
             dGVDanhSachLichChieuDuKien.DataSource = dtDanhSachLichChieuDuKien;
+            dGVDanhSachLichChieuDuKien.Columns["Mã Phim"].Visible = false;
+            dGVDanhSachLichChieuDuKien.Columns["Mã Phòng Chiếu"].Visible = false;
+            dGVDanhSachLichChieuDuKien.Columns["Mã Khung Giờ Chiếu"].Visible = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -49,6 +54,11 @@ namespace GUI.QLP_GUI
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            Reload(txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
         }
     }
 }

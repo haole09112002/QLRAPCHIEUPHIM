@@ -23,19 +23,31 @@ namespace GUI.QLP_GUI
         }
         public void SetDaTaTable()
         {
+            dtDanhSachLichChieuChinhThuc.Columns.Add("Mã Phim");
             dtDanhSachLichChieuChinhThuc.Columns.Add("Tên Phim");
+            dtDanhSachLichChieuChinhThuc.Columns.Add("Mã Phòng Chiếu");
             dtDanhSachLichChieuChinhThuc.Columns.Add("Tên Phòng Chiếu");
+            dtDanhSachLichChieuChinhThuc.Columns.Add("Mã Khung Giờ Chiếu");
             dtDanhSachLichChieuChinhThuc.Columns.Add("Giờ Bắt Đầu");
             dtDanhSachLichChieuChinhThuc.Columns.Add("Giờ Kết Thúc");
             dtDanhSachLichChieuChinhThuc.Columns.Add("Ngày Chiếu");
         }
-        public void Reload()
+        public void Reload(string TimKiem = "", string LoaiTimKiem = "")
         {
-            foreach (LichChieuDTO i in LichChieuBLL.Instance.GetListLichChieuByTrangThai(true))
+            dtDanhSachLichChieuChinhThuc.Rows.Clear();
+            foreach (LichChieuViewDTO i in LichChieuViewBLL.Instance.GetLichChieuViewByTrangThai(true,TimKiem,LoaiTimKiem))
             {
-                dtDanhSachLichChieuChinhThuc.Rows.Add(PhimBLL.Instance.GetPhimByMaPhim(i.MaPhim).TenPhim, PhongChieuBLL.Instance.GetPhongChieuByMaPC(i.MaPhongChieu).TenPhong, KhungGioChieuBLL.Instance.GetKhungGioChieuByMaKGC(i.MaKhungGioChieu).TGBatDau, KhungGioChieuBLL.Instance.GetKhungGioChieuByMaKGC(i.MaKhungGioChieu).TGKetThuc, i.NgayChieu.ToShortDateString());
+                dtDanhSachLichChieuChinhThuc.Rows.Add(i.MaPhim, i.TenPhim, i.MaPhongChieu, i.TenPhongChieu, i.MaKhungGioChieu, i.GioBatDau.ToShortTimeString(), i.GioKetThuc.ToShortTimeString(), i.NgayChieu.ToShortDateString());
             }
             dGVDanhSachLichChieuChinhThuc.DataSource = dtDanhSachLichChieuChinhThuc;
+            dGVDanhSachLichChieuChinhThuc.Columns["Mã Phim"].Visible = false;
+            dGVDanhSachLichChieuChinhThuc.Columns["Mã Phòng Chiếu"].Visible = false;
+            dGVDanhSachLichChieuChinhThuc.Columns["Mã Khung Giờ Chiếu"].Visible = false;
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            Reload(txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
         }
     }
 }

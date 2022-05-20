@@ -2,12 +2,7 @@
 using DTO;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
@@ -23,7 +18,9 @@ namespace GUI.QLP_GUI
             SetDataTable();
             SetCBBHangSanXuatPhim();
             SetCBBTheLoaiPhim();
-            SetCBBDienVienDaoDien();
+            SetCBBDienVienDaoDien(cBDienVienChinh);
+            SetCBBDienVienDaoDien(cBDienVienPhu);
+            SetCBBDienVienDaoDien(cBDaoDien);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -43,14 +40,14 @@ namespace GUI.QLP_GUI
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif; *.jpg; *.jpeg; *.bmp; *.wmf; *.png";
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 pBAnhPhim.ImageLocation = openFileDialog.FileName;
             }
         }
         public void SetCBBTheLoaiPhim()
         {
-            foreach(TheLoaiPhimDTO i in TheLoaiPhimBLL.Instance.GetAllTheLoaiPhim())
+            foreach (TheLoaiPhimDTO i in TheLoaiPhimBLL.Instance.GetAllTheLoaiPhim())
             {
                 cBTheLoai.Items.Add(new CBBItem
                 {
@@ -62,7 +59,7 @@ namespace GUI.QLP_GUI
         public void SetCBBHangSanXuatPhim()
         {
             cBHangSanXuatPhim.Items.Clear();
-            foreach(HangSanXuatPhimDTO i in HangSanXuatPhimBLL.Instance.GetAllHSXP())
+            foreach (HangSanXuatPhimDTO i in HangSanXuatPhimBLL.Instance.GetAllHSXP())
             {
                 cBHangSanXuatPhim.Items.Add(new CBBItem
                 {
@@ -71,35 +68,24 @@ namespace GUI.QLP_GUI
                 });
             }
         }
-        public void SetCBBDienVienDaoDien()
+        public void SetCBBDienVienDaoDien(ComboBox cb, string txt = "")
         {
-            cBDaoDien.Items.Clear();
-            cBDienVienChinh.Items.Clear();
-            cBDienVienPhu.Items.Clear();
-            foreach(DienVienDaoDienDTO i in DienVienDaoDienBLL.Instance.GetAllDienVienDaoDien())
+            cb.Items.Clear();
+            foreach (DienVienDaoDienDTO i in DienVienDaoDienBLL.Instance.GetAllDienVienDaoDien(txt))
             {
-                cBDienVienChinh.Items.Add(new CBBItem
-                {
-                    Value = i.MaDienVienDaoDien,
-                    Text = i.TenDienVienDaoDien
-                });
-                cBDienVienPhu.Items.Add(new CBBItem
-                {
-                    Value = i.MaDienVienDaoDien,
-                    Text = i.TenDienVienDaoDien
-                });
-                cBDaoDien.Items.Add(new CBBItem
+                cb.Items.Add(new CBBItem
                 {
                     Value = i.MaDienVienDaoDien,
                     Text = i.TenDienVienDaoDien
                 });
             }
+            cb.Sorted = true;
         }
         public bool KiemTraTonTaiDienVienDaoDien(string MaDienVienDaoDien, string VaiTro)
         {
-            if(VaiTro == "C")
+            if (VaiTro == "C")
             {
-                for(int i = 0; i < dGVDienVienChinh.Rows.Count - 1; i++)
+                for (int i = 0; i < dGVDienVienChinh.Rows.Count - 1; i++)
                 {
                     if (dGVDienVienChinh.Rows[i].Cells["Mã Diễn Viên Chính"].Value.ToString() == MaDienVienDaoDien)
                     {
@@ -107,7 +93,7 @@ namespace GUI.QLP_GUI
                     }
                 }
             }
-            if(VaiTro == "P")
+            if (VaiTro == "P")
             {
                 for (int i = 0; i < dGVDienVienPhu.Rows.Count - 1; i++)
                 {
@@ -117,7 +103,7 @@ namespace GUI.QLP_GUI
                     }
                 }
             }
-            if(VaiTro == "D")
+            if (VaiTro == "D")
             {
                 for (int i = 0; i < dGVDaoDien.Rows.Count - 1; i++)
                 {
@@ -167,7 +153,7 @@ namespace GUI.QLP_GUI
                 MessageBox.Show("Ảnh phim rỗng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 return false;
             }
-            if(dGVDienVienChinh.RowCount == 0)
+            if (dGVDienVienChinh.RowCount == 0)
             {
                 MessageBox.Show("Diẽn viên chính rỗng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 return false;
@@ -189,7 +175,7 @@ namespace GUI.QLP_GUI
             foreach (PhimDTO i in PhimBLL.Instance.GetAllPhim())
             {
                 if (i.TenPhim == txtTenPhim.Text)
-                { 
+                {
                     MessageBox.Show("Phim đã tồn tại");
                     return true;
                 }
@@ -203,9 +189,9 @@ namespace GUI.QLP_GUI
             List<String> MaDienVienChinh = new List<String>();
             List<String> MaDienVienPhu = new List<String>();
             List<String> MaDaoDien = new List<string>();
-            Phim.NoiDung = rtxtNoiDung.Text;                
+            Phim.NoiDung = rtxtNoiDung.Text;
             Phim.NamSanXuat = dTPNamSanXuat.Value;
-            
+
             for (int i = 0; i < dGVDienVienChinh.Rows.Count - 1; i++)
             {
                 MaDienVienChinh.Add(dGVDienVienChinh.Rows[i].Cells["Mã Diễn Viên Chính"].Value.ToString());
@@ -230,16 +216,16 @@ namespace GUI.QLP_GUI
                 PhimBLL.Instance.LuuPhim(Phim);
                 string MaPhim = PhimBLL.Instance.GetMaPhimAddNew();
                 MessageBox.Show(MaPhim);
-                foreach(string i in MaDienVienChinh)
+                foreach (string i in MaDienVienChinh)
                 {
                     ChiTietDienVienDaoDienPhimBLL.Instance.LuuCTDVDDP(MaPhim, i, "C");
                     MessageBox.Show("Pass");
                 }
-                foreach(string i in MaDienVienPhu)
+                foreach (string i in MaDienVienPhu)
                 {
                     ChiTietDienVienDaoDienPhimBLL.Instance.LuuCTDVDDP(MaPhim, i, "P");
                 }
-                foreach(string i in MaDaoDien)
+                foreach (string i in MaDaoDien)
                 {
                     ChiTietDienVienDaoDienPhimBLL.Instance.LuuCTDVDDP(MaPhim, i, "D");
                 }
@@ -250,13 +236,15 @@ namespace GUI.QLP_GUI
         {
             frm_ThemMoiDienVienDaoDien_QLP frmThemMoi = new frm_ThemMoiDienVienDaoDien_QLP();
             frmThemMoi.ShowDialog();
-            SetCBBDienVienDaoDien();
+            SetCBBDienVienDaoDien(cBDienVienChinh, cBDienVienChinh.Text);
+            SetCBBDienVienDaoDien(cBDienVienPhu, cBDienVienPhu.Text);
+            SetCBBDienVienDaoDien(cBDaoDien, cBDaoDien.Text);
         }
 
         private void cBDienVienChinh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienChinh.SelectedItem).Value,"C"))
-            {      
+            if (KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienChinh.SelectedItem).Value, "C"))
+            {
                 MessageBox.Show("Diễn viên(Đạo Diễn) " + cBDienVienChinh.SelectedItem.ToString() + " đã có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
@@ -294,7 +282,7 @@ namespace GUI.QLP_GUI
 
         private void dGVDienVienChinh_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dGVDienVienChinh.SelectedRows.Count > 0)
+            if (dGVDienVienChinh.SelectedRows.Count > 0)
             {
                 foreach (DataGridViewRow item in this.dGVDienVienChinh.SelectedRows)
                 {
