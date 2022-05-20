@@ -154,16 +154,17 @@ insert into KHUNG_GIO_CHIEU(TenKhungGio,TGBatDau,TGKetThuc) values(N'Khung giờ
 insert into KHUNG_GIO_CHIEU(TenKhungGio,TGBatDau,TGKetThuc) values(N'Khung giờ số 5','20:00:00.0000000','23:00:00.0000000');
 ----Đã xong
 ------13.Lịch chiếu
-insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,TrangThai) VALUES('P00001','PC0002','KGC00001','1');
-insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,TrangThai) VALUES('P00002','PC0003','KGC00002','0');
-insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,TrangThai) VALUES('P00003','PC0005','KGC00001','1');
-insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,TrangThai) VALUES('P00004','PC0005','KGC00002','1');
-insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,TrangThai) VALUES('P00005','PC0005','KGC00003','1');
-insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,TrangThai) VALUES('P00006','PC0005','KGC00004','1');
-insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,TrangThai) VALUES('P00007','PC0005','KGC00005','1');
-insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,TrangThai) VALUES('P00008','PC0007','KGC00002','1');
-insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,TrangThai) VALUES('P00009','PC0007','KGC00003','1');
-insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,TrangThai) VALUES('P00010','PC0009','KGC00004','1');
+insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,NgayChieu,TrangThai) VALUES('P00001','PC0002','KGC00001','2022-09-06','1');
+insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,NgayChieu,TrangThai) VALUES('P00002','PC0003','KGC00002','2022-09-07','0');
+insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,NgayChieu,TrangThai) VALUES('P00003','PC0005','KGC00001','2022-09-06','1');
+insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,NgayChieu,TrangThai) VALUES('P00004','PC0005','KGC00002','2022-09-08','1');
+insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,NgayChieu,TrangThai) VALUES('P00005','PC0005','KGC00003','2022-09-10','1');
+insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,NgayChieu,TrangThai) VALUES('P00006','PC0005','KGC00004','2022-09-11','0');
+insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,NgayChieu,TrangThai) VALUES('P00007','PC0005','KGC00005','2022-09-12','0');
+insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,NgayChieu,TrangThai) VALUES('P00008','PC0007','KGC00002','2022-09-13','0');
+insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,NgayChieu,TrangThai) VALUES('P00009','PC0007','KGC00003','2022-09-06','1');
+insert into LICH_CHIEU(MaPhim,MaPhongChieu,MaKhungGioChieu,NgayChieu,TrangThai) VALUES('P00010','PC0009','KGC00004','2022-09-09','1');
+----- Đã xong
 ----- Đã xong
 ------14.Ca làm việc ----- CLV001
 insert into CA_LAM_VIEC(TenCa,GioBatDau,GioKetThuc) values(N'Ca Sáng','08:00:00.0000000','11:00:00.0000000');

@@ -10,7 +10,6 @@ namespace DTO
     {
         private string tenPhim;
         private string maPhim;
-        private string tenPhim;
         private string maPhongChieu;
         private string tenPhongChieu;
         private string maKhungGioChieu;

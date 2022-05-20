@@ -59,10 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dGVKhungGioChieu)).BeginInit();
             this.gBDanhSachPhongChieu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).BeginInit();
             this.gBKhungGioChieu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVKhungGioChieu)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -146,8 +144,6 @@
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // textBox2
             // 

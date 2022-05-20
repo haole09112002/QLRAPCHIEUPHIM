@@ -5,8 +5,6 @@ using System.Text;
 using DAL;
 using DTO;
 using System.Threading.Tasks;
-using DTO;
-using DAL;
 
 namespace BLL
 {
