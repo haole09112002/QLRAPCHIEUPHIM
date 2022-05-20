@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dGVDanhSachPhieuDeXuat = new System.Windows.Forms.DataGridView();
+            this.gBDeXuatPhim = new System.Windows.Forms.GroupBox();
+            this.dGVChiTietPhieuDeXuat = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -37,14 +41,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhieuDeXuat)).BeginInit();
+            this.gBDeXuatPhim.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVChiTietPhieuDeXuat)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.gBDeXuatPhim);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.comboBox2);
@@ -53,12 +61,64 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(18, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1296, 734);
             this.panel1.TabIndex = 1;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dGVDanhSachPhieuDeXuat);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(27, 125);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(576, 535);
+            this.groupBox1.TabIndex = 50;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh Sách Phiếu Đề Xuất";
+            // 
+            // dGVDanhSachPhieuDeXuat
+            // 
+            this.dGVDanhSachPhieuDeXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVDanhSachPhieuDeXuat.BackgroundColor = System.Drawing.Color.White;
+            this.dGVDanhSachPhieuDeXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVDanhSachPhieuDeXuat.Location = new System.Drawing.Point(22, 26);
+            this.dGVDanhSachPhieuDeXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dGVDanhSachPhieuDeXuat.Name = "dGVDanhSachPhieuDeXuat";
+            this.dGVDanhSachPhieuDeXuat.RowHeadersWidth = 62;
+            this.dGVDanhSachPhieuDeXuat.RowTemplate.Height = 28;
+            this.dGVDanhSachPhieuDeXuat.Size = new System.Drawing.Size(528, 491);
+            this.dGVDanhSachPhieuDeXuat.TabIndex = 0;
+            this.dGVDanhSachPhieuDeXuat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDanhSachPhieuDeXuat_CellDoubleClick);
+            // 
+            // gBDeXuatPhim
+            // 
+            this.gBDeXuatPhim.Controls.Add(this.dGVChiTietPhieuDeXuat);
+            this.gBDeXuatPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gBDeXuatPhim.Location = new System.Drawing.Point(620, 125);
+            this.gBDeXuatPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gBDeXuatPhim.Name = "gBDeXuatPhim";
+            this.gBDeXuatPhim.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gBDeXuatPhim.Size = new System.Drawing.Size(653, 535);
+            this.gBDeXuatPhim.TabIndex = 49;
+            this.gBDeXuatPhim.TabStop = false;
+            this.gBDeXuatPhim.Text = "Chi Tiết Phiếu Đề Xuất Phim";
+            // 
+            // dGVChiTietPhieuDeXuat
+            // 
+            this.dGVChiTietPhieuDeXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVChiTietPhieuDeXuat.BackgroundColor = System.Drawing.Color.White;
+            this.dGVChiTietPhieuDeXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVChiTietPhieuDeXuat.Location = new System.Drawing.Point(15, 26);
+            this.dGVChiTietPhieuDeXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dGVChiTietPhieuDeXuat.Name = "dGVChiTietPhieuDeXuat";
+            this.dGVChiTietPhieuDeXuat.RowHeadersWidth = 62;
+            this.dGVChiTietPhieuDeXuat.RowTemplate.Height = 28;
+            this.dGVChiTietPhieuDeXuat.Size = new System.Drawing.Size(632, 491);
+            this.dGVChiTietPhieuDeXuat.TabIndex = 40;
             // 
             // button4
             // 
@@ -175,18 +235,6 @@
             this.button3.Text = "   Xóa";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 125);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1246, 535);
-            this.dataGridView1.TabIndex = 40;
-            // 
             // UC_DanhSachPhimDeXuat_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -198,7 +246,10 @@
             this.Size = new System.Drawing.Size(1333, 766);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhieuDeXuat)).EndInit();
+            this.gBDeXuatPhim.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dGVChiTietPhieuDeXuat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -213,7 +264,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGVChiTietPhieuDeXuat;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox gBDeXuatPhim;
+        private System.Windows.Forms.DataGridView dGVDanhSachPhieuDeXuat;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

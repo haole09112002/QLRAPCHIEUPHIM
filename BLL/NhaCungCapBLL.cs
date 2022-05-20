@@ -240,6 +240,42 @@ namespace BLL
             }    
             return data;
         }
+        public List<NhaCungCapDTO> GetAllNhaCungCap(string TimKiem = "", string LoaiTimKiem = "")
+        {
+            List<NhaCungCapDTO> data = new List<NhaCungCapDTO>();
+            foreach(NhaCungCapDTO i in NhaCungCapDAL.Instance.GetAllNhaCungCap())
+            {
+                if(LoaiTimKiem == "Tên Nhà Cung Cấp" || LoaiTimKiem == "")
+                {
+                    if(i.TenNhaCungCap.Contains(TimKiem))
+                    {
+                        data.Add(i);
+                    }
+                }
+                if(LoaiTimKiem == "Mã Số Thuế")
+                {
+                    if(i.MaSoThue.Contains(TimKiem))
+                    {
+                        data.Add(i);
+                    }
+                }
+                if(LoaiTimKiem == "Email")
+                {
+                    if(i.Email.Contains(TimKiem))
+                    {
+                        data.Add(i);
+                    }
+                }
+                if(LoaiTimKiem == "Số Điện Thoại")
+                {
+                    if(i.SoDienThoai.Contains(TimKiem))
+                    {
+                        data.Add(i);
+                    }
+                }
+            }
+            return data;
+        }
     }
 }
 

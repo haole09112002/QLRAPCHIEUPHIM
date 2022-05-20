@@ -44,7 +44,7 @@ namespace DAL
                 MaDeXuat = i["MaDeXuat"].ToString(),
                 MaPhim = i["MaPhim"].ToString(),
                 TinhTrang = i["TinhTrang"].ToString(),
-                Noidung = i["Noidung"].ToString(),
+                NoiDung = i["Noidung"].ToString(),
                 DonViTinh =i["DonViTinh"].ToString(),
                 SoLuong = Convert.ToInt32(i["SoLuong"])
             };
@@ -74,6 +74,12 @@ namespace DAL
         {
             string query = string.Format("Update CHI_TIET_DE_XUAT_PHIM set TinhTrang = '{0}' where MaDeXuat ='{1}' and MaPhim = '{2}' ", tinhTrang, maDeXuat, maPhim); 
             DBHelper.Instance.ExcuteNonQuery(query);
+        }
+        public void LuuChiTietDeXuatPhim(string MaDeXuat, string MaPhim, string NoiDung, string DonViTinh, int SoLuong, string TinhTrang)
+        {
+            string query = "Insert into CHI_TIET_DE_XUAT_PHIM values" +
+                $"('{MaDeXuat}','{MaPhim}',N'{NoiDung}',{SoLuong},'{DonViTinh}','{TinhTrang}')";
+            DBHelper.Instance.ExcuteQuery(query);
         }
     }
 }

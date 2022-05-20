@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtHangSanXuat = new System.Windows.Forms.TextBox();
             this.txtTenPhim = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.gBMoTaPhim = new System.Windows.Forms.GroupBox();
+            this.btnThemMoi = new System.Windows.Forms.Button();
+            this.cBDaoDien = new System.Windows.Forms.ComboBox();
+            this.cBDienVienChinh = new System.Windows.Forms.ComboBox();
+            this.cBDienVienPhu = new System.Windows.Forms.ComboBox();
             this.dGVDaoDien = new System.Windows.Forms.DataGridView();
             this.dGVDienVienPhu = new System.Windows.Forms.DataGridView();
             this.dGVDienVienChinh = new System.Windows.Forms.DataGridView();
@@ -43,6 +46,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.rtxtNoiDung = new System.Windows.Forms.RichTextBox();
             this.gBThongTinPhim = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pBThemHSX = new System.Windows.Forms.PictureBox();
+            this.cBHangSanXuatPhim = new System.Windows.Forms.ComboBox();
             this.txtDoTuoiXem = new System.Windows.Forms.TextBox();
             this.pBAnhPhim = new System.Windows.Forms.PictureBox();
             this.cBTheLoai = new System.Windows.Forms.ComboBox();
@@ -65,18 +71,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dGVDienVienPhu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDienVienChinh)).BeginInit();
             this.gBThongTinPhim.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBThemHSX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtHangSanXuat
-            // 
-            this.txtHangSanXuat.BackColor = System.Drawing.Color.White;
-            this.txtHangSanXuat.Location = new System.Drawing.Point(227, 225);
-            this.txtHangSanXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtHangSanXuat.Name = "txtHangSanXuat";
-            this.txtHangSanXuat.Size = new System.Drawing.Size(380, 33);
-            this.txtHangSanXuat.TabIndex = 17;
             // 
             // txtTenPhim
             // 
@@ -98,7 +96,7 @@
             this.panel1.Location = new System.Drawing.Point(14, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1192, 842);
+            this.panel1.Size = new System.Drawing.Size(1192, 901);
             this.panel1.TabIndex = 20;
             // 
             // btnHuy
@@ -109,7 +107,7 @@
             this.btnHuy.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.Black;
             this.btnHuy.Image = global::GUI.Properties.Resources.Logout_26px;
-            this.btnHuy.Location = new System.Drawing.Point(236, 791);
+            this.btnHuy.Location = new System.Drawing.Point(19, 837);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(117, 45);
@@ -126,7 +124,7 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = global::GUI.Properties.Resources.save_26px;
-            this.btnLuu.Location = new System.Drawing.Point(878, 791);
+            this.btnLuu.Location = new System.Drawing.Point(509, 838);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(117, 45);
@@ -138,6 +136,10 @@
             // 
             // gBMoTaPhim
             // 
+            this.gBMoTaPhim.Controls.Add(this.btnThemMoi);
+            this.gBMoTaPhim.Controls.Add(this.cBDaoDien);
+            this.gBMoTaPhim.Controls.Add(this.cBDienVienChinh);
+            this.gBMoTaPhim.Controls.Add(this.cBDienVienPhu);
             this.gBMoTaPhim.Controls.Add(this.dGVDaoDien);
             this.gBMoTaPhim.Controls.Add(this.dGVDienVienPhu);
             this.gBMoTaPhim.Controls.Add(this.dGVDienVienChinh);
@@ -151,54 +153,118 @@
             this.gBMoTaPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBMoTaPhim.Name = "gBMoTaPhim";
             this.gBMoTaPhim.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gBMoTaPhim.Size = new System.Drawing.Size(528, 714);
+            this.gBMoTaPhim.Size = new System.Drawing.Size(528, 812);
             this.gBMoTaPhim.TabIndex = 20;
             this.gBMoTaPhim.TabStop = false;
             this.gBMoTaPhim.Text = "MÔ TẢ PHIM";
             // 
+            // btnThemMoi
+            // 
+            this.btnThemMoi.BackColor = System.Drawing.Color.Silver;
+            this.btnThemMoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThemMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemMoi.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemMoi.Image = global::GUI.Properties.Resources.new_copy_26px;
+            this.btnThemMoi.Location = new System.Drawing.Point(135, 751);
+            this.btnThemMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThemMoi.Name = "btnThemMoi";
+            this.btnThemMoi.Size = new System.Drawing.Size(387, 45);
+            this.btnThemMoi.TabIndex = 67;
+            this.btnThemMoi.Text = "   Thêm Diễn Viên/Đạo Diễn Mới";
+            this.btnThemMoi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThemMoi.UseVisualStyleBackColor = false;
+            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
+            // 
+            // cBDaoDien
+            // 
+            this.cBDaoDien.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cBDaoDien.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cBDaoDien.BackColor = System.Drawing.Color.White;
+            this.cBDaoDien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBDaoDien.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBDaoDien.FormattingEnabled = true;
+            this.cBDaoDien.Location = new System.Drawing.Point(189, 575);
+            this.cBDaoDien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBDaoDien.Name = "cBDaoDien";
+            this.cBDaoDien.Size = new System.Drawing.Size(287, 31);
+            this.cBDaoDien.TabIndex = 43;
+            this.cBDaoDien.SelectedIndexChanged += new System.EventHandler(this.cBDaoDien_SelectedIndexChanged);
+            // 
+            // cBDienVienChinh
+            // 
+            this.cBDienVienChinh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cBDienVienChinh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cBDienVienChinh.BackColor = System.Drawing.Color.White;
+            this.cBDienVienChinh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBDienVienChinh.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBDienVienChinh.FormattingEnabled = true;
+            this.cBDienVienChinh.Location = new System.Drawing.Point(203, 200);
+            this.cBDienVienChinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBDienVienChinh.Name = "cBDienVienChinh";
+            this.cBDienVienChinh.Size = new System.Drawing.Size(273, 31);
+            this.cBDienVienChinh.TabIndex = 42;
+            this.cBDienVienChinh.SelectedIndexChanged += new System.EventHandler(this.cBDienVienChinh_SelectedIndexChanged);
+            // 
+            // cBDienVienPhu
+            // 
+            this.cBDienVienPhu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cBDienVienPhu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cBDienVienPhu.BackColor = System.Drawing.Color.White;
+            this.cBDienVienPhu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBDienVienPhu.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBDienVienPhu.FormattingEnabled = true;
+            this.cBDienVienPhu.Location = new System.Drawing.Point(189, 405);
+            this.cBDienVienPhu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBDienVienPhu.Name = "cBDienVienPhu";
+            this.cBDienVienPhu.Size = new System.Drawing.Size(287, 31);
+            this.cBDienVienPhu.TabIndex = 38;
+            this.cBDienVienPhu.SelectedIndexChanged += new System.EventHandler(this.cBDienVienPhu_SelectedIndexChanged);
+            // 
             // dGVDaoDien
             // 
-            this.dGVDaoDien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVDaoDien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVDaoDien.BackgroundColor = System.Drawing.Color.White;
             this.dGVDaoDien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVDaoDien.Location = new System.Drawing.Point(13, 524);
+            this.dGVDaoDien.Location = new System.Drawing.Point(13, 611);
             this.dGVDaoDien.Name = "dGVDaoDien";
             this.dGVDaoDien.RowHeadersWidth = 62;
             this.dGVDaoDien.RowTemplate.Height = 28;
-            this.dGVDaoDien.Size = new System.Drawing.Size(509, 106);
+            this.dGVDaoDien.Size = new System.Drawing.Size(509, 135);
             this.dGVDaoDien.TabIndex = 41;
+            this.dGVDaoDien.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDaoDien_CellDoubleClick);
             // 
             // dGVDienVienPhu
             // 
-            this.dGVDienVienPhu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVDienVienPhu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVDienVienPhu.BackgroundColor = System.Drawing.Color.White;
             this.dGVDienVienPhu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVDienVienPhu.Location = new System.Drawing.Point(13, 370);
+            this.dGVDienVienPhu.Location = new System.Drawing.Point(13, 441);
             this.dGVDienVienPhu.Name = "dGVDienVienPhu";
             this.dGVDienVienPhu.RowHeadersWidth = 62;
             this.dGVDienVienPhu.RowTemplate.Height = 28;
-            this.dGVDienVienPhu.Size = new System.Drawing.Size(509, 106);
+            this.dGVDienVienPhu.Size = new System.Drawing.Size(509, 127);
             this.dGVDienVienPhu.TabIndex = 40;
+            this.dGVDienVienPhu.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDienVienPhu_CellDoubleClick);
             // 
             // dGVDienVienChinh
             // 
-            this.dGVDienVienChinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVDienVienChinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVDienVienChinh.BackgroundColor = System.Drawing.Color.White;
             this.dGVDienVienChinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVDienVienChinh.Location = new System.Drawing.Point(13, 233);
+            this.dGVDienVienChinh.Location = new System.Drawing.Point(13, 253);
             this.dGVDienVienChinh.Name = "dGVDienVienChinh";
             this.dGVDienVienChinh.RowHeadersWidth = 62;
             this.dGVDienVienChinh.RowTemplate.Height = 28;
-            this.dGVDienVienChinh.Size = new System.Drawing.Size(509, 106);
+            this.dGVDienVienChinh.Size = new System.Drawing.Size(509, 140);
             this.dGVDienVienChinh.TabIndex = 39;
-            this.dGVDienVienChinh.Click += new System.EventHandler(this.dGVDienVienChinh_Click);
+            this.dGVDienVienChinh.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDienVienChinh_CellDoubleClick);
             // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Image = global::GUI.Properties.Resources.DienVien;
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label10.Location = new System.Drawing.Point(15, 487);
+            this.label10.Location = new System.Drawing.Point(15, 571);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(129, 34);
@@ -211,7 +277,7 @@
             this.label13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Image = global::GUI.Properties.Resources.DienVien;
             this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label13.Location = new System.Drawing.Point(8, 342);
+            this.label13.Location = new System.Drawing.Point(6, 405);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(174, 25);
@@ -224,7 +290,7 @@
             this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Image = global::GUI.Properties.Resources.DienVien1;
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label12.Location = new System.Drawing.Point(8, 196);
+            this.label12.Location = new System.Drawing.Point(6, 196);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(190, 34);
@@ -257,6 +323,9 @@
             // 
             // gBThongTinPhim
             // 
+            this.gBThongTinPhim.Controls.Add(this.label2);
+            this.gBThongTinPhim.Controls.Add(this.pBThemHSX);
+            this.gBThongTinPhim.Controls.Add(this.cBHangSanXuatPhim);
             this.gBThongTinPhim.Controls.Add(this.txtDoTuoiXem);
             this.gBThongTinPhim.Controls.Add(this.pBAnhPhim);
             this.gBThongTinPhim.Controls.Add(this.cBTheLoai);
@@ -268,7 +337,6 @@
             this.gBThongTinPhim.Controls.Add(this.label8);
             this.gBThongTinPhim.Controls.Add(this.label7);
             this.gBThongTinPhim.Controls.Add(this.label6);
-            this.gBThongTinPhim.Controls.Add(this.txtHangSanXuat);
             this.gBThongTinPhim.Controls.Add(this.cBQuocGia);
             this.gBThongTinPhim.Controls.Add(this.txtThoiLuong);
             this.gBThongTinPhim.Controls.Add(this.label1);
@@ -278,10 +346,44 @@
             this.gBThongTinPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBThongTinPhim.Name = "gBThongTinPhim";
             this.gBThongTinPhim.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gBThongTinPhim.Size = new System.Drawing.Size(619, 714);
+            this.gBThongTinPhim.Size = new System.Drawing.Size(619, 746);
             this.gBThongTinPhim.TabIndex = 18;
             this.gBThongTinPhim.TabStop = false;
             this.gBThongTinPhim.Text = "THÔNG TIN PHIM";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(549, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 25);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "phút";
+            // 
+            // pBThemHSX
+            // 
+            this.pBThemHSX.Image = global::GUI.Properties.Resources.add_24px;
+            this.pBThemHSX.Location = new System.Drawing.Point(570, 230);
+            this.pBThemHSX.Name = "pBThemHSX";
+            this.pBThemHSX.Size = new System.Drawing.Size(38, 30);
+            this.pBThemHSX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBThemHSX.TabIndex = 39;
+            this.pBThemHSX.TabStop = false;
+            this.pBThemHSX.Click += new System.EventHandler(this.pBThemHSX_Click);
+            // 
+            // cBHangSanXuatPhim
+            // 
+            this.cBHangSanXuatPhim.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cBHangSanXuatPhim.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cBHangSanXuatPhim.BackColor = System.Drawing.Color.White;
+            this.cBHangSanXuatPhim.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBHangSanXuatPhim.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBHangSanXuatPhim.FormattingEnabled = true;
+            this.cBHangSanXuatPhim.Location = new System.Drawing.Point(227, 229);
+            this.cBHangSanXuatPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBHangSanXuatPhim.Name = "cBHangSanXuatPhim";
+            this.cBHangSanXuatPhim.Size = new System.Drawing.Size(337, 31);
+            this.cBHangSanXuatPhim.TabIndex = 38;
             // 
             // txtDoTuoiXem
             // 
@@ -296,7 +398,7 @@
             // 
             this.pBAnhPhim.BackColor = System.Drawing.Color.White;
             this.pBAnhPhim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBAnhPhim.Location = new System.Drawing.Point(286, 487);
+            this.pBAnhPhim.Location = new System.Drawing.Point(29, 529);
             this.pBAnhPhim.Name = "pBAnhPhim";
             this.pBAnhPhim.Size = new System.Drawing.Size(187, 198);
             this.pBAnhPhim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -328,7 +430,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Image = global::GUI.Properties.Resources.NhapXuat;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(52, 487);
+            this.label5.Location = new System.Drawing.Point(39, 495);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 31);
@@ -415,6 +517,8 @@
             // 
             // cBQuocGia
             // 
+            this.cBQuocGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cBQuocGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cBQuocGia.BackColor = System.Drawing.Color.White;
             this.cBQuocGia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cBQuocGia.DropDownHeight = 300;
@@ -602,7 +706,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1219, 875);
+            this.ClientSize = new System.Drawing.Size(1219, 930);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -616,6 +720,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dGVDienVienChinh)).EndInit();
             this.gBThongTinPhim.ResumeLayout(false);
             this.gBThongTinPhim.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBThemHSX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -623,7 +728,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtHangSanXuat;
         private System.Windows.Forms.TextBox txtTenPhim;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
@@ -654,5 +758,12 @@
         private System.Windows.Forms.DataGridView dGVDaoDien;
         private System.Windows.Forms.DataGridView dGVDienVienPhu;
         private System.Windows.Forms.DataGridView dGVDienVienChinh;
+        private System.Windows.Forms.ComboBox cBDaoDien;
+        private System.Windows.Forms.ComboBox cBDienVienChinh;
+        private System.Windows.Forms.ComboBox cBDienVienPhu;
+        private System.Windows.Forms.ComboBox cBHangSanXuatPhim;
+        private System.Windows.Forms.Button btnThemMoi;
+        private System.Windows.Forms.PictureBox pBThemHSX;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -101,8 +101,9 @@ Create table LICH_CHIEU(
 	MaPhim varchar(6) foreign key(MaPhim) references PHIM,
 	MaPhongChieu varchar(6) foreign key(MaPhongChieu) references PHONG_CHIEU,
 	MaKhungGioChieu varchar(8) foreign key(MaKhungGioChieu) references KHUNG_GIO_CHIEU,
+	NgayChieu date,
 	TrangThai bit,
-	constraint pk_LichChieu primary key(MaPhim,MaPhongChieu,MaKhungGioChieu)
+	constraint pk_LichChieu primary key(MaPhim,MaPhongChieu,MaKhungGioChieu,NgayChieu)
 )
 go
 --Bang Ca Lam Viec

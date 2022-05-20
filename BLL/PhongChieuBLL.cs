@@ -73,5 +73,17 @@ namespace BLL
             return null;
         }
         
+        public PhongChieuDTO GetPhongChieuByMaPC(string MaPhongChieu)
+        {
+            foreach (PhongChieuDTO i in PhongChieuDAL.Instance.GetAllPhongChieu())
+            {
+                if (i.MaPhongChieu == MaPhongChieu)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+        
     }
 }
