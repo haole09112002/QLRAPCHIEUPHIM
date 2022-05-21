@@ -201,11 +201,11 @@ insert into CHUC_VU(TenChucVu) values (N'Quản trị viên');
 ----- Đã xong
 ------18.Nhân viên ----- NV0001
 insert into NHAN_VIEN(TenNhanVien,NgaySinh,GioiTinh,DiaChi,SoDienThoai,CCCD,TenTaiKhoan,MatKhau,MaChinhSach,MaChucVu)--987654321
-Values (N'Trần Trung Hiếu','2002-03-01','0',N'Quảng Trị','0982782647','9283920102392','hieuqlvt','6ebe76c9fb411be97b3b0d48b791a7c9','CS0001','CV0001');
+Values (N'Trần Trung Hiếu','2002-03-01','0',N'Quảng Trị','0982782647','9283920102392','hieuqlvt','987654321','CS0001','CV0001');
 insert into NHAN_VIEN(TenNhanVien,NgaySinh,GioiTinh,DiaChi,SoDienThoai,CCCD,TenTaiKhoan,MatKhau,MaChinhSach,MaChucVu)--123456
-Values (N'Lê Văn Hào','2002-02-22','0',N'Huế','0827582932','9280000002392','admin','e10adc3949ba59abbe56e057f20f883e','CS0003','CV0003');
+Values (N'Lê Văn Hào','2002-02-22','0',N'Huế','0827582932','9280000002392','admin','123456','CS0003','CV0003');
 insert into NHAN_VIEN(TenNhanVien,NgaySinh,GioiTinh,DiaChi,SoDienThoai,CCCD,TenTaiKhoan,MatKhau,MaChinhSach,MaChucVu)--123456789
-Values (N'Phạm Khắc Luận','2002-04-20','0',N'Huế','0982792837','9280009918892','luanqlp','25f9e794323b453885f5181f1b624d0b','CS0002','CV0002');
+Values (N'Phạm Khắc Luận','2002-04-20','0',N'Huế','0982792837','9280009918892','luanqlp','123456789','CS0002','CV0002');
 -----Đã xong
 ------19. Chi tiết ca làm việc
 insert into CHI_TIET_CA_LAM_VIEC(MaNhanVien,MaCa,TrangThai) values ('NV0001','CLV001','1');

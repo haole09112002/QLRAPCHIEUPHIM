@@ -175,6 +175,7 @@
             this.cbbSapXep.Name = "cbbSapXep";
             this.cbbSapXep.Size = new System.Drawing.Size(142, 25);
             this.cbbSapXep.TabIndex = 34;
+            this.cbbSapXep.SelectedIndexChanged += new System.EventHandler(this.cbbSapXep_SelectedIndexChanged);
             // 
             // textBox1
             // 

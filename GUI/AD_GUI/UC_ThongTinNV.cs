@@ -41,37 +41,46 @@ namespace GUI.AD_GUI
 
         private void btnXemCT_Click(object sender, EventArgs e)
         {
-            if (dgvDSNhanVien.SelectedRows.Count==0) { MessageBox.Show("Vui long chon doi  tuong"); }
+            if (dgvDSNhanVien.SelectedRows.Count == 0) { MessageBox.Show("Vui lòng chọn 1 đối tượng"); }
             else if(dgvDSNhanVien.SelectedRows.Count==1)
             {
                 frmThemNhanVien f = new frmThemNhanVien(dgvDSNhanVien.SelectedRows[0].Cells["maNhanVien"].Value.ToString());
                 f.d = new frmThemNhanVien.MyDel(loadDGVDSNhanVien);
                 f.ShowDialog();
             }
-            else if (dgvDSNhanVien.SelectedRows.Count > 1) { MessageBox.Show("Ban chi co the chon 1  doi tuong"); }
+            else if (dgvDSNhanVien.SelectedRows.Count > 1) { MessageBox.Show("Bạn chỉ có thể chọn 1 đối tượng"); }
         }
 
         private void btnSapXep_Click(object sender, EventArgs e)
         {
             
         }
-        private void cbSapXep_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbbSapXep_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Sort();
+            {
+                if (cbbSapXep.SelectedIndex == 0)
+                {
+                    this.dgvDSNhanVien.Sort(this.dgvDSNhanVien.Columns["TenNhanVien"], ListSortDirection.Ascending);
+                }
+                else
+                {
+                    this.dgvDSNhanVien.Sort(this.dgvDSNhanVien.Columns["MaNhanVien"], ListSortDirection.Ascending);
+                }
+            }
         }
-        private void Sort()
-        {
-            //if (cbbSapXep.SelectedIndex >= 0)
-            //{
-            //    List<string> now = new List<string>();
-            //    string dkSapXep = cbbSapXep.SelectedItem.ToString();
-            //    foreach (DataGridViewRow row in dgvDSNhanVien.Rows)
-            //    {
-            //        now.Add(row.Cells["MaNhanVien"].Value.ToString());
-            //    }
-            //    dgvDSNhanVien.DataSource = NhanVienBLL.Instance.SortNhanVien(NhanVienBLL.Instance.GetNhanVienViewDGV(now), dkSapXep);
-            //    loadDGVDSNhanVien(dgvDSNhanVien.Rows[0].Cells["MaNhanVien"].Value.ToString());
-            //}
-        }
+        //private void Sort()
+        //{
+        //    if (cbbSapXep.SelectedIndex >= 0)
+        //    {
+        //        List<string> now = new List<string>();
+        //        string dkSapXep = cbbSapXep.SelectedItem.ToString();
+        //        foreach (DataGridViewRow row in dgvDSNhanVien.Rows)
+        //        {
+        //            now.Add(row.Cells["MaNhanVien"].Value.ToString());
+        //        }
+        //        dgvDSNhanVien.DataSource = NhanVienBLL.Instance.SortNhanVien(NhanVienBLL.Instance.GetNhanVienViewDGV(now), dkSapXep);
+        //        loadDGVDSNhanVien(dgvDSNhanVien.Rows[0].Cells["MaNhanVien"].Value.ToString());
+        //    }
+        //}
     }
 }

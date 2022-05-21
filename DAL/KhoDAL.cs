@@ -44,8 +44,13 @@ namespace DAL
             {
                 MaKho = i["MaKho"].ToString(),
                 MaLoaiKho = i["MaLoaiKho"].ToString(),
-                TenKho = i["TenKho"].ToString(),
+                TenKho = i["TenKho"].ToString()
             };
+        }
+        public DataTable TimTheoMa(string maKho)
+        {
+            string query = "SELECT * FROM KHO WHERE MaKho LIKE '{maKho}%'";
+            return DBHelper.Instance.ExcuteQuery(query);
         }
     }
 }

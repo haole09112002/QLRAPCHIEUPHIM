@@ -88,7 +88,22 @@ namespace DAL
             };
             DBHelper.Instance.ExcuteNonQuery(query, parameter);
         }
-
+        public object KiemTraTenTK(NhanVienDTO nhanVien)
+        {
+            string query =String.Format("select  count(NHAN_VIEN.TenTaiKhoan) from NHAN_VIEN where TenTaiKhoan = '{0}'",nhanVien.TenTaiKhoan);
+           
+            return DBHelper.Instance.ExcuteScalar(query);
+        }
+        public object KiemTraSoDienThoai(NhanVienDTO nhanVien )
+        {
+            string query = String.Format("select  count(NHAN_VIEN.SoDienThoai) from NHAN_VIEN where SoDienThoai = '{0}'", nhanVien.SoDienThoai);
+            return DBHelper.Instance.ExcuteScalar(query);
+        }
+        public object KiemTraCCCD(NhanVienDTO nhanVien)
+        {
+            string query = String.Format("select  count(NHAN_VIEN.CCCD) from NHAN_VIEN where CCCD = '{0}'", nhanVien.CCCD1);
+            return DBHelper.Instance.ExcuteScalar(query);
+        }
         public int KiemTraDangNhap(string tenTaiKhoan, string matKhau)
         {
            

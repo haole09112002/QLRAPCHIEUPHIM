@@ -40,6 +40,7 @@ namespace BLL
         }
         public NhanVienViewDTO GetNhanVienViewByNhanVienDTO(NhanVienDTO nhanVien)
         {
+            string gioiTinh = "";
             string tenChucVu = "";
             foreach (ChucVuDTO i in ChucVuDAL.Instance.GetAllChucVu())
             {
@@ -48,12 +49,14 @@ namespace BLL
                     tenChucVu = i.TenChucVu;
                 }
             }
+            if (nhanVien.GioiTinh == true) gioiTinh = "Nam";
+            else gioiTinh = "Nữ";
             return new NhanVienViewDTO
             {
                 MaNhanVien = nhanVien.MaNhanVien,
                 TenNhanVien = nhanVien.TenNhanVien,
                 NgaySinh = nhanVien.NgaySinh.ToString(),
-                GioiTinh = nhanVien.GioiTinh,
+                GioiTinh = gioiTinh,
                 SoDienThoai = nhanVien.SoDienThoai,
                 MaChinhSach = nhanVien.MaChinhSach,
                 TenChucVu = tenChucVu
@@ -68,24 +71,37 @@ namespace BLL
             }
             return data;
         }
-        public NhanVienDTO GetNhanVienByMaNhanVien(string maNhanVien)
+        //public NhanVienDTO GetNhanVienByMaNhanVien(string maNhanVien)
+        //{
+        //    List<NhanVienDTO> data = GetAllNhanVien();
+        //    foreach(NhanVienDTO i in data)
+        //    {
+        //        if (i.MaNhanVien == maNhanVien)
+        //        {
+        //            return i;
+        //        }
+        //    }
+        //    return null;
+        //}
+        public NhanVienDTO GetNVByMaNV(string MaNV)
         {
-            List<NhanVienDTO> data = GetAllNhanVien();
-            foreach(NhanVienDTO i in data)
+            NhanVienDTO nhanVien = null;
+            foreach (NhanVienDTO i in NhanVienDAL.Instance.GetAllNhanVien())
             {
-                if (i.MaNhanVien == maNhanVien)
+                if (i.MaNhanVien == MaNV)
                 {
-                    return i;
+                    nhanVien = i;
+                    break;
                 }
             }
-            return null;
+            return nhanVien;
         }
         public List<NhanVienDTO> GetNhanVienDGV(List<string> maNhanVien)
         {
             List<NhanVienDTO> data = new List<NhanVienDTO>();
             foreach (string i in maNhanVien)
             {
-                data.Add(GetNhanVienByMaNhanVien(i));
+                data.Add(GetNVByMaNV(i));
             }
             return data;
         }
@@ -111,7 +127,7 @@ namespace BLL
             }
             return add;
         }
-        public void AddUpdateNhaCungCap(NhanVienDTO nhanVien)
+        public void AddUpdateNhanVien(NhanVienDTO nhanVien)
         {
             if (CheckAddUpdateNhanVien(nhanVien))
             {
@@ -157,6 +173,57 @@ namespace BLL
         //    return data;
         //}
 
+        public string KiemTraDuLieu(NhanVienDTO nhanVien)
+        {
+
+            if (nhanVien.TenNhanVien == "")
+                return "Họ và Tên còn trống!";
+            if (nhanVien.DiaChi == "")
+                return "Địa chỉ còn trống!";
+            if (nhanVien.SoDienThoai == "")
+                return "Số Điện Thoai còn trống!";
+            if (nhanVien.MaChucVu == "")
+                return "Chức Vụ còn trống!";
+            if (nhanVien.CCCD1 == "")
+                return "CCCD còn trống!";
+            if (nhanVien.MaChinhSach == "")
+                return "Chính Sách  còn trống!";
+            if (nhanVien.TenTaiKhoan == "")
+                return "Tên Tài Khoản còn trống!";
+            if (nhanVien.MatKhau == "")
+                return "Mật Khẩu còn trống!";
+            if (!CheckAddUpdateNhanVien(nhanVien))
+            {
+                if (nhanVien.TenTaiKhoan != GetNVByMaNV(nhanVien.MaNhanVien).TenTaiKhoan && (int)NhanVienDAL.Instance.KiemTraTenTK(nhanVien) > 0)
+                {
+                    return "Tên Tài Khoản đã tồn tại!";
+                }
+                if (nhanVien.SoDienThoai != GetNVByMaNV(nhanVien.MaNhanVien).SoDienThoai && (int)NhanVienDAL.Instance.KiemTraSoDienThoai(nhanVien) > 0)
+                {
+                    return "Số điện thoại đã tồn tại!";
+                }
+                if (nhanVien.CCCD1 != GetNVByMaNV(nhanVien.MaNhanVien).CCCD1 && (int)NhanVienDAL.Instance.KiemTraCCCD(nhanVien) > 0)
+                {
+                    return "Số CCCD đã tồn tại!";
+                }
+            }
+            else
+            {
+                if ((int)NhanVienDAL.Instance.KiemTraTenTK(nhanVien) >= 1)
+                {
+                    return "Tên Tài Khoản đã tồn tại!";
+                }
+                if ((int)NhanVienDAL.Instance.KiemTraSoDienThoai(nhanVien) >= 1)
+                {
+                    return "Số điện thoại đã tồn tại!";
+                }
+                if ((int)NhanVienDAL.Instance.KiemTraCCCD(nhanVien) >= 1)
+                {
+                    return "Số CCCD đã tồn tại!";
+                }
+            }
+            return null;
+        }
         public int KiemTraDangNhap(string tenTaiKhoan, string matKhau)
         {
             return NhanVienDAL.Instance.KiemTraDangNhap(tenTaiKhoan, MD5(matKhau));
