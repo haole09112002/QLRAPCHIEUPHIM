@@ -164,3 +164,40 @@ begin
         select 0 as code
     else select -1 as code
 end
+--- them nhan vien
+go
+create proc themnhanvien
+
+@TenNhanVien nvarchar(30),@NgaySinh datetime,
+	@GioiTinh bit,
+	@DiaChi nvarchar(50),
+	@SoDienThoai varchar(15),
+	@CCCD varchar(20),
+	@TenTaiKhoan varchar(30),
+	@MatKhau varchar(32),
+	@MaChinhSach varchar(6) ,
+	@MaChucVu varchar(6) 
+	as 
+	begin 
+	insert into NHAN_VIEN(TenNhanVien,NgaySinh,GioiTinh,DiaChi,SoDienThoai,CCCD,TenTaiKhoan,MatKhau,MaChinhSach,MaChucVu)--987654321
+Values (@TenNhanVien,@NgaySinh,@GioiTinh,@DiaChi,@SoDienThoai,@CCCD,@TenTaiKhoan,@MatKhau,@MaChinhSach,@MaChucVu);
+end
+---cap nhat nhan vien
+go
+create proc CapNhatNhanVien
+    @MaNhanVien varchar(6),
+    @TenNhanVien nvarchar(30),
+    @NgaySinh datetime,
+	@GioiTinh bit,
+	@DiaChi nvarchar(50),
+	@SoDienThoai varchar(15),
+	@CCCD varchar(20),
+	@TenTaiKhoan varchar(30),
+	@MatKhau varchar(32),
+	@MaChinhSach varchar(6) ,
+	@MaChucVu varchar(6) 
+	as 
+	begin 
+	update  NHAN_VIEN set TenNhanVien=@TenNhanVien,GioiTinh=@GioiTinh,NgaySinh=@NgaySinh,DiaChi=@DiaChi,SoDienThoai=@SoDienThoai,CCCD=@CCCD,TenTaiKhoan=@TenTaiKhoan,MatKhau=@MatKhau,MaChinhSach=@MaChinhSach,MaChucVu=@MaChucVu
+where MaNhanVien=@MaNhanVien
+end

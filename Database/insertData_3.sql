@@ -193,12 +193,9 @@ insert into NGAY_LAM_VIEC(NgayLamViec,MaCa) values('2022-04-25','CLV004');
 insert into NGAY_LAM_VIEC(NgayLamViec,MaCa) values('2022-05-25','CLV005');
 ---- Đã xong
 ------16. Chính sách ------- CS0001
-insert into CHINH_SACH(HeSoLuong,BHXH,TienThuong) values ('1','XH001020201','200000');
-insert into CHINH_SACH(HeSoLuong,BHXH,TienThuong) values ('2','XH001220311','300000');
-insert into CHINH_SACH(HeSoLuong,BHXH,TienThuong) values ('3','XH998820201','400000');
-insert into CHINH_SACH(HeSoLuong,BHXH,TienThuong) values ('4','XH232820201','500000');
-insert into CHINH_SACH(HeSoLuong,BHXH,TienThuong) values ('5','XH910220201','600000');
-insert into CHINH_SACH(HeSoLuong,BHXH,TienThuong) values ('6','XH998820220','700000');
+insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Kha','1','6 thang','200000');
+insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('XuatSac','2','2 nam','300000');
+insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Gioi','3','1 nam','400000');
 ----- Đã xong
 -----17.Chức vụ ------ CV0001
 insert into CHUC_VU(TenChucVu) values (N'Quản lý phim');

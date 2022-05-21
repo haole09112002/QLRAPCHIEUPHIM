@@ -29,14 +29,23 @@ namespace BLL
             List<ThucAnViewDTO> data = new List<ThucAnViewDTO>();
             foreach (ThucAnDTO i in ThucAnDAL.Instance.GetALLThucAn())
             {
+                double GiaTienThucAn = 0;
                 if (i.TenThucAn.Contains(txt))
                 {
+                    foreach (HopDongThucAnDTO k in HopDongThucAnDAL.Instance.GetAllHopDongThucAn())
+                    {
+                        if (k.MaThucAn == i.MaThucAn)
+                        {
+                            GiaTienThucAn = k.GiaTien;
+                        }
+                    }
                     data.Add(new ThucAnViewDTO
                     {
                         MaThucAn = i.MaThucAn,
                         TenThucAn = i.TenThucAn,
                         DonViTinh = i.DonViTinh,
                         SoLuong = i.SoLuong,
+                        GiaTien = GiaTienThucAn
                     });
                 }
             }
@@ -88,6 +97,10 @@ namespace BLL
         public bool CompareSoLuong(object o1, object o2)
         {
             return ((ThucAnViewDTO)o1).SoLuong > ((ThucAnViewDTO)o2).SoLuong;
+        }
+        public bool CompareGiaTien(object o1, object o2)
+        {
+            return ((ThucAnViewDTO)o1).GiaTien > ((ThucAnViewDTO)o2).GiaTien;
         }
     }
 }
