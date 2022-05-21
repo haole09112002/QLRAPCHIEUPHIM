@@ -68,7 +68,7 @@
             this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = global::GUI.Properties.Resources.trash_can_26px;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(411, 398);
+            this.btnXoa.Location = new System.Drawing.Point(484, 396);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(92, 29);
@@ -84,7 +84,7 @@
             this.btnXemCT.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemCT.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnXemCT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXemCT.Location = new System.Drawing.Point(32, 398);
+            this.btnXemCT.Location = new System.Drawing.Point(99, 398);
             this.btnXemCT.Name = "btnXemCT";
             this.btnXemCT.Size = new System.Drawing.Size(111, 29);
             this.btnXemCT.TabIndex = 39;
@@ -116,7 +116,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.btnThem.Location = new System.Drawing.Point(241, 398);
+            this.btnThem.Location = new System.Drawing.Point(300, 396);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(88, 29);
