@@ -84,10 +84,13 @@ insert into THUC_AN(TenThucAn) values (N'Oshi');
 --- Đã xong
 -----7. Vật tư ---- VT0001
 insert into VAT_TU(TenVatTu) values (N'Đèn sáng');
-insert into VAT_TU(TenVatTu) values (N'Ghế');
+insert into VAT_TU(TenVatTu) values (N'Ghế đơn');
 insert into VAT_TU(TenVatTu) values (N'Điều hòa');
 insert into VAT_TU(TenVatTu) values (N'Máy chiếu');
 insert into VAT_TU(TenVatTu) values (N'Loa');
+insert into VAT_TU(TenVatTu) values (N'Ghế đôi');
+insert into VAT_TU(TenVatTu) values (N'Màn chiếu 2D');
+insert into VAT_TU(TenVatTu) values (N'Màn chiếu 3D');
 --- Đã xong
 -----8. Phim------ P00001
 insert into PHIM (TenPhim,AnhPhim,ThoiLuong,QuocGia,NamSanXuat,MaHangSanXuatPhim ,DoTuoiXem,MaTheLoai ,NoiDung)
@@ -195,17 +198,17 @@ insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('XuatSac'
 insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Gioi','3','1 nam','400000');
 ----- Đã xong
 -----17.Chức vụ ------ CV0001
-insert into CHUC_VU(TenChucVu) values (N'Quản lý vật tư');
 insert into CHUC_VU(TenChucVu) values (N'Quản lý phim');
+insert into CHUC_VU(TenChucVu) values (N'Quản lý vật tư');
 insert into CHUC_VU(TenChucVu) values (N'Quản trị viên');
 ----- Đã xong
 ------18.Nhân viên ----- NV0001
-insert into NHAN_VIEN(TenNhanVien,NgaySinh,GioiTinh,DiaChi,SoDienThoai,CCCD,TenTaiKhoan,MatKhau,MaChinhSach,MaChucVu)--987654321
-Values (N'Trần Trung Hiếu','2002-03-01','0',N'Quảng Trị','0982782647','9283920102392','hieuqlvt','987654321','CS0001','CV0001');
-insert into NHAN_VIEN(TenNhanVien,NgaySinh,GioiTinh,DiaChi,SoDienThoai,CCCD,TenTaiKhoan,MatKhau,MaChinhSach,MaChucVu)--123456
-Values (N'Lê Văn Hào','2002-02-22','0',N'Huế','0827582932','9280000002392','admin','123456','CS0003','CV0003');
 insert into NHAN_VIEN(TenNhanVien,NgaySinh,GioiTinh,DiaChi,SoDienThoai,CCCD,TenTaiKhoan,MatKhau,MaChinhSach,MaChucVu)--123456789
-Values (N'Phạm Khắc Luận','2002-04-20','0',N'Huế','0982792837','9280009918892','luanqlp','123456789','CS0002','CV0002');
+Values (N'Phạm Khắc Luận','2002-04-20','0',N'Huế','0982792837','9280009918892','luanqlp','25f9e794323b453885f5181f1b624d0b','CS0002','CV0001');
+insert into NHAN_VIEN(TenNhanVien,NgaySinh,GioiTinh,DiaChi,SoDienThoai,CCCD,TenTaiKhoan,MatKhau,MaChinhSach,MaChucVu)--987654321
+Values (N'Trần Trung Hiếu','2002-03-01','0',N'Quảng Trị','0982782647','9283920102392','hieuqlvt','6ebe76c9fb411be97b3b0d48b791a7c9','CS0002','CV0002');
+insert into NHAN_VIEN(TenNhanVien,NgaySinh,GioiTinh,DiaChi,SoDienThoai,CCCD,TenTaiKhoan,MatKhau,MaChinhSach,MaChucVu)--123456
+Values (N'Lê Văn Hào','2002-02-22','0',N'Huế','0827582932','9280000002392','admin','e10adc3949ba59abbe56e057f20f883e','CS0003','CV0003');
 -----Đã xong
 ------19. Chi tiết ca làm việc
 insert into CHI_TIET_CA_LAM_VIEC(MaNhanVien,MaCa,TrangThai) values ('NV0001','CLV001','1');
@@ -219,47 +222,46 @@ insert into CHI_TIET_CA_LAM_VIEC(MaNhanVien,MaCa,TrangThai) values ('NV0003','CL
 insert into CHI_TIET_CA_LAM_VIEC(MaNhanVien,MaCa,TrangThai) values ('NV0003','CLV005','1');
 ------ Đã xong
 ------20. Loại kho -------- LK001
-insert into LOAI_KHO(TenLoaiKho) values (N'Thức ăn nhanh');
-insert into LOAI_KHO(TenLoaiKho) values (N'Vật tư');
 insert into LOAI_KHO(TenLoaiKho) values (N'Phim');
+insert into LOAI_KHO(TenLoaiKho) values (N'Vật tư');
+insert into LOAI_KHO(TenLoaiKho) values (N'Thức ăn nhanh');
 ----- Đã xong
 ------21. Kho -------- K0001
 insert into KHO(MaLoaiKho,TenKho) values ('LK001',N'Kho số 1');
 insert into KHO(MaLoaiKho,TenKho) values ('LK002',N'Kho số 2');
-insert into KHO(MaLoaiKho,TenKho) values ('LK002',N'Kho số 3');
-insert into KHO(MaLoaiKho,TenKho) values ('LK003',N'Kho số 4');
+insert into KHO(MaLoaiKho,TenKho) values ('LK003',N'Kho số 3');
 ----- Đã xong
 -----22. Chi tiết kho phim
-insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0004','P00001',N'Bộ','1');
-insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0004','P00002',N'Bộ','2');
-insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0004','P00003',N'Bộ','1');
-insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0004','P00004',N'Bộ','1');
-insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0004','P00005',N'Bộ','2');
-insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0004','P00006',N'Bộ','1');
-insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0004','P00007',N'Bộ','2');
-insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0004','P00008',N'Bộ','1');
-insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0004','P00009',N'Bộ','2');
-insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0004','P00010',N'Bộ','1');
-insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0004','P00011',N'Bộ','3');
-insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0004','P00012',N'Bộ','5');
+insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00001',N'Đĩa','1');
+insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00002',N'Đĩa','2');
+insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00003',N'Đĩa','1');
+insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00004',N'Đĩa','1');
+insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00005',N'Đĩa','2');
+insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00006',N'Đĩa','1');
+insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00007',N'Đĩa','2');
+insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00008',N'Đĩa','1');
+insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00009',N'Đĩa','2');
+insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00010',N'Đĩa','1');
+insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00011',N'Đĩa','3');
+insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00012',N'Đĩa','5');
 -----Đã xong
 ----23. Chi tiết kho vật tư
 insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0002','VT0001',N'Cái','12');
 insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0002','VT0002',N'Cái','10');
 insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0002','VT0003',N'Cái','5');
 insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0002','VT0004',N'Cái','6');
-insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0003','VT0001',N'Cái','10');
-insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0003','VT0002',N'Cái','11');
-insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0003','VT0003',N'Cái','5');
-insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0003','VT0005',N'Cái','7');
+insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0002','VT0005',N'Cái','7');
+insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0002','VT0006',N'Cái','2');
+insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0002','VT0007',N'Cái','1');
+insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values('K0002','VT0008',N'Cái','1');
 ---- Đã xong
 ----24. Chi tiết kho thức ăn
-insert into CHI_TIET_KHO_THUC_AN(MaKho,MaThucAn,DonViTinh,SoLuongSP) values('K0001','TA0001',N'Gói','100');
-insert into CHI_TIET_KHO_THUC_AN(MaKho,MaThucAn,DonViTinh,SoLuongSP) values('K0001','TA0002',N'Thùng','20');
-insert into CHI_TIET_KHO_THUC_AN(MaKho,MaThucAn,DonViTinh,SoLuongSP) values('K0001','TA0003',N'Gói','200');
-insert into CHI_TIET_KHO_THUC_AN(MaKho,MaThucAn,DonViTinh,SoLuongSP) values('K0001','TA0004',N'Thùng','200');
-insert into CHI_TIET_KHO_THUC_AN(MaKho,MaThucAn,DonViTinh,SoLuongSP) values('K0001','TA0005',N'Thùng','200');
-insert into CHI_TIET_KHO_THUC_AN(MaKho,MaThucAn,DonViTinh,SoLuongSP) values('K0001','TA0006',N'Gói','200');
+insert into CHI_TIET_KHO_THUC_AN(MaKho,MaThucAn,DonViTinh,SoLuongSP) values('K0003','TA0001',N'Gói','100');
+insert into CHI_TIET_KHO_THUC_AN(MaKho,MaThucAn,DonViTinh,SoLuongSP) values('K0003','TA0002',N'Thùng','20');
+insert into CHI_TIET_KHO_THUC_AN(MaKho,MaThucAn,DonViTinh,SoLuongSP) values('K0003','TA0003',N'Gói','200');
+insert into CHI_TIET_KHO_THUC_AN(MaKho,MaThucAn,DonViTinh,SoLuongSP) values('K0003','TA0004',N'Thùng','200');
+insert into CHI_TIET_KHO_THUC_AN(MaKho,MaThucAn,DonViTinh,SoLuongSP) values('K0003','TA0005',N'Thùng','200');
+insert into CHI_TIET_KHO_THUC_AN(MaKho,MaThucAn,DonViTinh,SoLuongSP) values('K0003','TA0006',N'Gói','200');
 ----- Đã xong
 ---25. Loại đề xuất------LDX01
 insert into LOAI_DE_XUAT(TenLoaiDeXuat) values (N'Đề xuất phim');
@@ -268,47 +270,47 @@ insert into LOAI_DE_XUAT(TenLoaiDeXuat) values (N'Đề xuất thức ăn nhanh'
 ---- Đã xong
 ---26. Đề xuất----DX0001
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-01-02','LDX02');
+values ('NV0002','2022-01-02','LDX02');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-01-02','LDX02');
+values ('NV0002','2022-01-02','LDX02');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-01-02','LDX02');
+values ('NV0002','2022-01-02','LDX02');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-02-02','LDX02');
+values ('NV0002','2022-02-02','LDX02');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-03-02','LDX02');
+values ('NV0002','2022-03-02','LDX02');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-03-02','LDX02');
+values ('NV0002','2022-03-02','LDX02');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-01-02','LDX02');
+values ('NV0002','2022-01-02','LDX02');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0002','2022-01-02','LDX01');
+values ('NV0001','2022-01-02','LDX01');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0002','2022-01-02','LDX01');
+values ('NV0001','2022-01-02','LDX01');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0002','2022-01-02','LDX01');
+values ('NV0001','2022-01-02','LDX01');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0002','2022-02-02','LDX01');
+values ('NV0001','2022-02-02','LDX01');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0003','2022-04-02','LDX01');
+values ('NV0001','2022-04-02','LDX01');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0003','2022-05-02','LDX01');
+values ('NV0001','2022-05-02','LDX01');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0003','2022-06-02','LDX01');
+values ('NV0001','2022-06-02','LDX01');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-06-02','LDX03');
+values ('NV0002','2022-06-02','LDX03');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-06-02','LDX03');
+values ('NV0002','2022-06-02','LDX03');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-07-02','LDX03');
+values ('NV0002','2022-07-02','LDX03');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-08-02','LDX03');
+values ('NV0002','2022-08-02','LDX03');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-09-02','LDX03');
+values ('NV0002','2022-09-02','LDX03');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-06-02','LDX03');
+values ('NV0002','2022-06-02','LDX03');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-06-02','LDX03');
+values ('NV0002','2022-06-02','LDX03');
 ---- Đã xong
 ----27. Chi tiết đề xuất phim
 insert into CHI_TIET_DE_XUAT_PHIM(MaDeXuat,MaPhim,Noidung,SoLuong,DonViTinh,TinhTrang)
@@ -368,19 +370,19 @@ insert into LOAI_PHIEU(TenLoaiPhieu) values (N'Phiếu xuất');
 ----- Đã xong
 -----31. Phiếu--------PH0001
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP001','2022-01-02','K0001','NV0001');
+values ('LP001','2022-01-02','K0003','NV0002');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP002','2022-01-02','K0001','NV0001');
+values ('LP002','2022-01-02','K0003','NV0002');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP002','2022-01-03','K0001','NV0001');
+values ('LP002','2022-01-03','K0003','NV0002');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP002','2022-01-04','K0001','NV0001');
+values ('LP002','2022-01-04','K0003','NV0002');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP002','2022-01-05','K0001','NV0001');
+values ('LP002','2022-01-05','K0003','NV0002');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP001','2022-01-03','K0001','NV0001');
+values ('LP001','2022-01-03','K0003','NV0002');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP001','2022-01-04','K0002','NV0001');
+values ('LP001','2022-01-04','K0002','NV0002');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
 values ('LP001','2022-01-05','K0001','NV0001');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
@@ -392,23 +394,23 @@ values ('LP001','2022-01-08','K0001','NV0001');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
 values ('LP001','2022-01-09','K0001','NV0001');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu, MaKho,MaNhanVien)
-values ('LP001','2022-01-07','K0003','NV0001');
+values ('LP001','2022-01-07','K0003','NV0002');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP001','2022-01-08','K0004','NV0003');
+values ('LP001','2022-01-08','K0001','NV0001');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP001','2022-01-09','K0004','NV0002');
+values ('LP001','2022-01-09','K0001','NV0001');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP001','2022-01-10','K0004','NV0003');
+values ('LP001','2022-01-10','K0001','NV0001');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP001','2022-01-11','K0004','NV0003');
+values ('LP001','2022-01-11','K0001','NV0001');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP002','2022-01-08','K0004','NV0003');
+values ('LP002','2022-01-08','K0001','NV0001');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP002','2022-01-09','K0004','NV0002');
+values ('LP002','2022-01-09','K0001','NV0001');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP002','2022-01-10','K0004','NV0002');
+values ('LP002','2022-01-10','K0001','NV0001');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
-values ('LP002','2022-01-11','K0004','NV0003');
+values ('LP002','2022-01-11','K0001','NV0001');
 ---- Đã xong
 -----32. Chi tiết phiếu phim
 insert into CHI_TIET_PHIEU_PHIM(MaPhieu,MaPhim,DonViTinh,SoLuong) values('PH0014','P00001',N'Bộ','1');

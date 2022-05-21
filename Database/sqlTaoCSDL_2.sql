@@ -379,7 +379,7 @@ Create table HOP_DONG_PHIM(
 )
 
 go
---Bang Chi Tiet Cung Cap Phong Chieu
+--Bang Chi Tiet Vat tu trong  Phong Chieu
 
 Create table CHI_TIET_PHONG_CHIEU(
 	MaPhongChieu varchar(6) foreign key(MaPhongChieu) references PHONG_CHIEU,
