@@ -16,13 +16,15 @@ namespace GUI.QLVT_GUI
     public partial class FrmCapNhatPhongChieuQLVT : Form
     {
         private List<ChiTietKhoVatTuView> dsVatTuTrongKho;
-        private List<ChiTietPhongChieuDTO> dsVatTuDaChon;
+        private List<ChiTietPhongChieuView> dsVatTuCoSan;
+        private List<ChiTietPhongChieuView> dsVatTuDaChon;
         private string maPhongChieu;
         public FrmCapNhatPhongChieuQLVT(string maPhongChieu)
         {
             this.maPhongChieu = maPhongChieu;
             dsVatTuTrongKho = ChiTietKhoVatTuBLL.Instance.GetAllChiTietKhoVatTuView();
-            dsVatTuDaChon = ChiTietPhongChieuBLL.Instance.GetAllVatTuByMaPhongChieu(maPhongChieu);
+            dsVatTuCoSan = ChiTietPhongChieuBLL.Instance.GetAllCTPhongChieuViewByMaPhongChieu(maPhongChieu);
+
             InitializeComponent();
             setGUI(this.maPhongChieu);
         }
@@ -55,10 +57,15 @@ namespace GUI.QLVT_GUI
             dgvListVatTuKho.DataSource = null;
             dgvListVatTuKho.DataSource = dsVatTuTrongKho;
         }
+        private void LoadDGVVatTuCoSan()
+        {
+            dgvVatTuCoSan.DataSource = null;
+            dgvVatTuCoSan.DataSource = dsVatTuCoSan;
+        }
         private void LoadDGVVatTuDaThem()
         {
-            dgvVatTuDaThem.DataSource = null;
-            dgvVatTuDaThem.DataSource = dsVatTuDaChon;
+            dgvVatTuDaChon.DataSource = null;
+            dgvVatTuDaChon.DataSource = dsVatTuDaChon;
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -95,23 +102,33 @@ namespace GUI.QLVT_GUI
                     SoLuongSP = Convert.ToInt32(numUpDowSoLuong.Value),
                     MaPhongChieu = maPhongChieu
                 };
-                ChiTietPhongChieuBLL.Instance.ThemChiTietPhongChieuToDSVatTuDaChon(pc,ref dsVatTuDaChon);
-                //bool daTonTai = false;
-                //foreach (ChiTietPhongChieuDTO i in dsVatTuDaChon)
-                //{
-                //    if (i.MaVatTu == pc.MaVatTu)
-                //    {
-                //        daTonTai = true;
-                //        i.SoLuongSP += pc.SoLuongSP;
-                //    }
-                //}
-                //if (!daTonTai)
-                //{
-                //    dsVatTuDaChon.Add(pc);
-                //}
+              //  ChiTietPhongChieuBLL.Instance.ThemChiTietPhongChieuTodsVatTuCoSan(pc,ref dsVatTuDaChon);
                 LoadDGVListVatTuKho();
                 LoadDGVVatTuDaThem();
             }    
+        }
+
+        private void dgvVatTuDaThem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvVatTuCoSan.SelectedRows.Count == 1)
+            {
+                string maVatTu = dgvVatTuCoSan.SelectedRows[0].Cells["MaVatTu"].Value.ToString();
+                ChiTietPhongChieuView pc = dsVatTuCoSan.Find(x => x.MaVatTu == maVatTu);
+                dsVatTuCoSan.Remove(pc);
+            }
+        }
+
+        private void dgvVatTuDaThem_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //if(dgvVatTuDaThem.SelectedRows.Count == 1)
+            //{
+            //    string maVatTu = dgvVatTuDaThem.SelectedRows[0].Cells["MaVatTu"].Value.ToString();
+            //    ChiTietPhongChieuView pc = dsVatTuCoSan.Find(x => x.MaVatTu == maVatTu);
+            //    txtMaVatTu.Text = maVatTu;
+            //    txtTenVatTu.Text = pc.TenVatTu;
+            //    cbDonViTinh.SelectedItem = pc.DonViTinh;
+            //    numUpDowSoLuong.Value = pc.SoLuong;
+            //}
         }
     }
 }

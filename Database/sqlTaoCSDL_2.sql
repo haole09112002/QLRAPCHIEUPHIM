@@ -387,19 +387,3 @@ Create table CHI_TIET_PHONG_CHIEU(
 	constraint pk_CTPhongChieu primary key(MaPhongChieu,MaVatTu)
 )
 go
-
-create table PHIEU_NHAP_VAT_TU_VAO_PHONG_CHIEU
-(
-	MaPhieuNhap varchar(6) primary key not null
-	MaPhongChieu varchar(6) foreign key(MaPhongChieu) references PHONG_CHIEU,
-	MaNhanVien varchar(6) foreign key(MaNhanVien) references NHAN_VIEN,
-	NgayLapPhieu date
-)
-create table CHI_TIET_PHIEU_NHAP_VT_VAO_PC
-(
-	MaPhongChieu varchar(6) foreign key(MaPhongChieu) references PHONG_CHIEU,
-	MaVatTu varchar(6) foreign key(MaVatTu) references VAT_TU,
-	DonViTinh nvarchar(30),
-	SoLuongSP int,
-	constraint pk_CTNhapVTVaoPhongChieu primary key(MaPhongChieu,MaVatTu)
-)
