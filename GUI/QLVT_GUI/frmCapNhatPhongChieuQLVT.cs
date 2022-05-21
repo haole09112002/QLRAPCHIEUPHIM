@@ -16,9 +16,10 @@ namespace GUI.QLVT_GUI
     public partial class FrmCapNhatPhongChieuQLVT : Form
     {
         private List<ChiTietKhoVatTuView> dsVatTuTrongKho;
-        private List<ChiTietPhongChieuView> dsVatTuCoSan;
-        private List<ChiTietPhongChieuView> dsVatTuDaChon;
+        private List<ChiTietPhongChieuView> dsVatTuCoSan;// = new List<ChiTietPhongChieuView>();
+        private List<ChiTietPhongChieuView> dsVatTuDaChon = new List<ChiTietPhongChieuView>();
         private string maPhongChieu;
+        private string maKho;
         public FrmCapNhatPhongChieuQLVT(string maPhongChieu)
         {
             this.maPhongChieu = maPhongChieu;
@@ -50,6 +51,7 @@ namespace GUI.QLVT_GUI
             }
             LoadDGVListVatTuKho();
             LoadDGVVatTuDaThem();
+            LoadDGVVatTuCoSan();
             
         }
         private void LoadDGVListVatTuKho()
@@ -77,6 +79,7 @@ namespace GUI.QLVT_GUI
             if(dgvListVatTuKho.SelectedRows.Count == 1)
             {
                 txtMaVatTu.Text = dgvListVatTuKho.SelectedRows[0].Cells["MaVatTu"].Value.ToString();
+                this.maKho = dgvListVatTuKho.SelectedRows[0].Cells["MaKho"].Value.ToString();
                 txtTenVatTu.Text = dgvListVatTuKho.SelectedRows[0].Cells["TenVatTu"].Value.ToString();
                 cbDonViTinh.SelectedItem = dgvListVatTuKho.SelectedRows[0].Cells["DonViTinh"].Value.ToString();
                 numUpDowSoLuong.Value = 0;
@@ -85,15 +88,18 @@ namespace GUI.QLVT_GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            var item = dsVatTuTrongKho.Find(x => x.MaVatTu == txtMaVatTu.Text);
             if (txtMaVatTu.Text == "")
                 lbVatTu.Text = "Vật tư còn trống!";
             if (cbDonViTinh.SelectedItem == null)
                 lbDonViTinh.Text = "Đơn vị tính còn trống!";
             if (numUpDowSoLuong.Value == 0)
                 lbSoLuong.Text = "Số lượng còn trống!";
-            if(txtMaVatTu.Text != "" && 
-                cbDonViTinh.SelectedItem != null&&
-                numUpDowSoLuong.Value != 0)
+            if(numUpDowSoLuong.Value > item.SoLuongSP)
+                lbSoLuong.Text = "Số lượng vượt quá trong kho!";
+            if (txtMaVatTu.Text != "" &&
+                cbDonViTinh.SelectedItem != null &&
+                numUpDowSoLuong.Value != 0 && numUpDowSoLuong.Value <= item.SoLuongSP)
             {
                 ChiTietPhongChieuDTO pc = new ChiTietPhongChieuDTO
                 {
@@ -102,7 +108,18 @@ namespace GUI.QLVT_GUI
                     SoLuongSP = Convert.ToInt32(numUpDowSoLuong.Value),
                     MaPhongChieu = maPhongChieu
                 };
-              //  ChiTietPhongChieuBLL.Instance.ThemChiTietPhongChieuTodsVatTuCoSan(pc,ref dsVatTuDaChon);
+                ChiTietPhongChieuBLL.Instance.ThemChiTietPhongChieuToDSVatTuCoSan(pc,ref dsVatTuDaChon);
+                dsVatTuTrongKho.Remove(item);
+                item.SoLuongSP -= pc.SoLuongSP;
+                if(item.SoLuongSP > 0)
+                    dsVatTuTrongKho.Add(item);
+                else
+                {
+                    txtMaVatTu.Text = "";
+                    txtTenVatTu.Text = "";
+                    cbDonViTinh.SelectedItem = "";
+                    numUpDowSoLuong.Value = 0;
+                }
                 LoadDGVListVatTuKho();
                 LoadDGVVatTuDaThem();
             }    
@@ -110,25 +127,27 @@ namespace GUI.QLVT_GUI
 
         private void dgvVatTuDaThem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvVatTuCoSan.SelectedRows.Count == 1)
+            if (dgvVatTuDaChon.SelectedRows.Count == 1)
             {
-                string maVatTu = dgvVatTuCoSan.SelectedRows[0].Cells["MaVatTu"].Value.ToString();
-                ChiTietPhongChieuView pc = dsVatTuCoSan.Find(x => x.MaVatTu == maVatTu);
-                dsVatTuCoSan.Remove(pc);
+                string maVatTu = dgvVatTuDaChon.SelectedRows[0].Cells["MaVatTu"].Value.ToString();
+                var item = dsVatTuCoSan.Find(x => x.MaVatTu == maVatTu);
+                dsVatTuCoSan.Remove(item);
+                int index = dsVatTuTrongKho.FindIndex(x => x.MaVatTu == maVatTu);
+                ChiTietKhoVatTuView khoVT = new ChiTietKhoVatTuView()
+                {
+                    TenVatTu = item.TenVatTu,
+                    MaVatTu = item.MaVatTu,
+                    DonViTinh = item.DonViTinh,
+                    SoLuongSP = dsVatTuTrongKho[index].SoLuongSP + item.SoLuong,
+                    MaKho = maKho,
+                };
+                dsVatTuTrongKho.RemoveAt(index);
+                dsVatTuTrongKho.Insert(index, khoVT);
+                LoadDGVListVatTuKho();
+                LoadDGVVatTuDaThem();
             }
         }
 
-        private void dgvVatTuDaThem_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //if(dgvVatTuDaThem.SelectedRows.Count == 1)
-            //{
-            //    string maVatTu = dgvVatTuDaThem.SelectedRows[0].Cells["MaVatTu"].Value.ToString();
-            //    ChiTietPhongChieuView pc = dsVatTuCoSan.Find(x => x.MaVatTu == maVatTu);
-            //    txtMaVatTu.Text = maVatTu;
-            //    txtTenVatTu.Text = pc.TenVatTu;
-            //    cbDonViTinh.SelectedItem = pc.DonViTinh;
-            //    numUpDowSoLuong.Value = pc.SoLuong;
-            //}
-        }
+       
     }
 }

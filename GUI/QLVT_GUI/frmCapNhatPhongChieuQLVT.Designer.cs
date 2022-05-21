@@ -32,6 +32,10 @@
             this.pnTitleThemPhongChieu = new System.Windows.Forms.Panel();
             this.lblTitleThemPhongChieu = new System.Windows.Forms.Label();
             this.pnContentThemPhongChieu = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dgvVatTuDaChon = new System.Windows.Forms.DataGridView();
             this.gbxNoiDung = new System.Windows.Forms.GroupBox();
             this.lbDonViTinh = new System.Windows.Forms.Label();
             this.lbSoLuong = new System.Windows.Forms.Label();
@@ -64,13 +68,11 @@
             this.btnLuuVatTuDaThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.dgvVatTuCoSan = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dgvVatTuDaChon = new System.Windows.Forms.DataGridView();
             this.pnThemPhongChieu.SuspendLayout();
             this.pnTitleThemPhongChieu.SuspendLayout();
             this.pnContentThemPhongChieu.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVatTuDaChon)).BeginInit();
             this.gbxNoiDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDowSoLuong)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -78,8 +80,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListVatTuKho)).BeginInit();
             this.grpListVatTuDaThem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVatTuCoSan)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVatTuDaChon)).BeginInit();
             this.SuspendLayout();
             // 
             // pnThemPhongChieu
@@ -130,6 +130,65 @@
             this.pnContentThemPhongChieu.Name = "pnContentThemPhongChieu";
             this.pnContentThemPhongChieu.Size = new System.Drawing.Size(1159, 715);
             this.pnContentThemPhongChieu.TabIndex = 34;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.dgvVatTuDaChon);
+            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Location = new System.Drawing.Point(507, 439);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(428, 265);
+            this.groupBox2.TabIndex = 56;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Vật tư đã chọn";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightGreen;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::GUI.Properties.Resources.save_26px;
+            this.button1.Location = new System.Drawing.Point(178, 329);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 36);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "   Lưu";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.RosyBrown;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = global::GUI.Properties.Resources.Renew;
+            this.button2.Location = new System.Drawing.Point(14, 330);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(130, 36);
+            this.button2.TabIndex = 55;
+            this.button2.Text = "Làm mới";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // dgvVatTuDaChon
+            // 
+            this.dgvVatTuDaChon.BackgroundColor = System.Drawing.Color.White;
+            this.dgvVatTuDaChon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVatTuDaChon.Location = new System.Drawing.Point(6, 23);
+            this.dgvVatTuDaChon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvVatTuDaChon.Name = "dgvVatTuDaChon";
+            this.dgvVatTuDaChon.RowHeadersWidth = 62;
+            this.dgvVatTuDaChon.RowTemplate.Height = 28;
+            this.dgvVatTuDaChon.Size = new System.Drawing.Size(416, 229);
+            this.dgvVatTuDaChon.TabIndex = 44;
             // 
             // gbxNoiDung
             // 
@@ -379,7 +438,7 @@
             this.btnXacNhanThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXacNhanThem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhanThem.Image = global::GUI.Properties.Resources.save_26px;
-            this.btnXacNhanThem.Location = new System.Drawing.Point(992, 631);
+            this.btnXacNhanThem.Location = new System.Drawing.Point(959, 628);
             this.btnXacNhanThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXacNhanThem.Name = "btnXacNhanThem";
             this.btnXacNhanThem.Size = new System.Drawing.Size(102, 36);
@@ -396,7 +455,7 @@
             this.btnThoat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.Black;
             this.btnThoat.Image = global::GUI.Properties.Resources.Logout_26px;
-            this.btnThoat.Location = new System.Drawing.Point(1026, 548);
+            this.btnThoat.Location = new System.Drawing.Point(957, 534);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(104, 36);
             this.btnThoat.TabIndex = 55;
@@ -472,7 +531,7 @@
             this.grpListVatTuDaThem.Size = new System.Drawing.Size(460, 277);
             this.grpListVatTuDaThem.TabIndex = 51;
             this.grpListVatTuDaThem.TabStop = false;
-            this.grpListVatTuDaThem.Text = "Vật tư trong phòng chiếu";
+            this.grpListVatTuDaThem.Text = "Vật tư  có sẵn trong phòng chiếu";
             // 
             // btnLuuVatTuDaThem
             // 
@@ -516,68 +575,6 @@
             this.dgvVatTuCoSan.RowHeadersWidth = 62;
             this.dgvVatTuCoSan.RowTemplate.Height = 28;
             this.dgvVatTuCoSan.Size = new System.Drawing.Size(436, 231);
-            this.dgvVatTuCoSan.TabIndex = 44;
-            this.dgvVatTuCoSan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVatTuDaThem_CellClick);
-            this.dgvVatTuCoSan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVatTuDaThem_CellDoubleClick);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.dgvVatTuDaChon);
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.Location = new System.Drawing.Point(507, 439);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(428, 265);
-            this.groupBox2.TabIndex = 56;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Vật tư trong phòng chiếu";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LightGreen;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::GUI.Properties.Resources.save_26px;
-            this.button1.Location = new System.Drawing.Point(178, 329);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 36);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "   Lưu";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.RosyBrown;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::GUI.Properties.Resources.Renew;
-            this.button2.Location = new System.Drawing.Point(14, 330);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 36);
-            this.button2.TabIndex = 55;
-            this.button2.Text = "Làm mới";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // dgvVatTuDaChon
-            // 
-            this.dgvVatTuDaChon.BackgroundColor = System.Drawing.Color.White;
-            this.dgvVatTuDaChon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVatTuDaChon.Location = new System.Drawing.Point(6, 23);
-            this.dgvVatTuDaChon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvVatTuDaChon.Name = "dgvVatTuDaChon";
-            this.dgvVatTuDaChon.RowHeadersWidth = 62;
-            this.dgvVatTuDaChon.RowTemplate.Height = 28;
-            this.dgvVatTuDaChon.Size = new System.Drawing.Size(416, 229);
-            this.dgvVatTuDaChon.TabIndex = 44;
             // 
             // FrmCapNhatPhongChieuQLVT
             // 
@@ -593,6 +590,8 @@
             this.pnThemPhongChieu.ResumeLayout(false);
             this.pnTitleThemPhongChieu.ResumeLayout(false);
             this.pnContentThemPhongChieu.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVatTuDaChon)).EndInit();
             this.gbxNoiDung.ResumeLayout(false);
             this.gbxNoiDung.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDowSoLuong)).EndInit();
@@ -603,8 +602,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListVatTuKho)).EndInit();
             this.grpListVatTuDaThem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVatTuCoSan)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVatTuDaChon)).EndInit();
             this.ResumeLayout(false);
 
         }

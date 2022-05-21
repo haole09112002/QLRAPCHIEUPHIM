@@ -41,21 +41,21 @@ namespace BLL
             }
             return data;
         }
-        public void ThemChiTietPhongChieuToDSVatTuDaChon(ChiTietPhongChieuDTO pc,ref List<ChiTietPhongChieuView> dsVatTuDaChon)
+        public void ThemChiTietPhongChieuToDSVatTuCoSan(ChiTietPhongChieuDTO pc,ref List<ChiTietPhongChieuView> dsVatTuDaChon)
         {
-            //bool daTonTai = false;
-            //foreach(ChiTietPhongChieuView i in dsVatTuDaChon)
-            //{
-            //    if (i.MaVatTu == pc.MaVatTu)
-            //    {
-            //        daTonTai = true;
-            //        i.SoLuong += pc.SoLuongSP;
-            //    }
-            //}
-            //if(!daTonTai)
-            //{
+            bool daTonTai = false;
+            foreach (ChiTietPhongChieuView i in dsVatTuDaChon)
+            {
+                if (i.MaVatTu == pc.MaVatTu)
+                {
+                    daTonTai = true;
+                    i.SoLuong += pc.SoLuongSP;
+                }
+            }
+            if (!daTonTai)
+            {
                 dsVatTuDaChon.Add(ConvertCTPhongChieuDTOToView(pc));
-            //}
+            }
         }
         public ChiTietPhongChieuView ConvertCTPhongChieuDTOToView(ChiTietPhongChieuDTO pc)
         {
