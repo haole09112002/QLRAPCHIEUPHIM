@@ -58,9 +58,9 @@
             this.pnThongTinCaNhan.Controls.Add(this.lblChucVu);
             this.pnThongTinCaNhan.Controls.Add(this.grpThongTinCaNhan);
             this.pnThongTinCaNhan.Controls.Add(this.picAvatar);
-            this.pnThongTinCaNhan.Location = new System.Drawing.Point(36, 40);
+            this.pnThongTinCaNhan.Location = new System.Drawing.Point(22, 19);
             this.pnThongTinCaNhan.Name = "pnThongTinCaNhan";
-            this.pnThongTinCaNhan.Size = new System.Drawing.Size(920, 532);
+            this.pnThongTinCaNhan.Size = new System.Drawing.Size(1310, 731);
             this.pnThongTinCaNhan.TabIndex = 1;
             // 
             // lblChucVu
@@ -69,7 +69,7 @@
             this.lblChucVu.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblChucVu.Image = global::GUI.Properties.Resources.avatar;
             this.lblChucVu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblChucVu.Location = new System.Drawing.Point(57, 247);
+            this.lblChucVu.Location = new System.Drawing.Point(171, 380);
             this.lblChucVu.Name = "lblChucVu";
             this.lblChucVu.Size = new System.Drawing.Size(186, 30);
             this.lblChucVu.TabIndex = 38;
@@ -94,7 +94,7 @@
             this.grpThongTinCaNhan.Controls.Add(this.lblMatKhau);
             this.grpThongTinCaNhan.Controls.Add(this.lblTenTaiKhoan);
             this.grpThongTinCaNhan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpThongTinCaNhan.Location = new System.Drawing.Point(276, 36);
+            this.grpThongTinCaNhan.Location = new System.Drawing.Point(471, 100);
             this.grpThongTinCaNhan.Margin = new System.Windows.Forms.Padding(4);
             this.grpThongTinCaNhan.Name = "grpThongTinCaNhan";
             this.grpThongTinCaNhan.Padding = new System.Windows.Forms.Padding(4);
@@ -181,7 +181,7 @@
             // 
             this.txtDiaChi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtDiaChi.Enabled = false;
-            this.txtDiaChi.Location = new System.Drawing.Point(205, 153);
+            this.txtDiaChi.Location = new System.Drawing.Point(205, 155);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(389, 27);
@@ -288,7 +288,7 @@
             this.picAvatar.BackColor = System.Drawing.Color.Silver;
             this.picAvatar.ErrorImage = null;
             this.picAvatar.InitialImage = null;
-            this.picAvatar.Location = new System.Drawing.Point(39, 80);
+            this.picAvatar.Location = new System.Drawing.Point(158, 209);
             this.picAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picAvatar.Name = "picAvatar";
             this.picAvatar.Size = new System.Drawing.Size(199, 153);
@@ -302,7 +302,7 @@
             this.Controls.Add(this.pnThongTinCaNhan);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCHoSoCaNhanQLVT";
-            this.Size = new System.Drawing.Size(993, 613);
+            this.Size = new System.Drawing.Size(1352, 766);
             this.pnThongTinCaNhan.ResumeLayout(false);
             this.grpThongTinCaNhan.ResumeLayout(false);
             this.grpThongTinCaNhan.PerformLayout();

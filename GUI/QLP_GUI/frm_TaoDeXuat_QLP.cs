@@ -148,7 +148,7 @@ namespace GUI.QLP_GUI
                 string DonViTinh = "";
                 int SoLuong;
                 for(int i = 0; i <dGVDeXuatPhim.Rows.Count - 1; i++)
-        {
+            {
                     MaPhim = dGVDeXuatPhim.Rows[i].Cells["Mã Phim"].Value.ToString();
                     NoiDung = dGVDeXuatPhim.Rows[i].Cells["Nội Dung"].Value.ToString();
                     DonViTinh = dGVDeXuatPhim.Rows[i].Cells["Đơn Vị Tính"].Value.ToString();

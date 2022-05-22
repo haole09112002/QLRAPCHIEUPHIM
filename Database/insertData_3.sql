@@ -412,6 +412,10 @@ insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
 values ('LP002','2022-01-10','K0004','NV0002');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
 values ('LP002','2022-01-11','K0004','NV0003');
+insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
+values ('LP001','2022-08-21','K0002','NV0001');
+insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)
+values ('LP001','2022-09-20','K0002','NV0001');
 ---- Đã xong
 -----32. Chi tiết phiếu phim
 insert into CHI_TIET_PHIEU_PHIM(MaPhieu,MaPhim,DonViTinh,SoLuong) values('PH0014','P00001',N'Bộ','1');
@@ -425,6 +429,18 @@ insert into CHI_TIET_PHIEU_PHIM(MaPhieu,MaPhim,DonViTinh,SoLuong) values('PH0021
 ----- Đã xong
 -----33. Chi tiết phiếu vật tư
 insert into CHI_TIET_PHIEU_VT(MaPhieu,MaVatTu,DonViTinh,SoLuong) values('PH0007','VT0001',N'Cái','4');
+insert into CHI_TIET_PHIEU_VT(MaPhieu,MaVatTu,DonViTinh,SoLuong) values('PH0007','VT0002',N'Cái','5');
+insert into CHI_TIET_PHIEU_VT(MaPhieu,MaVatTu,DonViTinh,SoLuong) values('PH0007','VT0003',N'Cái','6');
+insert into CHI_TIET_PHIEU_VT(MaPhieu,MaVatTu,DonViTinh,SoLuong) values('PH0007','VT0004',N'Cái','7');
+insert into CHI_TIET_PHIEU_VT(MaPhieu,MaVatTu,DonViTinh,SoLuong) values('PH0022','VT0001',N'Cái','4');
+insert into CHI_TIET_PHIEU_VT(MaPhieu,MaVatTu,DonViTinh,SoLuong) values('PH0022','VT0002',N'Cái','5');
+insert into CHI_TIET_PHIEU_VT(MaPhieu,MaVatTu,DonViTinh,SoLuong) values('PH0022','VT0003',N'Cái','6');
+insert into CHI_TIET_PHIEU_VT(MaPhieu,MaVatTu,DonViTinh,SoLuong) values('PH0022','VT0004',N'Cái','7');
+insert into CHI_TIET_PHIEU_VT(MaPhieu,MaVatTu,DonViTinh,SoLuong) values('PH0023','VT0001',N'Cái','4');
+insert into CHI_TIET_PHIEU_VT(MaPhieu,MaVatTu,DonViTinh,SoLuong) values('PH0023','VT0002',N'Cái','5');
+insert into CHI_TIET_PHIEU_VT(MaPhieu,MaVatTu,DonViTinh,SoLuong) values('PH0023','VT0003',N'Cái','6');
+insert into CHI_TIET_PHIEU_VT(MaPhieu,MaVatTu,DonViTinh,SoLuong) values('PH0023','VT0004',N'Cái','7');
+
 ---- Đã xong
 -----34. Chi tiết phiếu thức ăn
 insert into CHI_TIET_PHIEU_THUC_AN(MaPhieu,MaThucAn,DonViTinh,SoLuong,NgayHetHang)
@@ -487,6 +503,8 @@ insert into HOP_DONG_THUC_AN(MaHopDong,MaThucAn,GiaTien,DonViTinh,SoLuong)
 values ('HD0006','TA0003','65000',N'Gói','150');
 insert into HOP_DONG_THUC_AN(MaHopDong,MaThucAn,GiaTien,DonViTinh,SoLuong)
 values ('HD0006','TA0006','56000',N'Gói','200');
+insert into HOP_DONG_THUC_AN(MaHopDong,MaThucAn,GiaTien,DonViTinh,SoLuong)
+values ('HD0005','TA0005','56000',N'Thùng','200');
 ----- Đã xong
 -----38. Vật tư trong phòng chiếu ----PC0001
 insert into CHI_TIET_PHONG_CHIEU(MaPhongChieu,MaVatTu,DonViTinh,SoLuongSP)

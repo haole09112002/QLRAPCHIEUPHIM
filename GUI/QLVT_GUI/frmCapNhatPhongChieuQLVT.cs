@@ -15,13 +15,13 @@ namespace GUI.QLVT_GUI
    
     public partial class FrmCapNhatPhongChieuQLVT : Form
     {
-        private List<ChiTietKhoVatTuView> dsVatTuTrongKho;
+        private List<ChiTietKhoVatTuViewDTO> dsVatTuTrongKho;
         private List<ChiTietPhongChieuDTO> dsVatTuDaChon;
         private string maPhongChieu;
         public FrmCapNhatPhongChieuQLVT(string maPhongChieu)
         {
             this.maPhongChieu = maPhongChieu;
-            dsVatTuTrongKho = ChiTietKhoVatTuBLL.Instance.GetAllChiTietKhoVatTuView();
+            dsVatTuTrongKho = ChiTietKhoVatTuBLL.Instance.GetAllChiTietKhoVatTuView("");
             dsVatTuDaChon = ChiTietPhongChieuBLL.Instance.GetAllVatTuByMaPhongChieu(maPhongChieu);
             InitializeComponent();
             setGUI(this.maPhongChieu);

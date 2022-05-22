@@ -31,7 +31,7 @@ namespace DAL
         public List<ChiTietDeXuatVatTuDTO> GetAllChiTietDeXuatVatTu()
         {
             List<ChiTietDeXuatVatTuDTO> data = new List<ChiTietDeXuatVatTuDTO>();
-            string query = "select * from CHI_TIET_DE_XUAT_VAT_TU";
+            string query = "select * from CHI_TIET_DE_XUAT_VT";
             foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
             {
                 data.Add(GetChiTietDeXuatVatTuByDataRow(i));
@@ -47,7 +47,7 @@ namespace DAL
                 NoiDung = i["NoiDung"].ToString(),
                 SoLuong = Convert.ToInt32(i["SoLuong"]),
                 DonViTinh = i["DonViTinh"].ToString(),
-                TinhTrang = Convert.ToBoolean(i["TinhTrang"].ToString()),
+                TinhTrang = i["TinhTrang"].ToString(),
             };
         }
         public List<ChiTietDeXuatVatTuView> DanhSachVatTuCanThemHopDong()
@@ -75,6 +75,12 @@ namespace DAL
         {
             string query = string.Format("Update CHI_TIET_DE_XUAT_VT set TinhTrang = '{0}' where MaDeXuat ='{1}' and MaVatTu= '{2}' ", tinhTrang, maDeXuat, maVatTu);
             DBHelper.Instance.ExcuteNonQuery(query);
+        }
+        public void LuuChiTietDeXuatVatTu(string MaDeXuat, string MaVatTu, string NoiDung, string DonViTinh, int SoLuong, string TinhTrang)
+        {
+            string query = "Insert into CHI_TIET_DE_XUAT_VT values" +
+                $"('{MaDeXuat}','{MaVatTu}',N'{NoiDung}',{SoLuong},'{DonViTinh}','{TinhTrang}')";
+            DBHelper.Instance.ExcuteQuery(query);
         }
     }
 }

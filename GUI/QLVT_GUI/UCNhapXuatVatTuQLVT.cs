@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace GUI.QLVT_GUI
 {
@@ -16,11 +17,11 @@ namespace GUI.QLVT_GUI
         {
             InitializeComponent();
         }
-
         private void btnTaoPhieu_Click(object sender, EventArgs e)
         {
             FrmTaoPhieuNhapXuatKhoQLVT frmTaoPhieuNhapXuatKhoQLVT = new FrmTaoPhieuNhapXuatKhoQLVT();
             frmTaoPhieuNhapXuatKhoQLVT.Show();
         }
+
     }
 }
