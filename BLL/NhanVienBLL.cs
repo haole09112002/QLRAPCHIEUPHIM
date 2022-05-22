@@ -54,5 +54,16 @@ namespace BLL
                 throw;
             }
         }
+        public NhanVienDTO GetNhanVienByMaNhanVien(string MaNhanVien)
+        {
+            foreach(NhanVienDTO i in NhanVienDAL.Instance.GetAllNhanVien())
+            {
+                if(i.MaNhanVien == MaNhanVien)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
     }
 }

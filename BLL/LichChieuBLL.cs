@@ -1,5 +1,6 @@
 ﻿using DAL;
 using DTO;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -41,9 +42,18 @@ namespace BLL
             }
             return data;
         }
-        public void XoaLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu)
+        public bool KiemTraLichChieu(string MaKhungGioChieu, string MaPhongChieu, DateTime NgayChieu)
         {
-            LichChieuDAL.instance.XoaLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu);
+            foreach(LichChieuDTO i in GetAllLichChieu())
+            {
+                if (i.NgayChieu.Day == NgayChieu.Day && i.NgayChieu.Month == NgayChieu.Month && i.NgayChieu.Year == NgayChieu.Year && i.MaKhungGioChieu == MaKhungGioChieu && i.MaPhongChieu == MaPhongChieu)
+                    return true;
+            }
+            return false;
+        }
+        public void LuuLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, bool TrangThai, DateTime NgayChieu)
+        {
+            LichChieuDAL.Instance.LuuLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, TrangThai, NgayChieu);
         }
     }
 }

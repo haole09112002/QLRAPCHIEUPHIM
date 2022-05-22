@@ -28,31 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSapXep = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rBXuat = new System.Windows.Forms.RadioButton();
             this.rBNhap = new System.Windows.Forms.RadioButton();
             this.rBTatCa = new System.Windows.Forms.RadioButton();
             this.cBSapXep = new System.Windows.Forms.ComboBox();
-            this.dGVLSNX = new System.Windows.Forms.DataGridView();
+            this.dGVDanhSachPhieuNhapXuat = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.dGVChiTietPhieuNhapXuat = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVLSNX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhieuNhapXuat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVChiTietPhieuNhapXuat)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.dGVChiTietPhieuNhapXuat);
+            this.panel1.Controls.Add(this.btnSapXep);
+            this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.cBSapXep);
-            this.panel1.Controls.Add(this.dGVLSNX);
+            this.panel1.Controls.Add(this.dGVDanhSachPhieuNhapXuat);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(18, 20);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -60,38 +67,38 @@
             this.panel1.Size = new System.Drawing.Size(1296, 724);
             this.panel1.TabIndex = 1;
             // 
-            // button6
+            // btnSapXep
             // 
-            this.button6.BackColor = System.Drawing.Color.Cyan;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = global::GUI.Properties.Resources.Sort;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(30, 159);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(138, 48);
-            this.button6.TabIndex = 32;
-            this.button6.Text = "    SẮP XẾP";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnSapXep.BackColor = System.Drawing.Color.Cyan;
+            this.btnSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSapXep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSapXep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSapXep.Image = global::GUI.Properties.Resources.Sort;
+            this.btnSapXep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSapXep.Location = new System.Drawing.Point(30, 159);
+            this.btnSapXep.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSapXep.Name = "btnSapXep";
+            this.btnSapXep.Size = new System.Drawing.Size(138, 48);
+            this.btnSapXep.TabIndex = 32;
+            this.btnSapXep.Text = "    SẮP XẾP";
+            this.btnSapXep.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnTimKiem
             // 
-            this.button3.BackColor = System.Drawing.Color.Cyan;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::GUI.Properties.Resources.SearchIcon;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(798, 162);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 45);
-            this.button3.TabIndex = 31;
-            this.button3.Text = "TÌM KIẾM";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnTimKiem.BackColor = System.Drawing.Color.Cyan;
+            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.Location = new System.Drawing.Point(798, 162);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(138, 45);
+            this.btnTimKiem.TabIndex = 31;
+            this.btnTimKiem.Text = "TÌM KIẾM";
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
             // 
             // txtTimKiem
             // 
@@ -130,6 +137,7 @@
             this.rBXuat.TabStop = true;
             this.rBXuat.Text = "Xem Danh Sách Phiếu Xuất Phim";
             this.rBXuat.UseVisualStyleBackColor = true;
+            this.rBXuat.CheckedChanged += new System.EventHandler(this.rBXuat_CheckedChanged);
             // 
             // rBNhap
             // 
@@ -143,6 +151,7 @@
             this.rBNhap.TabStop = true;
             this.rBNhap.Text = "Xem Danh Sách Phiếu Nhập Phim";
             this.rBNhap.UseVisualStyleBackColor = true;
+            this.rBNhap.CheckedChanged += new System.EventHandler(this.rBNhap_CheckedChanged);
             // 
             // rBTatCa
             // 
@@ -156,6 +165,7 @@
             this.rBTatCa.TabStop = true;
             this.rBTatCa.Text = "Tất Cả";
             this.rBTatCa.UseVisualStyleBackColor = true;
+            this.rBTatCa.CheckedChanged += new System.EventHandler(this.rBTatCa_CheckedChanged);
             // 
             // cBSapXep
             // 
@@ -163,23 +173,44 @@
             this.cBSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cBSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBSapXep.FormattingEnabled = true;
+            this.cBSapXep.Items.AddRange(new object[] {
+            "Tên Nhân Viên",
+            "Ngày Lập Phiếu"});
             this.cBSapXep.Location = new System.Drawing.Point(187, 166);
             this.cBSapXep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBSapXep.Name = "cBSapXep";
             this.cBSapXep.Size = new System.Drawing.Size(314, 31);
             this.cBSapXep.TabIndex = 29;
             // 
-            // dGVLSNX
+            // dGVDanhSachPhieuNhapXuat
             // 
-            this.dGVLSNX.BackgroundColor = System.Drawing.Color.White;
-            this.dGVLSNX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVLSNX.Location = new System.Drawing.Point(36, 232);
-            this.dGVLSNX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dGVLSNX.Name = "dGVLSNX";
-            this.dGVLSNX.RowHeadersWidth = 62;
-            this.dGVLSNX.RowTemplate.Height = 28;
-            this.dGVLSNX.Size = new System.Drawing.Size(1221, 468);
-            this.dGVLSNX.TabIndex = 27;
+            this.dGVDanhSachPhieuNhapXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVDanhSachPhieuNhapXuat.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVDanhSachPhieuNhapXuat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dGVDanhSachPhieuNhapXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVDanhSachPhieuNhapXuat.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dGVDanhSachPhieuNhapXuat.Location = new System.Drawing.Point(36, 232);
+            this.dGVDanhSachPhieuNhapXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dGVDanhSachPhieuNhapXuat.Name = "dGVDanhSachPhieuNhapXuat";
+            this.dGVDanhSachPhieuNhapXuat.RowHeadersWidth = 62;
+            this.dGVDanhSachPhieuNhapXuat.RowTemplate.Height = 28;
+            this.dGVDanhSachPhieuNhapXuat.Size = new System.Drawing.Size(616, 468);
+            this.dGVDanhSachPhieuNhapXuat.TabIndex = 27;
+            this.dGVDanhSachPhieuNhapXuat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDanhSachPhieuNhapXuat_CellDoubleClick);
             // 
             // label1
             // 
@@ -192,6 +223,35 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "DANH SÁCH PHIẾU NHẬP XUẤT PHIM";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dGVChiTietPhieuNhapXuat
+            // 
+            this.dGVChiTietPhieuNhapXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGVChiTietPhieuNhapXuat.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVChiTietPhieuNhapXuat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dGVChiTietPhieuNhapXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVChiTietPhieuNhapXuat.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dGVChiTietPhieuNhapXuat.Location = new System.Drawing.Point(664, 232);
+            this.dGVChiTietPhieuNhapXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dGVChiTietPhieuNhapXuat.Name = "dGVChiTietPhieuNhapXuat";
+            this.dGVChiTietPhieuNhapXuat.RowHeadersWidth = 62;
+            this.dGVChiTietPhieuNhapXuat.RowTemplate.Height = 28;
+            this.dGVChiTietPhieuNhapXuat.Size = new System.Drawing.Size(612, 468);
+            this.dGVChiTietPhieuNhapXuat.TabIndex = 33;
             // 
             // UC_PhieuNhapXuat_QLP
             // 
@@ -206,7 +266,8 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVLSNX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhieuNhapXuat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVChiTietPhieuNhapXuat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -214,15 +275,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSapXep;
+        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rBXuat;
         private System.Windows.Forms.RadioButton rBNhap;
         private System.Windows.Forms.RadioButton rBTatCa;
         private System.Windows.Forms.ComboBox cBSapXep;
-        private System.Windows.Forms.DataGridView dGVLSNX;
+        private System.Windows.Forms.DataGridView dGVDanhSachPhieuNhapXuat;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dGVChiTietPhieuNhapXuat;
     }
 }

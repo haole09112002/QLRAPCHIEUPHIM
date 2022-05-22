@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,19 +9,39 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using DTO;
 
 namespace GUI.QLP_GUI
 {
     public partial class UC_ThongTinPhim_QLP : UserControl
     {
+        DataTable dtDanhSachPhim = new DataTable();
         public UC_ThongTinPhim_QLP()
         {
             InitializeComponent();
+            SetDataTable();
             Reload();
+        }
+        public void SetDataTable()
+        {
+            dtDanhSachPhim.Columns.Add("Mã Phim");
+            dtDanhSachPhim.Columns.Add("Tên Phim");
+            dtDanhSachPhim.Columns.Add("Thời Lượng");
+            dtDanhSachPhim.Columns.Add("Quốc Gia");
+            dtDanhSachPhim.Columns.Add("Năm Sản Xuất");
+            dtDanhSachPhim.Columns.Add("Tên Hãng Sản Xuất Phim");
+            dtDanhSachPhim.Columns.Add("Độ Tuổi Xem");
+            dtDanhSachPhim.Columns.Add("Thể Loại");
         }
         public void Reload(string txt = "", string TimKiem = "")
         {
-            dGVDanhSachPhim.DataSource = PhimBLL.Instance.GetPhimViews(txt,TimKiem);
+            dtDanhSachPhim.Rows.Clear();
+            foreach(PhimViewDTO i in PhimBLL.Instance.GetPhimViews(txt,TimKiem))
+            {
+                dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
+            }
+            dGVDanhSachPhim.DataSource = dtDanhSachPhim;
+            dGVDanhSachPhim.Columns["Mã Phim"].Visible = false;
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
@@ -33,50 +54,75 @@ namespace GUI.QLP_GUI
                 Reload(txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
             }
         }
-
-        private void btnSapXep_Click(object sender, EventArgs e)
+        public void SearchShow(string cbSapXep, string txtTimKiem, string cbTimKiem)
         {
-            string selectSort = cBSapXep.SelectedItem.ToString();
-            switch (selectSort)
+            dtDanhSachPhim.Rows.Clear();
+            switch (cbSapXep)
             {
-                case "MaPhim":
+                case "Tên Phim":
                     {
-                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareMaPhim,txtTimKiem.Text,cBTimKiem.SelectedItem.ToString());
+                        foreach(PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTenPhim,txtTimKiem,cbTimKiem))
+                        {
+                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
+                        }
                         break;
                     }
-                case "TenPhim":
+                case "Thời Lượng":
                     {
-                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTenPhim, txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
+                        foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareThoiLuong,txtTimKiem,cbTimKiem))
+                        {
+                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
+                        }
                         break;
                     }
-                case "ThoiLuong":
+                case "Quốc Gia":
                     {
-                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareThoiLuong, txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
+                        foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareQuocGia,txtTimKiem,cbTimKiem))
+                        {
+                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
+                        }
                         break;
                     }
-                case "QuocGia":
+                case "Năm Sản Xuất":
                     {
-                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareQuocGia, txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
+                        foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareNamSanXuat,txtTimKiem,cbTimKiem))
+                        {
+                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
+                        }
                         break;
                     }
-                case "NamSanXuat":
+                case "Thể Loại":
                     {
-                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareNamSanXuat, txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
-                        break;
-                    }
-                case "TheLoai":
-                    {
-                        dGVDanhSachPhim.DataSource = PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTheLoai, txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
+                        foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTheLoai,txtTimKiem,cbTimKiem))
+                        {
+                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
+                        }
                         break;
                     }
             }
+            dGVDanhSachPhim.DataSource = dtDanhSachPhim;
+            dGVDanhSachPhim.Columns["Mã Phim"].Visible = false;
+        }
+        private void btnSapXep_Click(object sender, EventArgs e)
+        {
+            string search = "";
+            string Sort = "Tên Phim";
+            if(cBSapXep.SelectedIndex >= 0)
+            {
+                Sort = cBSapXep.SelectedItem.ToString();
+            }
+            if(cBTimKiem.SelectedIndex >= 0)
+            {
+                search = cBTimKiem.SelectedItem.ToString();
+            }
+            SearchShow(Sort, txtTimKiem.Text, search);
         }
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
             if(dGVDanhSachPhim.SelectedRows.Count == 1)
             {
-                var frmTTP = new frmThongTinPhim(dGVDanhSachPhim.SelectedRows[0].Cells["MaPhim"].Value.ToString());
+                var frmTTP = new frmThongTinPhim(dGVDanhSachPhim.SelectedRows[0].Cells["Mã Phim"].Value.ToString());
                 frmTTP.ShowDialog();
             }
         }
