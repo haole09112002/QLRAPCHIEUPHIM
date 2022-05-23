@@ -124,8 +124,10 @@ create table NGAY_LAM_VIEC
 )
 go
 --Bang Chinh Sach
+
 Create table CHINH_SACH(
 	MaChinhSach varchar(6) primary key not null constraint IDCS default dbo.AUTO_IDCS(),
+	TenChinhSach nvarchar(30),
 	HeSoLuong Float(4),
 	BHXH varchar(20),
 	TienThuong int
@@ -377,7 +379,7 @@ Create table HOP_DONG_PHIM(
 )
 
 go
---Bang Chi Tiet Cung Cap Phong Chieu
+--Bang Chi Tiet Vat tu trong  Phong Chieu
 
 Create table CHI_TIET_PHONG_CHIEU(
 	MaPhongChieu varchar(6) foreign key(MaPhongChieu) references PHONG_CHIEU,
