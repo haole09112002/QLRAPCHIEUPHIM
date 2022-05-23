@@ -54,5 +54,17 @@ namespace BLL
                 throw;
             }
         }
+        public NhanVienDTO GetNhanVienByTenTaiKhoan(string TenTaiKhoan)
+        {
+            foreach(NhanVienDTO i in NhanVienDAL.Instance.GetAllNhanVien())
+            {
+                if(TenTaiKhoan == i.TenTaiKhoan)
+                {
+                    return i;
+
+                }
+            }
+            return null;
+        }
     }
 }

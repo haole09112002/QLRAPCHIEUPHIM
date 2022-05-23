@@ -16,8 +16,10 @@ namespace GUI.QLVT_GUI
     {
         DataTable dtDSPhieuDeXuat = new DataTable();
         DataTable dtCTPhieuDeXuat = new DataTable();
-        public UCDaDeXuatThucAnQLVT()
+        NhanVienDTO nhanVien = new NhanVienDTO();
+        public UCDaDeXuatThucAnQLVT(NhanVienDTO nhanVien)
         {
+            this.nhanVien = nhanVien;
             InitializeComponent();
             SetDataTable();
             ReLoad();

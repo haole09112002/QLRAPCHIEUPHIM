@@ -16,8 +16,10 @@ namespace GUI.QLVT_GUI
     {
         DataTable dtDSPhieuDeXuat = new DataTable();
         DataTable dtCTPhieuDeXuat = new DataTable();
-        public UCDaDeXuatVatTuQLVT()
+        NhanVienDTO nhanVien = new NhanVienDTO();
+        public UCDaDeXuatVatTuQLVT(NhanVienDTO nhanVien)
         {
+            nhanVien = nhanVien;
             InitializeComponent();
             SetDataTable();
             ReLoad();
@@ -44,13 +46,14 @@ namespace GUI.QLVT_GUI
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            FrmTaoPhieuDeXuatVatTuQLVT frmTaoPhieuDeXuatVatTuQLVT = new FrmTaoPhieuDeXuatVatTuQLVT();
+            MessageBox.Show(nhanVien.MaNhanVien);
+            FrmTaoPhieuDeXuatVatTuQLVT frmTaoPhieuDeXuatVatTuQLVT = new FrmTaoPhieuDeXuatVatTuQLVT(nhanVien);
             frmTaoPhieuDeXuatVatTuQLVT.Show();
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            FrmTaoPhieuDeXuatVatTuQLVT frmTaoPhieuDeXuatVatTuQLVT = new FrmTaoPhieuDeXuatVatTuQLVT();
+            FrmTaoPhieuDeXuatVatTuQLVT frmTaoPhieuDeXuatVatTuQLVT = new FrmTaoPhieuDeXuatVatTuQLVT(nhanVien);
             frmTaoPhieuDeXuatVatTuQLVT.Show();
         }
 

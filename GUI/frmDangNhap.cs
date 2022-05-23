@@ -42,7 +42,7 @@ namespace GUI
             }
             if (result == 1)
             {
-                FrmDashboardQLVT frmDashboardQLVT = new FrmDashboardQLVT();
+                FrmDashboardQLVT frmDashboardQLVT = new FrmDashboardQLVT(NhanVienBLL.Instance.GetNhanVienByTenTaiKhoan(txtTenTaiKhoan.Text));
                 //frmDashboardQLVT.WindowState = FormWindowState.Maximized;
                 //frmDashboardQLVT.TopMost = true;
                 frmDashboardQLVT.Show();
