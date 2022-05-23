@@ -220,11 +220,9 @@ namespace GUI.QLP_GUI
                 Phim.AnhPhim = PhimBLL.Instance.ChuyenAnhThanhMangByte(pBAnhPhim);
                 PhimBLL.Instance.LuuPhim(Phim);
                 string MaPhim = PhimBLL.Instance.GetMaPhimAddNew();
-                MessageBox.Show(MaPhim);
                 foreach (string i in MaDienVienChinh)
                 {
                     ChiTietDienVienDaoDienPhimBLL.Instance.LuuCTDVDDP(MaPhim, i, "C");
-                    MessageBox.Show("Pass");
                 }
                 foreach (string i in MaDienVienPhu)
                 {

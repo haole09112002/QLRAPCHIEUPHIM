@@ -89,7 +89,50 @@ namespace GUI.QLP_GUI
 
         private void btnSapXep_Click(object sender, EventArgs e)
         {
+            List<string> MaPhieu = new List<string>();
+            for(int i = 0; i < dGVDanhSachPhieuNhapXuat.Rows.Count - 1; i++)
+            {
+                MaPhieu.Add(dGVDanhSachPhieuNhapXuat.Rows[i].Cells["Mã Phiếu"].Value.ToString());
+            }
+            dtDanhSachPhieuNhapXuat.Rows.Clear();
+            if(cBSapXep.SelectedItem.ToString() == "Tên Nhân Viên")
+            {
+                foreach (PhieuDTO phieu in PhieuBLL.Instance.SortPhieu(PhieuBLL.Instance.CompareTenNhanVien, MaPhieu, txtTimKiem.Text, cBTimKiem.SelectedItem.ToString()))
+                {
+                    dtDanhSachPhieuNhapXuat.Rows.Add(phieu.MaPhieu, KhoBLL.Instance.GetKhoByMaKho(phieu.MaKho).TenKho, NhanVienBLL.Instance.GetNhanVienByMaNhanVien(phieu.MaNhanVien).TenNhanVien, phieu.NgayLapPhieu.ToShortDateString());
+                }
+            }
+            if(cBSapXep.SelectedItem.ToString() == "Ngày Lập Phiếu")
+            {
+                foreach (PhieuDTO phieu in PhieuBLL.Instance.SortPhieu(PhieuBLL.Instance.CompareNgayLapPhieu, MaPhieu, txtTimKiem.Text, cBTimKiem.SelectedItem.ToString()))
+                {
+                    dtDanhSachPhieuNhapXuat.Rows.Add(phieu.MaPhieu, KhoBLL.Instance.GetKhoByMaKho(phieu.MaKho).TenKho, NhanVienBLL.Instance.GetNhanVienByMaNhanVien(phieu.MaNhanVien).TenNhanVien, phieu.NgayLapPhieu.ToShortDateString());
+                }
+            }
+            dGVDanhSachPhieuNhapXuat.DataSource = dtDanhSachPhieuNhapXuat;
+            dGVDanhSachPhieuNhapXuat.Columns["Mã Phiếu"].Visible = false;
+        }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string TimKiem = txtTimKiem.Text, LoaiTimKiem = "";
+            if(cBTimKiem.SelectedIndex >= 0)
+            {
+                LoaiTimKiem = cBTimKiem.SelectedItem.ToString();
+            }
+            List<string> MaPhieu = new List<string>();
+            for (int i = 0; i < dGVDanhSachPhieuNhapXuat.Rows.Count - 1; i++)
+            {
+                MaPhieu.Add(dGVDanhSachPhieuNhapXuat.Rows[i].Cells["Mã Phiếu"].Value.ToString());
+            }
+            dtDanhSachPhieuNhapXuat.Rows.Clear();
+            foreach (PhieuDTO phieu in PhieuBLL.Instance.GetListPhieuNow(MaPhieu,TimKiem,LoaiTimKiem))
+            {
+                MessageBox.Show("OK");
+                dtDanhSachPhieuNhapXuat.Rows.Add(phieu.MaPhieu, KhoBLL.Instance.GetKhoByMaKho(phieu.MaKho).TenKho, NhanVienBLL.Instance.GetNhanVienByMaNhanVien(phieu.MaNhanVien).TenNhanVien, phieu.NgayLapPhieu.ToShortDateString());
+            }
+            dGVDanhSachPhieuNhapXuat.DataSource = dtDanhSachPhieuNhapXuat;
+            dGVDanhSachPhieuNhapXuat.Columns["Mã Phiếu"].Visible = false;
         }
     }
 }

@@ -70,11 +70,11 @@ namespace GUI.QLP_GUI
                             {
                                 dtDeXuatPhim.Rows.Add(i.Cells["MaPhim"].Value.ToString(), PhimBLL.Instance.GetPhimByMaPhim(i.Cells["MaPhim"].Value.ToString()).TenPhim, txtSoLuong.Text, cBDonViTinh.SelectedItem.ToString(), txtNoiDung.Text);
                             }
+                            dGVDeXuatPhim.DataSource = dtDeXuatPhim;
                         }
                     }
                 }
             }
-            dGVDeXuatPhim.DataSource = dtDeXuatPhim;
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
