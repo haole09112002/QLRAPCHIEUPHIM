@@ -15,21 +15,21 @@ namespace GUI.QLVT_GUI
     public partial class FrmDashboardQLVT : Form
     {
         NhanVienDTO nhanVien = new NhanVienDTO();
-        public FrmDashboardQLVT(NhanVienDTO NV)
-        {
-            InitializeComponent();
-            nhanVien = NV;
-            lbTenNhanVien.Text = nhanVien.TenNhanVien;
-            
-            
-        }
         UCThongTinSanPhamQLVT ucThongTinSanPhamQLVT = new UCThongTinSanPhamQLVT();
         UCPhongChieuQLVT ucPhongChieuQLVT = new UCPhongChieuQLVT();
         UCMenuDeXuatQLVT ucMenuDeXuatQLVT;
         UCMenuNhaCungUngQLVT ucMenuNhaCungUngQLVT = new UCMenuNhaCungUngQLVT();
         UCMenuNhapXuatQLVT ucMenuNhapXuatQLVT = new UCMenuNhapXuatQLVT();
-        UCHoSoCaNhanQLVT ucHoSoCaNhanQLVT = new UCHoSoCaNhanQLVT();
+        UCHoSoCaNhanQLVT ucHoSoCaNhanQLVT;
+        public FrmDashboardQLVT(NhanVienDTO NV)
+        {
+            InitializeComponent();
+            nhanVien = NV;
+            lbTenNhanVien.Text = nhanVien.TenNhanVien;
+            ucMenuDeXuatQLVT = new UCMenuDeXuatQLVT(nhanVien);
+            ucHoSoCaNhanQLVT = new UCHoSoCaNhanQLVT(nhanVien);
 
+        }
         private void changeColorButton(Button btn)
         {
             btn.BackColor = Color.FromArgb(0, 144, 153);
@@ -59,10 +59,9 @@ namespace GUI.QLVT_GUI
         private void btnDeXuat_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
-            ucMenuDeXuatQLVT = new UCMenuDeXuatQLVT(nhanVien);
             AddControlsToPnMenu(ucMenuDeXuatQLVT);
             ucMenuDeXuatQLVT.setColor();
-            //AddControlsToPnCenter(ucMenuDeXuatQLVT.ucDaDeXuatThucAnQLVT);
+            AddControlsToPnCenter(ucMenuDeXuatQLVT.ucDaDeXuatThucAnQLVT);
             ucMenuDeXuatQLVT.d = new UCMenuDeXuatQLVT.Mydel(AddControlsToPnCenter);
             changeColorButton(btnDeXuat);
         }

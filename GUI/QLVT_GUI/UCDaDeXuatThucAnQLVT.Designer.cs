@@ -43,8 +43,6 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnChinhSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.grbListDeXuat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListDeXuatThucAn)).BeginInit();
@@ -63,8 +61,6 @@
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnChinhSua);
-            this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Location = new System.Drawing.Point(16, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1318, 739);
@@ -162,7 +158,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.btnThem.Location = new System.Drawing.Point(1055, 669);
+            this.btnThem.Location = new System.Drawing.Point(585, 674);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(123, 36);
             this.btnThem.TabIndex = 48;
@@ -236,38 +232,6 @@
             this.label1.Text = "DANH SÁCH THỨC ĂN ĐỀ XUẤT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnChinhSua
-            // 
-            this.btnChinhSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnChinhSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChinhSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChinhSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChinhSua.Image = global::GUI.Properties.Resources.Edit;
-            this.btnChinhSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChinhSua.Location = new System.Drawing.Point(578, 669);
-            this.btnChinhSua.Margin = new System.Windows.Forms.Padding(4);
-            this.btnChinhSua.Name = "btnChinhSua";
-            this.btnChinhSua.Size = new System.Drawing.Size(138, 36);
-            this.btnChinhSua.TabIndex = 42;
-            this.btnChinhSua.Text = "CHỈNH SỬA";
-            this.btnChinhSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChinhSua.UseVisualStyleBackColor = false;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Image = global::GUI.Properties.Resources.trash_can_26px;
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(146, 669);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(123, 36);
-            this.btnXoa.TabIndex = 41;
-            this.btnXoa.Text = "   Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            // 
             // UCDaDeXuatThucAnQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -295,8 +259,6 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnChinhSua;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.DataGridView dgvListChiTietDeXuat;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.GroupBox grbListChiTietDeXuat;

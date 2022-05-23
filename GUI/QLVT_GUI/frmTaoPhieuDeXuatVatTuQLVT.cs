@@ -150,8 +150,7 @@ namespace GUI.QLVT_GUI
             DialogResult dialogResult = MessageBox.Show("Xác nhận lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.OK)
             {
-                MessageBox.Show(nhanVien.MaNhanVien);
-                DeXuatBLL.Instance.LuuDeXuat(nhanVien.MaNhanVien, DateTime.Now, "LDX02"); // sai
+                DeXuatBLL.Instance.LuuDeXuat(nhanVien.MaNhanVien, DateTime.Now, "LDX02");
                 string MaDeXuat = DeXuatBLL.Instance.GetMaDeXuatAddNew();
                 string MaVatTu = "";
                 string NoiDung = "";

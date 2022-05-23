@@ -17,9 +17,9 @@ namespace GUI.QLVT_GUI
         DataTable dtDSPhieuDeXuat = new DataTable();
         DataTable dtCTPhieuDeXuat = new DataTable();
         NhanVienDTO nhanVien = new NhanVienDTO();
-        public UCDaDeXuatVatTuQLVT(NhanVienDTO nhanVien)
+        public UCDaDeXuatVatTuQLVT(NhanVienDTO nv)
         {
-            nhanVien = nhanVien;
+            nhanVien = nv;
             InitializeComponent();
             SetDataTable();
             ReLoad();
@@ -35,10 +35,10 @@ namespace GUI.QLVT_GUI
             dtCTPhieuDeXuat.Columns.Add("Đơn Vị Tính");
             dtCTPhieuDeXuat.Columns.Add("Tình Trạng");
         }
-        public void ReLoad()
+        public void ReLoad(string maLoaiDeXuat = "LDX02")
         {
             dtDSPhieuDeXuat.Rows.Clear();
-            foreach (DeXuatDTO i in DeXuatBLL.Instance.GetDeXuatByMaLoaiDeXuat("LDX02"))
+            foreach (DeXuatDTO i in DeXuatBLL.Instance.GetDeXuatByMaLoaiDeXuat(maLoaiDeXuat))
             {
                 dtDSPhieuDeXuat.Rows.Add(i.MaDeXuat, i.MaNhanVien, i.NgayDeXuat);
             }
@@ -46,9 +46,9 @@ namespace GUI.QLVT_GUI
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(nhanVien.MaNhanVien);
             FrmTaoPhieuDeXuatVatTuQLVT frmTaoPhieuDeXuatVatTuQLVT = new FrmTaoPhieuDeXuatVatTuQLVT(nhanVien);
-            frmTaoPhieuDeXuatVatTuQLVT.Show();
+            frmTaoPhieuDeXuatVatTuQLVT.ShowDialog();
+            ReLoad();
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)

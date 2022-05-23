@@ -35,10 +35,10 @@ namespace GUI.QLVT_GUI
             dtCTPhieuDeXuat.Columns.Add("Đơn Vị Tính");
             dtCTPhieuDeXuat.Columns.Add("Tình Trạng");
         }
-        public void ReLoad()
+        public void ReLoad(string maLoaiDeXuat = "LDX03")
         {
             dtDSPhieuDeXuat.Rows.Clear();
-            foreach (DeXuatDTO i in DeXuatBLL.Instance.GetDeXuatByMaLoaiDeXuat("LDX03"))
+            foreach (DeXuatDTO i in DeXuatBLL.Instance.GetDeXuatByMaLoaiDeXuat(maLoaiDeXuat))
             {
                 dtDSPhieuDeXuat.Rows.Add(i.MaDeXuat, i.MaNhanVien, i.NgayDeXuat);
             }
@@ -46,13 +46,14 @@ namespace GUI.QLVT_GUI
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            FrmTaoPhieuDeXuatThucAnQLVT frmTaoPhieuDeXuatThucAnQLVT = new FrmTaoPhieuDeXuatThucAnQLVT();
-            frmTaoPhieuDeXuatThucAnQLVT.Show();
+            FrmTaoPhieuDeXuatThucAnQLVT frmTaoPhieuDeXuatThucAnQLVT = new FrmTaoPhieuDeXuatThucAnQLVT(nhanVien);
+            frmTaoPhieuDeXuatThucAnQLVT.ShowDialog();
+            ReLoad();
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            FrmTaoPhieuDeXuatThucAnQLVT frmTaoPhieuDeXuatThucAnQLVT = new FrmTaoPhieuDeXuatThucAnQLVT();
+            FrmTaoPhieuDeXuatThucAnQLVT frmTaoPhieuDeXuatThucAnQLVT = new FrmTaoPhieuDeXuatThucAnQLVT(nhanVien);
             frmTaoPhieuDeXuatThucAnQLVT.Show();
         }
 

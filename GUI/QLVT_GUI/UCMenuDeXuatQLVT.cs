@@ -14,27 +14,30 @@ namespace GUI.QLVT_GUI
     public partial class UCMenuDeXuatQLVT : UserControl
     {
         NhanVienDTO nhanVien = new NhanVienDTO();
+        
         public delegate void Mydel(UserControl c);
         public Mydel d { get; set; }
-        //public UCDaDeXuatThucAnQLVT ucDaDeXuatThucAnQLVT;
-        //public UCDaDeXuatVatTuQLVT ucDaDeXuatVatTuQLVT;
+        public UCDaDeXuatVatTuQLVT ucDaDeXuatVatTu;
+        public UCDaDeXuatThucAnQLVT ucDaDeXuatThucAnQLVT;
         public UCMenuDeXuatQLVT(NhanVienDTO NV)
         {
             nhanVien = NV;
-            //ucDaDeXuatThucAnQLVT = new UCDaDeXuatThucAnQLVT(nhanVien);
-            //ucDaDeXuatVatTuQLVT =  new UCDaDeXuatVatTuQLVT(nhanVien);
+            ucDaDeXuatVatTu = new UCDaDeXuatVatTuQLVT(nhanVien);
+            ucDaDeXuatThucAnQLVT = new UCDaDeXuatThucAnQLVT(nhanVien);
             InitializeComponent();
         }
         private void btnMenuListDXThucAn_Click(object sender, EventArgs e)
         {
-            d(new UCDaDeXuatThucAnQLVT(nhanVien));
+           
+            d(ucDaDeXuatThucAnQLVT);
+            
             changeColorButton(btnMenuListDXThucAn); 
         }
 
         private void btnMenuListDXVatTu_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(nhanVien.MaNhanVien);
-            d(new UCDaDeXuatVatTuQLVT(nhanVien));
+            
+            d(ucDaDeXuatVatTu);
             changeColorButton(btnMenuListDXVatTu);
         }
         private void changeColorButton(Button btn)

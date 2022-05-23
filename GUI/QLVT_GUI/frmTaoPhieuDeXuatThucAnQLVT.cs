@@ -16,8 +16,10 @@ namespace GUI.QLVT_GUI
     {
         DataTable dtDeXuatThucAn = new DataTable();
         DataTable dsDexuatThucAn = new DataTable();
-        public FrmTaoPhieuDeXuatThucAnQLVT()
+        NhanVienDTO nhanVien  = new NhanVienDTO();
+        public FrmTaoPhieuDeXuatThucAnQLVT(NhanVienDTO nhanVien)
         {
+            this.nhanVien = nhanVien;
             InitializeComponent();
             SetDataTable();
             ReLoad();
@@ -135,7 +137,7 @@ namespace GUI.QLVT_GUI
             DialogResult dialogResult = MessageBox.Show("Xác nhận lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.OK)
             {
-                DeXuatBLL.Instance.LuuDeXuat("NV0001", DateTime.Now, "LDX03"); // sai
+                DeXuatBLL.Instance.LuuDeXuat(nhanVien.MaNhanVien, DateTime.Now, "LDX03"); // sai
                 string MaDeXuat = DeXuatBLL.Instance.GetMaDeXuatAddNew();
                 string MaThucAn = "";
                 string NoiDung = "";
