@@ -116,6 +116,19 @@ namespace BLL
         {
            return GetDsPhongChieuViewByMaTinhTrang(maTinhTrang).FindAll(x=> x.TenPhong.Contains(txt) || x.MaPhongChieu.Contains(txt));
         }
-        
+
+        public List<PhongChieuDTO> GetAllPhongChieuByTinhTrang(int TinhTrang, string txt = "")
+        {
+            List<PhongChieuDTO> data = new List<PhongChieuDTO>();
+            foreach (PhongChieuDTO i in PhongChieuDAL.Instance.GetAllPhongChieu())
+            {
+                if (i.MaTinhTrang == TinhTrang && i.TenPhong.Contains(txt))
+                {
+                    data.Add(i);
+                }
+            }
+            return data;
+        }
+
     }
 }

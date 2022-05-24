@@ -102,7 +102,7 @@ Create table LICH_CHIEU(
 	MaPhongChieu varchar(6) foreign key(MaPhongChieu) references PHONG_CHIEU,
 	MaKhungGioChieu varchar(8) foreign key(MaKhungGioChieu) references KHUNG_GIO_CHIEU,
 	NgayChieu date,
-	TrangThai bit,
+	TrangThai varchar(1),	-- 0(Ko chap nhan), 1(du kien), 2(chinh thuc),
 	constraint pk_LichChieu primary key(MaPhim,MaPhongChieu,MaKhungGioChieu,NgayChieu)
 )
 go
