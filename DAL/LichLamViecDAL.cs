@@ -8,43 +8,43 @@ using System.Data;
 
 namespace DAL
 {
-    public class ChiTietCaLamViecDAL
+    public class LichLamViecDAL
     {
-        private static ChiTietCaLamViecDAL instance;
+        private static LichLamViecDAL instance;
 
-        public static ChiTietCaLamViecDAL Instance
+        public static LichLamViecDAL Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new ChiTietCaLamViecDAL();
+                    instance = new LichLamViecDAL();
                 }
                 return instance;
             }
             private set { }
         }
-        private ChiTietCaLamViecDAL()
+        private LichLamViecDAL()
         {
 
         }
-        public List<ChiTietCaLamViecDTO> GetAllChiTietCaLamViec()
+        public List<LichLamViecDTO> GetAllLichLamViec()
         {
-            List<ChiTietCaLamViecDTO> data = new List<ChiTietCaLamViecDTO>();
-            string query = "select * from CHI_TIET_CA_LAM_VIEC";
+            List<LichLamViecDTO> data = new List<LichLamViecDTO>();
+            string query = "select * from lICH_LAM_VIEC";
             foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
             {
-                data.Add(GetChiTietCaLamViecByDataRow(i));
+                data.Add(GetLichLamViecByDataRow(i));
             }
             return data;
         }
-        public ChiTietCaLamViecDTO GetChiTietCaLamViecByDataRow(DataRow i)
+        public LichLamViecDTO GetLichLamViecByDataRow(DataRow i)
         {
-            return new ChiTietCaLamViecDTO()
+            return new LichLamViecDTO()
             {
                 MaNhanVien = i["MaNhanVien"].ToString(),
                 MaCa = i["MaCa"].ToString(),
-                TrangThai = Convert.ToBoolean(i["TrangThai"].ToString()),
+                NgayLamViec = Convert.ToDateTime(i["NgayLamViec"].ToString()),
             };
         }
     }

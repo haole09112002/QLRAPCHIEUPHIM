@@ -42,7 +42,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbTenNhanVien = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
@@ -236,7 +236,7 @@
             this.pnTop.Controls.Add(this.label6);
             this.pnTop.Controls.Add(this.pictureBox1);
             this.pnTop.Controls.Add(this.label5);
-            this.pnTop.Controls.Add(this.label4);
+            this.pnTop.Controls.Add(this.lbTenNhanVien);
             this.pnTop.Controls.Add(this.label3);
             this.pnTop.Controls.Add(this.label2);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -251,7 +251,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(228, 21);
+            this.label6.Location = new System.Drawing.Point(307, 23);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(394, 37);
             this.label6.TabIndex = 17;
@@ -261,7 +261,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::GUI.Properties.Resources.shutdown_40px;
-            this.pictureBox1.Location = new System.Drawing.Point(1108, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(1298, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -274,7 +274,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Image = global::GUI.Properties.Resources.EmployeeQLVT;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(924, 30);
+            this.label5.Location = new System.Drawing.Point(1100, 29);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(178, 39);
@@ -282,22 +282,22 @@
             this.label5.Text = "Quản lý vật tư";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label4
+            // lbTenNhanVien
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(1008, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label";
+            this.lbTenNhanVien.AutoSize = true;
+            this.lbTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenNhanVien.ForeColor = System.Drawing.Color.Black;
+            this.lbTenNhanVien.Location = new System.Drawing.Point(1179, 7);
+            this.lbTenNhanVien.Name = "lbTenNhanVien";
+            this.lbTenNhanVien.Size = new System.Drawing.Size(49, 20);
+            this.lbTenNhanVien.TabIndex = 2;
+            this.lbTenNhanVien.Text = "label";
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(819, 37);
+            this.label3.Location = new System.Drawing.Point(983, 37);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 27);
             this.label3.TabIndex = 1;
@@ -308,7 +308,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(816, 3);
+            this.label2.Location = new System.Drawing.Point(983, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 24);
             this.label2.TabIndex = 0;
@@ -370,7 +370,7 @@
         private System.Windows.Forms.Panel pnMenuContent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbTenNhanVien;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
