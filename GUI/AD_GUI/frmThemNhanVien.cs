@@ -55,15 +55,23 @@ namespace GUI.AD_GUI
                         cbbChinhSach.SelectedItem = i;
                 }
             txtCCCD.Text = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).CCCD1;
-            txtTenTK.Text = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).TenNhanVien;
+            txtTenTK.Text = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).TenTaiKhoan;
             txtMatKhau.Text = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).MatKhau;
             }
            
         }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (btnLuu.Enabled == true)
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn thoát!, Dữ liệu chưa được lưu lại", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                    this.Close();
+            }
+            else
+            {
+                this.Close();
+            }
         }
         public void setEnable(bool var)
         {
@@ -79,28 +87,50 @@ namespace GUI.AD_GUI
             cbbChinhSach.Enabled = var;
             
         }
-
         private void btnLuu_Click(object sender, EventArgs e)
         {
-
-
+            string maChucVu = "";
+            if (cbbChucVu.SelectedItem != null)
+            {
+                maChucVu = ((CBBItem)cbbChucVu.SelectedItem).Value;
+            }
+            string maChinhSach = "";
+            if (cbbChinhSach.SelectedItem != null)
+            {
+                maChinhSach = ((CBBItem)cbbChinhSach.SelectedItem).Value;
+            }
+            radioButton2.Checked = true;
             NhanVienDTO nhanVien = new NhanVienDTO
             {
                 MaNhanVien = maNhanVienn,
                 TenNhanVien = txtHoTen.Text,
                 NgaySinh = dtpNgaySinh.Value,
-                GioiTinh = radioButton1.Checked,
+                GioiTinh = radioButton2.Checked,
                 SoDienThoai=txtDienThoai.Text,
                 DiaChi =txtDiaChi.Text,
                 CCCD1 =txtCCCD.Text,
                 TenTaiKhoan = txtTenTK.Text,
                 MatKhau =NhanVienBLL.Instance.MD5(txtMatKhau.Text),
-                MaChinhSach =  ((CBBItem)cbbChinhSach.SelectedItem).Value,
-                MaChucVu = ((CBBItem)cbbChucVu.SelectedItem).Value
+                MaChinhSach =  maChinhSach,
+                MaChucVu = maChucVu
             };
-            NhanVienBLL.Instance.AddUpdateNhaCungCap(nhanVien);
-            d();
-            this.Close();
+            if (NhanVienBLL.Instance.KiemTraDuLieu(nhanVien) == null)
+            {
+                DialogResult result = MessageBox.Show("Bạn muốn lưu?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    NhanVienBLL.Instance.AddUpdateNhanVien(nhanVien);
+                    DialogResult result2 = MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    {
+                        d();
+                        this.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show(NhanVienBLL.Instance.KiemTraDuLieu(nhanVien), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnResetPass_Click(object sender, EventArgs e)
