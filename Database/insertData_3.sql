@@ -193,9 +193,9 @@ insert into NGAY_LAM_VIEC(NgayLamViec,MaCa) values('2022-04-25','CLV004');
 insert into NGAY_LAM_VIEC(NgayLamViec,MaCa) values('2022-05-25','CLV005');
 ---- Đã xong
 ------16. Chính sách ------- CS0001
-insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Kha','1','6 thang','200000');
-insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('XuatSac','2','2 nam','300000');
-insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Gioi','3','1 nam','400000');
+insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Khá','1','6 thang','200000');
+insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Xuất Sắc','2','2 nam','300000');
+insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Giỏi','3','1 nam','400000');
 ----- Đã xong
 -----17.Chức vụ ------ CV0001
 insert into CHUC_VU(TenChucVu) values (N'Quản lý phim');
@@ -230,6 +230,8 @@ insert into LOAI_KHO(TenLoaiKho) values (N'Thức ăn nhanh');
 insert into KHO(MaLoaiKho,TenKho) values ('LK001',N'Kho số 1');
 insert into KHO(MaLoaiKho,TenKho) values ('LK002',N'Kho số 2');
 insert into KHO(MaLoaiKho,TenKho) values ('LK003',N'Kho số 3');
+insert into KHO(MaLoaiKho,TenKho) values ('LK002',N'Kho số 4');
+insert into KHO(MaLoaiKho,TenKho) values ('LK003',N'Kho số 5');
 ----- Đã xong
 -----22. Chi tiết kho phim
 insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00001',N'Đĩa','1');

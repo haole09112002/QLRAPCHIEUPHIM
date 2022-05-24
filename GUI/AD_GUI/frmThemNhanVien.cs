@@ -55,7 +55,7 @@ namespace GUI.AD_GUI
                         cbbChinhSach.SelectedItem = i;
                 }
             txtCCCD.Text = NhanVienBLL.Instance.GetNVByMaNV(maNv).CCCD1;
-            txtTenTK.Text = NhanVienBLL.Instance.GetNVByMaNV(maNv).TenNhanVien;
+            txtTenTK.Text = NhanVienBLL.Instance.GetNVByMaNV(maNv).TenTaiKhoan;
             txtMatKhau.Text = NhanVienBLL.Instance.GetNVByMaNV(maNv).MatKhau;
             }
            

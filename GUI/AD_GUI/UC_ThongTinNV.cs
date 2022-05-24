@@ -21,22 +21,32 @@ namespace GUI.AD_GUI
         }
         public void SetGUI()
         {
+            cbbTimKiem.Items.AddRange(new string[]
+            {
+                "Mã Nhân Viên","Tên Nhân Viên","SDT"
+            });
+            cbbSapXep.Items.AddRange(new string[]
+            {
+                "Tên A->Z","Tên Z->A"
+            });
             loadDGVDSNhanVien();
         }
-        //public void loadDGVDanhSachNhanVien(string maChucVu = "0", string txt = "")
-        //{
-        //    dgvDSNhanVien.DataSource = NhanVienBLL.Instance.GetNhanVienViewByMaChucVu(maChucVu, txt);
-        //}
         public void loadDGVDSNhanVien()
         {
             dgvDSNhanVien.DataSource = NhanVienBLL.Instance.GetAllNhanVienView();
+            dgvDSNhanVien.Columns["MaNhanVien"].HeaderText = "Mã Nhân Viên";
+            dgvDSNhanVien.Columns["TenNhanVien"].HeaderText = "Tên Nhân Viên";
+            dgvDSNhanVien.Columns["NgaySinh"].HeaderText = "Ngày Sinh";
+            dgvDSNhanVien.Columns["GioiTinh"].HeaderText = "Giới Tính";
+            dgvDSNhanVien.Columns["SoDienThoai"].HeaderText = "Số Điện Thoại";
+            dgvDSNhanVien.Columns["TenChinhSach"].HeaderText = "Tên Chính Sách";
+            dgvDSNhanVien.Columns["TenChucVu"].HeaderText = "Tên Chức Vụ";
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
             frmThemNhanVien frmThemNhanVien = new frmThemNhanVien();
             frmThemNhanVien.d = new frmThemNhanVien.MyDel(loadDGVDSNhanVien);
             frmThemNhanVien.ShowDialog();
-
         }
 
         private void btnXemCT_Click(object sender, EventArgs e)
@@ -50,37 +60,39 @@ namespace GUI.AD_GUI
             }
             else if (dgvDSNhanVien.SelectedRows.Count > 1) { MessageBox.Show("Bạn chỉ có thể chọn 1 đối tượng"); }
         }
-
-        private void btnSapXep_Click(object sender, EventArgs e)
-        {
-            
-        }
         private void cbbSapXep_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Sort();
+        }
+        private void Sort()
+        {
+            if (cbbSapXep.SelectedIndex >= 0)
             {
-                if (cbbSapXep.SelectedIndex == 0)
+                List<string> now = new List<string>();
+                string dkSapXep = cbbSapXep.SelectedItem.ToString();
+                foreach (DataGridViewRow row in dgvDSNhanVien.Rows)
                 {
-                    this.dgvDSNhanVien.Sort(this.dgvDSNhanVien.Columns["TenNhanVien"], ListSortDirection.Ascending);
+                    now.Add(row.Cells["MaNhanVien"].Value.ToString());
                 }
-                else
-                {
-                    this.dgvDSNhanVien.Sort(this.dgvDSNhanVien.Columns["MaNhanVien"], ListSortDirection.Ascending);
-                }
+                dgvDSNhanVien.DataSource = NhanVienBLL.Instance.SortNhanVien(NhanVienBLL.Instance.GetNhanVienViewDGV(now),dkSapXep);
             }
         }
-        //private void Sort()
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if(cbbTimKiem.SelectedItem== "Mã Nhân Viên")
+            dgvDSNhanVien.DataSource = NhanVienBLL.Instance.TimTheoMaNV(txtTimKiem.Text);
+            if (cbbTimKiem.SelectedItem == "Tên Nhân Viên")
+            dgvDSNhanVien.DataSource = NhanVienBLL.Instance.TimTheoTenNV(txtTimKiem.Text);
+            if (cbbTimKiem.SelectedItem == "SDT")
+            dgvDSNhanVien.DataSource = NhanVienBLL.Instance.TimTheoSDT(txtTimKiem.Text);
+        }
+
+        //private void btnXoa_Click(object sender, EventArgs e)
         //{
-        //    if (cbbSapXep.SelectedIndex >= 0)
-        //    {
-        //        List<string> now = new List<string>();
-        //        string dkSapXep = cbbSapXep.SelectedItem.ToString();
-        //        foreach (DataGridViewRow row in dgvDSNhanVien.Rows)
-        //        {
-        //            now.Add(row.Cells["MaNhanVien"].Value.ToString());
-        //        }
-        //        dgvDSNhanVien.DataSource = NhanVienBLL.Instance.SortNhanVien(NhanVienBLL.Instance.GetNhanVienViewDGV(now), dkSapXep);
-        //        loadDGVDSNhanVien(dgvDSNhanVien.Rows[0].Cells["MaNhanVien"].Value.ToString());
-        //    }
-        //}
+        //    string maNhanVien = txtTimKiem.Text;
+        //    NhanVienDTO nhanVien = new NhanVienDTO();
+        //    NhanVienBLL.DeleteNhanVien(maNhanVien);
+        //    dgvDSNhanVien.DataSource = NhanVienBLL.Instance.GetAllNhanVienView();
+        //}   
     }
 }

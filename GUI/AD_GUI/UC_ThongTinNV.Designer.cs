@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnXoa = new System.Windows.Forms.Button();
+            this.cbbTimKiem = new System.Windows.Forms.ComboBox();
             this.btnXemCT = new System.Windows.Forms.Button();
             this.btnSapXep = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -37,7 +37,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDSNhanVien = new System.Windows.Forms.DataGridView();
             this.cbbSapXep = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhanVien)).BeginInit();
@@ -46,35 +46,28 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnXoa);
+            this.panel1.Controls.Add(this.cbbTimKiem);
             this.panel1.Controls.Add(this.btnXemCT);
             this.panel1.Controls.Add(this.btnSapXep);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.cbbSapXep);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Location = new System.Drawing.Point(11, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(721, 451);
             this.panel1.TabIndex = 0;
             // 
-            // btnXoa
+            // cbbTimKiem
             // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Image = global::GUI.Properties.Resources.trash_can_26px;
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(484, 396);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(92, 29);
-            this.btnXoa.TabIndex = 40;
-            this.btnXoa.Text = "   Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
+            this.cbbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbbTimKiem.FormattingEnabled = true;
+            this.cbbTimKiem.Location = new System.Drawing.Point(518, 48);
+            this.cbbTimKiem.Name = "cbbTimKiem";
+            this.cbbTimKiem.Size = new System.Drawing.Size(170, 24);
+            this.cbbTimKiem.TabIndex = 41;
             // 
             // btnXemCT
             // 
@@ -84,7 +77,7 @@
             this.btnXemCT.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemCT.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnXemCT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXemCT.Location = new System.Drawing.Point(99, 398);
+            this.btnXemCT.Location = new System.Drawing.Point(157, 398);
             this.btnXemCT.Name = "btnXemCT";
             this.btnXemCT.Size = new System.Drawing.Size(111, 29);
             this.btnXemCT.TabIndex = 39;
@@ -107,7 +100,6 @@
             this.btnSapXep.TabIndex = 38;
             this.btnSapXep.Text = "    SẮP XẾP";
             this.btnSapXep.UseVisualStyleBackColor = false;
-            this.btnSapXep.Click += new System.EventHandler(this.btnSapXep_Click);
             // 
             // btnThem
             // 
@@ -116,7 +108,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.btnThem.Location = new System.Drawing.Point(300, 396);
+            this.btnThem.Location = new System.Drawing.Point(411, 398);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(88, 29);
@@ -141,6 +133,7 @@
             this.btnTimKiem.Text = "TÌM KIẾM";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // groupBox1
             // 
@@ -157,6 +150,7 @@
             // 
             // dgvDSNhanVien
             // 
+            this.dgvDSNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSNhanVien.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvDSNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSNhanVien.Location = new System.Drawing.Point(16, 23);
@@ -177,14 +171,14 @@
             this.cbbSapXep.TabIndex = 34;
             this.cbbSapXep.SelectedIndexChanged += new System.EventHandler(this.cbbSapXep_SelectedIndexChanged);
             // 
-            // textBox1
+            // txtTimKiem
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(518, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 24);
-            this.textBox1.TabIndex = 33;
+            this.txtTimKiem.BackColor = System.Drawing.Color.White;
+            this.txtTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(518, 18);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(171, 24);
+            this.txtTimKiem.TabIndex = 33;
             // 
             // UC_ThongTinNV
             // 
@@ -205,7 +199,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnXemCT;
         private System.Windows.Forms.Button btnSapXep;
         private System.Windows.Forms.Button btnThem;
@@ -213,6 +206,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvDSNhanVien;
         private System.Windows.Forms.ComboBox cbbSapXep;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.ComboBox cbbTimKiem;
     }
 }

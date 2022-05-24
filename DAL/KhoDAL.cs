@@ -47,10 +47,33 @@ namespace DAL
                 TenKho = i["TenKho"].ToString()
             };
         }
-        public DataTable TimTheoMa(string maKho)
+        public LoaiKhoDTO GetLoaiKhoByDataRow(DataRow i)
         {
-            string query = "SELECT * FROM KHO WHERE MaKho LIKE '{maKho}%'";
-            return DBHelper.Instance.ExcuteQuery(query);
+            return new LoaiKhoDTO()
+            {
+                MaLoaiKho = i["MaLoaiKho"].ToString(),
+                TenLoaiKho = i["TenLoaiKho"].ToString(),
+            };
+        }
+        public List<KhoDTO> TimTheoTenKho(string tenKho)
+        {
+            List<KhoDTO> data = new List<KhoDTO>();
+            string query = $"SELECT * FROM KHO WHERE TenKho LIKE '%{tenKho}%'";
+            foreach(DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                data.Add(GetKhoByDataRow(i));
+            }
+            return data;
+        }
+        public List<LoaiKhoDTO> TimTheoTenLoai(string tenLoaiKho)
+        {
+            List<LoaiKhoDTO> data = new List<LoaiKhoDTO>();
+            string query = $"SELECT * FROM LOAI_KHO WHERE TenLoaiKho LIKE '%{tenLoaiKho}%'";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                data.Add(GetLoaiKhoByDataRow(i));
+            }
+            return data;
         }
     }
 }

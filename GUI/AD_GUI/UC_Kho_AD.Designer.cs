@@ -91,13 +91,14 @@
             this.btnXuat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXuat.Image = global::GUI.Properties.Resources.Download;
             this.btnXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuat.Location = new System.Drawing.Point(437, 48);
+            this.btnXuat.Location = new System.Drawing.Point(364, 49);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.Size = new System.Drawing.Size(111, 32);
             this.btnXuat.TabIndex = 25;
             this.btnXuat.Text = "XUẤT EXCEL";
             this.btnXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXuat.UseVisualStyleBackColor = false;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // btnTimKiem
             // 
@@ -113,7 +114,7 @@
             this.btnTimKiem.TabIndex = 24;
             this.btnTimKiem.Text = "   TÌM KIẾM";
             this.btnTimKiem.UseVisualStyleBackColor = false;
-  //          this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click_1);
             // 
             // button6
             // 
@@ -152,6 +153,7 @@
             this.cbbLoaiKho.Name = "cbbLoaiKho";
             this.cbbLoaiKho.Size = new System.Drawing.Size(200, 25);
             this.cbbLoaiKho.TabIndex = 4;
+            this.cbbLoaiKho.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiKho_SelectedIndexChanged);
             // 
             // txtTimKiem
             // 
@@ -177,6 +179,7 @@
             // 
             // dgvKho
             // 
+            this.dgvKho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKho.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKho.Location = new System.Drawing.Point(4, 22);

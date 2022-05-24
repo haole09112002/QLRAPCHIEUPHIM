@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.rbDaDeXuat = new System.Windows.Forms.RadioButton();
+            this.rbDeXuat = new System.Windows.Forms.RadioButton();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnKhongDongY = new System.Windows.Forms.Button();
             this.btnDongY = new System.Windows.Forms.Button();
             this.cbbDeXuat = new System.Windows.Forms.ComboBox();
@@ -52,17 +54,17 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.rbDaDeXuat);
+            this.panel1.Controls.Add(this.rbDeXuat);
+            this.panel1.Controls.Add(this.txtTimKiem);
+            this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.btnKhongDongY);
             this.panel1.Controls.Add(this.btnDongY);
             this.panel1.Controls.Add(this.cbbDeXuat);
             this.panel1.Controls.Add(this.dgvDaDeXuat);
             this.panel1.Controls.Add(this.dgvDeXuat);
             this.panel1.Location = new System.Drawing.Point(32, 3);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(695, 478);
             this.panel1.TabIndex = 0;
@@ -103,54 +105,55 @@
             this.label4.Text = "DANH SÁCH ĐỀ XUẤT";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // radioButton2
+            // rbDaDeXuat
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.radioButton2.Location = new System.Drawing.Point(586, 452);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(109, 21);
-            this.radioButton2.TabIndex = 25;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Đã Đề Xuất";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbDaDeXuat.AutoSize = true;
+            this.rbDaDeXuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbDaDeXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rbDaDeXuat.Location = new System.Drawing.Point(586, 452);
+            this.rbDaDeXuat.Name = "rbDaDeXuat";
+            this.rbDaDeXuat.Size = new System.Drawing.Size(109, 21);
+            this.rbDaDeXuat.TabIndex = 25;
+            this.rbDaDeXuat.TabStop = true;
+            this.rbDaDeXuat.Text = "Đã Đề Xuất";
+            this.rbDaDeXuat.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbDeXuat
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.radioButton1.Location = new System.Drawing.Point(586, 429);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(84, 21);
-            this.radioButton1.TabIndex = 24;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Đề Xuất";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbDeXuat.AutoSize = true;
+            this.rbDeXuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbDeXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rbDeXuat.Location = new System.Drawing.Point(586, 429);
+            this.rbDeXuat.Name = "rbDeXuat";
+            this.rbDeXuat.Size = new System.Drawing.Size(84, 21);
+            this.rbDeXuat.TabIndex = 24;
+            this.rbDeXuat.TabStop = true;
+            this.rbDeXuat.Text = "Đề Xuất";
+            this.rbDeXuat.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtTimKiem
             // 
-            this.textBox1.Location = new System.Drawing.Point(407, 439);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 23;
+            this.txtTimKiem.Location = new System.Drawing.Point(407, 439);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(163, 20);
+            this.txtTimKiem.TabIndex = 23;
             // 
-            // button3
+            // btnTimKiem
             // 
-            this.button3.BackColor = System.Drawing.Color.Cyan;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::GUI.Properties.Resources.SearchIcon;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(302, 435);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 29);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "TÌM KIẾM";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnTimKiem.BackColor = System.Drawing.Color.Cyan;
+            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.Location = new System.Drawing.Point(302, 435);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(92, 29);
+            this.btnTimKiem.TabIndex = 22;
+            this.btnTimKiem.Text = "TÌM KIẾM";
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click_1);
             // 
             // btnKhongDongY
             // 
@@ -196,6 +199,7 @@
             this.cbbDeXuat.Name = "cbbDeXuat";
             this.cbbDeXuat.Size = new System.Drawing.Size(155, 21);
             this.cbbDeXuat.TabIndex = 18;
+            this.cbbDeXuat.SelectedIndexChanged += new System.EventHandler(this.cbbDeXuat_SelectedIndexChanged);
             // 
             // dgvDaDeXuat
             // 
@@ -209,10 +213,27 @@
             // 
             // dgvDeXuat
             // 
+            this.dgvDeXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDeXuat.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDeXuat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDeXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDeXuat.Location = new System.Drawing.Point(21, 52);
             this.dgvDeXuat.Name = "dgvDeXuat";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDeXuat.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDeXuat.RowHeadersWidth = 51;
             this.dgvDeXuat.Size = new System.Drawing.Size(648, 170);
             this.dgvDeXuat.TabIndex = 14;
@@ -235,10 +256,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RadioButton rbDaDeXuat;
+        private System.Windows.Forms.RadioButton rbDeXuat;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnKhongDongY;
         private System.Windows.Forms.Button btnDongY;
         private System.Windows.Forms.ComboBox cbbDeXuat;

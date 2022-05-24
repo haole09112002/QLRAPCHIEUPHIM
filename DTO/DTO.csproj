@@ -50,6 +50,7 @@
     <Compile Include="ChiTietDeXuatVatTuView.cs" />
     <Compile Include="ChiTietKhoVatTuView.cs" />
     <Compile Include="ChiTietPhongChieuView.cs" />
+    <Compile Include="DeXuatViewDTO.cs" />
     <Compile Include="HopDongThucAnView.cs" />
     <Compile Include="ChiTietKhoPhimDTO.cs" />
     <Compile Include="ChiTietKhoThucAnDTO.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="HopDongVatTuView.cs" />
     <Compile Include="HopDongViewDTO.cs" />
     <Compile Include="KhoDTO.cs" />
+    <Compile Include="KhoView.cs" />
     <Compile Include="LoaiDeXuatDTO.cs" />
     <Compile Include="LoaiHopDongDTO.cs" />
     <Compile Include="ChiTietDienVienDaoDienPhimDTO.cs" />

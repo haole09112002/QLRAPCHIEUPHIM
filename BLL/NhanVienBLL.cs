@@ -13,7 +13,6 @@ namespace BLL
     public class NhanVienBLL
     {
         private static NhanVienBLL instance;
-
         public static NhanVienBLL Instance
         {
             get
@@ -41,12 +40,20 @@ namespace BLL
         public NhanVienViewDTO GetNhanVienViewByNhanVienDTO(NhanVienDTO nhanVien)
         {
             string gioiTinh = "";
+            string tenChinhSach = "";
             string tenChucVu = "";
             foreach (ChucVuDTO i in ChucVuDAL.Instance.GetAllChucVu())
             {
                 if (i.MaChucVu == nhanVien.MaChucVu)
                 {
                     tenChucVu = i.TenChucVu;
+                }
+            }
+            foreach (ChinhSachDTO i in ChinhSachDAL.Instance.GetAllChinhSach())
+            {
+                if (i.MaChinhSach == nhanVien.MaChinhSach)
+                {
+                    tenChinhSach = i.TenChinhSach;
                 }
             }
             if (nhanVien.GioiTinh == true) gioiTinh = "Nam";
@@ -58,7 +65,7 @@ namespace BLL
                 NgaySinh = nhanVien.NgaySinh.ToString(),
                 GioiTinh = gioiTinh,
                 SoDienThoai = nhanVien.SoDienThoai,
-                MaChinhSach = nhanVien.MaChinhSach,
+                TenChinhSach = tenChinhSach,
                 TenChucVu = tenChucVu
             };
         }
@@ -71,18 +78,6 @@ namespace BLL
             }
             return data;
         }
-        //public NhanVienDTO GetNhanVienByMaNhanVien(string maNhanVien)
-        //{
-        //    List<NhanVienDTO> data = GetAllNhanVien();
-        //    foreach(NhanVienDTO i in data)
-        //    {
-        //        if (i.MaNhanVien == maNhanVien)
-        //        {
-        //            return i;
-        //        }
-        //    }
-        //    return null;
-        //}
         public NhanVienDTO GetNVByMaNV(string MaNV)
         {
             NhanVienDTO nhanVien = null;
@@ -138,41 +133,43 @@ namespace BLL
                 NhanVienDAL.Instance.CapNhatNhanVien(nhanVien);
             }
         }
-        //public delegate bool CompareObj(object o1, object o2);
-        //public List<NhanVienViewDTO> SortNhanVien(List<NhanVienViewDTO> now, string dkSort)
-        //{
-        //    if (dkSort == "Tên A->Z")
-        //        return Sort(now, CompareTenNhanVienTang);
-        //    if (dkSort == "Tên Z->A")
-        //        return Sort(now, CompareTenNhanVienGiam);
-        //    return null;
-        //}
-        //public static bool CompareTenNhanVienTang(object o1, object o2)
-        //{
-        //    return String.Compare(((NhanVienViewDTO)o1).TenNhanVien, ((NhanVienViewDTO)o2).TenNhanVien) > 0;
-        //}
-        //public static bool CompareTenNhanVienGiam(object o1, object o2)
-        //{
-        //    return String.Compare(((NhanVienViewDTO)o2).TenNhanVien, ((NhanVienViewDTO)o1).TenNhanVien) > 0;
-        //}
+        public static void DeleteNhanVien(string maNhanVien)
+        {
+            NhanVienDAL.XoaNhanVien(maNhanVien);
+        }
+        public delegate bool CompareObj(object o1, object o2);
+        public List<NhanVienViewDTO> SortNhanVien(List<NhanVienViewDTO> now, string dkSort)
+        {
+            if (dkSort == "Tên A->Z")
+                return Sort(now, CompareTenNhanVienTang);
+            if (dkSort == "Tên Z->A")
+                return Sort(now, CompareTenNhanVienGiam);
+            return null;
+        }
+        public static bool CompareTenNhanVienTang(object o1, object o2)
+        {
+            return String.Compare(((NhanVienViewDTO)o1).TenNhanVien, ((NhanVienViewDTO)o2).TenNhanVien) > 0;
+        }
+        public static bool CompareTenNhanVienGiam(object o1, object o2)
+        {
+            return String.Compare(((NhanVienViewDTO)o2).TenNhanVien, ((NhanVienViewDTO)o1).TenNhanVien) > 0;
+        }
 
-
-        //public List<NhanVienViewDTO> Sort(List<NhanVienViewDTO> now, CompareObj cmp)
-        //{
-        //    List<NhanVienViewDTO> data = now;
-        //    for (int i = 0; i < data.Count - 1; i++)
-        //        for (int j = i + 1; j < data.Count; j++)
-        //        {
-        //            if (cmp(data[i], data[j]))
-        //            {
-        //                NhanVienViewDTO temp = data[i];
-        //                data[i] = data[j];
-        //                data[j] = temp;
-        //            }
-        //        }
-        //    return data;
-        //}
-
+        public List<NhanVienViewDTO> Sort(List<NhanVienViewDTO> now, CompareObj cmp)
+        {
+            List<NhanVienViewDTO> data = now;
+            for (int i = 0; i < data.Count - 1; i++)
+                for (int j = i + 1; j < data.Count; j++)
+                {
+                    if (cmp(data[i], data[j]))
+                    {
+                        NhanVienViewDTO temp = data[i];
+                        data[i] = data[j];
+                        data[j] = temp;
+                    }
+                }
+            return data;
+        }
         public string KiemTraDuLieu(NhanVienDTO nhanVien)
         {
 
@@ -250,6 +247,33 @@ namespace BLL
             {
                 throw;
             }
+        }
+        public List<NhanVienViewDTO> TimTheoMaNV(string maNhanVien)
+        {
+            List<NhanVienViewDTO> data = new List<NhanVienViewDTO>();
+            foreach (NhanVienDTO i in NhanVienDAL.Instance.TimTheoMa(maNhanVien))
+            {
+                data.Add(GetNhanVienViewByNhanVienDTO(i));
+            }
+            return data;
+        }
+        public List<NhanVienViewDTO> TimTheoTenNV(string tenNhanVien)
+        {
+            List<NhanVienViewDTO> data = new List<NhanVienViewDTO>();
+            foreach (NhanVienDTO i in NhanVienDAL.Instance.TimTheoTen(tenNhanVien))
+            {
+                data.Add(GetNhanVienViewByNhanVienDTO(i));
+            }
+            return data;
+        }
+        public List<NhanVienViewDTO> TimTheoSDT(string soDienThoai)
+        {
+            List<NhanVienViewDTO> data = new List<NhanVienViewDTO>();
+            foreach (NhanVienDTO i in NhanVienDAL.Instance.TimTheoSDT(soDienThoai))
+            {
+                data.Add(GetNhanVienViewByNhanVienDTO(i));
+            }
+            return data;
         }
     }
 }

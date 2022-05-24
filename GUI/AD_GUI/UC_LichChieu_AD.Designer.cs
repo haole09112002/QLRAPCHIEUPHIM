@@ -30,22 +30,22 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnKhongDongY = new System.Windows.Forms.Button();
+            this.btnDongY = new System.Windows.Forms.Button();
+            this.rbDK = new System.Windows.Forms.RadioButton();
+            this.rbCT = new System.Windows.Forms.RadioButton();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvLichChieuCT = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvLichChieuDK = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLichChieuCT)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLichChieuDK)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,181 +54,180 @@
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(14, 15);
+            this.panel1.Location = new System.Drawing.Point(10, 12);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 567);
+            this.panel1.Size = new System.Drawing.Size(720, 461);
             this.panel1.TabIndex = 0;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Location = new System.Drawing.Point(14, 476);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Controls.Add(this.btnTimKiem);
+            this.groupBox3.Controls.Add(this.btnKhongDongY);
+            this.groupBox3.Controls.Add(this.btnDongY);
+            this.groupBox3.Controls.Add(this.rbDK);
+            this.groupBox3.Controls.Add(this.rbCT);
+            this.groupBox3.Controls.Add(this.txtTimKiem);
+            this.groupBox3.Location = new System.Drawing.Point(10, 387);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(933, 86);
+            this.groupBox3.Size = new System.Drawing.Size(700, 70);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             // 
-            // button3
+            // btnTimKiem
             // 
-            this.button3.BackColor = System.Drawing.Color.Cyan;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::GUI.Properties.Resources.SearchIcon;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(395, 29);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 36);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "TÌM KIẾM";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnTimKiem.BackColor = System.Drawing.Color.Cyan;
+            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.Location = new System.Drawing.Point(296, 24);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(92, 29);
+            this.btnTimKiem.TabIndex = 23;
+            this.btnTimKiem.Text = "TÌM KIẾM";
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // button2
+            // btnKhongDongY
             // 
-            this.button2.BackColor = System.Drawing.Color.LightCoral;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::GUI.Properties.Resources.Close;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(173, 29);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 36);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "KHÔNG ĐỒNG Ý";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnKhongDongY.BackColor = System.Drawing.Color.LightCoral;
+            this.btnKhongDongY.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKhongDongY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhongDongY.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhongDongY.Image = global::GUI.Properties.Resources.Close;
+            this.btnKhongDongY.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhongDongY.Location = new System.Drawing.Point(130, 24);
+            this.btnKhongDongY.Name = "btnKhongDongY";
+            this.btnKhongDongY.Size = new System.Drawing.Size(138, 29);
+            this.btnKhongDongY.TabIndex = 22;
+            this.btnKhongDongY.Text = "KHÔNG ĐỒNG Ý";
+            this.btnKhongDongY.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnKhongDongY.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnDongY
             // 
-            this.button1.BackColor = System.Drawing.Color.LightGreen;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::GUI.Properties.Resources.Accept;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(16, 29);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 36);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "ĐỒNG Ý";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDongY.BackColor = System.Drawing.Color.LightGreen;
+            this.btnDongY.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDongY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDongY.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDongY.Image = global::GUI.Properties.Resources.Accept;
+            this.btnDongY.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDongY.Location = new System.Drawing.Point(12, 24);
+            this.btnDongY.Name = "btnDongY";
+            this.btnDongY.Size = new System.Drawing.Size(84, 29);
+            this.btnDongY.TabIndex = 21;
+            this.btnDongY.Text = "ĐỒNG Ý";
+            this.btnDongY.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDongY.UseVisualStyleBackColor = false;
+            this.btnDongY.Click += new System.EventHandler(this.btnDongY_Click);
             // 
-            // radioButton2
+            // rbDK
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(801, 42);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(89, 23);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Dự kiến";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbDK.AutoSize = true;
+            this.rbDK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbDK.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDK.Location = new System.Drawing.Point(601, 34);
+            this.rbDK.Margin = new System.Windows.Forms.Padding(2);
+            this.rbDK.Name = "rbDK";
+            this.rbDK.Size = new System.Drawing.Size(78, 21);
+            this.rbDK.TabIndex = 7;
+            this.rbDK.TabStop = true;
+            this.rbDK.Text = "Dự kiến";
+            this.rbDK.UseVisualStyleBackColor = true;
+            this.rbDK.CheckedChanged += new System.EventHandler(this.rbDK_CheckedChanged);
             // 
-            // radioButton1
+            // rbCT
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(801, 11);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(116, 23);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Chính thức";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbCT.AutoSize = true;
+            this.rbCT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbCT.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbCT.Location = new System.Drawing.Point(601, 9);
+            this.rbCT.Margin = new System.Windows.Forms.Padding(2);
+            this.rbCT.Name = "rbCT";
+            this.rbCT.Size = new System.Drawing.Size(98, 21);
+            this.rbCT.TabIndex = 6;
+            this.rbCT.TabStop = true;
+            this.rbCT.Text = "Chính thức";
+            this.rbCT.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtTimKiem
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(547, 32);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 28);
-            this.textBox1.TabIndex = 5;
+            this.txtTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(410, 26);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(157, 24);
+            this.txtTimKiem.TabIndex = 5;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView2);
+            this.groupBox2.Controls.Add(this.dgvLichChieuCT);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(14, 239);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(10, 194);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(933, 222);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(700, 180);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "LỊCH CHIẾU DỰ KIẾN";
+            this.groupBox2.Text = "LỊCH CHIẾU CHÍNH THỨC";
             // 
-            // dataGridView2
+            // dgvLichChieuCT
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Snow;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(16, 33);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(893, 185);
-            this.dataGridView2.TabIndex = 1;
+            this.dgvLichChieuCT.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvLichChieuCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLichChieuCT.Location = new System.Drawing.Point(12, 21);
+            this.dgvLichChieuCT.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvLichChieuCT.Name = "dgvLichChieuCT";
+            this.dgvLichChieuCT.RowHeadersWidth = 51;
+            this.dgvLichChieuCT.RowTemplate.Height = 24;
+            this.dgvLichChieuCT.Size = new System.Drawing.Size(670, 150);
+            this.dgvLichChieuCT.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvLichChieuDK);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(14, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(10, 3);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(933, 222);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(700, 180);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "LỊCH CHIẾU CHÍNH THỨC";
+            this.groupBox1.Text = "LỊCH CHIẾU DỰ KIẾN";
             // 
-            // dataGridView1
+            // dgvLichChieuDK
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Snow;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 26);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(893, 185);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvLichChieuDK.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvLichChieuDK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLichChieuDK.Location = new System.Drawing.Point(12, 26);
+            this.dgvLichChieuDK.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvLichChieuDK.Name = "dgvLichChieuDK";
+            this.dgvLichChieuDK.RowHeadersWidth = 51;
+            this.dgvLichChieuDK.RowTemplate.Height = 24;
+            this.dgvLichChieuDK.Size = new System.Drawing.Size(670, 150);
+            this.dgvLichChieuDK.TabIndex = 1;
             // 
             // UC_LichChieu_AD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_LichChieu_AD";
-            this.Size = new System.Drawing.Size(993, 597);
+            this.Size = new System.Drawing.Size(745, 485);
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLichChieuCT)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLichChieuDK)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -237,15 +236,15 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btnKhongDongY;
+        private System.Windows.Forms.Button btnDongY;
+        private System.Windows.Forms.RadioButton rbDK;
+        private System.Windows.Forms.RadioButton rbCT;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvLichChieuDK;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvLichChieuCT;
     }
 }

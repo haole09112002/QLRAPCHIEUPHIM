@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using DTO;
 using System.Data;
 using System.Security.Cryptography;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace DAL
 {
@@ -88,6 +90,17 @@ namespace DAL
             };
             DBHelper.Instance.ExcuteNonQuery(query, parameter);
         }
+        public static void XoaNhanVien(string maNhanVien)
+        {
+            SqlCommand command = new SqlCommand("XoaNhanVien");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@MaNhanVien", SqlDbType.VarChar, 6);
+            command.Parameters["@MaNhanVien"].Value = maNhanVien;
+            command.ExecuteNonQuery();
+            //string query = "Delete from NHAN_VIEN where MaNhanVien = '" + maNhanVien + "' and MaChucVu = '" + maChucVu +
+            //    "' and MaChinhSach = '" + maChinhSach + "'";
+            //DBHelper.Instance.ExcuteQuery(query);
+        }
         public object KiemTraTenTK(NhanVienDTO nhanVien)
         {
             string query =String.Format("select  count(NHAN_VIEN.TenTaiKhoan) from NHAN_VIEN where TenTaiKhoan = '{0}'",nhanVien.TenTaiKhoan);
@@ -105,11 +118,41 @@ namespace DAL
             return DBHelper.Instance.ExcuteScalar(query);
         }
         public int KiemTraDangNhap(string tenTaiKhoan, string matKhau)
-        {
-           
+        {  
             string query = "EXEC KiemTraDangNhap @TenTaiKhoan , @MatKhau";
             object[] parameter = new object[] { tenTaiKhoan, matKhau };
             return Convert.ToInt32(DBHelper.Instance.ExcuteScalar(query,parameter));
         }
+        public List<NhanVienDTO> TimTheoMa(string maNhanVien)
+        {
+            List<NhanVienDTO> data = new List<NhanVienDTO>();
+            string query = $"SELECT * FROM NHAN_VIEN WHERE MaNhanVien LIKE '%{maNhanVien}%'";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                data.Add(GetNhanVienByDataRow(i));
+            }
+            return data;
+        }
+        public List<NhanVienDTO> TimTheoTen(string tenNhanVien)
+        {
+            List<NhanVienDTO> data = new List<NhanVienDTO>();
+            string query = $"SELECT * FROM NHAN_VIEN WHERE TenNhanVien LIKE '%{tenNhanVien}%'";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                data.Add(GetNhanVienByDataRow(i));
+            }
+            return data;
+        }
+        public List<NhanVienDTO> TimTheoSDT(string soDienThoai)
+        {
+            List<NhanVienDTO> data = new List<NhanVienDTO>();
+            string query = $"SELECT * FROM NHAN_VIEN WHERE SoDienThoai LIKE '%{soDienThoai}%'";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                data.Add(GetNhanVienByDataRow(i));
+            }
+            return data;
+        }
+
     }
 }
