@@ -118,14 +118,14 @@ go
 -- Bang Ngay Lam Viec
 create table NGAY_LAM_VIEC
 (
-	MaNgayLamViec varchar(6) primary key not null constraint IDNLV default dbo.AUTO_IDNLV(),
-	NgayLamViec date,
-	MaCa varchar(6) foreign key (MaCa)references CA_LAM_VIEC
+	NgayLamViec date primary key not null
 )
 go
 --Bang Chinh Sach
+
 Create table CHINH_SACH(
 	MaChinhSach varchar(6) primary key not null constraint IDCS default dbo.AUTO_IDCS(),
+	TenChinhSach nvarchar(30),
 	HeSoLuong Float(4),
 	BHXH varchar(20),
 	TienThuong int
@@ -143,7 +143,7 @@ go
 Create table NHAN_VIEN(
 	MaNhanVien varchar(6) primary key not null constraint IDNV default dbo.AUTO_IDNV(),
 	TenNhanVien nvarchar(30),
-	NgaySinh datetime,
+	NgaySinh date,
 	GioiTinh bit,
 	DiaChi nvarchar(50),
 	SoDienThoai varchar(15),
@@ -157,11 +157,11 @@ Create table NHAN_VIEN(
 go
 --Bang Chi Tiet Ca Lam
 
-Create table CHI_TIET_CA_LAM_VIEC(
+Create table LICH_LAM_VIEC(
 	MaNhanVien varchar(6) foreign key(MaNhanVien) references NHAN_VIEN,
 	MaCa varchar(6) foreign key(MaCa) references CA_LAM_VIEC,
-	TrangThai bit,
-	constraint pk_CTCaLamViec primary key(MaNhanVien,MaCa)
+	NgayLamViec date foreign key(NgayLamViec) references NGAY_LAM_VIEC,
+	constraint pk_CTCaLamViec primary key(MaNhanVien,MaCa,NgayLamViec)
 )
 go
 --Bang Loai Kho
@@ -377,7 +377,7 @@ Create table HOP_DONG_PHIM(
 )
 
 go
---Bang Chi Tiet Cung Cap Phong Chieu
+--Bang Chi Tiet Vat tu trong  Phong Chieu
 
 Create table CHI_TIET_PHONG_CHIEU(
 	MaPhongChieu varchar(6) foreign key(MaPhongChieu) references PHONG_CHIEU,

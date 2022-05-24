@@ -53,6 +53,8 @@
             this.dGVDeXuatPhim = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDSoLuong)).BeginInit();
             this.gBDanhSachPhim.SuspendLayout();
@@ -63,8 +65,6 @@
             this.SuspendLayout();
             // 
             // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.lbNoiDung);
@@ -81,16 +81,16 @@
             this.panel1.Controls.Add(this.cBDonViTinh);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.gBDanhSachPhim);
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.btnLuu);
             this.panel1.Controls.Add(this.gBDeXuatPhim);
             this.panel1.Location = new System.Drawing.Point(25, 19);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1067, 813);
-            this.panel1.TabIndex = 13;
-            // 
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1067, 644);
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.Cyan;
@@ -279,6 +279,8 @@
             this.label1.TabIndex = 64;
             this.label1.Text = "Số Lượng";
             // 
+            this.panel1.TabIndex = 13;
+            // 
             // gBDanhSachPhim
             // 
             this.gBDanhSachPhim.Controls.Add(this.dGVDanhSachPhim);
@@ -302,9 +304,9 @@
             this.dGVDanhSachPhim.Name = "dGVDanhSachPhim";
             this.dGVDanhSachPhim.RowHeadersWidth = 62;
             this.dGVDanhSachPhim.RowTemplate.Height = 28;
-            this.dGVDanhSachPhim.Size = new System.Drawing.Size(989, 211);
-            this.dGVDanhSachPhim.TabIndex = 0;
             this.dGVDanhSachPhim.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDanhSachPhim_CellClick);
+            this.dGVDanhSachPhim.TabIndex = 0;
+            this.dGVDanhSachPhim.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDanhSachPhim_CellDoubleClick);
             // 
             // btnThoat
             // 
@@ -343,9 +345,9 @@
             // 
             // gBDeXuatPhim
             // 
-            this.gBDeXuatPhim.Controls.Add(this.dGVDeXuatPhim);
-            this.gBDeXuatPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.gBDeXuatPhim.Location = new System.Drawing.Point(31, 538);
+            this.gBDeXuatPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gBDeXuatPhim.Location = new System.Drawing.Point(56, 362);
             this.gBDeXuatPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBDeXuatPhim.Name = "gBDeXuatPhim";
             this.gBDeXuatPhim.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -389,14 +391,65 @@
             this.label6.Size = new System.Drawing.Size(202, 44);
             this.label6.TabIndex = 27;
             this.label6.Text = "TẠO ĐỀ XUẤT";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnLamMoi
+            // 
+            this.ClientSize = new System.Drawing.Size(1117, 843);
+            this.btnLamMoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.ForeColor = System.Drawing.Color.Black;
+            this.btnLamMoi.Image = global::GUI.Properties.Resources.Renew;
+            this.btnLamMoi.Location = new System.Drawing.Point(459, 577);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDSoLuong)).EndInit();
+            this.btnLamMoi.Size = new System.Drawing.Size(169, 45);
+            this.btnLamMoi.TabIndex = 57;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.Color.LightGreen;
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = global::GUI.Properties.Resources.save_26px;
+            this.btnLuu.Location = new System.Drawing.Point(886, 577);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(136, 45);
+            this.btnLuu.TabIndex = 56;
+            this.btnLuu.Text = "   Lưu";
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cBDonViTinh;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.TextBox txtNoiDung;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnChinhSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.TextBox txtMaPhim;
+        private System.Windows.Forms.NumericUpDown nUDSoLuong;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbNoiDung;
+        private System.Windows.Forms.Label lbDonViTinh;
+        private System.Windows.Forms.Label lbSoLuong;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button btnTimKiem;
             // 
             // frm_TaoDeXuat_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1117, 843);
+            this.ClientSize = new System.Drawing.Size(1117, 685);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Black;
@@ -405,8 +458,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_TaoDeXuat_QLP";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDSoLuong)).EndInit();
             this.gBDanhSachPhim.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).EndInit();
             this.gBDeXuatPhim.ResumeLayout(false);
@@ -427,21 +478,7 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.GroupBox gBDanhSachPhim;
         private System.Windows.Forms.DataGridView dGVDanhSachPhim;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cBDonViTinh;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox txtNoiDung;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnChinhSua;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.TextBox txtMaPhim;
-        private System.Windows.Forms.NumericUpDown nUDSoLuong;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbNoiDung;
-        private System.Windows.Forms.Label lbDonViTinh;
-        private System.Windows.Forms.Label lbSoLuong;
-        private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenPhim;
     }
 }

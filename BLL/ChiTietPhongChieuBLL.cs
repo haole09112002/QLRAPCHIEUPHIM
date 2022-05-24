@@ -41,22 +41,48 @@ namespace BLL
             }
             return data;
         }
-        public void ThemChiTietPhongChieuToDSVatTuDaChon(ChiTietPhongChieuDTO pc,ref List<ChiTietPhongChieuDTO> dsVatTuDaChon)
+        public void ThemChiTietPhongChieuToDSVatTuCoSan(ChiTietPhongChieuDTO pc,ref List<ChiTietPhongChieuView> dsVatTuDaChon)
         {
             bool daTonTai = false;
-            foreach(ChiTietPhongChieuDTO i in dsVatTuDaChon)
+            foreach (ChiTietPhongChieuView i in dsVatTuDaChon)
             {
                 if (i.MaVatTu == pc.MaVatTu)
                 {
                     daTonTai = true;
-                    i.SoLuongSP += pc.SoLuongSP;
+                    i.SoLuong += pc.SoLuongSP;
                 }
             }
-            if(!daTonTai)
+            if (!daTonTai)
             {
-                dsVatTuDaChon.Add(pc);
+                dsVatTuDaChon.Add(ConvertCTPhongChieuDTOToView(pc));
             }
         }
-        
+        public ChiTietPhongChieuView ConvertCTPhongChieuDTOToView(ChiTietPhongChieuDTO pc)
+        {
+            string tenVatTu = "";
+            foreach(VatTuDTO i in VatTuDAL.Instance.GetALLVatTu())
+            {
+                if (i.MaVatTu == pc.MaVatTu)
+                    tenVatTu = i.TenVatTu;
+            }
+            return new ChiTietPhongChieuView
+            {
+                MaPhongChieu = pc.MaPhongChieu,
+                MaVatTu = pc.MaVatTu,
+                TenVatTu = tenVatTu,
+                SoLuong = pc.SoLuongSP,
+                DonViTinh = pc.DonViTinh
+            };
+        }
+        public List<ChiTietPhongChieuView> GetAllCTPhongChieuViewByMaPhongChieu(string maPhongChieu)
+        {
+            List<ChiTietPhongChieuView> data = new List<ChiTietPhongChieuView>();
+            foreach(ChiTietPhongChieuDTO i in GetAllVatTuByMaPhongChieu(maPhongChieu))
+            {
+                data.Add(ConvertCTPhongChieuDTOToView(i));
+            }    
+            return data;
+        }
+
     }
 }

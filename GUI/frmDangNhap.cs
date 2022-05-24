@@ -22,37 +22,34 @@ namespace GUI
         {
             InitializeComponent();
         }
-
         private void btnDN_Click(object sender, EventArgs e)
         {
 
             int result = NhanVienBLL.Instance.KiemTraDangNhap(txtTenTaiKhoan.Text, txtMatKhau.Text);
+            if (result == 0)
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu! Vui lòng kiểm tra lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (result == -1)
+                MessageBox.Show("Tài khoản chưa tồn tại! Vui lòng kiểm tra lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (result == 3)
             {
                 frmDashboard_AD frmDashboard_AD = new frmDashboard_AD();
                 frmDashboard_AD.Show();
-                this.Hide();
-               
             }
             if (result == 2)
             {
-                frm_QLP frm_QLP = new frm_QLP(NhanVienBLL.Instance.GetNhanVienByTenTaiKhoan(txtTenTaiKhoan.Text));
-                frm_QLP.Show();
-                this.Hide();
-
+                FrmDashboardQLVT frmDashboardQLVT = new FrmDashboardQLVT(NhanVienBLL.Instance.GetNhanVienByTenTaiKhoan(txtTenTaiKhoan.Text));
+                frmDashboardQLVT.Show();
             }
             if (result == 1)
             {
-                FrmDashboardQLVT frmDashboardQLVT = new FrmDashboardQLVT();
-                //frmDashboardQLVT.WindowState = FormWindowState.Maximized;
-                //frmDashboardQLVT.TopMost = true;
-                frmDashboardQLVT.Show();
+                frm_QLP frm_QLP = new frm_QLP();
+                frm_QLP frm_QLP = new frm_QLP(NhanVienBLL.Instance.GetNhanVienByTenTaiKhoan(txtTenTaiKhoan.Text));
+                frm_QLP.Show();
+            }
+            if(result >0)
+            {
                 this.Hide();
             }
-            if (result == 0)
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu! Vui lòng kiểm tra lại!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            if (result == -1)
-                MessageBox.Show("Tài khoản chưa tồn tại! Vui lòng kiểm tra lại!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DAL;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +18,9 @@ namespace BLL
             get
             {
                 if (instance == null)
+                {
                     instance = new KhoBLL();
+                }
                 return instance;
             }
             private set { }
@@ -27,9 +31,9 @@ namespace BLL
         }
         public KhoDTO GetKhoByMaKho(string MaKho)
         {
-            foreach(KhoDTO i in GetAllKho())
+            foreach (KhoDTO i in KhoDAL.Instance.GetAllKho())
             {
-                if(i.MaKho == MaKho)
+                if (i.MaKho == MaKho)
                 {
                     return i;
                 }

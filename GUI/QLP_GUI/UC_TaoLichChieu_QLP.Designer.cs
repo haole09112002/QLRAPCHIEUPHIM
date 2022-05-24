@@ -441,6 +441,22 @@
             this.txtMaKhungGioChieu.Size = new System.Drawing.Size(123, 33);
             this.txtMaKhungGioChieu.TabIndex = 49;
             // 
+            // dTPNgayChieu
+            // 
+            this.dTPNgayChieu.Location = new System.Drawing.Point(16, 69);
+            this.dTPNgayChieu.Name = "dTPNgayChieu";
+            this.dTPNgayChieu.Size = new System.Drawing.Size(393, 33);
+            this.dTPNgayChieu.TabIndex = 45;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 25);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Ngày Chiếu";
+            // 
             // UC_TaoLichChieu_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);

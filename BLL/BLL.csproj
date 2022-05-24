@@ -47,9 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CaLamViecBLL.cs" />
+    <Compile Include="LichLamViecBLL.cs" />
+    <Compile Include="ChiTietDeXuatThucAnBLL.cs" />
+    <Compile Include="ChiTietDeXuatVatTuBLL.cs" />
+    <Compile Include="ChiTietKhoThucAnBLL.cs" />
     <Compile Include="ChiTietKhoVatTuBLL.cs" />
     <Compile Include="ChiTietPhieuPhimBLL.cs" />
+    <Compile Include="ChinhSachBLL.cs" />
     <Compile Include="ChiTietPhongChieuBLL.cs" />
+    <Compile Include="ChucVuBLL.cs" />
     <Compile Include="DeXuatBLL.cs" />
     <Compile Include="ChiTietDeXuatPhimBLL.cs" />
     <Compile Include="Helper.cs" />

@@ -72,7 +72,7 @@
             // 
             // pictureBoxHidePass
             // 
- //           this.pictureBoxHidePass.Image = global::GUI.Properties.Resources.hidePass_26px;
+            //this.pictureBoxHidePass.Image = global::GUI.Properties.Resources.hidePass_26px;
             this.pictureBoxHidePass.Location = new System.Drawing.Point(302, 92);
             this.pictureBoxHidePass.Name = "pictureBoxHidePass";
             this.pictureBoxHidePass.Size = new System.Drawing.Size(35, 35);

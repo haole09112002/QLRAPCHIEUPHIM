@@ -18,14 +18,32 @@ namespace GUI.QLVT_GUI
             InitializeComponent();
             ReloadListThucAn();
             ReloadListVatTu();
+            SetGUI();
+        }
+        public void SetGUI()
+        {
+            dgvListVatTu.Columns["MaVatTu"].HeaderText = "Mã Vật Tư";
+            dgvListVatTu.Columns["TenKho"].HeaderText = "Tên Kho";
+            dgvListVatTu.Columns["TenVatTu"].HeaderText = "Tên Vật Tư";
+            dgvListVatTu.Columns["DonViTinh"].HeaderText = "Đơn Vị Tính";
+            dgvListVatTu.Columns["SoLuongSP"].HeaderText = "Số Lượng";
+            dgvListVatTu.Columns["GiaTien"].HeaderText = "Giá Tiền";
+            dgvListThucAn.Columns["MaThucAn"].HeaderText = "Mã Thức Ăn";
+            dgvListThucAn.Columns["TenKho"].HeaderText = "Tên Kho";
+            dgvListThucAn.Columns["TenThucAn"].HeaderText = "Tên Thức Ăn";
+            dgvListThucAn.Columns["DonViTinh"].HeaderText = "Đơn Vị Tính";
+            dgvListThucAn.Columns["SoLuongSP"].HeaderText = "Số Lượng";
+            dgvListThucAn.Columns["GiaTien"].HeaderText = "Giá Tiền";
         }
         public void ReloadListThucAn(string txt = "")
         {
-            dgvListThucAn.DataSource = ThucAnBLL.Instance.GetThucAnViews(txt);
+            dgvListThucAn.DataSource = ChiTietKhoThucAnBLL.Instance.GetAllChiTietKhoThucAnView(txt);
+            dgvListThucAn.Columns["MaKho"].Visible = false;
         }
         public void ReloadListVatTu(string txt = "")
         {
-            dgvListVatTu.DataSource = VatTuBLL.Instance.GetVatTuViews(txt);
+            dgvListVatTu.DataSource = ChiTietKhoVatTuBLL.Instance.GetAllChiTietKhoVatTuView(txt);
+            dgvListVatTu.Columns["MaKho"].Visible = false;
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -39,29 +57,34 @@ namespace GUI.QLVT_GUI
             ReloadListVatTu(txtSearch);
         }
 
-        private void btnSapXep_Click(object sender, EventArgs e)
+        private void btnSapXepThucAn_Click(object sender, EventArgs e)
         {
             string selectSort = cboSapXep.SelectedItem.ToString();
             switch (selectSort)
             {
-                case "MaThucAn":
+                case "Tên Thức Ăn":
                     {
-                        dgvListThucAn.DataSource = ThucAnBLL.Instance.SortThucAnView(ThucAnBLL.Instance.CompareMaThucAn);
+                        dgvListThucAn.DataSource = ChiTietKhoThucAnBLL.Instance.SortChiTietKhoThucAnView(ChiTietKhoThucAnBLL.Instance.CompareTenThucAn);
                         break;
                     }
-                case "TenThucAn":
+                case "Tên Kho":
                     {
-                        dgvListThucAn.DataSource = ThucAnBLL.Instance.SortThucAnView(ThucAnBLL.Instance.CompareTenThucAn);
+                        dgvListThucAn.DataSource = ChiTietKhoThucAnBLL.Instance.SortChiTietKhoThucAnView(ChiTietKhoThucAnBLL.Instance.CompareTenKho);
                         break;
                     }
-                case "DonViTinh":
+                case "Đơn Vị Tính":
                     {
-                        dgvListThucAn.DataSource = ThucAnBLL.Instance.SortThucAnView(ThucAnBLL.Instance.CompareDonViTinh);
+                        dgvListThucAn.DataSource = ChiTietKhoThucAnBLL.Instance.SortChiTietKhoThucAnView(ChiTietKhoThucAnBLL.Instance.CompareDonViTinh);
                         break;
                     }
-                case "SoLuong":
+                case "Số Lượng":
                     {
-                        dgvListThucAn.DataSource = ThucAnBLL.Instance.SortThucAnView(ThucAnBLL.Instance.CompareSoLuong);
+                        dgvListThucAn.DataSource = ChiTietKhoThucAnBLL.Instance.SortChiTietKhoThucAnView(ChiTietKhoThucAnBLL.Instance.CompareSoLuong);
+                        break;
+                    }
+                case "Giá Tiền":
+                    {
+                        dgvListThucAn.DataSource = ChiTietKhoThucAnBLL.Instance.SortChiTietKhoThucAnView(ChiTietKhoThucAnBLL.Instance.CompareGiaTien);
                         break;
                     }
             }
@@ -71,27 +94,44 @@ namespace GUI.QLVT_GUI
             string selectSort = cboSapXepVatTu.SelectedItem.ToString();
             switch (selectSort)
             {
-                case "MaVatTu":
+                case "Tên Vật Tư":
                     {
-                        dgvListVatTu.DataSource = VatTuBLL.Instance.SortVatTuView(VatTuBLL.Instance.CompareMaVatTu);
+                        dgvListVatTu.DataSource = ChiTietKhoVatTuBLL.Instance.SortChiTietKhoVatTuView(ChiTietKhoVatTuBLL.Instance.CompareTenVatTu);
                         break;
                     }
-                case "TenVatTu":
+                case "Tên Kho":
                     {
-                        dgvListVatTu.DataSource = VatTuBLL.Instance.SortVatTuView(VatTuBLL.Instance.CompareTenVatTu);
+                        dgvListVatTu.DataSource = ChiTietKhoVatTuBLL.Instance.SortChiTietKhoVatTuView(ChiTietKhoVatTuBLL.Instance.CompareTenKho);
                         break;
                     }
-                case "DonViTinh":
+                case "Đơn Vị Tính":
                     {
-                        dgvListVatTu.DataSource = VatTuBLL.Instance.SortVatTuView(VatTuBLL.Instance.CompareDonViTinh);
+                        dgvListVatTu.DataSource = ChiTietKhoVatTuBLL.Instance.SortChiTietKhoVatTuView(ChiTietKhoVatTuBLL.Instance.CompareDonViTinh);
                         break;
                     }
-                case "SoLuong":
+                case "Số Lượng":
                     {
-                        dgvListVatTu.DataSource = VatTuBLL.Instance.SortVatTuView(VatTuBLL.Instance.CompareSoLuong);
+                        dgvListVatTu.DataSource = ChiTietKhoVatTuBLL.Instance.SortChiTietKhoVatTuView(ChiTietKhoVatTuBLL.Instance.CompareSoLuong);
+                        break;
+                    }
+                case "Giá Tiền":
+                    {
+                        dgvListVatTu.DataSource = ChiTietKhoVatTuBLL.Instance.SortChiTietKhoVatTuView(ChiTietKhoVatTuBLL.Instance.CompareGiaTien);
                         break;
                     }
             }
+        }
+
+        private void txtTimKiem_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtTimKiem.Text = null;
+            txtTimKiem.ForeColor = Color.Black;
+        }
+
+        private void txtTimKiemVatTu_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtTimKiemVatTu.Text = null;
+            txtTimKiemVatTu.ForeColor = Color.Black;
         }
     }
 }

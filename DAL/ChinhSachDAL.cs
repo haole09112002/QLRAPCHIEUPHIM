@@ -42,6 +42,7 @@ namespace DAL
             return new ChinhSachDTO()
             {
                 MaChinhSach = i["MaChinhSach"].ToString(),
+                TenChinhSach =i["TenChinhSach"].ToString(),
                 BaoHiemXaHoi = i["BHXH"].ToString(),
                 HeSoLuong = Convert.ToInt32(i["HeSoLuong"]),
                 TienThuong = Convert.ToDouble(i["TienThuong"]),
