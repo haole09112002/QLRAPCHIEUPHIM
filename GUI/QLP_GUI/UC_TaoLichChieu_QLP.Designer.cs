@@ -40,7 +40,12 @@
             this.rBDSPChieu = new System.Windows.Forms.RadioButton();
             this.rBDSPhim = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtMaKhungGioChieu = new System.Windows.Forms.TextBox();
+            this.txtMaPhongChieu = new System.Windows.Forms.TextBox();
+            this.txtMaPhim = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.dTPNgayChieu = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtGioChieu = new System.Windows.Forms.TextBox();
@@ -51,12 +56,7 @@
             this.gBDanhSachPhongChieu = new System.Windows.Forms.GroupBox();
             this.dGVDanhSachPC = new System.Windows.Forms.DataGridView();
             this.gBKhungGioChieu = new System.Windows.Forms.GroupBox();
-            this.dTPNgayChieu = new System.Windows.Forms.DateTimePicker();
             this.dGVKhungGioChieu = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtMaPhim = new System.Windows.Forms.TextBox();
-            this.txtMaPhongChieu = new System.Windows.Forms.TextBox();
-            this.txtMaKhungGioChieu = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).BeginInit();
@@ -213,6 +213,52 @@
             this.panel2.Size = new System.Drawing.Size(675, 220);
             this.panel2.TabIndex = 46;
             // 
+            // txtMaKhungGioChieu
+            // 
+            this.txtMaKhungGioChieu.BackColor = System.Drawing.Color.White;
+            this.txtMaKhungGioChieu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaKhungGioChieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtMaKhungGioChieu.Location = new System.Drawing.Point(535, 132);
+            this.txtMaKhungGioChieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaKhungGioChieu.Name = "txtMaKhungGioChieu";
+            this.txtMaKhungGioChieu.Size = new System.Drawing.Size(123, 33);
+            this.txtMaKhungGioChieu.TabIndex = 49;
+            // 
+            // txtMaPhongChieu
+            // 
+            this.txtMaPhongChieu.BackColor = System.Drawing.Color.White;
+            this.txtMaPhongChieu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaPhongChieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtMaPhongChieu.Location = new System.Drawing.Point(535, 78);
+            this.txtMaPhongChieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaPhongChieu.Name = "txtMaPhongChieu";
+            this.txtMaPhongChieu.Size = new System.Drawing.Size(123, 33);
+            this.txtMaPhongChieu.TabIndex = 48;
+            // 
+            // txtMaPhim
+            // 
+            this.txtMaPhim.BackColor = System.Drawing.Color.White;
+            this.txtMaPhim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtMaPhim.Location = new System.Drawing.Point(535, 21);
+            this.txtMaPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaPhim.Name = "txtMaPhim";
+            this.txtMaPhim.Size = new System.Drawing.Size(123, 33);
+            this.txtMaPhim.TabIndex = 47;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Image = global::GUI.Properties.Resources.ScheduleTitle;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Location = new System.Drawing.Point(16, 182);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(162, 25);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Ngày Chiếu";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -225,6 +271,13 @@
             this.label4.TabIndex = 38;
             this.label4.Text = "Phòng chiếu";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dTPNgayChieu
+            // 
+            this.dTPNgayChieu.Location = new System.Drawing.Point(218, 182);
+            this.dTPNgayChieu.Name = "dTPNgayChieu";
+            this.dTPNgayChieu.Size = new System.Drawing.Size(440, 33);
+            this.dTPNgayChieu.TabIndex = 45;
             // 
             // label3
             // 
@@ -374,13 +427,6 @@
             this.gBKhungGioChieu.TabStop = false;
             this.gBKhungGioChieu.Text = "KHUNG GIỜ CHIẾU";
             // 
-            // dTPNgayChieu
-            // 
-            this.dTPNgayChieu.Location = new System.Drawing.Point(218, 182);
-            this.dTPNgayChieu.Name = "dTPNgayChieu";
-            this.dTPNgayChieu.Size = new System.Drawing.Size(440, 33);
-            this.dTPNgayChieu.TabIndex = 45;
-            // 
             // dGVKhungGioChieu
             // 
             this.dGVKhungGioChieu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -394,68 +440,6 @@
             this.dGVKhungGioChieu.Size = new System.Drawing.Size(393, 390);
             this.dGVKhungGioChieu.TabIndex = 44;
             this.dGVKhungGioChieu.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVKhungGioChieu_CellDoubleClick);
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Image = global::GUI.Properties.Resources.ScheduleTitle;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(16, 181);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 34);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "Ngày chiếu";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtMaPhim
-            // 
-            this.txtMaPhim.BackColor = System.Drawing.Color.White;
-            this.txtMaPhim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtMaPhim.Location = new System.Drawing.Point(535, 21);
-            this.txtMaPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMaPhim.Name = "txtMaPhim";
-            this.txtMaPhim.Size = new System.Drawing.Size(123, 33);
-            this.txtMaPhim.TabIndex = 47;
-            // 
-            // txtMaPhongChieu
-            // 
-            this.txtMaPhongChieu.BackColor = System.Drawing.Color.White;
-            this.txtMaPhongChieu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaPhongChieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtMaPhongChieu.Location = new System.Drawing.Point(535, 78);
-            this.txtMaPhongChieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMaPhongChieu.Name = "txtMaPhongChieu";
-            this.txtMaPhongChieu.Size = new System.Drawing.Size(123, 33);
-            this.txtMaPhongChieu.TabIndex = 48;
-            // 
-            // txtMaKhungGioChieu
-            // 
-            this.txtMaKhungGioChieu.BackColor = System.Drawing.Color.White;
-            this.txtMaKhungGioChieu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaKhungGioChieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtMaKhungGioChieu.Location = new System.Drawing.Point(535, 132);
-            this.txtMaKhungGioChieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMaKhungGioChieu.Name = "txtMaKhungGioChieu";
-            this.txtMaKhungGioChieu.Size = new System.Drawing.Size(123, 33);
-            this.txtMaKhungGioChieu.TabIndex = 49;
-            // 
-            // dTPNgayChieu
-            // 
-            this.dTPNgayChieu.Location = new System.Drawing.Point(16, 69);
-            this.dTPNgayChieu.Name = "dTPNgayChieu";
-            this.dTPNgayChieu.Size = new System.Drawing.Size(393, 33);
-            this.dTPNgayChieu.TabIndex = 45;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 25);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "Ngày Chiếu";
             // 
             // UC_TaoLichChieu_QLP
             // 
