@@ -53,7 +53,6 @@
             this.dGVDeXuatPhim = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDSoLuong)).BeginInit();
@@ -306,7 +305,6 @@
             this.dGVDanhSachPhim.RowTemplate.Height = 28;
             this.dGVDanhSachPhim.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDanhSachPhim_CellClick);
             this.dGVDanhSachPhim.TabIndex = 0;
-            this.dGVDanhSachPhim.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDanhSachPhim_CellDoubleClick);
             // 
             // btnThoat
             // 
@@ -394,26 +392,6 @@
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // btnLamMoi
-            // 
-            this.ClientSize = new System.Drawing.Size(1117, 843);
-            this.btnLamMoi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLamMoi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamMoi.ForeColor = System.Drawing.Color.Black;
-            this.btnLamMoi.Image = global::GUI.Properties.Resources.Renew;
-            this.btnLamMoi.Location = new System.Drawing.Point(459, 577);
-            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDSoLuong)).EndInit();
-            this.btnLamMoi.Size = new System.Drawing.Size(169, 45);
-            this.btnLamMoi.TabIndex = 57;
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLamMoi.UseVisualStyleBackColor = false;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            // 
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.Color.LightGreen;
@@ -427,22 +405,6 @@
             this.btnLuu.Size = new System.Drawing.Size(136, 45);
             this.btnLuu.TabIndex = 56;
             this.btnLuu.Text = "   Lưu";
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cBDonViTinh;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox txtNoiDung;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnChinhSua;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.TextBox txtMaPhim;
-        private System.Windows.Forms.NumericUpDown nUDSoLuong;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbNoiDung;
-        private System.Windows.Forms.Label lbDonViTinh;
-        private System.Windows.Forms.Label lbSoLuong;
-        private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Button btnTimKiem;
             // 
             // frm_TaoDeXuat_QLP
             // 
@@ -472,6 +434,22 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cBDonViTinh;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.TextBox txtNoiDung;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnChinhSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.TextBox txtMaPhim;
+        private System.Windows.Forms.NumericUpDown nUDSoLuong;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbNoiDung;
+        private System.Windows.Forms.Label lbDonViTinh;
+        private System.Windows.Forms.Label lbSoLuong;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.GroupBox gBDeXuatPhim;
         private System.Windows.Forms.DataGridView dGVDeXuatPhim;
         private System.Windows.Forms.Panel panel2;
