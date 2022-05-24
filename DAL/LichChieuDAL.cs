@@ -73,5 +73,11 @@ namespace DAL
                 $"('{MaPhim}','{MaPhongChieu}','{MaKhungGioChieu}','{NgayChieu.Year}-{NgayChieu.Month}-{NgayChieu.Day}','{TrangThai}')";
             DBHelper.Instance.ExcuteQuery(query);
         }
+        public void CapNhatLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, bool TrangThai, DateTime NgayChieu)
+        {
+            string query = "Update LICH_CHIEU values " +
+                $"('{MaPhim}','{MaPhongChieu}','{MaKhungGioChieu}','{NgayChieu.Year}-{NgayChieu.Month}-{NgayChieu.Day}','{TrangThai}')";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
     }
 }

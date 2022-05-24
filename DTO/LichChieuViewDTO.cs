@@ -17,7 +17,6 @@ namespace DTO
         private DateTime gioBatDau;
         private DateTime gioKetThuc;
         private DateTime ngayChieu;
-        //private string ngayChieu;
 
         public string MaPhim { get => maPhim; set => maPhim = value; }
         public string TenPhim { get => tenPhim; set => tenPhim = value; }

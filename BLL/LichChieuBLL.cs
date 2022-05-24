@@ -3,6 +3,7 @@ using DTO;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Data;
 
 namespace BLL
 {
@@ -83,15 +84,6 @@ namespace BLL
             }
             return data;
         }
-        public List<LichChieuViewDTO> TimTheoMaPhim(string maPhim)
-        {
-            List<LichChieuViewDTO> data = new List<LichChieuViewDTO>();
-            foreach (LichChieuDTO i in LichChieuDAL.Instance.TimTheoMa(maPhim))
-            {
-                data.Add(GetLichChieuViewByLichChieuDTO(i));
-            }
-            return data;
-        }
         public string KiemTraLichChieu(string MaPhim,string MaKhungGioChieu, string MaPhongChieu, DateTime NgayChieu)
         {
             foreach(LichChieuDTO i in GetAllLichChieu())
@@ -106,6 +98,10 @@ namespace BLL
         public void LuuLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, bool TrangThai, DateTime NgayChieu)
         {
             LichChieuDAL.Instance.LuuLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, TrangThai, NgayChieu);
+        }
+        public void DuyetLichChieu(LichChieuDTO lichChieu)
+        {
+            
         }
     }
 }

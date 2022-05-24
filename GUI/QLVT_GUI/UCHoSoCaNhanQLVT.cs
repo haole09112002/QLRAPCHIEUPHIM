@@ -133,7 +133,7 @@ namespace GUI.QLVT_GUI
                         nhanVien.GioiTinh = true;
                     }
                     nhanVien.NgaySinh = dtpNgaySinh.Value;
-                    NhanVienBLL.Instance.AddUpdateNhaCungCap(nhanVien);
+                    NhanVienBLL.Instance.AddUpdateNhanVien(nhanVien);
                     MessageBox.Show("Cập nhật thành công!");
                     Reload();
                 }

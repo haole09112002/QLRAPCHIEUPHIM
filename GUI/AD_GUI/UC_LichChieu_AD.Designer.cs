@@ -33,13 +33,12 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnKhongDongY = new System.Windows.Forms.Button();
             this.btnDongY = new System.Windows.Forms.Button();
-            this.rbDK = new System.Windows.Forms.RadioButton();
-            this.rbCT = new System.Windows.Forms.RadioButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvLichChieuCT = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvLichChieuDK = new System.Windows.Forms.DataGridView();
+            this.cbbTimKiem = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -62,11 +61,10 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.cbbTimKiem);
             this.groupBox3.Controls.Add(this.btnTimKiem);
             this.groupBox3.Controls.Add(this.btnKhongDongY);
             this.groupBox3.Controls.Add(this.btnDongY);
-            this.groupBox3.Controls.Add(this.rbDK);
-            this.groupBox3.Controls.Add(this.rbCT);
             this.groupBox3.Controls.Add(this.txtTimKiem);
             this.groupBox3.Location = new System.Drawing.Point(10, 387);
             this.groupBox3.Name = "groupBox3";
@@ -123,35 +121,6 @@
             this.btnDongY.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDongY.UseVisualStyleBackColor = false;
             this.btnDongY.Click += new System.EventHandler(this.btnDongY_Click);
-            // 
-            // rbDK
-            // 
-            this.rbDK.AutoSize = true;
-            this.rbDK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbDK.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDK.Location = new System.Drawing.Point(601, 34);
-            this.rbDK.Margin = new System.Windows.Forms.Padding(2);
-            this.rbDK.Name = "rbDK";
-            this.rbDK.Size = new System.Drawing.Size(78, 21);
-            this.rbDK.TabIndex = 7;
-            this.rbDK.TabStop = true;
-            this.rbDK.Text = "Dự kiến";
-            this.rbDK.UseVisualStyleBackColor = true;
-            this.rbDK.CheckedChanged += new System.EventHandler(this.rbDK_CheckedChanged);
-            // 
-            // rbCT
-            // 
-            this.rbCT.AutoSize = true;
-            this.rbCT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbCT.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbCT.Location = new System.Drawing.Point(601, 9);
-            this.rbCT.Margin = new System.Windows.Forms.Padding(2);
-            this.rbCT.Name = "rbCT";
-            this.rbCT.Size = new System.Drawing.Size(98, 21);
-            this.rbCT.TabIndex = 6;
-            this.rbCT.TabStop = true;
-            this.rbCT.Text = "Chính thức";
-            this.rbCT.UseVisualStyleBackColor = true;
             // 
             // txtTimKiem
             // 
@@ -211,6 +180,20 @@
             this.dgvLichChieuDK.RowTemplate.Height = 24;
             this.dgvLichChieuDK.Size = new System.Drawing.Size(670, 150);
             this.dgvLichChieuDK.TabIndex = 1;
+           // this.dgvLichChieuDK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLichChieuDK_CellClick);
+            //this.dgvLichChieuDK.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLichChieuDK_CellContentClick);
+            // 
+            // cbbTimKiem
+            // 
+            this.cbbTimKiem.FormattingEnabled = true;
+            this.cbbTimKiem.Items.AddRange(new object[] {
+            "Tên Phim",
+            "Tên Phòng Chiếu",
+            "Ngày Chiếu"});
+            this.cbbTimKiem.Location = new System.Drawing.Point(572, 30);
+            this.cbbTimKiem.Name = "cbbTimKiem";
+            this.cbbTimKiem.Size = new System.Drawing.Size(122, 21);
+            this.cbbTimKiem.TabIndex = 24;
             // 
             // UC_LichChieu_AD
             // 
@@ -239,12 +222,11 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnKhongDongY;
         private System.Windows.Forms.Button btnDongY;
-        private System.Windows.Forms.RadioButton rbDK;
-        private System.Windows.Forms.RadioButton rbCT;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvLichChieuDK;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvLichChieuCT;
+        private System.Windows.Forms.ComboBox cbbTimKiem;
     }
 }

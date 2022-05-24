@@ -35,28 +35,28 @@ namespace GUI.AD_GUI
                 setEnable(false);
            
             NhanVienDTO nv=new NhanVienDTO();
-            nv = NhanVienBLL.Instance.GetNVByMaNV(maNv);
-            txtHoTen.Text = NhanVienBLL.Instance.GetNVByMaNV(maNv).TenNhanVien;
-            dtpNgaySinh.Value = NhanVienBLL.Instance.GetNVByMaNV(maNv).NgaySinh;
-            if (NhanVienBLL.Instance.GetNVByMaNV(maNv).GioiTinh)
+            nv = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv);
+            txtHoTen.Text = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).TenNhanVien;
+            dtpNgaySinh.Value = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).NgaySinh;
+            if (NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).GioiTinh)
             {
                 radioButton1.Checked = true;
             }
             else radioButton2.Checked = true;
-            txtDiaChi.Text = NhanVienBLL.Instance.GetNVByMaNV(maNv).DiaChi;
-            txtDienThoai.Text = NhanVienBLL.Instance.GetNVByMaNV(maNv).SoDienThoai;
+            txtDiaChi.Text = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).DiaChi;
+            txtDienThoai.Text = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).SoDienThoai;
             foreach (CBBItem i in cbbChucVu.Items) {
-                    if (i.Value == NhanVienBLL.Instance.GetNVByMaNV(maNv).MaChucVu)
+                    if (i.Value == NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).MaChucVu)
                         cbbChucVu.SelectedItem = i;
                          }
                 foreach (CBBItem i in cbbChinhSach.Items)
                 {
-                    if (i.Value == NhanVienBLL.Instance.GetNVByMaNV(maNv).MaChinhSach)
+                    if (i.Value == NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).MaChinhSach)
                         cbbChinhSach.SelectedItem = i;
                 }
-            txtCCCD.Text = NhanVienBLL.Instance.GetNVByMaNV(maNv).CCCD1;
-            txtTenTK.Text = NhanVienBLL.Instance.GetNVByMaNV(maNv).TenTaiKhoan;
-            txtMatKhau.Text = NhanVienBLL.Instance.GetNVByMaNV(maNv).MatKhau;
+            txtCCCD.Text = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).CCCD1;
+            txtTenTK.Text = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).TenTaiKhoan;
+            txtMatKhau.Text = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).MatKhau;
             }
            
         }
@@ -114,12 +114,6 @@ namespace GUI.AD_GUI
                 MaChinhSach =  maChinhSach,
                 MaChucVu = maChucVu
             };
-            
-            //if (txtDienThoai.TextLength > 10) MessageBox.Show("1");
-            //else if (txtDienThoai.TextLength < 10) MessageBox.Show("1");
-            //if (txtCCCD.TextLength > 9) MessageBox.Show("2");
-            //else if (txtCCCD.TextLength < 9) MessageBox.Show("2");
-       
             if (NhanVienBLL.Instance.KiemTraDuLieu(nhanVien) == null)
             {
                 DialogResult result = MessageBox.Show("Bạn muốn lưu?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);

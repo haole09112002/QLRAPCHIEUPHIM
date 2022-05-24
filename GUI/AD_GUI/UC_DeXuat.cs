@@ -8,11 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using DTO;
 
 namespace GUI.AD_GUI
 {
     public partial class UC_DeXuat : UserControl
     {
+        public delegate void MyDel(Control c);
+        public MyDel d;
+        DataTable dtDeXuat = new DataTable();
+        DataTable dtDaDeXuat = new DataTable();
         public UC_DeXuat()
         {
             InitializeComponent();
@@ -24,6 +29,7 @@ namespace GUI.AD_GUI
             cbbDeXuat.Items.AddRange(LoaiDeXuatBLL.Instance.GetCBBLoaiDeXuat().ToArray());
             loadDGVDeXuat();
         }
+
         public void loadDGVDeXuat()
         {
             dgvDeXuat.DataSource = DeXuatBLL.Instance.GetAllDeXuat();
@@ -32,7 +38,6 @@ namespace GUI.AD_GUI
         {
             dgvDeXuat.DataSource = DeXuatBLL.Instance.GetDeXuatViewByMaDeXuat(maLoaiDeXuat, txt);
         }
-
         private void btnDongY_Click(object sender, EventArgs e)
         {
 
@@ -63,7 +68,5 @@ namespace GUI.AD_GUI
                 dgvDeXuat.DataSource = DeXuatBLL.Instance.SortDeXuat(DeXuatBLL.Instance.GetDeXuatViewDGV(now), dkSapXep);
             }
         }
-
-        
     }
 }

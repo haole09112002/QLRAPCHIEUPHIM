@@ -190,15 +190,15 @@ namespace BLL
                 return "Mật Khẩu còn trống!";
             if (!CheckAddUpdateNhanVien(nhanVien))
             {
-                if (nhanVien.TenTaiKhoan != GetNVByMaNV(nhanVien.MaNhanVien).TenTaiKhoan && (int)NhanVienDAL.Instance.KiemTraTenTK(nhanVien) > 0)
+                if (nhanVien.TenTaiKhoan != GetNhanVienByMaNhanVien(nhanVien.MaNhanVien).TenTaiKhoan && (int)NhanVienDAL.Instance.KiemTraTenTK(nhanVien) > 0)
                 {
                     return "Tên Tài Khoản đã tồn tại!";
                 }
-                if (nhanVien.SoDienThoai != GetNVByMaNV(nhanVien.MaNhanVien).SoDienThoai && (int)NhanVienDAL.Instance.KiemTraSoDienThoai(nhanVien) > 0)
+                if (nhanVien.SoDienThoai != GetNhanVienByMaNhanVien(nhanVien.MaNhanVien).SoDienThoai && (int)NhanVienDAL.Instance.KiemTraSoDienThoai(nhanVien) > 0)
                 {
                     return "Số điện thoại đã tồn tại!";
                 }
-                if (nhanVien.CCCD1 != GetNVByMaNV(nhanVien.MaNhanVien).CCCD1 && (int)NhanVienDAL.Instance.KiemTraCCCD(nhanVien) > 0)
+                if (nhanVien.CCCD1 != GetNhanVienByMaNhanVien(nhanVien.MaNhanVien).CCCD1 && (int)NhanVienDAL.Instance.KiemTraCCCD(nhanVien) > 0)
                 {
                     return "Số CCCD đã tồn tại!";
                 }
