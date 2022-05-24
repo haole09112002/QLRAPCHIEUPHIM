@@ -44,7 +44,6 @@ namespace GUI.QLP_GUI
             dGVDanhSachLichChieuChinhThuc.Columns["Mã Phòng Chiếu"].Visible = false;
             dGVDanhSachLichChieuChinhThuc.Columns["Mã Khung Giờ Chiếu"].Visible = false;
         }
-
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             Reload(txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());

@@ -66,7 +66,6 @@ namespace GUI.QLP_GUI
             else
                 ReLoad(txtTimKiem.Text,cBTimKiem.SelectedItem.ToString());
         }
-
         private void btnSapXep_Click(object sender, EventArgs e)
         {
             if(cBSapXep.SelectedIndex >= 0)
