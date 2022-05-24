@@ -41,8 +41,6 @@ namespace DAL
         {
             return new NgayLamViecDTO()
             {
-                MaNgayLamViec = i["MaNgayLamViec"].ToString(),
-                MaCa = i["MaCa"].ToString(),
                 NgayLamViec = Convert.ToDateTime(i["NgayLamViec"].ToString()),
             };
         }

@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace GUI.QLP_GUI
 {
     public partial class UC_CaNhan_QLP : UserControl
     {
-        public UC_CaNhan_QLP()
+        NhanVienDTO nhanvien = new NhanVienDTO();
+        public UC_CaNhan_QLP(NhanVienDTO nhanvien)
         {
+            this.nhanvien = nhanvien;
             InitializeComponent();
         }
 

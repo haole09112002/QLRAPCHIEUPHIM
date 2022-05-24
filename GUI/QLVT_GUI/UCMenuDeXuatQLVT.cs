@@ -7,28 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace GUI.QLVT_GUI
 {
     public partial class UCMenuDeXuatQLVT : UserControl
     {
-        public UCMenuDeXuatQLVT()
-        {
-            InitializeComponent();
-        }
+        NhanVienDTO nhanVien = new NhanVienDTO();
+        
         public delegate void Mydel(UserControl c);
         public Mydel d { get; set; }
-        public UCDaDeXuatThucAnQLVT ucDaDeXuatThucAnQLVT = new UCDaDeXuatThucAnQLVT();
-        public UCDaDeXuatVatTuQLVT ucDaDeXuatVatTuQLVT = new UCDaDeXuatVatTuQLVT();
+        public UCDaDeXuatVatTuQLVT ucDaDeXuatVatTu;
+        public UCDaDeXuatThucAnQLVT ucDaDeXuatThucAnQLVT;
+        public UCMenuDeXuatQLVT(NhanVienDTO NV)
+        {
+            nhanVien = NV;
+            ucDaDeXuatVatTu = new UCDaDeXuatVatTuQLVT(nhanVien);
+            ucDaDeXuatThucAnQLVT = new UCDaDeXuatThucAnQLVT(nhanVien);
+            InitializeComponent();
+        }
         private void btnMenuListDXThucAn_Click(object sender, EventArgs e)
         {
+           
             d(ucDaDeXuatThucAnQLVT);
-            changeColorButton(btnMenuListDXThucAn);
+            
+            changeColorButton(btnMenuListDXThucAn); 
         }
 
         private void btnMenuListDXVatTu_Click(object sender, EventArgs e)
         {
-            d(ucDaDeXuatVatTuQLVT);
+            
+            d(ucDaDeXuatVatTu);
             changeColorButton(btnMenuListDXVatTu);
         }
         private void changeColorButton(Button btn)

@@ -8,23 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GUI.QLVT_GUI;
+using DTO;
 
 namespace GUI.QLVT_GUI
 {
     public partial class FrmDashboardQLVT : Form
     {
-        public FrmDashboardQLVT()
-        {
-            InitializeComponent();
-            
-        }
+        NhanVienDTO nhanVien = new NhanVienDTO();
         UCThongTinSanPhamQLVT ucThongTinSanPhamQLVT = new UCThongTinSanPhamQLVT();
         UCPhongChieuQLVT ucPhongChieuQLVT = new UCPhongChieuQLVT();
-        UCMenuDeXuatQLVT ucMenuDeXuatQLVT = new UCMenuDeXuatQLVT();
+        UCMenuDeXuatQLVT ucMenuDeXuatQLVT;
         UCMenuNhaCungUngQLVT ucMenuNhaCungUngQLVT = new UCMenuNhaCungUngQLVT();
         UCMenuNhapXuatQLVT ucMenuNhapXuatQLVT = new UCMenuNhapXuatQLVT();
-        UCHoSoCaNhanQLVT ucHoSoCaNhanQLVT = new UCHoSoCaNhanQLVT();
+        UCHoSoCaNhanQLVT ucHoSoCaNhanQLVT;
+        public FrmDashboardQLVT(NhanVienDTO NV)
+        {
+            InitializeComponent();
+            nhanVien = NV;
+            lbTenNhanVien.Text = nhanVien.TenNhanVien;
+            ucMenuDeXuatQLVT = new UCMenuDeXuatQLVT(nhanVien);
+            ucHoSoCaNhanQLVT = new UCHoSoCaNhanQLVT(nhanVien);
 
+        }
         private void changeColorButton(Button btn)
         {
             btn.BackColor = Color.FromArgb(0, 144, 153);

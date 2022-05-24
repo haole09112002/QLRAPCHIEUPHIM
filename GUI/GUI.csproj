@@ -1058,15 +1058,7 @@
   <ItemGroup>
     <None Include="Resources\subtract_24px.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eye_26px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hidePass_26px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_24px.png" />
-  </ItemGroup>
+  
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
@@ -1079,6 +1071,18 @@
       <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidePass_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_file_add_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

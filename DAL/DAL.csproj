@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="CaLamViecDAL.cs" />
     <Compile Include="ChinhSachDAL.cs" />
-    <Compile Include="ChiTietCaLamViecDAL.cs" />
+    <Compile Include="LichLamViecDAL.cs" />
     <Compile Include="ChiTietDeXuatThucAnDAL.cs" />
     <Compile Include="ChiTietDeXuatVatTuDAL.cs" />
     <Compile Include="ChiTietDienVienDaoDienPhimDAL.cs" />

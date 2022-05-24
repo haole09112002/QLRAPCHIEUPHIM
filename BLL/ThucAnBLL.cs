@@ -10,7 +10,6 @@ namespace BLL
 {
     public class ThucAnBLL
     {
-        public delegate bool Compare(object a, object b);
         private static ThucAnBLL instance;
         public static ThucAnBLL Instance
         {
@@ -29,27 +28,24 @@ namespace BLL
             List<ThucAnViewDTO> data = new List<ThucAnViewDTO>();
             foreach (ThucAnDTO i in ThucAnDAL.Instance.GetALLThucAn())
             {
-                double GiaTienThucAn = 0;
                 if (i.TenThucAn.Contains(txt))
                 {
-                    foreach (HopDongThucAnDTO k in HopDongThucAnDAL.Instance.GetAllHopDongThucAn())
-                    {
-                        if (k.MaThucAn == i.MaThucAn)
-                        {
-                            GiaTienThucAn = k.GiaTien;
-                        }
-                    }
                     data.Add(new ThucAnViewDTO
                     {
                         MaThucAn = i.MaThucAn,
                         TenThucAn = i.TenThucAn,
                         DonViTinh = i.DonViTinh,
                         SoLuong = i.SoLuong,
-                        GiaTien = GiaTienThucAn
                     });
                 }
             }
             return data;
+        }
+        public List<ThucAnDTO> GetAllThucAn()
+        {
+
+            return ThucAnDAL.Instance.GetALLThucAn();
+
         }
         public ThucAnDTO GetThucAnByMaThucAn(string MaThucAn)
         {
@@ -65,42 +61,6 @@ namespace BLL
                 }
             }
             return data;
-        }
-        public List<ThucAnViewDTO> SortThucAnView(Compare compare)
-        {
-            List<ThucAnViewDTO> data = new List<ThucAnViewDTO>();
-            data = GetThucAnViews("");
-            for (int i = 0; i < data.Count - 1; i++)
-                for (int j = i + 1; j < data.Count; j++)
-                {
-                    if (compare(data[i], data[j]))
-                    {
-                        ThucAnViewDTO temp = data[i];
-                        data[i] = data[j];
-                        data[j] = temp;
-                    }
-                }
-            return data;
-        }
-        public bool CompareMaThucAn(object o1, object o2)
-        {
-            return String.Compare(((ThucAnViewDTO)o1).MaThucAn, ((ThucAnViewDTO)o2).MaThucAn) > 0;
-        }
-        public bool CompareTenThucAn(object o1, object o2)
-        {
-            return String.Compare(((ThucAnViewDTO)o1).TenThucAn, ((ThucAnViewDTO)o2).TenThucAn) > 0;
-        }
-        public bool CompareDonViTinh(object o1, object o2)
-        {
-            return String.Compare(((ThucAnViewDTO)o1).DonViTinh, ((ThucAnViewDTO)o2).DonViTinh) > 0;
-        }
-        public bool CompareSoLuong(object o1, object o2)
-        {
-            return ((ThucAnViewDTO)o1).SoLuong > ((ThucAnViewDTO)o2).SoLuong;
-        }
-        public bool CompareGiaTien(object o1, object o2)
-        {
-            return ((ThucAnViewDTO)o1).GiaTien > ((ThucAnViewDTO)o2).GiaTien;
         }
     }
 }

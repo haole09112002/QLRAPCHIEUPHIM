@@ -78,25 +78,24 @@ namespace BLL
             }
             return data;
         }
-        public NhanVienDTO GetNVByMaNV(string MaNV)
+        public NhanVienDTO GetNhanVienByMaNhanVien(string maNhanVien)
         {
-            NhanVienDTO nhanVien = null;
-            foreach (NhanVienDTO i in NhanVienDAL.Instance.GetAllNhanVien())
+            List<NhanVienDTO> data = GetAllNhanVien();
+            foreach(NhanVienDTO i in data)
             {
-                if (i.MaNhanVien == MaNV)
+                if (i.MaNhanVien == maNhanVien)
                 {
-                    nhanVien = i;
-                    break;
+                    return i;
                 }
             }
-            return nhanVien;
+            return null;
         }
         public List<NhanVienDTO> GetNhanVienDGV(List<string> maNhanVien)
         {
             List<NhanVienDTO> data = new List<NhanVienDTO>();
             foreach (string i in maNhanVien)
             {
-                data.Add(GetNVByMaNV(i));
+                data.Add(GetNhanVienByMaNhanVien(i));
             }
             return data;
         }
@@ -274,6 +273,18 @@ namespace BLL
                 data.Add(GetNhanVienViewByNhanVienDTO(i));
             }
             return data;
+        }
+        public NhanVienDTO GetNhanVienByTenTaiKhoan(string TenTaiKhoan)
+        {
+            foreach(NhanVienDTO i in NhanVienDAL.Instance.GetAllNhanVien())
+            {
+                if(TenTaiKhoan == i.TenTaiKhoan)
+                {
+                    return i;
+
+                }
+            }
+            return null;
         }
     }
 }

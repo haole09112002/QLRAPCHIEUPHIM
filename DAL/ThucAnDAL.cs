@@ -26,7 +26,7 @@ namespace DAL
         public List<ThucAnDTO> GetALLThucAn()
         {
             List<ThucAnDTO> listThucAn = new List<ThucAnDTO>();
-            string query = "Select * from THUC_AN,CHI_TIET_KHO_THUC_AN where THUC_AN.MaThucAn = CHI_TIET_KHO_THUC_AN.MaThucAn";
+            string query = "Select * from THUC_AN";
             foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
             {
                 listThucAn.Add(GetThucAnByDataRow(i));
@@ -39,8 +39,6 @@ namespace DAL
             {
                 MaThucAn = i["MaThucAn"].ToString(),
                 TenThucAn = i["TenThucAn"].ToString(),
-                DonViTinh = i["DonViTinh"].ToString(),
-                SoLuong = Convert.ToInt32(i["SoLuongSP"].ToString()),
             };
         }
     }

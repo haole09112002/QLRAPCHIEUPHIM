@@ -43,6 +43,7 @@ namespace GUI.QLVT_GUI
         public void ReLoadListNCCThucAn(string maLoaiNCC = "LNCC03", string txt = "")
         {
             dgvListNCCThucAn.DataSource = NhaCungCapBLL.Instance.GetNCCViewMaLoaiNCC(maLoaiNCC, txt);
+            dgvListNCCThucAn.Columns["TenLoaiNhaCungCap"].Visible = false;
         }
         private void cbSapXep_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -63,6 +64,12 @@ namespace GUI.QLVT_GUI
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             dgvListNCCThucAn.DataSource = NhaCungCapBLL.Instance.GetNCCViewMaLoaiNCC("LNCC03",txtTimKiem.Text);
+        }
+
+        private void txtTimKiem_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtTimKiem.Text = null;
+            txtTimKiem.ForeColor = Color.Black;
         }
     }
 }

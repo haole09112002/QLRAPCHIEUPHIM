@@ -167,5 +167,14 @@ namespace BLL
         {
             return HopDongPhimDAL.Instance.GetLichSuGiaHan(maHopDong, maPhim);
         }
+        public List<string> GetDanhSachMaPhimCoHopDong()
+        {
+            List<string> data = new List<string>();
+            foreach(HopDongPhimDTO i in HopDongPhimDAL.Instance.GetAllHopDongPhim())
+            {
+                data.Add(i.MaPhim);
+            }
+            return data.Distinct().ToList();
+        }
     }
 }

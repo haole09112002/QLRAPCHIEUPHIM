@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DAL;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -73,7 +75,7 @@ namespace BLL
         {
             List<KhoDTO> data = new List<KhoDTO>();
             foreach (string i in maKho)
-            {
+        {
                 data.Add(GetKhoByMaKho(i));
             }
             return data;
@@ -128,9 +130,9 @@ namespace BLL
             foreach (KhoDTO i in GetKhoDGV(maKho))
             {
                 data.Add(GetKhoViewByKhoDTO(i));
-            }
+                }
             return data;
-        }
+            }
         public delegate bool CompareObj(object o1, object o2);
         public List<KhoView> SortKho(List<KhoView> now, string dkSort)
         {
@@ -143,7 +145,7 @@ namespace BLL
         public static bool CompareKhoTang(object o1, object o2)
         {
             return String.Compare(((KhoView)o1).TenKho, ((KhoView)o2).TenKho) > 0;
-        }
+    }
         public static bool CompareKhoGiam(object o1, object o2)
         {
             return String.Compare(((KhoView)o2).TenKho, ((KhoView)o1).TenKho) > 0;

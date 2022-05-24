@@ -26,7 +26,7 @@ namespace DAL
         public List<VatTuDTO> GetALLVatTu()
         {
             List<VatTuDTO> listVatTu = new List<VatTuDTO>();
-            string query = "Select * from VAT_TU,CHI_TIET_KHO_VT where VAT_TU.MaVatTu = CHI_TIET_KHO_VT.MaVatTu";
+            string query = "Select * from VAT_TU";
             foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
             {
                 listVatTu.Add(GetVatTuByDataRow(i));
@@ -39,8 +39,6 @@ namespace DAL
             {
                 MaVatTu = i["MaVatTu"].ToString(),
                 TenVatTu = i["TenVatTu"].ToString(),
-                DonViTinh = i["DonViTinh"].ToString(),
-                SoLuong = Convert.ToInt32(i["SoLuongSP"].ToString()),
             };
         }
     }

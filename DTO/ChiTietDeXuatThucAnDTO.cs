@@ -13,13 +13,13 @@ namespace DTO
         private string noiDung;
         private int soLuong;
         private string donViTinh;
-        private bool tinhTrang;
+        private string tinhTrang;
 
         public string MaDeXuat { get => maDeXuat; set => maDeXuat = value; }
         public string MaThucAn { get => maThucAn; set => maThucAn = value; }
         public string NoiDung { get => noiDung; set => noiDung = value; }
         public int SoLuong { get => soLuong; set => soLuong = value; }
         public string DonViTinh { get => donViTinh; set => donViTinh = value; }
-        public bool TinhTrang { get => tinhTrang; set => tinhTrang = value; }
+        public string TinhTrang { get => tinhTrang; set => tinhTrang = value; }
     }
 }
