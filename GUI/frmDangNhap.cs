@@ -36,7 +36,7 @@ namespace GUI
             }
             if (result == 2)
             {
-                frm_QLP frm_QLP = new frm_QLP();
+                frm_QLP frm_QLP = new frm_QLP(NhanVienBLL.Instance.GetNhanVienByTenTaiKhoan(txtTenTaiKhoan.Text));
                 frm_QLP.Show();
                 this.Hide();
 

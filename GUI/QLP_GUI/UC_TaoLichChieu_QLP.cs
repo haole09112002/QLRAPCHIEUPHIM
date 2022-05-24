@@ -61,14 +61,19 @@ namespace GUI.QLP_GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(LichChieuBLL.Instance.KiemTraLichChieu(txtMaKhungGioChieu.Text,txtMaPhongChieu.Text,dTPNgayChieu.Value) == true)
+            DialogResult dialogResult = MessageBox.Show("Xác nhận lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.OK)
             {
-                MessageBox.Show("Tồn tại một lịch chiếu sử dụng phòng chiếu cùng thời điểm");
-            }
-            else
-            {
-                LichChieuBLL.Instance.LuuLichChieu(txtMaPhim.Text, txtMaKhungGioChieu.Text, txtMaPhongChieu.Text, false, dTPNgayChieu.Value);
-                MessageBox.Show("Lưu thành công");
+                string KiemTra = LichChieuBLL.Instance.KiemTraLichChieu(txtMaPhim.Text, txtMaKhungGioChieu.Text, txtMaPhongChieu.Text, dTPNgayChieu.Value);
+                if (KiemTra == "")
+                {
+                    LichChieuBLL.Instance.LuuLichChieu(txtMaPhim.Text, txtMaKhungGioChieu.Text, txtMaPhongChieu.Text, false, dTPNgayChieu.Value);
+                    MessageBox.Show("Lưu thành công");
+                }
+                else
+                {
+                    MessageBox.Show(KiemTra);
+                }
             }
         }
 

@@ -1,13 +1,7 @@
 ﻿using BLL;
 using DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
@@ -15,24 +9,54 @@ namespace GUI.QLP_GUI
     public partial class frm_TaoDeXuat_QLP : Form
     {
         DataTable dtDeXuatPhim = new DataTable();
-        public frm_TaoDeXuat_QLP()
+        DataTable dtDanhSachPhim = new DataTable();
+        NhanVienDTO nhanvien = new NhanVienDTO();
+        public frm_TaoDeXuat_QLP(NhanVienDTO nhanvien)
         {
+            this.nhanvien = nhanvien;
             InitializeComponent();
-            ReLoad();
             SetDataTable();
+            ReLoad();
+            btnChinhSua.Visible = false;
         }
-        public void ReLoad()
+        public void ReLoad(string TenPhim = "", string LoaiTimKiem = "TenPhim")
         {
-            dGVDanhSachPhim.DataSource = PhimBLL.Instance.GetPhimViews();
+            dtDanhSachPhim.Rows.Clear();
+            foreach (PhimViewDTO i in PhimBLL.Instance.GetPhimViews(TenPhim,LoaiTimKiem))
+            {
+                dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
+            }
+            dGVDanhSachPhim.DataSource = dtDanhSachPhim;
         }
 
         public void SetDataTable()
         {
+            dtDanhSachPhim.Columns.Add("Mã Phim");
+            dtDanhSachPhim.Columns.Add("Tên Phim");
+            dtDanhSachPhim.Columns.Add("Thời Lượng");
+            dtDanhSachPhim.Columns.Add("Quốc Gia");
+            dtDanhSachPhim.Columns.Add("Năm Sản Xuất");
+            dtDanhSachPhim.Columns.Add("Tên Hãng Sản Xuất Phim");
+            dtDanhSachPhim.Columns.Add("Độ Tuổi Xem");
+            dtDanhSachPhim.Columns.Add("Thể Loại");
             dtDeXuatPhim.Columns.Add("Mã Phim");
             dtDeXuatPhim.Columns.Add("Tên Phim");
             dtDeXuatPhim.Columns.Add("Số Lượng");
             dtDeXuatPhim.Columns.Add("Đơn Vị Tính");
             dtDeXuatPhim.Columns.Add("Nội Dung");
+        }
+        
+        public bool KiemTraTonTaiPhim(string MaPhim)
+        {
+            for(int i = 0; i < dGVDeXuatPhim.Rows.Count - 1; i++)
+            {
+                if (dGVDeXuatPhim.Rows[i].Cells["Mã Phim"].Value.ToString() == MaPhim)
+                {
+                    MessageBox.Show("Phim này đã được đề xuất");
+                    return true;
+                }
+            }
+            return false;
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -48,61 +72,79 @@ namespace GUI.QLP_GUI
             }
             else
             {
-                if (txtSoLuong.Text == "")
+                if (nUDSoLuong.Text == "0")
                 {
-                    MessageBox.Show("Mời nhập số lượng");
+                    lbSoLuong.Text = "Mời nhập số lượng";
                 }
                 else
                 {
+                    lbSoLuong.Text = "";
                     if (txtNoiDung.Text == "")
                     {
-                        MessageBox.Show("Mời nhập nội dung đề xuất");
+                        lbNoiDung.Text = "Mời nhập nội dung đề xuất";
                     }
                     else
                     {
+                        lbNoiDung.Text = "";
                         if (cBDonViTinh.SelectedIndex < 0)
                         {
-                            MessageBox.Show("Mời chọn đơn vị tính");
+                            lbDonViTinh.Text = "Mời chọn đơn vị tính";
                         }
                         else
                         {
-                            foreach (DataGridViewRow i in dGVDanhSachPhim.SelectedRows)
+                            lbDonViTinh.Text = "";
+                            if(KiemTraTonTaiPhim(txtMaPhim.Text) == false)
                             {
-                                dtDeXuatPhim.Rows.Add(i.Cells["MaPhim"].Value.ToString(), PhimBLL.Instance.GetPhimByMaPhim(i.Cells["MaPhim"].Value.ToString()).TenPhim, txtSoLuong.Text, cBDonViTinh.SelectedItem.ToString(), txtNoiDung.Text);
+                                foreach (DataGridViewRow i in dGVDanhSachPhim.SelectedRows)
+                                {
+                                    dtDeXuatPhim.Rows.Add(i.Cells["Mã Phim"].Value.ToString(), PhimBLL.Instance.GetPhimByMaPhim(i.Cells["Mã Phim"].Value.ToString()).TenPhim, nUDSoLuong.Text, cBDonViTinh.SelectedItem.ToString(), txtNoiDung.Text);
+                                }
+                                dGVDeXuatPhim.DataSource = dtDeXuatPhim;
                             }
-                            dGVDeXuatPhim.DataSource = dtDeXuatPhim;
                         }
                     }
                 }
             }
+            txtNoiDung.Text = "";
+            nUDSoLuong.Text = "0";
+            cBDonViTinh.Text = "";
+            txtMaPhim.Text = "";
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            if (txtSoLuong.Text == "")
+            if (nUDSoLuong.Text == "0")
             {
-                MessageBox.Show("Mời nhập số lượng");
+                lbSoLuong.Text = "Mời nhập số lượng";
             }
             else
             {
+                lbSoLuong.Text = "";
                 if (txtNoiDung.Text == "")
                 {
-                    MessageBox.Show("Mời nhập nội dung đề xuất");
+                    lbNoiDung.Text = "Mời nhập nội dung đề xuất";
                 }
                 else
                 {
+                    lbNoiDung.Text = "";
                     if (cBDonViTinh.SelectedIndex < 0)
                     {
-                        MessageBox.Show("Mời chọn đơn vị tính");
+                        lbDonViTinh.Text = "Mời chọn đơn vị tính";
                     }
                     else
                     {
-                        dGVDeXuatPhim.CurrentRow.Cells["Số Lượng"].Value = txtSoLuong.Text;
+                        lbDonViTinh.Text = "";
+                        dGVDeXuatPhim.CurrentRow.Cells["Số Lượng"].Value = nUDSoLuong.Text;
                         dGVDeXuatPhim.CurrentRow.Cells["Nội Dung"].Value = txtNoiDung.Text;
                         dGVDeXuatPhim.CurrentRow.Cells["Đơn Vị Tính"].Value = cBDonViTinh.SelectedItem.ToString();
                     }
                 }
             }
+            txtNoiDung.Text = "";
+            nUDSoLuong.Text = "0";
+            cBDonViTinh.Text = "";
+            btnThem.Visible = true;
+            btnChinhSua.Visible = false;
         }
 
         private void dGVDeXuatPhim_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -113,12 +155,16 @@ namespace GUI.QLP_GUI
             }
             else
             {
-                txtSoLuong.Text = dGVDeXuatPhim.CurrentRow.Cells["Số Lượng"].Value.ToString();
+                txtMaPhim.Text = dGVDeXuatPhim.CurrentRow.Cells["Mã Phim"].Value.ToString();
+                txtMaPhim.Enabled = false;
+                nUDSoLuong.Text = dGVDeXuatPhim.CurrentRow.Cells["Số Lượng"].Value.ToString();
                 txtNoiDung.Text = dGVDeXuatPhim.CurrentRow.Cells["Nội Dung"].Value.ToString();
                 cBDonViTinh.Text = dGVDeXuatPhim.CurrentRow.Cells["Đơn Vị Tính"].Value.ToString();
             }
+            btnThem.Visible = false;
+            btnChinhSua.Visible = true;
         }
-            
+
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (dGVDeXuatPhim.SelectedRows.Count <= 0)
@@ -130,7 +176,7 @@ namespace GUI.QLP_GUI
                 DialogResult dialogResult = MessageBox.Show("Xác Nhận Xóa", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question); ;
                 if (dialogResult == DialogResult.OK)
                     foreach (DataGridViewRow i in dGVDeXuatPhim.SelectedRows)
-            {
+                    {
                         dGVDeXuatPhim.Rows.RemoveAt(i.Index);
                     }
             }
@@ -139,16 +185,16 @@ namespace GUI.QLP_GUI
         private void btnLuu_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Xác nhận lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if(dialogResult == DialogResult.OK)
+            if (dialogResult == DialogResult.OK)
             {
-                DeXuatBLL.Instance.LuuDeXuat("NV0003", DateTime.Now, "LDX01");
+                DeXuatBLL.Instance.LuuDeXuat(nhanvien.MaNhanVien, DateTime.Now, "LDX01");
                 string MaDeXuat = DeXuatBLL.Instance.GetMaDeXuatAddNew();
                 string MaPhim = "";
                 string NoiDung = "";
                 string DonViTinh = "";
                 int SoLuong;
-                for(int i = 0; i <dGVDeXuatPhim.Rows.Count - 1; i++)
-        {
+                for (int i = 0; i < dGVDeXuatPhim.Rows.Count - 1; i++)
+                {
                     MaPhim = dGVDeXuatPhim.Rows[i].Cells["Mã Phim"].Value.ToString();
                     NoiDung = dGVDeXuatPhim.Rows[i].Cells["Nội Dung"].Value.ToString();
                     DonViTinh = dGVDeXuatPhim.Rows[i].Cells["Đơn Vị Tính"].Value.ToString();
@@ -157,6 +203,26 @@ namespace GUI.QLP_GUI
                 }
                 this.Close();
             }
+        }
+
+        private void dGVDanhSachPhim_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(btnThem.Visible == true)
+            {
+                if(dGVDanhSachPhim.SelectedRows.Count == 1)
+                {
+                    txtMaPhim.Text = dGVDanhSachPhim.SelectedRows[0].Cells["Mã Phim"].Value.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Chỉ chọn được duy nhất 1 dòng");
+                }
+            }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            ReLoad(txtTimKiem.Text);
         }
     }
 }
