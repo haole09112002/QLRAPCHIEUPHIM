@@ -103,6 +103,7 @@ namespace GUI.QLVT_GUI
         private void btnCaNhan_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
+            ucHoSoCaNhanQLVT.Reload();
             AddControlsToPnCenter(ucHoSoCaNhanQLVT);
             changeColorButton(btnCaNhan);
         }

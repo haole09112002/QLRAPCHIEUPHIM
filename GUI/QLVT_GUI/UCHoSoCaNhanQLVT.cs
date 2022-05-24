@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BLL;
+using DTO;
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
-using DTO;
 
 namespace GUI.QLVT_GUI
 {
@@ -25,8 +20,6 @@ namespace GUI.QLVT_GUI
         }
         public void Reload()
         {
-            txtTen.Text = nhanVien.TenNhanVien;
-            dtpNgaySinh.Value = nhanVien.NgaySinh;
             if (nhanVien.GioiTinh == false)
             {
                 rbNam.Checked = true;
@@ -35,6 +28,8 @@ namespace GUI.QLVT_GUI
             {
                 rbNu.Checked = true;
             }
+            txtTen.Text = nhanVien.TenNhanVien;
+            dtpNgaySinh.Value = nhanVien.NgaySinh;
             txtDiaChi.Text = nhanVien.DiaChi;
             txtDienThoai.Text = nhanVien.SoDienThoai;
             txtTenTaiKhoan.Text = nhanVien.TenTaiKhoan;
@@ -53,7 +48,11 @@ namespace GUI.QLVT_GUI
             rbNam.Enabled = false;
             rbNu.Enabled = false;
             btnLuu.Enabled = false;
-            foreach (CaLamViecDTO i in LichLamViecBLL.Instance.GetListCaLamViecByMaNhanVien(nhanVien.MaNhanVien))
+            LoadListCaLamViec();
+        }
+        public void LoadListCaLamViec()
+        {
+            foreach (CaLamViecDTO i in LichLamViecBLL.Instance.GetListCaLamViecByMaNhanVien(nhanVien.MaNhanVien, dtpNhanVien.Value))
             {
                 dtListCaLam.Rows.Add(i.TenCa, i.GioBatDau.ToShortTimeString(), i.GioKetThuc.ToShortTimeString());
             }
@@ -75,7 +74,7 @@ namespace GUI.QLVT_GUI
         bool checkEdit = true;
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            if(checkEdit == true)
+            if (checkEdit == true)
             {
                 txtTen.BackColor = Color.White;
                 txtDiaChi.BackColor = Color.White;
@@ -114,34 +113,32 @@ namespace GUI.QLVT_GUI
             DialogResult dialogResult = MessageBox.Show("Xác nhận lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.OK)
             {
-                if (txtTen.Text == "" || txtCCCD.Text == ""|| txtDiaChi.Text == "" || txtDienThoai.Text == "")
+                nhanVien.TenNhanVien = txtTen.Text;
+                nhanVien.CCCD1 = txtCCCD.Text;
+                nhanVien.DiaChi = txtDiaChi.Text;
+                nhanVien.SoDienThoai = txtDienThoai.Text;
+                if (rbNam.Checked == true)
                 {
-                    MessageBox.Show("Không Được Để Trống Thông Tin, Vui Lòng Nhập Lại!!");
+                    nhanVien.GioiTinh = false;
                 }
                 else
                 {
-                    nhanVien.TenNhanVien = txtTen.Text;
-                    nhanVien.CCCD1 = txtCCCD.Text;
-                    nhanVien.DiaChi = txtDiaChi.Text;
-                    nhanVien.SoDienThoai = txtDienThoai.Text;
-                    if(rbNam.Checked == true)
-                    {
-                        nhanVien.GioiTinh = false;
-                    }
-                    else
-                    {
-                        nhanVien.GioiTinh = true;
-                    }
-                    nhanVien.NgaySinh = dtpNgaySinh.Value;
-                    NhanVienBLL.Instance.AddUpdateNhaCungCap(nhanVien);
-                    MessageBox.Show("Cập nhật thành công!");
-                    Reload();
+                    nhanVien.GioiTinh = true;
                 }
+                nhanVien.NgaySinh = dtpNgaySinh.Value;
+                NhanVienBLL.Instance.AddUpdateNhaCungCap(nhanVien);
+                MessageBox.Show("Cập nhật thành công!");
+                Reload();
             }
         }
 
         private void checkSave(object sender, EventArgs e)
         {
+            lblErrorCCCD.Visible = false;
+            lblErrorTen.Visible = false;
+            lblErrorDiaChi.Visible = false;
+            lblErrorDienThoai.Visible = false;
+            btnChinhSua.Enabled = true;
             if (nhanVien.TenNhanVien == txtTen.Text && nhanVien.GioiTinh != rbNam.Checked
                 && nhanVien.NgaySinh.ToShortDateString() == dtpNgaySinh.Value.ToShortDateString()
                 && nhanVien.DiaChi == txtDiaChi.Text && nhanVien.SoDienThoai == txtDienThoai.Text
@@ -151,8 +148,62 @@ namespace GUI.QLVT_GUI
             }
             else
             {
-                btnLuu.Enabled = true;
+                if (txtTen.Text == "" || txtCCCD.Text == "" || txtDiaChi.Text == "" || txtDienThoai.Text == "")
+                {
+                    if (txtCCCD.Text == "")
+                    {
+                        lblErrorCCCD.Visible = true;
+                    }
+                    if (txtTen.Text == "")
+                    {
+                        lblErrorTen.Visible = true;
+                    }
+                    if (txtDiaChi.Text == "")
+                    {
+                        lblErrorDiaChi.Visible = true;
+                    }
+                    if (txtDienThoai.Text == "")
+                    {
+                        lblErrorDienThoai.Visible = true;
+                    }
+                    btnLuu.Enabled = false;
+                    btnChinhSua.Enabled = false;
+                }
+                else
+                {
+                    lblErrorTen.Visible = false;
+                    lblErrorCCCD.Visible = false;
+                    lblErrorDiaChi.Visible = false;
+                    lblErrorDienThoai.Visible = false;
+                    btnLuu.Enabled = true;
+                    btnChinhSua.Enabled = false;
+                }
             }
+        }
+        public void CheckEdit()
+        {
+            if (nhanVien.TenNhanVien == txtTen.Text && nhanVien.GioiTinh != rbNam.Checked
+                && nhanVien.NgaySinh.ToShortDateString() == dtpNgaySinh.Value.ToShortDateString()
+                && nhanVien.DiaChi == txtDiaChi.Text && nhanVien.SoDienThoai == txtDienThoai.Text
+                && nhanVien.CCCD1 == txtCCCD.Text)
+            {
+
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Thông tin chưa lưu, có muốn thoát", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.OK)
+                {
+                    Reload();
+                }
+
+            }
+        }
+
+        private void dtpNhanVien_ValueChanged(object sender, EventArgs e)
+        {
+            dtListCaLam.Rows.Clear();
+            LoadListCaLamViec();
         }
     }
 }

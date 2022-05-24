@@ -29,12 +29,12 @@ namespace BLL
             return LichLamViecDAL.Instance.GetAllLichLamViec();
 
         }
-        public List<CaLamViecDTO> GetListCaLamViecByMaNhanVien(string maNhanVien)
+        public List<CaLamViecDTO> GetListCaLamViecByMaNhanVien(string maNhanVien, DateTime ngayLamViec)
         {
             List<CaLamViecDTO> data = new List<CaLamViecDTO>();
             foreach(LichLamViecDTO i in LichLamViecDAL.Instance.GetAllLichLamViec())
             {
-                if(maNhanVien == i.MaNhanVien)
+                if(maNhanVien == i.MaNhanVien && ngayLamViec.ToShortDateString() == i.NgayLamViec.ToShortDateString())
                 {
                     data.Add(CaLamViecBLL.Instance.GetCaLamViecByMaCaLamViec(i.MaCa));
                 }
