@@ -186,11 +186,13 @@ insert into CA_LAM_VIEC(TenCa,GioBatDau,GioKetThuc) values(N'Ca tối','17:00:00
 insert into CA_LAM_VIEC(TenCa,GioBatDau,GioKetThuc) values(N'Ca tối','20:00:00.0000000','23:00:00.0000000');
 ----Đã xong
 ------15 Ngay Lam Viec -------- NLV001
-insert into NGAY_LAM_VIEC(NgayLamViec,MaCa) values('2022-01-29','CLV001');
-insert into NGAY_LAM_VIEC(NgayLamViec,MaCa) values('2022-02-28','CLV002');
-insert into NGAY_LAM_VIEC(NgayLamViec,MaCa) values('2022-03-25','CLV003');
-insert into NGAY_LAM_VIEC(NgayLamViec,MaCa) values('2022-04-25','CLV004');
-insert into NGAY_LAM_VIEC(NgayLamViec,MaCa) values('2022-05-25','CLV005');
+insert into NGAY_LAM_VIEC(NgayLamViec) values('2022-01-27');
+insert into NGAY_LAM_VIEC(NgayLamViec) values('2022-01-28');
+insert into NGAY_LAM_VIEC(NgayLamViec) values('2022-01-29');
+insert into NGAY_LAM_VIEC(NgayLamViec) values('2022-01-30');
+insert into NGAY_LAM_VIEC(NgayLamViec) values('2022-01-31');
+insert into NGAY_LAM_VIEC(NgayLamViec) values('2022-02-01');
+insert into NGAY_LAM_VIEC(NgayLamViec) values('2022-02-02');
 ---- Đã xong
 ------16. Chính sách ------- CS0001
 insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Kha','1','6 thang','200000');
@@ -210,16 +212,19 @@ Values (N'Trần Trung Hiếu','2002-03-01','0',N'Quảng Trị','0982782647','9
 insert into NHAN_VIEN(TenNhanVien,NgaySinh,GioiTinh,DiaChi,SoDienThoai,CCCD,TenTaiKhoan,MatKhau,MaChinhSach,MaChucVu)--123456
 Values (N'Lê Văn Hào','2002-02-22','0',N'Huế','0827582932','9280000002392','admin','e10adc3949ba59abbe56e057f20f883e','CS0003','CV0003');
 -----Đã xong
-------19. Chi tiết ca làm việc
-insert into CHI_TIET_CA_LAM_VIEC(MaNhanVien,MaCa,TrangThai) values ('NV0001','CLV001','1');
-insert into CHI_TIET_CA_LAM_VIEC(MaNhanVien,MaCa,TrangThai) values ('NV0001','CLV002','0');
-insert into CHI_TIET_CA_LAM_VIEC(MaNhanVien,MaCa,TrangThai) values ('NV0001','CLV003','1');
-insert into CHI_TIET_CA_LAM_VIEC(MaNhanVien,MaCa,TrangThai) values ('NV0002','CLV001','1');
-insert into CHI_TIET_CA_LAM_VIEC(MaNhanVien,MaCa,TrangThai) values ('NV0002','CLV002','1');
-insert into CHI_TIET_CA_LAM_VIEC(MaNhanVien,MaCa,TrangThai) values ('NV0003','CLV002','1');
-insert into CHI_TIET_CA_LAM_VIEC(MaNhanVien,MaCa,TrangThai) values ('NV0003','CLV003','1');
-insert into CHI_TIET_CA_LAM_VIEC(MaNhanVien,MaCa,TrangThai) values ('NV0003','CLV004','1');
-insert into CHI_TIET_CA_LAM_VIEC(MaNhanVien,MaCa,TrangThai) values ('NV0003','CLV005','1');
+------19. lịch làm việc
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV001','2022-01-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV001','2022-01-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV001','2022-01-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV002','2022-01-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV002','2022-01-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV002','2022-01-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV003','2022-01-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV003','2022-01-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV003','2022-01-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV001','2022-01-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV001','2022-01-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV001','2022-01-28');
 ------ Đã xong
 ------20. Loại kho -------- LK001
 insert into LOAI_KHO(TenLoaiKho) values (N'Phim');

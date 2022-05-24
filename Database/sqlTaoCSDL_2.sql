@@ -118,9 +118,7 @@ go
 -- Bang Ngay Lam Viec
 create table NGAY_LAM_VIEC
 (
-	MaNgayLamViec varchar(6) primary key not null constraint IDNLV default dbo.AUTO_IDNLV(),
-	NgayLamViec date,
-	MaCa varchar(6) foreign key (MaCa)references CA_LAM_VIEC
+	NgayLamViec date primary key not null
 )
 go
 --Bang Chinh Sach
@@ -145,7 +143,7 @@ go
 Create table NHAN_VIEN(
 	MaNhanVien varchar(6) primary key not null constraint IDNV default dbo.AUTO_IDNV(),
 	TenNhanVien nvarchar(30),
-	NgaySinh datetime,
+	NgaySinh date,
 	GioiTinh bit,
 	DiaChi nvarchar(50),
 	SoDienThoai varchar(15),
@@ -159,11 +157,11 @@ Create table NHAN_VIEN(
 go
 --Bang Chi Tiet Ca Lam
 
-Create table CHI_TIET_CA_LAM_VIEC(
+Create table LICH_LAM_VIEC(
 	MaNhanVien varchar(6) foreign key(MaNhanVien) references NHAN_VIEN,
 	MaCa varchar(6) foreign key(MaCa) references CA_LAM_VIEC,
-	TrangThai bit,
-	constraint pk_CTCaLamViec primary key(MaNhanVien,MaCa)
+	NgayLamViec date foreign key(NgayLamViec) references NGAY_LAM_VIEC,
+	constraint pk_CTCaLamViec primary key(MaNhanVien,MaCa,NgayLamViec)
 )
 go
 --Bang Loai Kho

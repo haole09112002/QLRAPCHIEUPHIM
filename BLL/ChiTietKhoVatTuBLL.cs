@@ -66,7 +66,7 @@ namespace BLL
 
             };
         }
-        public List<ChiTietKhoVatTuViewDTO> GetAllChiTietKhoVatTuView(string txt)
+        public List<ChiTietKhoVatTuViewDTO> GetAllChiTietKhoVatTuView(string txt = "")
         {
             List<ChiTietKhoVatTuViewDTO> data = new List<ChiTietKhoVatTuViewDTO>();
             foreach(ChiTietKhoVatTuDTO i in GetAllChiTietKhoVatTu())
@@ -78,6 +78,7 @@ namespace BLL
             }
             return data;
         }
+
         public List<string> GetAllDonViTinh()
         {
             List<string> data = new List<string>();
@@ -101,6 +102,44 @@ namespace BLL
                     }
                 }
             return data;
+        }
+        public List<ChiTietKhoVatTuView> GetAllChiTietKhoVatTuView()
+        {
+            List<ChiTietKhoVatTuView> data = new List<ChiTietKhoVatTuView>();
+            foreach (ChiTietKhoVatTuDTO i in GetAllChiTietKhoVatTu())
+            {
+                    data.Add(ConvertChiTietKhoVatTuToView(i));
+            }
+            return data;
+        }
+        public ChiTietKhoVatTuView ConvertChiTietKhoVatTuToView(ChiTietKhoVatTuDTO vt)
+        {
+            string tenVatTu = "";
+            double GiaTien = 0;
+            string TenKho = "";
+            foreach (VatTuDTO i in VatTuDAL.Instance.GetALLVatTu())
+            {
+                if (i.MaVatTu == vt.MaVatTu)
+                    tenVatTu = i.TenVatTu;
+            }
+            foreach (HopDongVatTuDTO j in HopDongVatTuDAL.Instance.GetAllHopDongVatTu())
+            {
+                if (j.MaVatTu == vt.MaVatTu)
+                    GiaTien = j.GiaTien;
+            }
+            foreach (KhoDTO k in KhoDAL.Instance.GetAllKho())
+            {
+                if (k.MaKho == vt.MaKho)
+                    TenKho = k.TenKho;
+            }
+            return new ChiTietKhoVatTuView
+            {
+                MaKho = vt.MaKho,
+                MaVatTu = vt.MaVatTu,
+                TenVatTu = tenVatTu,
+                DonViTinh = vt.DonViTinh,
+                SoLuongSP = vt.SoLuongSP,
+            };
         }
         public bool CompareTenVatTu(object o1, object o2)
         {

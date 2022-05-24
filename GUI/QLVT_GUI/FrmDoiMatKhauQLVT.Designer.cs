@@ -149,6 +149,8 @@
             this.txtXacNhanMatKhau.Name = "txtXacNhanMatKhau";
             this.txtXacNhanMatKhau.Size = new System.Drawing.Size(338, 22);
             this.txtXacNhanMatKhau.TabIndex = 55;
+            this.txtXacNhanMatKhau.UseSystemPasswordChar = true;
+            this.txtXacNhanMatKhau.TextChanged += new System.EventHandler(this.txtMatKhauCu_TextChanged);
             // 
             // txtMatKhauMoi
             // 
@@ -158,6 +160,8 @@
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.Size = new System.Drawing.Size(338, 22);
             this.txtMatKhauMoi.TabIndex = 54;
+            this.txtMatKhauMoi.UseSystemPasswordChar = true;
+            this.txtMatKhauMoi.TextChanged += new System.EventHandler(this.txtMatKhauCu_TextChanged);
             // 
             // txtMatKhauCu
             // 
@@ -167,6 +171,8 @@
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.Size = new System.Drawing.Size(338, 22);
             this.txtMatKhauCu.TabIndex = 53;
+            this.txtMatKhauCu.UseSystemPasswordChar = true;
+            this.txtMatKhauCu.TextChanged += new System.EventHandler(this.txtMatKhauCu_TextChanged);
             // 
             // pnTitleDoiMatKhau
             // 
