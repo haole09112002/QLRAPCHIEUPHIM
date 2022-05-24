@@ -1058,6 +1058,10 @@
   <ItemGroup>
     <None Include="Resources\subtract_24px.png" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{1ca149db-4213-4f61-a64e-9352059ea6aa}</Project>
@@ -1074,9 +1078,11 @@
   <ItemGroup>
     <None Include="Resources\hidePass_26px.png" />
   </ItemGroup>
-  
   <ItemGroup>
     <None Include="Resources\add_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_file_add_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

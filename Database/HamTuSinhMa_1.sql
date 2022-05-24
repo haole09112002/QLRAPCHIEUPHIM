@@ -1,3 +1,5 @@
+create database QuanLyRapChieuPhim;
+go
 use QuanLyRapChieuPhim
 go
 --The Loai Phim

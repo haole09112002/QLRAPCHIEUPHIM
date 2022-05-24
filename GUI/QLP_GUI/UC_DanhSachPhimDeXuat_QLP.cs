@@ -16,8 +16,10 @@ namespace GUI.QLP_GUI
     {
         DataTable dtDSPhieuDeXuat = new DataTable();
         DataTable dtCTPhieuDeXuat = new DataTable();
-        public UC_DanhSachPhimDeXuat_QLP()
+        NhanVienDTO nhanvien = new NhanVienDTO();
+        public UC_DanhSachPhimDeXuat_QLP(NhanVienDTO nhanvien)
         {
+            this.nhanvien = nhanvien;
             InitializeComponent();
             SetDataTable();
             ReLoad();
@@ -25,7 +27,7 @@ namespace GUI.QLP_GUI
         public void SetDataTable()
         {
             dtDSPhieuDeXuat.Columns.Add("Mã Đề Xuất");
-            dtDSPhieuDeXuat.Columns.Add("Mã Nhân Viên");
+            dtDSPhieuDeXuat.Columns.Add("Tên Nhân Viên");
             dtDSPhieuDeXuat.Columns.Add("Ngày Đề Xuất");
             dtCTPhieuDeXuat.Columns.Add("Tên Phim");      
             dtCTPhieuDeXuat.Columns.Add("Nội Dung");      
@@ -38,13 +40,13 @@ namespace GUI.QLP_GUI
             dtDSPhieuDeXuat.Rows.Clear();
             foreach(DeXuatDTO i in DeXuatBLL.Instance.GetDeXuatByMaLoaiDeXuat("LDX01"))
             {
-                dtDSPhieuDeXuat.Rows.Add(i.MaDeXuat,i.MaNhanVien,i.NgayDeXuat);
+                dtDSPhieuDeXuat.Rows.Add(i.MaDeXuat,NhanVienBLL.Instance.GetNhanVienByMaNhanVien(i.MaNhanVien).TenNhanVien,i.NgayDeXuat.ToShortDateString());
             }
             dGVDanhSachPhieuDeXuat.DataSource = dtDSPhieuDeXuat;
         }
         private void btnThem_Click(object sender, EventArgs e) 
         {
-            frm_TaoDeXuat_QLP frmTDX = new frm_TaoDeXuat_QLP();
+            frm_TaoDeXuat_QLP frmTDX = new frm_TaoDeXuat_QLP(nhanvien);
             frmTDX.ShowDialog();
             ReLoad();
         }
@@ -79,6 +81,11 @@ namespace GUI.QLP_GUI
                     dGVChiTietPhieuDeXuat.DataSource = dtCTPhieuDeXuat;
                 }
             }    
+        }
+
+        private void btnChinhSua_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

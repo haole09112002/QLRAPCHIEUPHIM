@@ -13,7 +13,6 @@ namespace BLL
     public class NhanVienBLL
     {
         private static NhanVienBLL instance;
-
         public static NhanVienBLL Instance
         {
             get
@@ -40,6 +39,8 @@ namespace BLL
         }
         public NhanVienViewDTO GetNhanVienViewByNhanVienDTO(NhanVienDTO nhanVien)
         {
+            string gioiTinh = "";
+            string tenChinhSach = "";
             string tenChucVu = "";
             foreach (ChucVuDTO i in ChucVuDAL.Instance.GetAllChucVu())
             {
@@ -48,14 +49,23 @@ namespace BLL
                     tenChucVu = i.TenChucVu;
                 }
             }
+            foreach (ChinhSachDTO i in ChinhSachDAL.Instance.GetAllChinhSach())
+            {
+                if (i.MaChinhSach == nhanVien.MaChinhSach)
+                {
+                    tenChinhSach = i.TenChinhSach;
+                }
+            }
+            if (nhanVien.GioiTinh == true) gioiTinh = "Nam";
+            else gioiTinh = "Nữ";
             return new NhanVienViewDTO
             {
                 MaNhanVien = nhanVien.MaNhanVien,
                 TenNhanVien = nhanVien.TenNhanVien,
                 NgaySinh = nhanVien.NgaySinh.ToString(),
-                GioiTinh = nhanVien.GioiTinh,
+                GioiTinh = gioiTinh,
                 SoDienThoai = nhanVien.SoDienThoai,
-                MaChinhSach = nhanVien.MaChinhSach,
+                TenChinhSach = tenChinhSach,
                 TenChucVu = tenChucVu
             };
         }
@@ -111,7 +121,7 @@ namespace BLL
             }
             return add;
         }
-        public void AddUpdateNhaCungCap(NhanVienDTO nhanVien)
+        public void AddUpdateNhanVien(NhanVienDTO nhanVien)
         {
             if (CheckAddUpdateNhanVien(nhanVien))
             {
@@ -122,41 +132,94 @@ namespace BLL
                 NhanVienDAL.Instance.CapNhatNhanVien(nhanVien);
             }
         }
-        //public delegate bool CompareObj(object o1, object o2);
-        //public List<NhanVienViewDTO> SortNhanVien(List<NhanVienViewDTO> now, string dkSort)
-        //{
-        //    if (dkSort == "Tên A->Z")
-        //        return Sort(now, CompareTenNhanVienTang);
-        //    if (dkSort == "Tên Z->A")
-        //        return Sort(now, CompareTenNhanVienGiam);
-        //    return null;
-        //}
-        //public static bool CompareTenNhanVienTang(object o1, object o2)
-        //{
-        //    return String.Compare(((NhanVienViewDTO)o1).TenNhanVien, ((NhanVienViewDTO)o2).TenNhanVien) > 0;
-        //}
-        //public static bool CompareTenNhanVienGiam(object o1, object o2)
-        //{
-        //    return String.Compare(((NhanVienViewDTO)o2).TenNhanVien, ((NhanVienViewDTO)o1).TenNhanVien) > 0;
-        //}
+        public static void DeleteNhanVien(string maNhanVien)
+        {
+            NhanVienDAL.XoaNhanVien(maNhanVien);
+        }
+        public delegate bool CompareObj(object o1, object o2);
+        public List<NhanVienViewDTO> SortNhanVien(List<NhanVienViewDTO> now, string dkSort)
+        {
+            if (dkSort == "Tên A->Z")
+                return Sort(now, CompareTenNhanVienTang);
+            if (dkSort == "Tên Z->A")
+                return Sort(now, CompareTenNhanVienGiam);
+            return null;
+        }
+        public static bool CompareTenNhanVienTang(object o1, object o2)
+        {
+            return String.Compare(((NhanVienViewDTO)o1).TenNhanVien, ((NhanVienViewDTO)o2).TenNhanVien) > 0;
+        }
+        public static bool CompareTenNhanVienGiam(object o1, object o2)
+        {
+            return String.Compare(((NhanVienViewDTO)o2).TenNhanVien, ((NhanVienViewDTO)o1).TenNhanVien) > 0;
+        }
 
+        public List<NhanVienViewDTO> Sort(List<NhanVienViewDTO> now, CompareObj cmp)
+        {
+            List<NhanVienViewDTO> data = now;
+            for (int i = 0; i < data.Count - 1; i++)
+                for (int j = i + 1; j < data.Count; j++)
+                {
+                    if (cmp(data[i], data[j]))
+                    {
+                        NhanVienViewDTO temp = data[i];
+                        data[i] = data[j];
+                        data[j] = temp;
+                    }
+                }
+            return data;
+        }
+        public string KiemTraDuLieu(NhanVienDTO nhanVien)
+        {
 
-        //public List<NhanVienViewDTO> Sort(List<NhanVienViewDTO> now, CompareObj cmp)
-        //{
-        //    List<NhanVienViewDTO> data = now;
-        //    for (int i = 0; i < data.Count - 1; i++)
-        //        for (int j = i + 1; j < data.Count; j++)
-        //        {
-        //            if (cmp(data[i], data[j]))
-        //            {
-        //                NhanVienViewDTO temp = data[i];
-        //                data[i] = data[j];
-        //                data[j] = temp;
-        //            }
-        //        }
-        //    return data;
-        //}
-
+            if (nhanVien.TenNhanVien == "")
+                return "Họ và Tên còn trống!";
+            if (nhanVien.DiaChi == "")
+                return "Địa chỉ còn trống!";
+            if (nhanVien.SoDienThoai == "")
+                return "Số Điện Thoai còn trống!";
+            if (nhanVien.MaChucVu == "")
+                return "Chức Vụ còn trống!";
+            if (nhanVien.CCCD1 == "")
+                return "CCCD còn trống!";
+            if (nhanVien.MaChinhSach == "")
+                return "Chính Sách  còn trống!";
+            if (nhanVien.TenTaiKhoan == "")
+                return "Tên Tài Khoản còn trống!";
+            if (nhanVien.MatKhau == "")
+                return "Mật Khẩu còn trống!";
+            if (!CheckAddUpdateNhanVien(nhanVien))
+            {
+                if (nhanVien.TenTaiKhoan != GetNhanVienByMaNhanVien(nhanVien.MaNhanVien).TenTaiKhoan && (int)NhanVienDAL.Instance.KiemTraTenTK(nhanVien) > 0)
+                {
+                    return "Tên Tài Khoản đã tồn tại!";
+                }
+                if (nhanVien.SoDienThoai != GetNhanVienByMaNhanVien(nhanVien.MaNhanVien).SoDienThoai && (int)NhanVienDAL.Instance.KiemTraSoDienThoai(nhanVien) > 0)
+                {
+                    return "Số điện thoại đã tồn tại!";
+                }
+                if (nhanVien.CCCD1 != GetNhanVienByMaNhanVien(nhanVien.MaNhanVien).CCCD1 && (int)NhanVienDAL.Instance.KiemTraCCCD(nhanVien) > 0)
+                {
+                    return "Số CCCD đã tồn tại!";
+                }
+            }
+            else
+            {
+                if ((int)NhanVienDAL.Instance.KiemTraTenTK(nhanVien) >= 1)
+                {
+                    return "Tên Tài Khoản đã tồn tại!";
+                }
+                if ((int)NhanVienDAL.Instance.KiemTraSoDienThoai(nhanVien) >= 1)
+                {
+                    return "Số điện thoại đã tồn tại!";
+                }
+                if ((int)NhanVienDAL.Instance.KiemTraCCCD(nhanVien) >= 1)
+                {
+                    return "Số CCCD đã tồn tại!";
+                }
+            }
+            return null;
+        }
         public int KiemTraDangNhap(string tenTaiKhoan, string matKhau)
         {
             return NhanVienDAL.Instance.KiemTraDangNhap(tenTaiKhoan, MD5(matKhau));
@@ -183,6 +246,33 @@ namespace BLL
             {
                 throw;
             }
+        }
+        public List<NhanVienViewDTO> TimTheoMaNV(string maNhanVien)
+        {
+            List<NhanVienViewDTO> data = new List<NhanVienViewDTO>();
+            foreach (NhanVienDTO i in NhanVienDAL.Instance.TimTheoMa(maNhanVien))
+            {
+                data.Add(GetNhanVienViewByNhanVienDTO(i));
+            }
+            return data;
+        }
+        public List<NhanVienViewDTO> TimTheoTenNV(string tenNhanVien)
+        {
+            List<NhanVienViewDTO> data = new List<NhanVienViewDTO>();
+            foreach (NhanVienDTO i in NhanVienDAL.Instance.TimTheoTen(tenNhanVien))
+            {
+                data.Add(GetNhanVienViewByNhanVienDTO(i));
+            }
+            return data;
+        }
+        public List<NhanVienViewDTO> TimTheoSDT(string soDienThoai)
+        {
+            List<NhanVienViewDTO> data = new List<NhanVienViewDTO>();
+            foreach (NhanVienDTO i in NhanVienDAL.Instance.TimTheoSDT(soDienThoai))
+            {
+                data.Add(GetNhanVienViewByNhanVienDTO(i));
+            }
+            return data;
         }
         public NhanVienDTO GetNhanVienByTenTaiKhoan(string TenTaiKhoan)
         {

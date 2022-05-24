@@ -1,9 +1,10 @@
-﻿using BLL;
-using DTO;
+﻿
 using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using BLL;
+using DTO;
 
 namespace GUI.QLVT_GUI
 {
@@ -126,7 +127,7 @@ namespace GUI.QLVT_GUI
                     nhanVien.GioiTinh = true;
                 }
                 nhanVien.NgaySinh = dtpNgaySinh.Value;
-                NhanVienBLL.Instance.AddUpdateNhaCungCap(nhanVien);
+                NhanVienBLL.Instance.AddUpdateNhanVien(nhanVien);
                 MessageBox.Show("Cập nhật thành công!");
                 Reload();
             }

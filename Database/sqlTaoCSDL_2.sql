@@ -66,7 +66,7 @@ Create table CHI_TIET_DIEN_VIEN_DAO_DIEN_PHIM
 	MaPhim varchar(6) foreign key(MaPhim) references PHIM,
 	MaDienVienDaoDien varchar(9) foreign key(MaDienVienDaoDien) references DIEN_VIEN_DAO_DIEN,
 	VaiTro varchar(1) --(1) dien vien chinh (2) dien vien phu (3) dao dien
-	constraint pk_CTDienVienDaoDien primary key(MaPhim,MaDienVienDaoDien)
+	constraint pk_CTDienVienDaoDien primary key(MaPhim,MaDienVienDaoDien, VaiTro)
 )
 go
 create table LOAI_PHONG_CHIEU
@@ -102,7 +102,7 @@ Create table LICH_CHIEU(
 	MaPhongChieu varchar(6) foreign key(MaPhongChieu) references PHONG_CHIEU,
 	MaKhungGioChieu varchar(8) foreign key(MaKhungGioChieu) references KHUNG_GIO_CHIEU,
 	NgayChieu date,
-	TrangThai bit,
+	TrangThai varchar(1),	-- 0(Ko chap nhan), 1(du kien), 2(chinh thuc),
 	constraint pk_LichChieu primary key(MaPhim,MaPhongChieu,MaKhungGioChieu,NgayChieu)
 )
 go
@@ -116,10 +116,7 @@ Create table CA_LAM_VIEC(
 )
 go
 -- Bang Ngay Lam Viec
-create table NGAY_LAM_VIEC
-(
-	NgayLamViec date primary key not null
-)
+
 go
 --Bang Chinh Sach
 
@@ -160,7 +157,7 @@ go
 Create table LICH_LAM_VIEC(
 	MaNhanVien varchar(6) foreign key(MaNhanVien) references NHAN_VIEN,
 	MaCa varchar(6) foreign key(MaCa) references CA_LAM_VIEC,
-	NgayLamViec date foreign key(NgayLamViec) references NGAY_LAM_VIEC,
+	NgayLamViec date ,
 	constraint pk_CTCaLamViec primary key(MaNhanVien,MaCa,NgayLamViec)
 )
 go
@@ -318,7 +315,6 @@ Create table CHI_TIET_PHIEU_THUC_AN(
 	MaThucAn varchar(6) foreign key(MaThucAn) references THUC_AN,
 	DonViTinh nvarchar(20),
 	SoLuong int,
-	NgayHetHang date,
 	constraint pk_CTPhieuThucAn primary key(MaPhieu,MaThucAn)
 )
 go

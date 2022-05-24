@@ -39,6 +39,17 @@ namespace DAL
             }
             return listPhongChieu;
         }
-
+        public void ThemPhongChieu(PhongChieuDTO pc)
+        {
+            string query = "EXEC ThemPhongChieu @TenPhong , @MaTinhTrang , @MaLoaiPhongChieu";
+            object[] paramater = { pc.TenPhong, pc.MaTinhTrang, pc.MaLoaiPhongChieu };
+            DBHelper.Instance.ExcuteNonQuery(query, paramater); 
+        }
+        public void CapNhatPhongChieu(PhongChieuDTO pc)
+        {
+            string query = "EXEC CapNhatPhongChieu @MaPhongChieu , @TenPhong , @MaTinhTrang";
+            object[] paramater = { pc.MaPhongChieu, pc.TenPhong, pc.MaTinhTrang };
+            DBHelper.Instance.ExcuteNonQuery(query, paramater);
+        }
     }
 }

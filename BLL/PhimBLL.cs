@@ -317,5 +317,17 @@ namespace BLL
             }
             return data;
         }
+        public List<PhimDTO> GetAllPhimCoHopDong(string txt = "")
+        {
+            List<PhimDTO> data = new List<PhimDTO>();
+            foreach(string i in HopDongPhimBLL.Instance.GetDanhSachMaPhimCoHopDong())
+            {
+                if(PhimBLL.Instance.GetPhimByMaPhim(i).TenPhim.Contains(txt))
+                {
+                    data.Add(PhimBLL.Instance.GetPhimByMaPhim(i));
+                }
+            }
+            return data;
+        }
     }
 }
