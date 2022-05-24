@@ -25,12 +25,7 @@ namespace BLL
         }
         public List<KhoDTO> GetAllKho()
         {
-            List<KhoDTO> data = new List<KhoDTO>();
-            foreach (KhoDTO i in KhoDAL.Instance.GetAllKho())
-            {
-                data.Add(i);
-            }
-            return data;
+            return KhoDAL.Instance.GetAllKho();
         }
         public KhoDTO GetKhoByMaKho(string MaKho)
         {

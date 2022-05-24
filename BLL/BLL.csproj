@@ -53,6 +53,7 @@
     <Compile Include="ChiTietDeXuatVatTuBLL.cs" />
     <Compile Include="ChiTietKhoThucAnBLL.cs" />
     <Compile Include="ChiTietKhoVatTuBLL.cs" />
+    <Compile Include="ChiTietPhieuPhimBLL.cs" />
     <Compile Include="ChinhSachBLL.cs" />
     <Compile Include="ChiTietPhongChieuBLL.cs" />
     <Compile Include="ChucVuBLL.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="LoaiPhongChieuBLL.cs" />
     <Compile Include="NhaCungCapBLL.cs" />
     <Compile Include="NhanVienBLL.cs" />
+    <Compile Include="PhieuBLL.cs" />
     <Compile Include="PhimBLL.cs" />
     <Compile Include="PhongChieuBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

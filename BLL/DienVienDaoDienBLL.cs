@@ -10,7 +10,7 @@ namespace BLL
 {
     public class DienVienDaoDienBLL
     {
-        public static DienVienDaoDienBLL instance;
+        private static DienVienDaoDienBLL instance;
         public static DienVienDaoDienBLL Instance
         {
             get

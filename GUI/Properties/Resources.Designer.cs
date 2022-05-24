@@ -363,16 +363,6 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap hidePass_26px {
-            get {
-                object obj = ResourceManager.GetObject("hidePass_26px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Hopdong {
             get {
                 object obj = ResourceManager.GetObject("Hopdong", resourceCulture);
@@ -396,6 +386,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap human {
             get {
                 object obj = ResourceManager.GetObject("human", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_file_add_24px {
+            get {
+                object obj = ResourceManager.GetObject("image_file_add_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

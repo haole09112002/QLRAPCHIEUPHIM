@@ -41,10 +41,10 @@
             this.pnTop = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbTenNhanVien = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pBExit = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.pnCenter = new System.Windows.Forms.Panel();
             this.pnLeft.SuspendLayout();
@@ -244,10 +244,10 @@
             this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(229)))), ((int)(((byte)(232)))));
             this.pnTop.Controls.Add(this.label5);
             this.pnTop.Controls.Add(this.label3);
-            this.pnTop.Controls.Add(this.label7);
-            this.pnTop.Controls.Add(this.label4);
+            this.pnTop.Controls.Add(this.lbTenNhanVien);
             this.pnTop.Controls.Add(this.label6);
             this.pnTop.Controls.Add(this.pBExit);
+            this.pnTop.Controls.Add(this.label7);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(240, 0);
             this.pnTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -276,30 +276,16 @@
             this.label3.Text = "Chức vụ:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // lbTenNhanVien
             // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Image = global::GUI.Properties.Resources.EmployeeQLVT;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(1068, 28);
-            this.label7.Name = "label7";
-            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(184, 51);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Quản lý phim";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(1149, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 25);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "label";
+            this.lbTenNhanVien.AutoSize = true;
+            this.lbTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenNhanVien.ForeColor = System.Drawing.Color.Black;
+            this.lbTenNhanVien.Location = new System.Drawing.Point(1014, 9);
+            this.lbTenNhanVien.Name = "lbTenNhanVien";
+            this.lbTenNhanVien.Size = new System.Drawing.Size(63, 25);
+            this.lbTenNhanVien.TabIndex = 18;
+            this.lbTenNhanVien.Text = "label";
             // 
             // label6
             // 
@@ -325,6 +311,20 @@
             this.pBExit.TabIndex = 4;
             this.pBExit.TabStop = false;
             this.pBExit.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Image = global::GUI.Properties.Resources.EmployeeQLVT;
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Location = new System.Drawing.Point(1014, 34);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label7.Size = new System.Drawing.Size(184, 51);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Quản lý phim";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pnMenu
             // 
@@ -390,6 +390,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbTenNhanVien;
     }
 }

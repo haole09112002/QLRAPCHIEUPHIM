@@ -42,7 +42,7 @@ namespace GUI
             }
             if (result == 1)
             {
-                frm_QLP frm_QLP = new frm_QLP();
+                frm_QLP frm_QLP = new frm_QLP(NhanVienBLL.Instance.GetNhanVienByTenTaiKhoan(txtTenTaiKhoan.Text));
                 frm_QLP.Show();
             }
             if(result >0)
