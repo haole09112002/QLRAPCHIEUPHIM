@@ -84,17 +84,38 @@ namespace BLL
             }
             return null;
         }
-        public List<PhongChieuDTO> GetAllPhongChieuByTinhTrang(int TinhTrang, string txt = "")
+    
+        public void ThemCapNhatPhongChieu(PhongChieuDTO pc)
         {
-            List<PhongChieuDTO> data = new List<PhongChieuDTO>();
-            foreach(PhongChieuDTO i in PhongChieuDAL.Instance.GetAllPhongChieu())
+            var item = GetAllPhongChieu().Where(i => i.MaPhongChieu == pc.MaPhongChieu).FirstOrDefault();
+            if(item == null)
             {
-                if(i.MaTinhTrang == TinhTrang && i.TenPhong.Contains(txt))
-                {
-                    data.Add(i);
-                }
+                PhongChieuDAL.Instance.ThemPhongChieu(pc);
             }
-            return data;
+            else
+            {
+                PhongChieuDAL.Instance.CapNhatPhongChieu(pc);
+            }
+            
         }
+        public List<PhongChieuView> GetDsPhongChieuViewByMaTinhTrang( string maTinhTrang = "0")
+        {
+            var list = new List<PhongChieuView>();
+            if(maTinhTrang == "0")
+            {
+                list = GetAllPhongChieuView();
+            } 
+            else
+            {
+                var l1 = GetAllPhongChieu().Select(x => x).Where( x=> x.MaTinhTrang == Convert.ToInt32(maTinhTrang)).ToList();
+                l1.ForEach(x => list.Add(ConvertPhongChieuDTOToView(x)));
+            }    
+            return list;
+        }
+        public List<PhongChieuView> TimKiemPhongChieu(string txt = "", string maTinhTrang = "0" )
+        {
+           return GetDsPhongChieuViewByMaTinhTrang(maTinhTrang).FindAll(x=> x.TenPhong.Contains(txt) || x.MaPhongChieu.Contains(txt));
+        }
+        
     }
 }

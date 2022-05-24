@@ -81,9 +81,13 @@
     <Compile Include="PhongChieuBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheLoaiPhimBLL.cs" />
+    <Compile Include="ThongKeBLL.cs" />
     <Compile Include="ThucAnBLL.cs" />
     <Compile Include="TinhTrangPhongChieuBLL.cs" />
     <Compile Include="VatTuBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
@@ -94,9 +98,6 @@
       <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
       <Name>DTO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
