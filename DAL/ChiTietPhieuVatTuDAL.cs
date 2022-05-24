@@ -31,7 +31,7 @@ namespace DAL
         public List<ChiTietPhieuVatTuDTO> GetAllChiTietPhieuVatTu()
         {
             List<ChiTietPhieuVatTuDTO> data = new List<ChiTietPhieuVatTuDTO>();
-            string query = "select * from CHI_TIET_PHIEU_VAT_TU";
+            string query = "select * from CHI_TIET_PHIEU_VT";
             foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
             {
                 data.Add(GetChiTietPhieuVatTuByDataRow(i));

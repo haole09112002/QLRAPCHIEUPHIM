@@ -28,6 +28,7 @@ namespace GUI.QLVT_GUI
             LoadDGVPhongChieu();
             btnHuy.Enabled = false;
             btnLuu.Enabled = false;
+            btnChinhSua.Enabled = false;
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -64,6 +65,7 @@ namespace GUI.QLVT_GUI
                 }
                 btnLuu.Enabled=false;
                 btnHuy.Enabled=false;
+                btnChinhSua.Enabled=true;
             }    
         }
         private void LoadDGVPhongChieu()
@@ -98,6 +100,7 @@ namespace GUI.QLVT_GUI
             txtTenPhongChieu.Text = null;
             lbThongBao.Text = "Mời nhập thông tin phòng chiếu!";
             btnHuy.Enabled = true;
+            btnChinhSua.Enabled = false;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -172,16 +175,18 @@ namespace GUI.QLVT_GUI
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            txtMaPhongChieu.Text = "";
             btnLuu.Enabled = true;
-            btnChinhSua.Enabled = true;
             txtTenPhongChieu.Text = "";
             cbLoaiPhong.SelectedIndex = -1;
             cbTinhTrangPhong.SelectedIndex = -1;
+            cbLoaiPhong.Enabled = true;
             lbLoaiPhong.Text = "";
             lbTinhTrang.Text = "";
             lblVatTu.Text = "";
             lbThongBao.Text = "Mời nhập thông tin phòng chiếu!";
-
+            lbTenPhong.Text = "";
+           btnChinhSua.Enabled = true;
         }
 
         private void btnTimKiemVatTu_Click(object sender, EventArgs e)

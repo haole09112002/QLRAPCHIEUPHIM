@@ -28,143 +28,227 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnDeXuatThucAn = new System.Windows.Forms.Panel();
-            this.pnContentDeXuatThucAn = new System.Windows.Forms.Panel();
-            this.grpSoLuongDoAn = new System.Windows.Forms.GroupBox();
-            this.txtGiaTien = new System.Windows.Forms.TextBox();
-            this.lblGiaTien = new System.Windows.Forms.Label();
-            this.lblDonViTinh = new System.Windows.Forms.Label();
-            this.lblSoLuong = new System.Windows.Forms.Label();
-            this.txtDonViTinh = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnChinhSua = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNoiDung = new System.Windows.Forms.TextBox();
+            this.cBDonViTinh = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.gBDanhSachPhim = new System.Windows.Forms.GroupBox();
+            this.dgvListThucAn = new System.Windows.Forms.DataGridView();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.grpThongTinDoAn = new System.Windows.Forms.GroupBox();
-            this.cboNhaCungCap = new System.Windows.Forms.ComboBox();
-            this.lblNhaCungCap = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblDienThoai = new System.Windows.Forms.Label();
-            this.lblDiaChi = new System.Windows.Forms.Label();
-            this.lblTenDoAn = new System.Windows.Forms.Label();
-            this.txtDienThoai = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtTenDoAn = new System.Windows.Forms.TextBox();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.pnTitleDeXuatThucAn = new System.Windows.Forms.Panel();
-            this.lblTitleDeXuatThucAn = new System.Windows.Forms.Label();
-            this.pnDeXuatThucAn.SuspendLayout();
-            this.pnContentDeXuatThucAn.SuspendLayout();
-            this.grpSoLuongDoAn.SuspendLayout();
-            this.grpThongTinDoAn.SuspendLayout();
-            this.pnTitleDeXuatThucAn.SuspendLayout();
+            this.gBDeXuatPhim = new System.Windows.Forms.GroupBox();
+            this.dgvListDeXuatThucAn = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.gBDanhSachPhim.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListThucAn)).BeginInit();
+            this.gBDeXuatPhim.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListDeXuatThucAn)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnDeXuatThucAn
+            // panel1
             // 
-            this.pnDeXuatThucAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnDeXuatThucAn.Controls.Add(this.pnContentDeXuatThucAn);
-            this.pnDeXuatThucAn.Controls.Add(this.pnTitleDeXuatThucAn);
-            this.pnDeXuatThucAn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDeXuatThucAn.Location = new System.Drawing.Point(0, 0);
-            this.pnDeXuatThucAn.Name = "pnDeXuatThucAn";
-            this.pnDeXuatThucAn.Size = new System.Drawing.Size(691, 710);
-            this.pnDeXuatThucAn.TabIndex = 0;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.btnXoa);
+            this.panel1.Controls.Add(this.gBDanhSachPhim);
+            this.panel1.Controls.Add(this.btnThoat);
+            this.panel1.Controls.Add(this.btnLuu);
+            this.panel1.Controls.Add(this.gBDeXuatPhim);
+            this.panel1.Location = new System.Drawing.Point(22, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(949, 635);
+            this.panel1.TabIndex = 13;
             // 
-            // pnContentDeXuatThucAn
+            // groupBox1
             // 
-            this.pnContentDeXuatThucAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnContentDeXuatThucAn.Controls.Add(this.grpSoLuongDoAn);
-            this.pnContentDeXuatThucAn.Controls.Add(this.btnThoat);
-            this.pnContentDeXuatThucAn.Controls.Add(this.grpThongTinDoAn);
-            this.pnContentDeXuatThucAn.Controls.Add(this.btnLuu);
-            this.pnContentDeXuatThucAn.Location = new System.Drawing.Point(21, 96);
-            this.pnContentDeXuatThucAn.Name = "pnContentDeXuatThucAn";
-            this.pnContentDeXuatThucAn.Size = new System.Drawing.Size(639, 603);
-            this.pnContentDeXuatThucAn.TabIndex = 38;
-            // 
-            // grpSoLuongDoAn
-            // 
-            this.grpSoLuongDoAn.Controls.Add(this.txtGiaTien);
-            this.grpSoLuongDoAn.Controls.Add(this.lblGiaTien);
-            this.grpSoLuongDoAn.Controls.Add(this.lblDonViTinh);
-            this.grpSoLuongDoAn.Controls.Add(this.lblSoLuong);
-            this.grpSoLuongDoAn.Controls.Add(this.txtDonViTinh);
-            this.grpSoLuongDoAn.Controls.Add(this.txtSoLuong);
-            this.grpSoLuongDoAn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.grpSoLuongDoAn.Location = new System.Drawing.Point(25, 331);
-            this.grpSoLuongDoAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpSoLuongDoAn.Name = "grpSoLuongDoAn";
-            this.grpSoLuongDoAn.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpSoLuongDoAn.Size = new System.Drawing.Size(589, 183);
-            this.grpSoLuongDoAn.TabIndex = 38;
-            this.grpSoLuongDoAn.TabStop = false;
-            this.grpSoLuongDoAn.Text = "SỐ LƯỢNG ĐỒ ĂN";
-            // 
-            // txtGiaTien
-            // 
-            this.txtGiaTien.BackColor = System.Drawing.Color.White;
-            this.txtGiaTien.Location = new System.Drawing.Point(202, 129);
-            this.txtGiaTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGiaTien.Name = "txtGiaTien";
-            this.txtGiaTien.Size = new System.Drawing.Size(378, 28);
-            this.txtGiaTien.TabIndex = 40;
-            // 
-            // lblGiaTien
-            // 
-            this.lblGiaTien.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiaTien.Image = global::GUI.Properties.Resources.Giatien;
-            this.lblGiaTien.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblGiaTien.Location = new System.Drawing.Point(18, 128);
-            this.lblGiaTien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblGiaTien.Name = "lblGiaTien";
-            this.lblGiaTien.Size = new System.Drawing.Size(99, 27);
-            this.lblGiaTien.TabIndex = 39;
-            this.lblGiaTien.Text = "Giá tiền";
-            this.lblGiaTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDonViTinh
-            // 
-            this.lblDonViTinh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDonViTinh.Image = global::GUI.Properties.Resources.DonViTinh;
-            this.lblDonViTinh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblDonViTinh.Location = new System.Drawing.Point(18, 76);
-            this.lblDonViTinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDonViTinh.Name = "lblDonViTinh";
-            this.lblDonViTinh.Size = new System.Drawing.Size(134, 27);
-            this.lblDonViTinh.TabIndex = 28;
-            this.lblDonViTinh.Text = "Đơn vị tính";
-            this.lblDonViTinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblSoLuong
-            // 
-            this.lblSoLuong.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuong.Image = global::GUI.Properties.Resources.Soluong;
-            this.lblSoLuong.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblSoLuong.Location = new System.Drawing.Point(18, 29);
-            this.lblSoLuong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(111, 27);
-            this.lblSoLuong.TabIndex = 27;
-            this.lblSoLuong.Text = "Số lượng";
-            this.lblSoLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtDonViTinh
-            // 
-            this.txtDonViTinh.BackColor = System.Drawing.Color.White;
-            this.txtDonViTinh.Location = new System.Drawing.Point(202, 78);
-            this.txtDonViTinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDonViTinh.Name = "txtDonViTinh";
-            this.txtDonViTinh.Size = new System.Drawing.Size(378, 28);
-            this.txtDonViTinh.TabIndex = 16;
+            this.groupBox1.Controls.Add(this.txtSoLuong);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btnChinhSua);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtNoiDung);
+            this.groupBox1.Controls.Add(this.cBDonViTinh);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.btnThem);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(421, 63);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(505, 235);
+            this.groupBox1.TabIndex = 74;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "THÔNG TIN ĐỀ XUẤT";
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.BackColor = System.Drawing.Color.White;
-            this.txtSoLuong.Location = new System.Drawing.Point(202, 28);
+            this.txtSoLuong.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtSoLuong.Location = new System.Drawing.Point(159, 31);
             this.txtSoLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(378, 28);
-            this.txtSoLuong.TabIndex = 15;
+            this.txtSoLuong.Size = new System.Drawing.Size(296, 28);
+            this.txtSoLuong.TabIndex = 68;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(29, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 19);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "Số Lượng";
+            // 
+            // btnChinhSua
+            // 
+            this.btnChinhSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnChinhSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChinhSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChinhSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhSua.Image = global::GUI.Properties.Resources.Edit;
+            this.btnChinhSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChinhSua.Location = new System.Drawing.Point(159, 186);
+            this.btnChinhSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChinhSua.Name = "btnChinhSua";
+            this.btnChinhSua.Size = new System.Drawing.Size(138, 36);
+            this.btnChinhSua.TabIndex = 72;
+            this.btnChinhSua.Text = "CHỈNH SỬA";
+            this.btnChinhSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChinhSua.UseVisualStyleBackColor = false;
+            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(29, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 19);
+            this.label2.TabIndex = 65;
+            this.label2.Text = "Đơn Vị Tính";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtNoiDung
+            // 
+            this.txtNoiDung.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtNoiDung.Location = new System.Drawing.Point(159, 139);
+            this.txtNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNoiDung.Name = "txtNoiDung";
+            this.txtNoiDung.Size = new System.Drawing.Size(296, 28);
+            this.txtNoiDung.TabIndex = 71;
+            // 
+            // cBDonViTinh
+            // 
+            this.cBDonViTinh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.cBDonViTinh.FormattingEnabled = true;
+            this.cBDonViTinh.Items.AddRange(new object[] {
+            "Gói",
+            "Chai",
+            "Thùng"});
+            this.cBDonViTinh.Location = new System.Drawing.Point(159, 85);
+            this.cBDonViTinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBDonViTinh.Name = "cBDonViTinh";
+            this.cBDonViTinh.Size = new System.Drawing.Size(296, 27);
+            this.cBDonViTinh.TabIndex = 67;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(29, 139);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 19);
+            this.label3.TabIndex = 70;
+            this.label3.Text = "Nội Dung";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.Silver;
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = global::GUI.Properties.Resources.new_copy_26px;
+            this.btnThem.Location = new System.Drawing.Point(339, 186);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(116, 36);
+            this.btnThem.TabIndex = 69;
+            this.btnThem.Text = "    Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = global::GUI.Properties.Resources.trash_can_26px;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(397, 563);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(123, 36);
+            this.btnXoa.TabIndex = 73;
+            this.btnXoa.Text = "   Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // gBDanhSachPhim
+            // 
+            this.gBDanhSachPhim.Controls.Add(this.dgvListThucAn);
+            this.gBDanhSachPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gBDanhSachPhim.Location = new System.Drawing.Point(28, 63);
+            this.gBDanhSachPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gBDanhSachPhim.Name = "gBDanhSachPhim";
+            this.gBDanhSachPhim.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gBDanhSachPhim.Size = new System.Drawing.Size(355, 231);
+            this.gBDanhSachPhim.TabIndex = 16;
+            this.gBDanhSachPhim.TabStop = false;
+            this.gBDanhSachPhim.Text = "DANH SÁCH THỨC ĂN";
+            // 
+            // dgvListThucAn
+            // 
+            this.dgvListThucAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListThucAn.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListThucAn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvListThucAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListThucAn.Location = new System.Drawing.Point(15, 24);
+            this.dgvListThucAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListThucAn.Name = "dgvListThucAn";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListThucAn.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvListThucAn.RowHeadersWidth = 62;
+            this.dgvListThucAn.RowTemplate.Height = 28;
+            this.dgvListThucAn.Size = new System.Drawing.Size(322, 192);
+            this.dgvListThucAn.TabIndex = 0;
             // 
             // btnThoat
             // 
@@ -174,147 +258,14 @@
             this.btnThoat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.Black;
             this.btnThoat.Image = global::GUI.Properties.Resources.Logout_26px;
-            this.btnThoat.Location = new System.Drawing.Point(84, 540);
+            this.btnThoat.Location = new System.Drawing.Point(43, 563);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(104, 36);
-            this.btnThoat.TabIndex = 37;
+            this.btnThoat.TabIndex = 63;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // grpThongTinDoAn
-            // 
-            this.grpThongTinDoAn.Controls.Add(this.cboNhaCungCap);
-            this.grpThongTinDoAn.Controls.Add(this.lblNhaCungCap);
-            this.grpThongTinDoAn.Controls.Add(this.lblEmail);
-            this.grpThongTinDoAn.Controls.Add(this.lblDienThoai);
-            this.grpThongTinDoAn.Controls.Add(this.lblDiaChi);
-            this.grpThongTinDoAn.Controls.Add(this.lblTenDoAn);
-            this.grpThongTinDoAn.Controls.Add(this.txtDienThoai);
-            this.grpThongTinDoAn.Controls.Add(this.txtEmail);
-            this.grpThongTinDoAn.Controls.Add(this.txtDiaChi);
-            this.grpThongTinDoAn.Controls.Add(this.txtTenDoAn);
-            this.grpThongTinDoAn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpThongTinDoAn.Location = new System.Drawing.Point(25, 23);
-            this.grpThongTinDoAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpThongTinDoAn.Name = "grpThongTinDoAn";
-            this.grpThongTinDoAn.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpThongTinDoAn.Size = new System.Drawing.Size(589, 299);
-            this.grpThongTinDoAn.TabIndex = 36;
-            this.grpThongTinDoAn.TabStop = false;
-            this.grpThongTinDoAn.Text = "THÔNG TIN ĐỒ ĂN";
-            // 
-            // cboNhaCungCap
-            // 
-            this.cboNhaCungCap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cboNhaCungCap.FormattingEnabled = true;
-            this.cboNhaCungCap.Location = new System.Drawing.Point(202, 90);
-            this.cboNhaCungCap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboNhaCungCap.Name = "cboNhaCungCap";
-            this.cboNhaCungCap.Size = new System.Drawing.Size(378, 27);
-            this.cboNhaCungCap.TabIndex = 30;
-            // 
-            // lblNhaCungCap
-            // 
-            this.lblNhaCungCap.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNhaCungCap.Image = global::GUI.Properties.Resources.Nhacungcap;
-            this.lblNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblNhaCungCap.Location = new System.Drawing.Point(18, 89);
-            this.lblNhaCungCap.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNhaCungCap.Name = "lblNhaCungCap";
-            this.lblNhaCungCap.Size = new System.Drawing.Size(155, 27);
-            this.lblNhaCungCap.TabIndex = 29;
-            this.lblNhaCungCap.Text = "Nhà cung cấp";
-            this.lblNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Image = global::GUI.Properties.Resources.Mail;
-            this.lblEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblEmail.Location = new System.Drawing.Point(18, 189);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(96, 28);
-            this.lblEmail.TabIndex = 23;
-            this.lblEmail.Text = "Email";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDienThoai
-            // 
-            this.lblDienThoai.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDienThoai.Image = global::GUI.Properties.Resources.Phone;
-            this.lblDienThoai.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblDienThoai.Location = new System.Drawing.Point(18, 239);
-            this.lblDienThoai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDienThoai.Name = "lblDienThoai";
-            this.lblDienThoai.Size = new System.Drawing.Size(123, 28);
-            this.lblDienThoai.TabIndex = 21;
-            this.lblDienThoai.Text = "Điện thoại";
-            this.lblDienThoai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDiaChi
-            // 
-            this.lblDiaChi.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaChi.Image = global::GUI.Properties.Resources.Location;
-            this.lblDiaChi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblDiaChi.Location = new System.Drawing.Point(18, 140);
-            this.lblDiaChi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(109, 27);
-            this.lblDiaChi.TabIndex = 20;
-            this.lblDiaChi.Text = "Địa chỉ";
-            this.lblDiaChi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblTenDoAn
-            // 
-            this.lblTenDoAn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenDoAn.Image = global::GUI.Properties.Resources.FoodTitleDeXuat;
-            this.lblTenDoAn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblTenDoAn.Location = new System.Drawing.Point(18, 36);
-            this.lblTenDoAn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTenDoAn.Name = "lblTenDoAn";
-            this.lblTenDoAn.Size = new System.Drawing.Size(125, 27);
-            this.lblTenDoAn.TabIndex = 19;
-            this.lblTenDoAn.Text = "Tên đồ ăn";
-            this.lblTenDoAn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtDienThoai
-            // 
-            this.txtDienThoai.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDienThoai.Location = new System.Drawing.Point(203, 246);
-            this.txtDienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(377, 28);
-            this.txtDienThoai.TabIndex = 15;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(203, 195);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(377, 28);
-            this.txtEmail.TabIndex = 13;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(203, 141);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(377, 28);
-            this.txtDiaChi.TabIndex = 11;
-            // 
-            // txtTenDoAn
-            // 
-            this.txtTenDoAn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDoAn.Location = new System.Drawing.Point(203, 41);
-            this.txtTenDoAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTenDoAn.Name = "txtTenDoAn";
-            this.txtTenDoAn.Size = new System.Drawing.Size(377, 28);
-            this.txtTenDoAn.TabIndex = 8;
             // 
             // btnLuu
             // 
@@ -323,84 +274,127 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = global::GUI.Properties.Resources.save_26px;
-            this.btnLuu.Location = new System.Drawing.Point(440, 540);
+            this.btnLuu.Location = new System.Drawing.Point(790, 563);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(104, 36);
-            this.btnLuu.TabIndex = 35;
+            this.btnLuu.Size = new System.Drawing.Size(121, 36);
+            this.btnLuu.TabIndex = 56;
             this.btnLuu.Text = "   Lưu";
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // pnTitleDeXuatThucAn
+            // gBDeXuatPhim
             // 
-            this.pnTitleDeXuatThucAn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnTitleDeXuatThucAn.Controls.Add(this.lblTitleDeXuatThucAn);
-            this.pnTitleDeXuatThucAn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTitleDeXuatThucAn.Location = new System.Drawing.Point(0, 0);
-            this.pnTitleDeXuatThucAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnTitleDeXuatThucAn.Name = "pnTitleDeXuatThucAn";
-            this.pnTitleDeXuatThucAn.Size = new System.Drawing.Size(689, 45);
-            this.pnTitleDeXuatThucAn.TabIndex = 37;
+            this.gBDeXuatPhim.Controls.Add(this.dgvListDeXuatThucAn);
+            this.gBDeXuatPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gBDeXuatPhim.Location = new System.Drawing.Point(17, 303);
+            this.gBDeXuatPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gBDeXuatPhim.Name = "gBDeXuatPhim";
+            this.gBDeXuatPhim.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gBDeXuatPhim.Size = new System.Drawing.Size(909, 233);
+            this.gBDeXuatPhim.TabIndex = 15;
+            this.gBDeXuatPhim.TabStop = false;
+            this.gBDeXuatPhim.Text = "ĐỀ XUẤT THỨC ĂN";
             // 
-            // lblTitleDeXuatThucAn
+            // dgvListDeXuatThucAn
             // 
-            this.lblTitleDeXuatThucAn.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblTitleDeXuatThucAn.Image = global::GUI.Properties.Resources.FoodTitleDeXuat;
-            this.lblTitleDeXuatThucAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTitleDeXuatThucAn.Location = new System.Drawing.Point(153, 9);
-            this.lblTitleDeXuatThucAn.Name = "lblTitleDeXuatThucAn";
-            this.lblTitleDeXuatThucAn.Size = new System.Drawing.Size(388, 27);
-            this.lblTitleDeXuatThucAn.TabIndex = 0;
-            this.lblTitleDeXuatThucAn.Text = "TẠO ĐỀ XUẤT THỨC ĂN NHANH";
-            this.lblTitleDeXuatThucAn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dgvListDeXuatThucAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListDeXuatThucAn.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListDeXuatThucAn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvListDeXuatThucAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListDeXuatThucAn.Location = new System.Drawing.Point(15, 24);
+            this.dgvListDeXuatThucAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListDeXuatThucAn.Name = "dgvListDeXuatThucAn";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListDeXuatThucAn.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvListDeXuatThucAn.RowHeadersWidth = 62;
+            this.dgvListDeXuatThucAn.RowTemplate.Height = 28;
+            this.dgvListDeXuatThucAn.Size = new System.Drawing.Size(879, 193);
+            this.dgvListDeXuatThucAn.TabIndex = 0;
+            this.dgvListDeXuatThucAn.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListDeXuatThucAn_CellDoubleClick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(22, 15);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(949, 32);
+            this.panel2.TabIndex = 63;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.Image = global::GUI.Properties.Resources.NhapXuat;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Location = new System.Drawing.Point(369, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(180, 35);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "TẠO ĐỀ XUẤT";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FrmTaoPhieuDeXuatThucAnQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 710);
-            this.Controls.Add(this.pnDeXuatThucAn);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(993, 661);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmTaoPhieuDeXuatThucAnQLVT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTaoPhieuDeXuatQLVT";
-            this.pnDeXuatThucAn.ResumeLayout(false);
-            this.pnContentDeXuatThucAn.ResumeLayout(false);
-            this.grpSoLuongDoAn.ResumeLayout(false);
-            this.grpSoLuongDoAn.PerformLayout();
-            this.grpThongTinDoAn.ResumeLayout(false);
-            this.grpThongTinDoAn.PerformLayout();
-            this.pnTitleDeXuatThucAn.ResumeLayout(false);
+            this.Text = "frm_TaoDeXuat_QLP";
+            this.panel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.gBDanhSachPhim.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListThucAn)).EndInit();
+            this.gBDeXuatPhim.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListDeXuatThucAn)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnDeXuatThucAn;
-        private System.Windows.Forms.Panel pnContentDeXuatThucAn;
-        private System.Windows.Forms.GroupBox grpSoLuongDoAn;
-        private System.Windows.Forms.TextBox txtGiaTien;
-        private System.Windows.Forms.Label lblGiaTien;
-        private System.Windows.Forms.Label lblDonViTinh;
-        private System.Windows.Forms.Label lblSoLuong;
-        private System.Windows.Forms.TextBox txtDonViTinh;
-        private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.GroupBox grpThongTinDoAn;
-        private System.Windows.Forms.ComboBox cboNhaCungCap;
-        private System.Windows.Forms.Label lblNhaCungCap;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblDienThoai;
-        private System.Windows.Forms.Label lblDiaChi;
-        private System.Windows.Forms.Label lblTenDoAn;
-        private System.Windows.Forms.TextBox txtDienThoai;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox txtTenDoAn;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Panel pnTitleDeXuatThucAn;
-        private System.Windows.Forms.Label lblTitleDeXuatThucAn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox gBDeXuatPhim;
+        private System.Windows.Forms.DataGridView dgvListDeXuatThucAn;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.GroupBox gBDanhSachPhim;
+        private System.Windows.Forms.DataGridView dgvListThucAn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cBDonViTinh;
+        private System.Windows.Forms.TextBox txtSoLuong;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.TextBox txtNoiDung;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnChinhSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

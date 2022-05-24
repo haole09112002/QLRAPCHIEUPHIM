@@ -96,6 +96,8 @@ namespace GUI.QLVT_GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (txtMaVatTu.Text == "")
+                lbVatTu.Text = "Vật tư còn trống!";
             if (cbDonViTinh.SelectedItem == null)
                 lbDonViTinh.Text = "Đơn vị tính còn trống!";
             if (numUpDowSoLuong.Value == 0)
@@ -239,7 +241,7 @@ namespace GUI.QLVT_GUI
                             SoLuongSP = Convert.ToInt32(numericUpDownSoLuongXoa.Value),
                             MaKho = maKho
                         };
-                        dsVatTuTrongKho.Add(ChiTietKhoVatTuBLL.Instance.ConvertChiTietKhoVatTuDTOToView(kho));
+                        dsVatTuTrongKho.Add(ChiTietKhoVatTuBLL.Instance.ConvertChiTietKhoVatTuToView(kho));
                     }
                     int index = dsVatTuCoSan.FindIndex(x => x.MaVatTu == maVatTu);
                     dsVatTuCoSan.Remove(item);

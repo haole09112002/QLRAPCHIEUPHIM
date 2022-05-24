@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CaLamViecBLL.cs" />
+    <Compile Include="LichLamViecBLL.cs" />
+    <Compile Include="ChiTietDeXuatThucAnBLL.cs" />
+    <Compile Include="ChiTietDeXuatVatTuBLL.cs" />
+    <Compile Include="ChiTietKhoThucAnBLL.cs" />
     <Compile Include="ChiTietKhoVatTuBLL.cs" />
     <Compile Include="ChinhSachBLL.cs" />
     <Compile Include="ChiTietPhongChieuBLL.cs" />
@@ -58,6 +63,7 @@
     <Compile Include="HopDongPhimBLL.cs" />
     <Compile Include="HopDongThucAnBLL.cs" />
     <Compile Include="HopDongVatTuBLL.cs" />
+    <Compile Include="KhoBLL.cs" />
     <Compile Include="KhungGioChieuBLL.cs" />
     <Compile Include="LichChieuViewBLL.cs" />
     <Compile Include="LoaiHopDongBLL.cs" />
@@ -73,9 +79,13 @@
     <Compile Include="PhongChieuBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheLoaiPhimBLL.cs" />
+    <Compile Include="ThongKeBLL.cs" />
     <Compile Include="ThucAnBLL.cs" />
     <Compile Include="TinhTrangPhongChieuBLL.cs" />
     <Compile Include="VatTuBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
@@ -86,9 +96,6 @@
       <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
       <Name>DTO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -42,7 +42,7 @@ namespace GUI.QLP_GUI
             }
             dGVDanhSachPhieuDeXuat.DataSource = dtDSPhieuDeXuat;
         }
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e) 
         {
             frm_TaoDeXuat_QLP frmTDX = new frm_TaoDeXuat_QLP();
             frmTDX.ShowDialog();

@@ -22,7 +22,6 @@ namespace GUI
         {
             InitializeComponent();
         }
-
         private void btnDN_Click(object sender, EventArgs e)
         {
 
@@ -38,7 +37,7 @@ namespace GUI
             }
             if (result == 2)
             {
-                FrmDashboardQLVT frmDashboardQLVT = new FrmDashboardQLVT();
+                FrmDashboardQLVT frmDashboardQLVT = new FrmDashboardQLVT(NhanVienBLL.Instance.GetNhanVienByTenTaiKhoan(txtTenTaiKhoan.Text));
                 frmDashboardQLVT.Show();
             }
             if (result == 1)

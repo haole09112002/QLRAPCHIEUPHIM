@@ -1,4 +1,4 @@
-create database QuanLyRapChieuPhim
+create database QuanLyRapChieuPhim;
 go
 use QuanLyRapChieuPhim
 go
@@ -174,26 +174,6 @@ BEGIN
 			WHEN @ID >= 0 and @ID < 9 THEN 'CLV00' + CONVERT(CHAR, CONVERT(INT, @ID) + 1)
 			WHEN @ID >= 9 THEN 'CLV0' + CONVERT(CHAR, CONVERT(INT, @ID) + 1)
 			WHEN @ID >= 99 THEN 'CLV' + CONVERT(CHAR, CONVERT(INT, @ID) + 1)
-			end
-	RETURN @ID
-END
-go
-
---Ngay Lam Viec
-
-CREATE FUNCTION AUTO_IDNLV()
-RETURNS VARCHAR(6)
-AS
-BEGIN
-	DECLARE @ID VARCHAR(6)
-	IF (SELECT COUNT(MaNgayLamViec) FROM NGAY_LAM_VIEC) = 0
-		SET @ID = '0'
-	ELSE
-		SELECT @ID = MAX(RIGHT(MaNgayLamViec, 3)) FROM NGAY_LAM_VIEC
-		SELECT @ID = CASE
-			WHEN @ID >= 0 and @ID < 9 THEN 'NLV00' + CONVERT(CHAR, CONVERT(INT, @ID) + 1)
-			WHEN @ID >= 9 THEN 'NLV0' + CONVERT(CHAR, CONVERT(INT, @ID) + 1)
-			WHEN @ID >= 99 THEN 'NLV' + CONVERT(CHAR, CONVERT(INT, @ID) + 1)
 			end
 	RETURN @ID
 END
