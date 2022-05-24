@@ -50,6 +50,16 @@ namespace BLL
                 SoLuongSP = vt.SoLuongSP
             };
         }
+        public ChiTietKhoVatTuDTO ConvertChiTietKhoVatTuViewToDTO(ChiTietKhoVatTuView vtView)
+        {
+            return new ChiTietKhoVatTuDTO
+            {
+                MaKho = vtView.MaKho,
+                MaVatTu = vtView.MaVatTu,
+                DonViTinh = vtView.DonViTinh,
+                SoLuongSP = vtView.SoLuongSP
+            };
+        }
         public List<ChiTietKhoVatTuView> GetAllChiTietKhoVatTuView()
         {
             List<ChiTietKhoVatTuView> data = new List<ChiTietKhoVatTuView>();
@@ -64,10 +74,40 @@ namespace BLL
                 data.Add(i.DonViTinh);
             return data.Distinct().ToList();
         }
-
-        public void KiemTraThongTinChiTietVatTuTrongKho(string maVatTu, int soLuong, string DonViTinh)
+        public void AddUpDateChiTietKhoVatTu(List<ChiTietKhoVatTuView> dsCTKhoVT)
         {
-
+           
+            foreach(ChiTietKhoVatTuView k in dsCTKhoVT)
+            {
+                bool add = true;
+                foreach (ChiTietKhoVatTuView i in GetAllChiTietKhoVatTuView())
+                {
+                    if (i.MaVatTu == k.MaVatTu && i.MaKho == k.MaKho)
+                        add = false;
+                }
+                
+                if (add)
+                    ChiTietKhoVatTuDAL.Instance.ThemChiTietKhoVatTu(ConvertChiTietKhoVatTuViewToDTO(k));
+                else
+                    ChiTietKhoVatTuDAL.Instance.CapNhatChiTietKhoVatTu(ConvertChiTietKhoVatTuViewToDTO(k));
+            }
+            
+        }
+        public void XoaChiTietKhoVatTu(List<ChiTietKhoVatTuView> dsCTKhoVT)
+        {
+            var ds = GetAllChiTietKhoVatTuView();
+            foreach(var i in dsCTKhoVT)
+            {
+                int index = ds.FindIndex(x => x.MaVatTu == i.MaVatTu && x.MaKho == i.MaKho);
+                if ( index >= 0)
+                    ds.RemoveAt(index);
+            }
+            if(ds.Count > 0)
+            foreach(var i in ds)
+            {
+                ChiTietKhoVatTuDAL.Instance.XoaChiTietKhoVatTu(ConvertChiTietKhoVatTuViewToDTO(i));
+            }
+           
         }
     }
 }

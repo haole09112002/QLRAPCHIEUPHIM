@@ -201,3 +201,74 @@ create proc CapNhatNhanVien
 	update  NHAN_VIEN set TenNhanVien=@TenNhanVien,GioiTinh=@GioiTinh,NgaySinh=@NgaySinh,DiaChi=@DiaChi,SoDienThoai=@SoDienThoai,CCCD=@CCCD,TenTaiKhoan=@TenTaiKhoan,MatKhau=@MatKhau,MaChinhSach=@MaChinhSach,MaChucVu=@MaChucVu
 where MaNhanVien=@MaNhanVien
 end
+go
+-- Add CHi tiet phong chieu
+create proc ThemChiTietPhongChieu
+	@MaPhongChieu varchar(6),
+	@MaVatTu varchar(6),
+	@DonViTinh nvarchar(30),
+	@SoLuongSP int
+as
+begin 
+	insert into CHI_TIET_PHONG_CHIEU(MaPhongChieu,MaVatTu,DonViTinh,SoLuongSP)
+	values (@MaPhongChieu,@MaVatTu,@DonViTinh,@SoLuongSP)
+end
+go
+-- CapNhat chi tiet phong chieu
+create proc CapNhatChiTietPhongChieu
+	@MaPhongChieu varchar(6),
+	@MaVatTu varchar(6),
+	@DonViTinh nvarchar(30),
+	@SoLuongSP int
+as
+begin 
+	Update CHI_TIET_PHONG_CHIEU set DonViTinh = @DonViTinh ,SoLuongSP = @SoLuongSP
+	where MaVatTu = @MaVatTu and MaPhongChieu = @MaPhongChieu
+end
+
+go
+-------------------------------
+-- them VatTuVaoKho
+create proc ThemChiTietKhoVatTu
+	@MaKho varchar(5),
+	@MaVatTu varchar(6),
+	@DonViTinh nvarchar(20),
+	@SoLuongSP int
+as
+begin
+	insert into CHI_TIET_KHO_VT(MaKho,MaVatTu,DonViTinh,SoLuongSP) values(@MaKho,@MaVatTu,@DonViTinh,@SoLuongSP)
+end
+go
+--CapNhatChiTietKhoVatTu
+create proc CapNhatChiTietKhoVatTu
+	@MaKho varchar(5),
+	@MaVatTu varchar(6),
+	@DonViTinh nvarchar(20),
+	@SoLuongSP int
+as
+begin
+	update CHI_TIET_KHO_VT set DonViTinh = @DonViTinh ,SoLuongSP = @SoLuongSP 
+	where  MaKho =@MaKho and MaVatTu = @MaVatTu
+end
+go
+
+-- Them phong chieu
+create proc ThemPhongChieu
+	@TenPhong nvarchar(20),
+	@MaTinhTrang int,
+	@MaLoaiPhongChieu  varchar(6)
+as
+begin
+	insert into PHONG_CHIEU(TenPhong,MaTinhTrang, MaLoaiPhongChieu) values (@TenPhong, @MaTinhTrang, @MaLoaiPhongChieu)
+end
+go
+-- CapNhatPhongChieu
+create proc CapNhatPhongChieu
+	@MaPhongChieu varchar(6),
+	@TenPhong nvarchar(20),
+	@MaTinhTrang int
+as
+begin
+	Update PHONG_CHIEU set	TenPhong = @TenPhong,	MaTinhTrang = @MaTinhTrang
+	where MaPhongChieu = @MaPhongChieu
+end
