@@ -40,10 +40,10 @@ namespace DAL
             }
             return listLichChieu;
         }
-        public void XoaLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu)
+        public void LuuLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, bool TrangThai, DateTime NgayChieu)
         {
-            string query = "Delete from LICH_CHIEU where MaPhim = '" + MaPhim + "' and MaKhungGioChieu = '" + MaKhungGioChieu +
-                "' and MaPhongChieu = '" + MaPhongChieu + "'";
+            string query = "Insert into LICH_CHIEU values " +
+                $"('{MaPhim}','{MaPhongChieu}','{MaKhungGioChieu}','{NgayChieu.Year}-{NgayChieu.Month}-{NgayChieu.Day}','{TrangThai}')";
             DBHelper.Instance.ExcuteQuery(query);
         }
     }

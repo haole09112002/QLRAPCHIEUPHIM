@@ -46,12 +46,14 @@ namespace GUI.QLP_GUI
         private void btLCDuKien_Click(object sender, EventArgs e)
         {
             d(ucDSDK);
+            ucDSDK.Reload();
             changeColorButton(btnLichChieuDuKien);
         }
 
         private void btnLCChinhThuc_Click(object sender, EventArgs e)
         {
             d(ucDSCT);
+            ucDSCT.Reload();
             changeColorButton(btnLichChieuChinhThuc);
         }
     }

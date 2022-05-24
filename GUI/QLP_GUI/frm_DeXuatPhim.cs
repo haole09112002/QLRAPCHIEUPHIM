@@ -2,12 +2,7 @@
 using DTO;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
@@ -120,60 +115,100 @@ namespace GUI.QLP_GUI
             }
             return false;
         }
-        public bool KiemTraTinhDungDang()
+        public int KiemTraTinhDungDang()
         {
+            int DemLoi = 0;
             if (txtTenPhim.Text == "")
             {
-                MessageBox.Show("Tên phim rỗng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                return false;
+                lbTenPhim.Text = "*Mời nhập tên phim";
+                DemLoi++;
             }
-            if (KiemTraTenPhim() == true) return false;
+            else
+            {
+                lbTenPhim.Text = "";
+            }
             if (txtThoiLuong.Text == "")
             {
-                MessageBox.Show("Thời lượng rỗng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                return false;
+                lbThoiLuong.Text = "*Mời nhập thời lượng phim";
+                DemLoi++;
             }
-            if (cBTheLoai.SelectedIndex < 0)
+            else
             {
-                MessageBox.Show("Thể loại phim rỗng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                return false;
+                lbThoiLuong.Text = "";
+            }
+            if (nUDDoTuoiXem.Text == "0")
+            {
+                lbDoTuoiXem.Text = "*Mời nhập độ tuổi xem";
+                DemLoi++;
+            }
+            else
+            {
+                lbDoTuoiXem.Text = "";
             }
             if (cBQuocGia.SelectedIndex < 0)
             {
-                MessageBox.Show("Quốc gia rỗng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                return false;
+                lbQuocGia.Text = "*Mời chọn quốc gia";
+                DemLoi++;
+            }
+            else
+            {
+                lbQuocGia.Text = "";
             }
             if (cBHangSanXuatPhim.SelectedIndex < 0)
             {
-                MessageBox.Show("Hãng sản xuất phim rỗng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                return false;
+                lbHangSanXuat.Text = "*Mời chọn hãng sản xuất phim";
+                DemLoi++;
             }
-            if (txtDoTuoiXem.Text == "")
+            else
             {
-                MessageBox.Show("Độ tuổi xem rỗng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                return false;
+                lbHangSanXuat.Text = "";
+            }
+            if (cBTheLoai.SelectedIndex < 0)
+            {
+                lbTheLoai.Text = "*Mời chọn thể loại phim";
+                DemLoi++;
+            }
+            else
+            {
+                lbTheLoai.Text = "";
             }
             if (pBAnhPhim.Image == null)
             {
-                MessageBox.Show("Ảnh phim rỗng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                return false;
+                lbAnhPhim.Text = "*Mời thêm ảnh phim";
+                DemLoi++;
             }
-            if (dGVDienVienChinh.RowCount == 0)
+            else
             {
-                MessageBox.Show("Diẽn viên chính rỗng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                return false;
+                lbAnhPhim.Text = "";
             }
-            if (dGVDienVienPhu.RowCount == 0)
+            if (dGVDienVienChinh.Rows.Count == 0)
             {
-                MessageBox.Show("Diẽn viên phụ rỗng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                return false;
+                lbDienVienChinh.Text = "*Mời thêm diễn viên chính";
+                DemLoi++;
             }
-            if (dGVDaoDien.RowCount == 0)
+            else
             {
-                MessageBox.Show("Đạo diễn rỗng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                return false;
+                lbDienVienChinh.Text = "";
             }
-            return true;
+            if (dGVDienVienPhu.Rows.Count == 0)
+            {
+                lbDienVienPhu.Text = "*Mời thêm diễn viên phụ";
+                DemLoi++;
+            }
+            else
+            {
+                lbDienVienPhu.Text = "";
+            }
+            if (dGVDaoDien.Rows.Count == 0)
+            {
+                lbDaoDien.Text = "*Mời thêm đạo diễn";
+                DemLoi++;
+            }
+            else
+            {
+                lbDaoDien.Text = "";
+            }
+            return DemLoi;
         }
         public bool KiemTraTenPhim()
         {
@@ -189,52 +224,55 @@ namespace GUI.QLP_GUI
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            PhimDTO Phim = new PhimDTO();
-            ChiTietDienVienDaoDienPhimDTO ChiTietDVDD = new ChiTietDienVienDaoDienPhimDTO();
-            List<String> MaDienVienChinh = new List<String>();
-            List<String> MaDienVienPhu = new List<String>();
-            List<String> MaDaoDien = new List<string>();
-            Phim.NoiDung = rtxtNoiDung.Text;
-            Phim.NamSanXuat = dTPNamSanXuat.Value;
+            if (KiemTraTinhDungDang() == 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("Xác nhận Lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.OK)
+                {
+                    PhimDTO Phim = new PhimDTO();
+                    ChiTietDienVienDaoDienPhimDTO ChiTietDVDD = new ChiTietDienVienDaoDienPhimDTO();
+                    List<String> MaDienVienChinh = new List<String>();
+                    List<String> MaDienVienPhu = new List<String>();
+                    List<String> MaDaoDien = new List<string>();
+                    Phim.NoiDung = rtxtNoiDung.Text;
+                    Phim.NamSanXuat = dTPNamSanXuat.Value;
 
-            for (int i = 0; i < dGVDienVienChinh.Rows.Count - 1; i++)
-            {
-                MaDienVienChinh.Add(dGVDienVienChinh.Rows[i].Cells["Mã Diễn Viên Chính"].Value.ToString());
-            }
-            for (int i = 0; i < dGVDienVienPhu.Rows.Count - 1; i++)
-            {
-                MaDienVienPhu.Add(dGVDienVienPhu.Rows[i].Cells["Mã Diễn Viên Phụ"].Value.ToString());
-            }
-            for (int i = 0; i < dGVDaoDien.Rows.Count - 1; i++)
-            {
-                MaDaoDien.Add(dGVDaoDien.Rows[i].Cells["Mã Đạo Diễn"].Value.ToString());
-            }
-            if (KiemTraTinhDungDang() == true)
-            {
-                Phim.TenPhim = txtTenPhim.Text;
-                Phim.ThoiLuong = Convert.ToInt32(txtThoiLuong.Text);
-                Phim.MaTheLoai = ((CBBItem)cBTheLoai.SelectedItem).Value;
-                Phim.QuocGia = cBQuocGia.SelectedItem.ToString();
-                Phim.MaHangSanXuatPhim = ((CBBItem)cBHangSanXuatPhim.SelectedItem).Value;
-                Phim.DoTuoiXem = Convert.ToInt32(txtDoTuoiXem.Text);
-                Phim.AnhPhim = PhimBLL.Instance.ChuyenAnhThanhMangByte(pBAnhPhim);
-                PhimBLL.Instance.LuuPhim(Phim);
-                string MaPhim = PhimBLL.Instance.GetMaPhimAddNew();
-                MessageBox.Show(MaPhim);
-                foreach (string i in MaDienVienChinh)
-                {
-                    ChiTietDienVienDaoDienPhimBLL.Instance.LuuCTDVDDP(MaPhim, i, "C");
-                    MessageBox.Show("Pass");
+                    for (int i = 0; i < dGVDienVienChinh.Rows.Count - 1; i++)
+                    {
+                        MaDienVienChinh.Add(dGVDienVienChinh.Rows[i].Cells["Mã Diễn Viên Chính"].Value.ToString());
+                    }
+                    for (int i = 0; i < dGVDienVienPhu.Rows.Count - 1; i++)
+                    {
+                        MaDienVienPhu.Add(dGVDienVienPhu.Rows[i].Cells["Mã Diễn Viên Phụ"].Value.ToString());
+                    }
+                    for (int i = 0; i < dGVDaoDien.Rows.Count - 1; i++)
+                    {
+                        MaDaoDien.Add(dGVDaoDien.Rows[i].Cells["Mã Đạo Diễn"].Value.ToString());
+                    }
+
+                    Phim.TenPhim = txtTenPhim.Text;
+                    Phim.ThoiLuong = Convert.ToInt32(txtThoiLuong.Text);
+                    Phim.MaTheLoai = ((CBBItem)cBTheLoai.SelectedItem).Value;
+                    Phim.QuocGia = cBQuocGia.SelectedItem.ToString();
+                    Phim.MaHangSanXuatPhim = ((CBBItem)cBHangSanXuatPhim.SelectedItem).Value;
+                    Phim.DoTuoiXem = Convert.ToInt32(nUDDoTuoiXem.Text);
+                    Phim.AnhPhim = PhimBLL.Instance.ChuyenAnhThanhMangByte(pBAnhPhim);
+                    PhimBLL.Instance.LuuPhim(Phim);
+                    string MaPhim = PhimBLL.Instance.GetMaPhimAddNew();
+                    foreach (string i in MaDienVienChinh)
+                    {
+                        ChiTietDienVienDaoDienPhimBLL.Instance.LuuCTDVDDP(MaPhim, i, "C");
+                    }
+                    foreach (string i in MaDienVienPhu)
+                    {
+                        ChiTietDienVienDaoDienPhimBLL.Instance.LuuCTDVDDP(MaPhim, i, "P");
+                    }
+                    foreach (string i in MaDaoDien)
+                    {
+                        ChiTietDienVienDaoDienPhimBLL.Instance.LuuCTDVDDP(MaPhim, i, "D");
+                    }
+                    this.Close();
                 }
-                foreach (string i in MaDienVienPhu)
-                {
-                    ChiTietDienVienDaoDienPhimBLL.Instance.LuuCTDVDDP(MaPhim, i, "P");
-                }
-                foreach (string i in MaDaoDien)
-                {
-                    ChiTietDienVienDaoDienPhimBLL.Instance.LuuCTDVDDP(MaPhim, i, "D");
-                }
-                this.Close();
             }
         }
         private void btnThemMoi_Click(object sender, EventArgs e)
@@ -324,6 +362,16 @@ namespace GUI.QLP_GUI
             frm_ThemHangSanXuatMoi_QLP frmThemHSXM = new frm_ThemHangSanXuatMoi_QLP();
             frmThemHSXM.ShowDialog();
             SetCBBHangSanXuatPhim();
+        }
+
+        private void btnThemAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif; *.jpg; *.jpeg; *.bmp; *.wmf; *.png";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pBAnhPhim.ImageLocation = openFileDialog.FileName;
+            }
         }
     }
 }

@@ -7,17 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace GUI.QLP_GUI
 {
     public partial class frm_QLP : Form
     {
-        public frm_QLP()
+        NhanVienDTO nhanvien = new NhanVienDTO();
+        public frm_QLP(NhanVienDTO nhanvien)
         {
+            this.nhanvien = nhanvien;
             InitializeComponent();
+            lbTenNhanVien.Text = nhanvien.TenNhanVien;
         }
         UC_ThongTinPhim_QLP ucTTP = new UC_ThongTinPhim_QLP();
-        UC_CaNhan_QLP ucCN = new UC_CaNhan_QLP();
+        UC_CaNhan_QLP ucCN;
         UC_TaoPhieu_QLP ucTP = new UC_TaoPhieu_QLP();
         UC_PhieuNhapXuat_QLP ucLS = new UC_PhieuNhapXuat_QLP();
         UC_MenuNhapXuatKho_QLP ucMNXK = new UC_MenuNhapXuatKho_QLP();
@@ -25,7 +29,7 @@ namespace GUI.QLP_GUI
         UC_DanhSachLichChieuChinhThuc_QLP ucDSCT = new UC_DanhSachLichChieuChinhThuc_QLP();
         UC_DanhSachLichChieuDuKien_QLP ucDSDK = new UC_DanhSachLichChieuDuKien_QLP();
         UC_MenuTaoLichChieu_QLP ucMTLC = new UC_MenuTaoLichChieu_QLP();
-        UC_DanhSachPhimDeXuat_QLP ucDSPDX = new UC_DanhSachPhimDeXuat_QLP();
+        UC_DanhSachPhimDeXuat_QLP ucDSPDX;
         UC_NhaCungCap_QLP ucNCC = new UC_NhaCungCap_QLP();
         void AddControlsToPnCenter(Control c)
         {
@@ -75,6 +79,7 @@ namespace GUI.QLP_GUI
 
         private void btnDeXuatPhim_Click(object sender, EventArgs e)
         {
+            ucDSPDX = new UC_DanhSachPhimDeXuat_QLP(nhanvien);
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucDSPDX);
             changeColorButton(btnDeXuatPhim);
@@ -92,6 +97,7 @@ namespace GUI.QLP_GUI
 
         private void btnCaNhan_Click(object sender, EventArgs e)
         {
+            ucCN = new UC_CaNhan_QLP(nhanvien);
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucCN);
             changeColorButton(btnCaNhan);

@@ -1074,9 +1074,11 @@
   <ItemGroup>
     <None Include="Resources\hidePass_26px.png" />
   </ItemGroup>
-  
   <ItemGroup>
     <None Include="Resources\add_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_file_add_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
