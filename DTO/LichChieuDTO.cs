@@ -12,12 +12,12 @@ namespace DTO
         private string maPhongChieu;
         private string maKhungGioChieu;
         private DateTime ngayChieu;
-        private bool trangThai;
+        private string trangThai;
 
         public string MaPhim { get => maPhim; set => maPhim = value; }
         public string MaPhongChieu { get => maPhongChieu; set => maPhongChieu = value; }
         public string MaKhungGioChieu { get => maKhungGioChieu; set => maKhungGioChieu = value; }
         public DateTime NgayChieu { get => ngayChieu; set => ngayChieu = value; }
-        public bool TrangThai { get => trangThai; set => trangThai = value; }
+        public string TrangThai { get => trangThai; set => trangThai = value; }
     }
 }
