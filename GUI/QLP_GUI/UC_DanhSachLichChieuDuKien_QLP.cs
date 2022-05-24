@@ -38,7 +38,7 @@ namespace GUI.QLP_GUI
         public void Reload(string TimKiem = "", string LoaiTimKiem = "")
         {
             dtDanhSachLichChieuDuKien.Rows.Clear();
-            foreach (LichChieuViewDTO i in LichChieuViewBLL.Instance.GetLichChieuViewByTrangThai(false,TimKiem,LoaiTimKiem))
+            foreach (LichChieuViewDTO i in LichChieuViewBLL.Instance.GetLichChieuViewByTrangThai("1",TimKiem,LoaiTimKiem))
             {
                 dtDanhSachLichChieuDuKien.Rows.Add(i.MaPhim,i.TenPhim,i.MaPhongChieu,i.TenPhongChieu,i.MaKhungGioChieu,i.GioBatDau.ToShortTimeString(),i.GioKetThuc.ToShortTimeString(),i.NgayChieu.ToShortDateString());
             }

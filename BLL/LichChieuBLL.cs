@@ -31,48 +31,7 @@ namespace BLL
             }
             return data;
         }
-        public LichChieuViewDTO GetLichChieuViewByLichChieuDTO(LichChieuDTO lichChieu)
-        {
-            string tenPhong = "";
-            string tenkhunggio = "";
-            string TGBD = "";
-            string TGKT = "";
-            foreach (PhongChieuDTO i in PhongChieuDAL.Instance.GetAllPhongChieu())
-            {
-                if (i.MaPhongChieu == lichChieu.MaPhongChieu)
-                {
-                    tenPhong = i.TenPhong;
-                }
-            }
-            foreach (KhungGioChieuDTO i in KhungGioChieuDAL.Instance.GetAllKhungGioChieu())
-            {
-                if (i.MaKhungGioChieu == lichChieu.MaKhungGioChieu)
-                {
-                    tenkhunggio = i.TenKhungGio;
-                    TGBD = i.TGBatDau.ToString();
-                    TGKT = i.TGKetThuc.ToString();
-                }
-            }
-            return new LichChieuViewDTO
-            {
-                MaPhim = lichChieu.MaPhim,
-                TenPhongChieu = tenPhong,
-                TenKhungGio = tenkhunggio,
-                //GioBatDau = KhungGioChieuBLL.Instance.GetKhungGioChieuByMaKGC(i.MaKhungGioChieu).TGBatDau,
-               // GioKetThuc = KhungGioChieuBLL.Instance.GetKhungGioChieuByMaKGC(i.MaKhungGioChieu).TGKetThuc,
-               // NgayChieu = i.NgayChieu
-            };
-        }
-        public List<LichChieuViewDTO> GetAllLichChieuView()
-        {
-            List<LichChieuViewDTO> data = new List<LichChieuViewDTO>();
-            foreach (LichChieuDTO i in GetAllLichChieu())
-            {
-                data.Add(GetLichChieuViewByLichChieuDTO(i));
-            }
-            return data;
-        }
-        public List<LichChieuDTO> GetListLichChieuByTrangThai(bool TrangThai)
+        public List<LichChieuDTO> GetListLichChieuByTrangThai(string TrangThai)
         {
             List<LichChieuDTO> data = new List<LichChieuDTO>();
             foreach(LichChieuDTO i in GetAllLichChieu())
@@ -88,7 +47,7 @@ namespace BLL
         {
             foreach(LichChieuDTO i in GetAllLichChieu())
             {
-                if (i.NgayChieu.Day == NgayChieu.Day && i.NgayChieu.Month == NgayChieu.Month && i.NgayChieu.Year == NgayChieu.Year && i.MaKhungGioChieu == MaKhungGioChieu && i.MaPhongChieu == MaPhongChieu && i.TrangThai == true)
+                if (i.NgayChieu.Day == NgayChieu.Day && i.NgayChieu.Month == NgayChieu.Month && i.NgayChieu.Year == NgayChieu.Year && i.MaKhungGioChieu == MaKhungGioChieu && i.MaPhongChieu == MaPhongChieu && i.TrangThai == "2")
                     return "Tồn tại một lịch chiếu dùng phòng chiếu cùng thời điểm";
                 if (i.MaPhim == MaPhim && i.NgayChieu.Day == NgayChieu.Day && i.NgayChieu.Month == NgayChieu.Month && i.NgayChieu.Year == NgayChieu.Year && i.MaKhungGioChieu == MaKhungGioChieu && i.MaPhongChieu == MaPhongChieu)
                     return "Lịch chiếu đã được tạo";

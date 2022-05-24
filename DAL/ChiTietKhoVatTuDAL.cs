@@ -48,5 +48,23 @@ namespace DAL
                 SoLuongSP = Convert.ToInt32(i["SoLuongSP"]),
             };
         }
+        public void ThemChiTietKhoVatTu(ChiTietKhoVatTuDTO kho)
+        {
+            string query = "EXEC ThemChiTietKhoVatTu @MaKho , @MaVatTu , @DonViTinh , @SoLuongSP";
+            object[] parameter = new object[] { kho.MaKho, kho.MaVatTu, kho.DonViTinh, kho.SoLuongSP };
+            DBHelper.Instance.ExcuteNonQuery(query, parameter);
+        }
+        public void CapNhatChiTietKhoVatTu(ChiTietKhoVatTuDTO kho)
+        {
+            string query = "EXEC CapNhatChiTietKhoVatTu @MaKho , @MaVatTu , @DonViTinh , @SoLuongSP";
+            object[] parameter = new object[] { kho.MaKho, kho.MaVatTu, kho.DonViTinh, kho.SoLuongSP };
+            DBHelper.Instance.ExcuteNonQuery(query, parameter);
+        }
+        public void XoaChiTietKhoVatTu(ChiTietKhoVatTuDTO kho)
+        {
+            string query = $"Delete from CHI_TIET_KHO_VT where MaKho= '{kho.MaKho}' and MaVatTu = '{kho.MaVatTu}'";
+            DBHelper.Instance.ExcuteNonQuery(query);
+        }
     }
 }
+
