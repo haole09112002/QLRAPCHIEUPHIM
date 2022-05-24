@@ -48,18 +48,8 @@ namespace DAL
                 MaPhongChieu = i["MaPhongChieu"].ToString(),
                 MaKhungGioChieu = (i["MakhungGioChieu"].ToString()),
                 NgayChieu = Convert.ToDateTime(i["NgayChieu"].ToString()),
-                TrangThai = Convert.ToBoolean(i["TrangThai"].ToString()),
+                TrangThai = i["TrangThai"].ToString(),
             };
-        }
-        public List<LichChieuDTO> TimTheoMa(string maPhim)
-        {
-            List<LichChieuDTO> data = new List<LichChieuDTO>();
-            string query = $"SELECT * FROM LICH_CHIEU WHERE MaPhim LIKE '%{maPhim}%'";
-            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
-            {
-                data.Add(GetLichChieuByDataRow(i));
-            }
-            return data;
         }
         public void XoaLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu)
         {
