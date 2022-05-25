@@ -3,6 +3,7 @@ using DTO;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Data;
 
 namespace BLL
 {
@@ -30,7 +31,7 @@ namespace BLL
             }
             return data;
         }
-        public List<LichChieuDTO> GetListLichChieuByTrangThai(bool TrangThai)
+        public List<LichChieuDTO> GetListLichChieuByTrangThai(string TrangThai)
         {
             List<LichChieuDTO> data = new List<LichChieuDTO>();
             foreach(LichChieuDTO i in GetAllLichChieu())
@@ -46,7 +47,7 @@ namespace BLL
         {
             foreach(LichChieuDTO i in GetAllLichChieu())
             {
-                if (i.NgayChieu.Day == NgayChieu.Day && i.NgayChieu.Month == NgayChieu.Month && i.NgayChieu.Year == NgayChieu.Year && i.MaKhungGioChieu == MaKhungGioChieu && i.MaPhongChieu == MaPhongChieu && i.TrangThai == true)
+                if (i.NgayChieu.Day == NgayChieu.Day && i.NgayChieu.Month == NgayChieu.Month && i.NgayChieu.Year == NgayChieu.Year && i.MaKhungGioChieu == MaKhungGioChieu && i.MaPhongChieu == MaPhongChieu && i.TrangThai == "2")
                     return "Tồn tại một lịch chiếu dùng phòng chiếu cùng thời điểm";
                 if (i.MaPhim == MaPhim && i.NgayChieu.Day == NgayChieu.Day && i.NgayChieu.Month == NgayChieu.Month && i.NgayChieu.Year == NgayChieu.Year && i.MaKhungGioChieu == MaKhungGioChieu && i.MaPhongChieu == MaPhongChieu)
                     return "Lịch chiếu đã được tạo";
@@ -56,6 +57,10 @@ namespace BLL
         public void LuuLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, bool TrangThai, DateTime NgayChieu)
         {
             LichChieuDAL.Instance.LuuLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, TrangThai, NgayChieu);
+        }
+        public void DuyetLichChieu(LichChieuDTO lichChieu)
+        {
+            
         }
     }
 }

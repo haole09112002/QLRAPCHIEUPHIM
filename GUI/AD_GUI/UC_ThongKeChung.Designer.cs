@@ -357,7 +357,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Name = "UC_ThongKeChung";
-            this.Size = new System.Drawing.Size(993, 597);
+            this.Size = new System.Drawing.Size(1352, 766);
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.panel10.ResumeLayout(false);

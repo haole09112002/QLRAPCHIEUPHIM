@@ -34,15 +34,38 @@ namespace DAL
                     MaPhim = i["MaPhim"].ToString(),
                     MaKhungGioChieu = i["MaKhungGioChieu"].ToString(),
                     MaPhongChieu = i["MaPhongChieu"].ToString(),
-                    TrangThai = Convert.ToBoolean(i["TrangThai"].ToString()),
+                    TrangThai = i["TrangThai"].ToString(),
                     NgayChieu = Convert.ToDateTime(i["NgayChieu"].ToString())
                 });
             }
             return listLichChieu;
         }
+        public LichChieuDTO GetLichChieuByDataRow(DataRow i)
+        {
+            return new LichChieuDTO()
+            {
+                MaPhim = i["MaPhim"].ToString(),
+                MaPhongChieu = i["MaPhongChieu"].ToString(),
+                MaKhungGioChieu = (i["MakhungGioChieu"].ToString()),
+                NgayChieu = Convert.ToDateTime(i["NgayChieu"].ToString()),
+                TrangThai = i["TrangThai"].ToString(),
+            };
+        }
+        public void XoaLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu)
+        {
+            string query = "Delete from LICH_CHIEU where MaPhim = '" + MaPhim + "' and MaKhungGioChieu = '" + MaKhungGioChieu +
+                "' and MaPhongChieu = '" + MaPhongChieu + "'";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
         public void LuuLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, bool TrangThai, DateTime NgayChieu)
         {
             string query = "Insert into LICH_CHIEU values " +
+                $"('{MaPhim}','{MaPhongChieu}','{MaKhungGioChieu}','{NgayChieu.Year}-{NgayChieu.Month}-{NgayChieu.Day}','{TrangThai}')";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
+        public void CapNhatLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, bool TrangThai, DateTime NgayChieu)
+        {
+            string query = "Update LICH_CHIEU values " +
                 $"('{MaPhim}','{MaPhongChieu}','{MaKhungGioChieu}','{NgayChieu.Year}-{NgayChieu.Month}-{NgayChieu.Day}','{TrangThai}')";
             DBHelper.Instance.ExcuteQuery(query);
         }

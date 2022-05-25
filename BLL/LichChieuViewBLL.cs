@@ -23,7 +23,7 @@ namespace BLL
             }
             private set { }
         }
-        public List<LichChieuViewDTO> GetLichChieuViewByTrangThai(bool TrangThai, string TimKiem = "", string LoaiTimKiem = "")
+        public List<LichChieuViewDTO> GetLichChieuViewByTrangThai(string TrangThai, string TimKiem = "", string LoaiTimKiem = "")
         {
             List<LichChieuViewDTO> data = new List<LichChieuViewDTO>();
             foreach(LichChieuDTO i in LichChieuBLL.Instance.GetAllLichChieu())

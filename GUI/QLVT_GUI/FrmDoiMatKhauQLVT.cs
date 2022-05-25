@@ -43,7 +43,7 @@ namespace GUI.QLVT_GUI
                 if ((checkMatKhau != 0 &&  checkMatKhau != -1) && (txtMatKhauMoi.Text == txtXacNhanMatKhau.Text))
                 {
                     nhanVien.MatKhau = NhanVienBLL.Instance.MD5(txtMatKhauMoi.Text);
-                    NhanVienBLL.Instance.AddUpdateNhaCungCap(nhanVien);
+                    NhanVienBLL.Instance.AddUpdateNhanVien(nhanVien);
                     MessageBox.Show("Thay Đổi Thành Công");
                     this.Close();
                 }

@@ -46,5 +46,15 @@ namespace DAL
                 TenLoaiKho = i["TenLoaiKho"].ToString(),
             };
         }
+        public List<LoaiKhoDTO> TimTheoTenLoai(string tenLoaiKho)
+        {
+            List<LoaiKhoDTO> data = new List<LoaiKhoDTO>();
+            string query = $"SELECT * FROM LOAI_KHO WHERE TenLoaiKho LIKE '%{tenLoaiKho}%'";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                data.Add(GetLoaiKhoByDataRow(i));
+            }
+            return data;
+        }
     }
 }

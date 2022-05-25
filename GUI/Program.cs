@@ -19,8 +19,5 @@ namespace GUI
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmDangNhap());
         }
-        //Luan vip
-        //Hao 
-        //haidhifjahfgk
     }
 }
