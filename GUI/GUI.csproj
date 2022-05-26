@@ -1058,7 +1058,6 @@
   <ItemGroup>
     <None Include="Resources\subtract_24px.png" />
   </ItemGroup>
-  
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>

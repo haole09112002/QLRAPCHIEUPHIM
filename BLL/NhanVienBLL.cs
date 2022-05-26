@@ -132,10 +132,6 @@ namespace BLL
                 NhanVienDAL.Instance.CapNhatNhanVien(nhanVien);
             }
         }
-        public static void DeleteNhanVien(string maNhanVien)
-        {
-            NhanVienDAL.XoaNhanVien(maNhanVien);
-        }
         public delegate bool CompareObj(object o1, object o2);
         public List<NhanVienViewDTO> SortNhanVien(List<NhanVienViewDTO> now, string dkSort)
         {

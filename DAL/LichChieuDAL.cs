@@ -57,17 +57,21 @@ namespace DAL
                 "' and MaPhongChieu = '" + MaPhongChieu + "'";
             DBHelper.Instance.ExcuteQuery(query);
         }
-        public void LuuLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, bool TrangThai, DateTime NgayChieu)
+        public void LuuLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, string TrangThai, DateTime NgayChieu)
         {
             string query = "Insert into LICH_CHIEU values " +
                 $"('{MaPhim}','{MaPhongChieu}','{MaKhungGioChieu}','{NgayChieu.Year}-{NgayChieu.Month}-{NgayChieu.Day}','{TrangThai}')";
             DBHelper.Instance.ExcuteQuery(query);
         }
-        public void CapNhatLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, bool TrangThai, DateTime NgayChieu)
+        public void CapNhatLichChieu(LichChieuDTO lichChieu)
         {
-            string query = "Update LICH_CHIEU values " +
-                $"('{MaPhim}','{MaPhongChieu}','{MaKhungGioChieu}','{NgayChieu.Year}-{NgayChieu.Month}-{NgayChieu.Day}','{TrangThai}')";
-            DBHelper.Instance.ExcuteQuery(query);
+            string query = "EXEC CapNhatLichChieu @MaPhim , @MaPhongChieu , @MaKhungGio , @NgayChieu , @TrangThai ";
+            object[] parameter = new object[]
+            {
+                lichChieu.MaPhim,lichChieu.MaPhongChieu, 
+                lichChieu.MaKhungGioChieu, lichChieu.NgayChieu , lichChieu.TrangThai
+            };
+            DBHelper.Instance.ExcuteNonQuery(query, parameter);
         }
     }
 }

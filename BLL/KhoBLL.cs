@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DAL;
-using DTO;
 
 namespace BLL
 {
@@ -166,15 +164,6 @@ namespace BLL
                 }
             return data;
         }
-        //public List<KhoView> TimTheoTenLoaiKho(string tenLoaiKho)
-        //{
-        //    List<KhoView> data = new List<KhoView>();
-        //    foreach (LoaiKhoDTO i in KhoDAL.Instance.TimTheoTenLoai(tenLoaiKho))
-        //    {
-        //        data.Add(GetKhoViewByKhoDTO(i));
-        //    }
-        //    return data;
-        //}
         public List<KhoView> TimTheoTenKho(string tenKho)
         {
             List<KhoView> data = new List<KhoView>();

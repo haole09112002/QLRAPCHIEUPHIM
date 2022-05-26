@@ -82,6 +82,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaLamViecBLL.cs" />
+    <Compile Include="ChiTietPhieuThucAnBLL.cs" />
+    <Compile Include="ChiTietPhieuVatTuBLL.cs" />
     <Compile Include="LichLamViecBLL.cs" />
     <Compile Include="ChiTietDeXuatThucAnBLL.cs" />
     <Compile Include="ChiTietDeXuatVatTuBLL.cs" />
@@ -109,6 +111,7 @@
     <Compile Include="LichChieuBLL.cs" />
     <Compile Include="LoaiKhoBLL.cs" />
     <Compile Include="LoaiNhaCungCapBLL.cs" />
+    <Compile Include="LoaiPhieuBLL.cs" />
     <Compile Include="LoaiPhongChieuBLL.cs" />
     <Compile Include="NhaCungCapBLL.cs" />
     <Compile Include="NhanVienBLL.cs" />

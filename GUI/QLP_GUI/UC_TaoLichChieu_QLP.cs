@@ -67,7 +67,7 @@ namespace GUI.QLP_GUI
                 string KiemTra = LichChieuBLL.Instance.KiemTraLichChieu(txtMaPhim.Text, txtMaKhungGioChieu.Text, txtMaPhongChieu.Text, dTPNgayChieu.Value);
                 if (KiemTra == "")
                 {
-                    LichChieuBLL.Instance.LuuLichChieu(txtMaPhim.Text, txtMaKhungGioChieu.Text, txtMaPhongChieu.Text, false, dTPNgayChieu.Value);
+                    LichChieuBLL.Instance.LuuLichChieu(txtMaPhim.Text, txtMaKhungGioChieu.Text, txtMaPhongChieu.Text,"1", dTPNgayChieu.Value);
                     MessageBox.Show("Lưu thành công");
                 }
                 else

@@ -90,17 +90,6 @@ namespace DAL
             };
             DBHelper.Instance.ExcuteNonQuery(query, parameter);
         }
-        public static void XoaNhanVien(string maNhanVien)
-        {
-            SqlCommand command = new SqlCommand("XoaNhanVien");
-            command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.Add("@MaNhanVien", SqlDbType.VarChar, 6);
-            command.Parameters["@MaNhanVien"].Value = maNhanVien;
-            command.ExecuteNonQuery();
-            //string query = "Delete from NHAN_VIEN where MaNhanVien = '" + maNhanVien + "' and MaChucVu = '" + maChucVu +
-            //    "' and MaChinhSach = '" + maChinhSach + "'";
-            //DBHelper.Instance.ExcuteQuery(query);
-        }
         public object KiemTraTenTK(NhanVienDTO nhanVien)
         {
             string query =String.Format("select  count(NHAN_VIEN.TenTaiKhoan) from NHAN_VIEN where TenTaiKhoan = '{0}'",nhanVien.TenTaiKhoan);
