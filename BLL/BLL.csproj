@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaLamViecBLL.cs" />
+    <Compile Include="ChiTietKhoPhimBLL.cs" />
     <Compile Include="ChiTietPhieuThucAnBLL.cs" />
     <Compile Include="ChiTietPhieuVatTuBLL.cs" />
     <Compile Include="LichLamViecBLL.cs" />
