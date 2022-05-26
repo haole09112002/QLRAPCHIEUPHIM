@@ -14,32 +14,9 @@ namespace GUI.AD_GUI
 {
     public partial class UC_LichChieu_AD : UserControl
     {
-        //public UC_LichChieu_AD()
-        //{
-        //    InitializeComponent();
-        //    SetGUI();
-        //}
-        //public void SetGUI()
-        //{
-        //    loadDGVLichChieu();
-        //}
-        //public void loadDGVLichChieu()
-        //{
-        //    dgvLichChieuDK.DataSource = LichChieuBLL.Instance.GetAllLichChieuView();
-        //    dgvLichChieuDK.Columns["TenPhim"].Visible = false;
-        //    dgvLichChieuDK.Columns["MaPhongChieu"].Visible = false;
-        //    dgvLichChieuDK.Columns["MaKhungGioChieu"].Visible = false;
-        //    dgvLichChieuDK.Columns["MaPhim"].HeaderText = "Mã Phim";
-        //    dgvLichChieuDK.Columns["TenPhongChieu"].HeaderText = "Tên Phòng Chiếu";
-        //    dgvLichChieuDK.Columns["TenKhungGio"].HeaderText = "Tên Khung Giờ";
-        //    dgvLichChieuDK.Columns["GioBatDau"].HeaderText = "Giờ Bắt Đầu";
-        //    dgvLichChieuDK.Columns["GioKetThuc"].HeaderText = "Giờ Kết Thúc";
-        //    dgvLichChieuDK.Columns["NgayChieu"].HeaderText = "Ngày Chiếu";
-        //}
-        public delegate void MyDel(Control c);
-        public MyDel d;
         DataTable dtDanhSachLichChieuDuKien = new DataTable();
         DataTable dtDanhSachLichChieuChinhThuc = new DataTable();
+        LichChieuDTO lichChieu =new LichChieuDTO();
         public UC_LichChieu_AD()
         {
             InitializeComponent();
@@ -96,12 +73,79 @@ namespace GUI.AD_GUI
         }
         private void btnDongY_Click(object sender, EventArgs e)
         {
-            
+            if (dgvLichChieuDK.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Mời chọn phim");
+            }
+            else
+            {
+                string MaPhim = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phim"].Value.ToString();
+                string MaKhungGioChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Khung Giờ Chiếu"].Value.ToString();
+                string MaPhongChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phòng Chiếu"].Value.ToString();
+                DateTime NgayChieu = Convert.ToDateTime(dgvLichChieuDK.SelectedRows[0].Cells["Ngày Chiếu"].Value);
+                lichChieu = new LichChieuDTO
+                {
+                    MaPhim = MaPhim,
+                    MaKhungGioChieu = MaKhungGioChieu,
+                    MaPhongChieu = MaPhongChieu,
+                    NgayChieu = NgayChieu
+                };
+                {
+                    foreach (DataGridViewRow i in dgvLichChieuDK.SelectedRows)
+                    {
+                        if (LichChieuBLL.Instance.KTLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, NgayChieu) == "")
+                        {
+                            LichChieuBLL.Instance.CapNhatLichChieu(lichChieu,"2");
+                            ReloadDK();
+                            ReloadCT();
+                        }
+                        else
+                        {
+                            MessageBox.Show(LichChieuBLL.Instance.KTLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, NgayChieu));
+                        }
+                    }
+                }
+            }
         }
-        private void btnTimKiem_Click(object sender, EventArgs e)
+        private void btnTimKiemDK_Click(object sender, EventArgs e)
         {
-            ReloadDK(txtTimKiem.Text, cbbTimKiem.SelectedItem.ToString());
-            ReloadCT(txtTimKiem.Text, cbbTimKiem.SelectedItem.ToString());
+            ReloadDK(txtTimKiemDK.Text, cbbTimKiemDK.SelectedItem.ToString());
+        }
+        private void btnTimKiemCT_Click(object sender, EventArgs e)
+        {
+            ReloadCT(txtTimKiemCT.Text, cbbTimKiemCT.SelectedItem.ToString());
+        }
+        private void btnKhongDongY_Click(object sender, EventArgs e)
+        {
+            if (dgvLichChieuDK.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Mời chọn phim");
+            }
+            else
+            {
+                string MaPhim = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phim"].Value.ToString();
+                string MaKhungGioChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Khung Giờ Chiếu"].Value.ToString();
+                string MaPhongChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phòng Chiếu"].Value.ToString();
+                DateTime NgayChieu = Convert.ToDateTime(dgvLichChieuDK.SelectedRows[0].Cells["Ngày Chiếu"].Value);
+                lichChieu = new LichChieuDTO
+                {
+                    MaPhim = MaPhim,
+                    MaKhungGioChieu = MaKhungGioChieu,
+                    MaPhongChieu = MaPhongChieu,
+                    NgayChieu = NgayChieu
+                };
+                {
+                    foreach (DataGridViewRow i in dgvLichChieuDK.SelectedRows)
+                    {
+                        if (LichChieuBLL.Instance.KTLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, NgayChieu) == "")
+                        {
+                            LichChieuBLL.Instance.CapNhatLichChieu(lichChieu, "0");
+                            ReloadDK();
+                            ReloadCT();
+                        }
+                    }
+                }
+            }
         }
     }
 }
