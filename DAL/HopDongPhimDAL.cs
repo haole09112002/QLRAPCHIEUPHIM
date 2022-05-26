@@ -87,5 +87,19 @@ namespace DAL
             string query = string.Format("select hd.NgayBatDauBanQuyen, hd.NgayKetThucBanQuyen, hd.SoLuong, hd.GiaTien from HOP_DONG_PHIM hd where hd.MaPhim = '{0}' and hd.MaHopDong = '{1}' and hd.PhienBan!= '0' order by hd.PhienBan asc", maPhim, maHopDong);
             return DBHelper.Instance.ExcuteQuery(query);
         }
+        public List<TongSoLuongPhimDTO> GetTongSoLuongCuaTungPhim()
+        {
+            List<TongSoLuongPhimDTO> data = new List<TongSoLuongPhimDTO>();
+            string query = "select MaPhim,SUM(Soluong) as 'TongSoLuong' from HOP_DONG_PHIM Group By MaPhim ";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                data.Add(new TongSoLuongPhimDTO
+                {
+                    MaPhim = i["MaPhim"].ToString(),
+                    TongSoLuongPhim = Convert.ToInt32(i["TongSoLuong"].ToString())
+                });
+            }
+            return data;
+        }
     }
 }

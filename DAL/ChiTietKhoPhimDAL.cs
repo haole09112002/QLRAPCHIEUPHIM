@@ -48,5 +48,32 @@ namespace DAL
                 SoLuongSP = Convert.ToInt32(i["SoLuongSP"]),
             };
         }
+        public void LuuChiTietKhoPhim(string MaKho, string MaPhim, string DonViTinh, int SoLuongSP)
+        {
+            string query = "insert into CHI_TIET_KHO_PHIM values" +
+                $"('{MaKho}','{MaPhim}','{DonViTinh}',{SoLuongSP})";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
+        public void CapNhatChiTietKhoPhim(string MaKho, string MaPhim, int SoLuongSP, string DonViTinh)
+        {
+            string query = "update CHI_TIET_KHO_PHIM set " +
+                $"SoLuongSP = {SoLuongSP}, DonViTinh = '{DonViTinh}'" +
+                $"where MaKho = '{MaKho}' and MaPhim = '{MaPhim}'";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
+        public List<TongSoLuongPhimDTO> GetTongSoLuongCuaTungPhim()
+        {
+            List<TongSoLuongPhimDTO> data = new List<TongSoLuongPhimDTO>();
+            string query = "select MaPhim,SUM(SoluongSP) as 'TongSoLuong' from CHI_TIET_KHO_PHIM Group By MaPhim ";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                data.Add(new TongSoLuongPhimDTO
+                {
+                    MaPhim = i["MaPhim"].ToString(),
+                    TongSoLuongPhim = Convert.ToInt32(i["TongSoLuong"].ToString())
+                });
+            }
+            return data;
+        }
     }
 }

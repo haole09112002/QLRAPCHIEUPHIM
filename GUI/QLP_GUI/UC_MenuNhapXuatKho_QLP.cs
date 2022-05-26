@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,13 +15,16 @@ namespace GUI.QLP_GUI
     {
         public delegate void MyDel(Control c);
         public MyDel d;
-        public UC_MenuNhapXuatKho_QLP()
+        NhanVienDTO nhanvien = new NhanVienDTO();
+        UC_TaoPhieu_QLP ucTP;
+        UC_PhieuNhapXuat_QLP ucLS = new UC_PhieuNhapXuat_QLP();
+        public UC_MenuNhapXuatKho_QLP(NhanVienDTO nhanvien)
         {
+            this.nhanvien = nhanvien; 
             InitializeComponent();
             changeColorButton(btnTaoPhieu);
+            ucTP = new UC_TaoPhieu_QLP(nhanvien);
         }
-        UC_TaoPhieu_QLP ucTP = new UC_TaoPhieu_QLP();
-        UC_PhieuNhapXuat_QLP ucLS = new UC_PhieuNhapXuat_QLP();
         public void changeColorButton(Button btn)
         {
             btn.BackColor = Color.FromArgb(0, 144, 153);

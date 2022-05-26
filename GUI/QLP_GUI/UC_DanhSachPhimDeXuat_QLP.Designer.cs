@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cBTimKiem = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dGVDanhSachPhieuDeXuat = new System.Windows.Forms.DataGridView();
             this.gBDeXuatPhim = new System.Windows.Forms.GroupBox();
@@ -36,10 +37,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.btnSapXep = new System.Windows.Forms.Button();
             this.cBSapXep = new System.Windows.Forms.ComboBox();
-            this.btnChinhSua = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cBTimKiem = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhieuDeXuat)).BeginInit();
@@ -56,7 +56,7 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.btnSapXep);
             this.panel1.Controls.Add(this.cBSapXep);
-            this.panel1.Controls.Add(this.btnChinhSua);
+            this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(18, 15);
@@ -64,6 +64,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1296, 734);
             this.panel1.TabIndex = 1;
+            // 
+            // cBTimKiem
+            // 
+            this.cBTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBTimKiem.FormattingEnabled = true;
+            this.cBTimKiem.Items.AddRange(new object[] {
+            "Tên Nhân Viên",
+            "Ngày Đề Xuất"});
+            this.cBTimKiem.Location = new System.Drawing.Point(441, 64);
+            this.cBTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBTimKiem.Name = "cBTimKiem";
+            this.cBTimKiem.Size = new System.Drawing.Size(169, 31);
+            this.cBTimKiem.TabIndex = 51;
             // 
             // groupBox1
             // 
@@ -143,13 +157,14 @@
             this.btnSapXep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSapXep.Image = global::GUI.Properties.Resources.Sort;
             this.btnSapXep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSapXep.Location = new System.Drawing.Point(830, 56);
+            this.btnSapXep.Location = new System.Drawing.Point(830, 62);
             this.btnSapXep.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSapXep.Name = "btnSapXep";
             this.btnSapXep.Size = new System.Drawing.Size(138, 48);
             this.btnSapXep.TabIndex = 47;
             this.btnSapXep.Text = "    SẮP XẾP";
             this.btnSapXep.UseVisualStyleBackColor = false;
+            this.btnSapXep.Click += new System.EventHandler(this.btnSapXep_Click);
             // 
             // cBSapXep
             // 
@@ -165,23 +180,23 @@
             this.cBSapXep.Size = new System.Drawing.Size(298, 31);
             this.cBSapXep.TabIndex = 46;
             // 
-            // btnChinhSua
+            // btnTimKiem
             // 
-            this.btnChinhSua.BackColor = System.Drawing.Color.Cyan;
-            this.btnChinhSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChinhSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChinhSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChinhSua.Image = global::GUI.Properties.Resources.SearchIcon;
-            this.btnChinhSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChinhSua.Location = new System.Drawing.Point(42, 54);
-            this.btnChinhSua.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnChinhSua.Name = "btnChinhSua";
-            this.btnChinhSua.Size = new System.Drawing.Size(138, 45);
-            this.btnChinhSua.TabIndex = 45;
-            this.btnChinhSua.Text = "TÌM KIẾM";
-            this.btnChinhSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChinhSua.UseVisualStyleBackColor = false;
-            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
+            this.btnTimKiem.BackColor = System.Drawing.Color.Cyan;
+            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.Location = new System.Drawing.Point(42, 54);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(138, 45);
+            this.btnTimKiem.TabIndex = 45;
+            this.btnTimKiem.Text = "TÌM KIẾM";
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -203,20 +218,6 @@
             this.label1.TabIndex = 43;
             this.label1.Text = "DANH SÁCH PHIM ĐỀ XUẤT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cBTimKiem
-            // 
-            this.cBTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cBTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBTimKiem.FormattingEnabled = true;
-            this.cBTimKiem.Items.AddRange(new object[] {
-            "Tên Nhân Viên",
-            "Ngày Đề Xuất"});
-            this.cBTimKiem.Location = new System.Drawing.Point(441, 64);
-            this.cBTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cBTimKiem.Name = "cBTimKiem";
-            this.cBTimKiem.Size = new System.Drawing.Size(169, 31);
-            this.cBTimKiem.TabIndex = 51;
             // 
             // UC_DanhSachPhimDeXuat_QLP
             // 
@@ -242,7 +243,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSapXep;
         private System.Windows.Forms.ComboBox cBSapXep;
-        private System.Windows.Forms.Button btnChinhSua;
+        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dGVChiTietPhieuDeXuat;

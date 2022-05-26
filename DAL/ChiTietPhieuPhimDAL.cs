@@ -48,5 +48,11 @@ namespace DAL
                 SoLuong = Convert.ToInt32(i["SoLuong"]),
             };
         }
+        public void LuuChiTietPhieuPhim(string MaPhieu, string MaPhim, string DonViTinh, int SoLuong)
+        {
+            string query = "insert into CHI_TIET_PHIEU_PHIM values " +
+                $"('{MaPhieu}','{MaPhim}','{DonViTinh}',{SoLuong})";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
     }
 }
