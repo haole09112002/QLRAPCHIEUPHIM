@@ -83,9 +83,62 @@ namespace GUI.QLP_GUI
             }    
         }
 
-        private void btnChinhSua_Click(object sender, EventArgs e)
+        private void btnTimKiem_Click(object sender, EventArgs e)
         {
+            string TimKiem = txtTimKiem.Text, LoaiTimKiem = "";
+            if (cBTimKiem.SelectedIndex >= 0)
+            {
+                LoaiTimKiem = cBTimKiem.SelectedItem.ToString();
+            }
+            List<string> MaDeXuat = new List<string>();
 
+            if (cBTimKiem.SelectedIndex >= 0)
+            {
+                LoaiTimKiem = cBTimKiem.SelectedItem.ToString();
+            }
+            foreach (string i in ChiTietDeXuatPhimBLL.Instance.GetListMaDeXuat())
+            {
+                MaDeXuat.Add(i);
+            }
+            dtDSPhieuDeXuat.Rows.Clear();
+            foreach (DeXuatDTO dexuat in DeXuatBLL.Instance.GetListDeXuatNow(MaDeXuat,TimKiem,LoaiTimKiem))
+            {
+                dtDSPhieuDeXuat.Rows.Add(dexuat.MaDeXuat,NhanVienBLL.Instance.GetNhanVienByMaNhanVien(dexuat.MaNhanVien).TenNhanVien,dexuat.NgayDeXuat.ToShortDateString());
+            }
+            dGVDanhSachPhieuDeXuat.DataSource = dtDSPhieuDeXuat;
+            //dGVDanhSachPhieuDeXuat.Columns["Mã Đề Xuất"].Visible = false;
+        }
+
+        private void btnSapXep_Click(object sender, EventArgs e)
+        {
+            List<string> MaDeXuat = new List<string>();
+            string TimKiem = txtTimKiem.Text;
+            string LoaiTimKiem = "Tên Nhân Viên";
+            if (cBTimKiem.SelectedIndex >= 0)
+            {
+                LoaiTimKiem = cBTimKiem.SelectedItem.ToString();
+            }
+            foreach (string i in ChiTietDeXuatPhimBLL.Instance.GetListMaDeXuat())
+            {
+                MaDeXuat.Add(i);
+            }
+            dtDSPhieuDeXuat.Rows.Clear();
+            if (cBSapXep.SelectedItem.ToString() == "Tên Nhân Viên")
+            {
+                foreach (DeXuatDTO dexuat in DeXuatBLL.Instance.SortDeXuat(DeXuatBLL.Instance.CompareTenNhanVien, MaDeXuat, TimKiem, LoaiTimKiem))
+                {
+                    dtDSPhieuDeXuat.Rows.Add(dexuat.MaDeXuat, NhanVienBLL.Instance.GetNhanVienByMaNhanVien(dexuat.MaNhanVien).TenNhanVien, dexuat.NgayDeXuat.ToShortDateString());
+                }
+            }
+            if (cBSapXep.SelectedItem.ToString() == "Ngày Đề Xuất")
+            {
+                foreach (DeXuatDTO dexuat in DeXuatBLL.Instance.SortDeXuat(DeXuatBLL.Instance.CompareNgayDeXuat, MaDeXuat, TimKiem, LoaiTimKiem))
+                {
+                    dtDSPhieuDeXuat.Rows.Add(dexuat.MaDeXuat, NhanVienBLL.Instance.GetNhanVienByMaNhanVien(dexuat.MaNhanVien).TenNhanVien, dexuat.NgayDeXuat.ToShortDateString());
+                }
+            }
+            dGVDanhSachPhieuDeXuat.DataSource = dtDSPhieuDeXuat;
+            //dGVDanhSachPhieuDeXuat.Columns["Mã Đề Xuất"].Visible = false;
         }
     }
 }

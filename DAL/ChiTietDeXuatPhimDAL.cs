@@ -27,7 +27,7 @@ namespace DAL
         {
 
         }
-        public List<ChiTietDeXuatPhimDTO> GetllDeXuatPhim()
+        public List<ChiTietDeXuatPhimDTO> GetAllDeXuatPhim()
         {
             List <ChiTietDeXuatPhimDTO > data = new List<ChiTietDeXuatPhimDTO> ();
            string query = "Select * from CHI_TIET_DE_XUAT_PHIM";

@@ -155,7 +155,7 @@ namespace BLL
         public List<CBBItem> GetCBBPhimDeXuat()
         {
             List<CBBItem> data = new List<CBBItem>();
-            foreach (ChiTietDeXuatPhimDTO i in ChiTietDeXuatPhimDAL.Instance.GetllDeXuatPhim())
+            foreach (ChiTietDeXuatPhimDTO i in ChiTietDeXuatPhimDAL.Instance.GetAllDeXuatPhim())
             {
                 foreach (CBBItem j in PhimBLL.Instance.GetCBBPhim())
                 {
@@ -206,7 +206,7 @@ namespace BLL
                         data.Add(GetDeXuatByMaDeXuat(i));
                 }
             }
-            if (LoaiTimKiem == "Ngày Lập Phiếu")
+            if (LoaiTimKiem == "Ngày Đề Xuất")
             {
                 foreach (string i in MaDeXuat)
                 {
@@ -231,6 +231,14 @@ namespace BLL
                     }
                 }
             return data;
+        }
+        public bool CompareTenNhanVien(object o1, object o2)
+        {
+            return String.Compare(NhanVienBLL.Instance.GetNhanVienByMaNhanVien(((DeXuatDTO)o1).MaNhanVien).TenNhanVien, NhanVienBLL.Instance.GetNhanVienByMaNhanVien(((DeXuatDTO)o2).MaNhanVien).TenNhanVien) > 0;
+        }
+        public bool CompareNgayDeXuat(object o1, object o2)
+        {
+            return DateTime.Compare(((DeXuatDTO)o1).NgayDeXuat, ((DeXuatDTO)o2).NgayDeXuat) > 0;
         }
     }
 }

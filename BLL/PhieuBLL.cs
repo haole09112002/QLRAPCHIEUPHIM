@@ -36,6 +36,11 @@ namespace BLL
         public List<PhieuDTO> GetListPhieuByLoaiPhieu(string MaLoaiPhieu)
         {
             List<PhieuDTO> data = new List<PhieuDTO>();
+            if (MaLoaiPhieu == "") 
+            {
+                data = PhieuDAL.Instance.GetAllPhieu();
+            }
+            else
             foreach(PhieuDTO i in PhieuDAL.Instance.GetAllPhieu())
             {
                 if(i.MaLoaiPhieu == MaLoaiPhieu)
@@ -52,6 +57,7 @@ namespace BLL
                 if (i.MaPhieu == MaPhieu)
                 {
                     return i;
+
                 }
             }
             return null;
@@ -100,6 +106,14 @@ namespace BLL
         public bool CompareNgayLapPhieu(object o1, object o2)
         {
             return DateTime.Compare(((PhieuDTO)o1).NgayLapPhieu, ((PhieuDTO)o2).NgayLapPhieu) > 0;
+        }
+        public void LuuPhieu(string MaLoaiPhieu,string MaKho,string MaNhanVien,DateTime NgayLapPhieu)
+        {
+            PhieuDAL.Instance.LuuPhieu(MaLoaiPhieu,MaKho,MaNhanVien,NgayLapPhieu);
+        }
+        public string GetMaPhieuAddNew()
+        {
+            return PhieuDAL.Instance.GetMaPhieuAddNew();
         }
     }
 }

@@ -1053,14 +1053,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{1ca149db-4213-4f61-a64e-9352059ea6aa}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eye_26px.png" />
@@ -1073,6 +1066,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image_file_add_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{1ca149db-4213-4f61-a64e-9352059ea6aa}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

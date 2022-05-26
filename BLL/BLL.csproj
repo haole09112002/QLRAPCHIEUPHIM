@@ -82,6 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaLamViecBLL.cs" />
+    <Compile Include="ChiTietKhoPhimBLL.cs" />
+    <Compile Include="ChiTietPhieuThucAnBLL.cs" />
+    <Compile Include="ChiTietPhieuVatTuBLL.cs" />
     <Compile Include="LichLamViecBLL.cs" />
     <Compile Include="ChiTietDeXuatThucAnBLL.cs" />
     <Compile Include="ChiTietDeXuatVatTuBLL.cs" />
@@ -109,6 +112,7 @@
     <Compile Include="LichChieuBLL.cs" />
     <Compile Include="LoaiKhoBLL.cs" />
     <Compile Include="LoaiNhaCungCapBLL.cs" />
+    <Compile Include="LoaiPhieuBLL.cs" />
     <Compile Include="LoaiPhongChieuBLL.cs" />
     <Compile Include="NhaCungCapBLL.cs" />
     <Compile Include="NhanVienBLL.cs" />
@@ -126,6 +130,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{58c109a1-adce-4998-9f06-f750c4a61a0c}</Project>
       <Name>DAL</Name>
@@ -134,10 +142,6 @@
       <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
       <Name>DTO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
