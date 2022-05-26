@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using BLL;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
 
 namespace GUI.QLVT_GUI
 {
@@ -16,12 +10,16 @@ namespace GUI.QLVT_GUI
         public UCThongTinSanPhamQLVT()
         {
             InitializeComponent();
-            ReloadListThucAn();
-            ReloadListVatTu();
             SetGUI();
         }
         public void SetGUI()
         {
+            ReloadListThucAn();
+            ReloadListVatTu();
+            txtTimKiem.Text = "Nhập Tên Thức Ăn";
+            txtTimKiem.ForeColor = Color.DimGray;
+            txtTimKiemVatTu.ForeColor = Color.DimGray;
+            txtTimKiemVatTu.Text = "Nhập Tên Vật Tư";
             dgvListVatTu.Columns["MaVatTu"].HeaderText = "Mã Vật Tư";
             dgvListVatTu.Columns["TenKho"].HeaderText = "Tên Kho";
             dgvListVatTu.Columns["TenVatTu"].HeaderText = "Tên Vật Tư";

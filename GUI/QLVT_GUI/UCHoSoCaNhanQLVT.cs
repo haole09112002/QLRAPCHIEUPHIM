@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿
 using BLL;
 using DTO;
+using System;
+using System.Data;
+using System.Drawing;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace GUI.QLVT_GUI
 {
@@ -25,8 +22,6 @@ namespace GUI.QLVT_GUI
         }
         public void Reload()
         {
-            txtTen.Text = nhanVien.TenNhanVien;
-            dtpNgaySinh.Value = nhanVien.NgaySinh;
             if (nhanVien.GioiTinh == false)
             {
                 rbNam.Checked = true;
@@ -35,6 +30,8 @@ namespace GUI.QLVT_GUI
             {
                 rbNu.Checked = true;
             }
+            txtTen.Text = nhanVien.TenNhanVien;
+            dtpNgaySinh.Value = nhanVien.NgaySinh;
             txtDiaChi.Text = nhanVien.DiaChi;
             txtDienThoai.Text = nhanVien.SoDienThoai;
             txtTenTaiKhoan.Text = nhanVien.TenTaiKhoan;
@@ -44,7 +41,11 @@ namespace GUI.QLVT_GUI
             txtDiaChi.BackColor = Color.Gainsboro;
             txtDienThoai.BackColor = Color.Gainsboro;
             txtCCCD.BackColor = Color.Gainsboro;
-
+            lblValidatedCCCD.Visible = false;
+            lblValidatedDienThoai.Visible = false;
+            lblValidatedDiaChi.Visible = false;
+            lblValidatedTen.Visible = false;
+            lblValidatedNgaySinh.Visible = false;
             txtTen.ReadOnly = true;
             dtpNgaySinh.Enabled = false;
             txtDiaChi.ReadOnly = true;
@@ -53,7 +54,12 @@ namespace GUI.QLVT_GUI
             rbNam.Enabled = false;
             rbNu.Enabled = false;
             btnLuu.Enabled = false;
-            foreach (CaLamViecDTO i in LichLamViecBLL.Instance.GetListCaLamViecByMaNhanVien(nhanVien.MaNhanVien))
+            checkEdit = true;
+            LoadListCaLamViec();
+        }
+        public void LoadListCaLamViec()
+        {
+            foreach (CaLamViecDTO i in LichLamViecBLL.Instance.GetListCaLamViecByMaNhanVien(nhanVien.MaNhanVien, dtpNhanVien.Value))
             {
                 dtListCaLam.Rows.Add(i.TenCa, i.GioBatDau.ToShortTimeString(), i.GioKetThuc.ToShortTimeString());
             }
@@ -75,7 +81,7 @@ namespace GUI.QLVT_GUI
         bool checkEdit = true;
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            if(checkEdit == true)
+            if (checkEdit == true)
             {
                 txtTen.BackColor = Color.White;
                 txtDiaChi.BackColor = Color.White;
@@ -108,23 +114,55 @@ namespace GUI.QLVT_GUI
                 checkEdit = true;
             }
         }
+        public bool checkValidate()
+        {
+            bool check = true;
+            // Tên Tiếng anh hoặc tiếng việt đều được
+            if (Regex.IsMatch(txtTen.Text, @"^(\p{L}+\s?)*$") != true)
+            {
+                lblValidatedTen.Visible = true;
+                check = false;
+            }
+            // Địa chỉ nước ngoài hoặc việt nam đều được
+            if (Regex.IsMatch(txtDiaChi.Text, @"^(\p{L}+\s?)*$") != true)
+            {
+                lblValidatedDiaChi.Visible = true;
+                check = false;
+            }
+            // Độ dài là 10 chữ số, Bắt đầu bằng 84 hoặc 0 kế tiếp phải là các đầu số hiện nay bao gồm 3,5,7,8,9 + với 8 số bất kì
+            if (Regex.IsMatch(txtDienThoai.Text, @"(84|0[3|5|7|8|9])+([0-9]{8})\b") != true)
+            {
+                lblValidatedDienThoai.Visible = true;
+                check = false;
+            }
+            //Độ dài là 12 chữ số, bắt đầu bằng số 0
+            if (Regex.IsMatch(txtCCCD.Text, @"(0)+([1-9]{11})\b") != true)
+            {
+                lblValidatedCCCD.Visible = true;
+                check = false;
+            }
+            if (DateTime.Today <= dtpNgaySinh.Value)
+            {
+                lblValidatedNgaySinh.Visible = true;
+                check = false;
+            }
+            return check;
+
+
+        }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Xác nhận lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.OK)
+            if (checkValidate() == true)
             {
-                if (txtTen.Text == "" || txtCCCD.Text == ""|| txtDiaChi.Text == "" || txtDienThoai.Text == "")
-                {
-                    MessageBox.Show("Không Được Để Trống Thông Tin, Vui Lòng Nhập Lại!!");
-                }
-                else
+                DialogResult dialogResult = MessageBox.Show("Xác nhận lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.OK)
                 {
                     nhanVien.TenNhanVien = txtTen.Text;
                     nhanVien.CCCD1 = txtCCCD.Text;
                     nhanVien.DiaChi = txtDiaChi.Text;
                     nhanVien.SoDienThoai = txtDienThoai.Text;
-                    if(rbNam.Checked == true)
+                    if (rbNam.Checked == true)
                     {
                         nhanVien.GioiTinh = false;
                     }
@@ -136,22 +174,91 @@ namespace GUI.QLVT_GUI
                     NhanVienBLL.Instance.AddUpdateNhanVien(nhanVien);
                     MessageBox.Show("Cập nhật thành công!");
                     Reload();
+                    btnChinhSua.Enabled = true;
                 }
             }
         }
 
         private void checkSave(object sender, EventArgs e)
         {
+            lblErrorCCCD.Visible = false;
+            lblErrorTen.Visible = false;
+            lblErrorDiaChi.Visible = false;
+            lblErrorDienThoai.Visible = false;
+            btnChinhSua.Enabled = true;
             if (nhanVien.TenNhanVien == txtTen.Text && nhanVien.GioiTinh != rbNam.Checked
                 && nhanVien.NgaySinh.ToShortDateString() == dtpNgaySinh.Value.ToShortDateString()
                 && nhanVien.DiaChi == txtDiaChi.Text && nhanVien.SoDienThoai == txtDienThoai.Text
                 && nhanVien.CCCD1 == txtCCCD.Text)
             {
                 btnLuu.Enabled = false;
+                lblValidatedCCCD.Visible = false;
+                lblValidatedDienThoai.Visible = false;
+                lblValidatedDiaChi.Visible = false;
+                lblValidatedTen.Visible = false;
+                lblValidatedNgaySinh.Visible = false;
+
             }
             else
             {
-                btnLuu.Enabled = true;
+                if (txtTen.Text == "" || txtCCCD.Text == "" || txtDiaChi.Text == "" || txtDienThoai.Text == "")
+                {
+                    if (txtCCCD.Text == "")
+                    {
+                        lblErrorCCCD.Visible = true;
+                    }
+                    if (txtTen.Text == "")
+                    {
+                        lblErrorTen.Visible = true;
+                    }
+                    if (txtDiaChi.Text == "")
+                    {
+                        lblErrorDiaChi.Visible = true;
+                    }
+                    if (txtDienThoai.Text == "")
+                    {
+                        lblErrorDienThoai.Visible = true;
+                    }
+                    btnLuu.Enabled = false;
+                    btnChinhSua.Enabled = false;
+                }
+                else
+                {
+                    lblErrorTen.Visible = false;
+                    lblErrorCCCD.Visible = false;
+                    lblErrorDiaChi.Visible = false;
+                    lblErrorDienThoai.Visible = false;
+                    btnLuu.Enabled = true;
+                    btnChinhSua.Enabled = false;
+                }
+            }
+        }
+        public void CheckEdit()
+        {
+            if (nhanVien.TenNhanVien == txtTen.Text && nhanVien.GioiTinh != rbNam.Checked
+                && nhanVien.NgaySinh.ToShortDateString() == dtpNgaySinh.Value.ToShortDateString()
+                && nhanVien.DiaChi == txtDiaChi.Text && nhanVien.SoDienThoai == txtDienThoai.Text
+                && nhanVien.CCCD1 == txtCCCD.Text)
+            {
+
+            }
+        }
+
+        private void dtpNhanVien_ValueChanged(object sender, EventArgs e)
+        {
+            dtListCaLam.Rows.Clear();
+            LoadListCaLamViec();
+        }
+
+        private void UCHoSoCaNhanQLVT_Leave(object sender, EventArgs e)
+        {
+            if (btnLuu.Enabled == true || checkValidate() == false)
+            {
+                DialogResult dialogResult = MessageBox.Show("Thông tin chưa lưu, có muốn thoát", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.OK)
+                {
+                    Reload();
+                }
             }
         }
     }

@@ -272,6 +272,7 @@ begin
 	Update PHONG_CHIEU set	TenPhong = @TenPhong,	MaTinhTrang = @MaTinhTrang
 	where MaPhongChieu = @MaPhongChieu
 end
+go
 ---CapNhatLichChieu
 create proc CapNhatLichChieu
 	@MaPhim varchar(6), 
@@ -284,3 +285,25 @@ begin
 	Update LICH_CHIEU set	MaPhongChieu = @MaPhongChieu , MaKhungGioChieu=@MaKhungGio , NgayChieu=@NgayChieu ,	TrangThai = @TrangThai
 	where MaPhim = @MaPhim
 end
+--- Them lich lam viec
+go
+create proc ThemLichLamViec
+	@MaNhanVien varchar(6),
+	@MaCa varchar(6),
+	@NgayLamViec date
+as
+begin
+	insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values (@MaNhanVien, @MaCa, @NgayLamViec)
+end
+----- xoa lich lam viec
+go
+create proc XoaLichLamViec
+	@MaNhanVien varchar(6),
+	@MaCa varchar(6),
+	@NgayLamViec date
+as
+begin 
+	DELETE FROM LICH_LAM_VIEC
+	where MaNhanVien = @MaNhanVien and MaCa = @MaCa and NgayLamViec = @NgayLamViec
+end
+go
