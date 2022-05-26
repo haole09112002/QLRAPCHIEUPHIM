@@ -3,6 +3,7 @@ using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
@@ -115,22 +116,22 @@ namespace GUI.QLP_GUI
             }
             return false;
         }
-        public int KiemTraTinhDungDang()
+        public bool KiemTraTinhDungDang()
         {
-            int DemLoi = 0;
-            if (txtTenPhim.Text == "")
+            bool DemLoi = true;
+            if (Regex.IsMatch(txtTenPhim.Text, @"^[a-zA-Z0-9 ]*$") != true || txtTenPhim.Text == "")
             {
-                lbTenPhim.Text = "*Mời nhập tên phim";
-                DemLoi++;
+                lbTenPhim.Text = "*Tên phim không hợp lệ";
+                DemLoi = false;
             }
             else
             {
                 lbTenPhim.Text = "";
             }
-            if (txtThoiLuong.Text == "")
+            if (nUDThoiLuong.Text == "0")
             {
                 lbThoiLuong.Text = "*Mời nhập thời lượng phim";
-                DemLoi++;
+                DemLoi = false;
             }
             else
             {
@@ -139,7 +140,7 @@ namespace GUI.QLP_GUI
             if (nUDDoTuoiXem.Text == "0")
             {
                 lbDoTuoiXem.Text = "*Mời nhập độ tuổi xem";
-                DemLoi++;
+                DemLoi = false;
             }
             else
             {
@@ -148,7 +149,7 @@ namespace GUI.QLP_GUI
             if (cBQuocGia.SelectedIndex < 0)
             {
                 lbQuocGia.Text = "*Mời chọn quốc gia";
-                DemLoi++;
+                DemLoi = false;
             }
             else
             {
@@ -157,7 +158,7 @@ namespace GUI.QLP_GUI
             if (cBHangSanXuatPhim.SelectedIndex < 0)
             {
                 lbHangSanXuat.Text = "*Mời chọn hãng sản xuất phim";
-                DemLoi++;
+                DemLoi = false;
             }
             else
             {
@@ -166,7 +167,7 @@ namespace GUI.QLP_GUI
             if (cBTheLoai.SelectedIndex < 0)
             {
                 lbTheLoai.Text = "*Mời chọn thể loại phim";
-                DemLoi++;
+                DemLoi = false;
             }
             else
             {
@@ -175,7 +176,7 @@ namespace GUI.QLP_GUI
             if (pBAnhPhim.Image == null)
             {
                 lbAnhPhim.Text = "*Mời thêm ảnh phim";
-                DemLoi++;
+                DemLoi = false;
             }
             else
             {
@@ -184,7 +185,7 @@ namespace GUI.QLP_GUI
             if (dGVDienVienChinh.Rows.Count == 0)
             {
                 lbDienVienChinh.Text = "*Mời thêm diễn viên chính";
-                DemLoi++;
+                DemLoi = false;
             }
             else
             {
@@ -193,7 +194,7 @@ namespace GUI.QLP_GUI
             if (dGVDienVienPhu.Rows.Count == 0)
             {
                 lbDienVienPhu.Text = "*Mời thêm diễn viên phụ";
-                DemLoi++;
+                DemLoi = false;
             }
             else
             {
@@ -202,7 +203,7 @@ namespace GUI.QLP_GUI
             if (dGVDaoDien.Rows.Count == 0)
             {
                 lbDaoDien.Text = "*Mời thêm đạo diễn";
-                DemLoi++;
+                DemLoi = false;
             }
             else
             {
@@ -224,7 +225,7 @@ namespace GUI.QLP_GUI
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (KiemTraTinhDungDang() == 0)
+            if (KiemTraTinhDungDang() == true)
             {
                 DialogResult dialogResult = MessageBox.Show("Xác nhận Lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.OK)
@@ -251,7 +252,7 @@ namespace GUI.QLP_GUI
                     }
 
                     Phim.TenPhim = txtTenPhim.Text;
-                    Phim.ThoiLuong = Convert.ToInt32(txtThoiLuong.Text);
+                    Phim.ThoiLuong = Convert.ToInt32(nUDThoiLuong.Text);
                     Phim.MaTheLoai = ((CBBItem)cBTheLoai.SelectedItem).Value;
                     Phim.QuocGia = cBQuocGia.SelectedItem.ToString();
                     Phim.MaHangSanXuatPhim = ((CBBItem)cBHangSanXuatPhim.SelectedItem).Value;

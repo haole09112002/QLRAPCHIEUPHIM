@@ -109,6 +109,7 @@ namespace BLL
                     if (i.MaLoaiKho == maLoaiKho && (i.TenKho.Contains(txt) || i.MaKho.Contains(txt)))
                         data.Add(i);
                 }
+            return data;
             }
 
             return data;

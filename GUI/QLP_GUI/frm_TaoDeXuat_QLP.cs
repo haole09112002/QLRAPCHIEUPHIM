@@ -19,7 +19,7 @@ namespace GUI.QLP_GUI
             ReLoad();
             btnChinhSua.Visible = false;
         }
-        public void ReLoad(string TenPhim = "", string LoaiTimKiem = "TenPhim")
+        public void ReLoad(string TenPhim = "", string LoaiTimKiem = "Tên Phim")
         {
             dtDanhSachPhim.Rows.Clear();
             foreach (PhimViewDTO i in PhimBLL.Instance.GetPhimViews(TenPhim,LoaiTimKiem))
@@ -145,6 +145,7 @@ namespace GUI.QLP_GUI
             cBDonViTinh.Text = "";
             btnThem.Visible = true;
             btnChinhSua.Visible = false;
+            dGVDeXuatPhim.Enabled = true;
         }
 
         private void dGVDeXuatPhim_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -163,6 +164,7 @@ namespace GUI.QLP_GUI
             }
             btnThem.Visible = false;
             btnChinhSua.Visible = true;
+            dGVDeXuatPhim.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

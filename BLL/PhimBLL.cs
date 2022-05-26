@@ -34,7 +34,7 @@ namespace BLL
             {
                 string TheLoaiPhim = "";
                 string TenHangSanXuatPhim = "";
-                if (TimKiem == "TenPhim" || TimKiem == "")
+                if (TimKiem == "Tên Phim" || TimKiem == "")
                     if (i.TenPhim.Contains(txt))
                     {
                         foreach (TheLoaiPhimDTO j in TLP.ToArray())
@@ -63,7 +63,7 @@ namespace BLL
                             TheLoai = TheLoaiPhim
                         });
                     }
-                if (TimKiem == "QuocGia")
+                if (TimKiem == "Quốc Gia")
                     if (i.QuocGia.Contains(txt))
                     {
                         foreach (TheLoaiPhimDTO j in TLP.ToArray())
@@ -92,7 +92,7 @@ namespace BLL
                             TheLoai = TheLoaiPhim
                         });
                     }
-                if (TimKiem == "ThoiLuong")
+                if (TimKiem == "Thời Lượng")
                     if (i.ThoiLuong.ToString().Contains(txt))
                     {
                         foreach (TheLoaiPhimDTO j in TLP.ToArray())
@@ -121,8 +121,8 @@ namespace BLL
                             TheLoai = TheLoaiPhim
                         });
                     }
-                if (TimKiem == "NamSanXuat")
-                    if (i.NamSanXuat.Day.ToString().Contains(txt) || i.NamSanXuat.Month.ToString().Contains(txt) || i.NamSanXuat.Year.ToString().Contains(txt))
+                if (TimKiem == "Năm Sản Xuất")
+                    if (i.NamSanXuat.ToShortDateString().Contains(txt))
                     {
                         foreach (TheLoaiPhimDTO j in TLP.ToArray())
                         {
@@ -150,7 +150,7 @@ namespace BLL
                             TheLoai = TheLoaiPhim
                         });
                     }
-                if(TimKiem == "TenHangSanXuatPhim")
+                if(TimKiem == "Tên Hãng Sản Xuất Phim")
                 {
                     foreach(HangSanXuatPhimDTO j in HangSanXuatPhimDAL.Instance.GetAllHangSanXuatPhim())
                     {
@@ -182,7 +182,7 @@ namespace BLL
                         });
                     }
                 }
-                if(TimKiem == "TheLoai")
+                if(TimKiem == "Thể Loại")
                 {
                     foreach (TheLoaiPhimDTO j in TLP.ToArray())
                     {

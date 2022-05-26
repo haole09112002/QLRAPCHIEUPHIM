@@ -212,7 +212,7 @@
             this.dgvDeXuat.Size = new System.Drawing.Size(648, 167);
             this.dgvDeXuat.TabIndex = 14;
             // 
-            // comboBox1
+            // cbbDeXuat
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(551, 438);

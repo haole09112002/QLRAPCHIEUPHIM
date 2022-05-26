@@ -28,112 +28,136 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtMaPhim = new System.Windows.Forms.TextBox();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.cBDonViTinh = new System.Windows.Forms.ComboBox();
+            this.txtTenPhim = new System.Windows.Forms.TextBox();
             this.cBMaKho = new System.Windows.Forms.ComboBox();
-            this.cBMaPhieu = new System.Windows.Forms.ComboBox();
+            this.cBMaLoaiPhieu = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbPhimDaThem = new System.Windows.Forms.Label();
+            this.lbMaKho = new System.Windows.Forms.Label();
+            this.lbLoaiPhieu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.gBPhimDaThem = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dGVPhimDaThem = new System.Windows.Forms.DataGridView();
             this.gBLuaChonPhim = new System.Windows.Forms.GroupBox();
+            this.lbDonViTinh = new System.Windows.Forms.Label();
+            this.lbSoLuong = new System.Windows.Forms.Label();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.txtMaPhim = new System.Windows.Forms.TextBox();
+            this.nUDSoLuong = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.dGVDanhSachPhim = new System.Windows.Forms.DataGridView();
+            this.cBDonViTinh = new System.Windows.Forms.ComboBox();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnChinhSua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.gBPhimDaThem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVPhimDaThem)).BeginInit();
             this.gBLuaChonPhim.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtMaPhim
+            // txtTenPhim
             // 
-            this.txtMaPhim.BackColor = System.Drawing.Color.White;
-            this.txtMaPhim.Location = new System.Drawing.Point(655, 82);
-            this.txtMaPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMaPhim.Name = "txtMaPhim";
-            this.txtMaPhim.Size = new System.Drawing.Size(549, 33);
-            this.txtMaPhim.TabIndex = 5;
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.BackColor = System.Drawing.Color.White;
-            this.txtSoLuong.Location = new System.Drawing.Point(655, 148);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(549, 33);
-            this.txtSoLuong.TabIndex = 6;
-            // 
-            // cBDonViTinh
-            // 
-            this.cBDonViTinh.BackColor = System.Drawing.Color.White;
-            this.cBDonViTinh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cBDonViTinh.FormattingEnabled = true;
-            this.cBDonViTinh.Location = new System.Drawing.Point(655, 208);
-            this.cBDonViTinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cBDonViTinh.Name = "cBDonViTinh";
-            this.cBDonViTinh.Size = new System.Drawing.Size(549, 31);
-            this.cBDonViTinh.TabIndex = 7;
+            this.txtTenPhim.BackColor = System.Drawing.Color.White;
+            this.txtTenPhim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenPhim.Location = new System.Drawing.Point(655, 82);
+            this.txtTenPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTenPhim.Name = "txtTenPhim";
+            this.txtTenPhim.Size = new System.Drawing.Size(549, 33);
+            this.txtTenPhim.TabIndex = 5;
             // 
             // cBMaKho
             // 
             this.cBMaKho.BackColor = System.Drawing.Color.White;
             this.cBMaKho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBMaKho.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.cBMaKho.FormattingEnabled = true;
-            this.cBMaKho.Location = new System.Drawing.Point(902, 75);
+            this.cBMaKho.Location = new System.Drawing.Point(902, 61);
             this.cBMaKho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBMaKho.Name = "cBMaKho";
-            this.cBMaKho.Size = new System.Drawing.Size(342, 28);
+            this.cBMaKho.Size = new System.Drawing.Size(342, 31);
             this.cBMaKho.TabIndex = 8;
             // 
-            // cBMaPhieu
+            // cBMaLoaiPhieu
             // 
-            this.cBMaPhieu.BackColor = System.Drawing.Color.White;
-            this.cBMaPhieu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cBMaPhieu.FormattingEnabled = true;
-            this.cBMaPhieu.Location = new System.Drawing.Point(204, 70);
-            this.cBMaPhieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cBMaPhieu.Name = "cBMaPhieu";
-            this.cBMaPhieu.Size = new System.Drawing.Size(415, 28);
-            this.cBMaPhieu.TabIndex = 9;
+            this.cBMaLoaiPhieu.BackColor = System.Drawing.Color.White;
+            this.cBMaLoaiPhieu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBMaLoaiPhieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.cBMaLoaiPhieu.FormattingEnabled = true;
+            this.cBMaLoaiPhieu.Location = new System.Drawing.Point(205, 58);
+            this.cBMaLoaiPhieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBMaLoaiPhieu.Name = "cBMaLoaiPhieu";
+            this.cBMaLoaiPhieu.Size = new System.Drawing.Size(415, 31);
+            this.cBMaLoaiPhieu.TabIndex = 9;
+            this.cBMaLoaiPhieu.SelectedIndexChanged += new System.EventHandler(this.cBMaLoaiPhieu_SelectedIndexChanged);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnXoa);
+            this.panel1.Controls.Add(this.lbPhimDaThem);
+            this.panel1.Controls.Add(this.lbMaKho);
+            this.panel1.Controls.Add(this.lbLoaiPhieu);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnLuu);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.gBPhimDaThem);
             this.panel1.Controls.Add(this.cBMaKho);
             this.panel1.Controls.Add(this.gBLuaChonPhim);
-            this.panel1.Controls.Add(this.cBMaPhieu);
+            this.panel1.Controls.Add(this.cBMaLoaiPhieu);
             this.panel1.Location = new System.Drawing.Point(29, 19);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 728);
             this.panel1.TabIndex = 12;
             // 
+            // lbPhimDaThem
+            // 
+            this.lbPhimDaThem.AutoSize = true;
+            this.lbPhimDaThem.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhimDaThem.ForeColor = System.Drawing.Color.Red;
+            this.lbPhimDaThem.Location = new System.Drawing.Point(61, 654);
+            this.lbPhimDaThem.Name = "lbPhimDaThem";
+            this.lbPhimDaThem.Size = new System.Drawing.Size(0, 19);
+            this.lbPhimDaThem.TabIndex = 69;
+            // 
+            // lbMaKho
+            // 
+            this.lbMaKho.AutoSize = true;
+            this.lbMaKho.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaKho.ForeColor = System.Drawing.Color.Red;
+            this.lbMaKho.Location = new System.Drawing.Point(898, 94);
+            this.lbMaKho.Name = "lbMaKho";
+            this.lbMaKho.Size = new System.Drawing.Size(0, 19);
+            this.lbMaKho.TabIndex = 68;
+            // 
+            // lbLoaiPhieu
+            // 
+            this.lbLoaiPhieu.AutoSize = true;
+            this.lbLoaiPhieu.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLoaiPhieu.ForeColor = System.Drawing.Color.Red;
+            this.lbLoaiPhieu.Location = new System.Drawing.Point(201, 91);
+            this.lbLoaiPhieu.Name = "lbLoaiPhieu";
+            this.lbLoaiPhieu.Size = new System.Drawing.Size(0, 19);
+            this.lbLoaiPhieu.TabIndex = 67;
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Image = global::GUI.Properties.Resources.NhapXuat;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(52, 69);
+            this.label1.Location = new System.Drawing.Point(35, 58);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 34);
+            this.label1.Size = new System.Drawing.Size(145, 34);
             this.label1.TabIndex = 59;
             this.label1.Text = "Loại Phiếu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -143,7 +167,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Image = global::GUI.Properties.Resources.NhaKho;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(733, 69);
+            this.label3.Location = new System.Drawing.Point(734, 58);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 34);
@@ -151,38 +175,22 @@
             this.label3.Text = "Mã Kho";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // btnLuu
             // 
-            this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::GUI.Properties.Resources.Renew;
-            this.button1.Location = new System.Drawing.Point(138, 655);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 45);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "Làm mới";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.LightGreen;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::GUI.Properties.Resources.save_26px;
-            this.button4.Location = new System.Drawing.Point(1015, 656);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(136, 45);
-            this.button4.TabIndex = 56;
-            this.button4.Text = "   Lưu";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnLuu.BackColor = System.Drawing.Color.LightGreen;
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = global::GUI.Properties.Resources.save_26px;
+            this.btnLuu.Location = new System.Drawing.Point(1112, 677);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(136, 45);
+            this.btnLuu.TabIndex = 56;
+            this.btnLuu.Text = "   Lưu";
+            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // label6
             // 
@@ -198,41 +206,47 @@
             // 
             // gBPhimDaThem
             // 
-            this.gBPhimDaThem.Controls.Add(this.dataGridView1);
+            this.gBPhimDaThem.Controls.Add(this.dGVPhimDaThem);
             this.gBPhimDaThem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.gBPhimDaThem.Location = new System.Drawing.Point(40, 472);
+            this.gBPhimDaThem.Location = new System.Drawing.Point(40, 460);
             this.gBPhimDaThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBPhimDaThem.Name = "gBPhimDaThem";
             this.gBPhimDaThem.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gBPhimDaThem.Size = new System.Drawing.Size(1223, 176);
+            this.gBPhimDaThem.Size = new System.Drawing.Size(1223, 211);
             this.gBPhimDaThem.TabIndex = 15;
             this.gBPhimDaThem.TabStop = false;
             this.gBPhimDaThem.Text = "PHIM ĐÃ THÊM";
             // 
-            // dataGridView1
+            // dGVPhimDaThem
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 31);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1186, 124);
-            this.dataGridView1.TabIndex = 0;
+            this.dGVPhimDaThem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGVPhimDaThem.BackgroundColor = System.Drawing.Color.White;
+            this.dGVPhimDaThem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVPhimDaThem.Location = new System.Drawing.Point(18, 31);
+            this.dGVPhimDaThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dGVPhimDaThem.Name = "dGVPhimDaThem";
+            this.dGVPhimDaThem.ReadOnly = true;
+            this.dGVPhimDaThem.RowHeadersWidth = 62;
+            this.dGVPhimDaThem.RowTemplate.Height = 28;
+            this.dGVPhimDaThem.Size = new System.Drawing.Size(1186, 161);
+            this.dGVPhimDaThem.TabIndex = 0;
+            this.dGVPhimDaThem.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVPhimDaThem_CellDoubleClick);
             // 
             // gBLuaChonPhim
             // 
+            this.gBLuaChonPhim.Controls.Add(this.btnChinhSua);
+            this.gBLuaChonPhim.Controls.Add(this.lbDonViTinh);
+            this.gBLuaChonPhim.Controls.Add(this.lbSoLuong);
+            this.gBLuaChonPhim.Controls.Add(this.btnThem);
+            this.gBLuaChonPhim.Controls.Add(this.txtMaPhim);
+            this.gBLuaChonPhim.Controls.Add(this.nUDSoLuong);
             this.gBLuaChonPhim.Controls.Add(this.label4);
             this.gBLuaChonPhim.Controls.Add(this.label10);
             this.gBLuaChonPhim.Controls.Add(this.label2);
             this.gBLuaChonPhim.Controls.Add(this.label13);
-            this.gBLuaChonPhim.Controls.Add(this.button2);
-            this.gBLuaChonPhim.Controls.Add(this.button3);
             this.gBLuaChonPhim.Controls.Add(this.dGVDanhSachPhim);
             this.gBLuaChonPhim.Controls.Add(this.cBDonViTinh);
-            this.gBLuaChonPhim.Controls.Add(this.txtMaPhim);
-            this.gBLuaChonPhim.Controls.Add(this.txtSoLuong);
+            this.gBLuaChonPhim.Controls.Add(this.txtTenPhim);
             this.gBLuaChonPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.gBLuaChonPhim.Location = new System.Drawing.Point(40, 122);
             this.gBLuaChonPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -242,6 +256,60 @@
             this.gBLuaChonPhim.TabIndex = 14;
             this.gBLuaChonPhim.TabStop = false;
             this.gBLuaChonPhim.Text = "LỰA CHỌN PHIM";
+            // 
+            // lbDonViTinh
+            // 
+            this.lbDonViTinh.AutoSize = true;
+            this.lbDonViTinh.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDonViTinh.ForeColor = System.Drawing.Color.Red;
+            this.lbDonViTinh.Location = new System.Drawing.Point(655, 241);
+            this.lbDonViTinh.Name = "lbDonViTinh";
+            this.lbDonViTinh.Size = new System.Drawing.Size(0, 19);
+            this.lbDonViTinh.TabIndex = 66;
+            // 
+            // lbSoLuong
+            // 
+            this.lbSoLuong.AutoSize = true;
+            this.lbSoLuong.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoLuong.ForeColor = System.Drawing.Color.Red;
+            this.lbSoLuong.Location = new System.Drawing.Point(655, 181);
+            this.lbSoLuong.Name = "lbSoLuong";
+            this.lbSoLuong.Size = new System.Drawing.Size(0, 19);
+            this.lbSoLuong.TabIndex = 65;
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.Silver;
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = global::GUI.Properties.Resources.new_copy_26px;
+            this.btnThem.Location = new System.Drawing.Point(1066, 268);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(138, 45);
+            this.btnThem.TabIndex = 64;
+            this.btnThem.Text = " Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // txtMaPhim
+            // 
+            this.txtMaPhim.BackColor = System.Drawing.Color.White;
+            this.txtMaPhim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaPhim.Location = new System.Drawing.Point(1072, 82);
+            this.txtMaPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaPhim.Name = "txtMaPhim";
+            this.txtMaPhim.Size = new System.Drawing.Size(132, 33);
+            this.txtMaPhim.TabIndex = 63;
+            // 
+            // nUDSoLuong
+            // 
+            this.nUDSoLuong.Location = new System.Drawing.Point(655, 145);
+            this.nUDSoLuong.Name = "nUDSoLuong";
+            this.nUDSoLuong.Size = new System.Drawing.Size(549, 33);
+            this.nUDSoLuong.TabIndex = 62;
             // 
             // label4
             // 
@@ -285,51 +353,19 @@
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Image = global::GUI.Properties.Resources.MaSoThue;
+            this.label13.Image = global::GUI.Properties.Resources.MovieRoom;
             this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label13.Location = new System.Drawing.Point(489, 85);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(149, 34);
             this.label13.TabIndex = 58;
-            this.label13.Text = "Mã phim";
+            this.label13.Text = "Tên Phim";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.RosyBrown;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::GUI.Properties.Resources.Renew;
-            this.button2.Location = new System.Drawing.Point(98, 268);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 45);
-            this.button2.TabIndex = 57;
-            this.button2.Text = "Làm mới";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.LightGreen;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::GUI.Properties.Resources.save_26px;
-            this.button3.Location = new System.Drawing.Point(975, 268);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 45);
-            this.button3.TabIndex = 56;
-            this.button3.Text = "   Lưu";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // dGVDanhSachPhim
             // 
+            this.dGVDanhSachPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVDanhSachPhim.BackgroundColor = System.Drawing.Color.White;
             this.dGVDanhSachPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVDanhSachPhim.Location = new System.Drawing.Point(19, 85);
@@ -337,8 +373,55 @@
             this.dGVDanhSachPhim.Name = "dGVDanhSachPhim";
             this.dGVDanhSachPhim.RowHeadersWidth = 62;
             this.dGVDanhSachPhim.RowTemplate.Height = 28;
-            this.dGVDanhSachPhim.Size = new System.Drawing.Size(443, 150);
+            this.dGVDanhSachPhim.Size = new System.Drawing.Size(443, 228);
             this.dGVDanhSachPhim.TabIndex = 8;
+            this.dGVDanhSachPhim.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDanhSachPhim_CellDoubleClick);
+            // 
+            // cBDonViTinh
+            // 
+            this.cBDonViTinh.BackColor = System.Drawing.Color.White;
+            this.cBDonViTinh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBDonViTinh.FormattingEnabled = true;
+            this.cBDonViTinh.Location = new System.Drawing.Point(655, 208);
+            this.cBDonViTinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBDonViTinh.Name = "cBDonViTinh";
+            this.cBDonViTinh.Size = new System.Drawing.Size(549, 31);
+            this.cBDonViTinh.TabIndex = 7;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = global::GUI.Properties.Resources.trash_can_26px;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(557, 677);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(138, 45);
+            this.btnXoa.TabIndex = 74;
+            this.btnXoa.Text = "   Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnChinhSua
+            // 
+            this.btnChinhSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnChinhSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChinhSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChinhSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhSua.Image = global::GUI.Properties.Resources.Edit;
+            this.btnChinhSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChinhSua.Location = new System.Drawing.Point(1049, 268);
+            this.btnChinhSua.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnChinhSua.Name = "btnChinhSua";
+            this.btnChinhSua.Size = new System.Drawing.Size(155, 45);
+            this.btnChinhSua.TabIndex = 73;
+            this.btnChinhSua.Text = "CHỈNH SỬA";
+            this.btnChinhSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChinhSua.UseVisualStyleBackColor = false;
+            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
             // 
             // UC_TaoPhieu_QLP
             // 
@@ -349,37 +432,46 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_TaoPhieu_QLP";
             this.Size = new System.Drawing.Size(1333, 766);
+            this.Leave += new System.EventHandler(this.UC_TaoPhieu_QLP_Leave);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.gBPhimDaThem.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVPhimDaThem)).EndInit();
             this.gBLuaChonPhim.ResumeLayout(false);
             this.gBLuaChonPhim.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtMaPhim;
-        private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.ComboBox cBDonViTinh;
+        private System.Windows.Forms.TextBox txtTenPhim;
         private System.Windows.Forms.ComboBox cBMaKho;
-        private System.Windows.Forms.ComboBox cBMaPhieu;
+        private System.Windows.Forms.ComboBox cBMaLoaiPhieu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox gBLuaChonPhim;
         private System.Windows.Forms.DataGridView dGVDanhSachPhim;
         private System.Windows.Forms.GroupBox gBPhimDaThem;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGVPhimDaThem;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown nUDSoLuong;
+        private System.Windows.Forms.TextBox txtMaPhim;
+        private System.Windows.Forms.ComboBox cBDonViTinh;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Label lbDonViTinh;
+        private System.Windows.Forms.Label lbSoLuong;
+        private System.Windows.Forms.Label lbMaKho;
+        private System.Windows.Forms.Label lbLoaiPhieu;
+        private System.Windows.Forms.Label lbPhimDaThem;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnChinhSua;
     }
 }
