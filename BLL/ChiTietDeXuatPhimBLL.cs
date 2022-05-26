@@ -1,6 +1,7 @@
 ﻿using DAL;
 using DTO;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BLL
 {
@@ -35,7 +36,7 @@ namespace BLL
         //0: ko chap nhan. //1: đg chờ duyetj, //2 Đã duyệt chờ tạo hóa đơn, //3 đã tạo hóa đơn
         public ChiTietDeXuatPhimDTO GetChiTietDeXuatPhim(string maDeXuat, string maPhim)
         {
-            foreach (ChiTietDeXuatPhimDTO j in ChiTietDeXuatPhimDAL.Instance.GetllDeXuatPhim())
+            foreach (ChiTietDeXuatPhimDTO j in ChiTietDeXuatPhimDAL.Instance.GetAllDeXuatPhim())
             {
                 if (j.MaPhim == maPhim && j.MaDeXuat == maDeXuat)
                 {
@@ -52,7 +53,7 @@ namespace BLL
         public List<ChiTietDeXuatPhimDTO> GetChiTietDXPByMaDeXuat(string MaDeXuat)
         {
             List<ChiTietDeXuatPhimDTO> data = new List<ChiTietDeXuatPhimDTO>();
-            foreach (ChiTietDeXuatPhimDTO j in ChiTietDeXuatPhimDAL.Instance.GetllDeXuatPhim())
+            foreach (ChiTietDeXuatPhimDTO j in ChiTietDeXuatPhimDAL.Instance.GetAllDeXuatPhim())
             {
                 if (j.MaDeXuat == MaDeXuat)
                 {
@@ -60,6 +61,15 @@ namespace BLL
                 }
             }
             return data;
+        }
+        public List<string> GetListMaDeXuat()
+        {
+            List<string> data = new List<string>();
+            foreach(ChiTietDeXuatPhimDTO i in ChiTietDeXuatPhimDAL.Instance.GetAllDeXuatPhim())
+            {
+                data.Add(i.MaDeXuat);
+            }
+            return data.Distinct().ToList();
         }
     }
 }

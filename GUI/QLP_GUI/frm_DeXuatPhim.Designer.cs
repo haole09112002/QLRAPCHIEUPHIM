@@ -73,10 +73,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cBQuocGia = new System.Windows.Forms.ComboBox();
-            this.txtThoiLuong = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
+            this.nUDThoiLuong = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.gBMoTaPhim.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDaoDien)).BeginInit();
@@ -87,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBThemHSX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDThoiLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTenPhim
@@ -403,9 +404,9 @@
             this.gBThongTinPhim.Controls.Add(this.label7);
             this.gBThongTinPhim.Controls.Add(this.label6);
             this.gBThongTinPhim.Controls.Add(this.cBQuocGia);
-            this.gBThongTinPhim.Controls.Add(this.txtThoiLuong);
             this.gBThongTinPhim.Controls.Add(this.label1);
             this.gBThongTinPhim.Controls.Add(this.txtTenPhim);
+            this.gBThongTinPhim.Controls.Add(this.nUDThoiLuong);
             this.gBThongTinPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.gBThongTinPhim.Location = new System.Drawing.Point(19, 71);
             this.gBThongTinPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -497,7 +498,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(549, 99);
+            this.label2.Location = new System.Drawing.Point(522, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 25);
             this.label2.TabIndex = 40;
@@ -808,15 +809,6 @@
             this.cBQuocGia.Size = new System.Drawing.Size(380, 31);
             this.cBQuocGia.TabIndex = 18;
             // 
-            // txtThoiLuong
-            // 
-            this.txtThoiLuong.BackColor = System.Drawing.Color.White;
-            this.txtThoiLuong.Location = new System.Drawing.Point(227, 95);
-            this.txtThoiLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtThoiLuong.Name = "txtThoiLuong";
-            this.txtThoiLuong.Size = new System.Drawing.Size(381, 33);
-            this.txtThoiLuong.TabIndex = 16;
-            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
@@ -852,6 +844,18 @@
             this.lbName.Text = " Thêm Phim";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // nUDThoiLuong
+            // 
+            this.nUDThoiLuong.Location = new System.Drawing.Point(227, 99);
+            this.nUDThoiLuong.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nUDThoiLuong.Name = "nUDThoiLuong";
+            this.nUDThoiLuong.Size = new System.Drawing.Size(381, 33);
+            this.nUDThoiLuong.TabIndex = 72;
+            // 
             // frm_DeXuatPhim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -876,6 +880,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBThemHSX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nUDThoiLuong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -887,7 +892,6 @@
         public System.Windows.Forms.Label lbName;
         private System.Windows.Forms.GroupBox gBThongTinPhim;
         private System.Windows.Forms.ComboBox cBQuocGia;
-        private System.Windows.Forms.TextBox txtThoiLuong;
         private System.Windows.Forms.GroupBox gBMoTaPhim;
         private System.Windows.Forms.RichTextBox rtxtNoiDung;
         private System.Windows.Forms.Panel panel2;
@@ -930,5 +934,6 @@
         private System.Windows.Forms.Label lbDienVienPhu;
         private System.Windows.Forms.Label lbDienVienChinh;
         private System.Windows.Forms.Button btnThemAnh;
+        private System.Windows.Forms.NumericUpDown nUDThoiLuong;
     }
 }

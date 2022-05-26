@@ -101,5 +101,13 @@ namespace BLL
         {
             return DateTime.Compare(((PhieuDTO)o1).NgayLapPhieu, ((PhieuDTO)o2).NgayLapPhieu) > 0;
         }
+        public void LuuPhieu(string MaLoaiPhieu,string MaKho,string MaNhanVien,DateTime NgayLapPhieu)
+        {
+            PhieuDAL.Instance.LuuPhieu(MaLoaiPhieu,MaKho,MaNhanVien,NgayLapPhieu);
+        }
+        public string GetMaPhieuAddNew()
+        {
+            return PhieuDAL.Instance.GetMaPhieuAddNew();
+        }
     }
 }
