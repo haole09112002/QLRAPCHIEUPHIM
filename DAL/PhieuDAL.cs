@@ -49,5 +49,25 @@ namespace DAL
                 NgayLapPhieu = Convert.ToDateTime(i["NgayLapPhieu"].ToString()),
             };
         }
+        public void LuuPhieu(string MaLoaiPhieu, string MaKho, string MaNhanVien, DateTime NgayLapPhieu)
+        {
+            string query = "Insert into PHIEU (MaLoaiPhieu,MaKho,MaNhanVien,NgayLapPhieu) values " +
+                $"('{MaLoaiPhieu}','{MaKho}','{MaNhanVien}','{NgayLapPhieu.Year}-{NgayLapPhieu.Month}-{NgayLapPhieu.Day}')";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
+        public string GetMaPhieuAddNew()
+        {
+            string MaPhieu = "";
+            string query = "Select Max(MaPhieu) from PHIEU";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                MaPhieu = i[0].ToString();
+            }
+            return MaPhieu;
+        }
+        public void LuuChiTietKhoPhim(string MaKho, string MaPhim, string DonViTinh, string SoLuongSP)
+        {
+
+        }
     }
 }

@@ -48,14 +48,6 @@ namespace GUI.QLP_GUI
             dGVDanhSachLichChieuDuKien.Columns["Mã Khung Giờ Chiếu"].Visible = false;
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnChinhSua_Click(object sender, EventArgs e)
-        {
-        }
-
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             Reload(txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());

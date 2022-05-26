@@ -68,12 +68,12 @@
             this.cBTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBTimKiem.FormattingEnabled = true;
             this.cBTimKiem.Items.AddRange(new object[] {
-            "TenPhim",
-            "ThoiLuong",
-            "NamSanXuat",
-            "QuocGia",
-            "TenHangSanXuatPhim",
-            "TheLoai"});
+            "Tên Phim",
+            "Thời Lượng",
+            "Năm Sản Xuất",
+            "Quốc Gia",
+            "Tên Hãng Sản Xuất Phim",
+            "Thể Loại"});
             this.cBTimKiem.Location = new System.Drawing.Point(488, 64);
             this.cBTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBTimKiem.Name = "cBTimKiem";
