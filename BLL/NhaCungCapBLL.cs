@@ -24,7 +24,7 @@ namespace BLL
         {
 
         }
-        public List<NhaCungCapDTO> GetNCCByMaLoaiNCC(string maLoaiNCC, string txt)
+        public List<NhaCungCapDTO> GetNCCByMaLoaiNCC(string maLoaiNCC = "0", string txt = "")
         {
             List<NhaCungCapDTO> data = new List<NhaCungCapDTO>();
             if (maLoaiNCC == "0")

@@ -48,6 +48,18 @@ namespace BLL
         public List<HopDongPhimDTO> GetListHopDongPhimByMaHopDong(string maHopDong)
         {
             List<HopDongPhimDTO> data = new List<HopDongPhimDTO>();
+            foreach (HopDongPhimDTO i in HopDongPhimDAL.Instance.GetAllHopDongPhim("0"))
+            {
+                if (i.MaHopDong == maHopDong)
+                {
+                    data.Add(i);
+                }
+            }
+            return data;
+        }
+        public List<HopDongPhimDTO> GetListHopDongPhimByMaHopDongHao(string maHopDong)
+        {
+            List<HopDongPhimDTO> data = new List<HopDongPhimDTO>();
             foreach (HopDongPhimDTO i in HopDongPhimDAL.Instance.GetAllHopDongPhim())
             {
                 if (i.MaHopDong == maHopDong)
@@ -157,7 +169,7 @@ namespace BLL
         public List<string> GetAllDonViTinh()
         {
             List<string> list = new List<string>();
-            foreach (HopDongPhimDTO i in HopDongPhimDAL.Instance.GetAllHopDongPhim().Distinct())
+            foreach (HopDongPhimDTO i in HopDongPhimDAL.Instance.GetAllHopDongPhim("0").Distinct())
             {
                 list.Add(i.DonViTinh);
             }    
@@ -170,7 +182,7 @@ namespace BLL
         public List<string> GetDanhSachMaPhimCoHopDong()
         {
             List<string> data = new List<string>();
-            foreach(HopDongPhimDTO i in HopDongPhimDAL.Instance.GetAllHopDongPhim())
+            foreach(HopDongPhimDTO i in HopDongPhimDAL.Instance.GetAllHopDongPhim("0"))
             {
                 data.Add(i.MaPhim);
             }
