@@ -14,6 +14,7 @@ namespace GUI.AD_GUI
         public UC_CaLam()
         {
             InitializeComponent();
+            setGUI();
             ReLoad();
         }
         public void ReLoad()
@@ -22,16 +23,26 @@ namespace GUI.AD_GUI
             LoadListNhanVien();
 
         }
-        public void SetDataTable()
+        public void setGUI()
         {
-            dtListLamViec.Columns.Clear();
-            dtListNhanVien.Columns.Clear();
-            cboTimKiemCaLamViec.Items.Clear();
-            cboThemCaLamViec.Items.Clear();
             cboTimKiemCaLamViec.Items.Add(new CBBItem { Text = "Tất Cả", Value = "" });
-            cboTimKiemCaLamViec.SelectedIndex = 0;
             cboTimKiemCaLamViec.Items.AddRange(CaLamViecBLL.Instance.GetCBBCaLamViec().ToArray());
             cboThemCaLamViec.Items.AddRange(CaLamViecBLL.Instance.GetCBBCaLamViec().ToArray());
+            dtListLamViec.Columns.Add("Mã Nhân Viên");
+            dtListLamViec.Columns.Add("Tên Nhân Viên");
+            dtListLamViec.Columns.Add("Tên Ca Làm Việc");
+            dtListLamViec.Columns.Add("Giờ Bắt Đầu");
+            dtListLamViec.Columns.Add("Giờ Kết Thúc");
+            dtListLamViec.Columns.Add("Ngày Làm Việc");
+            dtListNhanVien.Columns.Add("Mã Nhân Viên");
+            dtListNhanVien.Columns.Add("Tên Nhân Viên");
+            cboTimKiemCaLamViec.SelectedIndex = 0;
+            LoadListLamViec();
+        }
+        public void SetDataTable()
+        {
+            //dtListLamViec.Columns.Clear();
+            //dtListNhanVien.Columns.Clear();
             lblNhapTen.Visible = true;
             lblErrorXoa.Visible = true;
             lblErrorChonXoa.Visible = false;
@@ -45,16 +56,6 @@ namespace GUI.AD_GUI
             txtTenNhanVien.Text = "";
             txtMaNhanVien.Text = "";
 
-            dtListLamViec.Columns.Add("Mã Nhân Viên");
-            dtListLamViec.Columns.Add("Tên Nhân Viên");
-            dtListLamViec.Columns.Add("Tên Ca Làm Việc");
-            dtListLamViec.Columns.Add("Giờ Bắt Đầu");
-            dtListLamViec.Columns.Add("Giờ Kết Thúc");
-            dtListLamViec.Columns.Add("Ngày Làm Việc");
-            dtListNhanVien.Columns.Add("Mã Nhân Viên");
-            dtListNhanVien.Columns.Add("Tên Nhân Viên");
-            LoadListLamViec();
-
         }
         public void LoadListLamViec(string txt = "")
         {
@@ -67,7 +68,6 @@ namespace GUI.AD_GUI
                     CaLamViecBLL.Instance.GetCaLamViecByMaCaLamViec(i.MaCa).GioKetThuc.ToShortTimeString(), i.NgayLamViec.ToShortDateString());
             }
             dgvLichLamViec.DataSource = dtListLamViec;
-            //dgvLichLamViec.Columns["MaCa"].Visible = false;
         }
         public void LoadListNhanVien()
         {

@@ -272,6 +272,7 @@ begin
 	Update PHONG_CHIEU set	TenPhong = @TenPhong,	MaTinhTrang = @MaTinhTrang
 	where MaPhongChieu = @MaPhongChieu
 end
+go
 ---CapNhatLichChieu
 create proc CapNhatLichChieu
 	@MaPhim varchar(6), 
