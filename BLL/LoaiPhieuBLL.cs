@@ -21,11 +21,29 @@ namespace BLL
                 }
                 return instance;
             }
-            set { }
+            private set { }
         }
         public List<LoaiPhieuDTO> GetAllLoaiPhieu()
         {
-            return LoaiPhieuDAL.Instance.GetAllLoaiPhieu();
+            List<LoaiPhieuDTO> data = new List<LoaiPhieuDTO>();
+            foreach (LoaiPhieuDTO i in LoaiPhieuDAL.Instance.GetAllLoaiPhieu())
+            {
+                data.Add(i);
+            }
+            return data;
         }
+        public LoaiPhieuDTO GetLoaiPhieuByMaLoaiPhieu(string MaLoaiPhieu)
+        {
+  
+            foreach (LoaiPhieuDTO i in GetAllLoaiPhieu())
+            {
+                if (i.MaLoaiPhieu == MaLoaiPhieu)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+
     }
 }

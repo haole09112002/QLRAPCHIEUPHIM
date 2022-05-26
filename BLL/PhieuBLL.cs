@@ -36,6 +36,11 @@ namespace BLL
         public List<PhieuDTO> GetListPhieuByLoaiPhieu(string MaLoaiPhieu)
         {
             List<PhieuDTO> data = new List<PhieuDTO>();
+            if (MaLoaiPhieu == "") 
+            {
+                data = PhieuDAL.Instance.GetAllPhieu();
+            }
+            else
             foreach(PhieuDTO i in PhieuDAL.Instance.GetAllPhieu())
             {
                 if(i.MaLoaiPhieu == MaLoaiPhieu)
@@ -52,6 +57,7 @@ namespace BLL
                 if (i.MaPhieu == MaPhieu)
                 {
                     return i;
+
                 }
             }
             return null;
