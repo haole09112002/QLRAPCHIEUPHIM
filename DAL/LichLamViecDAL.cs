@@ -47,5 +47,17 @@ namespace DAL
                 NgayLamViec = Convert.ToDateTime(i["NgayLamViec"].ToString()),
             };
         }
+        public void XoaLichLamViec(string maNhanVien, string maCa,DateTime ngayLamViec)
+        {
+            string query = "EXEC XoaLichLamViec @MaNhanVien , @MaCa , @NgayLamViec";
+            object[] parameter = { maNhanVien, maCa, ngayLamViec };
+            DBHelper.Instance.ExcuteNonQuery(query,parameter);
+        }
+        public void ThemLichLamViec(string maNhanVien, string maCa, DateTime ngayLamViec)
+        {
+            string query = "EXEC ThemLichLamViec @MaNhanVien , @MaCa , @NgayLamViec";
+            object[] parameter = { maNhanVien, maCa, ngayLamViec };
+            DBHelper.Instance.ExcuteNonQuery(query, parameter);
+        }
     }
 }

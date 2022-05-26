@@ -22,7 +22,10 @@ namespace GUI.QLVT_GUI
         }
         public void SetGUI()
         {
+            cboSapXep.Items.Clear();
             cboSapXep.Items.AddRange(new string[] { "Tên A->Z", "Tên Z->A" });
+            txtTimKiem.Text = "Nhập từ khóa bất kì";
+            txtTimKiem.ForeColor = Color.DimGray;
             ReLoadListNCCThucAn();
             dgvListNCCThucAn.Columns["MaNhaCungCap"].HeaderText = "Mã nhà cung cấp";
             dgvListNCCThucAn.Columns["TenNhaCungCap"].HeaderText = "Tên nhà cung cấp";

@@ -40,6 +40,8 @@
             this.txtMatKhauCu = new System.Windows.Forms.TextBox();
             this.pnTitleDoiMatKhau = new System.Windows.Forms.Panel();
             this.lblTitleDoiMatKhau = new System.Windows.Forms.Label();
+            this.lblValidatedXacNhanMK = new System.Windows.Forms.Label();
+            this.lblValidatedMatKhauCu = new System.Windows.Forms.Label();
             this.pnDoiMatKhau.SuspendLayout();
             this.pnContentDoiMatKhau.SuspendLayout();
             this.pnTitleDoiMatKhau.SuspendLayout();
@@ -58,6 +60,8 @@
             // 
             // pnContentDoiMatKhau
             // 
+            this.pnContentDoiMatKhau.Controls.Add(this.lblValidatedMatKhauCu);
+            this.pnContentDoiMatKhau.Controls.Add(this.lblValidatedXacNhanMK);
             this.pnContentDoiMatKhau.Controls.Add(this.lblXacNhanMatKhau);
             this.pnContentDoiMatKhau.Controls.Add(this.lblMatKhauMoi);
             this.pnContentDoiMatKhau.Controls.Add(this.lblMatKhauCu);
@@ -66,9 +70,9 @@
             this.pnContentDoiMatKhau.Controls.Add(this.txtXacNhanMatKhau);
             this.pnContentDoiMatKhau.Controls.Add(this.txtMatKhauMoi);
             this.pnContentDoiMatKhau.Controls.Add(this.txtMatKhauCu);
-            this.pnContentDoiMatKhau.Location = new System.Drawing.Point(37, 56);
+            this.pnContentDoiMatKhau.Location = new System.Drawing.Point(11, 62);
             this.pnContentDoiMatKhau.Name = "pnContentDoiMatKhau";
-            this.pnContentDoiMatKhau.Size = new System.Drawing.Size(639, 276);
+            this.pnContentDoiMatKhau.Size = new System.Drawing.Size(687, 270);
             this.pnContentDoiMatKhau.TabIndex = 52;
             // 
             // lblXacNhanMatKhau
@@ -147,7 +151,7 @@
             this.txtXacNhanMatKhau.Location = new System.Drawing.Point(290, 134);
             this.txtXacNhanMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtXacNhanMatKhau.Name = "txtXacNhanMatKhau";
-            this.txtXacNhanMatKhau.Size = new System.Drawing.Size(338, 22);
+            this.txtXacNhanMatKhau.Size = new System.Drawing.Size(364, 22);
             this.txtXacNhanMatKhau.TabIndex = 55;
             this.txtXacNhanMatKhau.UseSystemPasswordChar = true;
             this.txtXacNhanMatKhau.TextChanged += new System.EventHandler(this.txtMatKhauCu_TextChanged);
@@ -158,7 +162,7 @@
             this.txtMatKhauMoi.Location = new System.Drawing.Point(290, 80);
             this.txtMatKhauMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
-            this.txtMatKhauMoi.Size = new System.Drawing.Size(338, 22);
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(364, 22);
             this.txtMatKhauMoi.TabIndex = 54;
             this.txtMatKhauMoi.UseSystemPasswordChar = true;
             this.txtMatKhauMoi.TextChanged += new System.EventHandler(this.txtMatKhauCu_TextChanged);
@@ -169,7 +173,7 @@
             this.txtMatKhauCu.Location = new System.Drawing.Point(290, 26);
             this.txtMatKhauCu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhauCu.Name = "txtMatKhauCu";
-            this.txtMatKhauCu.Size = new System.Drawing.Size(338, 22);
+            this.txtMatKhauCu.Size = new System.Drawing.Size(364, 22);
             this.txtMatKhauCu.TabIndex = 53;
             this.txtMatKhauCu.UseSystemPasswordChar = true;
             this.txtMatKhauCu.TextChanged += new System.EventHandler(this.txtMatKhauCu_TextChanged);
@@ -196,6 +200,32 @@
             this.lblTitleDoiMatKhau.TabIndex = 0;
             this.lblTitleDoiMatKhau.Text = "Đổi Mật Khẩu";
             this.lblTitleDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblValidatedXacNhanMK
+            // 
+            this.lblValidatedXacNhanMK.BackColor = System.Drawing.SystemColors.Control;
+            this.lblValidatedXacNhanMK.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidatedXacNhanMK.ForeColor = System.Drawing.Color.Red;
+            this.lblValidatedXacNhanMK.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValidatedXacNhanMK.Location = new System.Drawing.Point(306, 167);
+            this.lblValidatedXacNhanMK.Name = "lblValidatedXacNhanMK";
+            this.lblValidatedXacNhanMK.Size = new System.Drawing.Size(331, 20);
+            this.lblValidatedXacNhanMK.TabIndex = 61;
+            this.lblValidatedXacNhanMK.Text = "*Mật khẩu xác nhận không trùng khớp";
+            this.lblValidatedXacNhanMK.Visible = false;
+            // 
+            // lblValidatedMatKhauCu
+            // 
+            this.lblValidatedMatKhauCu.BackColor = System.Drawing.SystemColors.Control;
+            this.lblValidatedMatKhauCu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidatedMatKhauCu.ForeColor = System.Drawing.Color.Red;
+            this.lblValidatedMatKhauCu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValidatedMatKhauCu.Location = new System.Drawing.Point(306, 50);
+            this.lblValidatedMatKhauCu.Name = "lblValidatedMatKhauCu";
+            this.lblValidatedMatKhauCu.Size = new System.Drawing.Size(270, 20);
+            this.lblValidatedMatKhauCu.TabIndex = 62;
+            this.lblValidatedMatKhauCu.Text = "*Mật khẩu cũ không chính xác!";
+            this.lblValidatedMatKhauCu.Visible = false;
             // 
             // FrmDoiMatKhauQLVT
             // 
@@ -229,5 +259,7 @@
         private System.Windows.Forms.TextBox txtMatKhauCu;
         private System.Windows.Forms.Panel pnTitleDoiMatKhau;
         private System.Windows.Forms.Label lblTitleDoiMatKhau;
+        private System.Windows.Forms.Label lblValidatedXacNhanMK;
+        private System.Windows.Forms.Label lblValidatedMatKhauCu;
     }
 }

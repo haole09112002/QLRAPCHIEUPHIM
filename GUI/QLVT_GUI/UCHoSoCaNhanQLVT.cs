@@ -1,10 +1,11 @@
 ﻿
+using BLL;
+using DTO;
 using System;
 using System.Data;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using BLL;
-using DTO;
 
 namespace GUI.QLVT_GUI
 {
@@ -40,7 +41,11 @@ namespace GUI.QLVT_GUI
             txtDiaChi.BackColor = Color.Gainsboro;
             txtDienThoai.BackColor = Color.Gainsboro;
             txtCCCD.BackColor = Color.Gainsboro;
-
+            lblValidatedCCCD.Visible = false;
+            lblValidatedDienThoai.Visible = false;
+            lblValidatedDiaChi.Visible = false;
+            lblValidatedTen.Visible = false;
+            lblValidatedNgaySinh.Visible = false;
             txtTen.ReadOnly = true;
             dtpNgaySinh.Enabled = false;
             txtDiaChi.ReadOnly = true;
@@ -49,6 +54,7 @@ namespace GUI.QLVT_GUI
             rbNam.Enabled = false;
             rbNu.Enabled = false;
             btnLuu.Enabled = false;
+            checkEdit = true;
             LoadListCaLamViec();
         }
         public void LoadListCaLamViec()
@@ -108,28 +114,68 @@ namespace GUI.QLVT_GUI
                 checkEdit = true;
             }
         }
+        public bool checkValidate()
+        {
+            bool check = true;
+            // Tên Tiếng anh hoặc tiếng việt đều được
+            if (Regex.IsMatch(txtTen.Text, @"^(\p{L}+\s?)*$") != true)
+            {
+                lblValidatedTen.Visible = true;
+                check = false;
+            }
+            // Địa chỉ nước ngoài hoặc việt nam đều được
+            if (Regex.IsMatch(txtDiaChi.Text, @"^(\p{L}+\s?)*$") != true)
+            {
+                lblValidatedDiaChi.Visible = true;
+                check = false;
+            }
+            // Độ dài là 10 chữ số, Bắt đầu bằng 84 hoặc 0 kế tiếp phải là các đầu số hiện nay bao gồm 3,5,7,8,9 + với 8 số bất kì
+            if (Regex.IsMatch(txtDienThoai.Text, @"(84|0[3|5|7|8|9])+([0-9]{8})\b") != true)
+            {
+                lblValidatedDienThoai.Visible = true;
+                check = false;
+            }
+            //Độ dài là 12 chữ số, bắt đầu bằng số 0
+            if (Regex.IsMatch(txtCCCD.Text, @"(0)+([1-9]{11})\b") != true)
+            {
+                lblValidatedCCCD.Visible = true;
+                check = false;
+            }
+            if (DateTime.Today <= dtpNgaySinh.Value)
+            {
+                lblValidatedNgaySinh.Visible = true;
+                check = false;
+            }
+            return check;
+
+
+        }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Xác nhận lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.OK)
+            if (checkValidate() == true)
             {
-                nhanVien.TenNhanVien = txtTen.Text;
-                nhanVien.CCCD1 = txtCCCD.Text;
-                nhanVien.DiaChi = txtDiaChi.Text;
-                nhanVien.SoDienThoai = txtDienThoai.Text;
-                if (rbNam.Checked == true)
+                DialogResult dialogResult = MessageBox.Show("Xác nhận lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.OK)
                 {
-                    nhanVien.GioiTinh = false;
+                    nhanVien.TenNhanVien = txtTen.Text;
+                    nhanVien.CCCD1 = txtCCCD.Text;
+                    nhanVien.DiaChi = txtDiaChi.Text;
+                    nhanVien.SoDienThoai = txtDienThoai.Text;
+                    if (rbNam.Checked == true)
+                    {
+                        nhanVien.GioiTinh = false;
+                    }
+                    else
+                    {
+                        nhanVien.GioiTinh = true;
+                    }
+                    nhanVien.NgaySinh = dtpNgaySinh.Value;
+                    NhanVienBLL.Instance.AddUpdateNhanVien(nhanVien);
+                    MessageBox.Show("Cập nhật thành công!");
+                    Reload();
+                    btnChinhSua.Enabled = true;
                 }
-                else
-                {
-                    nhanVien.GioiTinh = true;
-                }
-                nhanVien.NgaySinh = dtpNgaySinh.Value;
-                NhanVienBLL.Instance.AddUpdateNhanVien(nhanVien);
-                MessageBox.Show("Cập nhật thành công!");
-                Reload();
             }
         }
 
@@ -146,6 +192,12 @@ namespace GUI.QLVT_GUI
                 && nhanVien.CCCD1 == txtCCCD.Text)
             {
                 btnLuu.Enabled = false;
+                lblValidatedCCCD.Visible = false;
+                lblValidatedDienThoai.Visible = false;
+                lblValidatedDiaChi.Visible = false;
+                lblValidatedTen.Visible = false;
+                lblValidatedNgaySinh.Visible = false;
+
             }
             else
             {
@@ -190,21 +242,24 @@ namespace GUI.QLVT_GUI
             {
 
             }
-            else
-            {
-                DialogResult dialogResult = MessageBox.Show("Thông tin chưa lưu, có muốn thoát", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (dialogResult == DialogResult.OK)
-                {
-                    Reload();
-                }
-
-            }
         }
 
         private void dtpNhanVien_ValueChanged(object sender, EventArgs e)
         {
             dtListCaLam.Rows.Clear();
             LoadListCaLamViec();
+        }
+
+        private void UCHoSoCaNhanQLVT_Leave(object sender, EventArgs e)
+        {
+            if (btnLuu.Enabled == true || checkValidate() == false)
+            {
+                DialogResult dialogResult = MessageBox.Show("Thông tin chưa lưu, có muốn thoát", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.OK)
+                {
+                    Reload();
+                }
+            }
         }
     }
 }

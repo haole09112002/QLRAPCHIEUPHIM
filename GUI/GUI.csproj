@@ -70,12 +70,6 @@
     <Compile Include="AD_GUI\frmDashboard_AD.Designer.cs">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
     </Compile>
-    <Compile Include="AD_GUI\frmThemCaLam.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AD_GUI\frmThemCaLam.Designer.cs">
-      <DependentUpon>frmThemCaLam.cs</DependentUpon>
-    </Compile>
     <Compile Include="AD_GUI\frmThemHopDongPhim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -445,9 +439,6 @@
     </Compile>
     <EmbeddedResource Include="AD_GUI\frmDashboard_AD.resx">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AD_GUI\frmThemCaLam.resx">
-      <DependentUpon>frmThemCaLam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\frmThemHopDongPhim.resx">
       <DependentUpon>frmThemHopDongPhim.cs</DependentUpon>
@@ -1058,7 +1049,6 @@
   <ItemGroup>
     <None Include="Resources\subtract_24px.png" />
   </ItemGroup>
-  
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>

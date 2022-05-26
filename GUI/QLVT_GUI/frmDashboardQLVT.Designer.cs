@@ -287,7 +287,7 @@
             this.lbTenNhanVien.AutoSize = true;
             this.lbTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenNhanVien.ForeColor = System.Drawing.Color.Black;
-            this.lbTenNhanVien.Location = new System.Drawing.Point(1179, 7);
+            this.lbTenNhanVien.Location = new System.Drawing.Point(1138, 7);
             this.lbTenNhanVien.Name = "lbTenNhanVien";
             this.lbTenNhanVien.Size = new System.Drawing.Size(49, 20);
             this.lbTenNhanVien.TabIndex = 2;

@@ -28,13 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnThongTinCaNhan = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpNhanVien = new System.Windows.Forms.DateTimePicker();
             this.dgvListCaLamViec = new System.Windows.Forms.DataGridView();
             this.lblChucVu = new System.Windows.Forms.Label();
             this.grpThongTinCaNhan = new System.Windows.Forms.GroupBox();
+            this.lblValidatedCCCD = new System.Windows.Forms.Label();
+            this.lblValidatedDienThoai = new System.Windows.Forms.Label();
+            this.lblValidatedDiaChi = new System.Windows.Forms.Label();
+            this.lblValidatedTen = new System.Windows.Forms.Label();
+            this.lblErrorCCCD = new System.Windows.Forms.Label();
+            this.lblErrorDienThoai = new System.Windows.Forms.Label();
+            this.lblErrorDiaChi = new System.Windows.Forms.Label();
+            this.lblErrorTen = new System.Windows.Forms.Label();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtCCCD = new System.Windows.Forms.TextBox();
             this.lblCCCD = new System.Windows.Forms.Label();
@@ -54,11 +63,7 @@
             this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.lblTenTaiKhoan = new System.Windows.Forms.Label();
             this.picAvatar = new System.Windows.Forms.PictureBox();
-            this.dtpNhanVien = new System.Windows.Forms.DateTimePicker();
-            this.lblErrorTen = new System.Windows.Forms.Label();
-            this.lblErrorDiaChi = new System.Windows.Forms.Label();
-            this.lblErrorDienThoai = new System.Windows.Forms.Label();
-            this.lblErrorCCCD = new System.Windows.Forms.Label();
+            this.lblValidatedNgaySinh = new System.Windows.Forms.Label();
             this.pnThongTinCaNhan.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCaLamViec)).BeginInit();
@@ -84,40 +89,52 @@
             this.groupBox1.Controls.Add(this.dtpNhanVien);
             this.groupBox1.Controls.Add(this.dgvListCaLamViec);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(44, 370);
+            this.groupBox1.Location = new System.Drawing.Point(47, 317);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(521, 327);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CA LÀM VIỆC";
             // 
+            // dtpNhanVien
+            // 
+            this.dtpNhanVien.CalendarFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpNhanVien.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNhanVien.Location = new System.Drawing.Point(21, 51);
+            this.dtpNhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpNhanVien.Name = "dtpNhanVien";
+            this.dtpNhanVien.Size = new System.Drawing.Size(468, 28);
+            this.dtpNhanVien.TabIndex = 41;
+            this.dtpNhanVien.ValueChanged += new System.EventHandler(this.dtpNhanVien_ValueChanged);
+            // 
             // dgvListCaLamViec
             // 
             this.dgvListCaLamViec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListCaLamViec.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListCaLamViec.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListCaLamViec.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListCaLamViec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListCaLamViec.Location = new System.Drawing.Point(83, 98);
+            this.dgvListCaLamViec.Location = new System.Drawing.Point(21, 98);
             this.dgvListCaLamViec.Name = "dgvListCaLamViec";
             this.dgvListCaLamViec.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListCaLamViec.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListCaLamViec.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListCaLamViec.RowHeadersWidth = 51;
             this.dgvListCaLamViec.RowTemplate.Height = 24;
-            this.dgvListCaLamViec.Size = new System.Drawing.Size(341, 210);
+            this.dgvListCaLamViec.Size = new System.Drawing.Size(468, 210);
             this.dgvListCaLamViec.TabIndex = 39;
             // 
             // lblChucVu
@@ -126,7 +143,7 @@
             this.lblChucVu.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblChucVu.Image = global::GUI.Properties.Resources.avatar;
             this.lblChucVu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblChucVu.Location = new System.Drawing.Point(223, 335);
+            this.lblChucVu.Location = new System.Drawing.Point(218, 273);
             this.lblChucVu.Name = "lblChucVu";
             this.lblChucVu.Size = new System.Drawing.Size(186, 30);
             this.lblChucVu.TabIndex = 38;
@@ -135,6 +152,11 @@
             // 
             // grpThongTinCaNhan
             // 
+            this.grpThongTinCaNhan.Controls.Add(this.lblValidatedNgaySinh);
+            this.grpThongTinCaNhan.Controls.Add(this.lblValidatedCCCD);
+            this.grpThongTinCaNhan.Controls.Add(this.lblValidatedDienThoai);
+            this.grpThongTinCaNhan.Controls.Add(this.lblValidatedDiaChi);
+            this.grpThongTinCaNhan.Controls.Add(this.lblValidatedTen);
             this.grpThongTinCaNhan.Controls.Add(this.lblErrorCCCD);
             this.grpThongTinCaNhan.Controls.Add(this.lblErrorDienThoai);
             this.grpThongTinCaNhan.Controls.Add(this.lblErrorDiaChi);
@@ -164,6 +186,110 @@
             this.grpThongTinCaNhan.TabIndex = 36;
             this.grpThongTinCaNhan.TabStop = false;
             this.grpThongTinCaNhan.Text = "THÔNG TIN CÁ NHÂN";
+            // 
+            // lblValidatedCCCD
+            // 
+            this.lblValidatedCCCD.BackColor = System.Drawing.SystemColors.Control;
+            this.lblValidatedCCCD.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidatedCCCD.ForeColor = System.Drawing.Color.Red;
+            this.lblValidatedCCCD.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValidatedCCCD.Location = new System.Drawing.Point(201, 440);
+            this.lblValidatedCCCD.Name = "lblValidatedCCCD";
+            this.lblValidatedCCCD.Size = new System.Drawing.Size(426, 19);
+            this.lblValidatedCCCD.TabIndex = 31;
+            this.lblValidatedCCCD.Text = "*Định dạng CCCD không hợp lệ, Vui lòng nhập lại!";
+            this.lblValidatedCCCD.Visible = false;
+            // 
+            // lblValidatedDienThoai
+            // 
+            this.lblValidatedDienThoai.BackColor = System.Drawing.SystemColors.Control;
+            this.lblValidatedDienThoai.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidatedDienThoai.ForeColor = System.Drawing.Color.Red;
+            this.lblValidatedDienThoai.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValidatedDienThoai.Location = new System.Drawing.Point(201, 370);
+            this.lblValidatedDienThoai.Name = "lblValidatedDienThoai";
+            this.lblValidatedDienThoai.Size = new System.Drawing.Size(442, 19);
+            this.lblValidatedDienThoai.TabIndex = 30;
+            this.lblValidatedDienThoai.Text = "*Định dạng điện thoại không hợp lệ, Vui lòng nhập lại!";
+            this.lblValidatedDienThoai.Visible = false;
+            // 
+            // lblValidatedDiaChi
+            // 
+            this.lblValidatedDiaChi.BackColor = System.Drawing.SystemColors.Control;
+            this.lblValidatedDiaChi.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidatedDiaChi.ForeColor = System.Drawing.Color.Red;
+            this.lblValidatedDiaChi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValidatedDiaChi.Location = new System.Drawing.Point(201, 302);
+            this.lblValidatedDiaChi.Name = "lblValidatedDiaChi";
+            this.lblValidatedDiaChi.Size = new System.Drawing.Size(426, 19);
+            this.lblValidatedDiaChi.TabIndex = 29;
+            this.lblValidatedDiaChi.Text = "*Định dạng địa chỉ không hợp lệ, Vui lòng nhập lại!";
+            this.lblValidatedDiaChi.Visible = false;
+            // 
+            // lblValidatedTen
+            // 
+            this.lblValidatedTen.BackColor = System.Drawing.SystemColors.Control;
+            this.lblValidatedTen.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidatedTen.ForeColor = System.Drawing.Color.Red;
+            this.lblValidatedTen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValidatedTen.Location = new System.Drawing.Point(201, 84);
+            this.lblValidatedTen.Name = "lblValidatedTen";
+            this.lblValidatedTen.Size = new System.Drawing.Size(396, 19);
+            this.lblValidatedTen.TabIndex = 28;
+            this.lblValidatedTen.Text = "*Định dạng tên không hợp lệ, Vui lòng nhập lại!";
+            this.lblValidatedTen.Visible = false;
+            // 
+            // lblErrorCCCD
+            // 
+            this.lblErrorCCCD.BackColor = System.Drawing.SystemColors.Control;
+            this.lblErrorCCCD.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorCCCD.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorCCCD.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblErrorCCCD.Location = new System.Drawing.Point(214, 440);
+            this.lblErrorCCCD.Name = "lblErrorCCCD";
+            this.lblErrorCCCD.Size = new System.Drawing.Size(295, 19);
+            this.lblErrorCCCD.TabIndex = 27;
+            this.lblErrorCCCD.Text = "*Không được để trống thông tin này";
+            this.lblErrorCCCD.Visible = false;
+            // 
+            // lblErrorDienThoai
+            // 
+            this.lblErrorDienThoai.BackColor = System.Drawing.SystemColors.Control;
+            this.lblErrorDienThoai.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorDienThoai.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorDienThoai.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblErrorDienThoai.Location = new System.Drawing.Point(212, 370);
+            this.lblErrorDienThoai.Name = "lblErrorDienThoai";
+            this.lblErrorDienThoai.Size = new System.Drawing.Size(308, 19);
+            this.lblErrorDienThoai.TabIndex = 26;
+            this.lblErrorDienThoai.Text = "*Không được để trống thông tin này";
+            this.lblErrorDienThoai.Visible = false;
+            // 
+            // lblErrorDiaChi
+            // 
+            this.lblErrorDiaChi.BackColor = System.Drawing.SystemColors.Control;
+            this.lblErrorDiaChi.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorDiaChi.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorDiaChi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblErrorDiaChi.Location = new System.Drawing.Point(212, 302);
+            this.lblErrorDiaChi.Name = "lblErrorDiaChi";
+            this.lblErrorDiaChi.Size = new System.Drawing.Size(308, 19);
+            this.lblErrorDiaChi.TabIndex = 25;
+            this.lblErrorDiaChi.Text = "*Không được để trống thông tin này";
+            this.lblErrorDiaChi.Visible = false;
+            // 
+            // lblErrorTen
+            // 
+            this.lblErrorTen.BackColor = System.Drawing.SystemColors.Control;
+            this.lblErrorTen.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorTen.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorTen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblErrorTen.Location = new System.Drawing.Point(212, 84);
+            this.lblErrorTen.Name = "lblErrorTen";
+            this.lblErrorTen.Size = new System.Drawing.Size(308, 19);
+            this.lblErrorTen.TabIndex = 24;
+            this.lblErrorTen.Text = "*Không được để trống thông tin này";
+            this.lblErrorTen.Visible = false;
             // 
             // dtpNgaySinh
             // 
@@ -353,9 +479,9 @@
             this.lblDiaChi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblDiaChi.Location = new System.Drawing.Point(27, 266);
             this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(112, 27);
+            this.lblDiaChi.Size = new System.Drawing.Size(133, 27);
             this.lblDiaChi.TabIndex = 4;
-            this.lblDiaChi.Text = "ĐỊA CHỈ";
+            this.lblDiaChi.Text = "Quê Quán";
             this.lblDiaChi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblDienThoai
@@ -405,76 +531,25 @@
             this.picAvatar.BackColor = System.Drawing.Color.Silver;
             this.picAvatar.ErrorImage = null;
             this.picAvatar.InitialImage = null;
-            this.picAvatar.Location = new System.Drawing.Point(197, 157);
+            this.picAvatar.Location = new System.Drawing.Point(194, 85);
             this.picAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picAvatar.Name = "picAvatar";
             this.picAvatar.Size = new System.Drawing.Size(226, 173);
             this.picAvatar.TabIndex = 35;
             this.picAvatar.TabStop = false;
             // 
-            // dtpNhanVien
+            // lblValidatedNgaySinh
             // 
-            this.dtpNhanVien.CalendarFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpNhanVien.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNhanVien.Location = new System.Drawing.Point(58, 51);
-            this.dtpNhanVien.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpNhanVien.Name = "dtpNhanVien";
-            this.dtpNhanVien.Size = new System.Drawing.Size(392, 28);
-            this.dtpNhanVien.TabIndex = 41;
-            this.dtpNhanVien.ValueChanged += new System.EventHandler(this.dtpNhanVien_ValueChanged);
-            // 
-            // lblErrorTen
-            // 
-            this.lblErrorTen.BackColor = System.Drawing.Color.White;
-            this.lblErrorTen.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorTen.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorTen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblErrorTen.Location = new System.Drawing.Point(212, 53);
-            this.lblErrorTen.Name = "lblErrorTen";
-            this.lblErrorTen.Size = new System.Drawing.Size(308, 19);
-            this.lblErrorTen.TabIndex = 24;
-            this.lblErrorTen.Text = "*Không được để trống thông tin này";
-            this.lblErrorTen.Visible = false;
-            // 
-            // lblErrorDiaChi
-            // 
-            this.lblErrorDiaChi.BackColor = System.Drawing.Color.White;
-            this.lblErrorDiaChi.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorDiaChi.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorDiaChi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblErrorDiaChi.Location = new System.Drawing.Point(212, 271);
-            this.lblErrorDiaChi.Name = "lblErrorDiaChi";
-            this.lblErrorDiaChi.Size = new System.Drawing.Size(308, 19);
-            this.lblErrorDiaChi.TabIndex = 25;
-            this.lblErrorDiaChi.Text = "*Không được để trống thông tin này";
-            this.lblErrorDiaChi.Visible = false;
-            // 
-            // lblErrorDienThoai
-            // 
-            this.lblErrorDienThoai.BackColor = System.Drawing.Color.White;
-            this.lblErrorDienThoai.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorDienThoai.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorDienThoai.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblErrorDienThoai.Location = new System.Drawing.Point(212, 343);
-            this.lblErrorDienThoai.Name = "lblErrorDienThoai";
-            this.lblErrorDienThoai.Size = new System.Drawing.Size(308, 19);
-            this.lblErrorDienThoai.TabIndex = 26;
-            this.lblErrorDienThoai.Text = "*Không được để trống thông tin này";
-            this.lblErrorDienThoai.Visible = false;
-            // 
-            // lblErrorCCCD
-            // 
-            this.lblErrorCCCD.BackColor = System.Drawing.Color.White;
-            this.lblErrorCCCD.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorCCCD.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorCCCD.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblErrorCCCD.Location = new System.Drawing.Point(214, 407);
-            this.lblErrorCCCD.Name = "lblErrorCCCD";
-            this.lblErrorCCCD.Size = new System.Drawing.Size(295, 19);
-            this.lblErrorCCCD.TabIndex = 27;
-            this.lblErrorCCCD.Text = "*Không được để trống thông tin này";
-            this.lblErrorCCCD.Visible = false;
+            this.lblValidatedNgaySinh.BackColor = System.Drawing.SystemColors.Control;
+            this.lblValidatedNgaySinh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidatedNgaySinh.ForeColor = System.Drawing.Color.Red;
+            this.lblValidatedNgaySinh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValidatedNgaySinh.Location = new System.Drawing.Point(201, 232);
+            this.lblValidatedNgaySinh.Name = "lblValidatedNgaySinh";
+            this.lblValidatedNgaySinh.Size = new System.Drawing.Size(442, 19);
+            this.lblValidatedNgaySinh.TabIndex = 32;
+            this.lblValidatedNgaySinh.Text = "*Ngày sinh không lớn hơn hiện tại, Vui lòng nhập lại!";
+            this.lblValidatedNgaySinh.Visible = false;
             // 
             // UCHoSoCaNhanQLVT
             // 
@@ -484,6 +559,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCHoSoCaNhanQLVT";
             this.Size = new System.Drawing.Size(1352, 766);
+            this.Leave += new System.EventHandler(this.UCHoSoCaNhanQLVT_Leave);
             this.pnThongTinCaNhan.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCaLamViec)).EndInit();
@@ -526,5 +602,10 @@
         private System.Windows.Forms.Label lblErrorCCCD;
         private System.Windows.Forms.Label lblErrorDienThoai;
         private System.Windows.Forms.Label lblErrorDiaChi;
+        private System.Windows.Forms.Label lblValidatedTen;
+        private System.Windows.Forms.Label lblValidatedDiaChi;
+        private System.Windows.Forms.Label lblValidatedCCCD;
+        private System.Windows.Forms.Label lblValidatedDienThoai;
+        private System.Windows.Forms.Label lblValidatedNgaySinh;
     }
 }

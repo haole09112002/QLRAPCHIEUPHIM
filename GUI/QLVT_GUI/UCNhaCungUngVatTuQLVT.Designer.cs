@@ -36,6 +36,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnListNCCVatTu = new System.Windows.Forms.Panel();
             this.btnXemChiTiet = new System.Windows.Forms.Button();
             this.btnSapXep = new System.Windows.Forms.Button();
@@ -130,7 +131,7 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtTimKiem.ForeColor = System.Drawing.Color.DimGray;
             this.txtTimKiem.Location = new System.Drawing.Point(198, 51);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimKiem.Name = "txtTimKiem";
@@ -177,6 +178,8 @@
             this.dgvListNCCVatTu.Name = "dgvListNCCVatTu";
             this.dgvListNCCVatTu.ReadOnly = true;
             this.dgvListNCCVatTu.RowHeadersWidth = 62;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvListNCCVatTu.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListNCCVatTu.RowTemplate.Height = 28;
             this.dgvListNCCVatTu.Size = new System.Drawing.Size(1266, 578);
             this.dgvListNCCVatTu.TabIndex = 40;
