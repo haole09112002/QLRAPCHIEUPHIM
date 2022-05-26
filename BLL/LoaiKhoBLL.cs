@@ -29,6 +29,27 @@ namespace BLL
         {
 
         }
+        public List<LoaiKhoDTO> GetAllLoaiKho()
+        {
+            List<LoaiKhoDTO> data = new List<LoaiKhoDTO>();
+            foreach (LoaiKhoDTO i in LoaiKhoDAL.Instance.GetAllLoaiKho())
+            {
+                data.Add(i);
+            }
+            return data;
+        }
+        public LoaiKhoDTO GetLoaiKhoByMaLoaiKho(string MaLoaiKho)
+        {
+
+            foreach (LoaiKhoDTO i in GetAllLoaiKho())
+            {
+                if (i.MaLoaiKho == MaLoaiKho)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
         public List<CBBItem> GetCBBLoaiKho()
         {
             List<CBBItem> data = new List<CBBItem>();
