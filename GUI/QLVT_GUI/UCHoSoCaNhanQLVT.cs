@@ -23,7 +23,9 @@ namespace GUI.QLVT_GUI
         }
         public void Reload()
         {
-            
+
+            rbNam.Enabled = false;
+            rbNu.Enabled = false;
             if (nhanVien.GioiTinh == true)
             {
                 rbNam.Checked = true;
@@ -66,8 +68,6 @@ namespace GUI.QLVT_GUI
             txtDiaChi.ReadOnly = true;
             txtDienThoai.ReadOnly = true;
             txtCCCD.ReadOnly = true;
-            rbNam.Enabled = false;
-            rbNu.Enabled = false;
             btnLuu.Enabled = false;
             checkEdit = true;
             LoadListCaLamViec();
@@ -179,11 +179,11 @@ namespace GUI.QLVT_GUI
                     nhanVien.SoDienThoai = txtDienThoai.Text;
                     if (rbNam.Checked == true)
                     {
-                        nhanVien.GioiTinh = false;
+                        nhanVien.GioiTinh = true;
                     }
                     else
                     {
-                        nhanVien.GioiTinh = true;
+                        nhanVien.GioiTinh = false;
                     }
                     nhanVien.NgaySinh = dtpNgaySinh.Value;
                     nhanVien.Anh1 = PhimBLL.Instance.ChuyenAnhThanhMangByte(pbAnhNhanVien);
