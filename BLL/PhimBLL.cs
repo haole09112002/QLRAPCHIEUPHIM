@@ -35,7 +35,7 @@ namespace BLL
                 string TheLoaiPhim = "";
                 string TenHangSanXuatPhim = "";
                 if (TimKiem == "Tên Phim" || TimKiem == "")
-                    if (i.TenPhim.Contains(txt))
+                    if (i.TenPhim.ToLower().Contains(txt.ToLower()))
                     {
                         foreach (TheLoaiPhimDTO j in TLP.ToArray())
                         {
@@ -64,7 +64,7 @@ namespace BLL
                         });
                     }
                 if (TimKiem == "Quốc Gia")
-                    if (i.QuocGia.Contains(txt))
+                    if (i.QuocGia.ToLower().Contains(txt.ToLower()))
                     {
                         foreach (TheLoaiPhimDTO j in TLP.ToArray())
                         {
@@ -191,7 +191,7 @@ namespace BLL
                             TheLoaiPhim = j.TenTheLoaiPhim;
                         }
                     }
-                    if (TheLoaiPhim.Contains(txt))
+                    if (TheLoaiPhim.ToLower().Contains(txt.ToLower()))
                     {
                         foreach (HangSanXuatPhimDTO j in HangSanXuatPhimDAL.Instance.GetAllHangSanXuatPhim())
                         {

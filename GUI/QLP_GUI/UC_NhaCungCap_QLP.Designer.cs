@@ -148,7 +148,7 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(187, 62);
+            this.txtTimKiem.Location = new System.Drawing.Point(189, 67);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(295, 33);
@@ -168,6 +168,7 @@
             // 
             // dGVNhaCungCapPhim
             // 
+            this.dGVNhaCungCapPhim.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.dGVNhaCungCapPhim.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dGVNhaCungCapPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;

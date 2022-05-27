@@ -65,6 +65,7 @@
             // cBTimKiem
             // 
             this.cBTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBTimKiem.FormattingEnabled = true;
             this.cBTimKiem.Items.AddRange(new object[] {
@@ -135,6 +136,7 @@
             // cBSapXep
             // 
             this.cBSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBSapXep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBSapXep.FormattingEnabled = true;
             this.cBSapXep.Items.AddRange(new object[] {
@@ -190,6 +192,7 @@
             // 
             // dGVDanhSachPhim
             // 
+            this.dGVDanhSachPhim.AllowUserToAddRows = false;
             this.dGVDanhSachPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dGVDanhSachPhim.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -216,6 +219,7 @@
             this.dGVDanhSachPhim.RowTemplate.Height = 28;
             this.dGVDanhSachPhim.Size = new System.Drawing.Size(1242, 535);
             this.dGVDanhSachPhim.TabIndex = 40;
+            this.dGVDanhSachPhim.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDanhSachPhim_CellClick);
             // 
             // UC_ThongTinPhim_QLP
             // 

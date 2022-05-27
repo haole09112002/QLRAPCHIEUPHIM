@@ -63,7 +63,7 @@ namespace BLL
             {
                 foreach (string i in MaPhieu)
                 {
-                    if(NhanVienBLL.Instance.GetNhanVienByMaNhanVien(GetPhieuByMaPhieu(i).MaNhanVien).TenNhanVien.Contains(TimKiem))
+                    if(NhanVienBLL.Instance.GetNhanVienByMaNhanVien(GetPhieuByMaPhieu(i).MaNhanVien).TenNhanVien.ToLower().Contains(TimKiem.ToLower()))
                         data.Add(GetPhieuByMaPhieu(i));
                 }
             }

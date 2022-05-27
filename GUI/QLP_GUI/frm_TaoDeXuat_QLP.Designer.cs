@@ -247,6 +247,7 @@
             // 
             // cBDonViTinh
             // 
+            this.cBDonViTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBDonViTinh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.cBDonViTinh.FormattingEnabled = true;
             this.cBDonViTinh.Items.AddRange(new object[] {
@@ -293,12 +294,14 @@
             // 
             // dGVDanhSachPhim
             // 
+            this.dGVDanhSachPhim.AllowUserToAddRows = false;
             this.dGVDanhSachPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dGVDanhSachPhim.BackgroundColor = System.Drawing.Color.White;
             this.dGVDanhSachPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVDanhSachPhim.Location = new System.Drawing.Point(17, 30);
             this.dGVDanhSachPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDanhSachPhim.Name = "dGVDanhSachPhim";
+            this.dGVDanhSachPhim.ReadOnly = true;
             this.dGVDanhSachPhim.RowHeadersWidth = 62;
             this.dGVDanhSachPhim.RowTemplate.Height = 28;
             this.dGVDanhSachPhim.Size = new System.Drawing.Size(989, 186);
@@ -321,7 +324,7 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnHuy_Click);
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnLuu
             // 
@@ -355,12 +358,14 @@
             // 
             // dGVDeXuatPhim
             // 
+            this.dGVDeXuatPhim.AllowUserToAddRows = false;
             this.dGVDeXuatPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dGVDeXuatPhim.BackgroundColor = System.Drawing.Color.White;
             this.dGVDeXuatPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVDeXuatPhim.Location = new System.Drawing.Point(17, 35);
             this.dGVDeXuatPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDeXuatPhim.Name = "dGVDeXuatPhim";
+            this.dGVDeXuatPhim.ReadOnly = true;
             this.dGVDeXuatPhim.RowHeadersWidth = 62;
             this.dGVDeXuatPhim.RowTemplate.Height = 28;
             this.dGVDeXuatPhim.Size = new System.Drawing.Size(989, 161);

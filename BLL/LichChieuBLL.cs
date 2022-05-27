@@ -55,7 +55,6 @@ namespace BLL
                 if (i.MaPhim == MaPhim && i.NgayChieu.Day == NgayChieu.Day && i.NgayChieu.Month == NgayChieu.Month && i.NgayChieu.Year == NgayChieu.Year && i.MaKhungGioChieu == MaKhungGioChieu && i.MaPhongChieu == MaPhongChieu)
                     return "Lịch chiếu đã được tạo";
             }
-            MessageBox.Show(GetSoLuongPhimChieuTaiMotThoiDiem(MaPhim, MaKhungGioChieu, NgayChieu).ToString() + "   " + ChiTietKhoPhimBLL.Instance.GetChiTietSoLuongPhim(MaPhim).TongSoLuongPhim);
             if(GetSoLuongPhimChieuTaiMotThoiDiem(MaPhim,MaKhungGioChieu,NgayChieu) == ChiTietKhoPhimBLL.Instance.GetChiTietSoLuongPhim(MaPhim).TongSoLuongPhim)
             {
                 return "Không đủ phim để chiếu";
