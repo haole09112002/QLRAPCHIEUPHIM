@@ -205,18 +205,32 @@ namespace BLL
         public void XoaChiTietKhoVatTu(List<ChiTietKhoVatTuView> dsCTKhoVT)
         {
             var ds = GetAllChiTietKhoVatTuView1();
-            foreach(var i in dsCTKhoVT)
+            foreach (var i in dsCTKhoVT)
             {
                 int index = ds.FindIndex(x => x.MaVatTu == i.MaVatTu && x.MaKho == i.MaKho);
-                if ( index >= 0)
+                if (index >= 0)
                     ds.RemoveAt(index);
             }
-            if(ds.Count > 0)
-            foreach(var i in ds)
+            if (ds.Count > 0)
+                foreach (var i in ds)
+                {
+                    ChiTietKhoVatTuDAL.Instance.XoaChiTietKhoVatTu(ConvertChiTietKhoVatTuViewToDTO(i));
+                }
+
+        }
+        public void XoaMotVTTrongKho(ChiTietKhoVatTuDTO vtCanXoa)
+        {
+            var ds = GetAllChiTietKhoVatTu();
+            var itemKho = ds.Find(i=>i.MaVatTu == vtCanXoa.MaVatTu && i.MaKho == vtCanXoa.MaKho);
+            if(itemKho != null)
             {
-                ChiTietKhoVatTuDAL.Instance.XoaChiTietKhoVatTu(ConvertChiTietKhoVatTuViewToDTO(i));
+                itemKho.SoLuongSP += vtCanXoa.SoLuongSP;
+                ChiTietKhoVatTuDAL.Instance.CapNhatChiTietKhoVatTu(itemKho);
+            }   
+            else
+            {
+                ChiTietKhoVatTuDAL.Instance.ThemChiTietKhoVatTu(vtCanXoa);
             }
-           
         }
         public List<ChiTietKhoVatTuDTO> GetListChiTietKhoVatTuByMaKho(string MaKho)
         {

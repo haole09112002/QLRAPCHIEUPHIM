@@ -67,12 +67,12 @@ namespace GUI.QLP_GUI
                 string KiemTra = LichChieuBLL.Instance.KiemTraLichChieu(txtMaPhim.Text, txtMaKhungGioChieu.Text, txtMaPhongChieu.Text, dTPNgayChieu.Value);
                 if (KiemTra == "")
                 {
-                    LichChieuBLL.Instance.LuuLichChieu(txtMaPhim.Text, txtMaKhungGioChieu.Text, txtMaPhongChieu.Text,"1", dTPNgayChieu.Value);
-                    MessageBox.Show("Lưu thành công");
+                    LichChieuBLL.Instance.LuuLichChieu(txtMaPhim.Text, txtMaKhungGioChieu.Text, txtMaPhongChieu.Text, "1", dTPNgayChieu.Value);
+                    MessageBox.Show("Lưu thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show(KiemTra);
+                    MessageBox.Show(KiemTra,"Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
             }
         }
@@ -86,7 +86,7 @@ namespace GUI.QLP_GUI
             }
             else
             {
-                MessageBox.Show("Chỉ được chọn 1 hàng");
+                MessageBox.Show("Chỉ được chọn 1 hàng","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 
@@ -99,7 +99,7 @@ namespace GUI.QLP_GUI
             }
             else
             {
-                MessageBox.Show("Chỉ được chọn 1 hàng");
+                MessageBox.Show("Chỉ được chọn 1 hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -113,7 +113,7 @@ namespace GUI.QLP_GUI
             }
             else
             {
-                MessageBox.Show("Chỉ được chọn 1 hàng");
+                MessageBox.Show("Chỉ được chọn 1 hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -144,6 +144,17 @@ namespace GUI.QLP_GUI
                 }
                 dGVDanhSachPC.DataSource = dtDanhSachPhongChieu;
             }
+        }
+
+        private void UC_TaoLichChieu_QLP_Leave(object sender, EventArgs e)
+        {
+            txtMaPhim.Text = "";
+            txtMaPhongChieu.Text = "";
+            txtGioChieu.Text = "";
+            txtTenPhim.Text = "";
+            txtTimKiem.Text = "";
+            txtMaKhungGioChieu.Text = "";
+            txtPhongChieu.Text = "";
         }
     }
 }

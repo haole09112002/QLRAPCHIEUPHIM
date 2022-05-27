@@ -42,6 +42,7 @@ namespace GUI.AD_GUI
             else
             {
                 btnChinhSua.Visible = false;
+                cbLoaiNhaCungCap.Enabled = true;
             }
 
         }
@@ -106,7 +107,6 @@ namespace GUI.AD_GUI
             txtEmail.Enabled = var;
             txtDienThoai.Enabled = var;
             txtTenGiamDoc.Enabled = var;
-            cbLoaiNhaCungCap.Enabled = var;
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)

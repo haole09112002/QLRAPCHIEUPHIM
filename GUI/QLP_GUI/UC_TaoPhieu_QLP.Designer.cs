@@ -77,6 +77,7 @@
             // 
             this.cBMaKho.BackColor = System.Drawing.Color.White;
             this.cBMaKho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBMaKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBMaKho.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.cBMaKho.FormattingEnabled = true;
             this.cBMaKho.Location = new System.Drawing.Point(802, 49);
@@ -84,11 +85,13 @@
             this.cBMaKho.Name = "cBMaKho";
             this.cBMaKho.Size = new System.Drawing.Size(304, 27);
             this.cBMaKho.TabIndex = 8;
+            this.cBMaKho.SelectedIndexChanged += new System.EventHandler(this.cBMaKho_SelectedIndexChanged);
             // 
             // cBMaLoaiPhieu
             // 
             this.cBMaLoaiPhieu.BackColor = System.Drawing.Color.White;
             this.cBMaLoaiPhieu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBMaLoaiPhieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBMaLoaiPhieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.cBMaLoaiPhieu.FormattingEnabled = true;
             this.cBMaLoaiPhieu.Location = new System.Drawing.Point(182, 46);
@@ -127,9 +130,10 @@
             this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = global::GUI.Properties.Resources.trash_can_26px;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(495, 542);
+            this.btnXoa.Location = new System.Drawing.Point(557, 677);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(123, 36);
+            this.btnXoa.Size = new System.Drawing.Size(138, 45);
             this.btnXoa.TabIndex = 74;
             this.btnXoa.Text = "   Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -235,6 +239,7 @@
             // 
             // dGVPhimDaThem
             // 
+            this.dGVPhimDaThem.AllowUserToAddRows = false;
             this.dGVPhimDaThem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVPhimDaThem.BackgroundColor = System.Drawing.Color.White;
             this.dGVPhimDaThem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -281,10 +286,10 @@
             this.btnChinhSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChinhSua.Image = global::GUI.Properties.Resources.Edit;
             this.btnChinhSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChinhSua.Location = new System.Drawing.Point(932, 214);
-            this.btnChinhSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChinhSua.Location = new System.Drawing.Point(1049, 268);
+            this.btnChinhSua.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnChinhSua.Name = "btnChinhSua";
-            this.btnChinhSua.Size = new System.Drawing.Size(138, 36);
+            this.btnChinhSua.Size = new System.Drawing.Size(155, 45);
             this.btnChinhSua.TabIndex = 73;
             this.btnChinhSua.Text = "CHỈNH SỬA";
             this.btnChinhSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -399,6 +404,7 @@
             // 
             // dGVDanhSachPhim
             // 
+            this.dGVDanhSachPhim.AllowUserToAddRows = false;
             this.dGVDanhSachPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVDanhSachPhim.BackgroundColor = System.Drawing.Color.White;
             this.dGVDanhSachPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

@@ -28,11 +28,15 @@ namespace DAL
         {
 
         }
-        public List<HopDongPhimDTO> GetAllHopDongPhim()
+        public List<HopDongPhimDTO> GetAllHopDongPhim(string phienban = "")
         {
             List<HopDongPhimDTO> data = new List<HopDongPhimDTO>();
-            string query = "select * from HOP_DONG_PHIM where PhienBan = '0'";
-            foreach(DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            string query = "";
+            if (phienban != "")
+                 query = "select * from HOP_DONG_PHIM where PhienBan = '0'";
+            else
+                query = "select * from HOP_DONG_PHIM";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
             {
                 data.Add(GetHopDongPhimByDataRow(i));
             }

@@ -266,6 +266,8 @@
             // cbLoaiNhaCungCap
             // 
             this.cbLoaiNhaCungCap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbLoaiNhaCungCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLoaiNhaCungCap.Enabled = false;
             this.cbLoaiNhaCungCap.FormattingEnabled = true;
             this.cbLoaiNhaCungCap.Location = new System.Drawing.Point(263, 440);
             this.cbLoaiNhaCungCap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

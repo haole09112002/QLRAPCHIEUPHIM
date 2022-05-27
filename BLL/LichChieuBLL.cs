@@ -77,7 +77,6 @@ namespace BLL
                 if (i.MaPhim == MaPhim && i.NgayChieu.Day == NgayChieu.Day && i.NgayChieu.Month == NgayChieu.Month && i.NgayChieu.Year == NgayChieu.Year && i.MaKhungGioChieu == MaKhungGioChieu && i.MaPhongChieu == MaPhongChieu)
                     return "Lịch chiếu đã được tạo";
             }
-            MessageBox.Show(GetSoLuongPhimChieuTaiMotThoiDiem(MaPhim, MaKhungGioChieu, NgayChieu).ToString() + "   " + ChiTietKhoPhimBLL.Instance.GetChiTietSoLuongPhim(MaPhim).TongSoLuongPhim);
             if(GetSoLuongPhimChieuTaiMotThoiDiem(MaPhim,MaKhungGioChieu,NgayChieu) == ChiTietKhoPhimBLL.Instance.GetChiTietSoLuongPhim(MaPhim).TongSoLuongPhim)
             {
                 return "Không đủ phim để chiếu";
@@ -97,6 +96,14 @@ namespace BLL
             }
             return SoLuong;
         }
+        public void LuuLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, string TrangThai, DateTime NgayChieu)
+        {
+            LichChieuDAL.Instance.LuuLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, TrangThai, NgayChieu);
+        }
+        public void DuyetLichChieu(LichChieuDTO lichChieu)
+        {
+            LichChieuDAL.instance.CapNhatLichChieu(lichChieu);
+        }
         public string KTLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, DateTime NgayChieu)
         {
             foreach (LichChieuDTO i in GetAllLichChieu())
@@ -110,14 +117,6 @@ namespace BLL
         public void CapNhatLichChieu(LichChieuDTO lichChieu, string trangThai)
         {
             lichChieu.TrangThai = trangThai;
-            LichChieuDAL.instance.CapNhatLichChieu(lichChieu);
-        }
-        public void LuuLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, string TrangThai, DateTime NgayChieu)
-        {
-            LichChieuDAL.Instance.LuuLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, TrangThai, NgayChieu);
-        }
-        public void DuyetLichChieu(LichChieuDTO lichChieu)
-        {
             LichChieuDAL.instance.CapNhatLichChieu(lichChieu);
         }
     }

@@ -102,43 +102,51 @@ namespace BLL
             }    
             return data;
         }
-        public void  CapNhatChiTietPhongChieu(List<ChiTietPhongChieuView> l1, List<ChiTietPhongChieuView> l2)
-        {
-            bool daTonTai = false;
-            // da ton tai thi cong so luong vao l1
-            foreach (ChiTietPhongChieuView i in l1)
-            {
-               foreach(ChiTietPhongChieuView j in l2)
-               {
-                    if(i.MaVatTu == j.MaVatTu)
-                    {
-                        i.SoLuong += j.SoLuong;
-                        daTonTai = true;
-                    }
-               }
-               if(daTonTai)
-                    l2.Remove(l2.Find(x => x.MaVatTu == i.MaVatTu));
-            }
-            l1.AddRange(l2);
-            foreach (ChiTietPhongChieuView i in l1)
-            {
-                 ChiTietPhongChieuDTO phongChieuDTO = new ChiTietPhongChieuDTO
-                 {
-                     MaPhongChieu = i.MaPhongChieu,
-                     DonViTinh = i.DonViTinh,
-                     MaVatTu = i.MaVatTu,
-                     SoLuongSP = i.SoLuong
-                 };
-                CheckAddUpdateChiTietPhongChieu(phongChieuDTO);
-            }
-            XoaChiTietPhongChieu(l1);
-        }
-        public void CheckAddUpdateChiTietPhongChieu(ChiTietPhongChieuDTO pc)
+        //public void  CapNhatChiTietPhongChieu(List<ChiTietPhongChieuView> l1, List<ChiTietPhongChieuView> l2)
+        //{
+        //    bool daTonTai = false;
+        //    // da ton tai thi cong so luong vao l1
+        //    foreach (ChiTietPhongChieuView i in l1)
+        //    {
+        //       foreach(ChiTietPhongChieuView j in l2)
+        //       {
+        //            if(i.MaVatTu == j.MaVatTu)
+        //            {
+        //                i.SoLuong += j.SoLuong;
+        //                daTonTai = true;
+        //            }
+        //       }
+        //       if(daTonTai)
+        //            l2.Remove(l2.Find(x => x.MaVatTu == i.MaVatTu));
+        //    }
+        //    l1.AddRange(l2);
+        //    foreach (ChiTietPhongChieuView i in l1)
+        //    {
+        //         ChiTietPhongChieuDTO phongChieuDTO = new ChiTietPhongChieuDTO
+        //         {
+        //             MaPhongChieu = i.MaPhongChieu,
+        //             DonViTinh = i.DonViTinh,
+        //             MaVatTu = i.MaVatTu,
+        //             SoLuongSP = i.SoLuong
+        //         };
+        //        CheckAddUpdateChiTietPhongChieu(phongChieuDTO);
+        //    }
+        //    XoaChiTietPhongChieu(l1);
+        //}
+
+        public void AddUpdateChiTietPhongChieu(ChiTietPhongChieuView pc)
         {
             bool add = true;
+            ChiTietPhongChieuDTO pcDTO = new ChiTietPhongChieuDTO
+            {
+                MaPhongChieu = pc.MaPhongChieu,
+                DonViTinh = pc.DonViTinh,
+                MaVatTu = pc.MaVatTu,
+                SoLuongSP = pc.SoLuong
+            };
             foreach (ChiTietPhongChieuDTO i in GetAllVatTuByMaPhongChieu(pc.MaPhongChieu))
             {
-                if (i.MaVatTu == pc.MaVatTu)
+                if (i.MaVatTu == pcDTO.MaVatTu)
                 {
                     add = false;
                     break;
@@ -146,11 +154,17 @@ namespace BLL
             }
             if(add)
             {
-                ChiTietPhongChieuDAL.Instance.ThemChiTietPhongChieu(pc);
+                ChiTietPhongChieuDAL.Instance.ThemChiTietPhongChieu(pcDTO);
             }
             else
             {
-                ChiTietPhongChieuDAL.Instance.CapNhatChiTietPhongChieu(pc);
+                var item = GetAllVatTuByMaPhongChieu(pc.MaPhongChieu).Find(i => i.MaVatTu == pcDTO.MaVatTu);
+                if (item != null)
+                {
+                    item.SoLuongSP += pcDTO.SoLuongSP;
+                    ChiTietPhongChieuDAL.Instance.CapNhatChiTietPhongChieu(item);
+                }    
+                
             }
         }
         public void XoaChiTietPhongChieu(List<ChiTietPhongChieuView> dsCTPCVT)
@@ -175,6 +189,24 @@ namespace BLL
         public List<ChiTietPhongChieuView> TimKiemVatTuTrongPhongChieu(string txt, string maPhongChieu)
         {
             return GetAllCTPhongChieuViewByMaPhongChieu(maPhongChieu).FindAll(x => x.TenVatTu.Contains(txt) || x.MaVatTu.Contains(txt));   
+        }
+
+        public void XoaMotVatTuTrongPC(ChiTietPhongChieuDTO pc)
+        {
+            var item = GetAllChiTietPhongChieu().Find(i=>i.MaPhongChieu == pc.MaPhongChieu && i.MaVatTu == pc.MaVatTu);
+            if(item != null)
+            {
+                item.SoLuongSP -= pc.SoLuongSP;
+                if(item.SoLuongSP > 0)
+                {
+                    ChiTietPhongChieuDAL.Instance.CapNhatChiTietPhongChieu(item);
+                }
+                else
+                {
+                    ChiTietPhongChieuDAL.Instance.XoaChiTietPhongChieu(item);
+                }
+            }
+
         }
     }
 }
