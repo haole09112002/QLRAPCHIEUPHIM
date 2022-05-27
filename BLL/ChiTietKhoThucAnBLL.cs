@@ -75,16 +75,6 @@ namespace BLL
 
             };
         }
-        public List<ChiTietKhoThucAnDTO> GetListChiTietKhoThucAnByMaKho(string MaKho)
-        {
-            List<ChiTietKhoThucAnDTO> data = new List<ChiTietKhoThucAnDTO>();
-            foreach (ChiTietKhoThucAnDTO i in GetAllChiTietKhoThucAn())
-            {
-                if (i.MaKho == MaKho)
-                    data.Add(i);
-            }
-            return data;
-        }
         public List<ChiTietKhoThucAnViewDTO> GetAllChiTietKhoThucAnView(string txt)
         {
             List<ChiTietKhoThucAnViewDTO> data = new List<ChiTietKhoThucAnViewDTO>();
