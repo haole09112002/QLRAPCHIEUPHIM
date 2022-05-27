@@ -68,6 +68,7 @@
             // cBTimKiem
             // 
             this.cBTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBTimKiem.FormattingEnabled = true;
             this.cBTimKiem.Items.AddRange(new object[] {
@@ -171,6 +172,7 @@
             // cBSapXep
             // 
             this.cBSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBSapXep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBSapXep.FormattingEnabled = true;
             this.cBSapXep.Items.AddRange(new object[] {
