@@ -172,6 +172,7 @@ namespace BLL
         public string KiemTraDuLieu(NhanVienDTO nhanVien)
         {
 
+
             if (nhanVien.TenNhanVien == "")
                 return "Họ và Tên còn trống!";
             if (nhanVien.DiaChi == "")

@@ -28,6 +28,8 @@ namespace GUI.QLVT_GUI
             lbTenNhanVien.Text = nhanVien.TenNhanVien;
             ucMenuDeXuatQLVT = new UCMenuDeXuatQLVT(nhanVien);
             ucHoSoCaNhanQLVT = new UCHoSoCaNhanQLVT(nhanVien);
+            AddControlsToPnCenter(ucHoSoCaNhanQLVT);
+            changeColorButton(btnCaNhan);
 
         }
         private void changeColorButton(Button btn)
@@ -59,6 +61,7 @@ namespace GUI.QLVT_GUI
         private void btnDeXuat_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
+            //ucMenuDeXuatQLVT.ucDaDeXuatThucAnQLVT()
             AddControlsToPnMenu(ucMenuDeXuatQLVT);
             ucMenuDeXuatQLVT.setColor();
             AddControlsToPnCenter(ucMenuDeXuatQLVT.ucDaDeXuatThucAnQLVT);
@@ -79,6 +82,8 @@ namespace GUI.QLVT_GUI
         private void btnNhaCungCap_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
+            ucMenuNhaCungUngQLVT.ucNhaCungUngThucAnQLVT.SetGUI();
+            ucMenuNhaCungUngQLVT.ucNhaCungUngVatTuQLVT.SetGUI();
             AddControlsToPnMenu(ucMenuNhaCungUngQLVT);
             ucMenuNhaCungUngQLVT.setColor();
             AddControlsToPnCenter(ucMenuNhaCungUngQLVT.ucNhaCungUngThucAnQLVT);
@@ -89,6 +94,7 @@ namespace GUI.QLVT_GUI
         private void btnSanPham_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
+            ucThongTinSanPhamQLVT.SetGUI();
             AddControlsToPnCenter(ucThongTinSanPhamQLVT);
             changeColorButton(btnSanPham);
         }
@@ -103,6 +109,7 @@ namespace GUI.QLVT_GUI
         private void btnCaNhan_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
+            ucHoSoCaNhanQLVT.Reload();
             AddControlsToPnCenter(ucHoSoCaNhanQLVT);
             changeColorButton(btnCaNhan);
         }

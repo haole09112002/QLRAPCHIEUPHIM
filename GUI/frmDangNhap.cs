@@ -24,7 +24,6 @@ namespace GUI
         }
         private void btnDN_Click(object sender, EventArgs e)
         {
-
             int result = NhanVienBLL.Instance.KiemTraDangNhap(txtTenTaiKhoan.Text, txtMatKhau.Text);
             if (result == 0)
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu! Vui lòng kiểm tra lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -45,5 +45,31 @@ namespace BLL
             }
             return data;
         }
+        public List<CBBItem> GetCBBCaLamViec()
+        {
+            List<CBBItem> data = new List<CBBItem>();
+            foreach (CaLamViecDTO i in CaLamViecDAL.Instance.GetAllCaLamViec())
+            {
+                data.Add(new CBBItem
+                { Value = i.MaCa, Text = i.TenCa });
+            }
+            return data;
+        }
+        public CBBItem GetCBBCaLamViecByMaCaLamViec(string maCaLamViec)
+        {
+            CBBItem data = new CBBItem();
+            foreach (CaLamViecDTO i in CaLamViecDAL.Instance.GetAllCaLamViec())
+            {
+                if(i.MaCa == maCaLamViec)
+                {
+                    return new CBBItem
+                    { 
+                        Value = i.MaCa,
+                        Text = i.TenCa,
+                    };
+                }
+            }
+            return data;
+        }
     }
 }

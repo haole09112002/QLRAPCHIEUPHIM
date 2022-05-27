@@ -136,6 +136,7 @@
             // cbbSapXep
             // 
             this.cbbSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbbSapXep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSapXep.FormattingEnabled = true;
             this.cbbSapXep.Location = new System.Drawing.Point(122, 50);
@@ -148,6 +149,7 @@
             // cbbLoaiKho
             // 
             this.cbbLoaiKho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbbLoaiKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLoaiKho.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbLoaiKho.FormattingEnabled = true;
             this.cbbLoaiKho.Location = new System.Drawing.Point(122, 13);

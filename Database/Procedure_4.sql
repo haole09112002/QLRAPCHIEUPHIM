@@ -273,14 +273,27 @@ begin
 	where MaPhongChieu = @MaPhongChieu
 end
 ---CapNhatLichChieu
+
 create proc CapNhatLichChieu
 	@MaPhim varchar(6), 
 	@MaPhongChieu varchar(6),
-	@MaKhungGio varchar(8),
+	@MaKhungGioChieu varchar(8),
 	@NgayChieu date,
 	@TrangThai varchar(1)
 as
 begin
-	Update LICH_CHIEU set	MaPhongChieu = @MaPhongChieu , MaKhungGioChieu=@MaKhungGio , NgayChieu=@NgayChieu ,	TrangThai = @TrangThai
-	where MaPhim = @MaPhim
+	Update LICH_CHIEU set TrangThai = @TrangThai
+	where MaPhim = @MaPhim and MaPhongChieu = @MaPhongChieu and MaKhungGioChieu=@MaKhungGioChieu and NgayChieu=@NgayChieu 
+end
+---CapnhatDeXuat
+create proc CapNhatDeXuat
+	@MaDeXuat varchar(6), 
+	@MaNhanVien varchar(6),
+	@MaLoaiDeXuat varchar(8),
+	@NgayDeXuat date,
+	@TrangThai varchar(1)
+as
+begin
+	Update DE_XUAT set TrangThai = @TrangThai
+	where MaDeXuat = @MaDeXuat and MaNhanVien = @MaNhanVien and MaLoaiDeXuat=@MaLoaiDeXuat and NgayDeXuat=@NgayDeXuat 
 end

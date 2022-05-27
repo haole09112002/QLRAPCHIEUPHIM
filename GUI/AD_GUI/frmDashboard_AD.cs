@@ -92,6 +92,7 @@ namespace GUI.AD_GUI
         private void btnNV_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
+            ucMenuNhanVien.ucCaLam.ReLoad();
             AddControlsToPnMenu(ucMenuNhanVien);
             ucMenuNhanVien.setColor();
             AddControlsToPnCenter(ucMenuNhanVien.ucThongTinNV);
