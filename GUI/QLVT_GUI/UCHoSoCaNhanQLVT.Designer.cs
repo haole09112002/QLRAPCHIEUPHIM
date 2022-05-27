@@ -137,14 +137,6 @@
             this.dgvListCaLamViec.Location = new System.Drawing.Point(21, 98);
             this.dgvListCaLamViec.Name = "dgvListCaLamViec";
             this.dgvListCaLamViec.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListCaLamViec.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListCaLamViec.RowHeadersWidth = 51;
             this.dgvListCaLamViec.RowTemplate.Height = 24;
             this.dgvListCaLamViec.Size = new System.Drawing.Size(468, 210);
