@@ -132,5 +132,33 @@ namespace BLL
             }
             return list.Distinct().ToList();
         }
+        public List<string> GetDanhSachMaVatTuCoHopDong()
+        {
+            List<string> data = new List<string>();
+            foreach (HopDongVatTuDTO i in HopDongVatTuDAL.Instance.GetAllHopDongVatTu())
+            {
+                data.Add(i.MaVatTu);
+            }
+            return data.Distinct().ToList();
+        }
+        public List<HopDongVatTuDTO> GetAllHopDongVatTu()
+        {
+            return HopDongVatTuDAL.Instance.GetAllHopDongVatTu();
+        }
+        public TongSoLuongVatTuDTO GetChiTietTSLVatTuByMaVatTu(string MaVatTu)
+        {
+            foreach (TongSoLuongVatTuDTO i in GetTongSoLuongCuaTungVatTu())
+            {
+                if (i.MaVatTu == MaVatTu)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+        public List<TongSoLuongVatTuDTO> GetTongSoLuongCuaTungVatTu()
+        {
+            return HopDongVatTuDAL.Instance.GetTongSoLuongCuaTungVatTu();
+        }
     }
 }

@@ -93,6 +93,17 @@ namespace BLL
             }
             LichLamViecDAL.Instance.ThemLichLamViec(maNhanVien, maCa, ngayLamViec);
         }
+        public string KiemTraLichLamViec(string maNhanVien,string maCa,DateTime ngayLamViec)
+        {
+            foreach(LichLamViecDTO i in GetAllLichLamViec())
+            {
+                if (i.MaNhanVien == maNhanVien && i.MaCa == maCa && i.NgayLamViec.Day == ngayLamViec.Day && i.NgayLamViec.Month == ngayLamViec.Month && i.NgayLamViec.Year == ngayLamViec.Year)
+                {
+                    return "Nhân Viên đã có lịch làm việc vào ngày này!";
+                }
+            }
+            return "";
+        }
 
     }
 }

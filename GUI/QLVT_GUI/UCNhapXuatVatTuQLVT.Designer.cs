@@ -36,7 +36,14 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnListNhapXuatVatTu = new System.Windows.Forms.Panel();
+            this.lblChonLoaiTimKiem = new System.Windows.Forms.Label();
+            this.cboTimKiem = new System.Windows.Forms.ComboBox();
+            this.dgvListPhieuNhapXuatVatTu = new System.Windows.Forms.DataGridView();
             this.btnTaoPhieu = new System.Windows.Forms.Button();
             this.btnSapXep = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -49,6 +56,7 @@
             this.dgvListNhapXuatVatTu = new System.Windows.Forms.DataGridView();
             this.lblListNhapXuatVatTu = new System.Windows.Forms.Label();
             this.pnListNhapXuatVatTu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListPhieuNhapXuatVatTu)).BeginInit();
             this.grpSelect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListNhapXuatVatTu)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +64,9 @@
             // pnListNhapXuatVatTu
             // 
             this.pnListNhapXuatVatTu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnListNhapXuatVatTu.Controls.Add(this.lblChonLoaiTimKiem);
+            this.pnListNhapXuatVatTu.Controls.Add(this.cboTimKiem);
+            this.pnListNhapXuatVatTu.Controls.Add(this.dgvListPhieuNhapXuatVatTu);
             this.pnListNhapXuatVatTu.Controls.Add(this.btnTaoPhieu);
             this.pnListNhapXuatVatTu.Controls.Add(this.btnSapXep);
             this.pnListNhapXuatVatTu.Controls.Add(this.btnTimKiem);
@@ -69,6 +80,67 @@
             this.pnListNhapXuatVatTu.Size = new System.Drawing.Size(1317, 736);
             this.pnListNhapXuatVatTu.TabIndex = 3;
             // 
+            // lblChonLoaiTimKiem
+            // 
+            this.lblChonLoaiTimKiem.BackColor = System.Drawing.SystemColors.Control;
+            this.lblChonLoaiTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChonLoaiTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblChonLoaiTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblChonLoaiTimKiem.Location = new System.Drawing.Point(367, 117);
+            this.lblChonLoaiTimKiem.Name = "lblChonLoaiTimKiem";
+            this.lblChonLoaiTimKiem.Size = new System.Drawing.Size(175, 19);
+            this.lblChonLoaiTimKiem.TabIndex = 84;
+            this.lblChonLoaiTimKiem.Text = "*Chọn loại tìm kiếm";
+            // 
+            // cboTimKiem
+            // 
+            this.cboTimKiem.BackColor = System.Drawing.Color.White;
+            this.cboTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTimKiem.FormattingEnabled = true;
+            this.cboTimKiem.Items.AddRange(new object[] {
+            "Tên Nhân Viên",
+            "Ngày Lập Phiếu"});
+            this.cboTimKiem.Location = new System.Drawing.Point(360, 138);
+            this.cboTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboTimKiem.Name = "cboTimKiem";
+            this.cboTimKiem.Size = new System.Drawing.Size(194, 27);
+            this.cboTimKiem.TabIndex = 51;
+            this.cboTimKiem.SelectedIndexChanged += new System.EventHandler(this.cboTimKiem_SelectedIndexChanged);
+            // 
+            // dgvListPhieuNhapXuatVatTu
+            // 
+            this.dgvListPhieuNhapXuatVatTu.AllowUserToAddRows = false;
+            this.dgvListPhieuNhapXuatVatTu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListPhieuNhapXuatVatTu.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListPhieuNhapXuatVatTu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvListPhieuNhapXuatVatTu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListPhieuNhapXuatVatTu.Location = new System.Drawing.Point(659, 190);
+            this.dgvListPhieuNhapXuatVatTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListPhieuNhapXuatVatTu.Name = "dgvListPhieuNhapXuatVatTu";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListPhieuNhapXuatVatTu.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvListPhieuNhapXuatVatTu.RowHeadersWidth = 62;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvListPhieuNhapXuatVatTu.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvListPhieuNhapXuatVatTu.RowTemplate.Height = 28;
+            this.dgvListPhieuNhapXuatVatTu.Size = new System.Drawing.Size(642, 524);
+            this.dgvListPhieuNhapXuatVatTu.TabIndex = 50;
+            // 
             // btnTaoPhieu
             // 
             this.btnTaoPhieu.BackColor = System.Drawing.Color.Silver;
@@ -76,7 +148,7 @@
             this.btnTaoPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaoPhieu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoPhieu.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.btnTaoPhieu.Location = new System.Drawing.Point(573, 135);
+            this.btnTaoPhieu.Location = new System.Drawing.Point(659, 133);
             this.btnTaoPhieu.Name = "btnTaoPhieu";
             this.btnTaoPhieu.Size = new System.Drawing.Size(154, 36);
             this.btnTaoPhieu.TabIndex = 49;
@@ -89,27 +161,30 @@
             // 
             this.btnSapXep.BackColor = System.Drawing.Color.Cyan;
             this.btnSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSapXep.Enabled = false;
             this.btnSapXep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSapXep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSapXep.Image = global::GUI.Properties.Resources.Sort;
             this.btnSapXep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSapXep.Location = new System.Drawing.Point(933, 134);
+            this.btnSapXep.Location = new System.Drawing.Point(1178, 136);
             this.btnSapXep.Margin = new System.Windows.Forms.Padding(4);
             this.btnSapXep.Name = "btnSapXep";
             this.btnSapXep.Size = new System.Drawing.Size(123, 37);
             this.btnSapXep.TabIndex = 32;
             this.btnSapXep.Text = "    SẮP XẾP";
             this.btnSapXep.UseVisualStyleBackColor = false;
+            this.btnSapXep.Click += new System.EventHandler(this.btnSapXep_Click);
             // 
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.Cyan;
             this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimKiem.Enabled = false;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(40, 134);
+            this.btnTimKiem.Location = new System.Drawing.Point(24, 134);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(123, 36);
@@ -117,12 +192,13 @@
             this.btnTimKiem.Text = "TÌM KIẾM";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
             this.txtTimKiem.BackColor = System.Drawing.Color.White;
             this.txtTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(181, 140);
+            this.txtTimKiem.Location = new System.Drawing.Point(154, 138);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(194, 28);
@@ -138,7 +214,7 @@
             this.grpSelect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpSelect.Name = "grpSelect";
             this.grpSelect.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpSelect.Size = new System.Drawing.Size(1226, 60);
+            this.grpSelect.Size = new System.Drawing.Size(1226, 70);
             this.grpSelect.TabIndex = 30;
             this.grpSelect.TabStop = false;
             this.grpSelect.Text = "CHỌN XEM PHIẾU NHẬP XUẤT";
@@ -154,6 +230,7 @@
             this.rbXuatVatTu.TabIndex = 2;
             this.rbXuatVatTu.Text = "Xem Danh Sách Phiếu Xuất Vật Tư";
             this.rbXuatVatTu.UseVisualStyleBackColor = true;
+            this.rbXuatVatTu.CheckedChanged += new System.EventHandler(this.rbXuatVatTu_CheckedChanged);
             // 
             // rbNhapVatTu
             // 
@@ -166,6 +243,7 @@
             this.rbNhapVatTu.TabIndex = 1;
             this.rbNhapVatTu.Text = "Xem Danh Sách Phiếu Nhập Vật Tư";
             this.rbNhapVatTu.UseVisualStyleBackColor = true;
+            this.rbNhapVatTu.CheckedChanged += new System.EventHandler(this.rbNhapVatTu_CheckedChanged);
             // 
             // rbTatCa
             // 
@@ -180,47 +258,57 @@
             this.rbTatCa.TabStop = true;
             this.rbTatCa.Text = "Tất Cả";
             this.rbTatCa.UseVisualStyleBackColor = true;
+            this.rbTatCa.CheckedChanged += new System.EventHandler(this.rbTatCa_CheckedChanged);
             // 
             // cboSapXep
             // 
             this.cboSapXep.BackColor = System.Drawing.Color.White;
             this.cboSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboSapXep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSapXep.FormattingEnabled = true;
-            this.cboSapXep.Location = new System.Drawing.Point(1073, 140);
+            this.cboSapXep.Items.AddRange(new object[] {
+            "Tên Nhân Viên",
+            "Ngày Lập Phiếu"});
+            this.cboSapXep.Location = new System.Drawing.Point(838, 140);
             this.cboSapXep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboSapXep.Name = "cboSapXep";
-            this.cboSapXep.Size = new System.Drawing.Size(194, 27);
+            this.cboSapXep.Size = new System.Drawing.Size(315, 27);
             this.cboSapXep.TabIndex = 29;
+            this.cboSapXep.SelectedIndexChanged += new System.EventHandler(this.cboSapXep_SelectedIndexChanged);
             // 
             // dgvListNhapXuatVatTu
             // 
+            this.dgvListNhapXuatVatTu.AllowUserToAddRows = false;
             this.dgvListNhapXuatVatTu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListNhapXuatVatTu.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListNhapXuatVatTu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListNhapXuatVatTu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListNhapXuatVatTu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListNhapXuatVatTu.Location = new System.Drawing.Point(17, 190);
             this.dgvListNhapXuatVatTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvListNhapXuatVatTu.Name = "dgvListNhapXuatVatTu";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListNhapXuatVatTu.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListNhapXuatVatTu.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvListNhapXuatVatTu.RowHeadersWidth = 62;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvListNhapXuatVatTu.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvListNhapXuatVatTu.RowTemplate.Height = 28;
-            this.dgvListNhapXuatVatTu.Size = new System.Drawing.Size(1275, 524);
+            this.dgvListNhapXuatVatTu.Size = new System.Drawing.Size(625, 524);
             this.dgvListNhapXuatVatTu.TabIndex = 27;
+            this.dgvListNhapXuatVatTu.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListNhapXuatVatTu_CellDoubleClick);
             // 
             // lblListNhapXuatVatTu
             // 
@@ -244,6 +332,7 @@
             this.Size = new System.Drawing.Size(1352, 766);
             this.pnListNhapXuatVatTu.ResumeLayout(false);
             this.pnListNhapXuatVatTu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListPhieuNhapXuatVatTu)).EndInit();
             this.grpSelect.ResumeLayout(false);
             this.grpSelect.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListNhapXuatVatTu)).EndInit();
@@ -267,5 +356,8 @@
         private System.Windows.Forms.ComboBox cboSapXep;
         private System.Windows.Forms.DataGridView dgvListNhapXuatVatTu;
         private System.Windows.Forms.Label lblListNhapXuatVatTu;
+        private System.Windows.Forms.DataGridView dgvListPhieuNhapXuatVatTu;
+        private System.Windows.Forms.ComboBox cboTimKiem;
+        private System.Windows.Forms.Label lblChonLoaiTimKiem;
     }
 }

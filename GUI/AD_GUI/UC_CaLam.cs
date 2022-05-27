@@ -235,32 +235,41 @@ namespace GUI.AD_GUI
 
         private void UC_CaLam_Leave(object sender, EventArgs e)
         {
-            if (btnThem.Enabled == true || txtMaNhanVien.Text == "" || txtTenNhanVien.Text == "")
-            {
-                DialogResult dialogResult = MessageBox.Show("Thông tin chưa lưu, có muốn thoát", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (dialogResult == DialogResult.OK)
-                {
-                    ReLoad();
-                }
-            }
+            //if (btnThem.Enabled == true || txtMaNhanVien.Text == "" || txtTenNhanVien.Text == "")
+            //{
+            //    DialogResult dialogResult = MessageBox.Show("Thông tin chưa lưu, có muốn thoát", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            //    if (dialogResult == DialogResult.OK)
+            //    {
+            //        ReLoad();
+            //    }
+            //}
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (checkChonRowDGVNhanVien() == true)
             {
-                DialogResult dialogResult = MessageBox.Show("Xác nhận xóa", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult dialogResult = MessageBox.Show("Xác nhận thêm", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.OK)
                 {
-                    string maNhanVien;
-                    string maCa;
-                    DateTime ngayLamViec;
+                    
+                    string KiemTra = LichLamViecBLL.Instance.KiemTraLichLamViec(txtMaNhanVien.Text,((CBBItem)cboThemCaLamViec.SelectedItem).Value , dtpThemNgayLamViec.Value);
+                    if(KiemTra == "")
+                    {
+                        string maNhanVien;
+                        string maCa;
+                        DateTime ngayLamViec;
                         maNhanVien = txtMaNhanVien.Text;
                         maCa = cboThemCaLamViec.Text;
                         ngayLamViec = dtpThemNgayLamViec.Value;
                         LichLamViecBLL.Instance.ThemLichLamViec(maNhanVien, maCa, ngayLamViec);
                         MessageBox.Show("thêm lịch làm việc thành công!");
                         LoadListLamViec();
+                    }
+                    else
+                    {
+                        MessageBox.Show(KiemTra, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }

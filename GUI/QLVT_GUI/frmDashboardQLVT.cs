@@ -19,7 +19,7 @@ namespace GUI.QLVT_GUI
         UCPhongChieuQLVT ucPhongChieuQLVT = new UCPhongChieuQLVT();
         UCMenuDeXuatQLVT ucMenuDeXuatQLVT;
         UCMenuNhaCungUngQLVT ucMenuNhaCungUngQLVT = new UCMenuNhaCungUngQLVT();
-        UCMenuNhapXuatQLVT ucMenuNhapXuatQLVT = new UCMenuNhapXuatQLVT();
+        UCMenuNhapXuatQLVT ucMenuNhapXuatQLVT;
         UCHoSoCaNhanQLVT ucHoSoCaNhanQLVT;
         public FrmDashboardQLVT(NhanVienDTO NV)
         {
@@ -28,6 +28,7 @@ namespace GUI.QLVT_GUI
             lbTenNhanVien.Text = nhanVien.TenNhanVien;
             ucMenuDeXuatQLVT = new UCMenuDeXuatQLVT(nhanVien);
             ucHoSoCaNhanQLVT = new UCHoSoCaNhanQLVT(nhanVien);
+            ucMenuNhapXuatQLVT = new UCMenuNhapXuatQLVT(nhanVien);
             AddControlsToPnCenter(ucHoSoCaNhanQLVT);
             changeColorButton(btnCaNhan);
 

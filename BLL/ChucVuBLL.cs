@@ -38,5 +38,16 @@ namespace BLL
             }
             return data;
         }
+        public ChucVuDTO GetChucVuByMaChucVu(string maChucVu)
+        {
+            foreach (ChucVuDTO i in ChucVuDAL.Instance.GetAllChucVu())
+            {
+                if (i.MaChucVu == maChucVu)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
     }
 }
