@@ -66,6 +66,16 @@ namespace BLL
 
             };
         }
+        public List<ChiTietKhoThucAnDTO> GetListChiTietKhoThucAnByMaKho(string MaKho)
+        {
+            List<ChiTietKhoThucAnDTO> data = new List<ChiTietKhoThucAnDTO>();
+            foreach (ChiTietKhoThucAnDTO i in GetAllChiTietKhoThucAn())
+            {
+                if (i.MaKho == MaKho)
+                    data.Add(i);
+            }
+            return data;
+        }
         public List<ChiTietKhoThucAnViewDTO> GetAllChiTietKhoThucAnView(string txt)
         {
             List<ChiTietKhoThucAnViewDTO> data = new List<ChiTietKhoThucAnViewDTO>();
@@ -128,6 +138,15 @@ namespace BLL
         public void KiemTraThongTinChiTietThucAnTrongKho(string maThucAn, int soLuong, string DonViTinh)
         {
 
+        }
+        public List<ThucAnDTO> GetListThucAnByMaKho(string MaKho)
+        {
+            List<ThucAnDTO> data = new List<ThucAnDTO>();
+            foreach (ChiTietKhoThucAnDTO i in GetListChiTietKhoThucAnByMaKho(MaKho))
+            {
+                data.Add(ThucAnBLL.Instance.GetThucAnByMaThucAn(i.MaThucAn));
+            }
+            return data;
         }
     }
 }
