@@ -68,9 +68,8 @@
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnLeft.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pnLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(249, 1094);
+            this.pnLeft.Size = new System.Drawing.Size(221, 875);
             this.pnLeft.TabIndex = 1;
             // 
             // label1
@@ -191,10 +190,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GUI.Properties.Resources.logo;
-            this.pictureBox2.Location = new System.Drawing.Point(78, 36);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(69, 29);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(83, 95);
+            this.pictureBox2.Size = new System.Drawing.Size(74, 76);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
@@ -209,10 +207,9 @@
             this.btnDeXuat.ForeColor = System.Drawing.Color.White;
             this.btnDeXuat.Image = global::GUI.Properties.Resources.MenuDeXuat;
             this.btnDeXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeXuat.Location = new System.Drawing.Point(1, 209);
-            this.btnDeXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDeXuat.Location = new System.Drawing.Point(1, 167);
             this.btnDeXuat.Name = "btnDeXuat";
-            this.btnDeXuat.Size = new System.Drawing.Size(248, 88);
+            this.btnDeXuat.Size = new System.Drawing.Size(220, 70);
             this.btnDeXuat.TabIndex = 11;
             this.btnDeXuat.Text = "    Đề Xuất";
             this.btnDeXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -230,10 +227,9 @@
             this.btnSanPham.ForeColor = System.Drawing.Color.Snow;
             this.btnSanPham.Image = global::GUI.Properties.Resources.MenuProduct;
             this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSanPham.Location = new System.Drawing.Point(1, 509);
-            this.btnSanPham.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSanPham.Location = new System.Drawing.Point(1, 407);
             this.btnSanPham.Name = "btnSanPham";
-            this.btnSanPham.Size = new System.Drawing.Size(248, 88);
+            this.btnSanPham.Size = new System.Drawing.Size(220, 70);
             this.btnSanPham.TabIndex = 5;
             this.btnSanPham.Text = "   Sản Phẩm";
             this.btnSanPham.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -250,10 +246,9 @@
             this.btnPhongChieu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPhongChieu.Image = global::GUI.Properties.Resources.MenuCinemaRoom;
             this.btnPhongChieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhongChieu.Location = new System.Drawing.Point(1, 608);
-            this.btnPhongChieu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPhongChieu.Location = new System.Drawing.Point(1, 486);
             this.btnPhongChieu.Name = "btnPhongChieu";
-            this.btnPhongChieu.Size = new System.Drawing.Size(246, 88);
+            this.btnPhongChieu.Size = new System.Drawing.Size(219, 70);
             this.btnPhongChieu.TabIndex = 7;
             this.btnPhongChieu.Text = "   Phòng Chiếu";
             this.btnPhongChieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -270,10 +265,9 @@
             this.btnNhaCungUng.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNhaCungUng.Image = global::GUI.Properties.Resources.ncc;
             this.btnNhaCungUng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhaCungUng.Location = new System.Drawing.Point(3, 408);
-            this.btnNhaCungUng.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnNhaCungUng.Location = new System.Drawing.Point(3, 326);
             this.btnNhaCungUng.Name = "btnNhaCungUng";
-            this.btnNhaCungUng.Size = new System.Drawing.Size(244, 88);
+            this.btnNhaCungUng.Size = new System.Drawing.Size(217, 70);
             this.btnNhaCungUng.TabIndex = 6;
             this.btnNhaCungUng.Text = "   Nhà Cung Ứng";
             this.btnNhaCungUng.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -291,10 +285,9 @@
             this.btnCaNhan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCaNhan.Image = global::GUI.Properties.Resources.canhan;
             this.btnCaNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaNhan.Location = new System.Drawing.Point(0, 701);
-            this.btnCaNhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCaNhan.Location = new System.Drawing.Point(0, 561);
             this.btnCaNhan.Name = "btnCaNhan";
-            this.btnCaNhan.Size = new System.Drawing.Size(249, 88);
+            this.btnCaNhan.Size = new System.Drawing.Size(221, 70);
             this.btnCaNhan.TabIndex = 9;
             this.btnCaNhan.Text = "   Cá nhân";
             this.btnCaNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -311,10 +304,9 @@
             this.btnDangXuat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDangXuat.Image = global::GUI.Properties.Resources.logout;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(2, 798);
-            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDangXuat.Location = new System.Drawing.Point(2, 638);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(243, 88);
+            this.btnDangXuat.Size = new System.Drawing.Size(216, 70);
             this.btnDangXuat.TabIndex = 8;
             this.btnDangXuat.Text = "   Đăng xuất";
             this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -331,10 +323,9 @@
             this.btnNhapXuatKho.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNhapXuatKho.Image = global::GUI.Properties.Resources.MenuWareHouse1;
             this.btnNhapXuatKho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhapXuatKho.Location = new System.Drawing.Point(0, 305);
-            this.btnNhapXuatKho.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnNhapXuatKho.Location = new System.Drawing.Point(0, 244);
             this.btnNhapXuatKho.Name = "btnNhapXuatKho";
-            this.btnNhapXuatKho.Size = new System.Drawing.Size(250, 88);
+            this.btnNhapXuatKho.Size = new System.Drawing.Size(222, 70);
             this.btnNhapXuatKho.TabIndex = 4;
             this.btnNhapXuatKho.Text = "   Nhập/Xuất Kho";
             this.btnNhapXuatKho.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -344,16 +335,15 @@
             // 
             // FrmDashboardQLVT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1770, 1094);
+            this.ClientSize = new System.Drawing.Size(1573, 875);
             this.Controls.Add(this.pnMenuContent);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.pnTop);
             this.Controls.Add(this.pnLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmDashboardQLVT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDashboard_AD";
