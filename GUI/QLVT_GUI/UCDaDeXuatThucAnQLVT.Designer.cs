@@ -83,6 +83,7 @@
             // 
             // dgvListDeXuatThucAn
             // 
+            this.dgvListDeXuatThucAn.AllowUserToAddRows = false;
             this.dgvListDeXuatThucAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListDeXuatThucAn.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -128,6 +129,7 @@
             // 
             // dgvListChiTietDeXuat
             // 
+            this.dgvListChiTietDeXuat.AllowUserToAddRows = false;
             this.dgvListChiTietDeXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvListChiTietDeXuat.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;

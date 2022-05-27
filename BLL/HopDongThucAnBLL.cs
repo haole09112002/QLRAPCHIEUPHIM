@@ -26,6 +26,10 @@ namespace BLL
         }
 
         private HopDongThucAnBLL() { }
+        public List<HopDongThucAnDTO> GetAllHopDongThucAn()
+        {
+            return HopDongThucAnDAL.Instance.GetAllHopDongThucAn();
+        }
         public HopDongThucAnView GetHopDongTAViewByHopDongTADTO(HopDongThucAnDTO thucAnDTO)
         {
             HopDongThucAnView thucAnView = new HopDongThucAnView();
@@ -134,6 +138,30 @@ namespace BLL
                 list.Add(i.DonViTinh);
             }
             return list.Distinct().ToList();
+        }
+        public List<string> GetDanhSachMaThucAnCoHopDong()
+        {
+            List<string> data = new List<string>();
+            foreach (HopDongThucAnDTO i in HopDongThucAnDAL.Instance.GetAllHopDongThucAn())
+            {
+                data.Add(i.MaThucAn);
+            }
+            return data.Distinct().ToList();
+        }
+        public TongSoLuongThucAnDTO GetChiTietTSLThucAnByMaThucAn(string MaThucAn)
+        {
+            foreach (TongSoLuongThucAnDTO i in GetTongSoLuongCuaTungThucAn())
+            {
+                if (i.MaThucAn == MaThucAn)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+        public List<TongSoLuongThucAnDTO> GetTongSoLuongCuaTungThucAn()
+        {
+            return HopDongThucAnDAL.Instance.GetTongSoLuongCuaTungThucAn();
         }
     }
 }

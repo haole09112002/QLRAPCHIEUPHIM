@@ -24,7 +24,7 @@ namespace DAL
             {
                 if (_Instance == null)
                 {
-                    string cnnstr = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
+                     string cnnstr = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
                     //string cnnstr = @"Data Source=LAPTOP-V5PULHUU\MSSQLSERVER01;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
                     _Instance = new DBHelper(cnnstr);
                 }

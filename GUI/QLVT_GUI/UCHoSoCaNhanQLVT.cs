@@ -22,7 +22,7 @@ namespace GUI.QLVT_GUI
         }
         public void Reload()
         {
-            if (nhanVien.GioiTinh == false)
+            if (nhanVien.GioiTinh == true)
             {
                 rbNam.Checked = true;
             }
@@ -30,6 +30,7 @@ namespace GUI.QLVT_GUI
             {
                 rbNu.Checked = true;
             }
+            lblChucVu.Text = ChucVuBLL.Instance.GetChucVuByMaChucVu(nhanVien.MaChucVu).TenChucVu;
             txtTen.Text = nhanVien.TenNhanVien;
             dtpNgaySinh.Value = nhanVien.NgaySinh;
             txtDiaChi.Text = nhanVien.DiaChi;
@@ -186,7 +187,7 @@ namespace GUI.QLVT_GUI
             lblErrorDiaChi.Visible = false;
             lblErrorDienThoai.Visible = false;
             btnChinhSua.Enabled = true;
-            if (nhanVien.TenNhanVien == txtTen.Text && nhanVien.GioiTinh != rbNam.Checked
+            if (nhanVien.TenNhanVien == txtTen.Text && nhanVien.GioiTinh == rbNam.Checked
                 && nhanVien.NgaySinh.ToShortDateString() == dtpNgaySinh.Value.ToShortDateString()
                 && nhanVien.DiaChi == txtDiaChi.Text && nhanVien.SoDienThoai == txtDienThoai.Text
                 && nhanVien.CCCD1 == txtCCCD.Text)
@@ -235,7 +236,7 @@ namespace GUI.QLVT_GUI
         }
         public void CheckEdit()
         {
-            if (nhanVien.TenNhanVien == txtTen.Text && nhanVien.GioiTinh != rbNam.Checked
+            if (nhanVien.TenNhanVien == txtTen.Text && nhanVien.GioiTinh == rbNam.Checked
                 && nhanVien.NgaySinh.ToShortDateString() == dtpNgaySinh.Value.ToShortDateString()
                 && nhanVien.DiaChi == txtDiaChi.Text && nhanVien.SoDienThoai == txtDienThoai.Text
                 && nhanVien.CCCD1 == txtCCCD.Text)
@@ -259,6 +260,15 @@ namespace GUI.QLVT_GUI
                 {
                     Reload();
                 }
+            }
+        }
+        private void btnThemAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif; *.jpg; *.jpeg; *.bmp; *.wmf; *.png";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pBAnhPhim.ImageLocation = openFileDialog.FileName;
             }
         }
     }

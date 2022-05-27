@@ -48,5 +48,9 @@ namespace BLL
             }
             return data.Distinct().ToList();
         }
+        public void LuuChiTietPhieuThucAn(string MaPhieu, string MaThucAn, string DonViTinh, int SoLuong)
+        {
+            ChiTietPhieuThucAnDAL.Instance.LuuChiTietPhieuThucAn(MaPhieu, MaThucAn, DonViTinh, SoLuong);
+        }
     }
 }
