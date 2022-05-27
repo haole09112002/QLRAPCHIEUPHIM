@@ -60,19 +60,31 @@ namespace GUI.QLVT_GUI
         {
             dgvListVatTuKho.DataSource = null;
             dgvListVatTuKho.DataSource = dsVatTuTrongKho;
-            dgvListVatTuKho.Columns["MaKho"].Visible = false;
+            dgvListVatTuKho.Columns["MaVatTu"].HeaderText = "Mã vật tư";
+            dgvListVatTuKho.Columns["TenVatTu"].HeaderText = "Tên vật tư";
+            dgvListVatTuKho.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+            dgvListVatTuKho.Columns["SoLuongSP"].HeaderText = "Số lượng";
+            dgvListVatTuKho.Columns["MaKho"].Visible = false; 
         }
         private void LoadDGVVatTuCoSan()
         {
             dgvVatTuCoSan.DataSource = null;
             dgvVatTuCoSan.DataSource = dsVatTuCoSan;
             dgvVatTuCoSan.Columns["MaPhongChieu"].Visible = false;
+            dgvVatTuCoSan.Columns["MaVatTu"].HeaderText = "Mã vật tư";
+            dgvVatTuCoSan.Columns["TenVatTu"].HeaderText = "Tên vật tư";
+            dgvVatTuCoSan.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+            dgvVatTuCoSan.Columns["SoLuong"].HeaderText = "Số lượng";
         }
         private void LoadDGVVatTuDaThem()
         {
             dgvVatTuDaChon.DataSource = null;
             dgvVatTuDaChon.DataSource = dsVatTuDaChon;
             dgvVatTuDaChon.Columns["MaPhongChieu"].Visible = false;
+            dgvVatTuDaChon.Columns["MaVatTu"].HeaderText = "Mã vật tư";
+            dgvVatTuDaChon.Columns["TenVatTu"].HeaderText = "Tên vật tư";
+            dgvVatTuDaChon.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+            dgvVatTuDaChon.Columns["SoLuong"].HeaderText = "Số lượng";
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -107,21 +119,21 @@ namespace GUI.QLVT_GUI
             else
             {
                 {
-                    int soLuongVt = 0;
+                    int soLuongVTCanThem = 0;
                     var item = dsVatTuTrongKho.Find(x => x.MaVatTu == txtMaVatTu.Text && x.MaKho == maKho);
                     var soLuongMax = ChiTietKhoVatTuBLL.Instance.GetAllChiTietKhoVatTuView().Find(x => x.MaVatTu == txtMaVatTu.Text && x.MaKho == maKho);
                     var VTCanThemVaoPC = dsVatTuDaChon.Find(x => x.MaVatTu == txtMaVatTu.Text);
                     if (VTCanThemVaoPC != null)
                     {
-                        soLuongVt = Convert.ToInt32(numUpDowSoLuong.Value) + VTCanThemVaoPC.SoLuong;
+                        soLuongVTCanThem = Convert.ToInt32(numUpDowSoLuong.Value) + VTCanThemVaoPC.SoLuong;
                     }
                     else
-                        soLuongVt = Convert.ToInt32(numUpDowSoLuong.Value);
-                    if (soLuongVt > soLuongMax.SoLuongSP)
-                        lbSoLuong.Text = $"Số lượng vượt quá trong kho! Chọn tối đa {- soLuongVt + soLuongMax.SoLuongSP + Convert.ToInt32(numUpDowSoLuong.Value)} {soLuongMax.DonViTinh}";
+                        soLuongVTCanThem = Convert.ToInt32(numUpDowSoLuong.Value);
+                    if (soLuongVTCanThem > soLuongMax.SoLuongSP)
+                        lbSoLuong.Text = $"Số lượng vượt quá trong kho! Chọn tối đa {- soLuongVTCanThem + soLuongMax.SoLuongSP + Convert.ToInt32(numUpDowSoLuong.Value)} {soLuongMax.DonViTinh}";
                     if (txtMaVatTu.Text != "" &&
                         cbDonViTinh.SelectedItem != null &&
-                        numUpDowSoLuong.Value != 0 && soLuongVt <= soLuongMax.SoLuongSP)
+                        numUpDowSoLuong.Value != 0 && soLuongVTCanThem <= soLuongMax.SoLuongSP)
                     {
                         ChiTietPhongChieuDTO pc = new ChiTietPhongChieuDTO
                         {
@@ -197,12 +209,21 @@ namespace GUI.QLVT_GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(dsVatTuDaChon.Count > 0 || KiemTraThayDoiChiTietVatTuPhongChieu(dsVatTuCoSan))
+            if(dsVatTuDaChon.Count > 0 )
             {
                 DialogResult result =  MessageBox.Show("Bạn muốn lưu?", "Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
                 if(result == DialogResult.Yes)
                 {
-                    ChiTietPhongChieuBLL.Instance.CapNhatChiTietPhongChieu(dsVatTuCoSan, dsVatTuDaChon);
+                    //foreach(var i in dsVatTuDaChon)
+                    //{
+                    //    var item = dsVatTuCoSan.Find(x => x.MaVatTu == i.MaVatTu);
+                    //    if(item != null)
+                    //    {
+
+                    //    }    
+                    //}    
+                    dsVatTuDaChon.ForEach(x => ChiTietPhongChieuBLL.Instance.AddUpdateChiTietPhongChieu(x));
+                  
                     ChiTietKhoVatTuBLL.Instance.AddUpDateChiTietKhoVatTu(dsVatTuTrongKho);
                     ChiTietKhoVatTuBLL.Instance.XoaChiTietKhoVatTu(dsVatTuTrongKho);
                     d(txtMaPhongChieu.Text);
@@ -212,115 +233,58 @@ namespace GUI.QLVT_GUI
             }
         }
 
-        private void dgvVatTuCoSan_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            if (dgvVatTuCoSan.SelectedRows.Count == 1)
-            {
-                string maVatTu = dgvVatTuCoSan.SelectedRows[0].Cells["MaVatTu"].Value.ToString();
-                var item = dsVatTuCoSan.Find(x => x.MaVatTu == maVatTu);
-                if (numericUpDownSoLuongXoa.Value != 0 && numericUpDownSoLuongXoa.Value <= item.SoLuong)
-                {
-                    var itemKho = dsVatTuTrongKho.Find(x => x.MaVatTu == maVatTu && x.MaKho == maKho);
-                    if (itemKho != null)//add vao kho
-                    {
-                        int index1 =dsVatTuTrongKho.FindIndex(x => x == itemKho);
-                        dsVatTuTrongKho.Remove(itemKho);
-                        itemKho.SoLuongSP += Convert.ToInt32(numericUpDownSoLuongXoa.Value);
-                        dsVatTuTrongKho.Insert(index1, itemKho);
-                    }
-                    else
-                    {
-                        ChiTietKhoVatTuDTO kho = new ChiTietKhoVatTuDTO
-                        {
-                            MaVatTu = item.MaVatTu,
-                            DonViTinh = item.DonViTinh,
-                            SoLuongSP = Convert.ToInt32(numericUpDownSoLuongXoa.Value),
-                            MaKho = maKho
-                        };
-                        dsVatTuTrongKho.Add(ChiTietKhoVatTuBLL.Instance.ConvertChiTietKhoVatTuToView(kho));
-                    }
-                    int index = dsVatTuCoSan.FindIndex(x => x.MaVatTu == maVatTu);
-                    dsVatTuCoSan.Remove(item);
-                    item.SoLuong -= Convert.ToInt32(numericUpDownSoLuongXoa.Value);
-                    ChiTietPhongChieuDTO pcDTO = new ChiTietPhongChieuDTO
-                    {
-                        MaPhongChieu = item.MaPhongChieu,
-                        MaVatTu = item.MaVatTu,
-                        DonViTinh = item.DonViTinh,
-                        SoLuongSP = item.SoLuong
-                    };
-                    if (item.SoLuong > 0)
-                        dsVatTuCoSan.Insert(index, item);
-                    LoadDGVVatTuCoSan();
-                    LoadDGVListVatTuKho();
-                }
-                else
-                    lbSoLuongXoa.Text = "Số lượng không hợp lệ!";
-            }
-            else
-                lbSoLuongXoa.Text = "Chưa chọn vật tư cần xóa";
-        }
+     
 
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            Huy(dsVatTuCoSan, ref dsVatTuTrongKho);
-            dsVatTuCoSan = ChiTietPhongChieuBLL.Instance.GetAllCTPhongChieuViewByMaPhongChieu(maPhongChieu);
-            LoadDGVVatTuCoSan();
-            LoadDGVListVatTuKho();
-        }
-        private bool KiemTraThayDoiChiTietVatTuPhongChieu(List<ChiTietPhongChieuView> ds)
-        {
-            List<ChiTietPhongChieuView> dsAllPC = ChiTietPhongChieuBLL.Instance.GetAllCTPhongChieuViewByMaPhongChieu(maPhongChieu);
-            if (ds.Count != dsAllPC.Count )
-                return true;
-            foreach(ChiTietPhongChieuView i in ds)
-            {
-               foreach(ChiTietPhongChieuView j in dsAllPC)
-                {
-                    if(i.MaVatTu == j.MaVatTu && i.SoLuong != j.SoLuong)
-                        return true;
-                }    
-            }    
-            return false;
+     
+        //private bool KiemTraThayDoiChiTietVatTuPhongChieu(List<ChiTietPhongChieuView> ds)
+        //{
+        //    List<ChiTietPhongChieuView> dsAllPC = ChiTietPhongChieuBLL.Instance.GetAllCTPhongChieuViewByMaPhongChieu(maPhongChieu);
+        //    if (ds.Count != dsAllPC.Count )
+        //        return true;
+        //    foreach(ChiTietPhongChieuView i in ds)
+        //    {
+        //       foreach(ChiTietPhongChieuView j in dsAllPC)
+        //        {
+        //            if(i.MaVatTu == j.MaVatTu && i.SoLuong != j.SoLuong)
+        //                return true;
+        //        }    
+        //    }    
+        //    return false;
                 
-        }
-        public void Huy(List<ChiTietPhongChieuView> ds, ref List<ChiTietKhoVatTuView> dsKhoVT)
-        {
-            List<ChiTietPhongChieuView> dsAllPC = ChiTietPhongChieuBLL.Instance.GetAllCTPhongChieuViewByMaPhongChieu(maPhongChieu);
-            var dsKhongThayDoi = new List<ChiTietPhongChieuView>();
-            foreach (var i in dsAllPC)
-            {
-                dsKhongThayDoi.Add(ds.Find(x => x.MaVatTu == i.MaVatTu && x.SoLuong == i.SoLuong && x.MaPhongChieu == i.MaPhongChieu));
-            }
-            foreach (var i in dsKhongThayDoi)
-            {
-                dsAllPC.Remove(i);
-            }
-            foreach (var i in dsAllPC)   // ds co thay doi ban dau
-            {
-                int soLuong = 0;
-                var item = ds.Find(x => x.MaVatTu == i.MaVatTu && x.MaPhongChieu == i.MaPhongChieu);
-                if (item != null)
-                {
-                    soLuong = i.SoLuong - item.SoLuong;  // so luong bi giam 
-                }
-                else
-                    soLuong = i.SoLuong;
-                var item1 = dsKhoVT.Find(x => x.MaVatTu == i.MaVatTu);
-                if (item1 != null)
-                {
-                    int index = dsKhoVT.FindIndex(x => x == item1);
-                    dsKhoVT.Remove(item1);
-                    item1.SoLuongSP -= soLuong;
-                    if (item1.SoLuongSP >= 0)
-                        dsKhoVT.Insert(index, item1);
-                }
-            }
-        }
+        //}
+        //public void Huy(List<ChiTietPhongChieuView> ds, ref List<ChiTietKhoVatTuView> dsKhoVT)
+        //{
+        //    List<ChiTietPhongChieuView> dsAllPC = ChiTietPhongChieuBLL.Instance.GetAllCTPhongChieuViewByMaPhongChieu(maPhongChieu);
+        //    var dsKhongThayDoi = new List<ChiTietPhongChieuView>();
+        //    foreach (var i in dsAllPC)
+        //    {
+        //        dsKhongThayDoi.Add(ds.Find(x => x.MaVatTu == i.MaVatTu && x.SoLuong == i.SoLuong && x.MaPhongChieu == i.MaPhongChieu));
+        //    }
+        //    foreach (var i in dsKhongThayDoi)
+        //    {
+        //        dsAllPC.Remove(i);
+        //    }
+        //    foreach (var i in dsAllPC)   // ds co thay doi ban dau
+        //    {
+        //        int soLuong = 0;
+        //        var item = ds.Find(x => x.MaVatTu == i.MaVatTu && x.MaPhongChieu == i.MaPhongChieu);
+        //        if (item != null)
+        //        {
+        //            soLuong = i.SoLuong - item.SoLuong;  // so luong bi giam 
+        //        }
+        //        else
+        //            soLuong = i.SoLuong;
+        //        var item1 = dsKhoVT.Find(x => x.MaVatTu == i.MaVatTu);
+        //        if (item1 != null)
+        //        {
+        //            int index = dsKhoVT.FindIndex(x => x == item1);
+        //            dsKhoVT.Remove(item1);
+        //            item1.SoLuongSP -= soLuong;
+        //            if (item1.SoLuongSP >= 0)
+        //                dsKhoVT.Insert(index, item1);
+        //        }
+        //    }
+        //}
 
         private void numUpDowSoLuong_ValueChanged(object sender, EventArgs e)
         {

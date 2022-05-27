@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnMenuThongTinChung = new System.Windows.Forms.Button();
-            this.btnMenuNhanVien = new System.Windows.Forms.Button();
             this.btnMenuNhapXuat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -48,25 +47,12 @@
             this.btnMenuThongTinChung.UseVisualStyleBackColor = false;
             this.btnMenuThongTinChung.Click += new System.EventHandler(this.btnMenuThongTinChung_Click);
             // 
-            // btnMenuNhanVien
-            // 
-            this.btnMenuNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenuNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuNhanVien.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuNhanVien.Location = new System.Drawing.Point(223, 0);
-            this.btnMenuNhanVien.Name = "btnMenuNhanVien";
-            this.btnMenuNhanVien.Size = new System.Drawing.Size(223, 29);
-            this.btnMenuNhanVien.TabIndex = 1;
-            this.btnMenuNhanVien.Text = "THỐNG KÊ NHÂN VIÊN";
-            this.btnMenuNhanVien.UseVisualStyleBackColor = true;
-            this.btnMenuNhanVien.Click += new System.EventHandler(this.btnMenuNhanVien_Click);
-            // 
             // btnMenuNhapXuat
             // 
             this.btnMenuNhapXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuNhapXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuNhapXuat.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuNhapXuat.Location = new System.Drawing.Point(446, 0);
+            this.btnMenuNhapXuat.Location = new System.Drawing.Point(223, 0);
             this.btnMenuNhapXuat.Name = "btnMenuNhapXuat";
             this.btnMenuNhapXuat.Size = new System.Drawing.Size(223, 29);
             this.btnMenuNhapXuat.TabIndex = 2;
@@ -80,7 +66,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
             this.Controls.Add(this.btnMenuNhapXuat);
-            this.Controls.Add(this.btnMenuNhanVien);
             this.Controls.Add(this.btnMenuThongTinChung);
             this.Name = "UC_MenuThongKe";
             this.Size = new System.Drawing.Size(993, 29);
@@ -91,7 +76,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnMenuThongTinChung;
-        private System.Windows.Forms.Button btnMenuNhanVien;
         private System.Windows.Forms.Button btnMenuNhapXuat;
     }
 }
