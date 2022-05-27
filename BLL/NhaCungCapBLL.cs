@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using DAL;
 using DTO;
 
@@ -214,8 +215,9 @@ namespace BLL
                 }
             return data;
         }
-        public System.Data.DataTable GetSPByMaNhaCungCap(string maNhaCungCap)
+        public DataTable GetSPByMaNhaCungCap(string maNhaCungCap)
         {
+            
             return NhaCungCapDAL.Instance.GetSPByMaNhaCungCap(maNhaCungCap, GetNCCByMaNCC(maNhaCungCap).MaLoaiNhaCungCap);
         }
         public List<CBBItem> GetCBBNhaCungCap(string maLoaiNhaCungCap = "")
@@ -275,6 +277,13 @@ namespace BLL
                 }
             }
             return data;
+        }
+        public DataTable TimKiemVatTuTheoTen(string maNhaCungCap, string txt = "")
+        {
+            DataTable data = GetSPByMaNhaCungCap(maNhaCungCap);
+            var results = data.AsEnumerable().Where(myRow => myRow[1].ToString().ToLower().Contains(txt.ToLower())).CopyToDataTable();
+
+            return results;    
         }
     }
 }

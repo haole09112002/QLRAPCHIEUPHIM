@@ -32,7 +32,7 @@ namespace GUI
                 MessageBox.Show("Tài khoản chưa tồn tại! Vui lòng kiểm tra lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (result == 3)
             {
-                frmDashboard_AD frmDashboard_AD = new frmDashboard_AD();
+                frmDashboard_AD frmDashboard_AD = new frmDashboard_AD(NhanVienBLL.Instance.GetNhanVienByTenTaiKhoan(txtTenTaiKhoan.Text));
                 frmDashboard_AD.Show();
             }
             if (result == 2)

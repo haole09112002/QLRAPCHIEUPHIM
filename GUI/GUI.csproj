@@ -179,12 +179,6 @@
     <Compile Include="AD_GUI\UC_ThongKeChung.Designer.cs">
       <DependentUpon>UC_ThongKeChung.cs</DependentUpon>
     </Compile>
-    <Compile Include="AD_GUI\UC_ThongKeNhanVien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AD_GUI\UC_ThongKeNhanVien.Designer.cs">
-      <DependentUpon>UC_ThongKeNhanVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="AD_GUI\UC_MenuNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -503,9 +497,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_ThongKeChung.resx">
       <DependentUpon>UC_ThongKeChung.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AD_GUI\UC_ThongKeNhanVien.resx">
-      <DependentUpon>UC_ThongKeNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_ThongKeNhapXuat.resx">
       <DependentUpon>UC_ThongKeNhapXuat.cs</DependentUpon>
@@ -1086,6 +1077,9 @@
       <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidePass_26px1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

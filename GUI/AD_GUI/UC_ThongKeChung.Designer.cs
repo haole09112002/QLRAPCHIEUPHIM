@@ -348,7 +348,7 @@
             // lbSoLuongNhaCungCapTA
             // 
             this.lbSoLuongNhaCungCapTA.AutoSize = true;
-            this.lbSoLuongNhaCungCapTA.Location = new System.Drawing.Point(98, 130);
+            this.lbSoLuongNhaCungCapTA.Location = new System.Drawing.Point(291, 130);
             this.lbSoLuongNhaCungCapTA.Name = "lbSoLuongNhaCungCapTA";
             this.lbSoLuongNhaCungCapTA.Size = new System.Drawing.Size(61, 24);
             this.lbSoLuongNhaCungCapTA.TabIndex = 9;
@@ -357,7 +357,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(217, 130);
+            this.label7.Location = new System.Drawing.Point(70, 130);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 24);
             this.label7.TabIndex = 8;
@@ -366,7 +366,7 @@
             // lbSoLuongNhaCungCapVT
             // 
             this.lbSoLuongNhaCungCapVT.AutoSize = true;
-            this.lbSoLuongNhaCungCapVT.Location = new System.Drawing.Point(98, 91);
+            this.lbSoLuongNhaCungCapVT.Location = new System.Drawing.Point(291, 91);
             this.lbSoLuongNhaCungCapVT.Name = "lbSoLuongNhaCungCapVT";
             this.lbSoLuongNhaCungCapVT.Size = new System.Drawing.Size(61, 24);
             this.lbSoLuongNhaCungCapVT.TabIndex = 9;
@@ -375,7 +375,7 @@
             // llbb
             // 
             this.llbb.AutoSize = true;
-            this.llbb.Location = new System.Drawing.Point(220, 89);
+            this.llbb.Location = new System.Drawing.Point(73, 89);
             this.llbb.Name = "llbb";
             this.llbb.Size = new System.Drawing.Size(63, 24);
             this.llbb.TabIndex = 8;
@@ -384,7 +384,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(219, 54);
+            this.label3.Location = new System.Drawing.Point(72, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 24);
             this.label3.TabIndex = 8;
@@ -393,7 +393,7 @@
             // lbSoLuongNhaCungCapPhim
             // 
             this.lbSoLuongNhaCungCapPhim.AutoSize = true;
-            this.lbSoLuongNhaCungCapPhim.Location = new System.Drawing.Point(98, 54);
+            this.lbSoLuongNhaCungCapPhim.Location = new System.Drawing.Point(291, 54);
             this.lbSoLuongNhaCungCapPhim.Name = "lbSoLuongNhaCungCapPhim";
             this.lbSoLuongNhaCungCapPhim.Size = new System.Drawing.Size(61, 24);
             this.lbSoLuongNhaCungCapPhim.TabIndex = 9;
@@ -520,7 +520,7 @@
             // 
             this.lbSoLuongPhongChieuHong.AutoSize = true;
             this.lbSoLuongPhongChieuHong.ForeColor = System.Drawing.Color.White;
-            this.lbSoLuongPhongChieuHong.Location = new System.Drawing.Point(32, 90);
+            this.lbSoLuongPhongChieuHong.Location = new System.Drawing.Point(289, 90);
             this.lbSoLuongPhongChieuHong.Name = "lbSoLuongPhongChieuHong";
             this.lbSoLuongPhongChieuHong.Size = new System.Drawing.Size(71, 24);
             this.lbSoLuongPhongChieuHong.TabIndex = 12;
@@ -530,7 +530,7 @@
             // 
             this.lbSoLuongPhongChieuBaotri.AutoSize = true;
             this.lbSoLuongPhongChieuBaotri.ForeColor = System.Drawing.Color.White;
-            this.lbSoLuongPhongChieuBaotri.Location = new System.Drawing.Point(32, 52);
+            this.lbSoLuongPhongChieuBaotri.Location = new System.Drawing.Point(289, 52);
             this.lbSoLuongPhongChieuBaotri.Name = "lbSoLuongPhongChieuBaotri";
             this.lbSoLuongPhongChieuBaotri.Size = new System.Drawing.Size(71, 24);
             this.lbSoLuongPhongChieuBaotri.TabIndex = 11;
@@ -581,7 +581,7 @@
             // 
             this.lbSoLuongPhongChieuTinhTrangTot.AutoSize = true;
             this.lbSoLuongPhongChieuTinhTrangTot.ForeColor = System.Drawing.Color.White;
-            this.lbSoLuongPhongChieuTinhTrangTot.Location = new System.Drawing.Point(32, 128);
+            this.lbSoLuongPhongChieuTinhTrangTot.Location = new System.Drawing.Point(289, 128);
             this.lbSoLuongPhongChieuTinhTrangTot.Name = "lbSoLuongPhongChieuTinhTrangTot";
             this.lbSoLuongPhongChieuTinhTrangTot.Size = new System.Drawing.Size(71, 24);
             this.lbSoLuongPhongChieuTinhTrangTot.TabIndex = 7;

@@ -38,6 +38,7 @@ namespace GUI.AD_GUI
             lbSLNVPhim.Text = ThongKeBLL.Instance.SoLuongNhanVien("CV0001").ToString();
             lbSLNVVatTu.Text = ThongKeBLL.Instance.SoLuongNhanVien("CV0002").ToString();
             lbSoLuongNVQL.Text = ThongKeBLL.Instance.SoLuongNhanVien("CV0003").ToString();
+            lbSoLuongPhimTrongKho.Text = ThongKeBLL.Instance.SoLuongPhimTrongKho().ToString();
         }
         private void LoadGDVThongKeHopDong(object item)
         {
@@ -68,12 +69,12 @@ namespace GUI.AD_GUI
                 }
                 else
                 {
-                    MessageBox.Show("Ngay ko hop le");
+                    MessageBox.Show("Ngày chưa hợp lệ! Vui lòng kiểm tra lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("chua chon loai can thong ke");
+                MessageBox.Show("Chưa chọn loại hợp đồng cần thống kê!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

@@ -41,8 +41,9 @@ namespace BLL
         }
         public int SoLuongPhimTrongKho()
         {
-            //foreach(ChiTietKhoPhimDTO i in chiti)
-            return 0;
+           
+         
+            return ChiTietKhoPhimBLL.Instance.GetAllChiTietKhoPhim().Count();
         }
         public int SoLuongNhaCungCap(string maLoaiNCC = "0")
         { 
@@ -151,46 +152,14 @@ namespace BLL
             }
             return result;
         }
-        public int SoLuongPhieu(DateTime ngayBD, DateTime ngayKT, string maLoaiPhieu, string maLoaiNCC)
+        public int SoLuongPhieu(DateTime ngayBD, DateTime ngayKT, string maLoaiPhieu, string maLoaiKho)
         {
-            var dsPhieu =PhieuBLL.Instance.GetListPhieuByLoaiPhieu(maLoaiPhieu).Where(p => p.NgayLapPhieu >= ngayBD && p.NgayLapPhieu <= ngayKT).Select(p => p);
-            int count = 0;
-            if(maLoaiNCC == "LNCC01")
-            {
-                var dsCTPhieu = ChiTietPhieuPhimBLL.Instance.GetAllChiTietPhieuPhim();
-                foreach (var h in dsPhieu)
-                {
-                    foreach (var p in dsCTPhieu)
-                        if (h.MaPhieu == p.MaPhieu)
-                            count++;
 
-                }
-                return count;
-            }
-            if (maLoaiNCC == "LNCC02")
-            {
-                var dsCTPhieu = chitiet.Instance.GetAllChiTietPhieuPhim();
-                foreach (var h in dsPhieu)
-                {
-                    foreach (var p in dsCTPhieu)
-                        if (h.MaPhieu == p.MaPhieu)
-                            count++;
-
-                }
-                return count;
-            }
-            if (maLoaiNCC == "LNCC03")
-            {
-                var dsCTPhieu = ChiTietPhieuPhimBLL.Instance.GetAllChiTietPhieuPhim();
-                foreach (var h in dsPhieu)
-                {
-                    foreach (var p in dsCTPhieu)
-                        if (h.MaPhieu == p.MaPhieu)
-                            count++;
-
-                }
-                return count;
-            }
+            var ds = PhieuBLL.Instance.GetAllPhieu().Where(p => p.NgayLapPhieu >= ngayBD
+                                                    && p.NgayLapPhieu <= ngayKT
+                                                    && p.MaLoaiPhieu == maLoaiPhieu
+                                                    && KhoBLL.Instance.GetKhoByMaKho(p.MaKho).MaLoaiKho == maLoaiKho).Select(p => p).ToList();      
+            return ds.Count();
         }
 
 
