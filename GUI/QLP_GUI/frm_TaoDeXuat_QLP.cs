@@ -49,7 +49,7 @@ namespace GUI.QLP_GUI
         
         public bool KiemTraTonTaiPhim(string MaPhim)
         {
-            for(int i = 0; i < dGVDeXuatPhim.Rows.Count - 1; i++)
+            for(int i = 0; i < dGVDeXuatPhim.Rows.Count; i++)
             {
                 if (dGVDeXuatPhim.Rows[i].Cells["Mã Phim"].Value.ToString() == MaPhim)
                 {
