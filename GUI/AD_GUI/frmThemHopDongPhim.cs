@@ -64,7 +64,7 @@ namespace GUI.AD_GUI
                 btnGiaHan.Visible = true;
                 btnThem.Visible = false;
                 btnLuu.Visible = false;
-                btnGiaHan.Enabled = true;
+                btnGiaHan.Enabled = false;
 
                 pnLichSuGiaHan = new Panel();
                 pnLichSuGiaHan.Size = new Size(535, 316);
@@ -210,6 +210,7 @@ namespace GUI.AD_GUI
                 if(maHopDong != "")
                 {
                     uc_LichSuGiaHan.LoadData(HopDongPhimBLL.Instance.GetLichSuGiaHan(maHopDong, dgvPhimDaThem.SelectedRows[0].Cells["MaPhim"].Value.ToString()));
+                    btnGiaHan.Enabled = true;
                 }    
             }
         }
@@ -244,10 +245,13 @@ namespace GUI.AD_GUI
                             }
                         }
                         HopDongPhimBLL.Instance.AddUpdateHopDongPhim(dsPhimDaChon, maHopDong);
+                       uc_LichSuGiaHan.LoadData(HopDongPhimBLL.Instance.GetLichSuGiaHan(maHopDong, dgvPhimDaThem.SelectedRows[0].Cells["MaPhim"].Value.ToString()));
+                        ReLoadDGVPhimDaChon();
+                        ReLoadDGVPhimLuaChon();
                         MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btnLuu.Enabled = false;
                         d("0", "");
-                        this.Close();
+                        //this.Close();
                     }
                 }
                 else
@@ -283,8 +287,8 @@ namespace GUI.AD_GUI
         {
             dgvPhimDaThem.DataSource = null;
             dgvPhimDaThem.DataSource = dsPhimDaChon;
-            dgvPhimDaThem.FirstDisplayedCell = null;
-            dgvPhimDaThem.ClearSelection();
+            //dgvPhimDaThem.FirstDisplayedCell = null;
+            //dgvPhimDaThem.ClearSelection();
             dgvPhimDaThem.Columns["MaPhim"].HeaderText = "Mã phim";
             dgvPhimDaThem.Columns["TenPhim"].HeaderText = "Tên phim";
             dgvPhimDaThem.Columns["NgayBatDauBanQuyen"].HeaderText = "Ngày bắt đầu bản quyền";

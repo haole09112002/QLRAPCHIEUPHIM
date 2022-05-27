@@ -232,6 +232,7 @@
             // 
             // cbLoaiHopDong
             // 
+            this.cbLoaiHopDong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLoaiHopDong.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiHopDong.FormattingEnabled = true;
             this.cbLoaiHopDong.Location = new System.Drawing.Point(189, 30);
