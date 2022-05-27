@@ -327,21 +327,21 @@ insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
 values ('NV0002','2022-05-02','LDX01');
 
 
-insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat,TrangThai)
+insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
 values ('NV0005','2022-05-02','LDX02');
-insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat,TrangThai)
+insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
 values ('NV0006','2022-05-16','LDX02');
-insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat,TrangThai)
+insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
 values ('NV0007','2022-05-24','LDX02');
-insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat,TrangThai)
+insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
 values ('NV0005','2022-05-10','LDX02');
-insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat,TrangThai)
+insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
 values ('NV0008','2022-05-12','LDX03');
-insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat,TrangThai)
+insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
 values ('NV0006','2022-05-22','LDX03');
-insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat,TrangThai)
+insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
 values ('NV0007','2022-05-02','LDX03');
-insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat,TrangThai)
+insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
 values ('NV0005','2022-05-23','LDX03');
 
 ---- Đã xong

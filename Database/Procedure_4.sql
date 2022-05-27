@@ -273,7 +273,7 @@ begin
 	where MaPhongChieu = @MaPhongChieu
 end
 ---CapNhatLichChieu
-
+go
 create proc CapNhatLichChieu
 	@MaPhim varchar(6), 
 	@MaPhongChieu varchar(6),
@@ -285,15 +285,39 @@ begin
 	Update LICH_CHIEU set TrangThai = @TrangThai
 	where MaPhim = @MaPhim and MaPhongChieu = @MaPhongChieu and MaKhungGioChieu=@MaKhungGioChieu and NgayChieu=@NgayChieu 
 end
----CapnhatDeXuat
-create proc CapNhatDeXuat
+---CapnhatDeXuatPhim
+go
+create proc CapNhatDeXuatPhim
 	@MaDeXuat varchar(6), 
-	@MaNhanVien varchar(6),
-	@MaLoaiDeXuat varchar(8),
-	@NgayDeXuat date,
-	@TrangThai varchar(1)
+	@MaPhim varchar(6),
+
+	@TinhTrang varchar(1)
 as
 begin
-	Update DE_XUAT set TrangThai = @TrangThai
-	where MaDeXuat = @MaDeXuat and MaNhanVien = @MaNhanVien and MaLoaiDeXuat=@MaLoaiDeXuat and NgayDeXuat=@NgayDeXuat 
+	Update CHI_TIET_DE_XUAT_PHIM set TinhTrang = @TinhTrang
+	where MaDeXuat = @MaDeXuat  and MaPhim=@MaPhim
+end
+---CapnhatDeXuatVT
+go
+create proc CapNhatDeXuatVatTu
+	@MaDeXuat varchar(6), 
+	@MaVatTu varchar(6),
+
+	@TinhTrang varchar(1)
+as
+begin
+	Update CHI_TIET_DE_XUAT_VT set TinhTrang = @TinhTrang
+	where MaDeXuat = @MaDeXuat  and MaVatTu=@MaVatTu
+end
+---CapnhatDeXuatThucAn
+go
+create proc CapNhatDeXuatThucAn
+	@MaDeXuat varchar(6), 
+	@MaThucAn varchar(6),
+
+	@TinhTrang varchar(1)
+as
+begin
+	Update CHI_TIET_DE_XUAT_TA set TinhTrang = @TinhTrang
+	where MaDeXuat = @MaDeXuat  and MaThucAn=@MaThucAn
 end
