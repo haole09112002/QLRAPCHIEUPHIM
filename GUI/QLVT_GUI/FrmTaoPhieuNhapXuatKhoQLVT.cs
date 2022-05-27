@@ -176,6 +176,7 @@ namespace GUI.QLVT_GUI
                         lblValidatedSoLuong.Visible = true;
                         btnThem.Visible = true;
                         btnThem.Enabled = true;
+                        btnChinhSua.Enabled = true;
                 }
                 else
                 {
@@ -190,6 +191,7 @@ namespace GUI.QLVT_GUI
                         lblValidatedSoLuong.Visible = false;
                         btnThem.Enabled = true;
                         btnThem.Visible = true;
+                        btnChinhSua.Enabled = true;
                     }
                 }
             }
@@ -200,6 +202,7 @@ namespace GUI.QLVT_GUI
                     lblValidSoLuong.Visible = true;
                     btnThem.Visible = true;
                     btnThem.Enabled = true;
+                    btnChinhSua.Enabled = true;
                 }
                 else
                 {
@@ -214,6 +217,7 @@ namespace GUI.QLVT_GUI
                         lblValidSoLuong.Visible = false;
                         btnThem.Visible = true;
                         btnThem.Enabled = true;
+                        btnChinhSua.Enabled = true;
                     }
                 }
             }
@@ -406,6 +410,9 @@ namespace GUI.QLVT_GUI
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
+            btnChinhSua.Visible = false;
+            btnThem.Visible = true;
+            btnThem.Enabled = false;
             dgvSanPhamDaThem.CurrentRow.Cells["Mã Sản Phẩm"].Value = txtMaSanPham.Text;
             dgvSanPhamDaThem.CurrentRow.Cells["Tên Sản Phẩm"].Value = txtTenSanPham.Text;
             dgvSanPhamDaThem.CurrentRow.Cells["Số Lượng"].Value = nUDSoLuong.Text;
