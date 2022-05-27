@@ -50,7 +50,61 @@ namespace GUI.QLP_GUI
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            Reload(txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
+            string LoaiTimKiem = "";
+            if(cBTimKiem.SelectedIndex >= 0 )
+            {
+                LoaiTimKiem = cBTimKiem.SelectedItem.ToString();
+            }
+            Reload(txtTimKiem.Text, LoaiTimKiem);
+        }
+
+        private void UC_DanhSachLichChieuDuKien_QLP_Leave(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = "";
+            cBTimKiem.SelectedIndex = -1;
+            cBSapXep.SelectedIndex = -1;
+            Reload();
+        }
+
+        private void btnSapXep_Click(object sender, EventArgs e)
+        {
+            dtDanhSachLichChieuDuKien.Rows.Clear();
+            string SapXep = "";
+            string TimKiem = txtTimKiem.Text;
+            string LoaiTimKiem = "Tên Phim";
+            if(cBSapXep.SelectedIndex >= 0)
+            {
+                SapXep = cBSapXep.SelectedItem.ToString();
+            }
+            if(cBTimKiem.SelectedIndex >= 0)
+            {
+                LoaiTimKiem = cBTimKiem.SelectedItem.ToString();
+            }
+            if(SapXep == "Tên Phim")
+            {
+                foreach(LichChieuViewDTO i in LichChieuViewBLL.Instance.SortLichChieu(LichChieuViewBLL.Instance.CompareTenPhim,"1",TimKiem,LoaiTimKiem))
+                {
+                    dtDanhSachLichChieuDuKien.Rows.Add(i.MaPhim, i.TenPhim, i.MaPhongChieu, i.TenPhongChieu, i.MaKhungGioChieu, i.GioBatDau.ToShortTimeString(), i.GioKetThuc.ToShortTimeString(), i.NgayChieu.ToShortDateString());
+                }
+            } 
+            if(SapXep == "Tên Phòng Chiếu")
+            {
+                foreach(LichChieuViewDTO i in LichChieuViewBLL.Instance.SortLichChieu(LichChieuViewBLL.Instance.CompareTenPhongChieu,"1",TimKiem,LoaiTimKiem))
+                {
+                    dtDanhSachLichChieuDuKien.Rows.Add(i.MaPhim, i.TenPhim, i.MaPhongChieu, i.TenPhongChieu, i.MaKhungGioChieu, i.GioBatDau.ToShortTimeString(), i.GioKetThuc.ToShortTimeString(), i.NgayChieu.ToShortDateString());
+                }
+            }
+            if(SapXep == "Ngày Chiếu")
+            {
+                foreach(LichChieuViewDTO i in LichChieuViewBLL.Instance.SortLichChieu(LichChieuViewBLL.Instance.CompareNgayChieu,"1",TimKiem,LoaiTimKiem))
+                {
+                    dtDanhSachLichChieuDuKien.Rows.Add(i.MaPhim, i.TenPhim, i.MaPhongChieu, i.TenPhongChieu, i.MaKhungGioChieu, i.GioBatDau.ToShortTimeString(), i.GioKetThuc.ToShortTimeString(), i.NgayChieu.ToShortDateString());
+                }
+            }
+            dGVDanhSachLichChieuDuKien.DataSource = dtDanhSachLichChieuDuKien;
+            dGVDanhSachLichChieuDuKien.Columns["Mã Phim"].Visible = false;
+            dGVDanhSachLichChieuDuKien.Columns["Mã Phòng Chiếu"].Visible = false;
+            dGVDanhSachLichChieuDuKien.Columns["Mã Khung Giờ Chiếu"].Visible = false;
         }
     }
 }

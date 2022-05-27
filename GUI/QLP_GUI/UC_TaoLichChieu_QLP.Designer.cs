@@ -339,6 +339,7 @@
             // 
             // dGVDanhSachPhim
             // 
+            this.dGVDanhSachPhim.AllowUserToAddRows = false;
             this.dGVDanhSachPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVDanhSachPhim.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -402,6 +403,7 @@
             // 
             // dGVDanhSachPC
             // 
+            this.dGVDanhSachPC.AllowUserToAddRows = false;
             this.dGVDanhSachPC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVDanhSachPC.BackgroundColor = System.Drawing.Color.White;
             this.dGVDanhSachPC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -429,6 +431,7 @@
             // 
             // dGVKhungGioChieu
             // 
+            this.dGVKhungGioChieu.AllowUserToAddRows = false;
             this.dGVKhungGioChieu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVKhungGioChieu.BackgroundColor = System.Drawing.Color.White;
             this.dGVKhungGioChieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -450,6 +453,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_TaoLichChieu_QLP";
             this.Size = new System.Drawing.Size(1333, 766);
+            this.Leave += new System.EventHandler(this.UC_TaoLichChieu_QLP_Leave);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
