@@ -116,7 +116,7 @@ namespace GUI.AD_GUI
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             loadDGVDanhSachNCC(((CBBItem)cbLoaiNhaCungCap.SelectedItem).Value, txtTimKiem.Text );
-            if(dgvDSNhaCungCap != null)
+            if(dgvDSNhaCungCap.RowCount != 0)
             {
                 string maNhaCungCap = dgvDSNhaCungCap.Rows[0].Cells["MaNhaCungCap"].Value.ToString();
                 loadDGVDanhSachSanPham(maNhaCungCap);

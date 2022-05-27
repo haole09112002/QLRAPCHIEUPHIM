@@ -48,5 +48,18 @@ namespace DAL
                 SoLuongSP = Convert.ToInt32(i["SoLuongSP"]),
             };
         }
+        public void CapNhatChiTietKhoThucAn(string MaKho, string MaThucAn, int SoLuongSP, string DonViTinh)
+        {
+            string query = "update CHI_TIET_KHO_THUC_AN set " +
+                $"SoLuongSP = {SoLuongSP}, DonViTinh = '{DonViTinh}'" +
+                $"where MaKho = '{MaKho}' and MaThucAn = '{MaThucAn}'";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
+        public void LuuChiTietKhoThucAn(string MaKho, string MaThucAn, string DonViTinh, int SoLuongSP)
+        {
+            string query = "insert into CHI_TIET_KHO_THUC_AN values" +
+                $"('{MaKho}','{MaThucAn}','{DonViTinh}',{SoLuongSP})";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
     }
 }
