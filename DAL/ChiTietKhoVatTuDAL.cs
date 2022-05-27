@@ -65,6 +65,19 @@ namespace DAL
             string query = $"Delete from CHI_TIET_KHO_VT where MaKho= '{kho.MaKho}' and MaVatTu = '{kho.MaVatTu}'";
             DBHelper.Instance.ExcuteNonQuery(query);
         }
+        public void CapNhatChiTietKhoVatTu(string MaKho, string MaVatTu, int SoLuongSP, string DonViTinh)
+        {
+            string query = "update CHI_TIET_KHO_VT set " +
+                $"SoLuongSP = {SoLuongSP}, DonViTinh = '{DonViTinh}'" +
+                $"where MaKho = '{MaKho}' and MaVatTu = '{MaVatTu}'";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
+        public void LuuChiTietKhoVatTu(string MaKho, string MaVatTu, string DonViTinh, int SoLuongSP)
+        {
+            string query = "insert into CHI_TIET_KHO_VT values" +
+                $"('{MaKho}','{MaVatTu}','{DonViTinh}',{SoLuongSP})";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
     }
 }
 

@@ -7,19 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace GUI.QLVT_GUI
 {
     public partial class UCMenuNhapXuatQLVT : UserControl
     {
-        public UCMenuNhapXuatQLVT()
-        {
-            InitializeComponent();
-        }
+        NhanVienDTO nhanVien = new NhanVienDTO();
         public delegate void Mydel(UserControl c);
         public Mydel d { get; set; }
-        public UCNhapXuatThucAnQLVT ucNhapXuatThucAnQLVT = new UCNhapXuatThucAnQLVT();
-        public UCNhapXuatVatTuQLVT ucNhapXuatVatTuQLVT = new UCNhapXuatVatTuQLVT();
+        public UCNhapXuatThucAnQLVT ucNhapXuatThucAnQLVT;
+        public UCNhapXuatVatTuQLVT ucNhapXuatVatTuQLVT;
+        public UCMenuNhapXuatQLVT(NhanVienDTO nv)
+        {
+            nhanVien = nv;
+            ucNhapXuatThucAnQLVT = new UCNhapXuatThucAnQLVT(nhanVien);
+            ucNhapXuatVatTuQLVT = new UCNhapXuatVatTuQLVT(nhanVien);
+            InitializeComponent();
+        }
         private void btnMenuListNXThucAn_Click(object sender, EventArgs e)
         {
             d(ucNhapXuatThucAnQLVT);
