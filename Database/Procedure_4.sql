@@ -194,11 +194,12 @@ create proc CapNhatNhanVien
 	@CCCD varchar(20),
 	@TenTaiKhoan varchar(30),
 	@MatKhau varchar(32),
+	@Anh image,
 	@MaChinhSach varchar(6) ,
 	@MaChucVu varchar(6) 
 	as 
 	begin 
-	update  NHAN_VIEN set TenNhanVien=@TenNhanVien,GioiTinh=@GioiTinh,NgaySinh=@NgaySinh,DiaChi=@DiaChi,SoDienThoai=@SoDienThoai,CCCD=@CCCD,TenTaiKhoan=@TenTaiKhoan,MatKhau=@MatKhau,MaChinhSach=@MaChinhSach,MaChucVu=@MaChucVu
+	update  NHAN_VIEN set TenNhanVien=@TenNhanVien,GioiTinh=@GioiTinh,NgaySinh=@NgaySinh,DiaChi=@DiaChi,SoDienThoai=@SoDienThoai,CCCD=@CCCD,TenTaiKhoan=@TenTaiKhoan,MatKhau=@MatKhau,Anh=@Anh,MaChinhSach=@MaChinhSach,MaChucVu=@MaChucVu
 where MaNhanVien=@MaNhanVien
 end
 go
