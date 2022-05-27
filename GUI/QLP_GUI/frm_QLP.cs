@@ -15,7 +15,7 @@ namespace GUI.QLP_GUI
     {
         NhanVienDTO nhanvien = new NhanVienDTO();
         UC_ThongTinPhim_QLP ucTTP = new UC_ThongTinPhim_QLP();
-        UC_CaNhan_QLP ucCN;
+        GUI.QLVT_GUI.UCHoSoCaNhanQLVT ucCN;
         UC_TaoPhieu_QLP ucTP;
         UC_PhieuNhapXuat_QLP ucLS = new UC_PhieuNhapXuat_QLP();
         UC_MenuNhapXuatKho_QLP ucMNXK;
@@ -99,7 +99,7 @@ namespace GUI.QLP_GUI
 
         private void btnCaNhan_Click(object sender, EventArgs e)
         {
-            ucCN = new UC_CaNhan_QLP(nhanvien);
+            ucCN = new GUI.QLVT_GUI.UCHoSoCaNhanQLVT(nhanvien);
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucCN);
             changeColorButton(btnCaNhan);

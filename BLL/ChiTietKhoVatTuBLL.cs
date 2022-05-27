@@ -33,16 +33,7 @@ namespace BLL
         {
            return ChiTietKhoVatTuDAL.Instance.GetAllChiTietKhoVatTu();
         }
-        public List<ChiTietKhoVatTuDTO> GetListChiTietKhoVatTuByMaKho(string MaKho)
-        {
-            List<ChiTietKhoVatTuDTO> data = new List<ChiTietKhoVatTuDTO>();
-            foreach (ChiTietKhoVatTuDTO i in GetAllChiTietKhoVatTu())
-            {
-                if (i.MaKho == MaKho)
-                    data.Add(i);
-            }
-            return data;
-        }
+
         public ChiTietKhoVatTuViewDTO ConvertChiTietKhoVatTuDTOToView(ChiTietKhoVatTuDTO vt)
         {
             string tenVatTu = "";
@@ -241,7 +232,16 @@ namespace BLL
                 ChiTietKhoVatTuDAL.Instance.ThemChiTietKhoVatTu(vtCanXoa);
             }
         }
-
+        public List<ChiTietKhoVatTuDTO> GetListChiTietKhoVatTuByMaKho(string MaKho)
+        {
+            List<ChiTietKhoVatTuDTO> data = new List<ChiTietKhoVatTuDTO>();
+            foreach (ChiTietKhoVatTuDTO i in GetAllChiTietKhoVatTu())
+            {
+                if (i.MaKho == MaKho)
+                    data.Add(i);
+            }
+            return data;
+        }
         public List<VatTuDTO> GetListVatTuByMaKho(string MaKho)
         {
             List<VatTuDTO> data = new List<VatTuDTO>();

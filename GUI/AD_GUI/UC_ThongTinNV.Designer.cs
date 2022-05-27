@@ -54,10 +54,10 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.cbbSapXep);
             this.panel1.Controls.Add(this.txtTimKiem);
-            this.panel1.Location = new System.Drawing.Point(11, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(15, 14);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(721, 451);
+            this.panel1.Size = new System.Drawing.Size(1316, 729);
             this.panel1.TabIndex = 0;
             // 
             // cbbTimKiem
@@ -65,9 +65,10 @@
             this.cbbTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbbTimKiem.FormattingEnabled = true;
-            this.cbbTimKiem.Location = new System.Drawing.Point(518, 48);
+            this.cbbTimKiem.Location = new System.Drawing.Point(1052, 48);
+            this.cbbTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbTimKiem.Name = "cbbTimKiem";
-            this.cbbTimKiem.Size = new System.Drawing.Size(170, 24);
+            this.cbbTimKiem.Size = new System.Drawing.Size(225, 28);
             this.cbbTimKiem.TabIndex = 41;
             // 
             // btnXemCT
@@ -78,9 +79,10 @@
             this.btnXemCT.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemCT.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnXemCT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXemCT.Location = new System.Drawing.Point(157, 398);
+            this.btnXemCT.Location = new System.Drawing.Point(494, 674);
+            this.btnXemCT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXemCT.Name = "btnXemCT";
-            this.btnXemCT.Size = new System.Drawing.Size(111, 29);
+            this.btnXemCT.Size = new System.Drawing.Size(148, 36);
             this.btnXemCT.TabIndex = 39;
             this.btnXemCT.Text = "XEM CHI TIẾT";
             this.btnXemCT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -95,9 +97,10 @@
             this.btnSapXep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSapXep.Image = global::GUI.Properties.Resources.Sort;
             this.btnSapXep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSapXep.Location = new System.Drawing.Point(32, 12);
+            this.btnSapXep.Location = new System.Drawing.Point(42, 36);
+            this.btnSapXep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSapXep.Name = "btnSapXep";
-            this.btnSapXep.Size = new System.Drawing.Size(92, 31);
+            this.btnSapXep.Size = new System.Drawing.Size(123, 38);
             this.btnSapXep.TabIndex = 38;
             this.btnSapXep.Text = "    SẮP XẾP";
             this.btnSapXep.UseVisualStyleBackColor = false;
@@ -109,10 +112,10 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.btnThem.Location = new System.Drawing.Point(411, 398);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThem.Location = new System.Drawing.Point(725, 674);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(88, 29);
+            this.btnThem.Size = new System.Drawing.Size(117, 36);
             this.btnThem.TabIndex = 37;
             this.btnThem.Text = " Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -127,9 +130,10 @@
             this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(411, 14);
+            this.btnTimKiem.Location = new System.Drawing.Point(653, 42);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(92, 29);
+            this.btnTimKiem.Size = new System.Drawing.Size(123, 36);
             this.btnTimKiem.TabIndex = 36;
             this.btnTimKiem.Text = "TÌM KIẾM";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -140,11 +144,11 @@
             // 
             this.groupBox1.Controls.Add(this.dgvDSNhanVien);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 67);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(21, 82);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(688, 312);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1275, 583);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DANH SÁCH NHÂN VIÊN";
@@ -154,10 +158,11 @@
             this.dgvDSNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSNhanVien.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvDSNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSNhanVien.Location = new System.Drawing.Point(16, 23);
+            this.dgvDSNhanVien.Location = new System.Drawing.Point(21, 28);
+            this.dgvDSNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDSNhanVien.Name = "dgvDSNhanVien";
             this.dgvDSNhanVien.RowHeadersWidth = 51;
-            this.dgvDSNhanVien.Size = new System.Drawing.Size(656, 275);
+            this.dgvDSNhanVien.Size = new System.Drawing.Size(1235, 537);
             this.dgvDSNhanVien.TabIndex = 4;
             // 
             // cbbSapXep
@@ -167,9 +172,10 @@
             this.cbbSapXep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSapXep.FormattingEnabled = true;
-            this.cbbSapXep.Location = new System.Drawing.Point(157, 13);
+            this.cbbSapXep.Location = new System.Drawing.Point(184, 43);
+            this.cbbSapXep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbSapXep.Name = "cbbSapXep";
-            this.cbbSapXep.Size = new System.Drawing.Size(142, 25);
+            this.cbbSapXep.Size = new System.Drawing.Size(188, 27);
             this.cbbSapXep.TabIndex = 34;
             this.cbbSapXep.SelectedIndexChanged += new System.EventHandler(this.cbbSapXep_SelectedIndexChanged);
             // 
@@ -177,19 +183,21 @@
             // 
             this.txtTimKiem.BackColor = System.Drawing.Color.White;
             this.txtTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(518, 18);
+            this.txtTimKiem.Location = new System.Drawing.Point(800, 47);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(171, 24);
+            this.txtTimKiem.Size = new System.Drawing.Size(227, 28);
             this.txtTimKiem.TabIndex = 33;
             // 
             // UC_ThongTinNV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_ThongTinNV";
-            this.Size = new System.Drawing.Size(745, 485);
+            this.Size = new System.Drawing.Size(1352, 766);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

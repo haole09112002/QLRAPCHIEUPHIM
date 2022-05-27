@@ -107,12 +107,6 @@
     <Compile Include="AD_GUI\UC_CaLam.Designer.cs">
       <DependentUpon>UC_CaLam.cs</DependentUpon>
     </Compile>
-    <Compile Include="AD_GUI\UC_CaNhan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AD_GUI\UC_CaNhan.Designer.cs">
-      <DependentUpon>UC_CaNhan.cs</DependentUpon>
-    </Compile>
     <Compile Include="AD_GUI\UC_DeXuat.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -251,12 +245,6 @@
     </Compile>
     <Compile Include="QLP_GUI\frm_ThongTinNCC_QLP.Designer.cs">
       <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLP_GUI\UC_CaNhan_QLP.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QLP_GUI\UC_CaNhan_QLP.Designer.cs">
-      <DependentUpon>UC_CaNhan_QLP.cs</DependentUpon>
     </Compile>
     <Compile Include="QLP_GUI\UC_DanhSachLichChieuChinhThuc_QLP.cs">
       <SubType>UserControl</SubType>
@@ -453,9 +441,6 @@
     <EmbeddedResource Include="AD_GUI\UC_CaLam.resx">
       <DependentUpon>UC_CaLam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AD_GUI\UC_CaNhan.resx">
-      <DependentUpon>UC_CaNhan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_DeXuat.resx">
       <DependentUpon>UC_DeXuat.cs</DependentUpon>
     </EmbeddedResource>
@@ -531,9 +516,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\frm_ThongTinNCC_QLP.resx">
       <DependentUpon>frm_ThongTinNCC_QLP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLP_GUI\UC_CaNhan_QLP.resx">
-      <DependentUpon>UC_CaNhan_QLP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLP_GUI\UC_DanhSachLichChieuChinhThuc_QLP.resx">
       <DependentUpon>UC_DanhSachLichChieuChinhThuc_QLP.cs</DependentUpon>
