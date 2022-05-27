@@ -47,6 +47,7 @@ namespace GUI.QLP_GUI
         {
             d(ucLS);
             changeColorButton(btnDanhSachPhieuNX);
+            ucLS.Reload();
         }
     }
 }

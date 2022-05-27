@@ -18,6 +18,7 @@ namespace GUI.QLP_GUI
             SetDataTable();
             ReLoad();
             btnChinhSua.Visible = false;
+            btnLuu.Enabled = false;
         }
         public void ReLoad(string TenPhim = "", string LoaiTimKiem = "Tên Phim")
         {
@@ -59,9 +60,18 @@ namespace GUI.QLP_GUI
             return false;
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(btnLuu.Enabled == true)
+            {
+                DialogResult dialogResult = MessageBox.Show("Bạn chưa lưu, xác nhận thoát","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+                if(dialogResult == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
+            else
+                this.Close();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -109,6 +119,7 @@ namespace GUI.QLP_GUI
             nUDSoLuong.Text = "0";
             cBDonViTinh.Text = "";
             txtMaPhim.Text = "";
+            btnLuu.Enabled = true;
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
@@ -182,6 +193,10 @@ namespace GUI.QLP_GUI
                         dGVDeXuatPhim.Rows.RemoveAt(i.Index);
                     }
             }
+            if (dGVDeXuatPhim.Rows.Count == 0)
+            {
+                btnLuu.Enabled = false;
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -195,7 +210,7 @@ namespace GUI.QLP_GUI
                 string NoiDung = "";
                 string DonViTinh = "";
                 int SoLuong;
-                for (int i = 0; i < dGVDeXuatPhim.Rows.Count - 1; i++)
+                for (int i = 0; i < dGVDeXuatPhim.Rows.Count; i++)
                 {
                     MaPhim = dGVDeXuatPhim.Rows[i].Cells["Mã Phim"].Value.ToString();
                     NoiDung = dGVDeXuatPhim.Rows[i].Cells["Nội Dung"].Value.ToString();

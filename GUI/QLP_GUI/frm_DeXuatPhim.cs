@@ -23,10 +23,20 @@ namespace GUI.QLP_GUI
             SetCBBDienVienDaoDien(cBDienVienPhu);
             SetCBBDienVienDaoDien(cBDaoDien);
         }
-
-        private void btnHuy_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(txtTenPhim.Text == "" && nUDThoiLuong.Value == 0 && cBQuocGia.Text == "" && cBHangSanXuatPhim.Text == "" && cBTheLoai.Text == ""
+                && nUDDoTuoiXem.Value == 0 && rtxtNoiDung.Text == "" && dGVDienVienChinh.Rows.Count == 0 && dGVDienVienPhu.Rows.Count == 0
+                && dGVDaoDien.Rows.Count == 0 && pBAnhPhim.Image == null)
+                this.Close();
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Dữ liệu chưa lưu, bạn có muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if(dialogResult == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
         }
         public void SetDataTable()
         {
@@ -86,7 +96,7 @@ namespace GUI.QLP_GUI
         {
             if (VaiTro == "C")
             {
-                for (int i = 0; i < dGVDienVienChinh.Rows.Count - 1; i++)
+                for (int i = 0; i < dGVDienVienChinh.Rows.Count; i++)
                 {
                     if (dGVDienVienChinh.Rows[i].Cells["Mã Diễn Viên Chính"].Value.ToString() == MaDienVienDaoDien)
                     {
@@ -96,7 +106,7 @@ namespace GUI.QLP_GUI
             }
             if (VaiTro == "P")
             {
-                for (int i = 0; i < dGVDienVienPhu.Rows.Count - 1; i++)
+                for (int i = 0; i < dGVDienVienPhu.Rows.Count; i++)
                 {
                     if (dGVDienVienPhu.Rows[i].Cells["Mã Diễn Viên Phụ"].Value.ToString() == MaDienVienDaoDien)
                     {
@@ -106,7 +116,7 @@ namespace GUI.QLP_GUI
             }
             if (VaiTro == "D")
             {
-                for (int i = 0; i < dGVDaoDien.Rows.Count - 1; i++)
+                for (int i = 0; i < dGVDaoDien.Rows.Count; i++)
                 {
                     if (dGVDaoDien.Rows[i].Cells["Mã Đạo Diễn"].Value.ToString() == MaDienVienDaoDien)
                     {
@@ -119,7 +129,7 @@ namespace GUI.QLP_GUI
         public bool KiemTraTinhDungDang()
         {
             bool DemLoi = true;
-            if (Regex.IsMatch(txtTenPhim.Text, @"^[a-zA-Z0-9 ]*$") != true || txtTenPhim.Text == "")
+            if (Regex.IsMatch(txtTenPhim.Text, @"^[^a-zA-Z0-9]+$") != false || txtTenPhim.Text == "")
             {
                 lbTenPhim.Text = "*Tên phim không hợp lệ";
                 DemLoi = false;
@@ -238,15 +248,15 @@ namespace GUI.QLP_GUI
                     Phim.NoiDung = rtxtNoiDung.Text;
                     Phim.NamSanXuat = dTPNamSanXuat.Value;
 
-                    for (int i = 0; i < dGVDienVienChinh.Rows.Count - 1; i++)
+                    for (int i = 0; i < dGVDienVienChinh.Rows.Count; i++)
                     {
                         MaDienVienChinh.Add(dGVDienVienChinh.Rows[i].Cells["Mã Diễn Viên Chính"].Value.ToString());
                     }
-                    for (int i = 0; i < dGVDienVienPhu.Rows.Count - 1; i++)
+                    for (int i = 0; i < dGVDienVienPhu.Rows.Count; i++)
                     {
                         MaDienVienPhu.Add(dGVDienVienPhu.Rows[i].Cells["Mã Diễn Viên Phụ"].Value.ToString());
                     }
-                    for (int i = 0; i < dGVDaoDien.Rows.Count - 1; i++)
+                    for (int i = 0; i < dGVDaoDien.Rows.Count; i++)
                     {
                         MaDaoDien.Add(dGVDaoDien.Rows[i].Cells["Mã Đạo Diễn"].Value.ToString());
                     }
@@ -374,5 +384,6 @@ namespace GUI.QLP_GUI
                 pBAnhPhim.ImageLocation = openFileDialog.FileName;
             }
         }
+
     }
 }

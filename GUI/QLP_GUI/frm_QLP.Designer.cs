@@ -39,18 +39,20 @@
             this.btnDeXuatPhim = new System.Windows.Forms.Button();
             this.btnTaoLichChieu = new System.Windows.Forms.Button();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.pbClose = new System.Windows.Forms.PictureBox();
+            this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbTenNhanVien = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pBExit = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.pnCenter = new System.Windows.Forms.Panel();
             this.pnLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLeft
@@ -242,11 +244,12 @@
             // pnTop
             // 
             this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(229)))), ((int)(((byte)(232)))));
+            this.pnTop.Controls.Add(this.pbClose);
+            this.pnTop.Controls.Add(this.pbMinimize);
             this.pnTop.Controls.Add(this.label5);
             this.pnTop.Controls.Add(this.label3);
             this.pnTop.Controls.Add(this.lbTenNhanVien);
             this.pnTop.Controls.Add(this.label6);
-            this.pnTop.Controls.Add(this.pBExit);
             this.pnTop.Controls.Add(this.label7);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(240, 0);
@@ -255,11 +258,39 @@
             this.pnTop.Size = new System.Drawing.Size(1333, 79);
             this.pnTop.TabIndex = 3;
             // 
+            // pbClose
+            // 
+            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbClose.Image = global::GUI.Properties.Resources.Close_24px;
+            this.pbClose.Location = new System.Drawing.Point(1276, 18);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(33, 37);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClose.TabIndex = 20;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
+            // pbMinimize
+            // 
+            this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMinimize.Image = global::GUI.Properties.Resources.subtract_24px;
+            this.pbMinimize.Location = new System.Drawing.Point(1211, 18);
+            this.pbMinimize.Name = "pbMinimize";
+            this.pbMinimize.Size = new System.Drawing.Size(33, 37);
+            this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMinimize.TabIndex = 18;
+            this.pbMinimize.TabStop = false;
+            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
+            // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(868, 11);
+            this.label5.Location = new System.Drawing.Point(791, 4);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 30);
             this.label5.TabIndex = 16;
@@ -269,7 +300,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(868, 41);
+            this.label3.Location = new System.Drawing.Point(791, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 40);
             this.label3.TabIndex = 17;
@@ -281,7 +312,7 @@
             this.lbTenNhanVien.AutoSize = true;
             this.lbTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenNhanVien.ForeColor = System.Drawing.Color.Black;
-            this.lbTenNhanVien.Location = new System.Drawing.Point(1014, 9);
+            this.lbTenNhanVien.Location = new System.Drawing.Point(937, 2);
             this.lbTenNhanVien.Name = "lbTenNhanVien";
             this.lbTenNhanVien.Size = new System.Drawing.Size(63, 25);
             this.lbTenNhanVien.TabIndex = 18;
@@ -299,26 +330,13 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Cinema Manegemenr System";
             // 
-            // pBExit
-            // 
-            this.pBExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pBExit.Image = global::GUI.Properties.Resources.shutdown_40px;
-            this.pBExit.Location = new System.Drawing.Point(1279, 13);
-            this.pBExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pBExit.Name = "pBExit";
-            this.pBExit.Size = new System.Drawing.Size(42, 58);
-            this.pBExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBExit.TabIndex = 4;
-            this.pBExit.TabStop = false;
-            this.pBExit.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Image = global::GUI.Properties.Resources.EmployeeQLVT;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(1014, 34);
+            this.label7.Location = new System.Drawing.Point(937, 27);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(184, 51);
@@ -365,7 +383,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,7 +401,6 @@
         private System.Windows.Forms.Button btnDeXuatPhim;
         private System.Windows.Forms.Button btnTaoLichChieu;
         private System.Windows.Forms.Panel pnTop;
-        private System.Windows.Forms.PictureBox pBExit;
         public System.Windows.Forms.Panel pnMenu;
         public System.Windows.Forms.Panel pnCenter;
         private System.Windows.Forms.Label label6;
@@ -391,5 +409,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbTenNhanVien;
+        private System.Windows.Forms.PictureBox pbMinimize;
+        private System.Windows.Forms.PictureBox pbClose;
     }
 }

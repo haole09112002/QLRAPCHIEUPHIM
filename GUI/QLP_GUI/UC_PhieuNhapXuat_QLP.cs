@@ -68,6 +68,9 @@ namespace GUI.QLP_GUI
             if(rBTatCa.Checked == true)
             {
                 Reload("");
+                txtTimKiem.Text = "";
+                cBTimKiem.SelectedIndex = -1;
+                cBSapXep.SelectedIndex = -1;
             }
         }
 
@@ -76,6 +79,9 @@ namespace GUI.QLP_GUI
             if(rBNhap.Checked == true)
             {
                 Reload("LP001");
+                txtTimKiem.Text = "";
+                cBTimKiem.SelectedIndex = -1;
+                cBSapXep.SelectedIndex = -1;
             }
         }
 
@@ -84,6 +90,9 @@ namespace GUI.QLP_GUI
             if(rBXuat.Checked == true)
             {
                 Reload("LP002");
+                txtTimKiem.Text = "";
+                cBTimKiem.SelectedIndex = -1;
+                cBSapXep.SelectedIndex = -1;
             }
         }
 

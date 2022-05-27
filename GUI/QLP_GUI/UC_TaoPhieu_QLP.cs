@@ -60,9 +60,14 @@ namespace GUI.QLP_GUI
             dtDanhSachPhim.Rows.Clear();
             if (((CBBItem)cBMaLoaiPhieu.SelectedItem).Value == "LP001")
             {
+                int SoLuong = 0;
                 foreach (string i in HopDongPhimBLL.Instance.GetDanhSachMaPhimCoHopDong())
                 {
-                    dtDanhSachPhim.Rows.Add(i, PhimBLL.Instance.GetPhimByMaPhim(i).TenPhim);
+                    if (ChiTietKhoPhimBLL.Instance.GetChiTietKhoPhimByKhoa(((CBBItem)cBMaKho.SelectedItem).Value, i) != null) SoLuong = ChiTietKhoPhimBLL.Instance.GetChiTietKhoPhimByKhoa(((CBBItem)cBMaKho.SelectedItem).Value, i).SoLuongSP;
+                    if( HopDongPhimBLL.Instance.GetChiTietTSLPhimByMaPhim(i).TongSoLuongPhim > SoLuong)
+                    {
+                        dtDanhSachPhim.Rows.Add(i, PhimBLL.Instance.GetPhimByMaPhim(i).TenPhim);
+                    }
                 }
             }
             else
@@ -112,7 +117,9 @@ namespace GUI.QLP_GUI
                     }
                     else
                     {
-                        nUDSoLuong.Maximum = HopDongPhimBLL.Instance.GetChiTietTSLPhimByMaPhim(txtMaPhim.Text).TongSoLuongPhim;
+                        int SoLuong = 0;
+                        if (ChiTietKhoPhimBLL.Instance.GetChiTietKhoPhimByKhoa(((CBBItem)cBMaKho.SelectedItem).Value, txtMaPhim.Text) != null) SoLuong = ChiTietKhoPhimBLL.Instance.GetChiTietKhoPhimByKhoa(((CBBItem)cBMaKho.SelectedItem).Value, txtMaPhim.Text).SoLuongSP;
+                        nUDSoLuong.Maximum = HopDongPhimBLL.Instance.GetChiTietTSLPhimByMaPhim(txtMaPhim.Text).TongSoLuongPhim - SoLuong;
                     }
                 }
             }
@@ -145,24 +152,41 @@ namespace GUI.QLP_GUI
             }
             return kiemtra;
         }
-
+        public bool KiemTraTonTaiMaPhim(string MaPhim)
+        {
+            for (int i = 0; i < dGVPhimDaThem.Rows.Count; i++)
+            {
+                if(dGVPhimDaThem.Rows[i].Cells["Mã Phim"].Value.ToString() == MaPhim)
+                {
+                    MessageBox.Show("Phim đã được thêm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return true;
+                }
+            }
+            return false;
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (KiemTraTinhDungDangP2() == true)
             {
-                dtPhimDaThem.Rows.Add(txtMaPhim.Text, txtTenPhim.Text, nUDSoLuong.Value, cBDonViTinh.SelectedItem.ToString());
-                dGVPhimDaThem.DataSource = dtPhimDaThem;
-                dGVPhimDaThem.Columns["Mã Phim"].Visible = false;
+                if(KiemTraTonTaiMaPhim(txtMaPhim.Text) == false)
+                {
+                    dtPhimDaThem.Rows.Add(txtMaPhim.Text, txtTenPhim.Text, nUDSoLuong.Value, cBDonViTinh.SelectedItem.ToString());
+                    dGVPhimDaThem.DataSource = dtPhimDaThem;
+                    dGVPhimDaThem.Columns["Mã Phim"].Visible = false;
+                }
                 txtMaPhim.Text = "";
                 txtTenPhim.Text = "";
                 nUDSoLuong.Value = 0;
                 cBDonViTinh.Text = "";
             }
             btnLuu.Enabled = true;
+            cBMaKho.Enabled = false;
+            cBMaLoaiPhieu.Enabled = false;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(dGVPhimDaThem.Rows.Count.ToString());
             if (dGVPhimDaThem.Rows.Count == 0)
             {
                 lbPhimDaThem.Text = "*Danh sách phiếu nhập xuất không hợp lệ";
@@ -176,7 +200,7 @@ namespace GUI.QLP_GUI
                     PhieuBLL.Instance.LuuPhieu(((CBBItem)cBMaLoaiPhieu.SelectedItem).Value, ((CBBItem)cBMaKho.SelectedItem).Value, nhanvien.MaNhanVien, DateTime.Today);
                     string MaPhieu = PhieuBLL.Instance.GetMaPhieuAddNew();
                     List<ChiTietKhoPhimDTO> data = new List<ChiTietKhoPhimDTO>();
-                    for (int i = 0; i < dGVPhimDaThem.Rows.Count - 1; i++)
+                    for (int i = 0; i < dGVPhimDaThem.Rows.Count; i++)
                     {
                         ChiTietPhieuPhimBLL.Instance.LuuChiTietPhieuPhim(MaPhieu, dGVPhimDaThem.Rows[i].Cells["Mã Phim"].Value.ToString(), dGVPhimDaThem.Rows[i].Cells["Đơn Vị Tính"].Value.ToString(), Convert.ToInt32(dGVPhimDaThem.Rows[i].Cells["Số Lượng"].Value.ToString()));
                         data.Add(new ChiTietKhoPhimDTO
@@ -222,7 +246,7 @@ namespace GUI.QLP_GUI
         {
             if (dGVPhimDaThem.SelectedRows.Count <= 0)
             {
-                MessageBox.Show("Mời chọn dòng để xóa");
+                MessageBox.Show("Mời chọn dòng để xóa","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             else
             {
@@ -236,6 +260,8 @@ namespace GUI.QLP_GUI
             if(dGVPhimDaThem.Rows.Count == 0)
             {
                 btnLuu.Enabled = false;
+                cBMaKho.Enabled = true;
+                cBMaLoaiPhieu.Enabled = true;
             }
         }
 
@@ -263,7 +289,7 @@ namespace GUI.QLP_GUI
         {
             if (dGVPhimDaThem.SelectedRows.Count > 1)
             {
-                MessageBox.Show("Số dòng chỉnh sửa không vượt quá 1");
+                MessageBox.Show("Số dòng chỉnh sửa không vượt quá 1", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -291,6 +317,14 @@ namespace GUI.QLP_GUI
             btnThem.Visible = true;
             btnChinhSua.Visible = false;
             dGVPhimDaThem.Enabled = true;
+        }
+
+        private void cBMaKho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cBMaKho.SelectedIndex >= 0)
+            {
+                lbMaKho.Text = "";
+            }
         }
     }
 }
