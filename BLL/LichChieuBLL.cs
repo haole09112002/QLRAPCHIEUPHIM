@@ -104,5 +104,20 @@ namespace BLL
         {
             LichChieuDAL.instance.CapNhatLichChieu(lichChieu);
         }
+        public string KTLichChieu(string MaPhim, string MaKhungGioChieu, string MaPhongChieu, DateTime NgayChieu)
+        {
+            foreach (LichChieuDTO i in GetAllLichChieu())
+            {
+                if (i.NgayChieu.Day == NgayChieu.Day && i.NgayChieu.Month == NgayChieu.Month && i.NgayChieu.Year == NgayChieu.Year && i.MaKhungGioChieu == MaKhungGioChieu && i.MaPhongChieu == MaPhongChieu && i.TrangThai == "2")
+                    return "Tồn tại một lịch chiếu dùng phòng chiếu cùng thời điểm";
+            }
+            return "";
+        }
+
+        public void CapNhatLichChieu(LichChieuDTO lichChieu, string trangThai)
+        {
+            lichChieu.TrangThai = trangThai;
+            LichChieuDAL.instance.CapNhatLichChieu(lichChieu);
+        }
     }
 }
