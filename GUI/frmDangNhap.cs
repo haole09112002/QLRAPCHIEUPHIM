@@ -24,7 +24,6 @@ namespace GUI
         }
         private void btnDN_Click(object sender, EventArgs e)
         {
-
             int result = NhanVienBLL.Instance.KiemTraDangNhap(txtTenTaiKhoan.Text, txtMatKhau.Text);
             if (result == 0)
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu! Vui lòng kiểm tra lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -32,7 +31,7 @@ namespace GUI
                 MessageBox.Show("Tài khoản chưa tồn tại! Vui lòng kiểm tra lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (result == 3)
             {
-                frmDashboard_AD frmDashboard_AD = new frmDashboard_AD();
+                frmDashboard_AD frmDashboard_AD = new frmDashboard_AD(NhanVienBLL.Instance.GetNhanVienByTenTaiKhoan(txtTenTaiKhoan.Text));
                 frmDashboard_AD.Show();
             }
             if (result == 2)

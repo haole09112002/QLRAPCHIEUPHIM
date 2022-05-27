@@ -43,6 +43,28 @@ namespace BLL
             }
             return data;
         }
+        public List<LichChieuDTO> GetLichChieuDGV(List<string> maPhim)
+        {
+            List<LichChieuDTO> data = new List<LichChieuDTO>();
+            foreach (string i in maPhim)
+            {
+                data.Add(GetLichChieuByMaPhim(i));
+            }
+            return data;
+        }
+        public LichChieuDTO GetLichChieuByMaPhim(string maPhim)
+        {
+            LichChieuDTO lichchieu = null;
+            foreach (LichChieuDTO i in LichChieuDAL.Instance.GetAllLichChieu())
+            {
+                if (i.MaPhim == maPhim)
+                {
+                    lichchieu = i;
+                    break;
+                }
+            }
+            return lichchieu;
+        }
         public string KiemTraLichChieu(string MaPhim,string MaKhungGioChieu, string MaPhongChieu, DateTime NgayChieu)
         {
             KhungGioChieuDTO KGC1 = KhungGioChieuBLL.Instance.GetKhungGioChieuByMaKGC(MaKhungGioChieu);
@@ -80,7 +102,7 @@ namespace BLL
         }
         public void DuyetLichChieu(LichChieuDTO lichChieu)
         {
-            
+            LichChieuDAL.instance.CapNhatLichChieu(lichChieu);
         }
     }
 }

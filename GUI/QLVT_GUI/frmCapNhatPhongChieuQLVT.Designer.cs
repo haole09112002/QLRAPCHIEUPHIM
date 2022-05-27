@@ -60,15 +60,11 @@
             this.cbTinhTrang = new System.Windows.Forms.ComboBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.grpListVatTuKho = new System.Windows.Forms.GroupBox();
-            this.btnTimKiemVatTuKho = new System.Windows.Forms.Button();
-            this.txtTimKiemVatTuKho = new System.Windows.Forms.TextBox();
             this.dgvListVatTuKho = new System.Windows.Forms.DataGridView();
             this.grpListVatTuDaThem = new System.Windows.Forms.GroupBox();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.lbSoLuongXoa = new System.Windows.Forms.Label();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDownSoLuongXoa = new System.Windows.Forms.NumericUpDown();
+            this.txtTimKiemVatTuKho = new System.Windows.Forms.TextBox();
+            this.btnTimKiemVatTuKho = new System.Windows.Forms.Button();
             this.dgvVatTuCoSan = new System.Windows.Forms.DataGridView();
             this.pnThemPhongChieu.SuspendLayout();
             this.pnTitleThemPhongChieu.SuspendLayout();
@@ -81,7 +77,6 @@
             this.grpListVatTuKho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListVatTuKho)).BeginInit();
             this.grpListVatTuDaThem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoLuongXoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVatTuCoSan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,6 +160,7 @@
             this.dgvVatTuDaChon.Location = new System.Drawing.Point(10, 25);
             this.dgvVatTuDaChon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvVatTuDaChon.Name = "dgvVatTuDaChon";
+            this.dgvVatTuDaChon.ReadOnly = true;
             this.dgvVatTuDaChon.RowHeadersWidth = 62;
             this.dgvVatTuDaChon.RowTemplate.Height = 28;
             this.dgvVatTuDaChon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -308,6 +304,7 @@
             // cbDonViTinh
             // 
             this.cbDonViTinh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbDonViTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDonViTinh.FormattingEnabled = true;
             this.cbDonViTinh.Location = new System.Drawing.Point(147, 206);
             this.cbDonViTinh.Name = "cbDonViTinh";
@@ -320,6 +317,7 @@
             this.txtTenVatTu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenVatTu.Location = new System.Drawing.Point(147, 86);
             this.txtTenVatTu.Name = "txtTenVatTu";
+            this.txtTenVatTu.ReadOnly = true;
             this.txtTenVatTu.Size = new System.Drawing.Size(468, 28);
             this.txtTenVatTu.TabIndex = 16;
             // 
@@ -328,6 +326,7 @@
             this.txtMaVatTu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaVatTu.Location = new System.Drawing.Point(147, 27);
             this.txtMaVatTu.Name = "txtMaVatTu";
+            this.txtMaVatTu.ReadOnly = true;
             this.txtMaVatTu.Size = new System.Drawing.Size(468, 28);
             this.txtMaVatTu.TabIndex = 14;
             this.txtMaVatTu.TextChanged += new System.EventHandler(this.txtMaVatTu_TextChanged);
@@ -469,6 +468,54 @@
             this.grpListVatTuKho.TabStop = false;
             this.grpListVatTuKho.Text = "Vật tư tạm thời  trong kho";
             // 
+            // dgvListVatTuKho
+            // 
+            this.dgvListVatTuKho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListVatTuKho.BackgroundColor = System.Drawing.Color.White;
+            this.dgvListVatTuKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListVatTuKho.Location = new System.Drawing.Point(11, 28);
+            this.dgvListVatTuKho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListVatTuKho.Name = "dgvListVatTuKho";
+            this.dgvListVatTuKho.ReadOnly = true;
+            this.dgvListVatTuKho.RowHeadersWidth = 62;
+            this.dgvListVatTuKho.RowTemplate.Height = 28;
+            this.dgvListVatTuKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListVatTuKho.Size = new System.Drawing.Size(582, 262);
+            this.dgvListVatTuKho.TabIndex = 42;
+            this.dgvListVatTuKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListVatTuKho_CellClick);
+            // 
+            // grpListVatTuDaThem
+            // 
+            this.grpListVatTuDaThem.Controls.Add(this.lbSoLuongXoa);
+            this.grpListVatTuDaThem.Controls.Add(this.dgvVatTuCoSan);
+            this.grpListVatTuDaThem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.grpListVatTuDaThem.Location = new System.Drawing.Point(27, 437);
+            this.grpListVatTuDaThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpListVatTuDaThem.Name = "grpListVatTuDaThem";
+            this.grpListVatTuDaThem.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpListVatTuDaThem.Size = new System.Drawing.Size(597, 334);
+            this.grpListVatTuDaThem.TabIndex = 51;
+            this.grpListVatTuDaThem.TabStop = false;
+            this.grpListVatTuDaThem.Text = "Vật tư  có sẵn trong phòng chiếu";
+            // 
+            // lbSoLuongXoa
+            // 
+            this.lbSoLuongXoa.AutoSize = true;
+            this.lbSoLuongXoa.ForeColor = System.Drawing.Color.Red;
+            this.lbSoLuongXoa.Location = new System.Drawing.Point(12, 298);
+            this.lbSoLuongXoa.Name = "lbSoLuongXoa";
+            this.lbSoLuongXoa.Size = new System.Drawing.Size(0, 19);
+            this.lbSoLuongXoa.TabIndex = 59;
+            // 
+            // txtTimKiemVatTuKho
+            // 
+            this.txtTimKiemVatTuKho.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiemVatTuKho.Location = new System.Drawing.Point(11, 334);
+            this.txtTimKiemVatTuKho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTimKiemVatTuKho.Name = "txtTimKiemVatTuKho";
+            this.txtTimKiemVatTuKho.Size = new System.Drawing.Size(143, 28);
+            this.txtTimKiemVatTuKho.TabIndex = 53;
+            // 
             // btnTimKiemVatTuKho
             // 
             this.btnTimKiemVatTuKho.BackColor = System.Drawing.Color.Cyan;
@@ -486,115 +533,6 @@
             this.btnTimKiemVatTuKho.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiemVatTuKho.UseVisualStyleBackColor = false;
             // 
-            // txtTimKiemVatTuKho
-            // 
-            this.txtTimKiemVatTuKho.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiemVatTuKho.Location = new System.Drawing.Point(11, 334);
-            this.txtTimKiemVatTuKho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTimKiemVatTuKho.Name = "txtTimKiemVatTuKho";
-            this.txtTimKiemVatTuKho.Size = new System.Drawing.Size(143, 28);
-            this.txtTimKiemVatTuKho.TabIndex = 53;
-            // 
-            // dgvListVatTuKho
-            // 
-            this.dgvListVatTuKho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvListVatTuKho.BackgroundColor = System.Drawing.Color.White;
-            this.dgvListVatTuKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListVatTuKho.Location = new System.Drawing.Point(11, 28);
-            this.dgvListVatTuKho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvListVatTuKho.Name = "dgvListVatTuKho";
-            this.dgvListVatTuKho.RowHeadersWidth = 62;
-            this.dgvListVatTuKho.RowTemplate.Height = 28;
-            this.dgvListVatTuKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListVatTuKho.Size = new System.Drawing.Size(582, 262);
-            this.dgvListVatTuKho.TabIndex = 42;
-            this.dgvListVatTuKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListVatTuKho_CellClick);
-            // 
-            // grpListVatTuDaThem
-            // 
-            this.grpListVatTuDaThem.Controls.Add(this.btnHuy);
-            this.grpListVatTuDaThem.Controls.Add(this.lbSoLuongXoa);
-            this.grpListVatTuDaThem.Controls.Add(this.btnXoa);
-            this.grpListVatTuDaThem.Controls.Add(this.label8);
-            this.grpListVatTuDaThem.Controls.Add(this.numericUpDownSoLuongXoa);
-            this.grpListVatTuDaThem.Controls.Add(this.dgvVatTuCoSan);
-            this.grpListVatTuDaThem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.grpListVatTuDaThem.Location = new System.Drawing.Point(27, 437);
-            this.grpListVatTuDaThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpListVatTuDaThem.Name = "grpListVatTuDaThem";
-            this.grpListVatTuDaThem.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpListVatTuDaThem.Size = new System.Drawing.Size(597, 334);
-            this.grpListVatTuDaThem.TabIndex = 51;
-            this.grpListVatTuDaThem.TabStop = false;
-            this.grpListVatTuDaThem.Text = "Vật tư  có sẵn trong phòng chiếu";
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.BackColor = System.Drawing.Color.Silver;
-            this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuy.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.btnHuy.Location = new System.Drawing.Point(492, 258);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(99, 36);
-            this.btnHuy.TabIndex = 60;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // lbSoLuongXoa
-            // 
-            this.lbSoLuongXoa.AutoSize = true;
-            this.lbSoLuongXoa.ForeColor = System.Drawing.Color.Red;
-            this.lbSoLuongXoa.Location = new System.Drawing.Point(12, 298);
-            this.lbSoLuongXoa.Name = "lbSoLuongXoa";
-            this.lbSoLuongXoa.Size = new System.Drawing.Size(0, 19);
-            this.lbSoLuongXoa.TabIndex = 59;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.Silver;
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.btnXoa.Location = new System.Drawing.Point(361, 258);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(99, 36);
-            this.btnXoa.TabIndex = 43;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Image = global::GUI.Properties.Resources.Soluong;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label8.Location = new System.Drawing.Point(12, 258);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 27);
-            this.label8.TabIndex = 43;
-            this.label8.Text = "Số lượng";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // numericUpDownSoLuongXoa
-            // 
-            this.numericUpDownSoLuongXoa.Location = new System.Drawing.Point(150, 260);
-            this.numericUpDownSoLuongXoa.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDownSoLuongXoa.Name = "numericUpDownSoLuongXoa";
-            this.numericUpDownSoLuongXoa.Size = new System.Drawing.Size(205, 28);
-            this.numericUpDownSoLuongXoa.TabIndex = 43;
-            this.numericUpDownSoLuongXoa.ValueChanged += new System.EventHandler(this.numericUpDownSoLuongXoa_ValueChanged);
-            // 
             // dgvVatTuCoSan
             // 
             this.dgvVatTuCoSan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -603,12 +541,12 @@
             this.dgvVatTuCoSan.Location = new System.Drawing.Point(14, 25);
             this.dgvVatTuCoSan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvVatTuCoSan.Name = "dgvVatTuCoSan";
+            this.dgvVatTuCoSan.ReadOnly = true;
             this.dgvVatTuCoSan.RowHeadersWidth = 62;
             this.dgvVatTuCoSan.RowTemplate.Height = 28;
             this.dgvVatTuCoSan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVatTuCoSan.Size = new System.Drawing.Size(577, 227);
+            this.dgvVatTuCoSan.Size = new System.Drawing.Size(577, 292);
             this.dgvVatTuCoSan.TabIndex = 56;
-            this.dgvVatTuCoSan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVatTuCoSan_CellClick);
             // 
             // FrmCapNhatPhongChieuQLVT
             // 
@@ -637,7 +575,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListVatTuKho)).EndInit();
             this.grpListVatTuDaThem.ResumeLayout(false);
             this.grpListVatTuDaThem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoLuongXoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVatTuCoSan)).EndInit();
             this.ResumeLayout(false);
 
@@ -652,11 +589,8 @@
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.GroupBox grpListVatTuKho;
-        private System.Windows.Forms.Button btnTimKiemVatTuKho;
-        private System.Windows.Forms.TextBox txtTimKiemVatTuKho;
         private System.Windows.Forms.DataGridView dgvListVatTuKho;
         private System.Windows.Forms.GroupBox grpListVatTuDaThem;
-        private System.Windows.Forms.DataGridView dgvVatTuCoSan;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtTenPhongChieu;
         private System.Windows.Forms.TextBox txtMaPhongChieu;
@@ -682,10 +616,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvVatTuDaChon;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numericUpDownSoLuongXoa;
-        private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Label lbSoLuongXoa;
+        private System.Windows.Forms.Button btnTimKiemVatTuKho;
+        private System.Windows.Forms.TextBox txtTimKiemVatTuKho;
+        private System.Windows.Forms.DataGridView dgvVatTuCoSan;
     }
 }

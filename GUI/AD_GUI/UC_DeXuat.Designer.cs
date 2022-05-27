@@ -34,8 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.rbDaDeXuat = new System.Windows.Forms.RadioButton();
-            this.rbDeXuat = new System.Windows.Forms.RadioButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnKhongDongY = new System.Windows.Forms.Button();
@@ -43,6 +41,10 @@
             this.cbbDeXuat = new System.Windows.Forms.ComboBox();
             this.dgvDaDeXuat = new System.Windows.Forms.DataGridView();
             this.dgvDeXuat = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDaDeXuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeXuat)).BeginInit();
@@ -51,11 +53,13 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.rbDaDeXuat);
-            this.panel1.Controls.Add(this.rbDeXuat);
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.btnKhongDongY);
@@ -86,7 +90,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Image = global::GUI.Properties.Resources.Calam;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(20, 228);
+            this.label1.Location = new System.Drawing.Point(18, 258);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(190, 22);
             this.label1.TabIndex = 31;
@@ -105,37 +109,11 @@
             this.label4.Text = "DANH SÁCH ĐỀ XUẤT";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // rbDaDeXuat
-            // 
-            this.rbDaDeXuat.AutoSize = true;
-            this.rbDaDeXuat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbDaDeXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rbDaDeXuat.Location = new System.Drawing.Point(586, 452);
-            this.rbDaDeXuat.Name = "rbDaDeXuat";
-            this.rbDaDeXuat.Size = new System.Drawing.Size(109, 21);
-            this.rbDaDeXuat.TabIndex = 25;
-            this.rbDaDeXuat.TabStop = true;
-            this.rbDaDeXuat.Text = "Đã Đề Xuất";
-            this.rbDaDeXuat.UseVisualStyleBackColor = true;
-            // 
-            // rbDeXuat
-            // 
-            this.rbDeXuat.AutoSize = true;
-            this.rbDeXuat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbDeXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rbDeXuat.Location = new System.Drawing.Point(586, 429);
-            this.rbDeXuat.Name = "rbDeXuat";
-            this.rbDeXuat.Size = new System.Drawing.Size(84, 21);
-            this.rbDeXuat.TabIndex = 24;
-            this.rbDeXuat.TabStop = true;
-            this.rbDeXuat.Text = "Đề Xuất";
-            this.rbDeXuat.UseVisualStyleBackColor = true;
-            // 
             // txtTimKiem
             // 
             this.txtTimKiem.Location = new System.Drawing.Point(407, 439);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(163, 20);
+            this.txtTimKiem.Size = new System.Drawing.Size(138, 20);
             this.txtTimKiem.TabIndex = 23;
             // 
             // btnTimKiem
@@ -191,10 +169,6 @@
             // 
             this.cbbDeXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbbDeXuat.FormattingEnabled = true;
-            this.cbbDeXuat.Items.AddRange(new object[] {
-            "Đề xuất phim\t",
-            "Đề xuất vật tư",
-            "Đề xuất thức ăn"});
             this.cbbDeXuat.Location = new System.Drawing.Point(106, 8);
             this.cbbDeXuat.Name = "cbbDeXuat";
             this.cbbDeXuat.Size = new System.Drawing.Size(155, 21);
@@ -205,10 +179,10 @@
             // 
             this.dgvDaDeXuat.BackgroundColor = System.Drawing.Color.White;
             this.dgvDaDeXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDaDeXuat.Location = new System.Drawing.Point(21, 253);
+            this.dgvDaDeXuat.Location = new System.Drawing.Point(21, 283);
             this.dgvDaDeXuat.Name = "dgvDaDeXuat";
             this.dgvDaDeXuat.RowHeadersWidth = 51;
-            this.dgvDaDeXuat.Size = new System.Drawing.Size(648, 170);
+            this.dgvDaDeXuat.Size = new System.Drawing.Size(648, 140);
             this.dgvDaDeXuat.TabIndex = 15;
             // 
             // dgvDeXuat
@@ -235,8 +209,47 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDeXuat.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDeXuat.RowHeadersWidth = 51;
-            this.dgvDeXuat.Size = new System.Drawing.Size(648, 170);
+            this.dgvDeXuat.Size = new System.Drawing.Size(648, 167);
             this.dgvDeXuat.TabIndex = 14;
+            // 
+            // cbbDeXuat
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(551, 438);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 33;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(551, 228);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 36;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(407, 229);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(138, 20);
+            this.textBox1.TabIndex = 35;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Cyan;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(302, 225);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 29);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "TÌM KIẾM";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // UC_DeXuat
             // 
@@ -256,8 +269,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton rbDaDeXuat;
-        private System.Windows.Forms.RadioButton rbDeXuat;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnKhongDongY;
@@ -268,5 +279,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

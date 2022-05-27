@@ -7,25 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GUI.AD_GUI;
+using GUI.QLVT_GUI;
+using DTO;
 namespace GUI.AD_GUI
 {
     public partial class frmDashboard_AD : Form
     {
-        public frmDashboard_AD()
-        {
-            InitializeComponent();
-        }
-      
+        private NhanVienDTO nhanVien = new NhanVienDTO();
         UC_LichChieu_AD ucLichChieu = new UC_LichChieu_AD();
         UC_NhaCungCap ucNCC = new UC_NhaCungCap();
         UC_HopDong ucHopDong = new UC_HopDong();
         UC_DeXuat ucDeXuat = new UC_DeXuat();
-        UC_CaNhan ucCaNhan = new UC_CaNhan();
+        UCHoSoCaNhanQLVT ucCaNhan;
 
         UC_MenuThongKe ucMenuThongKe = new UC_MenuThongKe();
         UC_MenuNhanVien ucMenuNhanVien = new UC_MenuNhanVien();
         UC_MenuKho ucMenuKho = new UC_MenuKho();
+        public frmDashboard_AD(NhanVienDTO nv)
+        {
+            InitializeComponent();
+            nhanVien = nv;
+            ucCaNhan = new UCHoSoCaNhanQLVT(nhanVien);
+            AddControlsToPnCenter(ucCaNhan);
+            changeColorButton(btnCaNhan);
+            lbTenNhanVien.Text = nv.TenNhanVien;
+            
+        }
+      
+        
         private void changeColorButton(Button btn)
         {
             btn.BackColor = Color.FromArgb(0, 144, 153);
@@ -92,6 +101,7 @@ namespace GUI.AD_GUI
         private void btnNV_Click(object sender, EventArgs e)
         {
             pnMenu.Controls.Clear();
+            ucMenuNhanVien.ucCaLam.ReLoad();
             AddControlsToPnMenu(ucMenuNhanVien);
             ucMenuNhanVien.setColor();
             AddControlsToPnCenter(ucMenuNhanVien.ucThongTinNV);

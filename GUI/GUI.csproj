@@ -53,6 +53,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,12 +70,6 @@
     </Compile>
     <Compile Include="AD_GUI\frmDashboard_AD.Designer.cs">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AD_GUI\frmThemCaLam.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AD_GUI\frmThemCaLam.Designer.cs">
-      <DependentUpon>frmThemCaLam.cs</DependentUpon>
     </Compile>
     <Compile Include="AD_GUI\frmThemHopDongPhim.cs">
       <SubType>Form</SubType>
@@ -177,12 +172,6 @@
     </Compile>
     <Compile Include="AD_GUI\UC_ThongKeChung.Designer.cs">
       <DependentUpon>UC_ThongKeChung.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AD_GUI\UC_ThongKeNhanVien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AD_GUI\UC_ThongKeNhanVien.Designer.cs">
-      <DependentUpon>UC_ThongKeNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="AD_GUI\UC_MenuNhanVien.cs">
       <SubType>UserControl</SubType>
@@ -446,9 +435,6 @@
     <EmbeddedResource Include="AD_GUI\frmDashboard_AD.resx">
       <DependentUpon>frmDashboard_AD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AD_GUI\frmThemCaLam.resx">
-      <DependentUpon>frmThemCaLam.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\frmThemHopDongPhim.resx">
       <DependentUpon>frmThemHopDongPhim.cs</DependentUpon>
     </EmbeddedResource>
@@ -502,9 +488,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_ThongKeChung.resx">
       <DependentUpon>UC_ThongKeChung.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AD_GUI\UC_ThongKeNhanVien.resx">
-      <DependentUpon>UC_ThongKeNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_GUI\UC_ThongKeNhapXuat.resx">
       <DependentUpon>UC_ThongKeNhapXuat.cs</DependentUpon>
@@ -1058,19 +1041,11 @@
   <ItemGroup>
     <None Include="Resources\subtract_24px.png" />
   </ItemGroup>
-  
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{1ca149db-4213-4f61-a64e-9352059ea6aa}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eye_26px.png" />
@@ -1083,6 +1058,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image_file_add_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{1ca149db-4213-4f61-a64e-9352059ea6aa}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{404eea14-ae0f-412f-968a-44b099d0c79f}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidePass_26px1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

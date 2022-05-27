@@ -77,6 +77,7 @@
             this.nUDThoiLuong = new System.Windows.Forms.NumericUpDown();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
+            this.nUDThoiLuong = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.gBMoTaPhim.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDaoDien)).BeginInit();
@@ -88,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDThoiLuong)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDThoiLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTenPhim
@@ -862,6 +864,18 @@
             this.lbName.Text = " Thêm Phim";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // nUDThoiLuong
+            // 
+            this.nUDThoiLuong.Location = new System.Drawing.Point(227, 99);
+            this.nUDThoiLuong.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nUDThoiLuong.Name = "nUDThoiLuong";
+            this.nUDThoiLuong.Size = new System.Drawing.Size(381, 33);
+            this.nUDThoiLuong.TabIndex = 72;
+            // 
             // frm_DeXuatPhim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -887,6 +901,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDThoiLuong)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nUDThoiLuong)).EndInit();
             this.ResumeLayout(false);
 
         }

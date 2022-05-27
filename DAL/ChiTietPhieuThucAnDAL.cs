@@ -46,7 +46,6 @@ namespace DAL
                 MaThucAn = i["MaThucAn"].ToString(),
                 DonViTinh = i["DonViTinh"].ToString(),
                 SoLuong = Convert.ToInt32(i["SoLuong"]),
-                NgayHetHan = Convert.ToDateTime(i["NgayHetHang"].ToString()),
             };
         }
     }

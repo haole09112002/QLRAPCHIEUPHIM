@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.pnLeft = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnTop = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbTenNhanVien = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnMenu = new System.Windows.Forms.Panel();
+            this.pnMenuContent = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnDeXuat = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSanPham = new System.Windows.Forms.Button();
             this.btnPhongChieu = new System.Windows.Forms.Button();
             this.btnNhaCungUng = new System.Windows.Forms.Button();
             this.btnCaNhan = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnNhapXuatKho = new System.Windows.Forms.Button();
-            this.pnTop = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbTenNhanVien = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pnMenu = new System.Windows.Forms.Panel();
-            this.pnMenuContent = new System.Windows.Forms.Panel();
             this.pnLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLeft
@@ -72,6 +72,121 @@
             this.pnLeft.Name = "pnLeft";
             this.pnLeft.Size = new System.Drawing.Size(249, 1094);
             this.pnLeft.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("MV Boli", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label1.Location = new System.Drawing.Point(16, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 49);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "CINEMA";
+            // 
+            // pnTop
+            // 
+            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(229)))), ((int)(((byte)(232)))));
+            this.pnTop.Controls.Add(this.label6);
+            this.pnTop.Controls.Add(this.pictureBox1);
+            this.pnTop.Controls.Add(this.label5);
+            this.pnTop.Controls.Add(this.lbTenNhanVien);
+            this.pnTop.Controls.Add(this.label3);
+            this.pnTop.Controls.Add(this.label2);
+            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTop.Location = new System.Drawing.Point(221, 0);
+            this.pnTop.Name = "pnTop";
+            this.pnTop.Size = new System.Drawing.Size(1352, 79);
+            this.pnTop.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(307, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(394, 37);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Cinema Manegemenr System";
+            // 
+            // lbTenNhanVien
+            // 
+            this.lbTenNhanVien.AutoSize = true;
+            this.lbTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenNhanVien.ForeColor = System.Drawing.Color.Black;
+            this.lbTenNhanVien.Location = new System.Drawing.Point(1179, 7);
+            this.lbTenNhanVien.Name = "lbTenNhanVien";
+            this.lbTenNhanVien.Size = new System.Drawing.Size(49, 20);
+            this.lbTenNhanVien.TabIndex = 2;
+            this.lbTenNhanVien.Text = "label";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(983, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 27);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Chức vụ:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(983, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Xin Chào: ";
+            // 
+            // pnMenu
+            // 
+            this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
+            this.pnMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnMenu.Location = new System.Drawing.Point(221, 79);
+            this.pnMenu.Name = "pnMenu";
+            this.pnMenu.Size = new System.Drawing.Size(1352, 30);
+            this.pnMenu.TabIndex = 3;
+            // 
+            // pnMenuContent
+            // 
+            this.pnMenuContent.BackColor = System.Drawing.Color.White;
+            this.pnMenuContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnMenuContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMenuContent.Location = new System.Drawing.Point(221, 109);
+            this.pnMenuContent.Name = "pnMenuContent";
+            this.pnMenuContent.Size = new System.Drawing.Size(1352, 766);
+            this.pnMenuContent.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.shutdown_40px;
+            this.pictureBox1.Location = new System.Drawing.Point(1298, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Image = global::GUI.Properties.Resources.EmployeeQLVT;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Location = new System.Drawing.Point(1100, 29);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label5.Size = new System.Drawing.Size(178, 39);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Quản lý vật tư";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox2
             // 
@@ -104,18 +219,6 @@
             this.btnDeXuat.UseMnemonic = false;
             this.btnDeXuat.UseVisualStyleBackColor = true;
             this.btnDeXuat.Click += new System.EventHandler(this.btnDeXuat_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("MV Boli", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label1.Location = new System.Drawing.Point(18, 136);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 59);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "CINEMA";
             // 
             // btnSanPham
             // 
@@ -239,113 +342,6 @@
             this.btnNhapXuatKho.UseVisualStyleBackColor = true;
             this.btnNhapXuatKho.Click += new System.EventHandler(this.btnNhapXuatKho_Click);
             // 
-            // pnTop
-            // 
-            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(229)))), ((int)(((byte)(232)))));
-            this.pnTop.Controls.Add(this.label6);
-            this.pnTop.Controls.Add(this.pictureBox1);
-            this.pnTop.Controls.Add(this.label5);
-            this.pnTop.Controls.Add(this.lbTenNhanVien);
-            this.pnTop.Controls.Add(this.label3);
-            this.pnTop.Controls.Add(this.label2);
-            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTop.Location = new System.Drawing.Point(249, 0);
-            this.pnTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1521, 99);
-            this.pnTop.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(345, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(458, 44);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Cinema Manegemenr System";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.shutdown_40px;
-            this.pictureBox1.Location = new System.Drawing.Point(1460, 18);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Image = global::GUI.Properties.Resources.EmployeeQLVT;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(1238, 36);
-            this.label5.Name = "label5";
-            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(200, 49);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Quản lý vật tư";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbTenNhanVien
-            // 
-            this.lbTenNhanVien.AutoSize = true;
-            this.lbTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenNhanVien.ForeColor = System.Drawing.Color.Black;
-            this.lbTenNhanVien.Location = new System.Drawing.Point(1326, 9);
-            this.lbTenNhanVien.Name = "lbTenNhanVien";
-            this.lbTenNhanVien.Size = new System.Drawing.Size(63, 25);
-            this.lbTenNhanVien.TabIndex = 2;
-            this.lbTenNhanVien.Text = "label";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(1106, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 34);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Chức vụ:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(1106, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 30);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Xin Chào: ";
-            // 
-            // pnMenu
-            // 
-            this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
-            this.pnMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnMenu.Location = new System.Drawing.Point(249, 99);
-            this.pnMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(1521, 38);
-            this.pnMenu.TabIndex = 3;
-            // 
-            // pnMenuContent
-            // 
-            this.pnMenuContent.BackColor = System.Drawing.Color.White;
-            this.pnMenuContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pnMenuContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMenuContent.Location = new System.Drawing.Point(249, 137);
-            this.pnMenuContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnMenuContent.Name = "pnMenuContent";
-            this.pnMenuContent.Size = new System.Drawing.Size(1521, 957);
-            this.pnMenuContent.TabIndex = 4;
-            // 
             // FrmDashboardQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -363,10 +359,10 @@
             this.Text = "frmDashboard_AD";
             this.pnLeft.ResumeLayout(false);
             this.pnLeft.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

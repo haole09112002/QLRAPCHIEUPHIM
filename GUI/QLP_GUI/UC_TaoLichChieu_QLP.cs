@@ -24,7 +24,7 @@ namespace GUI.QLP_GUI
             ReLoad();
             rBDSPhim.Checked = true;
             txtMaKhungGioChieu.Visible = false;
-            txtMaPhim.Visible = false;
+            txtMaPhim.Visible = true;
             txtMaPhongChieu.Visible = false;
         }
         public void SetDataTable()

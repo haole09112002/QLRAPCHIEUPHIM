@@ -14,6 +14,7 @@ namespace GUI.QLVT_GUI
 {
     public partial class UCPhongChieuQLVT : UserControl
     {
+        private List<ChiTietPhongChieuView> dsVT;
         public UCPhongChieuQLVT()
         {
             InitializeComponent();
@@ -29,6 +30,13 @@ namespace GUI.QLVT_GUI
             btnHuy.Enabled = false;
             btnLuu.Enabled = false;
             btnChinhSua.Enabled = false;
+            btnXoa.Enabled = false;
+            txtMaPhongChieu.Enabled = false;
+            txtTenPhongChieu.Enabled=false;
+            btnThem.Enabled=false;
+            cbLocTinhTrangPC.SelectedIndex = 0;
+            txtTimKiem.Text = "Nhập tên phòng";
+            txtTimKiemVatTu.Text = "Nhập tên vật tư";
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -44,28 +52,29 @@ namespace GUI.QLVT_GUI
         {
             if(dgvListPhongChieu.SelectedRows.Count == 1)
             {
-                txtMaPhongChieu.ReadOnly = true;
-                txtMaPhongChieu.ReadOnly = true;
-                cbLoaiPhong.Enabled = false;
-                cbTinhTrangPhong.Enabled = false;
-                txtTenPhongChieu.ReadOnly=true;
                 string maPhongChieu = dgvListPhongChieu.SelectedRows[0].Cells["MaPhongChieu"].Value.ToString();
                 LoadDGVListVatTu(maPhongChieu);
                 txtMaPhongChieu.Text = maPhongChieu;
-                txtTenPhongChieu.Text = dgvListPhongChieu.SelectedRows[0].Cells["TenPhong"].Value.ToString();
+                txtTenPhongChieu.Text = PhongChieuBLL.Instance.GetPhongChieuViewByMaPhongChieu(maPhongChieu).TenPhong;
                 foreach(CBBItem i in cbLoaiPhong.Items)
                 {
-                    if(i.Text == dgvListPhongChieu.SelectedRows[0].Cells["TenLoaiPhongChieu"].Value.ToString())
+                    if(i.Text == PhongChieuBLL.Instance.GetPhongChieuViewByMaPhongChieu(maPhongChieu).TenLoaiPhongChieu)
                         cbLoaiPhong.SelectedItem = i;
                 }
                 foreach (CBBItem i in cbTinhTrangPhong.Items)
                 {
-                    if (i.Text == dgvListPhongChieu.SelectedRows[0].Cells["TenTinhTrang"].Value.ToString())
+                    if (i.Text == PhongChieuBLL.Instance.GetPhongChieuViewByMaPhongChieu(maPhongChieu).TenTinhTrang)
                         cbTinhTrangPhong.SelectedItem = i;
                 }
+
+                cbLoaiPhong.Enabled = false;
+                cbTinhTrangPhong.Enabled = false;
+                txtTenPhongChieu.Enabled = false;
                 btnLuu.Enabled=false;
                 btnHuy.Enabled=false;
                 btnChinhSua.Enabled=true;
+                btnThem.Enabled = true;
+            
             }    
         }
         private void LoadDGVPhongChieu()
@@ -78,9 +87,11 @@ namespace GUI.QLVT_GUI
         }
         private void LoadDGVListVatTu (string maPhongChieu)
         {
+            dsVT = ChiTietPhongChieuBLL.Instance.GetAllCTPhongChieuViewByMaPhongChieu(maPhongChieu);
             dgvListVatTu.DataSource = null;
-            dgvListVatTu.DataSource = ChiTietPhongChieuBLL.Instance.GetAllCTPhongChieuViewByMaPhongChieu(maPhongChieu);
+            dgvListVatTu.DataSource = dsVT;
             dgvListVatTu.Columns["MaPhongChieu"].Visible = false;
+            
             dgvListVatTu.Columns["MaVatTu"].HeaderText = "Mã vật tư";
             dgvListVatTu.Columns["TenVatTu"].HeaderText = "Tên vật tư";
             dgvListVatTu.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
@@ -90,17 +101,17 @@ namespace GUI.QLVT_GUI
         private void btnThemPhongChieu_Click(object sender, EventArgs e)
         {
             btnLuu.Enabled = true;
-            txtMaPhongChieu.Enabled = false;
+            txtTenPhongChieu.Enabled = true;
             cbLoaiPhong.Enabled = true;
             cbTinhTrangPhong.Enabled = true;
-            txtTenPhongChieu.ReadOnly = false;
-            txtMaPhongChieu.Text = null;
+            txtMaPhongChieu.Text = "";
             cbLoaiPhong.SelectedIndex = -1;
             cbTinhTrangPhong.SelectedIndex = -1;
-            txtTenPhongChieu.Text = null;
+            txtTenPhongChieu.Text = "";
             lbThongBao.Text = "Mời nhập thông tin phòng chiếu!";
             btnHuy.Enabled = true;
             btnChinhSua.Enabled = false;
+            btnThem.Enabled = false;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -135,6 +146,8 @@ namespace GUI.QLVT_GUI
                     btnHuy.Enabled = false;
                     btnLuu.Enabled = false;
                     btnChinhSua.Enabled = true;
+                    btnThem.Enabled = true;
+                    cbTinhTrangPhong.Enabled = false;
                     LoadDGVPhongChieu();
                 }
                 
@@ -146,6 +159,21 @@ namespace GUI.QLVT_GUI
         {
             lbTenPhong.Text = "";
             lbThongBao.Text = "";
+            if (txtMaPhongChieu.Text != "")
+            {
+                if (cbTinhTrangPhong.SelectedIndex != -1)
+                    if (txtTenPhongChieu.Text == PhongChieuBLL.Instance.GetPhongChieuByMaPC(txtMaPhongChieu.Text).TenPhong
+                        && (((CBBItem)cbTinhTrangPhong.SelectedItem).Value == PhongChieuBLL.Instance.GetPhongChieuByMaPC(txtMaPhongChieu.Text).MaTinhTrang.ToString()))
+                {
+                    btnLuu.Enabled = false;
+          
+                }
+                else
+                {
+                    btnLuu.Enabled = true;
+                    btnHuy.Enabled = true;
+                }
+            }
         }
 
         private void cbLoaiPhong_SelectedIndexChanged(object sender, EventArgs e)
@@ -156,13 +184,27 @@ namespace GUI.QLVT_GUI
         private void cbTinhTrangPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbTinhTrang.Text = "";
+            if(txtMaPhongChieu.Text != "")
+            {
+                if (((CBBItem)cbTinhTrangPhong.SelectedItem).Value == PhongChieuBLL.Instance.GetPhongChieuByMaPC(txtMaPhongChieu.Text).MaTinhTrang.ToString()
+                    && txtTenPhongChieu.Text == PhongChieuBLL.Instance.GetPhongChieuByMaPC(txtMaPhongChieu.Text).TenPhong)
+                {
+                    btnLuu.Enabled = false;
+          
+                }
+                else
+                {
+                    btnLuu.Enabled = true;
+                    btnHuy.Enabled = true;
+                }
+            }              
         }
 
         private void cbLocTinhTrangPC_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbLocTinhTrangPC.SelectedIndex != -1)
                 dgvListPhongChieu.DataSource = PhongChieuBLL.Instance.GetDsPhongChieuViewByMaTinhTrang(((CBBItem)cbLocTinhTrangPC.SelectedItem).Value);
-            txtTimKiem.Text = "";
+            
         }
 
         private void btnTimKiemPhongChieu_Click(object sender, EventArgs e)
@@ -171,41 +213,129 @@ namespace GUI.QLVT_GUI
             if (cbLocTinhTrangPC.SelectedIndex != -1)
                 maTinhTrang = ((CBBItem)cbLocTinhTrangPC.SelectedItem).Value;
             dgvListPhongChieu.DataSource = PhongChieuBLL.Instance.TimKiemPhongChieu(txtTimKiem.Text, maTinhTrang);
+            if (txtTimKiem.Text == "")
+            {
+                txtTimKiem.Text = "Nhập tên phòng";
+            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            txtMaPhongChieu.Text = "";
-            btnLuu.Enabled = true;
-            txtTenPhongChieu.Text = "";
-            cbLoaiPhong.SelectedIndex = -1;
-            cbTinhTrangPhong.SelectedIndex = -1;
-            cbLoaiPhong.Enabled = true;
-            lbLoaiPhong.Text = "";
-            lbTinhTrang.Text = "";
-            lblVatTu.Text = "";
-            lbThongBao.Text = "Mời nhập thông tin phòng chiếu!";
-            lbTenPhong.Text = "";
-           btnChinhSua.Enabled = true;
+            if(txtMaPhongChieu.Text != "")
+            {
+                
+                btnChinhSua.Enabled = true;
+                btnLuu.Enabled = false;
+                btnHuy.Enabled = false;
+                txtTenPhongChieu.Enabled = false;
+                cbTinhTrangPhong.Enabled = false;
+            }    
+            else
+            {
+                lbThongBao.Text = "Mời nhập thông tin phòng chiếu!";
+                lbLoaiPhong.Text = "";
+                lbTinhTrang.Text = "";
+                lbTenPhong.Text = "";
+                txtTenPhongChieu.Text = "";
+                cbLoaiPhong.SelectedIndex = -1;
+                cbTinhTrangPhong.SelectedIndex = -1;
+                btnLuu.Enabled = true;
+                btnChinhSua.Enabled = false;
+            }    
         }
 
         private void btnTimKiemVatTu_Click(object sender, EventArgs e)
         {
             if(dgvListPhongChieu.SelectedRows.Count == 1)
             {
+                
                 string maPhongChieu = dgvListPhongChieu.SelectedRows[0].Cells["MaPhongChieu"].Value.ToString();
                 dgvListVatTu.DataSource = ChiTietPhongChieuBLL.Instance.TimKiemVatTuTrongPhongChieu(txtTimKiemVatTu.Text, maPhongChieu);
-            }    
+                if (txtTimKiemVatTu.Text == "")
+                {
+                    txtTimKiemVatTu.Text = "Nhập tên vật tư";
+                }    
+            }
+            else
+                MessageBox.Show("Bạn chưa chọn phòng chiếu! Vui lòng kiểm tra lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
            
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            btnLuu.Enabled = true;
-            btnHuy.Enabled = true;
+            
             txtTenPhongChieu.ReadOnly = false;
+            txtTenPhongChieu.Enabled = true;
             cbTinhTrangPhong.Enabled = true ;
             btnChinhSua.Enabled = false ;
+            btnHuy.Enabled = true ;
+        }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+            if(txtTimKiem.Text == "Nhập tên phòng")
+                txtTimKiem.Text = "";
+        }
+
+        private void txtTimKiemVatTu_Click(object sender, EventArgs e)
+        {
+            if(txtTimKiemVatTu.Text == "Nhập tên vật tư")
+                txtTimKiemVatTu.Text = "";
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (dgvListVatTu.SelectedRows.Count == 1)
+            {
+                string maVatTu = dgvListVatTu.SelectedRows[0].Cells["MaVatTu"].Value.ToString();
+                var vtPC = dsVT.Find(i=>i.MaVatTu == maVatTu);
+                if(vtPC != null)
+                {
+                    if (numericUpDownSoLuongXoa.Value > 0 && numericUpDownSoLuongXoa.Value <= vtPC.SoLuong)
+                    {
+                        DialogResult r = MessageBox.Show("Bạn có chắc muốn xóa!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (r == DialogResult.Yes)
+                        {
+                            ChiTietKhoVatTuDTO kho = new ChiTietKhoVatTuDTO
+                            {
+                                MaVatTu = maVatTu,
+                                DonViTinh = dgvListVatTu.SelectedRows[0].Cells["DonViTinh"].Value.ToString(),
+                                SoLuongSP = Convert.ToInt32(numericUpDownSoLuongXoa.Value),
+                                MaKho = "K0002"
+                            };
+                            ChiTietPhongChieuDTO pc = new ChiTietPhongChieuDTO
+                            {
+                                MaPhongChieu = vtPC.MaPhongChieu,
+                                MaVatTu = maVatTu,
+                                DonViTinh = vtPC.DonViTinh,
+                                SoLuongSP = Convert.ToInt32(numericUpDownSoLuongXoa.Value)
+                            };
+                            ChiTietKhoVatTuBLL.Instance.XoaMotVTTrongKho(kho);
+                            ChiTietPhongChieuBLL.Instance.XoaMotVatTuTrongPC(pc);
+                            LoadDGVListVatTu(vtPC.MaPhongChieu);
+                        }                        }
+                    else
+                        lbSoLuongXoa.Text = "Số lượng không hợp lệ!";
+                }
+               
+                    
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn vật tư cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
+       
+        }
+
+        private void numericUpDownSoLuongXoa_ValueChanged(object sender, EventArgs e)
+        {
+            lbSoLuongXoa.Text = "";
+        }
+
+        private void dgvListVatTu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnXoa.Enabled = true;
         }
     }
+    
 }
