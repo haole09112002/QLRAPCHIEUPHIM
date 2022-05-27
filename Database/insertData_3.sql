@@ -243,34 +243,86 @@ Values (N'Trần Văn Hữu','2002-02-12','1',N'Huế','0359235204','04620201081
 
 -----Đã xong
 ------19. lịch làm việc
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV001','2022-01-27');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0005','CLV001','2022-01-27');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0006','CLV001','2022-01-27');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0009','CLV001','2022-01-27');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV002','2022-01-27');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV002','2022-01-27');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0007','CLV002','2022-01-27');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0009','CLV002','2022-01-27');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV003','2022-01-27');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0004','CLV003','2022-01-27');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV003','2022-01-27');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV003','2022-01-27');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0008','CLV003','2022-01-27');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0010','CLV001','2022-01-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV001','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0006','CLV001','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0008','CLV001','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0009','CLV001','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0004','CLV002','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV002','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0007','CLV002','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0009','CLV002','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV003','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV003','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV003','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0006','CLV003','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0010','CLV001','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV004','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0008','CLV004','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV004','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0004','CLV004','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0007','CLV004','2022-05-26');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0010','CLV004','2022-05-26');
 
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV001','2022-01-28');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0005','CLV001','2022-01-28');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0008','CLV001','2022-01-28');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0010','CLV001','2022-01-28');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0004','CLV002','2022-01-28');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV002','2022-01-28');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0007','CLV002','2022-01-28');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0009','CLV002','2022-01-28');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV003','2022-01-28');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV003','2022-01-28');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV003','2022-01-28');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0006','CLV003','2022-01-28');
-insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0009','CLV001','2022-01-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV001','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0005','CLV001','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0006','CLV001','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0009','CLV001','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV002','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV002','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0007','CLV002','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0009','CLV002','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV003','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0004','CLV003','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV003','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV003','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0008','CLV003','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0010','CLV003','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV004','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0006','CLV004','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV004','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0004','CLV004','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0007','CLV004','2022-05-27');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0009','CLV004','2022-05-27');
+
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV001','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0005','CLV001','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0008','CLV001','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0010','CLV001','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0004','CLV002','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV002','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0007','CLV002','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0009','CLV002','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV003','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV003','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV003','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0006','CLV003','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0009','CLV001','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV004','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0008','CLV004','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV004','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0004','CLV004','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0007','CLV004','2022-05-28');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0010','CLV004','2022-05-28');
+
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV001','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0005','CLV001','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0008','CLV001','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0010','CLV001','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0004','CLV002','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV002','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0007','CLV002','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0009','CLV002','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0001','CLV003','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV003','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV003','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0008','CLV003','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0009','CLV001','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0002','CLV004','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0006','CLV004','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0003','CLV004','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0004','CLV004','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0007','CLV004','2022-05-29');
+insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values ('NV0010','CLV004','2022-05-29');
 ------ Đã xong
 ------20. Loại kho -------- LK001
 insert into LOAI_KHO(TenLoaiKho) values (N'Phim');
@@ -318,29 +370,29 @@ insert into LOAI_DE_XUAT(TenLoaiDeXuat) values (N'Đề xuất thức ăn nhanh'
 
 
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-05-02','LDX01');
+values ('NV0001','2022-05-26','LDX01');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0001','2022-05-08','LDX01');
+values ('NV0001','2022-05-26','LDX01');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0003','2022-05-02','LDX01');
+values ('NV0003','2022-05-26','LDX01');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0002','2022-05-02','LDX01');
+values ('NV0002','2022-05-26','LDX01');
 
 
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0005','2022-05-02','LDX02');
+values ('NV0005','2022-05-24','LDX02');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0006','2022-05-16','LDX02');
+values ('NV0006','2022-05-24','LDX02');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0007','2022-05-24','LDX02');
+values ('NV0007','2022-05-23','LDX02');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0005','2022-05-10','LDX02');
+values ('NV0005','2022-05-22','LDX02');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0008','2022-05-12','LDX03');
+values ('NV0008','2022-05-21','LDX03');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0006','2022-05-22','LDX03');
+values ('NV0006','2022-05-20','LDX03');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
-values ('NV0007','2022-05-02','LDX03');
+values ('NV0007','2022-05-22','LDX03');
 insert into DE_XUAT(MaNhanVien,NgayDeXuat,MaLoaiDeXuat)
 values ('NV0005','2022-05-23','LDX03');
 
@@ -405,35 +457,35 @@ insert into LOAI_PHIEU(TenLoaiPhieu) values (N'Phiếu xuất');
 -----31. Phiếu--------PH0001	12phieu
 
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	-- xuat TA 001
-values ('LP002','2022-04-04','K0003','NV0005');
+values ('LP002','2022-05-26','K0003','NV0005');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	-- xuat  TA 002
-values ('LP002','2022-01-05','K0003','NV0005');
+values ('LP002','2022-05-26','K0003','NV0005');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	--nhap thuc an 0003
-values ('LP001','2022-04-03','K0003','NV0005');
+values ('LP001','2022-05-26','K0003','NV0005');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	--nhap thuc an 0004
-values ('LP001','2022-05-03','K0003','NV0006');
+values ('LP001','2022-05-27','K0003','NV0006');
 
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	--nhap phim 0005
-values ('LP001','2022-01-05','K0001','NV0001');					
+values ('LP001','2022-05-27','K0001','NV0001');					
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	--nhap phim 006
-values ('LP001','2022-01-07','K0001','NV0001');
+values ('LP001','2022-05-27','K0001','NV0001');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	-- nhap phim 007
-values ('LP001','2022-01-08','K0001','NV0002');
+values ('LP001','2022-05-28','K0001','NV0002');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	-- nhap phim 008
-values ('LP001','2022-01-09','K0001','NV0001');
+values ('LP001','2022-05-28','K0001','NV0001');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	-- xuat phim 09
-values ('LP002','2022-01-08','K0001','NV0003');
+values ('LP002','2022-05-27','K0001','NV0003');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	-- xuat phim 010
-values ('LP002','2022-01-06','K0001','NV0002');		
+values ('LP002','2022-05-26','K0001','NV0002');		
 
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	--nhap vt 00011
-values ('LP001','2022-01-04','K0002','NV0006');
+values ('LP001','2022-05-29','K0002','NV0006');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	--nhap vt 00012
-values ('LP001','2022-01-04','K0002','NV0007');
+values ('LP001','2022-05-29','K0002','NV0007');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	--xuat vt 00013
-values ('LP002','2022-01-04','K0002','NV0008');
+values ('LP002','2022-05-30','K0002','NV0008');
 insert into PHIEU(MaLoaiPhieu,NgayLapPhieu,MaKho,MaNhanVien)	--xuat vt 00014
-values ('LP002','2022-01-04','K0002','NV0006');
+values ('LP002','2022-05-31','K0002','NV0006');
 
 ---- Đã xong
 -----32. Chi tiết phiếu phim
@@ -536,17 +588,17 @@ values ('HD0004','VT0004','300000',N'Cái','20');
 ---- Đã xong
 ------36. Hợp đồng phim
 insert into HOP_DONG_PHIM(MaHopDong,MaPhim,PhienBan,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
-values ('HD0001','P00001','1','2020-05-04','2020-06-20',N'Đĩa','10','50000');
+values ('HD0001','P00001','1','2022-04-04','2022-05-20',N'Đĩa','10','50000');
 insert into HOP_DONG_PHIM(MaHopDong,MaPhim,PhienBan,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
-values ('HD0001','P00001','0','2020-06-21','2020-06-30',N'Đĩa','10','20000');
+values ('HD0001','P00001','0','2022-05-21','2020-05-30',N'Đĩa','10','20000');
 insert into HOP_DONG_PHIM(MaHopDong,MaPhim,PhienBan,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
-values ('HD0001','P00002','0','2020-08-30','2022-11-30',N'Đĩa','10','30000');
+values ('HD0001','P00002','0','2022-05-12','2022-06-30',N'Đĩa','10','30000');
 insert into HOP_DONG_PHIM(MaHopDong,MaPhim,PhienBan,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
-values ('HD0001','P00003','0','2020-12-30','2022-12-30',N'Đĩa','10','50000');
+values ('HD0001','P00003','0','2022-05-10','2022-05-30',N'Đĩa','10','50000');
 insert into HOP_DONG_PHIM(MaHopDong,MaPhim,PhienBan,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
-values ('HD0002','P00004','0','2020-12-30','2022-12-30',N'Đĩa','10','45000');
+values ('HD0002','P00004','0','2022-04-30','2022-06-20',N'Đĩa','10','45000');
 insert into HOP_DONG_PHIM(MaHopDong,MaPhim,PhienBan,NgayBatDauBanQuyen,NgayKetThucBanQuyen,Donvitinh,SoLuong,GiaTien)
-values ('HD0002','P00005','0','2020-12-30','2022-12-30',N'Đĩa','10','45000');
+values ('HD0002','P00005','0','2022-05-30','2022-06-30',N'Đĩa','10','45000');
 ----- Đã xong
 -----37. Hợp đồng cung cấp thức ăn
 insert into HOP_DONG_THUC_AN(MaHopDong,MaThucAn,GiaTien,DonViTinh,SoLuong)

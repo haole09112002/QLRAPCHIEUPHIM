@@ -47,7 +47,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pbClose = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbTenNhanVien = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.pnCenter = new System.Windows.Forms.Panel();
             this.pnLeft.SuspendLayout();
@@ -81,7 +81,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::GUI.Properties.Resources.logo;
             this.pictureBox2.Location = new System.Drawing.Point(57, 2);
@@ -94,7 +94,7 @@
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -117,7 +117,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -131,7 +131,7 @@
             // 
             // btnKho
             // 
-            this.btnKho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnKho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnKho.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -153,7 +153,7 @@
             // 
             // btnNV
             // 
-            this.btnNV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnNV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnNV.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -175,7 +175,7 @@
             // 
             // btnHopDong
             // 
-            this.btnHopDong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnHopDong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHopDong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnHopDong.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -197,7 +197,7 @@
             // 
             // btnDeXuat
             // 
-            this.btnDeXuat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnDeXuat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeXuat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDeXuat.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -219,7 +219,7 @@
             // 
             // btnNCC
             // 
-            this.btnNCC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnNCC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNCC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnNCC.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -242,7 +242,7 @@
             // 
             // btnCaNhan
             // 
-            this.btnCaNhan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnCaNhan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCaNhan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCaNhan.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -256,7 +256,7 @@
             this.btnCaNhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCaNhan.Name = "btnCaNhan";
             this.btnCaNhan.Size = new System.Drawing.Size(240, 53);
-            this.btnCaNhan.TabIndex = 9;
+            this.btnCaNhan.TabIndex = 0;
             this.btnCaNhan.Text = "   Cá nhân";
             this.btnCaNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCaNhan.UseVisualStyleBackColor = true;
@@ -264,7 +264,7 @@
             // 
             // btnDangXuat
             // 
-            this.btnDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDangXuat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -286,7 +286,7 @@
             // 
             // btnLichChieu
             // 
-            this.btnLichChieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnLichChieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLichChieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLichChieu.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -316,7 +316,7 @@
             this.pnTop.Controls.Add(this.label7);
             this.pnTop.Controls.Add(this.label6);
             this.pnTop.Controls.Add(this.pbClose);
-            this.pnTop.Controls.Add(this.label4);
+            this.pnTop.Controls.Add(this.lbTenNhanVien);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(221, 0);
             this.pnTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -326,7 +326,7 @@
             // 
             // pbMinimize
             // 
-            this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMinimize.Image = global::GUI.Properties.Resources.subtract_24px;
@@ -341,7 +341,7 @@
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
@@ -353,7 +353,7 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
@@ -366,24 +366,24 @@
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Image = global::GUI.Properties.Resources.EmployeeQLVT;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(1020, 34);
+            this.label7.Location = new System.Drawing.Point(1011, 34);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(160, 41);
+            this.label7.Size = new System.Drawing.Size(160, 37);
             this.label7.TabIndex = 4;
             this.label7.Text = "Admin";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -397,7 +397,7 @@
             // 
             // pbClose
             // 
-            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbClose.Image = global::GUI.Properties.Resources.Close_24px;
@@ -410,18 +410,18 @@
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
-            // label4
+            // lbTenNhanVien
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbTenNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(1043, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label";
+            this.lbTenNhanVien.AutoSize = true;
+            this.lbTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenNhanVien.ForeColor = System.Drawing.Color.Black;
+            this.lbTenNhanVien.Location = new System.Drawing.Point(1020, 10);
+            this.lbTenNhanVien.Name = "lbTenNhanVien";
+            this.lbTenNhanVien.Size = new System.Drawing.Size(49, 20);
+            this.lbTenNhanVien.TabIndex = 2;
+            this.lbTenNhanVien.Text = "label";
             // 
             // pnMenu
             // 
@@ -484,7 +484,7 @@
         private System.Windows.Forms.Button btnLichChieu;
         private System.Windows.Forms.Panel pnCenter;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbTenNhanVien;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Panel pnMenu;
         private System.Windows.Forms.Label label6;

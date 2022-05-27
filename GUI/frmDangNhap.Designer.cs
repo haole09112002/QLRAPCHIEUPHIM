@@ -72,10 +72,12 @@
             // 
             // pictureBoxHidePass
             // 
-            //this.pictureBoxHidePass.Image = global::GUI.Properties.Resources.hidePass_26px;
-            this.pictureBoxHidePass.Location = new System.Drawing.Point(302, 92);
+            this.pictureBoxHidePass.BackColor = System.Drawing.Color.White;
+            this.pictureBoxHidePass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxHidePass.Image = global::GUI.Properties.Resources.hidePass_26px;
+            this.pictureBoxHidePass.Location = new System.Drawing.Point(300, 100);
             this.pictureBoxHidePass.Name = "pictureBoxHidePass";
-            this.pictureBoxHidePass.Size = new System.Drawing.Size(35, 35);
+            this.pictureBoxHidePass.Size = new System.Drawing.Size(25, 25);
             this.pictureBoxHidePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxHidePass.TabIndex = 11;
             this.pictureBoxHidePass.TabStop = false;
@@ -83,10 +85,12 @@
             // 
             // pictureBoxShowPass
             // 
+            this.pictureBoxShowPass.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBoxShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxShowPass.Image = global::GUI.Properties.Resources.eye_26px;
-            this.pictureBoxShowPass.Location = new System.Drawing.Point(302, 92);
+            this.pictureBoxShowPass.Location = new System.Drawing.Point(300, 100);
             this.pictureBoxShowPass.Name = "pictureBoxShowPass";
-            this.pictureBoxShowPass.Size = new System.Drawing.Size(35, 35);
+            this.pictureBoxShowPass.Size = new System.Drawing.Size(25, 25);
             this.pictureBoxShowPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxShowPass.TabIndex = 10;
             this.pictureBoxShowPass.TabStop = false;
@@ -140,17 +144,17 @@
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(66, 95);
+            this.txtMatKhau.Location = new System.Drawing.Point(66, 99);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(230, 28);
+            this.txtMatKhau.Size = new System.Drawing.Size(260, 28);
             this.txtMatKhau.TabIndex = 1;
             // 
             // txtTenTaiKhoan
             // 
             this.txtTenTaiKhoan.Location = new System.Drawing.Point(66, 38);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
-            this.txtTenTaiKhoan.Size = new System.Drawing.Size(230, 28);
+            this.txtTenTaiKhoan.Size = new System.Drawing.Size(260, 28);
             this.txtTenTaiKhoan.TabIndex = 0;
             // 
             // label1

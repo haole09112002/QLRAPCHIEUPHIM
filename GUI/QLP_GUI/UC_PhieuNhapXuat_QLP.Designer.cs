@@ -86,6 +86,7 @@
             // 
             // dGVChiTietPhieuNhapXuat
             // 
+            this.dGVChiTietPhieuNhapXuat.AllowUserToAddRows = false;
             this.dGVChiTietPhieuNhapXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVChiTietPhieuNhapXuat.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -232,6 +233,7 @@
             // 
             // dGVDanhSachPhieuNhapXuat
             // 
+            this.dGVDanhSachPhieuNhapXuat.AllowUserToAddRows = false;
             this.dGVDanhSachPhieuNhapXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dGVDanhSachPhieuNhapXuat.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

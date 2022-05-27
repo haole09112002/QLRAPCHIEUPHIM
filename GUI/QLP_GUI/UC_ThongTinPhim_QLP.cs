@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BLL;
+﻿using BLL;
 using DTO;
+using System;
+using System.Data;
+using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
 {
@@ -21,6 +14,7 @@ namespace GUI.QLP_GUI
             InitializeComponent();
             SetDataTable();
             Reload();
+            btnXemChiTiet.Enabled = false;
         }
         public void SetDataTable()
         {
@@ -36,7 +30,7 @@ namespace GUI.QLP_GUI
         public void Reload(string txt = "", string TimKiem = "")
         {
             dtDanhSachPhim.Rows.Clear();
-            foreach(PhimViewDTO i in PhimBLL.Instance.GetPhimViews(txt,TimKiem))
+            foreach (PhimViewDTO i in PhimBLL.Instance.GetPhimViews(txt, TimKiem))
             {
                 dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
             }
@@ -45,7 +39,7 @@ namespace GUI.QLP_GUI
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if(cBTimKiem.SelectedIndex < 0)
+            if (cBTimKiem.SelectedIndex < 0)
             {
                 Reload(txtTimKiem.Text);
             }
@@ -61,7 +55,7 @@ namespace GUI.QLP_GUI
             {
                 case "Tên Phim":
                     {
-                        foreach(PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTenPhim,txtTimKiem,cbTimKiem))
+                        foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTenPhim, txtTimKiem, cbTimKiem))
                         {
                             dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
                         }
@@ -69,7 +63,7 @@ namespace GUI.QLP_GUI
                     }
                 case "Thời Lượng":
                     {
-                        foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareThoiLuong,txtTimKiem,cbTimKiem))
+                        foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareThoiLuong, txtTimKiem, cbTimKiem))
                         {
                             dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
                         }
@@ -77,7 +71,7 @@ namespace GUI.QLP_GUI
                     }
                 case "Quốc Gia":
                     {
-                        foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareQuocGia,txtTimKiem,cbTimKiem))
+                        foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareQuocGia, txtTimKiem, cbTimKiem))
                         {
                             dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
                         }
@@ -85,7 +79,7 @@ namespace GUI.QLP_GUI
                     }
                 case "Năm Sản Xuất":
                     {
-                        foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareNamSanXuat,txtTimKiem,cbTimKiem))
+                        foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareNamSanXuat, txtTimKiem, cbTimKiem))
                         {
                             dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
                         }
@@ -93,7 +87,7 @@ namespace GUI.QLP_GUI
                     }
                 case "Thể Loại":
                     {
-                        foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTheLoai,txtTimKiem,cbTimKiem))
+                        foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTheLoai, txtTimKiem, cbTimKiem))
                         {
                             dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
                         }
@@ -107,11 +101,11 @@ namespace GUI.QLP_GUI
         {
             string search = "";
             string Sort = "Tên Phim";
-            if(cBSapXep.SelectedIndex >= 0)
+            if (cBSapXep.SelectedIndex >= 0)
             {
                 Sort = cBSapXep.SelectedItem.ToString();
             }
-            if(cBTimKiem.SelectedIndex >= 0)
+            if (cBTimKiem.SelectedIndex >= 0)
             {
                 search = cBTimKiem.SelectedItem.ToString();
             }
@@ -120,7 +114,7 @@ namespace GUI.QLP_GUI
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
-            if(dGVDanhSachPhim.SelectedRows.Count == 1)
+            if (dGVDanhSachPhim.SelectedRows.Count == 1)
             {
                 var frmTTP = new frmThongTinPhim(dGVDanhSachPhim.SelectedRows[0].Cells["Mã Phim"].Value.ToString());
                 frmTTP.ShowDialog();
@@ -132,6 +126,18 @@ namespace GUI.QLP_GUI
             frm_DeXuatPhim frmDXP = new frm_DeXuatPhim();
             frmDXP.ShowDialog();
             Reload();
+        }
+
+        private void dGVDanhSachPhim_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dGVDanhSachPhim.SelectedRows.Count == 1)
+            {
+                btnXemChiTiet.Enabled = true;
+            }
+            else
+            {
+                btnXemChiTiet.Enabled = false;
+            }
         }
     }
 }

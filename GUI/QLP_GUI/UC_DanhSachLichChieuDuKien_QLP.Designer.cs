@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cBTimKiem = new System.Windows.Forms.ComboBox();
             this.btnSapXep = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cBSapXep = new System.Windows.Forms.ComboBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cBTimKiem);
             this.panel1.Controls.Add(this.btnSapXep);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.cBSapXep);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.label1);
@@ -61,6 +61,7 @@
             // cBTimKiem
             // 
             this.cBTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBTimKiem.FormattingEnabled = true;
             this.cBTimKiem.Items.AddRange(new object[] {
@@ -88,17 +89,23 @@
             this.btnSapXep.TabIndex = 47;
             this.btnSapXep.Text = "    SẮP XẾP";
             this.btnSapXep.UseVisualStyleBackColor = false;
+            this.btnSapXep.Click += new System.EventHandler(this.btnSapXep_Click);
             // 
-            // comboBox2
+            // cBSapXep
             // 
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(976, 67);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(298, 31);
-            this.comboBox2.TabIndex = 46;
+            this.cBSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBSapXep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBSapXep.FormattingEnabled = true;
+            this.cBSapXep.Items.AddRange(new object[] {
+            "Tên Phim",
+            "Tên Phòng Chiếu",
+            "Ngày Chiếu"});
+            this.cBSapXep.Location = new System.Drawing.Point(976, 67);
+            this.cBSapXep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cBSapXep.Name = "cBSapXep";
+            this.cBSapXep.Size = new System.Drawing.Size(298, 31);
+            this.cBSapXep.TabIndex = 46;
             // 
             // btnTimKiem
             // 
@@ -143,23 +150,23 @@
             // 
             this.dGVDanhSachLichChieuDuKien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVDanhSachLichChieuDuKien.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGVDanhSachLichChieuDuKien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVDanhSachLichChieuDuKien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dGVDanhSachLichChieuDuKien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGVDanhSachLichChieuDuKien.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVDanhSachLichChieuDuKien.DefaultCellStyle = dataGridViewCellStyle6;
             this.dGVDanhSachLichChieuDuKien.Location = new System.Drawing.Point(27, 125);
             this.dGVDanhSachLichChieuDuKien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDanhSachLichChieuDuKien.Name = "dGVDanhSachLichChieuDuKien";
@@ -177,6 +184,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_DanhSachLichChieuDuKien_QLP";
             this.Size = new System.Drawing.Size(1333, 766);
+            this.Leave += new System.EventHandler(this.UC_DanhSachLichChieuDuKien_QLP_Leave);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachLichChieuDuKien)).EndInit();
@@ -188,7 +196,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSapXep;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cBSapXep;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;

@@ -116,6 +116,12 @@ namespace GUI.AD_GUI
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             loadDGVDanhSachNCC(((CBBItem)cbLoaiNhaCungCap.SelectedItem).Value, txtTimKiem.Text );
+            if(dgvDSNhaCungCap.RowCount != 0)
+            {
+                string maNhaCungCap = dgvDSNhaCungCap.Rows[0].Cells["MaNhaCungCap"].Value.ToString();
+                loadDGVDanhSachSanPham(maNhaCungCap);
+            }    
+           
         }
 
         private void cbSapXep_SelectedIndexChanged(object sender, EventArgs e)
@@ -128,6 +134,12 @@ namespace GUI.AD_GUI
             if (e.KeyCode == Keys.Enter)
             {
                 loadDGVDanhSachNCC(((CBBItem)cbLoaiNhaCungCap.SelectedItem).Value, txtTimKiem.Text);
+                if (dgvDSNhaCungCap != null)
+                {
+                    string maNhaCungCap = dgvDSNhaCungCap.Rows[0].Cells["MaNhaCungCap"].Value.ToString();
+                    loadDGVDanhSachSanPham(maNhaCungCap);
+                }
+
             }
         }
 
@@ -153,6 +165,21 @@ namespace GUI.AD_GUI
                 dgvDSNhaCungCap.DataSource = NhaCungCapBLL.Instance.SortNhaCungCap(NhaCungCapBLL.Instance.GetNhaCungCapViewDGV(now), dkSapXep);
                 loadDGVDanhSachSanPham(dgvDSNhaCungCap.Rows[0].Cells["MaNhaCungCap"].Value.ToString());
             }
+        }
+
+        private void btnTimKiemSanPham_Click(object sender, EventArgs e)
+        {
+            if(dgvDSNhaCungCap.SelectedRows.Count  == 1)
+            {
+              
+               dgvDSSanPham.DataSource =  NhaCungCapBLL.Instance.TimKiemVatTuTheoTen(dgvDSNhaCungCap.SelectedRows[0].Cells["MaNhaCungCap"].Value.ToString(), txtTimKiemSanPham.Text);
+            }    
+        }
+
+        private void cbLoaiNhaCungCap_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string maNhaCungCap = dgvDSNhaCungCap.Rows[0].Cells["MaNhaCungCap"].Value.ToString();
+            loadDGVDanhSachSanPham(maNhaCungCap);
         }
     }
 }

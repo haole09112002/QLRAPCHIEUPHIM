@@ -266,7 +266,7 @@ namespace BLL
             {
                 foreach (string i in MaDeXuat)
                 {
-                    if (NhanVienBLL.Instance.GetNhanVienByMaNhanVien(GetDeXuatByMaDeXuat(i).MaNhanVien).TenNhanVien.Contains(TimKiem))
+                    if (NhanVienBLL.Instance.GetNhanVienByMaNhanVien(GetDeXuatByMaDeXuat(i).MaNhanVien).TenNhanVien.ToLower().Contains(TimKiem.ToLower()))
                         data.Add(GetDeXuatByMaDeXuat(i));
                 }
             }

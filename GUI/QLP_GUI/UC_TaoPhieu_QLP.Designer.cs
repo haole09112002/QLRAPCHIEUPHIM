@@ -32,6 +32,7 @@
             this.cBMaKho = new System.Windows.Forms.ComboBox();
             this.cBMaLoaiPhieu = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.lbPhimDaThem = new System.Windows.Forms.Label();
             this.lbMaKho = new System.Windows.Forms.Label();
             this.lbLoaiPhieu = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.gBPhimDaThem = new System.Windows.Forms.GroupBox();
             this.dGVPhimDaThem = new System.Windows.Forms.DataGridView();
             this.gBLuaChonPhim = new System.Windows.Forms.GroupBox();
+            this.btnChinhSua = new System.Windows.Forms.Button();
             this.lbDonViTinh = new System.Windows.Forms.Label();
             this.lbSoLuong = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
@@ -53,8 +55,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.dGVDanhSachPhim = new System.Windows.Forms.DataGridView();
             this.cBDonViTinh = new System.Windows.Forms.ComboBox();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnChinhSua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.gBPhimDaThem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVPhimDaThem)).BeginInit();
@@ -77,6 +77,7 @@
             // 
             this.cBMaKho.BackColor = System.Drawing.Color.White;
             this.cBMaKho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBMaKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBMaKho.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.cBMaKho.FormattingEnabled = true;
             this.cBMaKho.Location = new System.Drawing.Point(902, 61);
@@ -84,11 +85,13 @@
             this.cBMaKho.Name = "cBMaKho";
             this.cBMaKho.Size = new System.Drawing.Size(342, 31);
             this.cBMaKho.TabIndex = 8;
+            this.cBMaKho.SelectedIndexChanged += new System.EventHandler(this.cBMaKho_SelectedIndexChanged);
             // 
             // cBMaLoaiPhieu
             // 
             this.cBMaLoaiPhieu.BackColor = System.Drawing.Color.White;
             this.cBMaLoaiPhieu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBMaLoaiPhieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBMaLoaiPhieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.cBMaLoaiPhieu.FormattingEnabled = true;
             this.cBMaLoaiPhieu.Location = new System.Drawing.Point(205, 58);
@@ -118,6 +121,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 728);
             this.panel1.TabIndex = 12;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = global::GUI.Properties.Resources.trash_can_26px;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(557, 677);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(138, 45);
+            this.btnXoa.TabIndex = 74;
+            this.btnXoa.Text = "   Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // lbPhimDaThem
             // 
@@ -219,6 +239,7 @@
             // 
             // dGVPhimDaThem
             // 
+            this.dGVPhimDaThem.AllowUserToAddRows = false;
             this.dGVPhimDaThem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVPhimDaThem.BackgroundColor = System.Drawing.Color.White;
             this.dGVPhimDaThem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -256,6 +277,24 @@
             this.gBLuaChonPhim.TabIndex = 14;
             this.gBLuaChonPhim.TabStop = false;
             this.gBLuaChonPhim.Text = "LỰA CHỌN PHIM";
+            // 
+            // btnChinhSua
+            // 
+            this.btnChinhSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnChinhSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChinhSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChinhSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhSua.Image = global::GUI.Properties.Resources.Edit;
+            this.btnChinhSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChinhSua.Location = new System.Drawing.Point(1049, 268);
+            this.btnChinhSua.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnChinhSua.Name = "btnChinhSua";
+            this.btnChinhSua.Size = new System.Drawing.Size(155, 45);
+            this.btnChinhSua.TabIndex = 73;
+            this.btnChinhSua.Text = "CHỈNH SỬA";
+            this.btnChinhSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChinhSua.UseVisualStyleBackColor = false;
+            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
             // 
             // lbDonViTinh
             // 
@@ -365,6 +404,7 @@
             // 
             // dGVDanhSachPhim
             // 
+            this.dGVDanhSachPhim.AllowUserToAddRows = false;
             this.dGVDanhSachPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVDanhSachPhim.BackgroundColor = System.Drawing.Color.White;
             this.dGVDanhSachPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -387,41 +427,6 @@
             this.cBDonViTinh.Name = "cBDonViTinh";
             this.cBDonViTinh.Size = new System.Drawing.Size(549, 31);
             this.cBDonViTinh.TabIndex = 7;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Image = global::GUI.Properties.Resources.trash_can_26px;
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(557, 677);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(138, 45);
-            this.btnXoa.TabIndex = 74;
-            this.btnXoa.Text = "   Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnChinhSua
-            // 
-            this.btnChinhSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnChinhSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChinhSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChinhSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChinhSua.Image = global::GUI.Properties.Resources.Edit;
-            this.btnChinhSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChinhSua.Location = new System.Drawing.Point(1049, 268);
-            this.btnChinhSua.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnChinhSua.Name = "btnChinhSua";
-            this.btnChinhSua.Size = new System.Drawing.Size(155, 45);
-            this.btnChinhSua.TabIndex = 73;
-            this.btnChinhSua.Text = "CHỈNH SỬA";
-            this.btnChinhSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChinhSua.UseVisualStyleBackColor = false;
-            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
             // 
             // UC_TaoPhieu_QLP
             // 

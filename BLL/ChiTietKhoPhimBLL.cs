@@ -40,9 +40,9 @@ namespace BLL
         }
         public ChiTietKhoPhimDTO GetChiTietKhoPhimByKhoa(string MaKho, string MaPhim)
         {
-            foreach (ChiTietKhoPhimDTO i in GetListChiTietKhoPhimByMaKho(MaKho))
+            foreach(ChiTietKhoPhimDTO i in GetListChiTietKhoPhimByMaKho(MaKho))
             {
-                if (MaPhim == i.MaPhim)
+                if(MaPhim == i.MaPhim)
                 {
                     return i;
                 }
@@ -58,20 +58,20 @@ namespace BLL
         {
             ChiTietKhoPhimDAL.Instance.LuuChiTietKhoPhim(MaKho, MaPhim, DonViTinh, SoLuongSP);
         }
-        public void ThemCapNhatChiTietKhoPhim(List<ChiTietKhoPhimDTO> list, string LoaiPhieu)
+        public void ThemCapNhatChiTietKhoPhim(List<ChiTietKhoPhimDTO> list,string LoaiPhieu)
         {
             bool KiemTraTonTaiPhim = true;
-            foreach (ChiTietKhoPhimDTO i in list)
+            foreach(ChiTietKhoPhimDTO i in list)
             {
                 KiemTraTonTaiPhim = false;
-                foreach (ChiTietKhoPhimDTO j in GetListChiTietKhoPhimByMaKho(i.MaKho))
+                foreach(ChiTietKhoPhimDTO j in GetListChiTietKhoPhimByMaKho(i.MaKho))
                 {
-                    if (i.MaPhim == j.MaPhim)
+                    if(i.MaPhim == j.MaPhim)
                     {
                         MessageBox.Show("Up1");
                         KiemTraTonTaiPhim = true;
                         j.DonViTinh = i.DonViTinh;
-                        if (LoaiPhieu == "LP001")
+                        if(LoaiPhieu == "LP001")
                         {
                             j.SoLuongSP = j.SoLuongSP + i.SoLuongSP;
                         }
@@ -91,7 +91,7 @@ namespace BLL
         public List<PhimDTO> GetListPhimByMaKho(string MaKho)
         {
             List<PhimDTO> data = new List<PhimDTO>();
-            foreach (ChiTietKhoPhimDTO i in GetListChiTietKhoPhimByMaKho(MaKho))
+            foreach(ChiTietKhoPhimDTO i in GetListChiTietKhoPhimByMaKho(MaKho))
             {
                 data.Add(PhimBLL.Instance.GetPhimByMaPhim(i.MaPhim));
             }
@@ -103,9 +103,9 @@ namespace BLL
         }
         public TongSoLuongPhimDTO GetChiTietSoLuongPhim(string MaPhim)
         {
-            foreach (TongSoLuongPhimDTO i in GetTongSoLuongCuaTungPhim())
+            foreach(TongSoLuongPhimDTO i in GetTongSoLuongCuaTungPhim())
             {
-                if (i.MaPhim == MaPhim)
+                if(i.MaPhim == MaPhim)
                     return i;
             }
             return null;
