@@ -237,5 +237,64 @@ namespace BLL
             }
             return data;
         }
+        public ChiTietKhoVatTuDTO GetChiTietKhoVatTuByKhoa(string MaKho, string MaVatTu)
+        {
+            foreach (ChiTietKhoVatTuDTO i in GetListChiTietKhoVatTuByMaKho(MaKho))
+            {
+                if (MaVatTu == i.MaVatTu)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+        public ChiTietKhoVatTuDTO GetChiTietKhoVatTuByMaVatTu(string MaVatTu)
+        {
+            foreach (ChiTietKhoVatTuDTO i in GetAllChiTietKhoVatTu())
+            {
+                if (MaVatTu == i.MaVatTu)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+        public void ThemCapNhatChiTietKhoVatTu(List<ChiTietKhoVatTuDTO> list, string LoaiPhieu)
+        {
+            bool KiemTraTonTaiVatTu = true;
+            foreach (ChiTietKhoVatTuDTO i in list)
+            {
+                KiemTraTonTaiVatTu = false;
+                foreach (ChiTietKhoVatTuDTO j in GetListChiTietKhoVatTuByMaKho(i.MaKho))
+                {
+                    if (i.MaVatTu == j.MaVatTu)
+                    {
+                        KiemTraTonTaiVatTu = true;
+                        j.DonViTinh = i.DonViTinh;
+                        if (LoaiPhieu == "LP001")
+                        {
+                            j.SoLuongSP = j.SoLuongSP + i.SoLuongSP;
+                        }
+                        else
+                        {
+                            j.SoLuongSP = j.SoLuongSP - i.SoLuongSP;
+                        }
+                        CapNhatChiTietKhoVatTu(j.MaKho, j.MaVatTu, j.SoLuongSP, j.DonViTinh);
+                    }
+                }
+                if (KiemTraTonTaiVatTu == false)
+                {
+                    LuuChiTietKhoVatTu(i.MaKho, i.MaVatTu, i.DonViTinh, i.SoLuongSP);
+                }
+            }
+        }
+        public void CapNhatChiTietKhoVatTu(string MaKho, string MaVatTu, int SoLuongSP, string DonViTinh)
+        {
+            ChiTietKhoVatTuDAL.Instance.CapNhatChiTietKhoVatTu(MaKho, MaVatTu, SoLuongSP, DonViTinh);
+        }
+        public void LuuChiTietKhoVatTu(string MaKho, string MaVatTu, string DonViTinh, int SoLuongSP)
+        {
+            ChiTietKhoVatTuDAL.Instance.LuuChiTietKhoVatTu(MaKho, MaVatTu, DonViTinh, SoLuongSP);
+        }
     }
 }

@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnThongTinCaNhan = new System.Windows.Forms.Panel();
+            this.pBAnhPhim = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpNhanVien = new System.Windows.Forms.DateTimePicker();
             this.dgvListCaLamViec = new System.Windows.Forms.DataGridView();
             this.lblChucVu = new System.Windows.Forms.Label();
             this.grpThongTinCaNhan = new System.Windows.Forms.GroupBox();
+            this.lblValidatedNgaySinh = new System.Windows.Forms.Label();
             this.lblValidatedCCCD = new System.Windows.Forms.Label();
             this.lblValidatedDienThoai = new System.Windows.Forms.Label();
             this.lblValidatedDiaChi = new System.Windows.Forms.Label();
@@ -62,27 +64,38 @@
             this.lblDienThoai = new System.Windows.Forms.Label();
             this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.lblTenTaiKhoan = new System.Windows.Forms.Label();
-            this.picAvatar = new System.Windows.Forms.PictureBox();
-            this.lblValidatedNgaySinh = new System.Windows.Forms.Label();
             this.pnThongTinCaNhan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCaLamViec)).BeginInit();
             this.grpThongTinCaNhan.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnThongTinCaNhan
             // 
             this.pnThongTinCaNhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnThongTinCaNhan.Controls.Add(this.pBAnhPhim);
             this.pnThongTinCaNhan.Controls.Add(this.groupBox1);
             this.pnThongTinCaNhan.Controls.Add(this.lblChucVu);
             this.pnThongTinCaNhan.Controls.Add(this.grpThongTinCaNhan);
-            this.pnThongTinCaNhan.Controls.Add(this.picAvatar);
             this.pnThongTinCaNhan.Location = new System.Drawing.Point(22, 19);
             this.pnThongTinCaNhan.Name = "pnThongTinCaNhan";
             this.pnThongTinCaNhan.Size = new System.Drawing.Size(1310, 731);
             this.pnThongTinCaNhan.TabIndex = 1;
+            // 
+            // pBAnhPhim
+            // 
+            this.pBAnhPhim.BackColor = System.Drawing.Color.White;
+            this.pBAnhPhim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBAnhPhim.Location = new System.Drawing.Point(178, 88);
+            this.pBAnhPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pBAnhPhim.Name = "pBAnhPhim";
+            this.pBAnhPhim.Size = new System.Drawing.Size(235, 172);
+            this.pBAnhPhim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBAnhPhim.TabIndex = 41;
+            this.pBAnhPhim.TabStop = false;
+            this.pBAnhPhim.Click += new System.EventHandler(this.btnThemAnh_Click);
             // 
             // groupBox1
             // 
@@ -112,26 +125,26 @@
             // 
             this.dgvListCaLamViec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListCaLamViec.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListCaLamViec.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListCaLamViec.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListCaLamViec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListCaLamViec.Location = new System.Drawing.Point(21, 98);
             this.dgvListCaLamViec.Name = "dgvListCaLamViec";
             this.dgvListCaLamViec.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListCaLamViec.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListCaLamViec.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListCaLamViec.RowHeadersWidth = 51;
             this.dgvListCaLamViec.RowTemplate.Height = 24;
             this.dgvListCaLamViec.Size = new System.Drawing.Size(468, 210);
@@ -143,11 +156,10 @@
             this.lblChucVu.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblChucVu.Image = global::GUI.Properties.Resources.avatar;
             this.lblChucVu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblChucVu.Location = new System.Drawing.Point(218, 273);
+            this.lblChucVu.Location = new System.Drawing.Point(202, 264);
             this.lblChucVu.Name = "lblChucVu";
             this.lblChucVu.Size = new System.Drawing.Size(186, 30);
             this.lblChucVu.TabIndex = 38;
-            this.lblChucVu.Text = "Quản lý vật tư";
             this.lblChucVu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // grpThongTinCaNhan
@@ -186,6 +198,19 @@
             this.grpThongTinCaNhan.TabIndex = 36;
             this.grpThongTinCaNhan.TabStop = false;
             this.grpThongTinCaNhan.Text = "THÔNG TIN CÁ NHÂN";
+            // 
+            // lblValidatedNgaySinh
+            // 
+            this.lblValidatedNgaySinh.BackColor = System.Drawing.SystemColors.Control;
+            this.lblValidatedNgaySinh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidatedNgaySinh.ForeColor = System.Drawing.Color.Red;
+            this.lblValidatedNgaySinh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValidatedNgaySinh.Location = new System.Drawing.Point(201, 232);
+            this.lblValidatedNgaySinh.Name = "lblValidatedNgaySinh";
+            this.lblValidatedNgaySinh.Size = new System.Drawing.Size(442, 19);
+            this.lblValidatedNgaySinh.TabIndex = 32;
+            this.lblValidatedNgaySinh.Text = "*Ngày sinh không lớn hơn hiện tại, Vui lòng nhập lại!";
+            this.lblValidatedNgaySinh.Visible = false;
             // 
             // lblValidatedCCCD
             // 
@@ -526,31 +551,6 @@
             this.lblTenTaiKhoan.TabIndex = 7;
             this.lblTenTaiKhoan.Text = "TÊN TÀI KHOẢN";
             // 
-            // picAvatar
-            // 
-            this.picAvatar.BackColor = System.Drawing.Color.Silver;
-            this.picAvatar.ErrorImage = null;
-            this.picAvatar.InitialImage = null;
-            this.picAvatar.Location = new System.Drawing.Point(194, 85);
-            this.picAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(226, 173);
-            this.picAvatar.TabIndex = 35;
-            this.picAvatar.TabStop = false;
-            // 
-            // lblValidatedNgaySinh
-            // 
-            this.lblValidatedNgaySinh.BackColor = System.Drawing.SystemColors.Control;
-            this.lblValidatedNgaySinh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidatedNgaySinh.ForeColor = System.Drawing.Color.Red;
-            this.lblValidatedNgaySinh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblValidatedNgaySinh.Location = new System.Drawing.Point(201, 232);
-            this.lblValidatedNgaySinh.Name = "lblValidatedNgaySinh";
-            this.lblValidatedNgaySinh.Size = new System.Drawing.Size(442, 19);
-            this.lblValidatedNgaySinh.TabIndex = 32;
-            this.lblValidatedNgaySinh.Text = "*Ngày sinh không lớn hơn hiện tại, Vui lòng nhập lại!";
-            this.lblValidatedNgaySinh.Visible = false;
-            // 
             // UCHoSoCaNhanQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -561,12 +561,12 @@
             this.Size = new System.Drawing.Size(1352, 766);
             this.Leave += new System.EventHandler(this.UCHoSoCaNhanQLVT_Leave);
             this.pnThongTinCaNhan.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCaLamViec)).EndInit();
             this.grpThongTinCaNhan.ResumeLayout(false);
             this.grpThongTinCaNhan.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -588,7 +588,6 @@
         private System.Windows.Forms.Label lblDienThoai;
         private System.Windows.Forms.Button btnDoiMatKhau;
         private System.Windows.Forms.Label lblTenTaiKhoan;
-        private System.Windows.Forms.PictureBox picAvatar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvListCaLamViec;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -607,5 +606,6 @@
         private System.Windows.Forms.Label lblValidatedCCCD;
         private System.Windows.Forms.Label lblValidatedDienThoai;
         private System.Windows.Forms.Label lblValidatedNgaySinh;
+        private System.Windows.Forms.PictureBox pBAnhPhim;
     }
 }

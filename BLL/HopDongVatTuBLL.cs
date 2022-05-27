@@ -145,5 +145,20 @@ namespace BLL
         {
             return HopDongVatTuDAL.Instance.GetAllHopDongVatTu();
         }
+        public TongSoLuongVatTuDTO GetChiTietTSLVatTuByMaVatTu(string MaVatTu)
+        {
+            foreach (TongSoLuongVatTuDTO i in GetTongSoLuongCuaTungVatTu())
+            {
+                if (i.MaVatTu == MaVatTu)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+        public List<TongSoLuongVatTuDTO> GetTongSoLuongCuaTungVatTu()
+        {
+            return HopDongVatTuDAL.Instance.GetTongSoLuongCuaTungVatTu();
+        }
     }
 }

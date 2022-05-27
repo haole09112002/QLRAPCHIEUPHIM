@@ -148,5 +148,20 @@ namespace BLL
             }
             return data.Distinct().ToList();
         }
+        public TongSoLuongThucAnDTO GetChiTietTSLThucAnByMaThucAn(string MaThucAn)
+        {
+            foreach (TongSoLuongThucAnDTO i in GetTongSoLuongCuaTungThucAn())
+            {
+                if (i.MaThucAn == MaThucAn)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+        public List<TongSoLuongThucAnDTO> GetTongSoLuongCuaTungThucAn()
+        {
+            return HopDongThucAnDAL.Instance.GetTongSoLuongCuaTungThucAn();
+        }
     }
 }

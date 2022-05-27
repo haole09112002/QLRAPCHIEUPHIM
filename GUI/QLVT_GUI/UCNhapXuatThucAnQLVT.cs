@@ -55,7 +55,8 @@ namespace GUI.QLVT_GUI
         private void btnTaoPhieu_Click(object sender, EventArgs e)
         {
             FrmTaoPhieuNhapXuatKhoQLVT frmTaoPhieuNhapXuatKhoQLVT = new FrmTaoPhieuNhapXuatKhoQLVT(nhanVien,"Thức ăn nhanh");
-            frmTaoPhieuNhapXuatKhoQLVT.Show();
+            frmTaoPhieuNhapXuatKhoQLVT.ShowDialog();
+            Reload();
         }
 
         private void dgvListNhapXuatThucAn_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

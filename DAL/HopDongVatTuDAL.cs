@@ -57,5 +57,19 @@ namespace DAL
                 hdVT.DonViTinh, hdVT.SoLuong, hdVT.GiaTien};
             DBHelper.Instance.ExcuteNonQuery(query, parameter);
         }
+        public List<TongSoLuongVatTuDTO> GetTongSoLuongCuaTungVatTu()
+        {
+            List<TongSoLuongVatTuDTO> data = new List<TongSoLuongVatTuDTO>();
+            string query = "select MaVatTu,SUM(Soluong) as 'TongSoLuong' from HOP_DONG_VAT_TU Group By MaVatTu ";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                data.Add(new TongSoLuongVatTuDTO
+                {
+                    MaVatTu = i["MaVatTu"].ToString(),
+                    TongSoLuongVatTu = Convert.ToInt32(i["TongSoLuong"].ToString())
+                });
+            }
+            return data;
+        }
     }
 }

@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BLL;
+﻿using BLL;
 using DTO;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Windows.Forms;
 
 namespace GUI.QLVT_GUI
 {
@@ -25,8 +20,6 @@ namespace GUI.QLVT_GUI
             SetCBB();
             SetDataTable();
             btnLuu.Enabled = false;
-            btnChinhSua.Visible = false;
-            btnThem.Enabled = false;
             btnXoa.Enabled = false;
             nUDSoLuong.Enabled = false;
             lblChonLoaiPhieu.Visible = false;
@@ -72,8 +65,6 @@ namespace GUI.QLVT_GUI
         {
             dtDanhSachSanPham.Columns.Add("Mã Sản Phẩm");
             dtDanhSachSanPham.Columns.Add("Tên Sản Phẩm");
-            dtDanhSachSanPham.Columns.Add("Số Lượng");
-            dtDanhSachSanPham.Columns.Add("Đơn Vị Tính");
             dtSanPhamDaThem.Columns.Add("Mã Sản Phẩm");
             dtSanPhamDaThem.Columns.Add("Loại Phiếu");
             dtSanPhamDaThem.Columns.Add("Tên Kho");
@@ -85,10 +76,14 @@ namespace GUI.QLVT_GUI
         {
             dtDanhSachSanPham.Rows.Clear();
             nUDSoLuong.Enabled = false;
+            txtTenSanPham.Text = "";
             txtMaSanPham.Text = "";
             txtDonViTinh.Text = "";
             nUDSoLuong.Value = 0;
             btnThem.Enabled = false;
+            btnThem.Visible = true;
+            btnChinhSua.Visible = false;
+            btnLuu.Enabled = false;
             lblValidatedSoLuong.Visible = false;
             lblValidSoLuong.Visible = false;
             btnXoa.Enabled = false;
@@ -96,47 +91,38 @@ namespace GUI.QLVT_GUI
             {
                 if (txtLoaiSanPham.Text == "Thức ăn nhanh")
                 {
-                    foreach (HopDongThucAnDTO i in HopDongThucAnBLL.Instance.GetAllHopDongThucAn())
+                    foreach (string i in HopDongThucAnBLL.Instance.GetDanhSachMaThucAnCoHopDong())
                     {
-                        dtDanhSachSanPham.Rows.Add(i.MaThucAn, ThucAnBLL.Instance.GetThucAnByMaThucAn(i.MaThucAn).TenThucAn
-                            , i.SoLuong
-                            , i.DonViTinh);
+                        dtDanhSachSanPham.Rows.Add(i, ThucAnBLL.Instance.GetThucAnByMaThucAn(i).TenThucAn);
                     }
                 }
                 if (txtLoaiSanPham.Text == "Vật tư")
                 {
-                    foreach (HopDongVatTuDTO i in HopDongVatTuBLL.Instance.GetAllHopDongVatTu())
+                    foreach (string i in HopDongVatTuBLL.Instance.GetDanhSachMaVatTuCoHopDong())
                     {
-                        dtDanhSachSanPham.Rows.Add(i.MaVatTu, VatTuBLL.Instance.GetVatTuByMaVatTu(i.MaVatTu).TenVatTu
-                            , i.SoLuong
-                            , i.DonViTinh);
+                        dtDanhSachSanPham.Rows.Add(i, VatTuBLL.Instance.GetVatTuByMaVatTu(i).TenVatTu);
                     }
                 }
-                dgvListSanPham.DataSource = dtDanhSachSanPham;
-                dgvListSanPham.Columns["Mã Sản Phẩm"].Visible = false;
-                dgvListSanPham.Columns["Số Lượng"].Visible = false;
             }
             else
             {
                 if (txtLoaiSanPham.Text == "Thức ăn nhanh")
                 {
-                    foreach (ChiTietKhoThucAnDTO i in ChiTietKhoThucAnBLL.Instance.GetListChiTietKhoThucAnByMaKho(((CBBItem)cboMaKho.SelectedItem).Value))
+                    foreach (ThucAnDTO i in ChiTietKhoThucAnBLL.Instance.GetListThucAnByMaKho(((CBBItem)cboMaKho.SelectedItem).Value))
                     {
-                        dtDanhSachSanPham.Rows.Add(i.MaThucAn, ThucAnBLL.Instance.GetThucAnByMaThucAn(i.MaThucAn).TenThucAn, i.SoLuongSP, i.DonViTinh);
+                        dtDanhSachSanPham.Rows.Add(i.MaThucAn, i.TenThucAn);
                     }
                 }
                 if (txtLoaiSanPham.Text == "Vật tư")
                 {
-                    foreach (ChiTietKhoVatTuDTO i in ChiTietKhoVatTuBLL.Instance.GetListChiTietKhoVatTuByMaKho(((CBBItem)cboMaKho.SelectedItem).Value))
+                    foreach (VatTuDTO i in ChiTietKhoVatTuBLL.Instance.GetListVatTuByMaKho(((CBBItem)cboMaKho.SelectedItem).Value))
                     {
-                        dtDanhSachSanPham.Rows.Add(i.MaVatTu, VatTuBLL.Instance.GetVatTuByMaVatTu(i.MaVatTu).TenVatTu, i.SoLuongSP, i.DonViTinh);
+                        dtDanhSachSanPham.Rows.Add(i.MaVatTu, i.TenVatTu);
                     }
                 }
-                dgvListSanPham.DataSource = dtDanhSachSanPham;
-                dgvListSanPham.Columns["Mã Sản Phẩm"].Visible = false;
-                dgvListSanPham.Columns["Số Lượng"].Visible = true;
-
             }
+            dgvListSanPham.DataSource = dtDanhSachSanPham;
+            dgvListSanPham.Columns["Mã Sản Phẩm"].Visible = false;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -149,10 +135,11 @@ namespace GUI.QLVT_GUI
                     this.Close();
                 }
             }
+            this.Close();
         }
         private void cboMaKho_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cboLoaiPhieu.SelectedIndex < 0)
+            if (cboLoaiPhieu.SelectedIndex < 0)
             {
                 lblChonLoaiPhieu.Visible = true;
                 lblChonKho.Visible = false;
@@ -180,66 +167,89 @@ namespace GUI.QLVT_GUI
             }
         }
 
-        private void dgvListSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvListSanPham.SelectedRows.Count == 1)
-            {
-                txtMaSanPham.Text = dgvListSanPham.CurrentRow.Cells["Tên Sản Phẩm"].Value.ToString();
-                txtDonViTinh.Text = dgvListSanPham.CurrentRow.Cells["Đơn Vị Tính"].Value.ToString();
-                nUDSoLuong.Enabled = true;
-                if (((CBBItem)cboLoaiPhieu.SelectedItem).Value == "LP002")
-                {
-                    nUDSoLuong.Maximum = (decimal)dgvListSanPham.CurrentRow.Cells["Số Lượng"].Value; // đang sai cần sửa
-                }
-                else
-                {
-                    nUDSoLuong.Maximum = 300; //sai cần sửa phải theo hợp đồng
-                }
-            }
-            else
-            {
-                MessageBox.Show("Chỉ được chọn 1 dòng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void nUDSoLuong_ValueChanged(object sender, EventArgs e)
         {
             if (((CBBItem)cboLoaiPhieu.SelectedItem).Value == "LP002")
             {
-                if (nUDSoLuong.Value > nUDSoLuong.Maximum) {
-                    lblValidatedSoLuong.Visible = true;
-                    btnThem.Enabled = false;
-                }
-                if (nUDSoLuong.Value == 0)
+                if (nUDSoLuong.Value == nUDSoLuong.Maximum)
                 {
-                    btnThem.Enabled = false;
+                        lblValidatedSoLuong.Visible = true;
+                        btnThem.Visible = true;
+                        btnThem.Enabled = true;
                 }
-            }
-            else{
-                if(nUDSoLuong.Value > nUDSoLuong.Maximum)
+                else
                 {
-                    lblValidSoLuong.Visible = true;
+                    if (nUDSoLuong.Value == 0)
+                    {
+                        btnThem.Visible = true;
+                        btnThem.Enabled = false;
+                        btnChinhSua.Enabled = false;
+                    }
+                    else
+                    {
+                        lblValidatedSoLuong.Visible = false;
+                        btnThem.Enabled = true;
+                        btnThem.Visible = true;
+                    }
                 }
-            }
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            dtSanPhamDaThem.Rows.Add(dgvListSanPham.SelectedRows[0].Cells["Mã Sản Phẩm"].Value.ToString(),cboLoaiPhieu.Text,cboMaKho.Text,txtMaSanPham.Text,nUDSoLuong.Value.ToString(),txtDonViTinh.Text);
-            btnLuu.Enabled = true;
-        }
-
-        private void dgvSanPhamDaThem_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvSanPhamDaThem.SelectedRows.Count == 1)
-            {
-                btnXoa.Enabled = true;
             }
             else
             {
-                MessageBox.Show("Chỉ được chọn 1 dòng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                btnXoa.Enabled = false;
+                if (nUDSoLuong.Value == nUDSoLuong.Maximum)
+                {
+                    lblValidSoLuong.Visible = true;
+                    btnThem.Visible = true;
+                    btnThem.Enabled = true;
+                }
+                else
+                {
+                    if (nUDSoLuong.Value == 0)
+                    {
+                        btnThem.Visible = true;
+                        btnThem.Enabled = false;
+                        btnChinhSua.Enabled = false;
+                    }
+                    else
+                    {
+                        lblValidSoLuong.Visible = false;
+                        btnThem.Visible = true;
+                        btnThem.Enabled = true;
+                    }
+                }
             }
+            if(btnChinhSua.Visible == true)
+            {
+                btnThem.Visible = false;
+            }
+        }
+        public bool KiemTraTonTai(string maSanPham)
+        {
+            for(int i = 0; i < dgvSanPhamDaThem.Rows.Count; i++)
+            {
+                if(dgvSanPhamDaThem.Rows[i].Cells["Mã Sản Phẩm"].Value.ToString() == maSanPham)
+                {
+                    MessageBox.Show("Sản Phẩm đã được thêm", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    return true;
+                }
+            }
+            return false;
+        }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (KiemTraTonTai(txtMaSanPham.Text) == false)
+            {
+            dtSanPhamDaThem.Rows.Add(txtMaSanPham.Text, cboLoaiPhieu.Text, cboMaKho.Text, txtTenSanPham.Text, nUDSoLuong.Value, txtDonViTinh.Text);
+            dgvSanPhamDaThem.DataSource = dtSanPhamDaThem;
+            btnLuu.Enabled = true;
+            txtMaSanPham.Text = "";
+            txtTenSanPham.Text = "";
+            nUDSoLuong.Value = 0;
+            nUDSoLuong.Enabled = false;
+            txtDonViTinh.Text = "";
+            btnChinhSua.Visible = false;
+            }
+            cboLoaiPhieu.Enabled = false;
+            cboMaKho.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -251,7 +261,155 @@ namespace GUI.QLVT_GUI
                 {
                     dgvSanPhamDaThem.Rows.RemoveAt(i.Index);
                 }
+                btnXoa.Enabled = false;
+                btnChinhSua.Visible = false;
+                btnThem.Visible = true;
             }
+            if (dgvSanPhamDaThem.Rows.Count == 0)
+            {
+                    btnLuu.Enabled = false;
+                    cboLoaiPhieu.Enabled = true;
+                    cboMaKho.Enabled = true;
+            }
+            else
+            {
+                btnLuu.Enabled = true;
+            }
+        }
+
+        private void dgvListSanPham_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dgvListSanPham.SelectedRows.Count == 1)
+            {
+                if (btnThem.Visible == true)
+                {
+                    btnChinhSua.Visible = false;
+                }
+                else
+                {
+                    if(nUDSoLuong.Value == 0)
+                    {
+                        btnChinhSua.Enabled = false;
+                    }
+                    else
+                    {
+                    btnChinhSua.Visible = true;
+                    btnChinhSua.Enabled = true;
+                    }
+                }
+
+                txtMaSanPham.Text = dgvListSanPham.CurrentRow.Cells["Mã Sản Phẩm"].Value.ToString();
+                txtTenSanPham.Text = dgvListSanPham.CurrentRow.Cells["Tên Sản Phẩm"].Value.ToString();
+                if (txtLoaiSanPham.Text == "Thức ăn nhanh")
+                {
+                    txtDonViTinh.Text = ChiTietKhoThucAnBLL.Instance.GetChiTietKhoThucAnByMaThucAn(txtMaSanPham.Text).DonViTinh;
+                }
+                else
+                {
+                    txtDonViTinh.Text = ChiTietKhoVatTuBLL.Instance.GetChiTietKhoVatTuByMaVatTu(txtMaSanPham.Text).DonViTinh;
+                }
+                nUDSoLuong.Enabled = true;
+                if (((CBBItem)cboLoaiPhieu.SelectedItem).Value == "LP002")
+                {
+                    if (txtLoaiSanPham.Text == "Thức ăn nhanh")
+                    {
+                        nUDSoLuong.Maximum = ChiTietKhoThucAnBLL.Instance.GetChiTietKhoThucAnByKhoa(((CBBItem)cboMaKho.SelectedItem).Value, txtMaSanPham.Text).SoLuongSP;
+                    }
+                    else
+                    {
+                        nUDSoLuong.Maximum = ChiTietKhoVatTuBLL.Instance.GetChiTietKhoVatTuByKhoa(((CBBItem)cboMaKho.SelectedItem).Value, txtMaSanPham.Text).SoLuongSP;
+                    }
+                }
+                else
+                {
+                    if (txtLoaiSanPham.Text == "Thức ăn nhanh")
+                    {
+                        nUDSoLuong.Maximum = HopDongThucAnBLL.Instance.GetChiTietTSLThucAnByMaThucAn(txtMaSanPham.Text).TongSoLuongThucAn;
+                    }
+                    else
+                    {
+                        nUDSoLuong.Maximum = HopDongVatTuBLL.Instance.GetChiTietTSLVatTuByMaVatTu(txtMaSanPham.Text).TongSoLuongVatTu;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chỉ được chọn 1 dòng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Xác Nhận Lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.OK)
+            {
+                PhieuBLL.Instance.LuuPhieu(((CBBItem)cboLoaiPhieu.SelectedItem).Value, ((CBBItem)cboMaKho.SelectedItem).Value, nhanvien.MaNhanVien, DateTime.Today);
+                string MaPhieu = PhieuBLL.Instance.GetMaPhieuAddNew();
+                if(txtLoaiSanPham.Text == "Thức ăn nhanh")
+                {
+                    List<ChiTietKhoThucAnDTO> data = new List<ChiTietKhoThucAnDTO>();
+                    for (int i = 0; i < dgvSanPhamDaThem.Rows.Count; i++)
+                    {
+                        ChiTietPhieuThucAnBLL.Instance.LuuChiTietPhieuThucAn(MaPhieu, dgvSanPhamDaThem.Rows[i].Cells["Mã Sản Phẩm"].Value.ToString(), dgvSanPhamDaThem.Rows[i].Cells["Đơn Vị Tính"].Value.ToString(), Convert.ToInt32(dgvSanPhamDaThem.Rows[i].Cells["Số Lượng"].Value.ToString()));
+                        data.Add(new ChiTietKhoThucAnDTO
+                        {
+                            MaKho = ((CBBItem)cboMaKho.SelectedItem).Value,
+                            MaThucAn = dgvSanPhamDaThem.Rows[i].Cells["Mã Sản Phẩm"].Value.ToString(),
+                            DonViTinh = dgvSanPhamDaThem.Rows[i].Cells["Đơn Vị Tính"].Value.ToString(),
+                            SoLuongSP = Convert.ToInt32(dgvSanPhamDaThem.Rows[i].Cells["Số Lượng"].Value.ToString())
+                        });
+                    }
+                    ChiTietKhoThucAnBLL.Instance.ThemCapNhatChiTietKhoThucAn(data, ((CBBItem)cboLoaiPhieu.SelectedItem).Value);
+                    MessageBox.Show("Thêm Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    List<ChiTietKhoVatTuDTO> data = new List<ChiTietKhoVatTuDTO>();
+                    for (int i = 0; i < dgvSanPhamDaThem.Rows.Count; i++)
+                    {
+                        ChiTietPhieuVatTuBLL.Instance.LuuChiTietPhieuVatTu(MaPhieu, dgvSanPhamDaThem.Rows[i].Cells["Mã Sản Phẩm"].Value.ToString(), dgvSanPhamDaThem.Rows[i].Cells["Đơn Vị Tính"].Value.ToString(), Convert.ToInt32(dgvSanPhamDaThem.Rows[i].Cells["Số Lượng"].Value.ToString()));
+                        data.Add(new ChiTietKhoVatTuDTO
+                        {
+                            MaKho = ((CBBItem)cboMaKho.SelectedItem).Value,
+                            MaVatTu = dgvSanPhamDaThem.Rows[i].Cells["Mã Sản Phẩm"].Value.ToString(),
+                            DonViTinh = dgvSanPhamDaThem.Rows[i].Cells["Đơn Vị Tính"].Value.ToString(),
+                            SoLuongSP = Convert.ToInt32(dgvSanPhamDaThem.Rows[i].Cells["Số Lượng"].Value.ToString())
+                        });
+                    }
+                    ChiTietKhoVatTuBLL.Instance.ThemCapNhatChiTietKhoVatTu(data, ((CBBItem)cboLoaiPhieu.SelectedItem).Value);
+                    MessageBox.Show("Thêm Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                
+            }
+        }
+
+        private void dgvSanPhamDaThem_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dgvSanPhamDaThem.SelectedRows.Count == 1)
+            {
+                btnXoa.Enabled = true;
+                btnChinhSua.Enabled = false;
+                btnChinhSua.Visible = true;
+                btnThem.Enabled = false;
+                btnThem.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Chỉ được chọn 1 dòng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnXoa.Enabled = false;
+                btnChinhSua.Enabled = false;
+                btnThem.Enabled = false;
+            }
+        }
+
+        private void btnChinhSua_Click(object sender, EventArgs e)
+        {
+            dgvSanPhamDaThem.CurrentRow.Cells["Mã Sản Phẩm"].Value = txtMaSanPham.Text;
+            dgvSanPhamDaThem.CurrentRow.Cells["Tên Sản Phẩm"].Value = txtTenSanPham.Text;
+            dgvSanPhamDaThem.CurrentRow.Cells["Số Lượng"].Value = nUDSoLuong.Text;
+            dgvSanPhamDaThem.CurrentRow.Cells["Đơn Vị Tính"].Value = txtDonViTinh.Text;
         }
     }
 }

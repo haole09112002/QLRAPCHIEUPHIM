@@ -103,6 +103,8 @@
     <Compile Include="ThucAnViewDTO.cs" />
     <Compile Include="TinhTrangPhongChieuDTO.cs" />
     <Compile Include="TongSoLuongPhimDTO.cs" />
+    <Compile Include="TongSoLuongThucAnDTO.cs" />
+    <Compile Include="TongSoLuongVatTuDTO.cs" />
     <Compile Include="VatTuDTO.cs" />
     <Compile Include="VatTuViewDTO.cs" />
   </ItemGroup>

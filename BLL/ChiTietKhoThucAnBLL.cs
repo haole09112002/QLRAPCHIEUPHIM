@@ -148,5 +148,64 @@ namespace BLL
             }
             return data;
         }
+        public ChiTietKhoThucAnDTO GetChiTietKhoThucAnByKhoa(string MaKho, string MaThucAn)
+        {
+            foreach (ChiTietKhoThucAnDTO i in GetListChiTietKhoThucAnByMaKho(MaKho))
+            {
+                if (MaThucAn == i.MaThucAn)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+        public ChiTietKhoThucAnDTO GetChiTietKhoThucAnByMaThucAn(string MaThucAn)
+        {
+            foreach (ChiTietKhoThucAnDTO i in GetAllChiTietKhoThucAn())
+            {
+                if (MaThucAn == i.MaThucAn)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+        public void ThemCapNhatChiTietKhoThucAn(List<ChiTietKhoThucAnDTO> list, string LoaiPhieu)
+        {
+            bool KiemTraTonTaiThucAn = true;
+            foreach (ChiTietKhoThucAnDTO i in list)
+            {
+                KiemTraTonTaiThucAn = false;
+                foreach (ChiTietKhoThucAnDTO j in GetListChiTietKhoThucAnByMaKho(i.MaKho))
+                {
+                    if (i.MaThucAn == j.MaThucAn)
+                    {
+                        KiemTraTonTaiThucAn = true;
+                        j.DonViTinh = i.DonViTinh;
+                        if (LoaiPhieu == "LP001")
+                        {
+                            j.SoLuongSP = j.SoLuongSP + i.SoLuongSP;
+                        }
+                        else
+                        {
+                            j.SoLuongSP = j.SoLuongSP - i.SoLuongSP;
+                        }
+                        CapNhatChiTietKhoThucAn(j.MaKho, j.MaThucAn, j.SoLuongSP, j.DonViTinh);
+                    }
+                }
+                if (KiemTraTonTaiThucAn == false)
+                {
+                    LuuChiTietKhoThucAn(i.MaKho, i.MaThucAn, i.DonViTinh, i.SoLuongSP);
+                }
+            }
+        }
+        public void CapNhatChiTietKhoThucAn(string MaKho, string MaThucAn, int SoLuongSP, string DonViTinh)
+        {
+            ChiTietKhoThucAnDAL.Instance.CapNhatChiTietKhoThucAn(MaKho, MaThucAn, SoLuongSP, DonViTinh);
+        }
+        public void LuuChiTietKhoThucAn(string MaKho, string MaThucAn, string DonViTinh, int SoLuongSP)
+        {
+            ChiTietKhoThucAnDAL.Instance.LuuChiTietKhoThucAn(MaKho, MaThucAn, DonViTinh, SoLuongSP);
+        }
     }
 }
