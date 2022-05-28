@@ -37,11 +37,11 @@
             this.btnTaoPhieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(153)))));
             this.btnTaoPhieu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTaoPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaoPhieu.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.btnTaoPhieu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnTaoPhieu.Location = new System.Drawing.Point(0, 0);
             this.btnTaoPhieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTaoPhieu.Name = "btnTaoPhieu";
-            this.btnTaoPhieu.Size = new System.Drawing.Size(303, 30);
+            this.btnTaoPhieu.Size = new System.Drawing.Size(341, 30);
             this.btnTaoPhieu.TabIndex = 0;
             this.btnTaoPhieu.Text = "TẠO PHIẾU";
             this.btnTaoPhieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -53,13 +53,13 @@
             this.btnDanhSachPhieuNX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
             this.btnDanhSachPhieuNX.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDanhSachPhieuNX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDanhSachPhieuNX.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
-            this.btnDanhSachPhieuNX.Location = new System.Drawing.Point(302, 0);
+            this.btnDanhSachPhieuNX.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnDanhSachPhieuNX.Location = new System.Drawing.Point(341, 0);
             this.btnDanhSachPhieuNX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDanhSachPhieuNX.Name = "btnDanhSachPhieuNX";
-            this.btnDanhSachPhieuNX.Size = new System.Drawing.Size(362, 30);
+            this.btnDanhSachPhieuNX.Size = new System.Drawing.Size(407, 30);
             this.btnDanhSachPhieuNX.TabIndex = 1;
-            this.btnDanhSachPhieuNX.Text = "               DANH SÁCH PHIẾU NHẬP XUẤT";
+            this.btnDanhSachPhieuNX.Text = "    DANH SÁCH PHIẾU NHẬP XUẤT";
             this.btnDanhSachPhieuNX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDanhSachPhieuNX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDanhSachPhieuNX.UseVisualStyleBackColor = false;
@@ -67,14 +67,14 @@
             // 
             // UC_MenuNhapXuatKho_QLP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(251)))), ((int)(((byte)(242)))));
             this.Controls.Add(this.btnDanhSachPhieuNX);
             this.Controls.Add(this.btnTaoPhieu);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_MenuNhapXuatKho_QLP";
-            this.Size = new System.Drawing.Size(1185, 30);
+            this.Size = new System.Drawing.Size(1333, 30);
             this.ResumeLayout(false);
 
         }
