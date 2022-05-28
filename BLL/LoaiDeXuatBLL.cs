@@ -28,27 +28,6 @@ namespace BLL
         {
 
         }
-        public List<LoaiDeXuatDTO> GetAllLoaiDeXuat()
-        {
-            List<LoaiDeXuatDTO> data = new List<LoaiDeXuatDTO>();
-            foreach (LoaiDeXuatDTO i in LoaiDeXuatDAL.Instance.GetAllLoaiDeXuat())
-            {
-                data.Add(i);
-            }
-            return data;
-        }
-        public LoaiDeXuatDTO GetLoaiDeXuatByMaLoaiDeXuat(string maLoaiDeXuat)
-        {
-
-            foreach (LoaiDeXuatDTO i in GetAllLoaiDeXuat())
-            {
-                if (i.MaLoaiDeXuat == maLoaiDeXuat)
-                {
-                    return i;
-                }
-            }
-            return null;
-        }
         public List<CBBItem> GetCBBLoaiDeXuat()
         {
             List<CBBItem> data = new List<CBBItem>();

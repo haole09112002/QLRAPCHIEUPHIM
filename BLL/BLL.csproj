@@ -85,7 +85,6 @@
     <Compile Include="ChiTietKhoPhimBLL.cs" />
     <Compile Include="ChiTietPhieuThucAnBLL.cs" />
     <Compile Include="ChiTietPhieuVatTuBLL.cs" />
-    <Compile Include="DeXuatViewBLL.cs" />
     <Compile Include="LichLamViecBLL.cs" />
     <Compile Include="ChiTietDeXuatThucAnBLL.cs" />
     <Compile Include="ChiTietDeXuatVatTuBLL.cs" />

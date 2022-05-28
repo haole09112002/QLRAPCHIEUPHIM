@@ -61,53 +61,5 @@ namespace BLL
             }
             return data;
         }
-
-        public ChiTietDeXuatThucAnViewDTO ConvertDTOToView(ChiTietDeXuatThucAnDTO deXuat)
-        {
-
-            return new ChiTietDeXuatThucAnViewDTO
-            {
-                MaDeXuat = deXuat.MaDeXuat,
-                MaThucAn = deXuat.MaThucAn,
-                DonViTinh = deXuat.DonViTinh,
-                SoLuong = deXuat.SoLuong,
-                TenThucAn = ThucAnBLL.Instance.GetThucAnByMaThucAn(deXuat.MaThucAn).TenThucAn
-
-            };
-        }
-        public List<ChiTietDeXuatThucAnViewDTO> GetChiTietDeXuatThucAnViewByTinhTrang(string tinhTrang)
-        {
-
-            var data = new List<ChiTietDeXuatThucAnViewDTO>();
-            foreach (var i in ChiTietDeXuatThucAnDAL.Instance.GetAllChiTietDeXuatThucAn().FindAll(i => i.TinhTrang == tinhTrang))
-            {
-                data.Add(ConvertDTOToView(i));
-            }
-            return data;
-        }
-        public List<ChiTietDeXuatThucAnViewDTO> TimKiemChiTietDXTAByMaDeXuat(string MaDeXuat,string tinhTrang)
-        {
-            List<ChiTietDeXuatThucAnViewDTO> data = new List<ChiTietDeXuatThucAnViewDTO>();
-            foreach (ChiTietDeXuatThucAnDTO j in ChiTietDeXuatThucAnDAL.Instance.GetAllChiTietDeXuatThucAn().FindAll(i => i.TinhTrang == tinhTrang))
-            {
-                if (j.MaDeXuat.ToLower().Contains(MaDeXuat.ToLower()))
-                {
-                    data.Add(ConvertDTOToView(j));
-                }
-            }
-            return data;
-        }
-        public List<ChiTietDeXuatThucAnViewDTO> TimKiemChiTietDXPByTenThucAn(string tenThucAn, string tinhTrang)
-        {
-            List<ChiTietDeXuatThucAnViewDTO> data = new List<ChiTietDeXuatThucAnViewDTO>();
-            foreach (ChiTietDeXuatThucAnDTO j in ChiTietDeXuatThucAnDAL.Instance.GetAllChiTietDeXuatThucAn().FindAll(i => i.TinhTrang == tinhTrang))
-            {
-                if (ConvertDTOToView(j).TenThucAn.ToLower().Contains(tenThucAn.ToLower()))
-                {
-                    data.Add(ConvertDTOToView(j));
-                }
-            }
-            return data;
-        }
     }
 }

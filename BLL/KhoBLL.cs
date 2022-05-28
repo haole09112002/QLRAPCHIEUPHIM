@@ -69,23 +69,6 @@ namespace BLL
 
             };
         }
-        public List<KhoDTO> GetListKhoByLoaiKho(string MaLoaiKho)
-        {
-            List<KhoDTO> data = new List<KhoDTO>();
-            if (MaLoaiKho == "")
-            {
-                data = KhoDAL.Instance.GetAllKho();
-            }
-            else
-                foreach (KhoDTO i in KhoDAL.Instance.GetAllKho())
-                {
-                    if (i.MaLoaiKho == MaLoaiKho)
-                    {
-                        data.Add(i);
-                    }
-                }
-            return data;
-        }
         public List<KhoDTO> GetKhoDGV(List<string> maKho)
         {
             List<KhoDTO> data = new List<KhoDTO>();

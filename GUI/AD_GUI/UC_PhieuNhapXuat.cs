@@ -16,6 +16,7 @@ namespace GUI.AD_GUI
     {
         DataTable dtDanhSachPhieuNhapXuat = new DataTable();
         DataTable dtChiTietPhieuNhapXuat = new DataTable();
+        //DataTable dtChiTietPhieuNhapXuatVatTu = new DataTable();
         public UC_PhieuNhapXuat()
         {
             InitializeComponent();

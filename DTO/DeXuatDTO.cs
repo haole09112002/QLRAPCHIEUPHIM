@@ -11,7 +11,6 @@ namespace DTO
         private string maDeXuat;
         private string maNhanVien;
         private DateTime ngayDeXuat;
-       
         private string maLoaiDeXuat;
 
         public string MaDeXuat { get => maDeXuat; set => maDeXuat = value; }

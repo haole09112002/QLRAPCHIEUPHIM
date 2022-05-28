@@ -1,7 +1,6 @@
 ﻿using BLL;
 using DTO;
 using System;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace GUI.AD_GUI
@@ -11,37 +10,14 @@ namespace GUI.AD_GUI
         public delegate void MyDel();
         public MyDel d { get; set; }
         string maNhanVienn { get; set; }
-        NhanVienDTO nhanVien = new NhanVienDTO();
         public frmThemNhanVien(string maNv ="")
         {
             InitializeComponent();
             maNhanVienn = maNv;
             SetGUI(maNv);
+           
         }
-        public void Reload()
-        {
-            if (nhanVien.GioiTinh == false)
-            {
-                radioButton1.Checked = true;
-            }
-            else
-            {
-                radioButton2.Checked = true;
-            }
-            txtHoTen.Text = nhanVien.TenNhanVien;
-            dtpNgaySinh.Value = nhanVien.NgaySinh;
-            txtDiaChi.Text = nhanVien.DiaChi;
-            txtDienThoai.Text = nhanVien.SoDienThoai;
-            txtTenTK.Text = nhanVien.TenTaiKhoan;
-            txtCCCD.Text = nhanVien.CCCD1;
-            
-            lblValidatedCCCD.Visible = false;
-            lblValidatedDienThoai.Visible = false;
-            lblValidatedDiaChi.Visible = false;
-            lblValidatedTen.Visible = false;
-            lblValidatedNgaySinh.Visible = false;
-        }
-
+       
         public void SetGUI(string maNv)
         {   
             btnResetPass.Visible = false;
@@ -138,7 +114,7 @@ namespace GUI.AD_GUI
                 MaChinhSach =  maChinhSach,
                 MaChucVu = maChucVu
             };
-            if (NhanVienBLL.Instance.KiemTraDuLieu(nhanVien) == null )
+            if (NhanVienBLL.Instance.KiemTraDuLieu(nhanVien) == null)
             {
                 DialogResult result = MessageBox.Show("Bạn muốn lưu?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
@@ -156,40 +132,6 @@ namespace GUI.AD_GUI
                 MessageBox.Show(NhanVienBLL.Instance.KiemTraDuLieu(nhanVien), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //public bool checkValidate()
-        //{
-        //    bool check = true;
-        //    // Tên Tiếng anh hoặc tiếng việt đều được
-        //    if (Regex.IsMatch(txtHoTen.Text, @"^(\p{L}+\s?)*$") != true)
-        //    {
-        //        lblValidatedTen.Visible = true;
-        //        check = false;
-        //    }
-        //    // Địa chỉ nước ngoài hoặc việt nam đều được
-        //    if (Regex.IsMatch(txtDiaChi.Text, @"^(\p{L}+\s?)*$") != true)
-        //    {
-        //        lblValidatedDiaChi.Visible = true;
-        //        check = false;
-        //    }
-        //    // Độ dài là 10 chữ số, Bắt đầu bằng 84 hoặc 0 kế tiếp phải là các đầu số hiện nay bao gồm 3,5,7,8,9 + với 8 số bất kì
-        //    if (Regex.IsMatch(txtDienThoai.Text, @"(84|0[3|5|7|8|9])+([0-9]{8})\b") != true)
-        //    {
-        //        lblValidatedDienThoai.Visible = true;
-        //        check = false;
-        //    }
-        //    //Độ dài là 12 chữ số, bắt đầu bằng số 0
-        //    if (Regex.IsMatch(txtCCCD.Text, @"(0)+([1-9]{11})\b") != true)
-        //    {
-        //        lblValidatedCCCD.Visible = true;
-        //        check = false;
-        //    }
-        //    if (DateTime.Today <= dtpNgaySinh.Value)
-        //    {
-        //        lblValidatedNgaySinh.Visible = true;
-        //        check = false;
-        //    }
-        //    return check;
-        //}
 
         private void btnResetPass_Click(object sender, EventArgs e)
         {

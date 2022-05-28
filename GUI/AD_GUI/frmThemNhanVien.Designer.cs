@@ -31,18 +31,14 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnChinhSua = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnResetPass = new System.Windows.Forms.Button();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTenTK = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lbChinhSach = new System.Windows.Forms.Label();
-            this.cbbChinhSach = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbbChucVu = new System.Windows.Forms.ComboBox();
             this.txtCCCD = new System.Windows.Forms.TextBox();
@@ -61,11 +57,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblValidatedTen = new System.Windows.Forms.Label();
-            this.lblValidatedNgaySinh = new System.Windows.Forms.Label();
-            this.lblValidatedDiaChi = new System.Windows.Forms.Label();
-            this.lblValidatedDienThoai = new System.Windows.Forms.Label();
-            this.lblValidatedCCCD = new System.Windows.Forms.Label();
+            this.lbChinhSach = new System.Windows.Forms.Label();
+            this.cbbChinhSach = new System.Windows.Forms.ComboBox();
+            this.btnResetPass = new System.Windows.Forms.Button();
+            this.btnChinhSua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -114,23 +109,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(658, 593);
             this.panel3.TabIndex = 33;
-            // 
-            // btnChinhSua
-            // 
-            this.btnChinhSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnChinhSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChinhSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChinhSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChinhSua.Image = global::GUI.Properties.Resources.Edit;
-            this.btnChinhSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChinhSua.Location = new System.Drawing.Point(251, 536);
-            this.btnChinhSua.Name = "btnChinhSua";
-            this.btnChinhSua.Size = new System.Drawing.Size(111, 32);
-            this.btnChinhSua.TabIndex = 42;
-            this.btnChinhSua.Text = "CHỈNH SỬA";
-            this.btnChinhSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChinhSua.UseVisualStyleBackColor = false;
-            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
             // 
             // button2
             // 
@@ -184,23 +162,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "THÔNG TIN TÀI KHOẢN";
             // 
-            // btnResetPass
-            // 
-            this.btnResetPass.BackColor = System.Drawing.Color.LightGreen;
-            this.btnResetPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnResetPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResetPass.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetPass.Image = global::GUI.Properties.Resources.save_26px;
-            this.btnResetPass.Location = new System.Drawing.Point(470, 75);
-            this.btnResetPass.Margin = new System.Windows.Forms.Padding(2);
-            this.btnResetPass.Name = "btnResetPass";
-            this.btnResetPass.Size = new System.Drawing.Size(103, 29);
-            this.btnResetPass.TabIndex = 40;
-            this.btnResetPass.Text = "ResetPass";
-            this.btnResetPass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnResetPass.UseVisualStyleBackColor = false;
-            this.btnResetPass.Click += new System.EventHandler(this.btnResetPass_Click);
-            // 
             // txtMatKhau
             // 
             this.txtMatKhau.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,11 +208,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lblValidatedCCCD);
-            this.groupBox2.Controls.Add(this.lblValidatedDienThoai);
-            this.groupBox2.Controls.Add(this.lblValidatedDiaChi);
-            this.groupBox2.Controls.Add(this.lblValidatedNgaySinh);
-            this.groupBox2.Controls.Add(this.lblValidatedTen);
             this.groupBox2.Controls.Add(this.lbChinhSach);
             this.groupBox2.Controls.Add(this.cbbChinhSach);
             this.groupBox2.Controls.Add(this.label7);
@@ -274,29 +230,6 @@
             this.groupBox2.TabIndex = 37;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "THÔNG TIN NHÂN VIÊN";
-            // 
-            // lbChinhSach
-            // 
-            this.lbChinhSach.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChinhSach.Image = global::GUI.Properties.Resources.Chucvu;
-            this.lbChinhSach.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbChinhSach.Location = new System.Drawing.Point(20, 360);
-            this.lbChinhSach.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbChinhSach.Name = "lbChinhSach";
-            this.lbChinhSach.Size = new System.Drawing.Size(92, 22);
-            this.lbChinhSach.TabIndex = 16;
-            this.lbChinhSach.Text = "Chính Sách";
-            this.lbChinhSach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbbChinhSach
-            // 
-            this.cbbChinhSach.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbbChinhSach.FormattingEnabled = true;
-            this.cbbChinhSach.Location = new System.Drawing.Point(160, 360);
-            this.cbbChinhSach.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbChinhSach.Name = "cbbChinhSach";
-            this.cbbChinhSach.Size = new System.Drawing.Size(378, 25);
-            this.cbbChinhSach.TabIndex = 17;
             // 
             // label7
             // 
@@ -386,9 +319,9 @@
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(18, 122);
+            this.groupBox1.Location = new System.Drawing.Point(18, 113);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(523, 59);
+            this.groupBox1.Size = new System.Drawing.Size(523, 68);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Giới tính";
@@ -499,75 +432,62 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // lblValidatedTen
+            // lbChinhSach
             // 
-            this.lblValidatedTen.BackColor = System.Drawing.SystemColors.Control;
-            this.lblValidatedTen.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidatedTen.ForeColor = System.Drawing.Color.Red;
-            this.lblValidatedTen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblValidatedTen.Location = new System.Drawing.Point(157, 53);
-            this.lblValidatedTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValidatedTen.Name = "lblValidatedTen";
-            this.lblValidatedTen.Size = new System.Drawing.Size(297, 15);
-            this.lblValidatedTen.TabIndex = 29;
-            this.lblValidatedTen.Text = "*Định dạng tên không hợp lệ, Vui lòng nhập lại!";
-            this.lblValidatedTen.Visible = false;
+            this.lbChinhSach.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChinhSach.Image = global::GUI.Properties.Resources.Chucvu;
+            this.lbChinhSach.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbChinhSach.Location = new System.Drawing.Point(20, 360);
+            this.lbChinhSach.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbChinhSach.Name = "lbChinhSach";
+            this.lbChinhSach.Size = new System.Drawing.Size(92, 22);
+            this.lbChinhSach.TabIndex = 16;
+            this.lbChinhSach.Text = "Chính Sách";
+            this.lbChinhSach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblValidatedNgaySinh
+            // cbbChinhSach
             // 
-            this.lblValidatedNgaySinh.BackColor = System.Drawing.SystemColors.Control;
-            this.lblValidatedNgaySinh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidatedNgaySinh.ForeColor = System.Drawing.Color.Red;
-            this.lblValidatedNgaySinh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblValidatedNgaySinh.Location = new System.Drawing.Point(160, 104);
-            this.lblValidatedNgaySinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValidatedNgaySinh.Name = "lblValidatedNgaySinh";
-            this.lblValidatedNgaySinh.Size = new System.Drawing.Size(332, 15);
-            this.lblValidatedNgaySinh.TabIndex = 33;
-            this.lblValidatedNgaySinh.Text = "*Ngày sinh không lớn hơn hiện tại, Vui lòng nhập lại!";
-            this.lblValidatedNgaySinh.Visible = false;
+            this.cbbChinhSach.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbbChinhSach.FormattingEnabled = true;
+            this.cbbChinhSach.Location = new System.Drawing.Point(160, 360);
+            this.cbbChinhSach.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbChinhSach.Name = "cbbChinhSach";
+            this.cbbChinhSach.Size = new System.Drawing.Size(378, 25);
+            this.cbbChinhSach.TabIndex = 17;
             // 
-            // lblValidatedDiaChi
+            // btnResetPass
             // 
-            this.lblValidatedDiaChi.BackColor = System.Drawing.SystemColors.Control;
-            this.lblValidatedDiaChi.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidatedDiaChi.ForeColor = System.Drawing.Color.Red;
-            this.lblValidatedDiaChi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblValidatedDiaChi.Location = new System.Drawing.Point(160, 223);
-            this.lblValidatedDiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValidatedDiaChi.Name = "lblValidatedDiaChi";
-            this.lblValidatedDiaChi.Size = new System.Drawing.Size(320, 15);
-            this.lblValidatedDiaChi.TabIndex = 34;
-            this.lblValidatedDiaChi.Text = "*Định dạng địa chỉ không hợp lệ, Vui lòng nhập lại!";
-            this.lblValidatedDiaChi.Visible = false;
+            this.btnResetPass.BackColor = System.Drawing.Color.LightGreen;
+            this.btnResetPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResetPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetPass.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetPass.Image = global::GUI.Properties.Resources.save_26px;
+            this.btnResetPass.Location = new System.Drawing.Point(470, 75);
+            this.btnResetPass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnResetPass.Name = "btnResetPass";
+            this.btnResetPass.Size = new System.Drawing.Size(103, 29);
+            this.btnResetPass.TabIndex = 40;
+            this.btnResetPass.Text = "ResetPass";
+            this.btnResetPass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnResetPass.UseVisualStyleBackColor = false;
+            this.btnResetPass.Click += new System.EventHandler(this.btnResetPass_Click);
             // 
-            // lblValidatedDienThoai
+            // btnChinhSua
             // 
-            this.lblValidatedDienThoai.BackColor = System.Drawing.SystemColors.Control;
-            this.lblValidatedDienThoai.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidatedDienThoai.ForeColor = System.Drawing.Color.Red;
-            this.lblValidatedDienThoai.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblValidatedDienThoai.Location = new System.Drawing.Point(160, 262);
-            this.lblValidatedDienThoai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValidatedDienThoai.Name = "lblValidatedDienThoai";
-            this.lblValidatedDienThoai.Size = new System.Drawing.Size(332, 15);
-            this.lblValidatedDienThoai.TabIndex = 35;
-            this.lblValidatedDienThoai.Text = "*Định dạng điện thoại không hợp lệ, Vui lòng nhập lại!";
-            this.lblValidatedDienThoai.Visible = false;
-            // 
-            // lblValidatedCCCD
-            // 
-            this.lblValidatedCCCD.BackColor = System.Drawing.SystemColors.Control;
-            this.lblValidatedCCCD.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidatedCCCD.ForeColor = System.Drawing.Color.Red;
-            this.lblValidatedCCCD.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblValidatedCCCD.Location = new System.Drawing.Point(160, 343);
-            this.lblValidatedCCCD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValidatedCCCD.Name = "lblValidatedCCCD";
-            this.lblValidatedCCCD.Size = new System.Drawing.Size(320, 15);
-            this.lblValidatedCCCD.TabIndex = 36;
-            this.lblValidatedCCCD.Text = "*Định dạng CCCD không hợp lệ, Vui lòng nhập lại!";
-            this.lblValidatedCCCD.Visible = false;
+            this.btnChinhSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnChinhSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChinhSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChinhSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhSua.Image = global::GUI.Properties.Resources.Edit;
+            this.btnChinhSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChinhSua.Location = new System.Drawing.Point(251, 536);
+            this.btnChinhSua.Name = "btnChinhSua";
+            this.btnChinhSua.Size = new System.Drawing.Size(111, 32);
+            this.btnChinhSua.TabIndex = 42;
+            this.btnChinhSua.Text = "CHỈNH SỬA";
+            this.btnChinhSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChinhSua.UseVisualStyleBackColor = false;
+            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
             // 
             // frmThemNhanVien
             // 
@@ -627,10 +547,5 @@
         private System.Windows.Forms.ComboBox cbbChinhSach;
         private System.Windows.Forms.Button btnResetPass;
         private System.Windows.Forms.Button btnChinhSua;
-        private System.Windows.Forms.Label lblValidatedTen;
-        private System.Windows.Forms.Label lblValidatedNgaySinh;
-        private System.Windows.Forms.Label lblValidatedDiaChi;
-        private System.Windows.Forms.Label lblValidatedDienThoai;
-        private System.Windows.Forms.Label lblValidatedCCCD;
     }
 }

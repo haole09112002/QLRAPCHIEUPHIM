@@ -54,7 +54,7 @@ namespace BLL
             return new DeXuatViewDTO
             {
                 MaDeXuat = deXuat.MaDeXuat,
-                NgayDeXuat = deXuat.NgayDeXuat,
+                NgayDeXuat = deXuat.NgayDeXuat.ToString(),
                 TenLoaiDeXuat = tenLoaiDeXuat
 
             };
@@ -87,54 +87,6 @@ namespace BLL
             }
             return data;
         }
-        //public List<DeXuatDTO> GetDeXuatViewByTrangThai(string TrangThai, string TimKiem = "", string LoaiTimKiem = "")
-        //{
-        //    List<DeXuatDTO> data = new List<DeXuatDTO>();
-        //    foreach (DeXuatDTO i in DeXuatBLL.Instance.GetAllDeXuat())
-        //    {
-        //        if (LoaiTimKiem == "")
-        //        {
-        //            if (i.TrangThai == TrangThai)
-        //            {
-        //                data.Add(new DeXuatDTO
-        //                {
-        //                    MaDeXuat = i.MaDeXuat,
-        //                    // TenNhanVien = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(i.MaNhanVien).TenNhanVien,
-        //                    NgayDeXuat = i.NgayDeXuat
-        //                    //TenLoaiDeXuat = LoaiDeXuatBLL.Instance.GetLoaiDeXuatByMaLoaiDeXuat(i.MaLoaiDeXuat).TenLoaiDeXuat
-        //                });
-        //            }
-        //        }
-        //        if (LoaiTimKiem == "Tên Nhân Viên")
-        //        {
-        //            if (i.TrangThai == TrangThai && NhanVienBLL.Instance.GetNhanVienByMaNhanVien(i.MaNhanVien).TenNhanVien.Contains(TimKiem))
-        //            {
-        //                data.Add(new DeXuatDTO
-        //                {
-        //                    MaDeXuat = i.MaDeXuat,
-        //                    //TenNhanVien = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(i.MaNhanVien).TenNhanVien,
-        //                    NgayDeXuat = i.NgayDeXuat
-        //                    //TenLoaiDeXuat = LoaiDeXuatBLL.Instance.GetLoaiDeXuatByMaLoaiDeXuat(i.MaLoaiDeXuat).TenLoaiDeXuat
-        //                });
-        //            }
-        //        }
-        //        else if (LoaiTimKiem == "Ngày Nhập Xuất")
-        //        {
-        //            if (i.TrangThai == TrangThai && DeXuatBLL.Instance.GetDeXuatByMaDeXuat(i.MaDeXuat).NgayDeXuat.ToString().Contains(TimKiem))
-        //            {
-        //                data.Add(new DeXuatDTO
-        //                {
-        //                    MaDeXuat = i.MaDeXuat,
-        //                    //TenNhanVien = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(i.MaNhanVien).TenNhanVien,
-        //                    NgayDeXuat = i.NgayDeXuat
-        //                    //TenLoaiDeXuat = LoaiDeXuatBLL.Instance.GetLoaiDeXuatByMaLoaiDeXuat(i.MaLoaiDeXuat).TenLoaiDeXuat
-
-        //                });
-        //            }
-        //        }
-        //    }
-        //    return data;
-        //}
         public DeXuatDTO GetDXuatByMaDeXuat(string maDeXuat)
         {
             DeXuatDTO deXuat = null;
@@ -166,22 +118,6 @@ namespace BLL
             }
             return data;
         }
-        //public string KTDeXuat(string MaDeXuat,DateTime ngaydexuat)
-        //{
-
-        //    foreach (DeXuatDTO i in GetDeXuatViewByTrangThai("1", "", ""))
-        //    {
-        //        if (i.NgayDeXuat.Day == ngaydexuat.Day && i.NgayDeXuat.Month == ngaydexuat.Month && i.NgayDeXuat.Year == ngaydexuat.Year && i.TrangThai=="2")
-        //            return "Tồn tại một đề xuất cùng thời điểm";
-        //    }
-        //    return "";
-        //}
-        //public void DuyetDeXuat(DeXuatDTO dexuat,string TrangThai)
-        //{
-        //    dexuat.TrangThai = TrangThai;
-        //    DeXuatDAL.Instance.CapNhatDeXuat(dexuat);
-        //}
-
         public delegate bool CompareObj(object o1, object o2);
         public List<DeXuatViewDTO> SortDeXuat(List<DeXuatViewDTO> now, string dkSort)
         {
@@ -231,15 +167,15 @@ namespace BLL
             }
             return data;
         }
-        //public List<DeXuatViewDTO> TimTheoMaDeXuat(string maDeXuat)
-        //{
-        //    List<DeXuatViewDTO> data = new List<DeXuatViewDTO>();
-        //    foreach (DeXuatDTO i in DeXuatDAL.Instance.TimTheoMa(maDeXuat))
-        //    {
-        //        data.Add(GetDeXuatViewByDeXuatDTO(i));
-        //    }
-        //    return data;
-        //}
+        public List<DeXuatViewDTO> TimTheoMaDeXuat(string maDeXuat)
+        {
+            List<DeXuatViewDTO> data = new List<DeXuatViewDTO>();
+            foreach (DeXuatDTO i in DeXuatDAL.Instance.TimTheoMa(maDeXuat))
+            {
+                data.Add(GetDeXuatViewByDeXuatDTO(i));
+            }
+            return data;
+        }
         public void LuuDeXuat(string MaNhanVien, DateTime NgayDeXuat, string MaLoaiDeXuat)
         {
             DeXuatDAL.Instance.LuuDeXuat(MaNhanVien,NgayDeXuat, MaLoaiDeXuat);
@@ -303,17 +239,6 @@ namespace BLL
         public bool CompareNgayDeXuat(object o1, object o2)
         {
             return DateTime.Compare(((DeXuatDTO)o1).NgayDeXuat, ((DeXuatDTO)o2).NgayDeXuat) > 0;
-        }
-        public DeXuatDTO ConvertViewToDTO(DeXuatViewDTO deXuatView)
-        {
-
-            return new DeXuatDTO
-            {
-                MaDeXuat = deXuatView.MaDeXuat,
-                MaNhanVien = deXuatView.MaNhanVien,
-                MaLoaiDeXuat =deXuatView.MaDeXuat,
-                NgayDeXuat = deXuatView.NgayDeXuat
-            };
         }
     }
 }

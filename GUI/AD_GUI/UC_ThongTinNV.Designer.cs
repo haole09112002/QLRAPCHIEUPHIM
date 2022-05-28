@@ -62,7 +62,6 @@
             // 
             // cbbTimKiem
             // 
-            this.cbbTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbbTimKiem.FormattingEnabled = true;
             this.cbbTimKiem.Location = new System.Drawing.Point(518, 48);
@@ -164,7 +163,6 @@
             // 
             this.cbbSapXep.BackColor = System.Drawing.Color.White;
             this.cbbSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbbSapXep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSapXep.FormattingEnabled = true;
             this.cbbSapXep.Location = new System.Drawing.Point(157, 13);

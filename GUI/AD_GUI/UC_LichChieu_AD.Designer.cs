@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbbTimKiemDK = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbbTimKiemCT = new System.Windows.Forms.ComboBox();
             this.txtTimKiemCT = new System.Windows.Forms.TextBox();
@@ -38,10 +37,11 @@
             this.btnDongY = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvLichChieuCT = new System.Windows.Forms.DataGridView();
-            this.txtTimKiemDK = new System.Windows.Forms.TextBox();
-            this.btnTimKiemDK = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvLichChieuDK = new System.Windows.Forms.DataGridView();
+            this.cbbTimKiemDK = new System.Windows.Forms.ComboBox();
+            this.txtTimKiemDK = new System.Windows.Forms.TextBox();
+            this.btnTimKiemDK = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -65,20 +65,6 @@
             this.panel1.Size = new System.Drawing.Size(720, 461);
             this.panel1.TabIndex = 0;
             // 
-            // cbbTimKiemDK
-            // 
-            this.cbbTimKiemDK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTimKiemDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbbTimKiemDK.FormattingEnabled = true;
-            this.cbbTimKiemDK.Items.AddRange(new object[] {
-            "Tên Phim",
-            "Tên Phòng Chiếu",
-            "Ngày Chiếu"});
-            this.cbbTimKiemDK.Location = new System.Drawing.Point(564, 175);
-            this.cbbTimKiemDK.Name = "cbbTimKiemDK";
-            this.cbbTimKiemDK.Size = new System.Drawing.Size(120, 23);
-            this.cbbTimKiemDK.TabIndex = 24;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.cbbTimKiemCT);
@@ -94,7 +80,6 @@
             // 
             // cbbTimKiemCT
             // 
-            this.cbbTimKiemCT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTimKiemCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbbTimKiemCT.FormattingEnabled = true;
             this.cbbTimKiemCT.Items.AddRange(new object[] {
@@ -192,32 +177,6 @@
             this.dgvLichChieuCT.Size = new System.Drawing.Size(670, 138);
             this.dgvLichChieuCT.TabIndex = 0;
             // 
-            // txtTimKiemDK
-            // 
-            this.txtTimKiemDK.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiemDK.Location = new System.Drawing.Point(402, 173);
-            this.txtTimKiemDK.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTimKiemDK.Name = "txtTimKiemDK";
-            this.txtTimKiemDK.Size = new System.Drawing.Size(157, 24);
-            this.txtTimKiemDK.TabIndex = 5;
-            // 
-            // btnTimKiemDK
-            // 
-            this.btnTimKiemDK.BackColor = System.Drawing.Color.Cyan;
-            this.btnTimKiemDK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTimKiemDK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemDK.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiemDK.Image = global::GUI.Properties.Resources.SearchIcon;
-            this.btnTimKiemDK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemDK.Location = new System.Drawing.Point(295, 173);
-            this.btnTimKiemDK.Name = "btnTimKiemDK";
-            this.btnTimKiemDK.Size = new System.Drawing.Size(92, 26);
-            this.btnTimKiemDK.TabIndex = 23;
-            this.btnTimKiemDK.Text = "TÌM KIẾM";
-            this.btnTimKiemDK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTimKiemDK.UseVisualStyleBackColor = false;
-            this.btnTimKiemDK.Click += new System.EventHandler(this.btnTimKiemDK_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvLichChieuDK);
@@ -243,6 +202,45 @@
             this.dgvLichChieuDK.RowTemplate.Height = 24;
             this.dgvLichChieuDK.Size = new System.Drawing.Size(670, 138);
             this.dgvLichChieuDK.TabIndex = 1;
+            // 
+            // cbbTimKiemDK
+            // 
+            this.cbbTimKiemDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbbTimKiemDK.FormattingEnabled = true;
+            this.cbbTimKiemDK.Items.AddRange(new object[] {
+            "Tên Phim",
+            "Tên Phòng Chiếu",
+            "Ngày Chiếu"});
+            this.cbbTimKiemDK.Location = new System.Drawing.Point(564, 175);
+            this.cbbTimKiemDK.Name = "cbbTimKiemDK";
+            this.cbbTimKiemDK.Size = new System.Drawing.Size(120, 23);
+            this.cbbTimKiemDK.TabIndex = 24;
+            // 
+            // txtTimKiemDK
+            // 
+            this.txtTimKiemDK.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiemDK.Location = new System.Drawing.Point(402, 173);
+            this.txtTimKiemDK.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTimKiemDK.Name = "txtTimKiemDK";
+            this.txtTimKiemDK.Size = new System.Drawing.Size(157, 24);
+            this.txtTimKiemDK.TabIndex = 5;
+            // 
+            // btnTimKiemDK
+            // 
+            this.btnTimKiemDK.BackColor = System.Drawing.Color.Cyan;
+            this.btnTimKiemDK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimKiemDK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemDK.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemDK.Image = global::GUI.Properties.Resources.SearchIcon;
+            this.btnTimKiemDK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiemDK.Location = new System.Drawing.Point(295, 173);
+            this.btnTimKiemDK.Name = "btnTimKiemDK";
+            this.btnTimKiemDK.Size = new System.Drawing.Size(92, 26);
+            this.btnTimKiemDK.TabIndex = 23;
+            this.btnTimKiemDK.Text = "TÌM KIẾM";
+            this.btnTimKiemDK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiemDK.UseVisualStyleBackColor = false;
+            this.btnTimKiemDK.Click += new System.EventHandler(this.btnTimKiemDK_Click);
             // 
             // UC_LichChieu_AD
             // 

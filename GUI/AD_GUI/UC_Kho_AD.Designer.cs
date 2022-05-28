@@ -38,12 +38,10 @@
             this.cbbLoaiKho = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvChiTiet = new System.Windows.Forms.DataGridView();
             this.dgvKho = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKho)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,7 +134,6 @@
             // cbbSapXep
             // 
             this.cbbSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbbSapXep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSapXep.FormattingEnabled = true;
             this.cbbSapXep.Location = new System.Drawing.Point(122, 50);
@@ -149,7 +146,6 @@
             // cbbLoaiKho
             // 
             this.cbbLoaiKho.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbbLoaiKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLoaiKho.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbLoaiKho.FormattingEnabled = true;
             this.cbbLoaiKho.Location = new System.Drawing.Point(122, 13);
@@ -170,7 +166,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgvChiTiet);
             this.groupBox1.Controls.Add(this.dgvKho);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(17, 108);
@@ -182,19 +177,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DANH SÁCH";
             // 
-            // dgvChiTiet
-            // 
-            this.dgvChiTiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvChiTiet.BackgroundColor = System.Drawing.Color.Snow;
-            this.dgvChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChiTiet.Location = new System.Drawing.Point(340, 22);
-            this.dgvChiTiet.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvChiTiet.Name = "dgvChiTiet";
-            this.dgvChiTiet.RowHeadersWidth = 51;
-            this.dgvChiTiet.RowTemplate.Height = 24;
-            this.dgvChiTiet.Size = new System.Drawing.Size(332, 312);
-            this.dgvChiTiet.TabIndex = 1;
-            // 
             // dgvKho
             // 
             this.dgvKho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -205,9 +187,8 @@
             this.dgvKho.Name = "dgvKho";
             this.dgvKho.RowHeadersWidth = 51;
             this.dgvKho.RowTemplate.Height = 24;
-            this.dgvKho.Size = new System.Drawing.Size(332, 312);
+            this.dgvKho.Size = new System.Drawing.Size(682, 312);
             this.dgvKho.TabIndex = 0;
-            this.dgvKho.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKho_CellDoubleClick);
             // 
             // UC_Kho_AD
             // 
@@ -222,7 +203,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKho)).EndInit();
             this.ResumeLayout(false);
 
@@ -241,6 +221,5 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvKho;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvChiTiet;
     }
 }
