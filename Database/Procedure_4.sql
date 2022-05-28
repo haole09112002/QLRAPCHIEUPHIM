@@ -272,38 +272,52 @@ begin
 	Update PHONG_CHIEU set	TenPhong = @TenPhong,	MaTinhTrang = @MaTinhTrang
 	where MaPhongChieu = @MaPhongChieu
 end
-go
 ---CapNhatLichChieu
+go
 create proc CapNhatLichChieu
 	@MaPhim varchar(6), 
 	@MaPhongChieu varchar(6),
-	@MaKhungGio varchar(8),
+	@MaKhungGioChieu varchar(8),
 	@NgayChieu date,
 	@TrangThai varchar(1)
 as
 begin
-	Update LICH_CHIEU set	MaPhongChieu = @MaPhongChieu , MaKhungGioChieu=@MaKhungGio , NgayChieu=@NgayChieu ,	TrangThai = @TrangThai
-	where MaPhim = @MaPhim
+	Update LICH_CHIEU set TrangThai = @TrangThai
+	where MaPhim = @MaPhim and MaPhongChieu = @MaPhongChieu and MaKhungGioChieu=@MaKhungGioChieu and NgayChieu=@NgayChieu 
 end
---- Them lich lam viec
+---CapnhatDeXuatPhim
 go
-create proc ThemLichLamViec
-	@MaNhanVien varchar(6),
-	@MaCa varchar(6),
-	@NgayLamViec date
+create proc CapNhatDeXuatPhim
+	@MaDeXuat varchar(6), 
+	@MaPhim varchar(6),
+
+	@TinhTrang varchar(1)
 as
 begin
-	insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values (@MaNhanVien, @MaCa, @NgayLamViec)
+	Update CHI_TIET_DE_XUAT_PHIM set TinhTrang = @TinhTrang
+	where MaDeXuat = @MaDeXuat  and MaPhim=@MaPhim
 end
------ xoa lich lam viec
+---CapnhatDeXuatVT
 go
-create proc XoaLichLamViec
-	@MaNhanVien varchar(6),
-	@MaCa varchar(6),
-	@NgayLamViec date
+create proc CapNhatDeXuatVatTu
+	@MaDeXuat varchar(6), 
+	@MaVatTu varchar(6),
+
+	@TinhTrang varchar(1)
 as
-begin 
-	DELETE FROM LICH_LAM_VIEC
-	where MaNhanVien = @MaNhanVien and MaCa = @MaCa and NgayLamViec = @NgayLamViec
+begin
+	Update CHI_TIET_DE_XUAT_VT set TinhTrang = @TinhTrang
+	where MaDeXuat = @MaDeXuat  and MaVatTu=@MaVatTu
 end
+---CapnhatDeXuatThucAn
 go
+create proc CapNhatDeXuatThucAn
+	@MaDeXuat varchar(6), 
+	@MaThucAn varchar(6),
+
+	@TinhTrang varchar(1)
+as
+begin
+	Update CHI_TIET_DE_XUAT_TA set TinhTrang = @TinhTrang
+	where MaDeXuat = @MaDeXuat  and MaThucAn=@MaThucAn
+end

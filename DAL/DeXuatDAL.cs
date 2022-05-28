@@ -45,19 +45,19 @@ namespace DAL
                 MaDeXuat = i["MaDeXuat"].ToString(),
                 MaNhanVien = i["MaNhanVien"].ToString(),
                 NgayDeXuat = Convert.ToDateTime(i["NgayDeXuat"]),
-                MaLoaiDeXuat = i["MaLoaiDeXuat"].ToString(),
+                MaLoaiDeXuat = i["MaLoaiDeXuat"].ToString()
             };
         }
-        public List<DeXuatDTO> TimTheoMa(string maDeXuat)
-        {
-            List<DeXuatDTO> data = new List<DeXuatDTO>();
-            string query = $"SELECT * FROM DE_XUAT WHERE MaDeXuat LIKE '%{maDeXuat}%'";
-            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
-            {
-                data.Add(GetDeXuatByDataRow(i));
-            }
-            return data;
-        }
+        //public List<DeXuatDTO> TimTheoMa(string maDeXuat)
+        //{
+        //    List<DeXuatDTO> data = new List<DeXuatDTO>();
+        //    string query = $"SELECT * FROM DE_XUAT WHERE MaDeXuat LIKE '%{maDeXuat}%'";
+        //    foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+        //    {
+        //        data.Add(GetDeXuatByDataRow(i));
+        //    }
+        //    return data;
+        //}
         public void LuuDeXuat(string MaNhanVien, DateTime NgayDeXuat, string MaLoaiDeXuat)
         {
             string query = "Insert into DE_XUAT (MaNhanVien,NgayDeXuat,MaLoaiDeXuat) values" +
@@ -73,6 +73,16 @@ namespace DAL
                 MaDeXuat = i[0].ToString();
             }
             return MaDeXuat;
+        }
+        public void CapNhatDeXuat(DeXuatDTO deXuat)
+        {
+            string query = "EXEC CapNhatDeXuat @MaDeXuat , @MaLoaiDeXuat , @MaNhanVien , @NgayDeXuat";
+            object[] parameter = new object[]
+            {
+                deXuat.MaDeXuat,deXuat.MaLoaiDeXuat,
+                deXuat.MaNhanVien, deXuat.NgayDeXuat.ToShortDateString()
+            };
+            DBHelper.Instance.ExcuteNonQuery(query, parameter);
         }
     }
 }

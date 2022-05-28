@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbTimKiemDK = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbbTimKiemCT = new System.Windows.Forms.ComboBox();
             this.txtTimKiemCT = new System.Windows.Forms.TextBox();
@@ -37,11 +38,10 @@
             this.btnDongY = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvLichChieuCT = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvLichChieuDK = new System.Windows.Forms.DataGridView();
-            this.cbbTimKiemDK = new System.Windows.Forms.ComboBox();
             this.txtTimKiemDK = new System.Windows.Forms.TextBox();
             this.btnTimKiemDK = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvLichChieuDK = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -65,6 +65,20 @@
             this.panel1.Size = new System.Drawing.Size(720, 461);
             this.panel1.TabIndex = 0;
             // 
+            // cbbTimKiemDK
+            // 
+            this.cbbTimKiemDK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTimKiemDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbbTimKiemDK.FormattingEnabled = true;
+            this.cbbTimKiemDK.Items.AddRange(new object[] {
+            "Tên Phim",
+            "Tên Phòng Chiếu",
+            "Ngày Chiếu"});
+            this.cbbTimKiemDK.Location = new System.Drawing.Point(564, 175);
+            this.cbbTimKiemDK.Name = "cbbTimKiemDK";
+            this.cbbTimKiemDK.Size = new System.Drawing.Size(120, 23);
+            this.cbbTimKiemDK.TabIndex = 24;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.cbbTimKiemCT);
@@ -80,6 +94,7 @@
             // 
             // cbbTimKiemCT
             // 
+            this.cbbTimKiemCT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTimKiemCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbbTimKiemCT.FormattingEnabled = true;
             this.cbbTimKiemCT.Items.AddRange(new object[] {
@@ -177,45 +192,6 @@
             this.dgvLichChieuCT.Size = new System.Drawing.Size(670, 138);
             this.dgvLichChieuCT.TabIndex = 0;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dgvLichChieuDK);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(10, 3);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(700, 165);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "LỊCH CHIẾU DỰ KIẾN";
-            // 
-            // dgvLichChieuDK
-            // 
-            this.dgvLichChieuDK.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvLichChieuDK.BackgroundColor = System.Drawing.Color.Snow;
-            this.dgvLichChieuDK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLichChieuDK.Location = new System.Drawing.Point(4, 21);
-            this.dgvLichChieuDK.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvLichChieuDK.Name = "dgvLichChieuDK";
-            this.dgvLichChieuDK.RowHeadersWidth = 51;
-            this.dgvLichChieuDK.RowTemplate.Height = 24;
-            this.dgvLichChieuDK.Size = new System.Drawing.Size(670, 138);
-            this.dgvLichChieuDK.TabIndex = 1;
-            // 
-            // cbbTimKiemDK
-            // 
-            this.cbbTimKiemDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbbTimKiemDK.FormattingEnabled = true;
-            this.cbbTimKiemDK.Items.AddRange(new object[] {
-            "Tên Phim",
-            "Tên Phòng Chiếu",
-            "Ngày Chiếu"});
-            this.cbbTimKiemDK.Location = new System.Drawing.Point(564, 175);
-            this.cbbTimKiemDK.Name = "cbbTimKiemDK";
-            this.cbbTimKiemDK.Size = new System.Drawing.Size(120, 23);
-            this.cbbTimKiemDK.TabIndex = 24;
-            // 
             // txtTimKiemDK
             // 
             this.txtTimKiemDK.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -241,6 +217,32 @@
             this.btnTimKiemDK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiemDK.UseVisualStyleBackColor = false;
             this.btnTimKiemDK.Click += new System.EventHandler(this.btnTimKiemDK_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvLichChieuDK);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(10, 3);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(700, 165);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "LỊCH CHIẾU DỰ KIẾN";
+            // 
+            // dgvLichChieuDK
+            // 
+            this.dgvLichChieuDK.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLichChieuDK.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvLichChieuDK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLichChieuDK.Location = new System.Drawing.Point(4, 21);
+            this.dgvLichChieuDK.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvLichChieuDK.Name = "dgvLichChieuDK";
+            this.dgvLichChieuDK.RowHeadersWidth = 51;
+            this.dgvLichChieuDK.RowTemplate.Height = 24;
+            this.dgvLichChieuDK.Size = new System.Drawing.Size(670, 138);
+            this.dgvLichChieuDK.TabIndex = 1;
             // 
             // UC_LichChieu_AD
             // 

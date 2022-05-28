@@ -71,5 +71,52 @@ namespace BLL
             }
             return data.Distinct().ToList();
         }
+        public ChiTietDeXuatPhimViewDTO ConvertDTOToView(ChiTietDeXuatPhimDTO deXuat)
+        {
+
+            return new ChiTietDeXuatPhimViewDTO
+            {
+                MaDeXuat = deXuat.MaDeXuat,
+                MaPhim = deXuat.MaPhim,
+                DonViTinh = deXuat.DonViTinh,
+                SoLuong = deXuat.SoLuong,
+                TenPhim = PhimBLL.Instance.GetPhimByMaPhim(deXuat.MaPhim).TenPhim
+     
+            };
+        }
+        public List<ChiTietDeXuatPhimViewDTO> GetChiTietDeXuatPhimViewByTinhTrang(string tinhTrang)
+        {
+
+            var data = new List<ChiTietDeXuatPhimViewDTO>();
+           foreach (var i in ChiTietDeXuatPhimDAL.Instance.GetAllDeXuatPhim().FindAll(i => i.TinhTrang == tinhTrang))
+            {
+                data.Add(ConvertDTOToView(i));
+            }
+            return data;
+        }
+        public List<ChiTietDeXuatPhimViewDTO> TimKiemChiTietDXPByMaDeXuat(string MaDeXuat,string tinhTrang)
+        {
+            List<ChiTietDeXuatPhimViewDTO> data = new List<ChiTietDeXuatPhimViewDTO>();
+            foreach (ChiTietDeXuatPhimDTO j in ChiTietDeXuatPhimDAL.Instance.GetAllDeXuatPhim().FindAll(i => i.TinhTrang == tinhTrang))
+            {
+                if (j.MaDeXuat.ToLower().Contains(MaDeXuat.ToLower()))
+                {
+                    data.Add(ConvertDTOToView(j));
+                }
+            }
+            return data;
+        }
+        public List<ChiTietDeXuatPhimViewDTO> TimKiemChiTietDXPByTenPhim(string tenPhim, string tinhTrang)
+        {
+            List<ChiTietDeXuatPhimViewDTO> data = new List<ChiTietDeXuatPhimViewDTO>();
+            foreach (ChiTietDeXuatPhimDTO j in ChiTietDeXuatPhimDAL.Instance.GetAllDeXuatPhim().FindAll(i => i.TinhTrang == tinhTrang))
+            {
+                if (ConvertDTOToView(j).TenPhim.ToLower().Contains(tenPhim.ToLower()))
+                {
+                    data.Add(ConvertDTOToView(j));
+                }
+            }
+            return data;
+        }
     }
 }
