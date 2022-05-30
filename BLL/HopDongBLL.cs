@@ -83,7 +83,7 @@ namespace BLL
             List<HopDongViewDTO> result = new List<HopDongViewDTO>();
             foreach (HopDongViewDTO i in data)
             {
-                if (i.TenHopDong.Contains(txt) || i.NgayKiKetHD.ToString().Contains(txt) || i.TenNhaCungCap.Contains(txt))
+                if (i.TenHopDong.Contains(txt) || i.NgayKiKetHD.ToShortDateString().Contains(txt) || i.TenNhaCungCap.Contains(txt))
                     result.Add(i);
             }     
             return result;
