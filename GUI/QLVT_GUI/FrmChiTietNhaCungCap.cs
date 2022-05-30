@@ -15,8 +15,6 @@ namespace GUI.QLVT_GUI
     public partial class FrmChiTietNhaCungCap : Form
     {
         private string maNhaCungCap;
-        public delegate void Mydel(string maNhaCungCap, string txt);
-        public Mydel d { get; set; }
         public FrmChiTietNhaCungCap(string maNhaCungCap = "")
         {
             InitializeComponent();

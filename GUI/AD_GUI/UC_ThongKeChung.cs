@@ -24,7 +24,11 @@ namespace GUI.AD_GUI
             
             cbLoaiHopDong.Items.Add(new CBBItem { Text = "Tất cả", Value = "0" });
             cbLoaiHopDong.Items.AddRange(LoaiHopDongBLL.Instance.GetCBBLoaiHopDong().ToArray());
-
+            cbLoaiHopDong.SelectedIndex = 0;
+            dtpNgayKT.Value = DateTime.Today;
+            dtpNgayBD.Value = DateTime.Today.AddDays(-7);
+            LoadGDVThongKeHopDong( ThongKeBLL.Instance.ThongKeTienNhapPhim(((CBBItem)cbLoaiHopDong.SelectedItem).Value,
+                        dtpNgayBD.Value, dtpNgayKT.Value, lbSoLuongHD, lbTongTienThanhToanHD, lbDocTienThanhChu));
             lbTongNhaCungCap.Text = ThongKeBLL.Instance.SoLuongNhaCungCap().ToString();
             lbSoLuongNhaCungCapPhim.Text = ThongKeBLL.Instance.SoLuongNhaCungCap("LNCC01").ToString();
             lbSoLuongNhaCungCapVT.Text = ThongKeBLL.Instance.SoLuongNhaCungCap("LNCC02").ToString();
@@ -46,7 +50,8 @@ namespace GUI.AD_GUI
             dgvThongKeHopDong.Columns["MaHopDong"].HeaderText = "Mã hợp đồng";
             dgvThongKeHopDong.Columns["TenHopDong"].HeaderText = "Tên hợp đồng";
             dgvThongKeHopDong.Columns["TongTien"].HeaderText = "Tiền thanh toán(VND)";
-            dgvThongKeHopDong.Columns["LoaiHopDong"].HeaderText = "Loại hợp đồng";
+            dgvThongKeHopDong.Columns["TenLoaiHopDong"].HeaderText = "Loại hợp đồng";
+            dgvThongKeHopDong.Columns["LoaiHopDong"].Visible = false;
         }
         private void cbLoaiHopDong_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -59,13 +64,8 @@ namespace GUI.AD_GUI
             {
                 if (dtpNgayBD.Value <= dtpNgayKT.Value)
                 {
-                    var result = ThongKeBLL.Instance.ThongKeTienNhapPhim(((CBBItem)cbLoaiHopDong.SelectedItem).Value, dtpNgayBD.Value, dtpNgayKT.Value);
-                    double tongTien = 0;
-                    LoadGDVThongKeHopDong(result);
-                    lbSoLuongHD.Text = result.Count().ToString();
-                    result.ForEach(i => tongTien += i.TongTien);
-                    lbTongTienThanhToanHD.Text = tongTien.ToString();
-                    lbDocTienThanhChu.Text = Helper.Instance.NumberToTextVN((decimal)tongTien);
+                    LoadGDVThongKeHopDong(ThongKeBLL.Instance.ThongKeTienNhapPhim(((CBBItem)cbLoaiHopDong.SelectedItem).Value,
+                                          dtpNgayBD.Value, dtpNgayKT.Value, lbSoLuongHD, lbTongTienThanhToanHD, lbDocTienThanhChu));
                 }
                 else
                 {
