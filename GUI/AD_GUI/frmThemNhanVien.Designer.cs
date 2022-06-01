@@ -41,6 +41,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblValidatedCCCD = new System.Windows.Forms.Label();
+            this.lblValidatedDienThoai = new System.Windows.Forms.Label();
+            this.lblValidatedDiaChi = new System.Windows.Forms.Label();
+            this.lblValidatedNgaySinh = new System.Windows.Forms.Label();
+            this.lblValidatedTen = new System.Windows.Forms.Label();
             this.lbChinhSach = new System.Windows.Forms.Label();
             this.cbbChinhSach = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,11 +66,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblValidatedTen = new System.Windows.Forms.Label();
-            this.lblValidatedNgaySinh = new System.Windows.Forms.Label();
-            this.lblValidatedDiaChi = new System.Windows.Forms.Label();
-            this.lblValidatedDienThoai = new System.Windows.Forms.Label();
-            this.lblValidatedCCCD = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -275,6 +275,76 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "THÔNG TIN NHÂN VIÊN";
             // 
+            // lblValidatedCCCD
+            // 
+            this.lblValidatedCCCD.BackColor = System.Drawing.SystemColors.Control;
+            this.lblValidatedCCCD.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidatedCCCD.ForeColor = System.Drawing.Color.Red;
+            this.lblValidatedCCCD.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValidatedCCCD.Location = new System.Drawing.Point(160, 343);
+            this.lblValidatedCCCD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblValidatedCCCD.Name = "lblValidatedCCCD";
+            this.lblValidatedCCCD.Size = new System.Drawing.Size(320, 15);
+            this.lblValidatedCCCD.TabIndex = 36;
+            this.lblValidatedCCCD.Text = "*Định dạng CCCD không hợp lệ, Vui lòng nhập lại!";
+            this.lblValidatedCCCD.Visible = false;
+            // 
+            // lblValidatedDienThoai
+            // 
+            this.lblValidatedDienThoai.BackColor = System.Drawing.SystemColors.Control;
+            this.lblValidatedDienThoai.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidatedDienThoai.ForeColor = System.Drawing.Color.Red;
+            this.lblValidatedDienThoai.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValidatedDienThoai.Location = new System.Drawing.Point(160, 262);
+            this.lblValidatedDienThoai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblValidatedDienThoai.Name = "lblValidatedDienThoai";
+            this.lblValidatedDienThoai.Size = new System.Drawing.Size(332, 15);
+            this.lblValidatedDienThoai.TabIndex = 35;
+            this.lblValidatedDienThoai.Text = "*Định dạng điện thoại không hợp lệ, Vui lòng nhập lại!";
+            this.lblValidatedDienThoai.Visible = false;
+            // 
+            // lblValidatedDiaChi
+            // 
+            this.lblValidatedDiaChi.BackColor = System.Drawing.SystemColors.Control;
+            this.lblValidatedDiaChi.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidatedDiaChi.ForeColor = System.Drawing.Color.Red;
+            this.lblValidatedDiaChi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValidatedDiaChi.Location = new System.Drawing.Point(160, 223);
+            this.lblValidatedDiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblValidatedDiaChi.Name = "lblValidatedDiaChi";
+            this.lblValidatedDiaChi.Size = new System.Drawing.Size(320, 15);
+            this.lblValidatedDiaChi.TabIndex = 34;
+            this.lblValidatedDiaChi.Text = "*Định dạng địa chỉ không hợp lệ, Vui lòng nhập lại!";
+            this.lblValidatedDiaChi.Visible = false;
+            // 
+            // lblValidatedNgaySinh
+            // 
+            this.lblValidatedNgaySinh.BackColor = System.Drawing.SystemColors.Control;
+            this.lblValidatedNgaySinh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidatedNgaySinh.ForeColor = System.Drawing.Color.Red;
+            this.lblValidatedNgaySinh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValidatedNgaySinh.Location = new System.Drawing.Point(160, 104);
+            this.lblValidatedNgaySinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblValidatedNgaySinh.Name = "lblValidatedNgaySinh";
+            this.lblValidatedNgaySinh.Size = new System.Drawing.Size(332, 15);
+            this.lblValidatedNgaySinh.TabIndex = 33;
+            this.lblValidatedNgaySinh.Text = "*Ngày sinh không lớn hơn hiện tại, Vui lòng nhập lại!";
+            this.lblValidatedNgaySinh.Visible = false;
+            // 
+            // lblValidatedTen
+            // 
+            this.lblValidatedTen.BackColor = System.Drawing.SystemColors.Control;
+            this.lblValidatedTen.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidatedTen.ForeColor = System.Drawing.Color.Red;
+            this.lblValidatedTen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValidatedTen.Location = new System.Drawing.Point(157, 53);
+            this.lblValidatedTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblValidatedTen.Name = "lblValidatedTen";
+            this.lblValidatedTen.Size = new System.Drawing.Size(297, 15);
+            this.lblValidatedTen.TabIndex = 29;
+            this.lblValidatedTen.Text = "*Định dạng tên không hợp lệ, Vui lòng nhập lại!";
+            this.lblValidatedTen.Visible = false;
+            // 
             // lbChinhSach
             // 
             this.lbChinhSach.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -328,6 +398,7 @@
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.Size = new System.Drawing.Size(378, 24);
             this.txtCCCD.TabIndex = 15;
+            this.txtCCCD.TextChanged += new System.EventHandler(this.txtCCCD_TextChanged);
             // 
             // label6
             // 
@@ -348,6 +419,7 @@
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(378, 24);
             this.txtDienThoai.TabIndex = 13;
+            this.txtDienThoai.TextChanged += new System.EventHandler(this.txtDienThoai_TextChanged);
             // 
             // label5
             // 
@@ -426,6 +498,7 @@
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(378, 24);
             this.txtHoTen.TabIndex = 8;
+            this.txtHoTen.TextChanged += new System.EventHandler(this.txtHoTen_TextChanged);
             // 
             // dtpNgaySinh
             // 
@@ -436,6 +509,7 @@
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(378, 24);
             this.dtpNgaySinh.TabIndex = 5;
+            this.dtpNgaySinh.ValueChanged += new System.EventHandler(this.dtpNgaySinh_ValueChanged);
             // 
             // label3
             // 
@@ -498,76 +572,6 @@
             this.button1.Text = "   Lưu";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // lblValidatedTen
-            // 
-            this.lblValidatedTen.BackColor = System.Drawing.SystemColors.Control;
-            this.lblValidatedTen.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidatedTen.ForeColor = System.Drawing.Color.Red;
-            this.lblValidatedTen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblValidatedTen.Location = new System.Drawing.Point(157, 53);
-            this.lblValidatedTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValidatedTen.Name = "lblValidatedTen";
-            this.lblValidatedTen.Size = new System.Drawing.Size(297, 15);
-            this.lblValidatedTen.TabIndex = 29;
-            this.lblValidatedTen.Text = "*Định dạng tên không hợp lệ, Vui lòng nhập lại!";
-            this.lblValidatedTen.Visible = false;
-            // 
-            // lblValidatedNgaySinh
-            // 
-            this.lblValidatedNgaySinh.BackColor = System.Drawing.SystemColors.Control;
-            this.lblValidatedNgaySinh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidatedNgaySinh.ForeColor = System.Drawing.Color.Red;
-            this.lblValidatedNgaySinh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblValidatedNgaySinh.Location = new System.Drawing.Point(160, 104);
-            this.lblValidatedNgaySinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValidatedNgaySinh.Name = "lblValidatedNgaySinh";
-            this.lblValidatedNgaySinh.Size = new System.Drawing.Size(332, 15);
-            this.lblValidatedNgaySinh.TabIndex = 33;
-            this.lblValidatedNgaySinh.Text = "*Ngày sinh không lớn hơn hiện tại, Vui lòng nhập lại!";
-            this.lblValidatedNgaySinh.Visible = false;
-            // 
-            // lblValidatedDiaChi
-            // 
-            this.lblValidatedDiaChi.BackColor = System.Drawing.SystemColors.Control;
-            this.lblValidatedDiaChi.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidatedDiaChi.ForeColor = System.Drawing.Color.Red;
-            this.lblValidatedDiaChi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblValidatedDiaChi.Location = new System.Drawing.Point(160, 223);
-            this.lblValidatedDiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValidatedDiaChi.Name = "lblValidatedDiaChi";
-            this.lblValidatedDiaChi.Size = new System.Drawing.Size(320, 15);
-            this.lblValidatedDiaChi.TabIndex = 34;
-            this.lblValidatedDiaChi.Text = "*Định dạng địa chỉ không hợp lệ, Vui lòng nhập lại!";
-            this.lblValidatedDiaChi.Visible = false;
-            // 
-            // lblValidatedDienThoai
-            // 
-            this.lblValidatedDienThoai.BackColor = System.Drawing.SystemColors.Control;
-            this.lblValidatedDienThoai.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidatedDienThoai.ForeColor = System.Drawing.Color.Red;
-            this.lblValidatedDienThoai.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblValidatedDienThoai.Location = new System.Drawing.Point(160, 262);
-            this.lblValidatedDienThoai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValidatedDienThoai.Name = "lblValidatedDienThoai";
-            this.lblValidatedDienThoai.Size = new System.Drawing.Size(332, 15);
-            this.lblValidatedDienThoai.TabIndex = 35;
-            this.lblValidatedDienThoai.Text = "*Định dạng điện thoại không hợp lệ, Vui lòng nhập lại!";
-            this.lblValidatedDienThoai.Visible = false;
-            // 
-            // lblValidatedCCCD
-            // 
-            this.lblValidatedCCCD.BackColor = System.Drawing.SystemColors.Control;
-            this.lblValidatedCCCD.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidatedCCCD.ForeColor = System.Drawing.Color.Red;
-            this.lblValidatedCCCD.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblValidatedCCCD.Location = new System.Drawing.Point(160, 343);
-            this.lblValidatedCCCD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValidatedCCCD.Name = "lblValidatedCCCD";
-            this.lblValidatedCCCD.Size = new System.Drawing.Size(320, 15);
-            this.lblValidatedCCCD.TabIndex = 36;
-            this.lblValidatedCCCD.Text = "*Định dạng CCCD không hợp lệ, Vui lòng nhập lại!";
-            this.lblValidatedCCCD.Visible = false;
             // 
             // frmThemNhanVien
             // 

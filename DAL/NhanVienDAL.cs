@@ -57,6 +57,7 @@ namespace DAL
                 Anh1 = null,
                 MaChinhSach = i["MaChinhSach"].ToString(),
                 MaChucVu = i["MaChucVu"].ToString(),
+                TrangThai =i["TrangThai"].ToString(),
             };
         }
         public DataTable GetNVByMaChucVu(string maNhanVien, string maChucVu)
@@ -90,16 +91,10 @@ namespace DAL
             };
             DBHelper.Instance.ExcuteNonQuery(query, parameter);
         }
-        public static void XoaNhanVien(string maNhanVien)
+        public static void CapNhatTrangThaiNV(string maNhanVien, string tt)
         {
-            SqlCommand command = new SqlCommand("XoaNhanVien");
-            command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.Add("@MaNhanVien", SqlDbType.VarChar, 6);
-            command.Parameters["@MaNhanVien"].Value = maNhanVien;
-            command.ExecuteNonQuery();
-            //string query = "Delete from NHAN_VIEN where MaNhanVien = '" + maNhanVien + "' and MaChucVu = '" + maChucVu +
-            //    "' and MaChinhSach = '" + maChinhSach + "'";
-            //DBHelper.Instance.ExcuteQuery(query);
+            string query = string.Format("Update NHAN_VIEN set TrangThai ='{0}' where MaNhanVien = '{1}' ", tt, maNhanVien);
+            DBHelper.Instance.ExcuteNonQuery(query);
         }
         public object KiemTraTenTK(NhanVienDTO nhanVien)
         {

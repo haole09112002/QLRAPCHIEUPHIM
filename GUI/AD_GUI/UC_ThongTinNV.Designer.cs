@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.cbbTimKiem = new System.Windows.Forms.ComboBox();
             this.btnXemCT = new System.Windows.Forms.Button();
             this.btnSapXep = new System.Windows.Forms.Button();
@@ -38,6 +39,7 @@
             this.dgvDSNhanVien = new System.Windows.Forms.DataGridView();
             this.cbbSapXep = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.cbbTrangThai = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhanVien)).BeginInit();
@@ -46,6 +48,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbbTrangThai);
+            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.cbbTimKiem);
             this.panel1.Controls.Add(this.btnXemCT);
             this.panel1.Controls.Add(this.btnSapXep);
@@ -59,6 +63,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(721, 451);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.LightCoral;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Image = global::GUI.Properties.Resources.Close;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(284, 398);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(118, 29);
+            this.btnDelete.TabIndex = 42;
+            this.btnDelete.Text = "XÓA";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // cbbTimKiem
             // 
@@ -78,7 +98,7 @@
             this.btnXemCT.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemCT.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnXemCT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXemCT.Location = new System.Drawing.Point(157, 398);
+            this.btnXemCT.Location = new System.Drawing.Point(82, 399);
             this.btnXemCT.Name = "btnXemCT";
             this.btnXemCT.Size = new System.Drawing.Size(111, 29);
             this.btnXemCT.TabIndex = 39;
@@ -109,7 +129,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.btnThem.Location = new System.Drawing.Point(411, 398);
+            this.btnThem.Location = new System.Drawing.Point(509, 397);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(88, 29);
@@ -182,6 +202,15 @@
             this.txtTimKiem.Size = new System.Drawing.Size(171, 24);
             this.txtTimKiem.TabIndex = 33;
             // 
+            // cbbTrangThai
+            // 
+            this.cbbTrangThai.FormattingEnabled = true;
+            this.cbbTrangThai.Location = new System.Drawing.Point(157, 41);
+            this.cbbTrangThai.Name = "cbbTrangThai";
+            this.cbbTrangThai.Size = new System.Drawing.Size(142, 21);
+            this.cbbTrangThai.TabIndex = 43;
+            this.cbbTrangThai.SelectedIndexChanged += new System.EventHandler(this.cbbTrangThai_SelectedIndexChanged);
+            // 
             // UC_ThongTinNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,5 +239,7 @@
         private System.Windows.Forms.ComboBox cbbSapXep;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.ComboBox cbbTimKiem;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.ComboBox cbbTrangThai;
     }
 }
