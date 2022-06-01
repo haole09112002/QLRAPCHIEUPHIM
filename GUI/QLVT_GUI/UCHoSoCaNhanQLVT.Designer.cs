@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnThongTinCaNhan = new System.Windows.Forms.Panel();
-            this.pBAnhPhim = new System.Windows.Forms.PictureBox();
+            this.pbAnhNhanVien = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpNhanVien = new System.Windows.Forms.DateTimePicker();
             this.dgvListCaLamViec = new System.Windows.Forms.DataGridView();
@@ -66,7 +66,7 @@
             this.lblTenTaiKhoan = new System.Windows.Forms.Label();
             this.btnDoiAnh = new System.Windows.Forms.Button();
             this.pnThongTinCaNhan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnhNhanVien)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCaLamViec)).BeginInit();
             this.grpThongTinCaNhan.SuspendLayout();
@@ -574,7 +574,7 @@
             this.Size = new System.Drawing.Size(1352, 766);
             this.Leave += new System.EventHandler(this.UCHoSoCaNhanQLVT_Leave);
             this.pnThongTinCaNhan.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pBAnhPhim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnhNhanVien)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCaLamViec)).EndInit();
             this.grpThongTinCaNhan.ResumeLayout(false);
