@@ -83,7 +83,7 @@
             this.btnSapXep.Image = global::GUI.Properties.Resources.Sort;
             this.btnSapXep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSapXep.Location = new System.Drawing.Point(896, 75);
-            this.btnSapXep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSapXep.Margin = new System.Windows.Forms.Padding(4);
             this.btnSapXep.Name = "btnSapXep";
             this.btnSapXep.Size = new System.Drawing.Size(123, 38);
             this.btnSapXep.TabIndex = 34;
@@ -116,7 +116,7 @@
             this.btnTimKiem.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimKiem.Location = new System.Drawing.Point(16, 75);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(123, 36);
             this.btnTimKiem.TabIndex = 32;
@@ -158,6 +158,7 @@
             this.dGVDanhSachLichChieuChinhThuc.Location = new System.Drawing.Point(16, 130);
             this.dGVDanhSachLichChieuChinhThuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDanhSachLichChieuChinhThuc.Name = "dGVDanhSachLichChieuChinhThuc";
+            this.dGVDanhSachLichChieuChinhThuc.ReadOnly = true;
             this.dGVDanhSachLichChieuChinhThuc.RowHeadersWidth = 62;
             this.dGVDanhSachLichChieuChinhThuc.RowTemplate.Height = 28;
             this.dGVDanhSachLichChieuChinhThuc.Size = new System.Drawing.Size(1275, 591);

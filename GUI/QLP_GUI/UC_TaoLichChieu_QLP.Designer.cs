@@ -158,7 +158,7 @@
             this.btnTimKiem.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimKiem.Location = new System.Drawing.Point(1175, 544);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(123, 36);
             this.btnTimKiem.TabIndex = 53;
@@ -395,6 +395,7 @@
             this.dGVDanhSachPhim.Location = new System.Drawing.Point(16, 25);
             this.dGVDanhSachPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDanhSachPhim.Name = "dGVDanhSachPhim";
+            this.dGVDanhSachPhim.ReadOnly = true;
             this.dGVDanhSachPhim.RowHeadersWidth = 62;
             this.dGVDanhSachPhim.RowTemplate.Height = 28;
             this.dGVDanhSachPhim.Size = new System.Drawing.Size(415, 417);
@@ -423,6 +424,7 @@
             this.dGVDanhSachPC.Location = new System.Drawing.Point(20, 24);
             this.dGVDanhSachPC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDanhSachPC.Name = "dGVDanhSachPC";
+            this.dGVDanhSachPC.ReadOnly = true;
             this.dGVDanhSachPC.RowHeadersWidth = 62;
             this.dGVDanhSachPC.RowTemplate.Height = 28;
             this.dGVDanhSachPC.Size = new System.Drawing.Size(334, 415);
@@ -451,6 +453,7 @@
             this.dGVKhungGioChieu.Location = new System.Drawing.Point(14, 24);
             this.dGVKhungGioChieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVKhungGioChieu.Name = "dGVKhungGioChieu";
+            this.dGVKhungGioChieu.ReadOnly = true;
             this.dGVKhungGioChieu.RowHeadersWidth = 62;
             this.dGVKhungGioChieu.RowTemplate.Height = 28;
             this.dGVKhungGioChieu.Size = new System.Drawing.Size(407, 405);

@@ -73,7 +73,6 @@ namespace GUI.QLP_GUI
 
         private void btnSapXep_Click(object sender, EventArgs e)
         {
-            dtDanhSachLichChieuDuKien.Rows.Clear();
             string SapXep = "";
             string TimKiem = txtTimKiem.Text;
             string LoaiTimKiem = "Tên Phim";
@@ -86,6 +85,7 @@ namespace GUI.QLP_GUI
                 MessageBox.Show("Chưa chọn loại sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            dtDanhSachLichChieuDuKien.Rows.Clear();
             if (cBTimKiem.SelectedIndex >= 0)
             {
                 LoaiTimKiem = cBTimKiem.SelectedItem.ToString();

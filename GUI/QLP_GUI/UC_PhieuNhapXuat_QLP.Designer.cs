@@ -109,6 +109,7 @@
             this.dGVChiTietPhieuNhapXuat.Location = new System.Drawing.Point(653, 186);
             this.dGVChiTietPhieuNhapXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVChiTietPhieuNhapXuat.Name = "dGVChiTietPhieuNhapXuat";
+            this.dGVChiTietPhieuNhapXuat.ReadOnly = true;
             this.dGVChiTietPhieuNhapXuat.RowHeadersWidth = 62;
             this.dGVChiTietPhieuNhapXuat.RowTemplate.Height = 28;
             this.dGVChiTietPhieuNhapXuat.Size = new System.Drawing.Size(648, 545);
@@ -257,6 +258,7 @@
             this.dGVDanhSachPhieuNhapXuat.Location = new System.Drawing.Point(32, 186);
             this.dGVDanhSachPhieuNhapXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDanhSachPhieuNhapXuat.Name = "dGVDanhSachPhieuNhapXuat";
+            this.dGVDanhSachPhieuNhapXuat.ReadOnly = true;
             this.dGVDanhSachPhieuNhapXuat.RowHeadersWidth = 62;
             this.dGVDanhSachPhieuNhapXuat.RowTemplate.Height = 28;
             this.dGVDanhSachPhieuNhapXuat.Size = new System.Drawing.Size(602, 545);

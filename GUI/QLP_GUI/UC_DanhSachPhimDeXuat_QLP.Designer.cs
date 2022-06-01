@@ -101,6 +101,7 @@
             this.dGVDanhSachPhieuDeXuat.Location = new System.Drawing.Point(20, 21);
             this.dGVDanhSachPhieuDeXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDanhSachPhieuDeXuat.Name = "dGVDanhSachPhieuDeXuat";
+            this.dGVDanhSachPhieuDeXuat.ReadOnly = true;
             this.dGVDanhSachPhieuDeXuat.RowHeadersWidth = 62;
             this.dGVDanhSachPhieuDeXuat.RowTemplate.Height = 28;
             this.dGVDanhSachPhieuDeXuat.Size = new System.Drawing.Size(544, 568);
@@ -129,6 +130,7 @@
             this.dGVChiTietPhieuDeXuat.Location = new System.Drawing.Point(13, 24);
             this.dGVChiTietPhieuDeXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVChiTietPhieuDeXuat.Name = "dGVChiTietPhieuDeXuat";
+            this.dGVChiTietPhieuDeXuat.ReadOnly = true;
             this.dGVChiTietPhieuDeXuat.RowHeadersWidth = 62;
             this.dGVChiTietPhieuDeXuat.RowTemplate.Height = 28;
             this.dGVChiTietPhieuDeXuat.Size = new System.Drawing.Size(657, 553);
@@ -159,7 +161,7 @@
             this.btnSapXep.Image = global::GUI.Properties.Resources.Sort;
             this.btnSapXep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSapXep.Location = new System.Drawing.Point(897, 44);
-            this.btnSapXep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSapXep.Margin = new System.Windows.Forms.Padding(4);
             this.btnSapXep.Name = "btnSapXep";
             this.btnSapXep.Size = new System.Drawing.Size(123, 38);
             this.btnSapXep.TabIndex = 47;
@@ -191,7 +193,7 @@
             this.btnTimKiem.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimKiem.Location = new System.Drawing.Point(37, 43);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(123, 36);
             this.btnTimKiem.TabIndex = 45;

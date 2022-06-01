@@ -74,15 +74,16 @@ namespace GUI.QLP_GUI
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             string TimKiem = txtTimKiem.Text, LoaiTimKiem = "";
-            if (cBTimKiem.SelectedIndex >= 0)
-            {
-                LoaiTimKiem = cBTimKiem.SelectedItem.ToString();
-            }
             List<string> MaDeXuat = new List<string>();
 
             if (cBTimKiem.SelectedIndex >= 0)
             {
                 LoaiTimKiem = cBTimKiem.SelectedItem.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn loại tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             foreach (string i in ChiTietDeXuatPhimBLL.Instance.GetListMaDeXuat())
             {
