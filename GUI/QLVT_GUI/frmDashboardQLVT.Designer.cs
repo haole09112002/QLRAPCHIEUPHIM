@@ -344,7 +344,7 @@
             this.pnMenu.Location = new System.Drawing.Point(221, 63);
             this.pnMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(1352, 30);
+            this.pnMenu.Size = new System.Drawing.Size(1352, 24);
             this.pnMenu.TabIndex = 3;
             // 
             // pnMenuContent

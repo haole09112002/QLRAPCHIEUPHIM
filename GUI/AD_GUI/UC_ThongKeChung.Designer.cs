@@ -146,7 +146,7 @@
             // lbDocTienThanhChu
             // 
             this.lbDocTienThanhChu.AutoSize = true;
-            this.lbDocTienThanhChu.Location = new System.Drawing.Point(224, 47);
+            this.lbDocTienThanhChu.Location = new System.Drawing.Point(132, 47);
             this.lbDocTienThanhChu.Name = "lbDocTienThanhChu";
             this.lbDocTienThanhChu.Size = new System.Drawing.Size(0, 24);
             this.lbDocTienThanhChu.TabIndex = 11;

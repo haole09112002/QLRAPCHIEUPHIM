@@ -333,8 +333,6 @@ insert into LOAI_KHO(TenLoaiKho) values (N'Thức ăn nhanh');
 insert into KHO(MaLoaiKho,TenKho) values ('LK001',N'Kho số 1');
 insert into KHO(MaLoaiKho,TenKho) values ('LK002',N'Kho số 2');
 insert into KHO(MaLoaiKho,TenKho) values ('LK003',N'Kho số 3');
-insert into KHO(MaLoaiKho,TenKho) values ('LK002',N'Kho số 4');
-insert into KHO(MaLoaiKho,TenKho) values ('LK003',N'Kho số 5');
 ----- Đã xong
 -----22. Chi tiết kho phim
 insert into CHI_TIET_KHO_PHIM(MaKho,MaPhim,DonViTinh,SoLuongSP) values ('K0001','P00001',N'Đĩa','10');
