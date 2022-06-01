@@ -43,22 +43,45 @@ namespace DAL
         }
         public NhanVienDTO GetNhanVienByDataRow(DataRow i)
         {
-            return new NhanVienDTO()
+            if (i["Anh"].ToString() == "")
             {
-                MaNhanVien = i["MaNhanVien"].ToString(),
-                TenNhanVien = i["TenNhanVien"].ToString(),
-                NgaySinh = Convert.ToDateTime(i["NgaySinh"].ToString()),
-                GioiTinh = Convert.ToBoolean(i["GioiTinh"].ToString()),
-                DiaChi = i["DiaChi"].ToString(),
-                SoDienThoai = i["SoDienThoai"].ToString(),
-                CCCD1 = i["CCCD"].ToString(),
-                TenTaiKhoan = i["TenTaiKhoan"].ToString(),
-                MatKhau = i["MatKhau"].ToString(),
-                Anh1 = null,
-                MaChinhSach = i["MaChinhSach"].ToString(),
-                MaChucVu = i["MaChucVu"].ToString(),
-                TrangThai =i["TrangThai"].ToString(),
-            };
+                return new NhanVienDTO()
+                {
+                    MaNhanVien = i["MaNhanVien"].ToString(),
+                    TenNhanVien = i["TenNhanVien"].ToString(),
+                    NgaySinh = Convert.ToDateTime(i["NgaySinh"].ToString()),
+                    GioiTinh = Convert.ToBoolean(i["GioiTinh"].ToString()),
+                    DiaChi = i["DiaChi"].ToString(),
+                    SoDienThoai = i["SoDienThoai"].ToString(),
+                    CCCD1 = i["CCCD"].ToString(),
+                    TenTaiKhoan = i["TenTaiKhoan"].ToString(),
+                    MatKhau = i["MatKhau"].ToString(),
+                    Anh1 = null,
+                    MaChinhSach = i["MaChinhSach"].ToString(),
+                    MaChucVu = i["MaChucVu"].ToString(),
+                    TrangThai = i["TrangThai"].ToString(),
+                };
+            }
+            else
+            {
+                return new NhanVienDTO()
+                {
+                    MaNhanVien = i["MaNhanVien"].ToString(),
+                    TenNhanVien = i["TenNhanVien"].ToString(),
+                    NgaySinh = Convert.ToDateTime(i["NgaySinh"].ToString()),
+                    GioiTinh = Convert.ToBoolean(i["GioiTinh"].ToString()),
+                    DiaChi = i["DiaChi"].ToString(),
+                    SoDienThoai = i["SoDienThoai"].ToString(),
+                    CCCD1 = i["CCCD"].ToString(),
+                    TenTaiKhoan = i["TenTaiKhoan"].ToString(),
+                    MatKhau = i["MatKhau"].ToString(),
+                    Anh1 = (byte[])(i["Anh"]),
+                    MaChinhSach = i["MaChinhSach"].ToString(),
+                    MaChucVu = i["MaChucVu"].ToString(),
+                    TrangThai = i["TrangThai"].ToString(),
+
+                };
+            }
         }
         public DataTable GetNVByMaChucVu(string maNhanVien, string maChucVu)
         {
@@ -83,10 +106,10 @@ namespace DAL
         }
         public void CapNhatNhanVien(NhanVienDTO nhanVien)
         {
-            string query = "EXEC CapNhatNhanVien @MaNhanVien , @TenNhanVien , @NgaySinh , @GioiTinh , @DiaChi , @SoDienThoai , @CCCD , @TenTaiKhoan , @MatKhau , @MaChinhSach , @MaChucVu";
+            string query = "EXEC CapNhatNhanVien @MaNhanVien , @TenNhanVien , @NgaySinh , @GioiTinh , @DiaChi , @SoDienThoai , @CCCD , @TenTaiKhoan , @MatKhau , @Anh , @MaChinhSach , @MaChucVu";
             object[] parameter = new object[]
             {
-                nhanVien.MaNhanVien,nhanVien.TenNhanVien, nhanVien.NgaySinh, nhanVien.GioiTinh , nhanVien.DiaChi , nhanVien.SoDienThoai, nhanVien.CCCD1, nhanVien.TenTaiKhoan,nhanVien.MatKhau ,nhanVien.MaChinhSach,
+                nhanVien.MaNhanVien,nhanVien.TenNhanVien, nhanVien.NgaySinh, nhanVien.GioiTinh , nhanVien.DiaChi , nhanVien.SoDienThoai, nhanVien.CCCD1, nhanVien.TenTaiKhoan,nhanVien.MatKhau ,nhanVien.Anh1 ,nhanVien.MaChinhSach,
                 nhanVien.MaChucVu
             };
             DBHelper.Instance.ExcuteNonQuery(query, parameter);

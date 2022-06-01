@@ -95,7 +95,7 @@
             // dGVDanhSachPhieuDeXuat
             // 
             this.dGVDanhSachPhieuDeXuat.AllowUserToAddRows = false;
-            this.dGVDanhSachPhieuDeXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVDanhSachPhieuDeXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVDanhSachPhieuDeXuat.BackgroundColor = System.Drawing.Color.White;
             this.dGVDanhSachPhieuDeXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVDanhSachPhieuDeXuat.Location = new System.Drawing.Point(20, 21);

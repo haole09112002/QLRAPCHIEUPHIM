@@ -41,7 +41,7 @@
             this.btnMenuListNXVatTu.Location = new System.Drawing.Point(373, 0);
             this.btnMenuListNXVatTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenuListNXVatTu.Name = "btnMenuListNXVatTu";
-            this.btnMenuListNXVatTu.Size = new System.Drawing.Size(361, 29);
+            this.btnMenuListNXVatTu.Size = new System.Drawing.Size(361, 30);
             this.btnMenuListNXVatTu.TabIndex = 7;
             this.btnMenuListNXVatTu.Text = "DANH SÁCH PHIẾU NHẬP/XUẤT VẬT TƯ";
             this.btnMenuListNXVatTu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -57,7 +57,7 @@
             this.btnMenuListNXThucAn.Location = new System.Drawing.Point(0, 0);
             this.btnMenuListNXThucAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenuListNXThucAn.Name = "btnMenuListNXThucAn";
-            this.btnMenuListNXThucAn.Size = new System.Drawing.Size(373, 29);
+            this.btnMenuListNXThucAn.Size = new System.Drawing.Size(373, 34);
             this.btnMenuListNXThucAn.TabIndex = 6;
             this.btnMenuListNXThucAn.Text = "DANH SÁCH PHIẾU NHẬP/XUẤT THỨC ĂN";
             this.btnMenuListNXThucAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -73,7 +73,7 @@
             this.Controls.Add(this.btnMenuListNXThucAn);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCMenuNhapXuatQLVT";
-            this.Size = new System.Drawing.Size(993, 29);
+            this.Size = new System.Drawing.Size(993, 30);
             this.ResumeLayout(false);
 
         }
