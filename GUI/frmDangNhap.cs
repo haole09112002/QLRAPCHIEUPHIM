@@ -29,20 +29,22 @@ namespace GUI
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu! Vui lòng kiểm tra lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (result == -1)
                 MessageBox.Show("Tài khoản chưa tồn tại! Vui lòng kiểm tra lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (result == -2)
+                MessageBox.Show("Tài khoản này đã bị khóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (result == 3)
             {
                 frmDashboard_AD frmDashboard_AD = new frmDashboard_AD(NhanVienBLL.Instance.GetNhanVienByTenTaiKhoan(txtTenTaiKhoan.Text));
-                frmDashboard_AD.Show();
+                frmDashboard_AD.ShowDialog();
             }
             if (result == 2)
             {
                 FrmDashboardQLVT frmDashboardQLVT = new FrmDashboardQLVT(NhanVienBLL.Instance.GetNhanVienByTenTaiKhoan(txtTenTaiKhoan.Text));
-                frmDashboardQLVT.Show();
+                frmDashboardQLVT.ShowDialog();
             }
             if (result == 1)
             {
                 frm_QLP frm_QLP = new frm_QLP(NhanVienBLL.Instance.GetNhanVienByTenTaiKhoan(txtTenTaiKhoan.Text));
-                frm_QLP.Show();
+                frm_QLP.ShowDialog();
             }
             if(result >0)
             {
