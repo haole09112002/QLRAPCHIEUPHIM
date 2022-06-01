@@ -123,6 +123,7 @@ namespace GUI.QLP_GUI
                         nUDSoLuong.Maximum = HopDongPhimBLL.Instance.GetChiTietTSLPhimByMaPhim(txtMaPhim.Text).TongSoLuongPhim - SoLuong;
                     }
                 }
+                btnThem.Enabled = true;
             }
             else
             {
@@ -183,6 +184,7 @@ namespace GUI.QLP_GUI
             btnLuu.Enabled = true;
             cBMaKho.Enabled = false;
             cBMaLoaiPhieu.Enabled = false;
+            btnThem.Enabled = false;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -242,7 +244,6 @@ namespace GUI.QLP_GUI
                 lbMaKho.Text = "";
                 ReLoad();
             }
-            btnThem.Enabled = true;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
