@@ -282,8 +282,8 @@ create proc CapNhatLichChieu
 	@TrangThai varchar(1)
 as
 begin
-	Update LICH_CHIEU set TrangThai = @TrangThai
-	where MaPhim = @MaPhim and MaPhongChieu = @MaPhongChieu and MaKhungGioChieu=@MaKhungGioChieu and NgayChieu=@NgayChieu 
+	Update LICH_CHIEU set	TrangThai = @TrangThai
+	where MaPhim = @MaPhim and 	MaPhongChieu = @MaPhongChieu and MaKhungGioChieu=@MaKhungGio and NgayChieu=@NgayChieu 
 end
 ---CapnhatDeXuatPhim
 go

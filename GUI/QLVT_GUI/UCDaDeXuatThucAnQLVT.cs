@@ -23,11 +23,13 @@ namespace GUI.QLVT_GUI
             InitializeComponent();
             SetDataTable();
             ReLoad();
+            btnTimKiem.Enabled = false;
+            btnSapXep.Enabled = false;
         }
         public void SetDataTable()
         {
             dtDSPhieuDeXuat.Columns.Add("Mã Đề Xuất");
-            dtDSPhieuDeXuat.Columns.Add("Mã Nhân Viên");
+            dtDSPhieuDeXuat.Columns.Add("Tên Nhân Viên");
             dtDSPhieuDeXuat.Columns.Add("Ngày Đề Xuất");
             dtCTPhieuDeXuat.Columns.Add("Tên Thức Ăn");
             dtCTPhieuDeXuat.Columns.Add("Nội Dung");
@@ -40,7 +42,7 @@ namespace GUI.QLVT_GUI
             dtDSPhieuDeXuat.Rows.Clear();
             foreach (DeXuatDTO i in DeXuatBLL.Instance.GetDeXuatByMaLoaiDeXuat(maLoaiDeXuat))
             {
-                dtDSPhieuDeXuat.Rows.Add(i.MaDeXuat, i.MaNhanVien, i.NgayDeXuat);
+                dtDSPhieuDeXuat.Rows.Add(i.MaDeXuat, NhanVienBLL.Instance.GetNhanVienByMaNhanVien(i.MaNhanVien).TenNhanVien, i.NgayDeXuat);
             }
             dgvListDeXuatThucAn.DataSource = dtDSPhieuDeXuat;
         }
@@ -87,6 +89,71 @@ namespace GUI.QLVT_GUI
                     dgvListChiTietDeXuat.DataSource = dtCTPhieuDeXuat;
                 }
             }
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string TimKiem = txtTimKiem.Text, LoaiTimKiem = "";
+            if (cBTimKiem.SelectedIndex >= 0)
+            {
+                LoaiTimKiem = cBTimKiem.SelectedItem.ToString();
+            }
+            List<string> MaDeXuat = new List<string>();
+
+            if (cBTimKiem.SelectedIndex >= 0)
+            {
+                LoaiTimKiem = cBTimKiem.SelectedItem.ToString();
+            }
+            foreach (string i in ChiTietDeXuatThucAnBLL.Instance.GetListMaDeXuat())
+            {
+                MaDeXuat.Add(i);
+            }
+            dtDSPhieuDeXuat.Rows.Clear();
+            foreach (DeXuatDTO dexuat in DeXuatBLL.Instance.GetListDeXuatNow(MaDeXuat, TimKiem, LoaiTimKiem))
+            {
+                dtDSPhieuDeXuat.Rows.Add(dexuat.MaDeXuat, NhanVienBLL.Instance.GetNhanVienByMaNhanVien(dexuat.MaNhanVien).TenNhanVien, dexuat.NgayDeXuat.ToShortDateString());
+            }
+            dgvListDeXuatThucAn.DataSource = dtDSPhieuDeXuat;
+        }
+
+        private void btnSapXep_Click(object sender, EventArgs e)
+        {
+                List<string> MaDeXuat = new List<string>();
+                string TimKiem = txtTimKiem.Text;
+                string LoaiTimKiem = "Tên Nhân Viên";
+                if (cBTimKiem.SelectedIndex >= 0)
+                {
+                    LoaiTimKiem = cBTimKiem.SelectedItem.ToString();
+                }
+                foreach (string i in ChiTietDeXuatThucAnBLL.Instance.GetListMaDeXuat())
+                {
+                    MaDeXuat.Add(i);
+                }
+                dtDSPhieuDeXuat.Rows.Clear();
+                if (cBSapXep.SelectedItem.ToString() == "Tên Nhân Viên")
+                {
+                    foreach (DeXuatDTO dexuat in DeXuatBLL.Instance.SortDeXuat(DeXuatBLL.Instance.CompareTenNhanVien, MaDeXuat, TimKiem, LoaiTimKiem))
+                    {
+                        dtDSPhieuDeXuat.Rows.Add(dexuat.MaDeXuat, NhanVienBLL.Instance.GetNhanVienByMaNhanVien(dexuat.MaNhanVien).TenNhanVien, dexuat.NgayDeXuat.ToShortDateString());
+                    }
+                }
+                if (cBSapXep.SelectedItem.ToString() == "Ngày Đề Xuất")
+                {
+                    foreach (DeXuatDTO dexuat in DeXuatBLL.Instance.SortDeXuat(DeXuatBLL.Instance.CompareNgayDeXuat, MaDeXuat, TimKiem, LoaiTimKiem))
+                    {
+                        dtDSPhieuDeXuat.Rows.Add(dexuat.MaDeXuat, NhanVienBLL.Instance.GetNhanVienByMaNhanVien(dexuat.MaNhanVien).TenNhanVien, dexuat.NgayDeXuat.ToShortDateString());
+                    }
+                }
+                dgvListDeXuatThucAn.DataSource = dtDSPhieuDeXuat;
+        }
+
+        private void cBTimKiem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnTimKiem.Enabled = true;
+        }
+
+        private void cBSapXep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnSapXep.Enabled = true;
         }
     }
 }

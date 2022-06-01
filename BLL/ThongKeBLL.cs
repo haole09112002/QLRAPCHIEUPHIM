@@ -70,9 +70,9 @@ namespace BLL
                 return NhanVienBLL.Instance.GetAllNhanVien().Count();
             }
         }
-        public List<ThongKeTienNhapPhimDTO> ThongKeTienNhapPhim(string maloaiHopDong, DateTime ngayBD, DateTime ngayKT)
+        public List<ThongKeTienNhapDTO> ThongKeTienNhapPhim(string maloaiHopDong, DateTime ngayBD, DateTime ngayKT, Label lbSoLuongHD, Label lbTongTienThanhToanHD, Label lbDocTienThanhChu)
         {
-            var result = new List<ThongKeTienNhapPhimDTO>();
+            var result = new List<ThongKeTienNhapDTO>();
 
             if (maloaiHopDong != "0")
             {
@@ -104,12 +104,16 @@ namespace BLL
                 dsHD = HopDongBLL.Instance.GetHopDongByMaLoaiHopDong("LHD003").Where(hd => hd.NgayKiKetHD >= ngayBD && hd.NgayKiKetHD <= ngayKT).Select(hd => hd);
                 result.AddRange(TinhTienThucAn(dsHD.ToList()));
             }
-
+            double tongTien = 0;
+            lbSoLuongHD.Text = result.Count().ToString();
+            result.ForEach(i => tongTien += i.TongTien);
+            lbTongTienThanhToanHD.Text = tongTien.ToString();
+            lbDocTienThanhChu.Text = Helper.Instance.NumberToTextVN((decimal)tongTien);
             return result;
         }
-        public List<ThongKeTienNhapPhimDTO> TinhTienPhim(List<HopDongDTO> dsHD)
+        public List<ThongKeTienNhapDTO> TinhTienPhim(List<HopDongDTO> dsHD)
         {
-            var result = new List<ThongKeTienNhapPhimDTO>();
+            var result = new List<ThongKeTienNhapDTO>();
             foreach (var i in dsHD)
             {
                 var hd = HopDongPhimBLL.Instance.GetListHopDongPhimByMaHopDongHao(i.MaHopDong);
@@ -118,13 +122,20 @@ namespace BLL
                 {
                     tongTien += h.SoLuong * h.GiaTien;
                 }
-                result.Add(new ThongKeTienNhapPhimDTO { MaHopDong = i.MaHopDong, TenHopDong = i.TenHopDong, TongTien = tongTien, LoaiHopDong = i.MaLoaiHopDong });
+                result.Add(new ThongKeTienNhapDTO 
+                { 
+                    MaHopDong = i.MaHopDong, 
+                    TenHopDong = i.TenHopDong, 
+                    TongTien = tongTien, 
+                    LoaiHopDong = i.MaLoaiHopDong, 
+                    TenLoaiHopDong = LoaiHopDongBLL.Instance.GetCBBLoaiHopDong().Find(p => p.Value == i.MaLoaiHopDong).Text 
+                });
             }
             return result;
         }
-        public List<ThongKeTienNhapPhimDTO> TinhTienVatTu(List<HopDongDTO> dsHD)
+        public List<ThongKeTienNhapDTO> TinhTienVatTu(List<HopDongDTO> dsHD)
         {
-            var result = new List<ThongKeTienNhapPhimDTO>();
+            var result = new List<ThongKeTienNhapDTO>();
             foreach (var i in dsHD)
             {
                 var hd = HopDongVatTuBLL.Instance.GetListHopDongVatTuByMaHopDong(i.MaHopDong);
@@ -133,13 +144,20 @@ namespace BLL
                 {
                     tongTien += h.SoLuong * h.GiaTien;
                 }
-                result.Add(new ThongKeTienNhapPhimDTO { MaHopDong = i.MaHopDong, TenHopDong = i.TenHopDong, TongTien = tongTien, LoaiHopDong = i.MaLoaiHopDong });
+                result.Add(new ThongKeTienNhapDTO
+                {
+                    MaHopDong = i.MaHopDong,
+                    TenHopDong = i.TenHopDong,
+                    TongTien = tongTien,
+                    LoaiHopDong = i.MaLoaiHopDong,
+                    TenLoaiHopDong = LoaiHopDongBLL.Instance.GetCBBLoaiHopDong().Find(p => p.Value == i.MaLoaiHopDong).Text
+                });
             }
             return result;
         }
-        public List<ThongKeTienNhapPhimDTO> TinhTienThucAn(List<HopDongDTO> dsHD)
+        public List<ThongKeTienNhapDTO> TinhTienThucAn(List<HopDongDTO> dsHD)
         {
-            var result = new List<ThongKeTienNhapPhimDTO>();
+            var result = new List<ThongKeTienNhapDTO>();
             foreach (var i in dsHD)
             {
                 var hd = HopDongThucAnBLL.Instance.GetListHopDongThucAnByMaHopDong(i.MaHopDong);
@@ -148,7 +166,14 @@ namespace BLL
                 {
                     tongTien += h.SoLuong * h.GiaTien;
                 }
-                result.Add(new ThongKeTienNhapPhimDTO { MaHopDong = i.MaHopDong, TenHopDong = i.TenHopDong, TongTien = tongTien, LoaiHopDong = i.MaLoaiHopDong });
+                result.Add(new ThongKeTienNhapDTO
+                {
+                    MaHopDong = i.MaHopDong,
+                    TenHopDong = i.TenHopDong,
+                    TongTien = tongTien,
+                    LoaiHopDong = i.MaLoaiHopDong,
+                    TenLoaiHopDong = LoaiHopDongBLL.Instance.GetCBBLoaiHopDong().Find(p => p.Value == i.MaLoaiHopDong).Text
+                });
             }
             return result;
         }

@@ -99,7 +99,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheLoaiPhimDTO.cs" />
     <Compile Include="ChiTietDeXuatThucAnViewDTO.cs" />
-    <Compile Include="ThongKeTienNhapPhimDTO.cs" />
+    <Compile Include="ThongKeTienNhapDTO.cs" />
     <Compile Include="ThucAnDTO.cs" />
     <Compile Include="ThucAnViewDTO.cs" />
     <Compile Include="TinhTrangPhongChieuDTO.cs" />

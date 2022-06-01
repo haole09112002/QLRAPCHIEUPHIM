@@ -40,7 +40,6 @@ namespace GUI.QLVT_GUI
             {
                 string maNhaCungCap = dgvListNCCVatTu.SelectedRows[0].Cells["MaNhaCungCap"].Value.ToString();
                 FrmChiTietNhaCungCap frmChiTietNhaCungCap = new FrmChiTietNhaCungCap(maNhaCungCap);
-                frmChiTietNhaCungCap.d = new FrmChiTietNhaCungCap.Mydel(ReLoadListNCCVatTu);
                 frmChiTietNhaCungCap.ShowDialog();
             }
         }

@@ -369,6 +369,36 @@
             this.pnTop.Size = new System.Drawing.Size(1352, 79);
             this.pnTop.TabIndex = 2;
             // 
+            // pbClose
+            // 
+            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbClose.Image = global::GUI.Properties.Resources.Close_24px;
+            this.pbClose.Location = new System.Drawing.Point(1292, 11);
+            this.pbClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(39, 37);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClose.TabIndex = 21;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
+            // pbMinimize
+            // 
+            this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMinimize.Image = global::GUI.Properties.Resources.subtract_24px;
+            this.pbMinimize.Location = new System.Drawing.Point(1233, 11);
+            this.pbMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbMinimize.Name = "pbMinimize";
+            this.pbMinimize.Size = new System.Drawing.Size(41, 37);
+            this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMinimize.TabIndex = 19;
+            this.pbMinimize.TabStop = false;
+            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
