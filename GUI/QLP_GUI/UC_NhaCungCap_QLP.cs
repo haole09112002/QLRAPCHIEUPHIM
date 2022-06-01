@@ -51,18 +51,18 @@ namespace GUI.QLP_GUI
             }
             else if(dGVNhaCungCapPhim.SelectedRows.Count <= 0)
             {
-                MessageBox.Show("Chưa chọn nhà cung cấp để xem chi tiết");
+                MessageBox.Show("Chưa chọn nhà cung cấp để xem chi tiết", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if(dGVNhaCungCapPhim.SelectedRows.Count > 1)
             {
-                MessageBox.Show("Chỉ được chọn 1 nhà cung cấp để xem chi tiết");
+                MessageBox.Show("Chỉ được chọn 1 nhà cung cấp để xem chi tiết", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             if (cBTimKiem.SelectedIndex < 0)
-                MessageBox.Show("Trường sắp xếp chưa được chọn");
+                MessageBox.Show("Chưa chọn loại tìm kiếm","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
                 ReLoad(txtTimKiem.Text,cBTimKiem.SelectedItem.ToString());
         }
@@ -74,9 +74,13 @@ namespace GUI.QLP_GUI
                 string dkSapXep = cBSapXep.SelectedItem.ToString(); 
                 foreach (DataGridViewRow row in dGVNhaCungCapPhim.Rows)
                 {
-                    now.Add(row.Cells["MaNhaCungCap"].Value.ToString());
+                    now.Add(row.Cells["Mã nhà cung cấp"].Value.ToString());
                 }
                 dGVNhaCungCapPhim.DataSource = NhaCungCapBLL.Instance.SortNhaCungCap(NhaCungCapBLL.Instance.GetNhaCungCapViewDGV(now), dkSapXep);
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn loại sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

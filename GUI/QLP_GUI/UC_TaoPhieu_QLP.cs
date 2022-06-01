@@ -22,6 +22,7 @@ namespace GUI.QLP_GUI
             txtTenPhim.Enabled = false;
             btnLuu.Enabled = false;
             btnChinhSua.Visible = false;
+            btnThem.Enabled = false;
         }
         public void SetCBB()
         {
@@ -226,6 +227,7 @@ namespace GUI.QLP_GUI
             }
             dtPhimDaThem.Rows.Clear();
             dGVPhimDaThem.DataSource = dtPhimDaThem;
+            btnLuu.Enabled = false;
         }
 
         private void cBMaLoaiPhieu_SelectedIndexChanged(object sender, EventArgs e)
@@ -240,6 +242,7 @@ namespace GUI.QLP_GUI
                 lbMaKho.Text = "";
                 ReLoad();
             }
+            btnThem.Enabled = true;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -281,6 +284,7 @@ namespace GUI.QLP_GUI
                     txtMaPhim.Text = "";
                     dGVDanhSachPhim.DataSource = null;
                     dGVPhimDaThem.DataSource = null;
+                    lbMaKho.Text = "";
                 }
             }
         }
@@ -302,6 +306,7 @@ namespace GUI.QLP_GUI
             btnThem.Visible = false;
             btnChinhSua.Visible = true;
             dGVPhimDaThem.Enabled = false;
+            dGVDanhSachPhim.Enabled = false;
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
@@ -317,6 +322,7 @@ namespace GUI.QLP_GUI
             btnThem.Visible = true;
             btnChinhSua.Visible = false;
             dGVPhimDaThem.Enabled = true;
+            dGVDanhSachPhim.Enabled = true;
         }
 
         private void cBMaKho_SelectedIndexChanged(object sender, EventArgs e)
@@ -326,5 +332,6 @@ namespace GUI.QLP_GUI
                 lbMaKho.Text = "";
             }
         }
+
     }
 }
