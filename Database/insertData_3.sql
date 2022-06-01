@@ -210,9 +210,9 @@ insert into CA_LAM_VIEC(TenCa,GioBatDau,GioKetThuc) values(N'Ca 4','20:00:00.000
 
 ---- Đã xong
 ------16. Chính sách ------- CS0001
-insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Khá','1','6 thang','200000');
-insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Xuất Sắc','2','2 nam','300000');
-insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Giỏi','3','1 nam','400000');
+insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Chính sách 1','2.4','2 năm','700000');
+insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Chính sách 2','2.2','1 năm','500000');
+insert into CHINH_SACH(TenChinhSach,HeSoLuong,BHXH,TienThuong) values ('Chính sách 3','2','6 tháng','300000');
 ----- Đã xong
 -----17.Chức vụ ------ CV0001
 insert into CHUC_VU(TenChucVu) values (N'Quản lý phim');

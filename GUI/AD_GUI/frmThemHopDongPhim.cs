@@ -14,7 +14,7 @@ namespace GUI.AD_GUI
 {
     public partial class frmThemHopDongPhim : Form
     {
-        public delegate void Mydel(string maLoaiHD, string txt);
+        public delegate void Mydel(string maLoaiHD, string txt, string tc = "");
         public Mydel d { get; set; }
         private string maHopDong;
         private string maDeXuat;

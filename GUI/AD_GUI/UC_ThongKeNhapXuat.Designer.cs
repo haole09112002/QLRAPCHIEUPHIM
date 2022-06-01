@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbErrNgay = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbSLPhieuXuat = new System.Windows.Forms.Label();
+            this.lbSLPhieuNhap = new System.Windows.Forms.Label();
             this.chartPhieu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,18 +55,13 @@
             this.label19 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
+            this.lbSLVTXuat = new System.Windows.Forms.Label();
             this.lbSLVatTuNhap = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.dtpNgayKT = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayBD = new System.Windows.Forms.DateTimePicker();
-            this.lbSLVTXuat = new System.Windows.Forms.Label();
-            this.lbSLPhieuNhap = new System.Windows.Forms.Label();
-            this.lbSLPhieuXuat = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbErrNgay = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPhieu)).BeginInit();
@@ -103,44 +103,93 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thống kê nhập xuất";
             // 
+            // lbErrNgay
+            // 
+            this.lbErrNgay.AutoSize = true;
+            this.lbErrNgay.ForeColor = System.Drawing.Color.Red;
+            this.lbErrNgay.Location = new System.Drawing.Point(249, 71);
+            this.lbErrNgay.Name = "lbErrNgay";
+            this.lbErrNgay.Size = new System.Drawing.Size(0, 24);
+            this.lbErrNgay.TabIndex = 36;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(92, 179);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(250, 35);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Số lượng phiếu xuất";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(92, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(257, 35);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Số lượng phiếu nhập";
+            // 
+            // lbSLPhieuXuat
+            // 
+            this.lbSLPhieuXuat.AutoSize = true;
+            this.lbSLPhieuXuat.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSLPhieuXuat.Location = new System.Drawing.Point(356, 179);
+            this.lbSLPhieuXuat.Name = "lbSLPhieuXuat";
+            this.lbSLPhieuXuat.Size = new System.Drawing.Size(69, 35);
+            this.lbSLPhieuXuat.TabIndex = 33;
+            this.lbSLPhieuXuat.Text = "slp n";
+            // 
+            // lbSLPhieuNhap
+            // 
+            this.lbSLPhieuNhap.AutoSize = true;
+            this.lbSLPhieuNhap.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSLPhieuNhap.Location = new System.Drawing.Point(356, 94);
+            this.lbSLPhieuNhap.Name = "lbSLPhieuNhap";
+            this.lbSLPhieuNhap.Size = new System.Drawing.Size(69, 35);
+            this.lbSLPhieuNhap.TabIndex = 7;
+            this.lbSLPhieuNhap.Text = "slp n";
+            // 
             // chartPhieu
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartPhieu.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartPhieu.Legends.Add(legend3);
+            chartArea2.Name = "ChartArea1";
+            this.chartPhieu.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartPhieu.Legends.Add(legend2);
             this.chartPhieu.Location = new System.Drawing.Point(590, 137);
             this.chartPhieu.Name = "chartPhieu";
             this.chartPhieu.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series7.Legend = "Legend1";
-            series7.LegendText = "Phiếu Phim";
-            series7.Name = "SeriesPhieuPhim";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series8.Legend = "Legend1";
-            series8.LegendText = "Phiếu Vật Tư";
-            series8.Name = "SeriesVatTu";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series9.Legend = "Legend1";
-            series9.LegendText = "Thức ăn Nhanh";
-            series9.Name = "SeriesThucAn";
-            this.chartPhieu.Series.Add(series7);
-            this.chartPhieu.Series.Add(series8);
-            this.chartPhieu.Series.Add(series9);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series4.Legend = "Legend1";
+            series4.LegendText = "Phiếu Phim";
+            series4.Name = "SeriesPhieuPhim";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series5.Legend = "Legend1";
+            series5.LegendText = "Phiếu Vật Tư";
+            series5.Name = "SeriesVatTu";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series6.Legend = "Legend1";
+            series6.LegendText = "Thức ăn Nhanh";
+            series6.Name = "SeriesThucAn";
+            this.chartPhieu.Series.Add(series4);
+            this.chartPhieu.Series.Add(series5);
+            this.chartPhieu.Series.Add(series6);
             this.chartPhieu.Size = new System.Drawing.Size(651, 506);
             this.chartPhieu.TabIndex = 18;
             this.chartPhieu.Text = "chart1";
-            title3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title3.Name = "Title1";
-            title3.Text = "Biểu đồ phiếu nhập xuất";
-            this.chartPhieu.Titles.Add(title3);
+            title2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            title2.Text = "Biểu đồ phiếu nhập xuất";
+            this.chartPhieu.Titles.Add(title2);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.lbSLTAXuat);
             this.panel2.Controls.Add(this.lbSLThucAnNhap);
@@ -155,16 +204,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 48);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(227, 28);
+            this.label5.Size = new System.Drawing.Size(247, 28);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Số lượng đồ ăn xuất ra";
+            this.label5.Text = "Số lượng thức ăn xuất ra";
             // 
             // lbSLTAXuat
             // 
             this.lbSLTAXuat.AutoSize = true;
             this.lbSLTAXuat.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSLTAXuat.ForeColor = System.Drawing.Color.White;
             this.lbSLTAXuat.Location = new System.Drawing.Point(283, 48);
             this.lbSLTAXuat.Name = "lbSLTAXuat";
             this.lbSLTAXuat.Size = new System.Drawing.Size(99, 28);
@@ -175,6 +226,7 @@
             // 
             this.lbSLThucAnNhap.AutoSize = true;
             this.lbSLThucAnNhap.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSLThucAnNhap.ForeColor = System.Drawing.Color.White;
             this.lbSLThucAnNhap.Location = new System.Drawing.Point(283, 10);
             this.lbSLThucAnNhap.Name = "lbSLThucAnNhap";
             this.lbSLThucAnNhap.Size = new System.Drawing.Size(99, 28);
@@ -185,15 +237,16 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(3, 10);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(248, 28);
+            this.label14.Size = new System.Drawing.Size(268, 28);
             this.label14.TabIndex = 0;
-            this.label14.Text = "Số lượng đồ ăn nhập vào";
+            this.label14.Text = "Số lượng thức ăn nhập vào";
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel5.BackColor = System.Drawing.Color.Orange;
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.lbSLPXuat);
             this.panel5.Controls.Add(this.lbSLPNhap);
@@ -256,7 +309,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Cyan;
+            this.panel4.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.lbSLVTXuat);
             this.panel4.Controls.Add(this.lbSLVatTuNhap);
@@ -276,6 +329,16 @@
             this.label15.Size = new System.Drawing.Size(232, 28);
             this.label15.TabIndex = 6;
             this.label15.Text = "Số lượng vật tư xuất ra";
+            // 
+            // lbSLVTXuat
+            // 
+            this.lbSLVTXuat.AutoSize = true;
+            this.lbSLVTXuat.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSLVTXuat.Location = new System.Drawing.Point(283, 48);
+            this.lbSLVTXuat.Name = "lbSLVTXuat";
+            this.lbSLVTXuat.Size = new System.Drawing.Size(99, 28);
+            this.lbSLVTXuat.TabIndex = 4;
+            this.lbSLVTXuat.Text = "Số lượng";
             // 
             // lbSLVatTuNhap
             // 
@@ -344,65 +407,6 @@
             this.dtpNgayBD.Size = new System.Drawing.Size(250, 32);
             this.dtpNgayBD.TabIndex = 29;
             this.dtpNgayBD.ValueChanged += new System.EventHandler(this.dtpNgayBD_ValueChanged);
-            // 
-            // lbSLVTXuat
-            // 
-            this.lbSLVTXuat.AutoSize = true;
-            this.lbSLVTXuat.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSLVTXuat.Location = new System.Drawing.Point(283, 48);
-            this.lbSLVTXuat.Name = "lbSLVTXuat";
-            this.lbSLVTXuat.Size = new System.Drawing.Size(99, 28);
-            this.lbSLVTXuat.TabIndex = 4;
-            this.lbSLVTXuat.Text = "Số lượng";
-            // 
-            // lbSLPhieuNhap
-            // 
-            this.lbSLPhieuNhap.AutoSize = true;
-            this.lbSLPhieuNhap.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSLPhieuNhap.Location = new System.Drawing.Point(356, 94);
-            this.lbSLPhieuNhap.Name = "lbSLPhieuNhap";
-            this.lbSLPhieuNhap.Size = new System.Drawing.Size(69, 35);
-            this.lbSLPhieuNhap.TabIndex = 7;
-            this.lbSLPhieuNhap.Text = "slp n";
-            // 
-            // lbSLPhieuXuat
-            // 
-            this.lbSLPhieuXuat.AutoSize = true;
-            this.lbSLPhieuXuat.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSLPhieuXuat.Location = new System.Drawing.Point(356, 179);
-            this.lbSLPhieuXuat.Name = "lbSLPhieuXuat";
-            this.lbSLPhieuXuat.Size = new System.Drawing.Size(69, 35);
-            this.lbSLPhieuXuat.TabIndex = 33;
-            this.lbSLPhieuXuat.Text = "slp n";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 35);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Số lượng phiếu nhập";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(92, 179);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 35);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Số lượng phiếu xuất";
-            // 
-            // lbErrNgay
-            // 
-            this.lbErrNgay.AutoSize = true;
-            this.lbErrNgay.ForeColor = System.Drawing.Color.Red;
-            this.lbErrNgay.Location = new System.Drawing.Point(249, 71);
-            this.lbErrNgay.Name = "lbErrNgay";
-            this.lbErrNgay.Size = new System.Drawing.Size(0, 24);
-            this.lbErrNgay.TabIndex = 36;
             // 
             // UC_ThongKeNhapXuat
             // 

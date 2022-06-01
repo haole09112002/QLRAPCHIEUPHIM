@@ -20,7 +20,7 @@ go
 Create table NHA_CUNG_CAP(
 	MaNhaCungCap varchar(6) primary key not null constraint IDNCC default dbo.AUTO_IDNCC(),
 	TenNhaCungCap nvarchar(40),
-	MaSoThue varchar(10),
+	MaSoThue varchar(15),
 	DiaChi nvarchar(50),
 	Email varchar(50),
 	SoDienThoai varchar(15),
