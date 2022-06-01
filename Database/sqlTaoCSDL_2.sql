@@ -149,7 +149,8 @@ Create table NHAN_VIEN(
 	MatKhau varchar(32),
 	Anh image,
 	MaChinhSach varchar(6) foreign key(MaChinhSach) references CHINH_SACH,
-	MaChucVu varchar(6) foreign key(MaChucVu) references CHUC_VU
+	MaChucVu varchar(6) foreign key(MaChucVu) references CHUC_VU,
+	TrangThai varchar(1)---0(tat),1(bat)
 )
 go
 --Bang Chi Tiet Ca Lam

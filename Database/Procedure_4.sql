@@ -286,6 +286,7 @@ begin
 	Update LICH_CHIEU set	TrangThai = @TrangThai
 	where MaPhim = @MaPhim and 	MaPhongChieu = @MaPhongChieu and MaKhungGioChieu=@MaKhungGio and NgayChieu=@NgayChieu 
 end
+go
 --- Them lich lam viec
 go
 create proc ThemLichLamViec
@@ -296,6 +297,7 @@ as
 begin
 	insert into LICH_LAM_VIEC(MaNhanVien,MaCa,NgayLamViec) values (@MaNhanVien, @MaCa, @NgayLamViec)
 end
+go
 ----- xoa lich lam viec
 go
 create proc XoaLichLamViec

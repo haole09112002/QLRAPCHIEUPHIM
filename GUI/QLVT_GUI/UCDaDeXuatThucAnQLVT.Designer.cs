@@ -80,7 +80,7 @@
             this.grbListDeXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbListDeXuat.Name = "grbListDeXuat";
             this.grbListDeXuat.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbListDeXuat.Size = new System.Drawing.Size(620, 579);
+            this.grbListDeXuat.Size = new System.Drawing.Size(620, 530);
             this.grbListDeXuat.TabIndex = 50;
             this.grbListDeXuat.TabStop = false;
             this.grbListDeXuat.Text = "Danh Sách Phiếu Đề Xuất";
@@ -114,7 +114,7 @@
             dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvListDeXuatThucAn.RowsDefaultCellStyle = dataGridViewCellStyle33;
             this.dgvListDeXuatThucAn.RowTemplate.Height = 28;
-            this.dgvListDeXuatThucAn.Size = new System.Drawing.Size(578, 539);
+            this.dgvListDeXuatThucAn.Size = new System.Drawing.Size(578, 501);
             this.dgvListDeXuatThucAn.TabIndex = 0;
             this.dgvListDeXuatThucAn.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListDeXuatThucAn_CellDoubleClick);
             // 
@@ -122,11 +122,11 @@
             // 
             this.grbListChiTietDeXuat.Controls.Add(this.dgvListChiTietDeXuat);
             this.grbListChiTietDeXuat.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.grbListChiTietDeXuat.Location = new System.Drawing.Point(667, 100);
+            this.grbListChiTietDeXuat.Location = new System.Drawing.Point(688, 100);
             this.grbListChiTietDeXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbListChiTietDeXuat.Name = "grbListChiTietDeXuat";
             this.grbListChiTietDeXuat.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbListChiTietDeXuat.Size = new System.Drawing.Size(632, 579);
+            this.grbListChiTietDeXuat.Size = new System.Drawing.Size(604, 537);
             this.grbListChiTietDeXuat.TabIndex = 49;
             this.grbListChiTietDeXuat.TabStop = false;
             this.grbListChiTietDeXuat.Text = "Chi Tiết Phiếu Đề Xuất Vật Tư";
@@ -160,7 +160,7 @@
             dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvListChiTietDeXuat.RowsDefaultCellStyle = dataGridViewCellStyle36;
             this.dgvListChiTietDeXuat.RowTemplate.Height = 28;
-            this.dgvListChiTietDeXuat.Size = new System.Drawing.Size(598, 539);
+            this.dgvListChiTietDeXuat.Size = new System.Drawing.Size(574, 501);
             this.dgvListChiTietDeXuat.TabIndex = 40;
             // 
             // btnThem
@@ -170,7 +170,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.btnThem.Location = new System.Drawing.Point(593, 684);
+            this.btnThem.Location = new System.Drawing.Point(585, 674);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(123, 36);
             this.btnThem.TabIndex = 48;
