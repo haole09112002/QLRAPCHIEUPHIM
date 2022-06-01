@@ -1,6 +1,7 @@
 ﻿using DAL;
 using DTO;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BLL
 {
@@ -107,6 +108,15 @@ namespace BLL
                 }
             }
             return data;
+        }
+        public List<string> GetListMaDeXuat()
+        {
+            List<string> data = new List<string>();
+            foreach (ChiTietDeXuatVatTuDTO i in ChiTietDeXuatVatTuDAL.Instance.GetAllChiTietDeXuatVatTu())
+            {
+                data.Add(i.MaDeXuat);
+            }
+            return data.Distinct().ToList();
         }
     }
 }

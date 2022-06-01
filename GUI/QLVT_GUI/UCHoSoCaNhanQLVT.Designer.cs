@@ -63,6 +63,7 @@
             this.lblDienThoai = new System.Windows.Forms.Label();
             this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.lblTenTaiKhoan = new System.Windows.Forms.Label();
+            this.btnDoiAnh = new System.Windows.Forms.Button();
             this.pnThongTinCaNhan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnhNhanVien)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -74,6 +75,7 @@
             // pnThongTinCaNhan
             // 
             this.pnThongTinCaNhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnThongTinCaNhan.Controls.Add(this.btnDoiAnh);
             this.pnThongTinCaNhan.Controls.Add(this.pbAnhNhanVien);
             this.pnThongTinCaNhan.Controls.Add(this.groupBox1);
             this.pnThongTinCaNhan.Controls.Add(this.lblChucVu);
@@ -87,14 +89,13 @@
             // 
             this.pbAnhNhanVien.BackColor = System.Drawing.Color.White;
             this.pbAnhNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbAnhNhanVien.Location = new System.Drawing.Point(178, 88);
+            this.pbAnhNhanVien.Location = new System.Drawing.Point(170, 32);
             this.pbAnhNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbAnhNhanVien.Name = "pbAnhNhanVien";
             this.pbAnhNhanVien.Size = new System.Drawing.Size(235, 172);
             this.pbAnhNhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAnhNhanVien.TabIndex = 41;
             this.pbAnhNhanVien.TabStop = false;
-            this.pbAnhNhanVien.Click += new System.EventHandler(this.btnThemAnh_Click);
             // 
             // groupBox1
             // 
@@ -122,6 +123,7 @@
             // 
             // dgvListCaLamViec
             // 
+            this.dgvListCaLamViec.AllowUserToAddRows = false;
             this.dgvListCaLamViec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListCaLamViec.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -147,7 +149,7 @@
             this.lblChucVu.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblChucVu.Image = global::GUI.Properties.Resources.avatar;
             this.lblChucVu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblChucVu.Location = new System.Drawing.Point(202, 264);
+            this.lblChucVu.Location = new System.Drawing.Point(195, 212);
             this.lblChucVu.Name = "lblChucVu";
             this.lblChucVu.Size = new System.Drawing.Size(186, 30);
             this.lblChucVu.TabIndex = 38;
@@ -542,6 +544,25 @@
             this.lblTenTaiKhoan.TabIndex = 7;
             this.lblTenTaiKhoan.Text = "TÊN TÀI KHOẢN";
             // 
+            // btnDoiAnh
+            // 
+            this.btnDoiAnh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnDoiAnh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDoiAnh.Enabled = false;
+            this.btnDoiAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoiAnh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiAnh.Image = global::GUI.Properties.Resources.Download;
+            this.btnDoiAnh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoiAnh.Location = new System.Drawing.Point(223, 255);
+            this.btnDoiAnh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDoiAnh.Name = "btnDoiAnh";
+            this.btnDoiAnh.Size = new System.Drawing.Size(117, 36);
+            this.btnDoiAnh.TabIndex = 42;
+            this.btnDoiAnh.Text = "Đổi ảnh ";
+            this.btnDoiAnh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDoiAnh.UseVisualStyleBackColor = false;
+            this.btnDoiAnh.Click += new System.EventHandler(this.btnDoiAnh_Click);
+            // 
             // UCHoSoCaNhanQLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -598,5 +619,6 @@
         private System.Windows.Forms.Label lblValidatedDienThoai;
         private System.Windows.Forms.Label lblValidatedNgaySinh;
         private System.Windows.Forms.PictureBox pbAnhNhanVien;
+        private System.Windows.Forms.Button btnDoiAnh;
     }
 }
