@@ -102,6 +102,7 @@ namespace GUI.QLP_GUI
             List<string> MaDeXuat = new List<string>();
             string TimKiem = txtTimKiem.Text;
             string LoaiTimKiem = "Tên Nhân Viên";
+            string LoaiSapXep = "";
             if (cBTimKiem.SelectedIndex >= 0)
             {
                 LoaiTimKiem = cBTimKiem.SelectedItem.ToString();
@@ -110,15 +111,24 @@ namespace GUI.QLP_GUI
             {
                 MaDeXuat.Add(i);
             }
+            if(cBSapXep.SelectedIndex < 0 )
+            {
+                MessageBox.Show("Chưa chọn loại sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                LoaiSapXep = cBSapXep.SelectedItem.ToString();
+            }
             dtDSPhieuDeXuat.Rows.Clear();
-            if (cBSapXep.SelectedItem.ToString() == "Tên Nhân Viên")
+            if (LoaiSapXep == "Tên Nhân Viên")
             {
                 foreach (DeXuatDTO dexuat in DeXuatBLL.Instance.SortDeXuat(DeXuatBLL.Instance.CompareTenNhanVien, MaDeXuat, TimKiem, LoaiTimKiem))
                 {
                     dtDSPhieuDeXuat.Rows.Add(dexuat.MaDeXuat, NhanVienBLL.Instance.GetNhanVienByMaNhanVien(dexuat.MaNhanVien).TenNhanVien, dexuat.NgayDeXuat.ToShortDateString());
                 }
             }
-            if (cBSapXep.SelectedItem.ToString() == "Ngày Đề Xuất")
+            if (LoaiSapXep == "Ngày Đề Xuất")
             {
                 foreach (DeXuatDTO dexuat in DeXuatBLL.Instance.SortDeXuat(DeXuatBLL.Instance.CompareNgayDeXuat, MaDeXuat, TimKiem, LoaiTimKiem))
                 {

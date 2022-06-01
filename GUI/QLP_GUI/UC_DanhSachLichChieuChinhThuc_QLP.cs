@@ -51,6 +51,10 @@ namespace GUI.QLP_GUI
             {
                 LoaiTimKiem = cBTimKiem.SelectedItem.ToString();
             }
+            else
+            {
+                MessageBox.Show("Chưa chọn loại tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             Reload(txtTimKiem.Text, LoaiTimKiem);
         }
 
@@ -63,6 +67,10 @@ namespace GUI.QLP_GUI
             if (cBSapXep.SelectedIndex >= 0)
             {
                 SapXep = cBSapXep.SelectedItem.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn loại sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             if (cBTimKiem.SelectedIndex >= 0)
             {

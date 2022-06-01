@@ -59,21 +59,58 @@ namespace GUI.QLP_GUI
             dGVKhungGioChieu.Columns["Mã Khung Giờ Chiếu"].Visible = false;
         }
 
+        public bool KiemTraTinhDungDang()
+        {
+            bool kt = true;
+            if(txtTenPhim.Text == "")
+            {
+                lbTenPhim.Text = "*Chưa chọn phim";
+                kt = false;
+            }
+            else
+            {
+                lbTenPhim.Text = "";
+            }
+            if(txtPhongChieu.Text == "")
+            {
+                lbPhongChieu.Text = "*Chưa chọn phim";
+                kt = false;
+            }
+            else
+            {
+                lbPhongChieu.Text = "";
+            }
+            if(txtGioChieu.Text == "")
+            {
+                lbKhungGioChieu.Text = "*Chưa chọn giờ chiếu";
+                kt = false;
+            }
+            else
+            {
+                lbKhungGioChieu.Text = "";
+            }
+            return kt;
+        }
+
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Xác nhận lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.OK)
+            if(KiemTraTinhDungDang())
             {
-                string KiemTra = LichChieuBLL.Instance.KiemTraLichChieu(txtMaPhim.Text, txtMaKhungGioChieu.Text, txtMaPhongChieu.Text, dTPNgayChieu.Value);
-                if (KiemTra == "")
+                DialogResult dialogResult = MessageBox.Show("Xác nhận lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.OK)
                 {
-                    LichChieuBLL.Instance.LuuLichChieu(txtMaPhim.Text, txtMaKhungGioChieu.Text, txtMaPhongChieu.Text, "1", dTPNgayChieu.Value);
-                    MessageBox.Show("Lưu thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    string KiemTra = LichChieuBLL.Instance.KiemTraLichChieu(txtMaPhim.Text, txtMaKhungGioChieu.Text, txtMaPhongChieu.Text, dTPNgayChieu.Value);
+                    if (KiemTra == "")
+                    {
+                        LichChieuBLL.Instance.LuuLichChieu(txtMaPhim.Text, txtMaKhungGioChieu.Text, txtMaPhongChieu.Text, "1", dTPNgayChieu.Value);
+                        MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(KiemTra, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
-                else
-                {
-                    MessageBox.Show(KiemTra,"Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                }
+                txtGioChieu.Text = txtMaKhungGioChieu.Text = txtMaPhim.Text = txtMaPhongChieu.Text = txtPhongChieu.Text = txtTenPhim.Text = "";
             }
         }
 
