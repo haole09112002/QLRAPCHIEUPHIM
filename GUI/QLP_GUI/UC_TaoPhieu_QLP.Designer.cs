@@ -36,12 +36,12 @@
             this.lbLoaiPhieu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.gBPhimDaThem = new System.Windows.Forms.GroupBox();
             this.lbPhimDaThem = new System.Windows.Forms.Label();
             this.btnXoa = new System.Windows.Forms.Button();
             this.dGVPhimDaThem = new System.Windows.Forms.DataGridView();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.gBLuaChonPhim = new System.Windows.Forms.GroupBox();
             this.lbDonViTinh = new System.Windows.Forms.Label();
             this.lbSoLuong = new System.Windows.Forms.Label();
@@ -165,23 +165,6 @@
             this.label3.Text = "Mã Kho";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.LightGreen;
-            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Image = global::GUI.Properties.Resources.save_26px;
-            this.btnLuu.Location = new System.Drawing.Point(1084, 292);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(121, 36);
-            this.btnLuu.TabIndex = 56;
-            this.btnLuu.Text = "   Lưu";
-            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
@@ -252,6 +235,23 @@
             this.dGVPhimDaThem.Size = new System.Drawing.Size(1245, 238);
             this.dGVPhimDaThem.TabIndex = 0;
             this.dGVPhimDaThem.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVPhimDaThem_CellDoubleClick);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.Color.LightGreen;
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = global::GUI.Properties.Resources.save_26px;
+            this.btnLuu.Location = new System.Drawing.Point(1084, 292);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(121, 36);
+            this.btnLuu.TabIndex = 56;
+            this.btnLuu.Text = "   Lưu";
+            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // gBLuaChonPhim
             // 

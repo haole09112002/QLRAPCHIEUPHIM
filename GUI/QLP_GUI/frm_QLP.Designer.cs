@@ -342,16 +342,16 @@
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnMenu.Location = new System.Drawing.Point(221, 63);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(1352, 24);
+            this.pnMenu.Size = new System.Drawing.Size(1352, 30);
             this.pnMenu.TabIndex = 4;
             // 
             // pnCenter
             // 
             this.pnCenter.BackColor = System.Drawing.Color.White;
             this.pnCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnCenter.Location = new System.Drawing.Point(221, 87);
+            this.pnCenter.Location = new System.Drawing.Point(221, 93);
             this.pnCenter.Name = "pnCenter";
-            this.pnCenter.Size = new System.Drawing.Size(1352, 788);
+            this.pnCenter.Size = new System.Drawing.Size(1352, 782);
             this.pnCenter.TabIndex = 5;
             // 
             // frm_QLP

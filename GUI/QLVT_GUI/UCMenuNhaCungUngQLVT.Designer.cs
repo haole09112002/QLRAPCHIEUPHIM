@@ -41,7 +41,7 @@
             this.btnMenuListNCCVatTu.Location = new System.Drawing.Point(350, 0);
             this.btnMenuListNCCVatTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenuListNCCVatTu.Name = "btnMenuListNCCVatTu";
-            this.btnMenuListNCCVatTu.Size = new System.Drawing.Size(341, 29);
+            this.btnMenuListNCCVatTu.Size = new System.Drawing.Size(341, 30);
             this.btnMenuListNCCVatTu.TabIndex = 5;
             this.btnMenuListNCCVatTu.Text = "NHÀ CUNG CẤP VẬT TƯ";
             this.btnMenuListNCCVatTu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -57,7 +57,7 @@
             this.btnMenuListNCCThucAn.Location = new System.Drawing.Point(0, 0);
             this.btnMenuListNCCThucAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenuListNCCThucAn.Name = "btnMenuListNCCThucAn";
-            this.btnMenuListNCCThucAn.Size = new System.Drawing.Size(350, 29);
+            this.btnMenuListNCCThucAn.Size = new System.Drawing.Size(350, 30);
             this.btnMenuListNCCThucAn.TabIndex = 4;
             this.btnMenuListNCCThucAn.Text = "NHÀ CUNG ỨNG THỨC ĂN NHANH";
             this.btnMenuListNCCThucAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -73,7 +73,7 @@
             this.Controls.Add(this.btnMenuListNCCThucAn);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCMenuNhaCungUngQLVT";
-            this.Size = new System.Drawing.Size(993, 29);
+            this.Size = new System.Drawing.Size(993, 30);
             this.ResumeLayout(false);
 
         }
