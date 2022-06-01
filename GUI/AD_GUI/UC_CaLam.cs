@@ -211,65 +211,65 @@ namespace GUI.AD_GUI
 
         private void dgvNhanVien_MouseClick(object sender, MouseEventArgs e)
         {
-            if(checkChonRowDGVNhanVien() == true)
+            if (checkChonRowDGVNhanVien() == true)
             {
-            foreach (DataGridViewRow i in dgvNhanVien.SelectedRows)
-            {
-                txtTenNhanVien.Text = dgvNhanVien.Rows[i.Index].Cells["Tên Nhân Viên"].Value.ToString();
-                txtMaNhanVien.Text = dgvNhanVien.Rows[i.Index].Cells["Mã Nhân Viên"].Value.ToString();
-            }
+                foreach (DataGridViewRow i in dgvNhanVien.SelectedRows)
+                {
+                    txtTenNhanVien.Text = dgvNhanVien.Rows[i.Index].Cells["Tên Nhân Viên"].Value.ToString();
+                    txtMaNhanVien.Text = dgvNhanVien.Rows[i.Index].Cells["Mã Nhân Viên"].Value.ToString();
+                }
             }
         }
 
         private void cboThemCaLamViec_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(txtTenNhanVien.Text == "" && txtMaNhanVien.Text == "" && lblValidatedNgayLamViec.Visible == true)
-            {
-                btnThem.Enabled = false;
-            }
-            else
-            {
-                btnThem.Enabled = true;
-            }
+            btnThem.Enabled = true;
         }
 
         private void UC_CaLam_Leave(object sender, EventArgs e)
         {
-            //if (btnThem.Enabled == true || txtMaNhanVien.Text == "" || txtTenNhanVien.Text == "")
-            //{
-            //    DialogResult dialogResult = MessageBox.Show("Thông tin chưa lưu, có muốn thoát", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            //    if (dialogResult == DialogResult.OK)
-            //    {
-            //        ReLoad();
-            //    }
-            //}
+            if (btnThem.Enabled == true)
+            {
+                DialogResult dialogResult = MessageBox.Show("Thông tin chưa lưu, có muốn thoát", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.OK)
+                {
+                    ReLoad();
+                }
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (checkChonRowDGVNhanVien() == true)
             {
-                DialogResult dialogResult = MessageBox.Show("Xác nhận thêm", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (dialogResult == DialogResult.OK)
+                if (cboThemCaLamViec.SelectedIndex >= 0)
                 {
-                    
-                    string KiemTra = LichLamViecBLL.Instance.KiemTraLichLamViec(txtMaNhanVien.Text,((CBBItem)cboThemCaLamViec.SelectedItem).Value , dtpThemNgayLamViec.Value);
-                    if(KiemTra == "")
+                    DialogResult dialogResult = MessageBox.Show("Xác nhận thêm", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.OK)
                     {
-                        string maNhanVien;
-                        string maCa;
-                        DateTime ngayLamViec;
-                        maNhanVien = txtMaNhanVien.Text;
-                        maCa = cboThemCaLamViec.Text;
-                        ngayLamViec = dtpThemNgayLamViec.Value;
-                        LichLamViecBLL.Instance.ThemLichLamViec(maNhanVien, maCa, ngayLamViec);
-                        MessageBox.Show("thêm lịch làm việc thành công!");
-                        LoadListLamViec();
+                        string KiemTra = LichLamViecBLL.Instance.KiemTraLichLamViec(txtMaNhanVien.Text, ((CBBItem)cboThemCaLamViec.SelectedItem).Value, dtpThemNgayLamViec.Value);
+                        if (KiemTra == "")
+                        {
+                            string maNhanVien;
+                            string maCa;
+                            DateTime ngayLamViec;
+                            maNhanVien = txtMaNhanVien.Text;
+                            maCa = cboThemCaLamViec.Text;
+                            ngayLamViec = dtpThemNgayLamViec.Value;
+                            LichLamViecBLL.Instance.ThemLichLamViec(maNhanVien, maCa, ngayLamViec);
+                            MessageBox.Show("Thêm Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadListLamViec();
+                        }
+                        else
+                        {
+                            MessageBox.Show(KiemTra, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        lblValidatedCaLamViec.Visible = false;
                     }
-                    else
-                    {
-                        MessageBox.Show(KiemTra, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                }
+                else
+                {
+                    lblValidatedCaLamViec.Visible = true;
                 }
             }
         }
