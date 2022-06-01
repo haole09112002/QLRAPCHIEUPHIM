@@ -30,6 +30,14 @@ namespace GUI.QLVT_GUI
             {
                 rbNu.Checked = true;
             }
+            if (nhanVien.Anh1 != null)
+            {
+            pbAnhNhanVien.Image = PhimBLL.Instance.ChuyeMangByteSangAnh(nhanVien.Anh1);
+            }
+            else
+            {
+                pbAnhNhanVien.Image = null;
+            }
             lblChucVu.Text = ChucVuBLL.Instance.GetChucVuByMaChucVu(nhanVien.MaChucVu).TenChucVu;
             txtTen.Text = nhanVien.TenNhanVien;
             dtpNgaySinh.Value = nhanVien.NgaySinh;

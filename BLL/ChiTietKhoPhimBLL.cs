@@ -51,7 +51,6 @@ namespace BLL
         }
         public void CapNhatChiTietKhoPhim(string MaKho, string MaPhim, int SoLuongSP, string DonViTinh)
         {
-            MessageBox.Show("UP");
             ChiTietKhoPhimDAL.Instance.CapNhatChiTietKhoPhim(MaKho, MaPhim, SoLuongSP, DonViTinh);
         }
         public void LuuChiTietKhoPhim(string MaKho, string MaPhim, string DonViTinh, int SoLuongSP)
@@ -68,7 +67,6 @@ namespace BLL
                 {
                     if(i.MaPhim == j.MaPhim)
                     {
-                        MessageBox.Show("Up1");
                         KiemTraTonTaiPhim = true;
                         j.DonViTinh = i.DonViTinh;
                         if(LoaiPhieu == "LP001")

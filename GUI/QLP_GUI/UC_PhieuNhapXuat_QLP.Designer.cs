@@ -236,7 +236,7 @@
             // dGVDanhSachPhieuNhapXuat
             // 
             this.dGVDanhSachPhieuNhapXuat.AllowUserToAddRows = false;
-            this.dGVDanhSachPhieuNhapXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVDanhSachPhieuNhapXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVDanhSachPhieuNhapXuat.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
