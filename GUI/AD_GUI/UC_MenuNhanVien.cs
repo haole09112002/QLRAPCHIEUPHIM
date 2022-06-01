@@ -7,18 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GUI.AD_GUI;
+using DTO;
 using System.Windows.Forms;
 
 namespace GUI.AD_GUI
 {
     public partial class UC_MenuNhanVien : UserControl
     {
-        public UC_MenuNhanVien()
+        private NhanVienDTO NV;
+        public UC_MenuNhanVien(NhanVienDTO nv)
         {
+            NV = nv;
+            ucThongTinNV = new UC_ThongTinNV(nv);
             InitializeComponent();
             btnMenuThongTinNV.BackColor = Color.FromArgb(40, 51, 66);
         }
-        public UC_ThongTinNV ucThongTinNV = new UC_ThongTinNV();
+        public UC_ThongTinNV ucThongTinNV;
         public UC_CaLam ucCaLam = new UC_CaLam();
         public delegate void Mydel(UserControl c);
         public Mydel d { get;set;}

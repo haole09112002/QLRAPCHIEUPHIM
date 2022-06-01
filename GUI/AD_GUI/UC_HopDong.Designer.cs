@@ -55,7 +55,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(18, 14);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1312, 735);
+            this.panel1.Size = new System.Drawing.Size(1298, 735);
             this.panel1.TabIndex = 0;
             // 
             // groupBox1
@@ -184,9 +184,9 @@
             // 
             this.panel3.Controls.Add(this.cbLoaiHopDongMuonTao);
             this.panel3.Controls.Add(this.btnTao);
-            this.panel3.Location = new System.Drawing.Point(770, 651);
+            this.panel3.Location = new System.Drawing.Point(25, 668);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(502, 62);
+            this.panel3.Size = new System.Drawing.Size(1263, 62);
             this.panel3.TabIndex = 34;
             // 
             // cbLoaiHopDongMuonTao
@@ -195,7 +195,7 @@
             this.cbLoaiHopDongMuonTao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLoaiHopDongMuonTao.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiHopDongMuonTao.FormattingEnabled = true;
-            this.cbLoaiHopDongMuonTao.Location = new System.Drawing.Point(224, 19);
+            this.cbLoaiHopDongMuonTao.Location = new System.Drawing.Point(989, 15);
             this.cbLoaiHopDongMuonTao.Margin = new System.Windows.Forms.Padding(4);
             this.cbLoaiHopDongMuonTao.Name = "cbLoaiHopDongMuonTao";
             this.cbLoaiHopDongMuonTao.Size = new System.Drawing.Size(258, 29);
@@ -208,7 +208,7 @@
             this.btnTao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTao.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTao.Image = global::GUI.Properties.Resources.new_copy_26px;
-            this.btnTao.Location = new System.Drawing.Point(75, 15);
+            this.btnTao.Location = new System.Drawing.Point(845, 9);
             this.btnTao.Name = "btnTao";
             this.btnTao.Size = new System.Drawing.Size(123, 36);
             this.btnTao.TabIndex = 24;
@@ -236,7 +236,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_HopDong";
-            this.Size = new System.Drawing.Size(1352, 766);
+            this.Size = new System.Drawing.Size(1333, 766);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -8,7 +8,7 @@ namespace GUI.AD_GUI
 {
     public partial class frmThemNhanVien : Form
     {
-        public delegate void MyDel();
+        public delegate void MyDel(string tt = "");
         public MyDel d { get; set; }
         string maNhanVienn { get; set; }
         NhanVienDTO nhanVien = new NhanVienDTO();
@@ -130,15 +130,16 @@ namespace GUI.AD_GUI
                 TenNhanVien = txtHoTen.Text,
                 NgaySinh = dtpNgaySinh.Value,
                 GioiTinh = radioButton2.Checked,
-                SoDienThoai=txtDienThoai.Text,
-                DiaChi =txtDiaChi.Text,
-                CCCD1 =txtCCCD.Text,
+                SoDienThoai = txtDienThoai.Text,
+                DiaChi = txtDiaChi.Text,
+                CCCD1 = txtCCCD.Text,
                 TenTaiKhoan = txtTenTK.Text,
-                MatKhau =NhanVienBLL.Instance.MD5(txtMatKhau.Text),
-                MaChinhSach =  maChinhSach,
-                MaChucVu = maChucVu
+                MatKhau = NhanVienBLL.Instance.MD5(txtMatKhau.Text),
+                MaChinhSach = maChinhSach,
+                MaChucVu = maChucVu,
+                TrangThai = "1"
             };
-            if (NhanVienBLL.Instance.KiemTraDuLieu(nhanVien) == null )
+            if (NhanVienBLL.Instance.KiemTraDuLieu(nhanVien/*, lblValidatedNgaySinh, lblValidatedDienThoai, lblValidatedCCCD*/) == null )
             {
                 DialogResult result = MessageBox.Show("Bạn muốn lưu?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
@@ -153,43 +154,43 @@ namespace GUI.AD_GUI
             }
             else
             {
-                MessageBox.Show(NhanVienBLL.Instance.KiemTraDuLieu(nhanVien), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(NhanVienBLL.Instance.KiemTraDuLieu(nhanVien/*, lblValidatedNgaySinh, lblValidatedDienThoai, lblValidatedCCCD*/), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //public bool checkValidate()
-        //{
-        //    bool check = true;
-        //    // Tên Tiếng anh hoặc tiếng việt đều được
-        //    if (Regex.IsMatch(txtHoTen.Text, @"^(\p{L}+\s?)*$") != true)
-        //    {
-        //        lblValidatedTen.Visible = true;
-        //        check = false;
-        //    }
-        //    // Địa chỉ nước ngoài hoặc việt nam đều được
-        //    if (Regex.IsMatch(txtDiaChi.Text, @"^(\p{L}+\s?)*$") != true)
-        //    {
-        //        lblValidatedDiaChi.Visible = true;
-        //        check = false;
-        //    }
-        //    // Độ dài là 10 chữ số, Bắt đầu bằng 84 hoặc 0 kế tiếp phải là các đầu số hiện nay bao gồm 3,5,7,8,9 + với 8 số bất kì
-        //    if (Regex.IsMatch(txtDienThoai.Text, @"(84|0[3|5|7|8|9])+([0-9]{8})\b") != true)
-        //    {
-        //        lblValidatedDienThoai.Visible = true;
-        //        check = false;
-        //    }
-        //    //Độ dài là 12 chữ số, bắt đầu bằng số 0
-        //    if (Regex.IsMatch(txtCCCD.Text, @"(0)+([1-9]{11})\b") != true)
-        //    {
-        //        lblValidatedCCCD.Visible = true;
-        //        check = false;
-        //    }
-        //    if (DateTime.Today <= dtpNgaySinh.Value)
-        //    {
-        //        lblValidatedNgaySinh.Visible = true;
-        //        check = false;
-        //    }
-        //    return check;
-        //}
+        public bool checkvalidate()
+        {
+            bool check = true;
+            // tên tiếng anh hoặc tiếng việt đều được
+            if (Regex.IsMatch(txtHoTen.Text, @"^(\p{L}+\s?)*$") != true)
+            {
+                lblValidatedTen.Visible = true;
+                check = false;
+            }
+            // địa chỉ nước ngoài hoặc việt nam đều được
+            if (Regex.IsMatch(txtDiaChi.Text, @"^(\p{L}+\s?)*$") != true)
+            {
+                lblValidatedDiaChi.Visible = true;
+                check = false;
+            }
+            // độ dài là 10 chữ số, bắt đầu bằng 84 hoặc 0 kế tiếp phải là các đầu số hiện nay bao gồm 3,5,7,8,9 + với 8 số bất kì
+            if (Regex.IsMatch(txtDienThoai.Text, @"(84|0[3|5|7|8|9])+([0-9]{8})\b") != true)
+            {
+                lblValidatedDienThoai.Visible = true;
+                check = false;
+            }
+            //độ dài là 12 chữ số, bắt đầu bằng số 0
+            if (Regex.IsMatch(txtCCCD.Text, @"(0)+([1-9]{11})\b") != true)
+            {
+                lblValidatedCCCD.Visible = true;
+                check = false;
+            }
+            if (DateTime.Today <= dtpNgaySinh.Value)
+            {
+                lblValidatedNgaySinh.Visible = true;
+                check = false;
+            }
+            return check;
+        }
 
         private void btnResetPass_Click(object sender, EventArgs e)
         {
@@ -205,6 +206,26 @@ namespace GUI.AD_GUI
             setEnable(true);
             btnChinhSua.Visible = true;
             btnResetPass.Visible = true;
+        }
+
+        private void txtHoTen_TextChanged(object sender, EventArgs e)
+        {
+            lblValidatedTen.Visible = false;
+        }
+
+        private void dtpNgaySinh_ValueChanged(object sender, EventArgs e)
+        {
+            lblValidatedNgaySinh.Visible = false;
+        }
+
+        private void txtCCCD_TextChanged(object sender, EventArgs e)
+        {
+            lblValidatedCCCD.Visible = false;
+        }
+
+        private void txtDienThoai_TextChanged(object sender, EventArgs e)
+        {
+            lblValidatedDienThoai.Visible = false;
         }
     }
 }

@@ -59,7 +59,7 @@ namespace DAL
                     Anh1 = null,
                     MaChinhSach = i["MaChinhSach"].ToString(),
                     MaChucVu = i["MaChucVu"].ToString(),
-
+                    TrangThai = i["TrangThai"].ToString(),
                 };
             }
             else
@@ -78,6 +78,7 @@ namespace DAL
                     Anh1 = (byte[])(i["Anh"]),
                     MaChinhSach = i["MaChinhSach"].ToString(),
                     MaChucVu = i["MaChucVu"].ToString(),
+                    TrangThai = i["TrangThai"].ToString(),
 
                 };
             }
@@ -93,7 +94,7 @@ namespace DAL
         }
         public void ThemNhanVien(NhanVienDTO nhanVien)
         {
-            // nhanVien.Anh1 = null;
+           // nhanVien.Anh1 = null;
             string query = "EXEC themnhanvien @TenNhanVien , @NgaySinh , @GioiTinh , @DiaChi , @SoDienThoai , @CCCD , @TenTaiKhoan , @MatKhau , @MaChinhSach , @MaChucVu";
             object[] parameter = new object[]
             {
@@ -113,24 +114,18 @@ namespace DAL
             };
             DBHelper.Instance.ExcuteNonQuery(query, parameter);
         }
-        public static void XoaNhanVien(string maNhanVien)
+        public static void CapNhatTrangThaiNV(string maNhanVien, string tt)
         {
-            SqlCommand command = new SqlCommand("XoaNhanVien");
-            command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.Add("@MaNhanVien", SqlDbType.VarChar, 6);
-            command.Parameters["@MaNhanVien"].Value = maNhanVien;
-            command.ExecuteNonQuery();
-            //string query = "Delete from NHAN_VIEN where MaNhanVien = '" + maNhanVien + "' and MaChucVu = '" + maChucVu +
-            //    "' and MaChinhSach = '" + maChinhSach + "'";
-            //DBHelper.Instance.ExcuteQuery(query);
+            string query = string.Format("Update NHAN_VIEN set TrangThai ='{0}' where MaNhanVien = '{1}' ", tt, maNhanVien);
+            DBHelper.Instance.ExcuteNonQuery(query);
         }
         public object KiemTraTenTK(NhanVienDTO nhanVien)
         {
-            string query = String.Format("select  count(NHAN_VIEN.TenTaiKhoan) from NHAN_VIEN where TenTaiKhoan = '{0}'", nhanVien.TenTaiKhoan);
-
+            string query =String.Format("select  count(NHAN_VIEN.TenTaiKhoan) from NHAN_VIEN where TenTaiKhoan = '{0}'",nhanVien.TenTaiKhoan);
+           
             return DBHelper.Instance.ExcuteScalar(query);
         }
-        public object KiemTraSoDienThoai(NhanVienDTO nhanVien)
+        public object KiemTraSoDienThoai(NhanVienDTO nhanVien )
         {
             string query = String.Format("select  count(NHAN_VIEN.SoDienThoai) from NHAN_VIEN where SoDienThoai = '{0}'", nhanVien.SoDienThoai);
             return DBHelper.Instance.ExcuteScalar(query);
@@ -141,10 +136,10 @@ namespace DAL
             return DBHelper.Instance.ExcuteScalar(query);
         }
         public int KiemTraDangNhap(string tenTaiKhoan, string matKhau)
-        {
+        {  
             string query = "EXEC KiemTraDangNhap @TenTaiKhoan , @MatKhau";
             object[] parameter = new object[] { tenTaiKhoan, matKhau };
-            return Convert.ToInt32(DBHelper.Instance.ExcuteScalar(query, parameter));
+            return Convert.ToInt32(DBHelper.Instance.ExcuteScalar(query,parameter));
         }
         public List<NhanVienDTO> TimTheoMa(string maNhanVien)
         {
