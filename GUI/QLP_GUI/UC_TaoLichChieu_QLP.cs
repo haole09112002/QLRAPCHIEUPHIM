@@ -73,7 +73,7 @@ namespace GUI.QLP_GUI
             }
             if(txtPhongChieu.Text == "")
             {
-                lbPhongChieu.Text = "*Chưa chọn phim";
+                lbPhongChieu.Text = "*Chưa chọn phòng chiếu";
                 kt = false;
             }
             else

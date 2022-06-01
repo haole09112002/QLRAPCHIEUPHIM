@@ -227,6 +227,7 @@ namespace GUI.QLP_GUI
             }
             dtPhimDaThem.Rows.Clear();
             dGVPhimDaThem.DataSource = dtPhimDaThem;
+            btnLuu.Enabled = false;
         }
 
         private void cBMaLoaiPhieu_SelectedIndexChanged(object sender, EventArgs e)
@@ -283,6 +284,7 @@ namespace GUI.QLP_GUI
                     txtMaPhim.Text = "";
                     dGVDanhSachPhim.DataSource = null;
                     dGVPhimDaThem.DataSource = null;
+                    lbMaKho.Text = "";
                 }
             }
         }

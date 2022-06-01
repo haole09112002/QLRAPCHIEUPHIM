@@ -36,12 +36,12 @@
             this.lbLoaiPhieu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.gBPhimDaThem = new System.Windows.Forms.GroupBox();
             this.lbPhimDaThem = new System.Windows.Forms.Label();
             this.btnXoa = new System.Windows.Forms.Button();
             this.dGVPhimDaThem = new System.Windows.Forms.DataGridView();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.gBLuaChonPhim = new System.Windows.Forms.GroupBox();
             this.lbDonViTinh = new System.Windows.Forms.Label();
             this.lbSoLuong = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             this.txtTenPhim.Location = new System.Drawing.Point(915, 57);
             this.txtTenPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenPhim.Name = "txtTenPhim";
-            this.txtTenPhim.Size = new System.Drawing.Size(488, 28);
+            this.txtTenPhim.Size = new System.Drawing.Size(346, 28);
             this.txtTenPhim.TabIndex = 5;
             // 
             // cBMaKho
@@ -80,7 +80,7 @@
             this.cBMaKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBMaKho.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.cBMaKho.FormattingEnabled = true;
-            this.cBMaKho.Location = new System.Drawing.Point(802, 49);
+            this.cBMaKho.Location = new System.Drawing.Point(976, 47);
             this.cBMaKho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBMaKho.Name = "cBMaKho";
             this.cBMaKho.Size = new System.Drawing.Size(304, 27);
@@ -108,7 +108,6 @@
             this.panel1.Controls.Add(this.lbLoaiPhieu);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.btnLuu);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.gBPhimDaThem);
             this.panel1.Controls.Add(this.cBMaKho);
@@ -117,7 +116,7 @@
             this.panel1.Location = new System.Drawing.Point(26, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1319, 760);
+            this.panel1.Size = new System.Drawing.Size(1352, 788);
             this.panel1.TabIndex = 12;
             // 
             // lbMaKho
@@ -166,12 +165,29 @@
             this.label3.Text = "Mã Kho";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.Color.LightGreen;
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = global::GUI.Properties.Resources.save_26px;
+            this.btnLuu.Location = new System.Drawing.Point(1084, 292);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(121, 36);
+            this.btnLuu.TabIndex = 56;
+            this.btnLuu.Text = "   Lưu";
+            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label6.Image = global::GUI.Properties.Resources.NhapXuat;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(422, 0);
+            this.label6.Location = new System.Drawing.Point(522, -1);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(324, 34);
             this.label6.TabIndex = 27;
@@ -183,12 +199,13 @@
             this.gBPhimDaThem.Controls.Add(this.lbPhimDaThem);
             this.gBPhimDaThem.Controls.Add(this.btnXoa);
             this.gBPhimDaThem.Controls.Add(this.dGVPhimDaThem);
+            this.gBPhimDaThem.Controls.Add(this.btnLuu);
             this.gBPhimDaThem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.gBPhimDaThem.Location = new System.Drawing.Point(19, 367);
+            this.gBPhimDaThem.Location = new System.Drawing.Point(19, 416);
             this.gBPhimDaThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBPhimDaThem.Name = "gBPhimDaThem";
             this.gBPhimDaThem.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gBPhimDaThem.Size = new System.Drawing.Size(1276, 389);
+            this.gBPhimDaThem.Size = new System.Drawing.Size(1276, 340);
             this.gBPhimDaThem.TabIndex = 15;
             this.gBPhimDaThem.TabStop = false;
             this.gBPhimDaThem.Text = "PHIM ĐÃ THÊM";
@@ -211,7 +228,7 @@
             this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = global::GUI.Properties.Resources.trash_can_26px;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(164, 337);
+            this.btnXoa.Location = new System.Drawing.Point(162, 282);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(139, 46);
@@ -226,32 +243,15 @@
             this.dGVPhimDaThem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVPhimDaThem.BackgroundColor = System.Drawing.Color.White;
             this.dGVPhimDaThem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVPhimDaThem.Location = new System.Drawing.Point(16, 25);
+            this.dGVPhimDaThem.Location = new System.Drawing.Point(17, 25);
             this.dGVPhimDaThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVPhimDaThem.Name = "dGVPhimDaThem";
             this.dGVPhimDaThem.ReadOnly = true;
             this.dGVPhimDaThem.RowHeadersWidth = 62;
             this.dGVPhimDaThem.RowTemplate.Height = 28;
-            this.dGVPhimDaThem.Size = new System.Drawing.Size(1054, 129);
+            this.dGVPhimDaThem.Size = new System.Drawing.Size(1245, 238);
             this.dGVPhimDaThem.TabIndex = 0;
             this.dGVPhimDaThem.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVPhimDaThem_CellDoubleClick);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.LightGreen;
-            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Image = global::GUI.Properties.Resources.save_26px;
-            this.btnLuu.Location = new System.Drawing.Point(939, 348);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(121, 36);
-            this.btnLuu.TabIndex = 56;
-            this.btnLuu.Text = "   Lưu";
-            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // gBLuaChonPhim
             // 
@@ -273,7 +273,7 @@
             this.gBLuaChonPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBLuaChonPhim.Name = "gBLuaChonPhim";
             this.gBLuaChonPhim.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gBLuaChonPhim.Size = new System.Drawing.Size(1087, 267);
+            this.gBLuaChonPhim.Size = new System.Drawing.Size(1276, 295);
             this.gBLuaChonPhim.TabIndex = 14;
             this.gBLuaChonPhim.TabStop = false;
             this.gBLuaChonPhim.Text = "LỰA CHỌN PHIM";
@@ -330,7 +330,7 @@
             this.nUDSoLuong.Location = new System.Drawing.Point(915, 118);
             this.nUDSoLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nUDSoLuong.Name = "nUDSoLuong";
-            this.nUDSoLuong.Size = new System.Drawing.Size(488, 28);
+            this.nUDSoLuong.Size = new System.Drawing.Size(346, 28);
             this.nUDSoLuong.TabIndex = 62;
             // 
             // label4
@@ -396,7 +396,7 @@
             this.dGVDanhSachPhim.Name = "dGVDanhSachPhim";
             this.dGVDanhSachPhim.RowHeadersWidth = 62;
             this.dGVDanhSachPhim.RowTemplate.Height = 28;
-            this.dGVDanhSachPhim.Size = new System.Drawing.Size(669, 193);
+            this.dGVDanhSachPhim.Size = new System.Drawing.Size(669, 203);
             this.dGVDanhSachPhim.TabIndex = 8;
             this.dGVDanhSachPhim.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDanhSachPhim_CellDoubleClick);
             // 
@@ -404,11 +404,12 @@
             // 
             this.cBDonViTinh.BackColor = System.Drawing.Color.White;
             this.cBDonViTinh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cBDonViTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBDonViTinh.FormattingEnabled = true;
             this.cBDonViTinh.Location = new System.Drawing.Point(915, 171);
             this.cBDonViTinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBDonViTinh.Name = "cBDonViTinh";
-            this.cBDonViTinh.Size = new System.Drawing.Size(488, 27);
+            this.cBDonViTinh.Size = new System.Drawing.Size(346, 27);
             this.cBDonViTinh.TabIndex = 7;
             // 
             // btnChinhSua
@@ -437,7 +438,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_TaoPhieu_QLP";
-            this.Size = new System.Drawing.Size(1185, 613);
+            this.Size = new System.Drawing.Size(1352, 782);
             this.Leave += new System.EventHandler(this.UC_TaoPhieu_QLP_Leave);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

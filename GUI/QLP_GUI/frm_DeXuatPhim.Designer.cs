@@ -74,7 +74,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cBQuocGia = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.nUDThoiLuong = new System.Windows.Forms.NumericUpDown();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
             this.nUDThoiLuong = new System.Windows.Forms.NumericUpDown();

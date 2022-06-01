@@ -54,6 +54,7 @@ namespace GUI.QLP_GUI
             else
             {
                 MessageBox.Show("Chưa chọn loại tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             Reload(txtTimKiem.Text, LoaiTimKiem);
         }
@@ -71,6 +72,7 @@ namespace GUI.QLP_GUI
             else
             {
                 MessageBox.Show("Chưa chọn loại sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             if (cBTimKiem.SelectedIndex >= 0)
             {
