@@ -89,15 +89,15 @@ namespace GUI.AD_GUI
             dgvKho.DataSource = KhoBLL.Instance.TimTheoTenKho(txtTimKiem.Text);
         }
 
-        private void btnXuat_Click(object sender, EventArgs e)
-        {
-            List<string> now = new List<string>();
-            foreach (DataGridViewRow row in dgvChiTiet.Rows)
-            {
-                now.Add(row.Cells["MaKho"].Value.ToString());
-            }
-            Helper.Instance.ExportDataToExcel<KhoDTO>(KhoBLL.Instance.GetKhoDGV(now));
-        }
+        //private void btnXuat_Click(object sender, EventArgs e)
+        //{
+        //    List<string> now = new List<string>();
+        //    foreach (DataGridViewRow row in dgvChiTiet.Rows)
+        //    {
+        //        now.Add(row.Cells["MaKho"].Value.ToString());
+        //    }
+        //    Helper.Instance.ExportDataToExcel<KhoDTO>(KhoBLL.Instance.GetKhoDGV(now));
+        //}
         
         private void cbbLoaiKho_SelectedIndexChanged(object sender, EventArgs e)
         {
