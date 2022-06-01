@@ -73,7 +73,7 @@ namespace BLL
                 TenNhaCungCap = tenNCC
             };
         }
-        public List<HopDongViewDTO> GetHopDongViewByMaLoaiHopDong(string maLoaiHopDong = "0", string txt = "")
+        public List<HopDongViewDTO> GetHopDongViewByMaLoaiHopDong(string maLoaiHopDong = "0", string txt = "", string tieuChiTimKiem = "")
         {
             List<HopDongViewDTO> data = new List<HopDongViewDTO>();
             foreach(HopDongDTO i in GetHopDongByMaLoaiHopDong(maLoaiHopDong))
@@ -83,7 +83,13 @@ namespace BLL
             List<HopDongViewDTO> result = new List<HopDongViewDTO>();
             foreach (HopDongViewDTO i in data)
             {
-                if (i.TenHopDong.Contains(txt) || i.NgayKiKetHD.ToString().Contains(txt) || i.TenNhaCungCap.Contains(txt))
+                if (tieuChiTimKiem == "Tên hợp đồng" && i.TenHopDong.ToLower().Contains(txt.ToLower()) ) 
+                    result.Add(i);
+                if (tieuChiTimKiem == "Ngày kí kết" && i.NgayKiKetHD.ToShortDateString().ToLower().Contains(txt.ToLower()))
+                    result.Add(i);
+                if(tieuChiTimKiem == "Tên nhà cung cấp" && i.TenNhaCungCap.ToLower().Contains(txt.ToLower()))
+                    result.Add(i);
+                if (tieuChiTimKiem == "")
                     result.Add(i);
             }     
             return result;

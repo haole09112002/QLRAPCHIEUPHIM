@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Windows.Forms;
 using DAL;
 using DTO;
 
@@ -25,26 +26,59 @@ namespace BLL
         {
 
         }
-        public List<NhaCungCapDTO> GetNCCByMaLoaiNCC(string maLoaiNCC = "0", string txt = "")
+        public List<NhaCungCapDTO> GetNCCByMaLoaiNCC(string maLoaiNCC = "0", string txt = "", string cbbText = "")
         {
             List<NhaCungCapDTO> data = new List<NhaCungCapDTO>();
             if (maLoaiNCC == "0")
             {
                 foreach (NhaCungCapDTO i in NhaCungCapDAL.Instance.GetAllNhaCungCap())
                 {
-                    if (i.TenNhaCungCap.Contains(txt) || i.SoDienThoai.Contains(txt) || i.MaSoThue.Contains(txt))
-                        data.Add(i);
+                    if(cbbText == "Tên nhà cung cấp")
+                    {
+                        if (i.TenNhaCungCap.ToLower().Contains(txt.ToLower()))
+                            data.Add(i);
+                    }    
+                    if(cbbText == "Mã số thuế")
+                    {
+                        if (i.MaSoThue.Contains(txt))
+                            data.Add(i);
+                    }
+                    if (cbbText == "Số điện thoại")
+                    {
+                        if (i.SoDienThoai.Contains(txt))
+                            data.Add(i);
+                    }
+                    if(cbbText == "")
+                    {
+                        data = NhaCungCapDAL.Instance.GetAllNhaCungCap();
+                    }    
                 }
             }
             else
             {
                 foreach (NhaCungCapDTO i in NhaCungCapDAL.Instance.GetAllNhaCungCap())
                 {
-                    if (i.MaLoaiNhaCungCap == maLoaiNCC && (i.TenNhaCungCap.Contains(txt) || i.SoDienThoai.Contains(txt) || i.MaSoThue.Contains(txt)))
-                        data.Add(i);
+                    if (cbbText == "Tên nhà cung cấp"  && maLoaiNCC == i.MaLoaiNhaCungCap)
+                    {
+                        if (i.TenNhaCungCap.ToLower().Contains(txt.ToLower()))
+                            data.Add(i);
+                    }
+                    if (cbbText == "Mã số thuế" && maLoaiNCC == i.MaLoaiNhaCungCap)
+                    {
+                        if (i.MaSoThue.Contains(txt))
+                            data.Add(i);
+                    }
+                    if (cbbText == "Số điện thoại" && maLoaiNCC == i.MaLoaiNhaCungCap)
+                    {
+                        if (i.SoDienThoai.Contains(txt))
+                            data.Add(i);
+                    };
+                    if (cbbText == "" && maLoaiNCC == i.MaLoaiNhaCungCap)
+                    {
+                        data.Add(i);    
+                    }    
                 }
             }
-
             return data;
         }
         public NhaCungCapDTO GetNCCByMaNCC(string MaNCC)
@@ -60,10 +94,10 @@ namespace BLL
             }
             return nhaCungCap;
         }
-        public List<NhaCungCapViewDTO> GetNCCViewMaLoaiNCC(string maLoaiNCC, string txt)
+        public List<NhaCungCapViewDTO> GetNCCViewMaLoaiNCC(string maLoaiNCC, string txt, string tieuChiTiemKiem= "")
         {
             List<NhaCungCapViewDTO> data = new List<NhaCungCapViewDTO>();
-            foreach (NhaCungCapDTO i in GetNCCByMaLoaiNCC(maLoaiNCC, txt))
+            foreach (NhaCungCapDTO i in GetNCCByMaLoaiNCC(maLoaiNCC, txt, tieuChiTiemKiem))
             {
                 data.Add(GetNhaCungCapViewByNhaCungCapDTO(i));
             }
@@ -131,56 +165,7 @@ namespace BLL
             }
         }
 
-        public string KiemTraDuLieu(NhaCungCapDTO nhaCungCap)
-        {
-
-            if (nhaCungCap.TenNhaCungCap == "")
-                return "Tên Nhà cung cấp còn trống!";
-            if (nhaCungCap.MaLoaiNhaCungCap == "")
-                return "Loại nhà cung cấp còn trống!";
-            if (nhaCungCap.MaSoThue == "")
-                return "Mã số thuế còn trống!";
-            if (nhaCungCap.Email == "")
-                return "Email còn trống";
-            if(nhaCungCap.SoDienThoai == "")
-                return "Số điện thoại còn trống!";  
-            if(nhaCungCap.DiaChi == "")
-                return "Địa chỉ còn trống!";
-            if(nhaCungCap.TenGiamDoc == "")
-                return "Người đại diện còn trống!";  
-            if (!CheckAddUpdateNhaCungCap(nhaCungCap))
-            {
-                if (nhaCungCap.MaSoThue != GetNCCByMaNCC(nhaCungCap.MaNhaCungCap).MaSoThue && (int)NhaCungCapDAL.Instance.KiemTraMaSoThue(nhaCungCap) > 0)
-                {
-                    return "Mã số thuế đã tồn tại!";
-                }
-                if (nhaCungCap.SoDienThoai != GetNCCByMaNCC(nhaCungCap.MaNhaCungCap).SoDienThoai && (int)NhaCungCapDAL.Instance.KiemTraSoDienThoai(nhaCungCap) > 0)
-                {
-                    return "Số điện thoại đã tồn tại!";
-                }
-                if (nhaCungCap.Email != GetNCCByMaNCC(nhaCungCap.MaNhaCungCap).Email && (int)NhaCungCapDAL.Instance.KiemTraEmail(nhaCungCap) > 0)
-                {
-                    return "Email đã tồn tại!";
-                }
-            }
-            else
-            {
-                if ((int)NhaCungCapDAL.Instance.KiemTraMaSoThue(nhaCungCap) >= 1)
-                {
-                    return "Mã số thuế đã tồn tại!";
-                }
-                if ((int)NhaCungCapDAL.Instance.KiemTraSoDienThoai(nhaCungCap) >= 1)
-                {
-                    return "Số điện thoại đã tồn tại!";
-                }
-                if ((int)NhaCungCapDAL.Instance.KiemTraEmail(nhaCungCap) >= 1)
-                {
-                    return "Email đã tồn tại!";
-                }
-            }
-            return null;
-        }
-
+       
         public delegate bool CompareObj(object o1, object o2);
         public List<NhaCungCapViewDTO> SortNhaCungCap(List<NhaCungCapViewDTO> now, string dkSort)
         {
@@ -281,10 +266,81 @@ namespace BLL
         public DataTable TimKiemVatTuTheoTen(string maNhaCungCap, string txt = "")
         {
             DataTable data = GetSPByMaNhaCungCap(maNhaCungCap);
-            var results = data.AsEnumerable().Where(myRow => myRow[1].ToString().ToLower().Contains(txt.ToLower())).CopyToDataTable();
-
-            return results;    
+            var results = data.AsEnumerable().Where(myRow => myRow[1].ToString().ToLower().Contains(txt.ToLower())).Select(myRow => myRow);
+            if (results != null && results.GetEnumerator().MoveNext())
+            {
+                return results.CopyToDataTable();
+            }
+            else
+            {
+                data.Rows.Clear();
+                data.AcceptChanges();
+            }
+            return data;
         }
+        public bool KiemTraMaSoThue(string maNhaCungCap, string maSoThue)
+        {
+            bool check = true;
+            if (GetNCCByMaNCC(maNhaCungCap) != null)    // cap nhat
+            {
+
+                if (maSoThue != GetNCCByMaNCC(maNhaCungCap).MaSoThue && GetAllNhaCungCap().FindIndex(x => x.MaSoThue == maSoThue) != -1)
+                {
+                    maSoThue = "Mã số thuế đã tồn tại!";
+                    check = false;
+                }
+             
+            }
+            else  // them
+            {
+                if (GetAllNhaCungCap().FindIndex(x => x.MaSoThue == maSoThue) != -1)
+                {
+                    maSoThue = "Mã số thuế đã tồn tại!";
+                    check = false;
+                }
+            }
+            return check;
+        }
+        public bool KiemTraSDT(string maNhaCungCap, string sdt)
+        {
+            bool check = true;
+            if (GetNCCByMaNCC(maNhaCungCap) != null)    // cap nhat
+            {
+                if (sdt != GetNCCByMaNCC(maNhaCungCap).SoDienThoai && GetAllNhaCungCap().FindIndex(x => x.SoDienThoai == sdt) != -1)
+                {
+                    check = false;
+                }
+            }
+            else  // them
+            {
+                if (GetAllNhaCungCap().FindIndex(x => x.SoDienThoai == sdt) != -1)
+                {
+                    check = false;
+                }
+            }
+            return check;
+        }
+        public bool KiemTraEmail(string maNhaCungCap, string email)
+        {
+            bool check = true;
+            if (GetNCCByMaNCC(maNhaCungCap) != null)    // cap nhat
+            {
+                if (email != GetNCCByMaNCC(maNhaCungCap).Email && GetAllNhaCungCap().FindIndex(x => x.Email == email) != -1)
+                {
+                    check = false;
+                }
+            }
+            else  // them
+            {
+                if (GetAllNhaCungCap().FindIndex(x => x.Email == email) != -1)
+                {
+                    check = false;
+                }
+            }
+            return check;
+        }
+
     }
+   
 }
 
