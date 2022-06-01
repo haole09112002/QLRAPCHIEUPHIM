@@ -53,11 +53,11 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.cbbTimKiemDK);
+            this.panel1.Controls.Add(this.cbbTimKiemCT);
+            this.panel1.Controls.Add(this.txtTimKiemCT);
             this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.btnTimKiemCT);
             this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.txtTimKiemDK);
-            this.panel1.Controls.Add(this.btnTimKiemDK);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(10, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -74,21 +74,21 @@
             "Tên Phim",
             "Tên Phòng Chiếu",
             "Ngày Chiếu"});
-            this.cbbTimKiemDK.Location = new System.Drawing.Point(564, 175);
+            this.cbbTimKiemDK.Location = new System.Drawing.Point(549, 24);
             this.cbbTimKiemDK.Name = "cbbTimKiemDK";
             this.cbbTimKiemDK.Size = new System.Drawing.Size(120, 23);
             this.cbbTimKiemDK.TabIndex = 24;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.cbbTimKiemCT);
-            this.groupBox3.Controls.Add(this.txtTimKiemCT);
-            this.groupBox3.Controls.Add(this.btnTimKiemCT);
             this.groupBox3.Controls.Add(this.btnKhongDongY);
+            this.groupBox3.Controls.Add(this.cbbTimKiemDK);
             this.groupBox3.Controls.Add(this.btnDongY);
-            this.groupBox3.Location = new System.Drawing.Point(10, 390);
+            this.groupBox3.Controls.Add(this.btnTimKiemDK);
+            this.groupBox3.Controls.Add(this.txtTimKiemDK);
+            this.groupBox3.Location = new System.Drawing.Point(15, 167);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(700, 70);
+            this.groupBox3.Size = new System.Drawing.Size(700, 60);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             // 
@@ -101,7 +101,7 @@
             "Tên Phim",
             "Tên Phòng Chiếu",
             "Ngày Chiếu"});
-            this.cbbTimKiemCT.Location = new System.Drawing.Point(554, 30);
+            this.cbbTimKiemCT.Location = new System.Drawing.Point(564, 409);
             this.cbbTimKiemCT.Name = "cbbTimKiemCT";
             this.cbbTimKiemCT.Size = new System.Drawing.Size(120, 23);
             this.cbbTimKiemCT.TabIndex = 26;
@@ -109,7 +109,7 @@
             // txtTimKiemCT
             // 
             this.txtTimKiemCT.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiemCT.Location = new System.Drawing.Point(392, 27);
+            this.txtTimKiemCT.Location = new System.Drawing.Point(397, 409);
             this.txtTimKiemCT.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiemCT.Name = "txtTimKiemCT";
             this.txtTimKiemCT.Size = new System.Drawing.Size(157, 24);
@@ -123,7 +123,7 @@
             this.btnTimKiemCT.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiemCT.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnTimKiemCT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemCT.Location = new System.Drawing.Point(285, 25);
+            this.btnTimKiemCT.Location = new System.Drawing.Point(300, 407);
             this.btnTimKiemCT.Name = "btnTimKiemCT";
             this.btnTimKiemCT.Size = new System.Drawing.Size(92, 26);
             this.btnTimKiemCT.TabIndex = 24;
@@ -157,7 +157,7 @@
             this.btnDongY.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDongY.Image = global::GUI.Properties.Resources.Accept;
             this.btnDongY.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDongY.Location = new System.Drawing.Point(12, 24);
+            this.btnDongY.Location = new System.Drawing.Point(26, 24);
             this.btnDongY.Name = "btnDongY";
             this.btnDongY.Size = new System.Drawing.Size(84, 29);
             this.btnDongY.TabIndex = 21;
@@ -170,7 +170,7 @@
             // 
             this.groupBox2.Controls.Add(this.dgvLichChieuCT);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(10, 201);
+            this.groupBox2.Location = new System.Drawing.Point(10, 231);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -195,7 +195,7 @@
             // txtTimKiemDK
             // 
             this.txtTimKiemDK.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiemDK.Location = new System.Drawing.Point(402, 173);
+            this.txtTimKiemDK.Location = new System.Drawing.Point(382, 24);
             this.txtTimKiemDK.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiemDK.Name = "txtTimKiemDK";
             this.txtTimKiemDK.Size = new System.Drawing.Size(157, 24);
@@ -209,7 +209,7 @@
             this.btnTimKiemDK.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiemDK.Image = global::GUI.Properties.Resources.SearchIcon;
             this.btnTimKiemDK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemDK.Location = new System.Drawing.Point(295, 173);
+            this.btnTimKiemDK.Location = new System.Drawing.Point(285, 25);
             this.btnTimKiemDK.Name = "btnTimKiemDK";
             this.btnTimKiemDK.Size = new System.Drawing.Size(92, 26);
             this.btnTimKiemDK.TabIndex = 23;
