@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnXuat = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.cbbSapXep = new System.Windows.Forms.ComboBox();
@@ -60,10 +60,20 @@
             this.panel1.Size = new System.Drawing.Size(727, 464);
             this.panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(18, 447);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 13);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "*Kích đúp 1 dòng để xem chi tiết";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.btnXuat);
             this.groupBox2.Controls.Add(this.btnTimKiem);
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Controls.Add(this.cbbSapXep);
@@ -86,23 +96,6 @@
             this.label2.TabIndex = 34;
             this.label2.Text = "LOẠI KHO";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnXuat
-            // 
-            this.btnXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnXuat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXuat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuat.Image = global::GUI.Properties.Resources.Download;
-            this.btnXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuat.Location = new System.Drawing.Point(364, 49);
-            this.btnXuat.Name = "btnXuat";
-            this.btnXuat.Size = new System.Drawing.Size(111, 32);
-            this.btnXuat.TabIndex = 25;
-            this.btnXuat.Text = "XUẤT EXCEL";
-            this.btnXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnXuat.UseVisualStyleBackColor = false;
-            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // btnTimKiem
             // 
@@ -246,7 +239,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnXuat;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ComboBox cbbSapXep;

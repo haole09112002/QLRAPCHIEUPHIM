@@ -41,7 +41,7 @@ namespace GUI.QLP_GUI
         {
             if (cBTimKiem.SelectedIndex < 0)
             {
-                Reload(txtTimKiem.Text);
+                    MessageBox.Show("Chưa chọn loại tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -104,6 +104,11 @@ namespace GUI.QLP_GUI
             if (cBSapXep.SelectedIndex >= 0)
             {
                 Sort = cBSapXep.SelectedItem.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn loại sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             if (cBTimKiem.SelectedIndex >= 0)
             {
