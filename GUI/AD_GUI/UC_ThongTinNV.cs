@@ -25,7 +25,7 @@ namespace GUI.AD_GUI
         {
             cbbTrangThai.Items.AddRange(new string[]
             {
-             "Bình Thường","Khóa"
+             "Nhân Viên Hoạt Động","Nhân Viên Bị Khóa"
             });
             cbbTrangThai.SelectedIndex = 0;
             cbbTimKiem.Items.AddRange(new string[]
@@ -106,7 +106,7 @@ namespace GUI.AD_GUI
            
             if (dgvDSNhanVien.SelectedRows.Count <= 0)
                 {
-                 MessageBox.Show("Mời chọn phim");
+                 MessageBox.Show("Mời Chọn 1 Nhân Viên");
                 }
             else
                 {
@@ -114,18 +114,20 @@ namespace GUI.AD_GUI
                  string maNhanVien = dgvDSNhanVien.SelectedRows[0].Cells["MaNhanVien"].Value.ToString();
                 if(maNhanVien == NV.MaNhanVien)
                 {
-                    MessageBox.Show("hhh");
+                    MessageBox.Show("Không Thể Xóa Nhân Viên Đang Đăng Nhập");
                 }
                 else
                 {
                     if (cbbTrangThai.SelectedIndex == 0)
                     {
+                        DialogResult result = MessageBox.Show("Bạn muốn xóa?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                         NhanVienBLL.CapNhatTrangThaiNhanVien(maNhanVien, "0");
                         loadDGVDSNhanVien("1");
                     }
 
                     if (cbbTrangThai.SelectedIndex == 1)
                     {
+                        DialogResult result = MessageBox.Show("Bạn muốn khôi phục?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                         NhanVienBLL.CapNhatTrangThaiNhanVien(maNhanVien, "1");
                         loadDGVDSNhanVien("0");
                     }
@@ -138,7 +140,7 @@ namespace GUI.AD_GUI
 
         private void cbbTrangThai_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbbTrangThai.SelectedIndex==0)
+            if (cbbTrangThai.SelectedIndex == 0)
             {
                 loadDGVDSNhanVien("1");
                 btnDelete.Text = "XÓA";

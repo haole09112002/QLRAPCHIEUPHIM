@@ -109,11 +109,17 @@ namespace GUI.AD_GUI
         }
         private void btnTimKiemDK_Click(object sender, EventArgs e)
         {
-            ReloadDK(txtTimKiemDK.Text, cbbTimKiemDK.SelectedItem.ToString());
+            if (cbbTimKiemDK.SelectedIndex >= 0)
+            {
+                ReloadDK(txtTimKiemDK.Text, cbbTimKiemDK.SelectedItem.ToString());
+            }
         }
         private void btnTimKiemCT_Click(object sender, EventArgs e)
         {
-            ReloadCT(txtTimKiemCT.Text, cbbTimKiemCT.SelectedItem.ToString());
+            if (cbbTimKiemCT.SelectedIndex >= 0)
+            {
+                ReloadCT(txtTimKiemCT.Text, cbbTimKiemCT.SelectedItem.ToString());
+            }
         }
         private void btnKhongDongY_Click(object sender, EventArgs e)
         {

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbTrangThai = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.cbbTimKiem = new System.Windows.Forms.ComboBox();
             this.btnXemCT = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@
             this.dgvDSNhanVien = new System.Windows.Forms.DataGridView();
             this.cbbSapXep = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.cbbTrangThai = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhanVien)).BeginInit();
@@ -48,6 +49,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.cbbTrangThai);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.cbbTimKiem);
@@ -64,6 +66,17 @@
             this.panel1.Size = new System.Drawing.Size(721, 451);
             this.panel1.TabIndex = 0;
             // 
+            // cbbTrangThai
+            // 
+            this.cbbTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbbTrangThai.FormattingEnabled = true;
+            this.cbbTrangThai.Location = new System.Drawing.Point(154, 38);
+            this.cbbTrangThai.Name = "cbbTrangThai";
+            this.cbbTrangThai.Size = new System.Drawing.Size(142, 24);
+            this.cbbTrangThai.TabIndex = 43;
+            this.cbbTrangThai.SelectedIndexChanged += new System.EventHandler(this.cbbTrangThai_SelectedIndexChanged);
+            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.LightCoral;
@@ -74,7 +87,7 @@
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(284, 398);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(118, 29);
+            this.btnDelete.Size = new System.Drawing.Size(145, 29);
             this.btnDelete.TabIndex = 42;
             this.btnDelete.Text = "XÓA";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -115,9 +128,9 @@
             this.btnSapXep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSapXep.Image = global::GUI.Properties.Resources.Sort;
             this.btnSapXep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSapXep.Location = new System.Drawing.Point(32, 12);
+            this.btnSapXep.Location = new System.Drawing.Point(32, 7);
             this.btnSapXep.Name = "btnSapXep";
-            this.btnSapXep.Size = new System.Drawing.Size(92, 31);
+            this.btnSapXep.Size = new System.Drawing.Size(92, 25);
             this.btnSapXep.TabIndex = 38;
             this.btnSapXep.Text = "    SẮP XẾP";
             this.btnSapXep.UseVisualStyleBackColor = false;
@@ -187,7 +200,7 @@
             this.cbbSapXep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSapXep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSapXep.FormattingEnabled = true;
-            this.cbbSapXep.Location = new System.Drawing.Point(157, 13);
+            this.cbbSapXep.Location = new System.Drawing.Point(154, 7);
             this.cbbSapXep.Name = "cbbSapXep";
             this.cbbSapXep.Size = new System.Drawing.Size(142, 25);
             this.cbbSapXep.TabIndex = 34;
@@ -202,14 +215,19 @@
             this.txtTimKiem.Size = new System.Drawing.Size(171, 24);
             this.txtTimKiem.TabIndex = 33;
             // 
-            // cbbTrangThai
+            // button1
             // 
-            this.cbbTrangThai.FormattingEnabled = true;
-            this.cbbTrangThai.Location = new System.Drawing.Point(157, 41);
-            this.cbbTrangThai.Name = "cbbTrangThai";
-            this.cbbTrangThai.Size = new System.Drawing.Size(142, 21);
-            this.cbbTrangThai.TabIndex = 43;
-            this.cbbTrangThai.SelectedIndexChanged += new System.EventHandler(this.cbbTrangThai_SelectedIndexChanged);
+            this.button1.BackColor = System.Drawing.Color.Cyan;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(32, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 24);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "TRẠNG THÁI";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // UC_ThongTinNV
             // 
@@ -241,5 +259,6 @@
         private System.Windows.Forms.ComboBox cbbTimKiem;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.ComboBox cbbTrangThai;
+        private System.Windows.Forms.Button button1;
     }
 }
