@@ -11,6 +11,8 @@ namespace GUI.QLVT_GUI
         {
             InitializeComponent();
             SetGUI();
+            btnSapXepThucAn.Enabled = false;
+            btnSapXepVatTu.Enabled = false;
         }
         public void SetGUI()
         {
@@ -130,6 +132,16 @@ namespace GUI.QLVT_GUI
         {
             txtTimKiemVatTu.Text = null;
             txtTimKiemVatTu.ForeColor = Color.Black;
+        }
+
+        private void cboSapXep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnSapXepThucAn.Enabled = true;
+        }
+
+        private void cboSapXepVatTu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnSapXepVatTu.Enabled = true;
         }
     }
 }

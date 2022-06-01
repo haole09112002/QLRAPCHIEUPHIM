@@ -121,5 +121,15 @@ namespace GUI.QLVT_GUI
             frmDangNhap frm = new frmDangNhap();
             frm.Show();
         }
+
+        private void pbMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
