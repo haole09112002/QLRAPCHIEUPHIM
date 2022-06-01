@@ -20,7 +20,7 @@ go
 Create table NHA_CUNG_CAP(
 	MaNhaCungCap varchar(6) primary key not null constraint IDNCC default dbo.AUTO_IDNCC(),
 	TenNhaCungCap nvarchar(40),
-	MaSoThue varchar(10),
+	MaSoThue varchar(15),
 	DiaChi nvarchar(50),
 	Email varchar(50),
 	SoDienThoai varchar(15),
@@ -149,7 +149,8 @@ Create table NHAN_VIEN(
 	MatKhau varchar(32),
 	Anh image,
 	MaChinhSach varchar(6) foreign key(MaChinhSach) references CHINH_SACH,
-	MaChucVu varchar(6) foreign key(MaChucVu) references CHUC_VU
+	MaChucVu varchar(6) foreign key(MaChucVu) references CHUC_VU,
+	TrangThai varchar(1)---0(tat),1(bat)
 )
 go
 --Bang Chi Tiet Ca Lam

@@ -4,7 +4,6 @@ using DTO;
 using System;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -23,9 +22,6 @@ namespace GUI.QLVT_GUI
         }
         public void Reload()
         {
-
-            rbNam.Enabled = false;
-            rbNu.Enabled = false;
             if (nhanVien.GioiTinh == true)
             {
                 rbNam.Checked = true;
@@ -33,18 +29,6 @@ namespace GUI.QLVT_GUI
             else
             {
                 rbNu.Checked = true;
-            }
-            if (nhanVien.Anh1 != null)
-            {
-                MemoryStream memoryStream = new MemoryStream(nhanVien.Anh1);
-                if (memoryStream == null) MessageBox.Show("rong1");
-                if (pbAnhNhanVien.Image != null) pbAnhNhanVien.Image.Dispose();
-                pbAnhNhanVien.Image = Image.FromStream(memoryStream);
-
-            }
-            else if (nhanVien.Anh1 == null)
-            {
-                pbAnhNhanVien.Image = null;
             }
             lblChucVu.Text = ChucVuBLL.Instance.GetChucVuByMaChucVu(nhanVien.MaChucVu).TenChucVu;
             txtTen.Text = nhanVien.TenNhanVien;
@@ -68,8 +52,11 @@ namespace GUI.QLVT_GUI
             txtDiaChi.ReadOnly = true;
             txtDienThoai.ReadOnly = true;
             txtCCCD.ReadOnly = true;
+            rbNam.Enabled = false;
+            rbNu.Enabled = false;
             btnLuu.Enabled = false;
             checkEdit = true;
+            btnDoiAnh.Enabled = false;
             LoadListCaLamViec();
         }
         public void LoadListCaLamViec()
@@ -111,6 +98,7 @@ namespace GUI.QLVT_GUI
                 rbNam.Enabled = true;
                 rbNu.Enabled = true;
                 checkEdit = false;
+                btnDoiAnh.Enabled = true;
             }
             else
             {
@@ -127,6 +115,7 @@ namespace GUI.QLVT_GUI
                 rbNam.Enabled = false;
                 rbNu.Enabled = false;
                 checkEdit = true;
+                btnDoiAnh.Enabled = false;
             }
         }
         public bool checkValidate()
@@ -151,7 +140,7 @@ namespace GUI.QLVT_GUI
                 check = false;
             }
             //Độ dài là 12 chữ số, bắt đầu bằng số 0
-            if (Regex.IsMatch(txtCCCD.Text, @"(0)+([1-9]{11})\b") != true)
+            if (Regex.IsMatch(txtCCCD.Text, @"(0)+([0-9]{11})\b") != true)
             {
                 lblValidatedCCCD.Visible = true;
                 check = false;
@@ -179,14 +168,13 @@ namespace GUI.QLVT_GUI
                     nhanVien.SoDienThoai = txtDienThoai.Text;
                     if (rbNam.Checked == true)
                     {
-                        nhanVien.GioiTinh = true;
+                        nhanVien.GioiTinh = false;
                     }
                     else
                     {
-                        nhanVien.GioiTinh = false;
+                        nhanVien.GioiTinh = true;
                     }
                     nhanVien.NgaySinh = dtpNgaySinh.Value;
-                    nhanVien.Anh1 = PhimBLL.Instance.ChuyenAnhThanhMangByte(pbAnhNhanVien);
                     NhanVienBLL.Instance.AddUpdateNhanVien(nhanVien);
                     MessageBox.Show("Cập nhật thành công!");
                     Reload();
@@ -205,7 +193,7 @@ namespace GUI.QLVT_GUI
             if (nhanVien.TenNhanVien == txtTen.Text && nhanVien.GioiTinh == rbNam.Checked
                 && nhanVien.NgaySinh.ToShortDateString() == dtpNgaySinh.Value.ToShortDateString()
                 && nhanVien.DiaChi == txtDiaChi.Text && nhanVien.SoDienThoai == txtDienThoai.Text
-                && nhanVien.CCCD1 == txtCCCD.Text)
+                && nhanVien.CCCD1 == txtCCCD.Text )
             {
                 btnLuu.Enabled = false;
                 lblValidatedCCCD.Visible = false;
@@ -277,13 +265,15 @@ namespace GUI.QLVT_GUI
                 }
             }
         }
-        private void btnThemAnh_Click(object sender, EventArgs e)
+        private void btnDoiAnh_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif; *.jpg; *.jpeg; *.bmp; *.wmf; *.png";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 pbAnhNhanVien.ImageLocation = openFileDialog.FileName;
+                btnLuu.Enabled = true;
+                btnChinhSua.Enabled = false;
             }
         }
     }

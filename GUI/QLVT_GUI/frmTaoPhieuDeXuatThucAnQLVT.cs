@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BLL;
+using DTO;
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
-using DTO;
 
 namespace GUI.QLVT_GUI
 {
@@ -16,18 +11,34 @@ namespace GUI.QLVT_GUI
     {
         DataTable dtDeXuatThucAn = new DataTable();
         DataTable dsDexuatThucAn = new DataTable();
-        NhanVienDTO nhanVien  = new NhanVienDTO();
+        NhanVienDTO nhanVien = new NhanVienDTO();
         public FrmTaoPhieuDeXuatThucAnQLVT(NhanVienDTO nhanVien)
         {
             this.nhanVien = nhanVien;
             InitializeComponent();
             SetDataTable();
             ReLoad();
+            btnLuu.Enabled = false;
+            btnXoa.Enabled = false;
+            lblValidNoiDung.Visible = false;
+            lblValidSoLuong.Visible = false;
         }
-        public void ReLoad()
+        public void ReLoad(string timKiem = "")
         {
             dsDexuatThucAn.Rows.Clear();
-            foreach (ThucAnDTO i in ThucAnBLL.Instance.GetAllThucAn())
+            txtTimKiem.ForeColor = Color.Silver;
+            txtMaThucAn.Text = "";
+            txtDonViTinh.Text = "";
+            nUDSoLuong.Value = 0;
+            txtNoiDung.Text = "";
+            btnThem.Enabled = false;
+            btnChinhSua.Enabled = false;
+            btnChinhSua.Visible = false;
+            nUDSoLuong.Enabled = false;
+            txtNoiDung.Enabled = false;
+            txtTimKiem.Text = "Nhập tên thức ăn";
+            txtDonViTinh.Text = "Thùng";
+            foreach (ThucAnViewDTO i in ThucAnBLL.Instance.GetThucAnViews(timKiem))
             {
                 dsDexuatThucAn.Rows.Add(i.MaThucAn, i.TenThucAn);
             }
@@ -44,84 +55,99 @@ namespace GUI.QLVT_GUI
             dsDexuatThucAn.Columns.Add("Mã Thức Ăn");
             dsDexuatThucAn.Columns.Add("Tên Thức Ăn");
         }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            if (btnLuu.Enabled == true)
+            {
+                DialogResult dialogResult = MessageBox.Show("Bạn chưa lưu có muốn thoát ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question); ;
+                if (dialogResult == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
             this.Close();
+        }
+        public bool KiemTraTonTai(string maSanPham)
+        {
+
+            for (int i = 0; i < dgvListDeXuatThucAn.Rows.Count; i++)
+            {
+                if (dgvListDeXuatThucAn.Rows[i].Cells["Mã Thức Ăn"].Value.ToString() == maSanPham)
+                {
+                    MessageBox.Show("Sản Phẩm đã được đề xuất", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool CheckValidated()
+        {
+            string check = "";
+            if (nUDSoLuong.Value == 0)
+            {
+                lblValidSoLuong.Visible = true;
+                check = "loi!";
+            }
+            else
+            {
+                lblValidSoLuong.Visible = false;
+            }
+            if (txtNoiDung.Text == "")
+            {
+                lblValidNoiDung.Visible = true;
+                check = "loi!";
+            }
+            else
+            {
+                lblValidNoiDung.Visible = false;
+            }
+            if (check == "loi!")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (KiemTraTonTai(txtMaThucAn.Text) == false)
+            {
+                if (CheckValidated() == true)
+                {
+                    foreach (DataGridViewRow i in dgvListThucAn.SelectedRows)
+                    {
+                        dtDeXuatThucAn.Rows.Add(i.Cells["Mã Thức Ăn"].Value.ToString(), ThucAnBLL.Instance.GetThucAnByMaThucAn(i.Cells["Mã Thức Ăn"].Value.ToString()).TenThucAn, nUDSoLuong.Value, txtDonViTinh.Text, txtNoiDung.Text);
+                    }
+                    dgvListDeXuatThucAn.DataSource = dtDeXuatThucAn;
+                    txtMaThucAn.Text = "";
+                    nUDSoLuong.Value = 0;
+                    btnLuu.Enabled = true;
+                    txtNoiDung.Text = "";
+                    lblValidNoiDung.Visible = false;
+                    lblValidSoLuong.Visible = false;
+                }
+            }
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            if (txtSoLuong.Text == "")
+            if (CheckValidated() == true)
             {
-                MessageBox.Show("Mời nhập số lượng");
-            }
-            else
-            {
-                if (txtNoiDung.Text == "")
-                {
-                    MessageBox.Show("Mời nhập nội dung đề xuất");
-                }
-                else
-                {
-                    if (cBDonViTinh.SelectedIndex < 0)
-                    {
-                        MessageBox.Show("Mời chọn đơn vị tính");
-                    }
-                    else
-                    {
-                        dgvListDeXuatThucAn.CurrentRow.Cells["Số Lượng"].Value = txtSoLuong.Text;
-                        dgvListDeXuatThucAn.CurrentRow.Cells["Nội Dung"].Value = txtNoiDung.Text;
-                        dgvListDeXuatThucAn.CurrentRow.Cells["Đơn Vị Tính"].Value = cBDonViTinh.SelectedItem.ToString();
-                    }
-                }
+                btnChinhSua.Visible = false;
+                btnThem.Visible = true;
+                btnThem.Enabled = false;
+                dgvListDeXuatThucAn.CurrentRow.Cells["Mã Thức Ăn"].Value = txtMaThucAn.Text;
+                dgvListDeXuatThucAn.CurrentRow.Cells["Tên Thức Ăn"].Value = dgvListThucAn.CurrentRow.Cells["Tên Thức Ăn"].Value;
+                dgvListDeXuatThucAn.CurrentRow.Cells["Số Lượng"].Value = nUDSoLuong.Value;
+                dgvListDeXuatThucAn.CurrentRow.Cells["Nội Dung"].Value = txtNoiDung.Text;
+                dgvListDeXuatThucAn.CurrentRow.Cells["Đơn Vị Tính"].Value = txtDonViTinh.Text;
             }
         }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            if (dgvListThucAn.SelectedRows.Count <= 0)
-            {
-                MessageBox.Show("Mời chọn vật tư");
-            }
-            else
-            {
-                if (txtSoLuong.Text == "")
-                {
-                    MessageBox.Show("Mời nhập vật tư");
-                }
-                else
-                {
-                    if (txtNoiDung.Text == "")
-                    {
-                        MessageBox.Show("Mời nhập nội dung đề xuất");
-                    }
-                    else
-                    {
-                        if (cBDonViTinh.SelectedIndex < 0)
-                        {
-                            MessageBox.Show("Mời chọn đơn vị tính");
-                        }
-                        else
-                        {
-                            foreach (DataGridViewRow i in dgvListThucAn.SelectedRows)
-                            {
-                                dtDeXuatThucAn.Rows.Add(i.Cells["Mã Thức Ăn"].Value.ToString(), ThucAnBLL.Instance.GetThucAnByMaThucAn(i.Cells["Mã Thức Ăn"].Value.ToString()).TenThucAn, txtSoLuong.Text, cBDonViTinh.SelectedItem.ToString(), txtNoiDung.Text);
-                            }
-                        }
-                    }
-                }
-            }
-            dgvListDeXuatThucAn.DataSource = dtDeXuatThucAn;
-        }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (dgvListDeXuatThucAn.SelectedRows.Count <= 0)
-            {
-                MessageBox.Show("Mời chọn dòng để xóa");
-            }
-            else
+            if (dgvListDeXuatThucAn.SelectedRows.Count == 1)
             {
                 DialogResult dialogResult = MessageBox.Show("Xác Nhận Xóa", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question); ;
                 if (dialogResult == DialogResult.OK)
@@ -129,6 +155,17 @@ namespace GUI.QLVT_GUI
                     {
                         dgvListDeXuatThucAn.Rows.RemoveAt(i.Index);
                     }
+                btnXoa.Enabled = false;
+                btnChinhSua.Visible = false;
+                btnThem.Visible = true;
+            }
+            if (dgvListDeXuatThucAn.Rows.Count == 0)
+            {
+                btnLuu.Enabled = false;
+            }
+            else
+            {
+                btnLuu.Enabled = true;
             }
         }
 
@@ -137,13 +174,13 @@ namespace GUI.QLVT_GUI
             DialogResult dialogResult = MessageBox.Show("Xác nhận lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.OK)
             {
-                DeXuatBLL.Instance.LuuDeXuat(nhanVien.MaNhanVien, DateTime.Now, "LDX03"); 
+                DeXuatBLL.Instance.LuuDeXuat(nhanVien.MaNhanVien, DateTime.Now, "LDX03");
                 string MaDeXuat = DeXuatBLL.Instance.GetMaDeXuatAddNew();
                 string MaThucAn = "";
                 string NoiDung = "";
                 string DonViTinh = "";
                 int SoLuong;
-                for (int i = 0; i < dgvListDeXuatThucAn.Rows.Count - 1; i++)
+                for (int i = 0; i < dgvListDeXuatThucAn.Rows.Count; i++)
                 {
                     MaThucAn = dgvListDeXuatThucAn.Rows[i].Cells["Mã Thức Ăn"].Value.ToString();
                     NoiDung = dgvListDeXuatThucAn.Rows[i].Cells["Nội Dung"].Value.ToString();
@@ -151,21 +188,65 @@ namespace GUI.QLVT_GUI
                     SoLuong = Convert.ToInt32(dgvListDeXuatThucAn.Rows[i].Cells["Số Lượng"].Value.ToString());
                     ChiTietDeXuatThucAnBLL.Instance.LuuChiTietDeXuatThucAn(MaDeXuat, MaThucAn, NoiDung, DonViTinh, SoLuong, "1");
                 }
+                MessageBox.Show("Thêm Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }
 
-        private void dgvListDeXuatThucAn_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void txtTimKiem_MouseClick(object sender, MouseEventArgs e)
         {
-            if (dgvListDeXuatThucAn.SelectedRows.Count > 1)
+            txtTimKiem.Text = null;
+            txtTimKiem.ForeColor = Color.Black;
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            ReLoad(txtTimKiem.Text);
+        }
+
+        private void dgvListThucAn_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (KiemTraTonTai(dgvListThucAn.CurrentRow.Cells["Mã Thức Ăn"].Value.ToString()) == false)
             {
-                MessageBox.Show("Số dòng chỉnh sửa không vượt quá 1");
+                if (dgvListThucAn.SelectedRows.Count == 1)
+                {
+                    txtMaThucAn.Text = dgvListThucAn.CurrentRow.Cells["Mã Thức Ăn"].Value.ToString();
+                    if (btnThem.Visible == true)
+                    {
+                        btnChinhSua.Visible = false;
+                        btnThem.Enabled = true;
+                    }
+                    else
+                    {
+                        btnChinhSua.Visible = true;
+                        btnChinhSua.Enabled = true;
+                    }
+                    nUDSoLuong.Enabled = true;
+                    txtNoiDung.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Chỉ được chọn 1 dòng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void dgvListDeXuatThucAn_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dgvListDeXuatThucAn.SelectedRows.Count == 1)
+            {
+                btnXoa.Enabled = true;
+                btnChinhSua.Enabled = false;
+                btnChinhSua.Visible = true;
+                btnThem.Enabled = false;
+                btnThem.Visible = false;
             }
             else
             {
-                txtSoLuong.Text = dgvListDeXuatThucAn.CurrentRow.Cells["Số Lượng"].Value.ToString();
-                txtNoiDung.Text = dgvListDeXuatThucAn.CurrentRow.Cells["Nội Dung"].Value.ToString();
-                cBDonViTinh.Text = dgvListDeXuatThucAn.CurrentRow.Cells["Đơn Vị Tính"].Value.ToString();
+                MessageBox.Show("Chỉ được chọn 1 dòng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnXoa.Enabled = false;
+                btnChinhSua.Enabled = false;
+                btnThem.Enabled = false;
             }
         }
     }

@@ -77,6 +77,7 @@
             this.nUDThoiLuong = new System.Windows.Forms.NumericUpDown();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
+            this.nUDThoiLuong = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.gBMoTaPhim.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDaoDien)).BeginInit();

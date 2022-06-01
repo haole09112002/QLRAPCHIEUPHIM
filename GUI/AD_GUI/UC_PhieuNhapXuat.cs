@@ -30,7 +30,7 @@ namespace GUI.AD_GUI
             dtDanhSachPhieuNhapXuat.Columns.Add("Tên Nhân Viên");
             dtDanhSachPhieuNhapXuat.Columns.Add("Loại Phiếu");
             dtDanhSachPhieuNhapXuat.Columns.Add("Ngày Lập Phiếu");
-            dtChiTietPhieuNhapXuat.Columns.Add("Tên Phim");
+            dtChiTietPhieuNhapXuat.Columns.Add("Tên Sản Phẩm");
             dtChiTietPhieuNhapXuat.Columns.Add("Số Lượng");
             dtChiTietPhieuNhapXuat.Columns.Add("Đơn Vị Tính");
             //dtChiTietPhieuNhapXuatVatTu.Columns.Add("Tên Vật Tư");

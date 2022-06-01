@@ -39,13 +39,12 @@ namespace GUI.QLVT_GUI
             {
                 string maNhaCungCap = dgvListNCCThucAn.SelectedRows[0].Cells["MaNhaCungCap"].Value.ToString();
                 FrmChiTietNhaCungCap frmChiTietNhaCungCap = new FrmChiTietNhaCungCap(maNhaCungCap);
-                frmChiTietNhaCungCap.d = new FrmChiTietNhaCungCap.Mydel(ReLoadListNCCThucAn);
                 frmChiTietNhaCungCap.ShowDialog();
             }
         }
-        public void ReLoadListNCCThucAn(string maLoaiNCC = "LNCC03", string txt = "")
+        public void ReLoadListNCCThucAn(string maLoaiNCC = "LNCC03", string txt = "", string tieuChiTimKiem = "")
         {
-            dgvListNCCThucAn.DataSource = NhaCungCapBLL.Instance.GetNCCViewMaLoaiNCC(maLoaiNCC, txt);
+            dgvListNCCThucAn.DataSource = NhaCungCapBLL.Instance.GetNCCViewMaLoaiNCC(maLoaiNCC, txt, tieuChiTimKiem);
             dgvListNCCThucAn.Columns["TenLoaiNhaCungCap"].Visible = false;
         }
         private void cbSapXep_SelectedIndexChanged(object sender, EventArgs e)

@@ -221,8 +221,8 @@ namespace GUI.AD_GUI
                 if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX03")
                 {
                     ChiTietDeXuatThucAnBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "0");
-
-
+                    loadDGVDeXuat("LDX03");
+                    loadDGVDaDeXuat("LDX03");
                 }
             }
         }

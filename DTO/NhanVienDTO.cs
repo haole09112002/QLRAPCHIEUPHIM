@@ -20,6 +20,7 @@ namespace DTO
         private byte[] Anh;
         private string maChinhSach;
         private string maChucVu;
+        private string trangThai;
 
         public string MaNhanVien { get => maNhanVien; set => maNhanVien = value; }
         public string TenNhanVien { get => tenNhanVien; set => tenNhanVien = value; }
@@ -33,5 +34,6 @@ namespace DTO
         public byte[] Anh1 { get => Anh; set => Anh = value; }
         public string MaChinhSach { get => maChinhSach; set => maChinhSach = value; }
         public string MaChucVu { get => maChucVu; set => maChucVu = value; }
+        public string TrangThai { get => trangThai; set => trangThai = value; }
     }
 }

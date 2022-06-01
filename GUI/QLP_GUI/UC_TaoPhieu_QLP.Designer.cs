@@ -70,7 +70,7 @@
             this.txtTenPhim.Location = new System.Drawing.Point(915, 57);
             this.txtTenPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenPhim.Name = "txtTenPhim";
-            this.txtTenPhim.Size = new System.Drawing.Size(347, 28);
+            this.txtTenPhim.Size = new System.Drawing.Size(488, 28);
             this.txtTenPhim.TabIndex = 5;
             // 
             // cBMaKho
@@ -80,7 +80,7 @@
             this.cBMaKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBMaKho.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.cBMaKho.FormattingEnabled = true;
-            this.cBMaKho.Location = new System.Drawing.Point(988, 47);
+            this.cBMaKho.Location = new System.Drawing.Point(802, 49);
             this.cBMaKho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBMaKho.Name = "cBMaKho";
             this.cBMaKho.Size = new System.Drawing.Size(304, 27);
@@ -108,12 +108,13 @@
             this.panel1.Controls.Add(this.lbLoaiPhieu);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.btnLuu);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.gBPhimDaThem);
             this.panel1.Controls.Add(this.cBMaKho);
             this.panel1.Controls.Add(this.gBLuaChonPhim);
             this.panel1.Controls.Add(this.cBMaLoaiPhieu);
-            this.panel1.Location = new System.Drawing.Point(19, 15);
+            this.panel1.Location = new System.Drawing.Point(26, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1319, 760);
@@ -170,7 +171,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label6.Image = global::GUI.Properties.Resources.NhapXuat;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(535, 9);
+            this.label6.Location = new System.Drawing.Point(422, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(324, 34);
             this.label6.TabIndex = 27;
@@ -182,7 +183,6 @@
             this.gBPhimDaThem.Controls.Add(this.lbPhimDaThem);
             this.gBPhimDaThem.Controls.Add(this.btnXoa);
             this.gBPhimDaThem.Controls.Add(this.dGVPhimDaThem);
-            this.gBPhimDaThem.Controls.Add(this.btnLuu);
             this.gBPhimDaThem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.gBPhimDaThem.Location = new System.Drawing.Point(19, 367);
             this.gBPhimDaThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -232,7 +232,7 @@
             this.dGVPhimDaThem.ReadOnly = true;
             this.dGVPhimDaThem.RowHeadersWidth = 62;
             this.dGVPhimDaThem.RowTemplate.Height = 28;
-            this.dGVPhimDaThem.Size = new System.Drawing.Size(1227, 277);
+            this.dGVPhimDaThem.Size = new System.Drawing.Size(1054, 129);
             this.dGVPhimDaThem.TabIndex = 0;
             this.dGVPhimDaThem.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVPhimDaThem_CellDoubleClick);
             // 
@@ -273,7 +273,7 @@
             this.gBLuaChonPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBLuaChonPhim.Name = "gBLuaChonPhim";
             this.gBLuaChonPhim.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gBLuaChonPhim.Size = new System.Drawing.Size(1276, 267);
+            this.gBLuaChonPhim.Size = new System.Drawing.Size(1087, 267);
             this.gBLuaChonPhim.TabIndex = 14;
             this.gBLuaChonPhim.TabStop = false;
             this.gBLuaChonPhim.Text = "LỰA CHỌN PHIM";
@@ -330,7 +330,7 @@
             this.nUDSoLuong.Location = new System.Drawing.Point(915, 118);
             this.nUDSoLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nUDSoLuong.Name = "nUDSoLuong";
-            this.nUDSoLuong.Size = new System.Drawing.Size(347, 28);
+            this.nUDSoLuong.Size = new System.Drawing.Size(488, 28);
             this.nUDSoLuong.TabIndex = 62;
             // 
             // label4
@@ -391,7 +391,7 @@
             this.dGVDanhSachPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVDanhSachPhim.BackgroundColor = System.Drawing.Color.White;
             this.dGVDanhSachPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVDanhSachPhim.Location = new System.Drawing.Point(17, 57);
+            this.dGVDanhSachPhim.Location = new System.Drawing.Point(17, 68);
             this.dGVDanhSachPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDanhSachPhim.Name = "dGVDanhSachPhim";
             this.dGVDanhSachPhim.RowHeadersWidth = 62;
@@ -408,7 +408,7 @@
             this.cBDonViTinh.Location = new System.Drawing.Point(915, 171);
             this.cBDonViTinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBDonViTinh.Name = "cBDonViTinh";
-            this.cBDonViTinh.Size = new System.Drawing.Size(347, 27);
+            this.cBDonViTinh.Size = new System.Drawing.Size(488, 27);
             this.cBDonViTinh.TabIndex = 7;
             // 
             // btnChinhSua
@@ -437,7 +437,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_TaoPhieu_QLP";
-            this.Size = new System.Drawing.Size(1360, 788);
+            this.Size = new System.Drawing.Size(1185, 613);
             this.Leave += new System.EventHandler(this.UC_TaoPhieu_QLP_Leave);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

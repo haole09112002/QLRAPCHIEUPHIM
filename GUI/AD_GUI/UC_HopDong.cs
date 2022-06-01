@@ -55,12 +55,14 @@ namespace GUI.AD_GUI
             cbLoaiHopDongMuonTao.Items.AddRange(LoaiHopDongBLL.Instance.GetCBBLoaiHopDong().ToArray());
             cbLoaiHopDong.Items.AddRange(LoaiHopDongBLL.Instance.GetCBBLoaiHopDong().ToArray());
             cbSapXep.Items.AddRange(new string[] { "Tên A->Z", "Tên Z->A", "Ngày kí kết tăng", "Ngày kí kết giảm" });
-            cbLoaiHopDong.SelectedItem = cbLoaiHopDong.Items[0];
+            cbLoaiHopDong.SelectedIndex = 0;
+            cbbTieuChiTimKiem.Items.AddRange(new string[] { "Tên hợp đồng", "Ngày kí kết", "Tên nhà cung cấp" });
+            cbbTieuChiTimKiem.SelectedIndex = 0;
             loadDGV();  
         }
-        public void loadDGV(string maLoaiHopDong = "0", string txt = "")
+        public void loadDGV(string maLoaiHopDong = "0", string txt = "", string tieuChiTimKiem = "")
         {
-            dgvDSHopDong.DataSource = HopDongBLL.Instance.GetHopDongViewByMaLoaiHopDong(maLoaiHopDong, txt);
+            dgvDSHopDong.DataSource = HopDongBLL.Instance.GetHopDongViewByMaLoaiHopDong(maLoaiHopDong, txt, tieuChiTimKiem);
             dgvDSHopDong.Columns["MaHopDong"].HeaderText = "Mã hợp đồng";
             dgvDSHopDong.Columns["TenHopDong"].HeaderText = "Tên hợp đồng";
             dgvDSHopDong.Columns["TenNhaCungCap"].HeaderText = "Tên nhà cung cấp";
@@ -105,7 +107,7 @@ namespace GUI.AD_GUI
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            loadDGV(((CBBItem)cbLoaiHopDong.SelectedItem).Value, txtTimKiem.Text);
+            loadDGV(((CBBItem)cbLoaiHopDong.SelectedItem).Value, txtTimKiem.Text, cbbTieuChiTimKiem.SelectedItem.ToString());
         }
 
         private void btnExcel_Click(object sender, EventArgs e)
