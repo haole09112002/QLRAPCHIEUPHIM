@@ -21,12 +21,13 @@ namespace GUI.AD_GUI
         UCHoSoCaNhanQLVT ucCaNhan;
 
         UC_MenuThongKe ucMenuThongKe = new UC_MenuThongKe();
-        UC_MenuNhanVien ucMenuNhanVien = new UC_MenuNhanVien();
+        UC_MenuNhanVien ucMenuNhanVien;
         UC_MenuKho ucMenuKho = new UC_MenuKho();
         public frmDashboard_AD(NhanVienDTO nv)
         {
             InitializeComponent();
             nhanVien = nv;
+            ucMenuNhanVien = new UC_MenuNhanVien(nhanVien);
             ucCaNhan = new UCHoSoCaNhanQLVT(nhanVien);
             AddControlsToPnCenter(ucCaNhan);
             changeColorButton(btnCaNhan);

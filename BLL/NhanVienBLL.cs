@@ -7,6 +7,7 @@ using DTO;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace BLL
 {
@@ -65,14 +66,17 @@ namespace BLL
                 NgaySinh = nhanVien.NgaySinh.ToString(),
                 GioiTinh = gioiTinh,
                 SoDienThoai = nhanVien.SoDienThoai,
+                MaChinhSach=nhanVien.MaChinhSach,
                 TenChinhSach = tenChinhSach,
-                TenChucVu = tenChucVu
+                MaChucVu=nhanVien.MaChucVu,
+                TenChucVu = tenChucVu,
+                TrangThai = nhanVien.TrangThai
             };
         }
-        public List<NhanVienViewDTO> GetAllNhanVienView()
+        public List<NhanVienViewDTO> GetAllNhanVienView(string trangThai = "1")
         {
             List<NhanVienViewDTO> data = new List<NhanVienViewDTO>();
-            foreach (NhanVienDTO i in GetAllNhanVien())
+            foreach (NhanVienDTO i in GetAllNhanVien().FindAll(x=> x.TrangThai == trangThai))
             {
                 data.Add(GetNhanVienViewByNhanVienDTO(i));
             }
@@ -132,9 +136,9 @@ namespace BLL
                 NhanVienDAL.Instance.CapNhatNhanVien(nhanVien);
             }
         }
-        public static void DeleteNhanVien(string maNhanVien)
+         public static void CapNhatTrangThaiNhanVien(string maNhanVien, string tt)
         {
-            NhanVienDAL.XoaNhanVien(maNhanVien);
+            NhanVienDAL.CapNhatTrangThaiNV(maNhanVien, tt);
         }
         public delegate bool CompareObj(object o1, object o2);
         public List<NhanVienViewDTO> SortNhanVien(List<NhanVienViewDTO> now, string dkSort)
@@ -169,26 +173,50 @@ namespace BLL
                 }
             return data;
         }
-        public string KiemTraDuLieu(NhanVienDTO nhanVien)
+        public string KiemTraDuLieu(NhanVienDTO nhanVien/*,Label lblValidatedNgaySinh,Label lblValidatedDienThoai,Label lblValidatedCCCD*/)
         {
-
-
+            bool check= true;
             if (nhanVien.TenNhanVien == "")
                 return "Họ và Tên còn trống!";
             if (nhanVien.DiaChi == "")
                 return "Địa chỉ còn trống!";
+            if (DateTime.Today <= nhanVien.NgaySinh)
+            {
+                //lblValidatedNgaySinh.Visible = true;
+                return "Ngay sinh ncc";
+            }
             if (nhanVien.SoDienThoai == "")
                 return "Số Điện Thoai còn trống!";
+            else
+            {
+                if (Regex.IsMatch(nhanVien.SoDienThoai, @"(84|0[3|5|7|8|9])+([0-9]{8})\b") != true)
+                {
+                    return "sdt ncc";
+                    // lblValidatedDienThoai.Visible = true;
+                    //   check = false;
+                }
+            }
             if (nhanVien.MaChucVu == "")
                 return "Chức Vụ còn trống!";
             if (nhanVien.CCCD1 == "")
                 return "CCCD còn trống!";
+            else
+            {
+                //độ dài là 12 chữ số, bắt đầu bằng số 0
+                if (Regex.IsMatch(nhanVien.CCCD1, @"(0)+([1-9]{11})\b") != true)
+                {
+                    // lblValidatedCCCD.Visible = true;
+                    // check = false;
+                    return "CCCD ncc";
+                }
+            }
             if (nhanVien.MaChinhSach == "")
                 return "Chính Sách  còn trống!";
             if (nhanVien.TenTaiKhoan == "")
                 return "Tên Tài Khoản còn trống!";
             if (nhanVien.MatKhau == "")
                 return "Mật Khẩu còn trống!";
+
             if (!CheckAddUpdateNhanVien(nhanVien))
             {
                 if (nhanVien.TenTaiKhoan != GetNhanVienByMaNhanVien(nhanVien.MaNhanVien).TenTaiKhoan && (int)NhanVienDAL.Instance.KiemTraTenTK(nhanVien) > 0)

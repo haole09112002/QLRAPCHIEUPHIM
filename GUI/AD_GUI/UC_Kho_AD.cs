@@ -51,10 +51,22 @@ namespace GUI.AD_GUI
         }
         public void SetDataTable()
         {
+           // string maLoaiKho = dgvKho.SelectedRows[0].Cells[1].ToString();
             dtDanhSachKho.Columns.Add("Mã Kho");
             dtDanhSachKho.Columns.Add("Tên Kho");
             dtDanhSachKho.Columns.Add("Tên Loại Kho");
-            dtChiTietKho.Columns.Add("Tên Phim");
+            //if (maLoaiKho == "lk001")
+            //{
+                dtChiTietKho.Columns.Add("Tên Sản Phẩm");
+            //}
+            //if (maLoaiKho == "lk002")
+            //{
+            //    dgvChiTiet.Columns[1].HeaderText = "Tên Vật Tư";
+            //}
+            //if (maLoaiKho == "lk003")
+            //{
+            //    dgvChiTiet.Columns[1].HeaderText = "Tên Thức Ăn";
+            //}
             dtChiTietKho.Columns.Add("Số Lượng");
             dtChiTietKho.Columns.Add("Đơn Vị Tính");
         }
