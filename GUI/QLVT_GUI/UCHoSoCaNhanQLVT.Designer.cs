@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnThongTinCaNhan = new System.Windows.Forms.Panel();
+            this.btnDoiAnh = new System.Windows.Forms.Button();
             this.pbAnhNhanVien = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpNhanVien = new System.Windows.Forms.DateTimePicker();
@@ -64,7 +64,6 @@
             this.lblDienThoai = new System.Windows.Forms.Label();
             this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.lblTenTaiKhoan = new System.Windows.Forms.Label();
-            this.btnDoiAnh = new System.Windows.Forms.Button();
             this.pnThongTinCaNhan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnhNhanVien)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -86,7 +85,26 @@
             this.pnThongTinCaNhan.Size = new System.Drawing.Size(1310, 731);
             this.pnThongTinCaNhan.TabIndex = 1;
             // 
-            // pBAnhPhim
+            // btnDoiAnh
+            // 
+            this.btnDoiAnh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnDoiAnh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDoiAnh.Enabled = false;
+            this.btnDoiAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoiAnh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiAnh.Image = global::GUI.Properties.Resources.Download;
+            this.btnDoiAnh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoiAnh.Location = new System.Drawing.Point(223, 255);
+            this.btnDoiAnh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDoiAnh.Name = "btnDoiAnh";
+            this.btnDoiAnh.Size = new System.Drawing.Size(117, 36);
+            this.btnDoiAnh.TabIndex = 42;
+            this.btnDoiAnh.Text = "Đổi ảnh ";
+            this.btnDoiAnh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDoiAnh.UseVisualStyleBackColor = false;
+            this.btnDoiAnh.Click += new System.EventHandler(this.btnDoiAnh_Click);
+            // 
+            // pbAnhNhanVien
             // 
             this.pbAnhNhanVien.BackColor = System.Drawing.Color.White;
             this.pbAnhNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -127,14 +145,14 @@
             this.dgvListCaLamViec.AllowUserToAddRows = false;
             this.dgvListCaLamViec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListCaLamViec.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListCaLamViec.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListCaLamViec.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListCaLamViec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListCaLamViec.Location = new System.Drawing.Point(21, 98);
             this.dgvListCaLamViec.Name = "dgvListCaLamViec";
@@ -318,9 +336,12 @@
             this.dtpNgaySinh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaySinh.Location = new System.Drawing.Point(205, 200);
             this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpNgaySinh.MaxDate = new System.DateTime(2007, 1, 1, 0, 0, 0, 0);
+            this.dtpNgaySinh.MinDate = new System.DateTime(1962, 1, 1, 0, 0, 0, 0);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(392, 28);
             this.dtpNgaySinh.TabIndex = 23;
+            this.dtpNgaySinh.Value = new System.DateTime(2004, 1, 1, 0, 0, 0, 0);
             this.dtpNgaySinh.ValueChanged += new System.EventHandler(this.checkSave);
             // 
             // txtCCCD
@@ -544,25 +565,6 @@
             this.lblTenTaiKhoan.Size = new System.Drawing.Size(163, 19);
             this.lblTenTaiKhoan.TabIndex = 7;
             this.lblTenTaiKhoan.Text = "TÊN TÀI KHOẢN";
-            // 
-            // btnDoiAnh
-            // 
-            this.btnDoiAnh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnDoiAnh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDoiAnh.Enabled = false;
-            this.btnDoiAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoiAnh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoiAnh.Image = global::GUI.Properties.Resources.Download;
-            this.btnDoiAnh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoiAnh.Location = new System.Drawing.Point(223, 255);
-            this.btnDoiAnh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDoiAnh.Name = "btnDoiAnh";
-            this.btnDoiAnh.Size = new System.Drawing.Size(117, 36);
-            this.btnDoiAnh.TabIndex = 42;
-            this.btnDoiAnh.Text = "Đổi ảnh ";
-            this.btnDoiAnh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDoiAnh.UseVisualStyleBackColor = false;
-            this.btnDoiAnh.Click += new System.EventHandler(this.btnDoiAnh_Click);
             // 
             // UCHoSoCaNhanQLVT
             // 

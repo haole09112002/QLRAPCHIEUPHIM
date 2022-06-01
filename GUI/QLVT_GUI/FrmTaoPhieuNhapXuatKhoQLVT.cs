@@ -396,6 +396,10 @@ namespace GUI.QLVT_GUI
         {
             if (dgvSanPhamDaThem.SelectedRows.Count == 1)
             {
+                txtMaSanPham.Text = dgvSanPhamDaThem.CurrentRow.Cells["Mã Sản Phẩm"].Value.ToString();
+                txtTenSanPham.Text = dgvSanPhamDaThem.CurrentRow.Cells["Tên Sản Phẩm"].Value.ToString();
+                txtDonViTinh.Text = dgvSanPhamDaThem.CurrentRow.Cells["Đơn Vị Tính"].Value.ToString();
+                nUDSoLuong.Enabled = true;
                 btnXoa.Enabled = true;
                 btnChinhSua.Enabled = false;
                 btnChinhSua.Visible = true;

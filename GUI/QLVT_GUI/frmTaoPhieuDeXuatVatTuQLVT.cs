@@ -235,8 +235,12 @@ namespace GUI.QLVT_GUI
         {
             if (dgvListDeXuatVatTu.SelectedRows.Count == 1)
             {
+                txtMaVatTu.Text = dgvListDeXuatVatTu.CurrentRow.Cells["Mã Vật Tư"].Value.ToString();
+                txtDonViTinh.Text = dgvListDeXuatVatTu.CurrentRow.Cells["Đơn Vị Tính"].Value.ToString();
+                nUDSoLuong.Enabled = true;
+                txtNoiDung.Text = dgvListDeXuatVatTu.CurrentRow.Cells["Nội Dung"].Value.ToString();
                 btnXoa.Enabled = true;
-                btnChinhSua.Enabled = false;
+                btnChinhSua.Enabled = true;
                 btnChinhSua.Visible = true;
                 btnThem.Enabled = false;
                 btnThem.Visible = false;
