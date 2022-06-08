@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnLeft = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
             this.btnNCC = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnThongTinPhim = new System.Windows.Forms.Button();
@@ -48,6 +50,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.pnCenter = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnTop.SuspendLayout();
@@ -58,6 +61,7 @@
             // pnLeft
             // 
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(51)))), ((int)(((byte)(66)))));
+            this.pnLeft.Controls.Add(this.lblTime);
             this.pnLeft.Controls.Add(this.btnNCC);
             this.pnLeft.Controls.Add(this.pictureBox2);
             this.pnLeft.Controls.Add(this.btnThongTinPhim);
@@ -73,6 +77,17 @@
             this.pnLeft.Name = "pnLeft";
             this.pnLeft.Size = new System.Drawing.Size(221, 875);
             this.pnLeft.TabIndex = 2;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTime.Location = new System.Drawing.Point(54, 816);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(53, 20);
+            this.lblTime.TabIndex = 16;
+            this.lblTime.Text = "label2";
             // 
             // btnNCC
             // 
@@ -282,7 +297,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(703, 3);
+            this.label5.Location = new System.Drawing.Point(813, 3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 24);
             this.label5.TabIndex = 16;
@@ -292,7 +307,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(703, 27);
+            this.label3.Location = new System.Drawing.Point(797, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 32);
             this.label3.TabIndex = 17;
@@ -304,7 +319,7 @@
             this.lbTenNhanVien.AutoSize = true;
             this.lbTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenNhanVien.ForeColor = System.Drawing.Color.Black;
-            this.lbTenNhanVien.Location = new System.Drawing.Point(833, 2);
+            this.lbTenNhanVien.Location = new System.Drawing.Point(1020, 0);
             this.lbTenNhanVien.Name = "lbTenNhanVien";
             this.lbTenNhanVien.Size = new System.Drawing.Size(49, 20);
             this.lbTenNhanVien.TabIndex = 18;
@@ -328,7 +343,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Image = global::GUI.Properties.Resources.EmployeeQLVT;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(833, 22);
+            this.label7.Location = new System.Drawing.Point(943, 22);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(164, 41);
@@ -354,6 +369,10 @@
             this.pnCenter.Size = new System.Drawing.Size(1352, 782);
             this.pnCenter.TabIndex = 5;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frm_QLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -368,6 +387,7 @@
             this.Name = "frm_QLP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frm_QLP_Load);
             this.pnLeft.ResumeLayout(false);
             this.pnLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -401,5 +421,7 @@
         private System.Windows.Forms.Label lbTenNhanVien;
         private System.Windows.Forms.PictureBox pbMinimize;
         private System.Windows.Forms.PictureBox pbClose;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }
