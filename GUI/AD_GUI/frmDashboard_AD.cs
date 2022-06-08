@@ -147,5 +147,17 @@ namespace GUI.AD_GUI
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void frmDashboard_AD_Load(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+        }
     }
 }

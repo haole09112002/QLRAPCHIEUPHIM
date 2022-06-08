@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnLeft = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnThongKe = new System.Windows.Forms.Button();
@@ -50,6 +51,8 @@
             this.lbTenNhanVien = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.pnCenter = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnTop.SuspendLayout();
@@ -60,6 +63,7 @@
             // pnLeft
             // 
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(51)))), ((int)(((byte)(66)))));
+            this.pnLeft.Controls.Add(this.lblTime);
             this.pnLeft.Controls.Add(this.pictureBox2);
             this.pnLeft.Controls.Add(this.btnThongKe);
             this.pnLeft.Controls.Add(this.label1);
@@ -444,6 +448,21 @@
             this.pnCenter.Size = new System.Drawing.Size(1352, 766);
             this.pnCenter.TabIndex = 4;
             // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTime.Location = new System.Drawing.Point(53, 817);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(53, 20);
+            this.lblTime.TabIndex = 15;
+            this.lblTime.Text = "label2";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmDashboard_AD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -459,6 +478,7 @@
             this.Name = "frmDashboard_AD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDashboard_AD";
+            this.Load += new System.EventHandler(this.frmDashboard_AD_Load);
             this.pnLeft.ResumeLayout(false);
             this.pnLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -493,5 +513,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pbMinimize;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

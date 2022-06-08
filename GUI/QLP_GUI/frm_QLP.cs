@@ -132,5 +132,17 @@ namespace GUI.QLP_GUI
         {
             Application.Exit();
         }
+
+        private void frm_QLP_Load(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+        }
     }
 }
