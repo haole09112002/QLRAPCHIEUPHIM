@@ -131,5 +131,17 @@ namespace GUI.QLVT_GUI
         {
             Application.Exit();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+        }
+
+        private void FrmDashboardQLVT_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }
