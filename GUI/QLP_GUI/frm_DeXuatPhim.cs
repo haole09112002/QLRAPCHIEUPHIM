@@ -129,9 +129,14 @@ namespace GUI.QLP_GUI
         public bool KiemTraTinhDungDang()
         {
             bool DemLoi = true;
-            if (Regex.IsMatch(txtTenPhim.Text, @"^[^a-zA-Z0-9]+$") != false || txtTenPhim.Text == "")
+            if (Regex.IsMatch(txtTenPhim.Text, "^[a-zA-Z0-9 ]*$") != true)
             {
-                lbTenPhim.Text = "*Tên phim không hợp lệ";
+                lbTenPhim.Text = "*Tên phim chứa kí tự đặc biệt";
+                DemLoi = false;
+            }
+            else if(txtTenPhim.Text == "")
+            {
+                lbTenPhim.Text = "*Tên phim rỗng";
                 DemLoi = false;
             }
             else
@@ -140,7 +145,7 @@ namespace GUI.QLP_GUI
             }
             if (nUDThoiLuong.Text == "0")
             {
-                lbThoiLuong.Text = "*Mời nhập thời lượng phim";
+                lbThoiLuong.Text = "*Vui lòng nhập thời lượng phim";
                 DemLoi = false;
             }
             else
@@ -149,7 +154,7 @@ namespace GUI.QLP_GUI
             }
             if (nUDDoTuoiXem.Text == "0")
             {
-                lbDoTuoiXem.Text = "*Mời nhập độ tuổi xem";
+                lbDoTuoiXem.Text = "*Vui lòng nhập độ tuổi xem";
                 DemLoi = false;
             }
             else
@@ -158,7 +163,7 @@ namespace GUI.QLP_GUI
             }
             if (cBQuocGia.SelectedIndex < 0)
             {
-                lbQuocGia.Text = "*Mời chọn quốc gia";
+                lbQuocGia.Text = "*Vui lòng chọn quốc gia";
                 DemLoi = false;
             }
             else
@@ -167,7 +172,7 @@ namespace GUI.QLP_GUI
             }
             if (cBHangSanXuatPhim.SelectedIndex < 0)
             {
-                lbHangSanXuat.Text = "*Mời chọn hãng sản xuất phim";
+                lbHangSanXuat.Text = "*Vui lòng chọn hãng sản xuất phim";
                 DemLoi = false;
             }
             else
@@ -185,7 +190,7 @@ namespace GUI.QLP_GUI
             }
             if (pBAnhPhim.Image == null)
             {
-                lbAnhPhim.Text = "*Mời thêm ảnh phim";
+                lbAnhPhim.Text = "*Vui lòng thêm ảnh phim";
                 DemLoi = false;
             }
             else
@@ -194,7 +199,7 @@ namespace GUI.QLP_GUI
             }
             if (dGVDienVienChinh.Rows.Count == 0)
             {
-                lbDienVienChinh.Text = "*Mời thêm diễn viên chính";
+                lbDienVienChinh.Text = "*Vui lòng thêm diễn viên chính";
                 DemLoi = false;
             }
             else
@@ -203,7 +208,7 @@ namespace GUI.QLP_GUI
             }
             if (dGVDienVienPhu.Rows.Count == 0)
             {
-                lbDienVienPhu.Text = "*Mời thêm diễn viên phụ";
+                lbDienVienPhu.Text = "*Vui lòng thêm diễn viên phụ";
                 DemLoi = false;
             }
             else
@@ -212,7 +217,7 @@ namespace GUI.QLP_GUI
             }
             if (dGVDaoDien.Rows.Count == 0)
             {
-                lbDaoDien.Text = "*Mời thêm đạo diễn";
+                lbDaoDien.Text = "*Vui lòng thêm đạo diễn";
                 DemLoi = false;
             }
             else
@@ -297,7 +302,7 @@ namespace GUI.QLP_GUI
 
         private void cBDienVienChinh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienChinh.SelectedItem).Value, "C"))
+            if (KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienChinh.SelectedItem).Value, "C") || KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienChinh.SelectedItem).Value, "P"))
             {
                 MessageBox.Show("Diễn viên(Đạo Diễn) " + cBDienVienChinh.SelectedItem.ToString() + " đã có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -310,7 +315,7 @@ namespace GUI.QLP_GUI
 
         private void cBDienVienPhu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienPhu.SelectedItem).Value, "P"))
+            if (KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienPhu.SelectedItem).Value, "P") || KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienChinh.SelectedItem).Value, "C"))
             {
                 MessageBox.Show("Diễn viên(Đạo Diễn) " + cBDienVienPhu.SelectedItem.ToString() + " đã có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

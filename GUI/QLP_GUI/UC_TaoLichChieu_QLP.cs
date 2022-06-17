@@ -64,7 +64,7 @@ namespace GUI.QLP_GUI
             bool kt = true;
             if(txtTenPhim.Text == "")
             {
-                lbTenPhim.Text = "*Chưa chọn phim";
+                lbTenPhim.Text = "*Vui lòng chọn phim";
                 kt = false;
             }
             else
@@ -73,7 +73,7 @@ namespace GUI.QLP_GUI
             }
             if(txtPhongChieu.Text == "")
             {
-                lbPhongChieu.Text = "*Chưa chọn phòng chiếu";
+                lbPhongChieu.Text = "*Vui lòng chọn phòng chiếu";
                 kt = false;
             }
             else
@@ -82,7 +82,7 @@ namespace GUI.QLP_GUI
             }
             if(txtGioChieu.Text == "")
             {
-                lbKhungGioChieu.Text = "*Chưa chọn giờ chiếu";
+                lbKhungGioChieu.Text = "*Vui lòng chọn khung giờ chiếu";
                 kt = false;
             }
             else
