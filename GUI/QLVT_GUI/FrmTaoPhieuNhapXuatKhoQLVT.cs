@@ -135,7 +135,10 @@ namespace GUI.QLVT_GUI
                     this.Close();
                 }
             }
-            this.Close();
+            else
+            {
+                this.Close();
+            }
         }
         private void cboMaKho_SelectedIndexChanged(object sender, EventArgs e)
         {
