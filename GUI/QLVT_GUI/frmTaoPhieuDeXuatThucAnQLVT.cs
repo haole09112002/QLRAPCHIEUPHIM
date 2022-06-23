@@ -65,7 +65,10 @@ namespace GUI.QLVT_GUI
                     this.Close();
                 }
             }
+            else
+            {
             this.Close();
+            }
         }
         public bool KiemTraTonTai(string maSanPham)
         {
@@ -235,8 +238,12 @@ namespace GUI.QLVT_GUI
         {
             if (dgvListDeXuatThucAn.SelectedRows.Count == 1)
             {
+                txtMaThucAn.Text = dgvListDeXuatThucAn.CurrentRow.Cells["Mã Thức Ăn"].Value.ToString();
+                txtDonViTinh.Text = dgvListDeXuatThucAn.CurrentRow.Cells["Đơn Vị Tính"].Value.ToString();
+                nUDSoLuong.Enabled = true;
+                txtNoiDung.Text = dgvListDeXuatThucAn.CurrentRow.Cells["Nội Dung"].Value.ToString();
                 btnXoa.Enabled = true;
-                btnChinhSua.Enabled = false;
+                btnChinhSua.Enabled = true;
                 btnChinhSua.Visible = true;
                 btnThem.Enabled = false;
                 btnThem.Visible = false;
