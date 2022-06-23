@@ -22,6 +22,7 @@ namespace GUI.QLP_GUI
             txtTenPhim.Enabled = false;
             btnLuu.Enabled = false;
             btnChinhSua.Visible = false;
+            btnThem.Enabled = false;
         }
         public void SetCBB()
         {
@@ -64,7 +65,7 @@ namespace GUI.QLP_GUI
                 foreach (string i in HopDongPhimBLL.Instance.GetDanhSachMaPhimCoHopDong())
                 {
                     if (ChiTietKhoPhimBLL.Instance.GetChiTietKhoPhimByKhoa(((CBBItem)cBMaKho.SelectedItem).Value, i) != null) SoLuong = ChiTietKhoPhimBLL.Instance.GetChiTietKhoPhimByKhoa(((CBBItem)cBMaKho.SelectedItem).Value, i).SoLuongSP;
-                    if( HopDongPhimBLL.Instance.GetChiTietTSLPhimByMaPhim(i).TongSoLuongPhim > SoLuong)
+                    if (HopDongPhimBLL.Instance.GetChiTietTSLPhimByMaPhim(i).TongSoLuongPhim > SoLuong)
                     {
                         dtDanhSachPhim.Rows.Add(i, PhimBLL.Instance.GetPhimByMaPhim(i).TenPhim);
                     }
@@ -122,6 +123,7 @@ namespace GUI.QLP_GUI
                         nUDSoLuong.Maximum = HopDongPhimBLL.Instance.GetChiTietTSLPhimByMaPhim(txtMaPhim.Text).TongSoLuongPhim - SoLuong;
                     }
                 }
+                btnThem.Enabled = true;
             }
             else
             {
@@ -156,7 +158,7 @@ namespace GUI.QLP_GUI
         {
             for (int i = 0; i < dGVPhimDaThem.Rows.Count; i++)
             {
-                if(dGVPhimDaThem.Rows[i].Cells["Mã Phim"].Value.ToString() == MaPhim)
+                if (dGVPhimDaThem.Rows[i].Cells["Mã Phim"].Value.ToString() == MaPhim)
                 {
                     MessageBox.Show("Phim đã được thêm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return true;
@@ -168,7 +170,7 @@ namespace GUI.QLP_GUI
         {
             if (KiemTraTinhDungDangP2() == true)
             {
-                if(KiemTraTonTaiMaPhim(txtMaPhim.Text) == false)
+                if (KiemTraTonTaiMaPhim(txtMaPhim.Text) == false)
                 {
                     dtPhimDaThem.Rows.Add(txtMaPhim.Text, txtTenPhim.Text, nUDSoLuong.Value, cBDonViTinh.SelectedItem.ToString());
                     dGVPhimDaThem.DataSource = dtPhimDaThem;
@@ -182,11 +184,11 @@ namespace GUI.QLP_GUI
             btnLuu.Enabled = true;
             cBMaKho.Enabled = false;
             cBMaLoaiPhieu.Enabled = false;
+            btnThem.Enabled = false;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(dGVPhimDaThem.Rows.Count.ToString());
             if (dGVPhimDaThem.Rows.Count == 0)
             {
                 lbPhimDaThem.Text = "*Danh sách phiếu nhập xuất không hợp lệ";
@@ -212,7 +214,7 @@ namespace GUI.QLP_GUI
                         });
                     }
                     ChiTietKhoPhimBLL.Instance.ThemCapNhatChiTietKhoPhim(data, ((CBBItem)cBMaLoaiPhieu.SelectedItem).Value);
-                    MessageBox.Show("Thêm Thành Công","Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Thêm Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cBDonViTinh.SelectedIndex = -1;
                     cBMaKho.SelectedIndex = -1;
                     cBDonViTinh.SelectedIndex = -1;
@@ -226,6 +228,7 @@ namespace GUI.QLP_GUI
             }
             dtPhimDaThem.Rows.Clear();
             dGVPhimDaThem.DataSource = dtPhimDaThem;
+            btnLuu.Enabled = false;
         }
 
         private void cBMaLoaiPhieu_SelectedIndexChanged(object sender, EventArgs e)
@@ -246,7 +249,7 @@ namespace GUI.QLP_GUI
         {
             if (dGVPhimDaThem.SelectedRows.Count <= 0)
             {
-                MessageBox.Show("Mời chọn dòng để xóa","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Mời chọn dòng để xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -257,7 +260,7 @@ namespace GUI.QLP_GUI
                         dGVPhimDaThem.Rows.RemoveAt(i.Index);
                     }
             }
-            if(dGVPhimDaThem.Rows.Count == 0)
+            if (dGVPhimDaThem.Rows.Count == 0)
             {
                 btnLuu.Enabled = false;
                 cBMaKho.Enabled = true;
@@ -267,7 +270,7 @@ namespace GUI.QLP_GUI
 
         private void UC_TaoPhieu_QLP_Leave(object sender, EventArgs e)
         {
-            if(btnLuu.Enabled == true)
+            if (btnLuu.Enabled == true)
             {
                 DialogResult dialogResult = MessageBox.Show("Bạn chưa lưu có muốn thoát ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question); ;
                 if (dialogResult == DialogResult.OK)
@@ -281,6 +284,9 @@ namespace GUI.QLP_GUI
                     txtMaPhim.Text = "";
                     dGVDanhSachPhim.DataSource = null;
                     dGVPhimDaThem.DataSource = null;
+                    lbMaKho.Text = "";
+                    cBMaKho.Enabled = true;
+                    cBMaLoaiPhieu.Enabled = true;
                 }
             }
         }
@@ -302,11 +308,13 @@ namespace GUI.QLP_GUI
             btnThem.Visible = false;
             btnChinhSua.Visible = true;
             dGVPhimDaThem.Enabled = false;
+            dGVDanhSachPhim.Enabled = false;
+            btnXoa.Enabled = false;
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            if(KiemTraTinhDungDangP2() == true)
+            if (KiemTraTinhDungDangP2() == true)
             {
                 dGVPhimDaThem.CurrentRow.Cells["Số Lượng"].Value = nUDSoLuong.Text;
                 dGVPhimDaThem.CurrentRow.Cells["Đơn Vị Tính"].Value = cBDonViTinh.SelectedItem.ToString();
@@ -317,14 +325,17 @@ namespace GUI.QLP_GUI
             btnThem.Visible = true;
             btnChinhSua.Visible = false;
             dGVPhimDaThem.Enabled = true;
+            dGVDanhSachPhim.Enabled = true;
+            btnXoa.Enabled = true;
         }
 
         private void cBMaKho_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cBMaKho.SelectedIndex >= 0)
+            if (cBMaKho.SelectedIndex >= 0)
             {
                 lbMaKho.Text = "";
             }
         }
+
     }
 }

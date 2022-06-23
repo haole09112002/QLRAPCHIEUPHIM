@@ -38,10 +38,10 @@
             this.btnMenuListDXVatTu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuListDXVatTu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuListDXVatTu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnMenuListDXVatTu.Location = new System.Drawing.Point(350, 0);
+            this.btnMenuListDXVatTu.Location = new System.Drawing.Point(350, 1);
             this.btnMenuListDXVatTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenuListDXVatTu.Name = "btnMenuListDXVatTu";
-            this.btnMenuListDXVatTu.Size = new System.Drawing.Size(341, 29);
+            this.btnMenuListDXVatTu.Size = new System.Drawing.Size(341, 28);
             this.btnMenuListDXVatTu.TabIndex = 3;
             this.btnMenuListDXVatTu.Text = "DANH SÁCH ĐỀ XUẤT VẬT TƯ";
             this.btnMenuListDXVatTu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -54,10 +54,10 @@
             this.btnMenuListDXThucAn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuListDXThucAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuListDXThucAn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnMenuListDXThucAn.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuListDXThucAn.Location = new System.Drawing.Point(0, 1);
             this.btnMenuListDXThucAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenuListDXThucAn.Name = "btnMenuListDXThucAn";
-            this.btnMenuListDXThucAn.Size = new System.Drawing.Size(350, 29);
+            this.btnMenuListDXThucAn.Size = new System.Drawing.Size(350, 28);
             this.btnMenuListDXThucAn.TabIndex = 2;
             this.btnMenuListDXThucAn.Text = "DANH SÁCH ĐỀ XUẤT THỨC ĂN";
             this.btnMenuListDXThucAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -73,7 +73,7 @@
             this.Controls.Add(this.btnMenuListDXThucAn);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCMenuDeXuatQLVT";
-            this.Size = new System.Drawing.Size(993, 29);
+            this.Size = new System.Drawing.Size(993, 30);
             this.ResumeLayout(false);
 
         }

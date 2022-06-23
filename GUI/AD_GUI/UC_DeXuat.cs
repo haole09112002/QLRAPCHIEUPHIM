@@ -166,12 +166,13 @@ namespace GUI.AD_GUI
         {
             if (dgvChiTietdeXuat.SelectedRows.Count <= 0)
             {
-                MessageBox.Show("Mời chọn phim");
+                MessageBox.Show("Mời chọn 1 đối tượng");
             }
             else
             {
                 string maDeXuat = dgvChiTietdeXuat.SelectedRows[0].Cells["MaDeXuat"].Value.ToString();
                 string maSP = dgvChiTietdeXuat.SelectedRows[0].Cells[1].Value.ToString();
+                DialogResult result = MessageBox.Show("Bạn muốn thêm đề xuất?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX01")
                 {
                     ChiTietDeXuatPhimBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "2");
@@ -200,10 +201,11 @@ namespace GUI.AD_GUI
         {
             if (dgvChiTietdeXuat.SelectedRows.Count <= 0)
             {
-                MessageBox.Show("Mời chọn phim");
+                MessageBox.Show("Mời chọn 1 đối tượng");
             }
             else
             {
+                DialogResult result = MessageBox.Show("Bạn muốn hủy đề xuất?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 string maDeXuat = dgvChiTietdeXuat.SelectedRows[0].Cells["MaDeXuat"].Value.ToString();
                 string maSP = dgvChiTietdeXuat.SelectedRows[0].Cells[1].Value.ToString();
                 if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX01")

@@ -79,6 +79,7 @@ namespace GUI.AD_GUI
             }
             else
             {
+                DialogResult result = MessageBox.Show("Bạn muốn thêm lịch chiếu thành chính  thức?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 string MaPhim = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phim"].Value.ToString();
                 string MaKhungGioChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Khung Giờ Chiếu"].Value.ToString();
                 string MaPhongChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phòng Chiếu"].Value.ToString();
@@ -129,6 +130,7 @@ namespace GUI.AD_GUI
             }
             else
             {
+                DialogResult result = MessageBox.Show("Bạn muốn xóa lịch chiếu khỏi danh sách dự kiến?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 string MaPhim = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phim"].Value.ToString();
                 string MaKhungGioChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Khung Giờ Chiếu"].Value.ToString();
                 string MaPhongChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phòng Chiếu"].Value.ToString();
