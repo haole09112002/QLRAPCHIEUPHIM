@@ -65,7 +65,10 @@ namespace GUI.QLVT_GUI
                     this.Close();
                 }
             }
+            else
+            {
             this.Close();
+            }
         }
         public bool KiemTraTonTai(string maSanPham)
         {
