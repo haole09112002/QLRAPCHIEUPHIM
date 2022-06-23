@@ -73,7 +73,7 @@ namespace BLL
             {
                 KGC2 = KhungGioChieuBLL.Instance.GetKhungGioChieuByMaKGC(i.MaKhungGioChieu);
                 if (i.NgayChieu.Day == NgayChieu.Day && i.NgayChieu.Month == NgayChieu.Month && i.NgayChieu.Year == NgayChieu.Year && ((KGC1.TGBatDau < KGC2.TGKetThuc && KGC1.TGBatDau > KGC2.TGBatDau) || (KGC1.TGKetThuc > KGC2.TGBatDau && KGC1.TGKetThuc < KGC2.TGKetThuc) || MaKhungGioChieu == i.MaKhungGioChieu) && i.MaPhongChieu == MaPhongChieu && i.TrangThai == "2")
-                    return "Tồn tại một lịch chiếu dùng phòng chiếu cùng thời điểm";
+                    return "Phòng chiếu đã được sử dụng cùng thời điểm chiếu";
                 if (i.MaPhim == MaPhim && i.NgayChieu.Day == NgayChieu.Day && i.NgayChieu.Month == NgayChieu.Month && i.NgayChieu.Year == NgayChieu.Year && i.MaKhungGioChieu == MaKhungGioChieu && i.MaPhongChieu == MaPhongChieu)
                     return "Lịch chiếu đã được tạo";
             }

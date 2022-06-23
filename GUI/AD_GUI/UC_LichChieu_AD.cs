@@ -79,30 +79,33 @@ namespace GUI.AD_GUI
             }
             else
             {
-                DialogResult result = MessageBox.Show("Bạn muốn thêm lịch chiếu thành chính  thức?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                string MaPhim = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phim"].Value.ToString();
-                string MaKhungGioChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Khung Giờ Chiếu"].Value.ToString();
-                string MaPhongChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phòng Chiếu"].Value.ToString();
-                DateTime NgayChieu = Convert.ToDateTime(dgvLichChieuDK.SelectedRows[0].Cells["Ngày Chiếu"].Value);
-                lichChieu = new LichChieuDTO
+                DialogResult result = MessageBox.Show("Bạn muốn thêm lịch chiếu thành chính  thức?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if(result == DialogResult.OK)
                 {
-                    MaPhim = MaPhim,
-                    MaKhungGioChieu = MaKhungGioChieu,
-                    MaPhongChieu = MaPhongChieu,
-                    NgayChieu = NgayChieu
-                };
-                {
-                    foreach (DataGridViewRow i in dgvLichChieuDK.SelectedRows)
+                    string MaPhim = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phim"].Value.ToString();
+                    string MaKhungGioChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Khung Giờ Chiếu"].Value.ToString();
+                    string MaPhongChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phòng Chiếu"].Value.ToString();
+                    DateTime NgayChieu = Convert.ToDateTime(dgvLichChieuDK.SelectedRows[0].Cells["Ngày Chiếu"].Value);
+                    lichChieu = new LichChieuDTO
                     {
-                        if (LichChieuBLL.Instance.KTLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, NgayChieu) == "")
+                        MaPhim = MaPhim,
+                        MaKhungGioChieu = MaKhungGioChieu,
+                        MaPhongChieu = MaPhongChieu,
+                        NgayChieu = NgayChieu
+                    };
+                    {
+                        foreach (DataGridViewRow i in dgvLichChieuDK.SelectedRows)
                         {
-                            LichChieuBLL.Instance.CapNhatLichChieu(lichChieu,"2");
-                            ReloadDK();
-                            ReloadCT();
-                        }
-                        else
-                        {
-                            MessageBox.Show(LichChieuBLL.Instance.KTLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, NgayChieu));
+                            if (LichChieuBLL.Instance.KTLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, NgayChieu) == "")
+                            {
+                                LichChieuBLL.Instance.CapNhatLichChieu(lichChieu, "2");
+                                ReloadDK();
+                                ReloadCT();
+                            }
+                            else
+                            {
+                                MessageBox.Show(LichChieuBLL.Instance.KTLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, NgayChieu));
+                            }
                         }
                     }
                 }
@@ -130,26 +133,29 @@ namespace GUI.AD_GUI
             }
             else
             {
-                DialogResult result = MessageBox.Show("Bạn muốn xóa lịch chiếu khỏi danh sách dự kiến?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                string MaPhim = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phim"].Value.ToString();
-                string MaKhungGioChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Khung Giờ Chiếu"].Value.ToString();
-                string MaPhongChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phòng Chiếu"].Value.ToString();
-                DateTime NgayChieu = Convert.ToDateTime(dgvLichChieuDK.SelectedRows[0].Cells["Ngày Chiếu"].Value);
-                lichChieu = new LichChieuDTO
+                DialogResult result = MessageBox.Show("Bạn muốn xóa lịch chiếu khỏi danh sách dự kiến?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if(result == DialogResult.OK)
                 {
-                    MaPhim = MaPhim,
-                    MaKhungGioChieu = MaKhungGioChieu,
-                    MaPhongChieu = MaPhongChieu,
-                    NgayChieu = NgayChieu
-                };
-                {
-                    foreach (DataGridViewRow i in dgvLichChieuDK.SelectedRows)
+                    string MaPhim = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phim"].Value.ToString();
+                    string MaKhungGioChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Khung Giờ Chiếu"].Value.ToString();
+                    string MaPhongChieu = dgvLichChieuDK.SelectedRows[0].Cells["Mã Phòng Chiếu"].Value.ToString();
+                    DateTime NgayChieu = Convert.ToDateTime(dgvLichChieuDK.SelectedRows[0].Cells["Ngày Chiếu"].Value);
+                    lichChieu = new LichChieuDTO
                     {
-                        if (LichChieuBLL.Instance.KTLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, NgayChieu) == "")
+                        MaPhim = MaPhim,
+                        MaKhungGioChieu = MaKhungGioChieu,
+                        MaPhongChieu = MaPhongChieu,
+                        NgayChieu = NgayChieu
+                    };
+                    {
+                        foreach (DataGridViewRow i in dgvLichChieuDK.SelectedRows)
                         {
-                            LichChieuBLL.Instance.CapNhatLichChieu(lichChieu, "0");
-                            ReloadDK();
-                            ReloadCT();
+                            if (LichChieuBLL.Instance.KTLichChieu(MaPhim, MaKhungGioChieu, MaPhongChieu, NgayChieu) == "")
+                            {
+                                LichChieuBLL.Instance.CapNhatLichChieu(lichChieu, "0");
+                                ReloadDK();
+                                ReloadCT();
+                            }
                         }
                     }
                 }

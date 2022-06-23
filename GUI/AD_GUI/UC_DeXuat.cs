@@ -172,28 +172,28 @@ namespace GUI.AD_GUI
             {
                 string maDeXuat = dgvChiTietdeXuat.SelectedRows[0].Cells["MaDeXuat"].Value.ToString();
                 string maSP = dgvChiTietdeXuat.SelectedRows[0].Cells[1].Value.ToString();
-                DialogResult result = MessageBox.Show("Bạn muốn thêm đề xuất?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX01")
+                DialogResult result = MessageBox.Show("Bạn muốn thêm đề xuất?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if(result == DialogResult.OK)
                 {
-                    ChiTietDeXuatPhimBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "2");
-                    loadDGVDeXuat("LDX01");
-                    loadDGVDaDeXuat("LDX01");
+                    if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX01")
+                    {
+                        ChiTietDeXuatPhimBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "2");
+                        loadDGVDeXuat("LDX01");
+                        loadDGVDaDeXuat("LDX01");
+                    }
+                    if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX02")
+                    {
+                        ChiTietDeXuatVatTuBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "2");
+                        loadDGVDeXuat("LDX02");
+                        loadDGVDaDeXuat("LDX02");
+                    }
+                    if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX03")
+                    {
+                        ChiTietDeXuatThucAnBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "2");
+                        loadDGVDeXuat("LDX03");
+                        loadDGVDaDeXuat("LDX03");
+                    }
                 }
-                if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX02")
-                {
-                    ChiTietDeXuatVatTuBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "2");
-                    loadDGVDeXuat("LDX02");
-                    loadDGVDaDeXuat("LDX02");
-                }
-                if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX03")
-                {
-                    ChiTietDeXuatThucAnBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "2");
-                    loadDGVDeXuat("LDX03");
-                    loadDGVDaDeXuat("LDX03");
-                }
-
-
-
             }
         }
 
@@ -205,26 +205,29 @@ namespace GUI.AD_GUI
             }
             else
             {
-                DialogResult result = MessageBox.Show("Bạn muốn hủy đề xuất?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                string maDeXuat = dgvChiTietdeXuat.SelectedRows[0].Cells["MaDeXuat"].Value.ToString();
-                string maSP = dgvChiTietdeXuat.SelectedRows[0].Cells[1].Value.ToString();
-                if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX01")
+                DialogResult result = MessageBox.Show("Bạn muốn hủy đề xuất?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if(result == DialogResult.OK)
                 {
-                    ChiTietDeXuatPhimBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "0");
-                    loadDGVDeXuat("LDX01");
-                    loadDGVDaDeXuat("LDX01");
-                }
-                if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX02")
-                {
-                    ChiTietDeXuatVatTuBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "0");
-                    loadDGVDeXuat("LDX02");
-                    loadDGVDaDeXuat("LDX02");
-                }
-                if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX03")
-                {
-                    ChiTietDeXuatThucAnBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "0");
-                    loadDGVDeXuat("LDX03");
-                    loadDGVDaDeXuat("LDX03");
+                    string maDeXuat = dgvChiTietdeXuat.SelectedRows[0].Cells["MaDeXuat"].Value.ToString();
+                    string maSP = dgvChiTietdeXuat.SelectedRows[0].Cells[1].Value.ToString();
+                    if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX01")
+                    {
+                        ChiTietDeXuatPhimBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "0");
+                        loadDGVDeXuat("LDX01");
+                        loadDGVDaDeXuat("LDX01");
+                    }
+                    if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX02")
+                    {
+                        ChiTietDeXuatVatTuBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "0");
+                        loadDGVDeXuat("LDX02");
+                        loadDGVDaDeXuat("LDX02");
+                    }
+                    if (DeXuatBLL.Instance.GetDeXuatByMaDeXuat(maDeXuat).MaLoaiDeXuat == "LDX03")
+                    {
+                        ChiTietDeXuatThucAnBLL.Instance.CapNhatTinhTrangDeXuat(maSP, maDeXuat, "0");
+                        loadDGVDeXuat("LDX03");
+                        loadDGVDaDeXuat("LDX03");
+                    }
                 }
             }
         }
