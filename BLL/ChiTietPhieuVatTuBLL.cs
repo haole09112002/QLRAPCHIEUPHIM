@@ -52,5 +52,20 @@ namespace BLL
         {
             ChiTietPhieuVatTuDAL.Instance.LuuChiTietPhieuVatTu(MaPhieu, MaVatTu, DonViTinh, SoLuong);
         }
+        public List<TongSoLuongVatTuDTO> GetListTongSoLuongVatTuTrongPhieuNhap()
+        {
+            return ChiTietPhieuVatTuDAL.Instance.GetListTongSoLuongVatTuTrongPhieuNhap();
+        }
+        public int GetTongSoLuongVatTuTrongPhieuNhap(string MaVatTu)
+        {
+            foreach (TongSoLuongVatTuDTO i in GetListTongSoLuongVatTuTrongPhieuNhap())
+            {
+                if (i.MaVatTu == MaVatTu)
+                {
+                    return i.TongSoLuongVatTu;
+                }
+            }
+            return 0;
+        }
     }
 }

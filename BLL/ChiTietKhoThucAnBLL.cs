@@ -80,7 +80,7 @@ namespace BLL
             List<ChiTietKhoThucAnViewDTO> data = new List<ChiTietKhoThucAnViewDTO>();
             foreach (ChiTietKhoThucAnDTO i in GetAllChiTietKhoThucAn())
             {
-                if (ThucAnBLL.Instance.GetThucAnByMaThucAn(i.MaThucAn).TenThucAn.Contains(txt))
+                if (ThucAnBLL.Instance.GetThucAnByMaThucAn(i.MaThucAn).TenThucAn.Contains(txt) && i.SoLuongSP>0)
                 {
                 data.Add(ConvertChiTietKhoThucAnDTOToView(i));
                 }
@@ -205,6 +205,17 @@ namespace BLL
         public void LuuChiTietKhoThucAn(string MaKho, string MaThucAn, string DonViTinh, int SoLuongSP)
         {
             ChiTietKhoThucAnDAL.Instance.LuuChiTietKhoThucAn(MaKho, MaThucAn, DonViTinh, SoLuongSP);
+        }
+        public ChiTietKhoThucAnDTO GetChiTietKhoThucAnByKho(string MaKho, string MaThucAn)
+        {
+            foreach (ChiTietKhoThucAnDTO i in GetListChiTietKhoThucAnByMaKho(MaKho))
+            {
+                if (MaThucAn == i.MaThucAn)
+                {
+                    return i;
+                }
+            }
+            return null;
         }
     }
 }
