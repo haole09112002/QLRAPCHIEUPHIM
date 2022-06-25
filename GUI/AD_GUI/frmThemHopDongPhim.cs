@@ -26,14 +26,11 @@ namespace GUI.AD_GUI
         public frmThemHopDongPhim(string maHopDong = "")
         {
             InitializeComponent();
-           
             this.maHopDong = maHopDong;
             setGUI(maHopDong);
         }
         public void setGUI(string maHopDong)
         {
-            
-            
             dsPhimDaChon = HopDongPhimBLL.Instance.GetListHopDongPhimViewByMaHopDong(maHopDong);
             dsPhimCanTaoHopDong = HopDongPhimBLL.Instance.DSPhimCanThemHopDong();
             foreach (CBBItem i in NhaCungCapBLL.Instance.GetCBBNhaCungCap("LNCC01"))
@@ -250,6 +247,7 @@ namespace GUI.AD_GUI
                         ReLoadDGVPhimLuaChon();
                         MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btnLuu.Enabled = false;
+                        btnThem.Enabled = false;    
                         d("0", "");
                         //this.Close();
                     }

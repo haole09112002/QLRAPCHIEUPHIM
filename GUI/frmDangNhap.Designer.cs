@@ -104,7 +104,7 @@
             this.button1.Location = new System.Drawing.Point(18, 186);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 50);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Làm mới";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -137,7 +137,7 @@
             this.btnDN.Location = new System.Drawing.Point(200, 186);
             this.btnDN.Name = "btnDN";
             this.btnDN.Size = new System.Drawing.Size(126, 50);
-            this.btnDN.TabIndex = 3;
+            this.btnDN.TabIndex = 1;
             this.btnDN.Text = "Đăng nhập";
             this.btnDN.UseVisualStyleBackColor = false;
             this.btnDN.Click += new System.EventHandler(this.btnDN_Click);
@@ -148,14 +148,22 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(260, 28);
-            this.txtMatKhau.TabIndex = 1;
+            this.txtMatKhau.TabIndex = 3;
+            this.txtMatKhau.Click += new System.EventHandler(this.txtMatKhau_Click);
+            this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyDown);
+            this.txtMatKhau.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyUp);
             // 
             // txtTenTaiKhoan
             // 
+            this.txtTenTaiKhoan.HideSelection = false;
             this.txtTenTaiKhoan.Location = new System.Drawing.Point(66, 38);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(260, 28);
-            this.txtTenTaiKhoan.TabIndex = 0;
+            this.txtTenTaiKhoan.TabIndex = 2;
+            this.txtTenTaiKhoan.WordWrap = false;
+            this.txtTenTaiKhoan.Click += new System.EventHandler(this.txtTenTaiKhoan_Click);
+            this.txtTenTaiKhoan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.txtTenTaiKhoan.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // label1
             // 
