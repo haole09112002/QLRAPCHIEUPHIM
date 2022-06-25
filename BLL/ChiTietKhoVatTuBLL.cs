@@ -98,7 +98,7 @@ namespace BLL
             List<ChiTietKhoVatTuViewDTO> data = new List<ChiTietKhoVatTuViewDTO>();
             foreach(ChiTietKhoVatTuDTO i in GetAllChiTietKhoVatTu())
             {
-                if (VatTuBLL.Instance.GetVatTuByMaVatTu(i.MaVatTu).TenVatTu.Contains(txt))
+                if (VatTuBLL.Instance.GetVatTuByMaVatTu(i.MaVatTu).TenVatTu.Contains(txt) && i.SoLuongSP > 0)
                 {
                 data.Add(ConvertChiTietKhoVatTuDTOToView(i));
                 }
@@ -309,6 +309,17 @@ namespace BLL
         public void LuuChiTietKhoVatTu(string MaKho, string MaVatTu, string DonViTinh, int SoLuongSP)
         {
             ChiTietKhoVatTuDAL.Instance.LuuChiTietKhoVatTu(MaKho, MaVatTu, DonViTinh, SoLuongSP);
+        }
+        public ChiTietKhoVatTuDTO GetChiTietKhoVatTuByKho(string MaKho, string MaVatTu)
+        {
+            foreach (ChiTietKhoVatTuDTO i in GetListChiTietKhoVatTuByMaKho(MaKho))
+            {
+                if (MaVatTu == i.MaVatTu)
+                {
+                    return i;
+                }
+            }
+            return null;
         }
     }
 }
