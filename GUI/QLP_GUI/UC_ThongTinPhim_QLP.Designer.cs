@@ -40,6 +40,7 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dGVDanhSachPhim = new System.Windows.Forms.DataGridView();
+            this.cbHopDong = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachPhim)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbHopDong);
             this.panel1.Controls.Add(this.cBTimKiem);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnXemChiTiet);
@@ -122,7 +124,7 @@
             this.btnSapXep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSapXep.Image = global::GUI.Properties.Resources.Sort;
             this.btnSapXep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSapXep.Location = new System.Drawing.Point(906, 51);
+            this.btnSapXep.Location = new System.Drawing.Point(896, 49);
             this.btnSapXep.Margin = new System.Windows.Forms.Padding(4);
             this.btnSapXep.Name = "btnSapXep";
             this.btnSapXep.Size = new System.Drawing.Size(123, 38);
@@ -143,7 +145,7 @@
             "Năm Sản Xuất",
             "Quốc Gia",
             "Thể Loại"});
-            this.cBSapXep.Location = new System.Drawing.Point(1036, 51);
+            this.cBSapXep.Location = new System.Drawing.Point(1026, 57);
             this.cBSapXep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBSapXep.Name = "cBSapXep";
             this.cBSapXep.Size = new System.Drawing.Size(265, 27);
@@ -195,7 +197,7 @@
             this.dGVDanhSachPhim.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -219,6 +221,18 @@
             this.dGVDanhSachPhim.Size = new System.Drawing.Size(1279, 608);
             this.dGVDanhSachPhim.TabIndex = 40;
             this.dGVDanhSachPhim.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDanhSachPhim_CellClick);
+            // 
+            // cbHopDong
+            // 
+            this.cbHopDong.AutoSize = true;
+            this.cbHopDong.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbHopDong.Location = new System.Drawing.Point(581, 722);
+            this.cbHopDong.Name = "cbHopDong";
+            this.cbHopDong.Size = new System.Drawing.Size(111, 23);
+            this.cbHopDong.TabIndex = 51;
+            this.cbHopDong.Text = "Hợp đồng";
+            this.cbHopDong.UseVisualStyleBackColor = true;
+            this.cbHopDong.CheckedChanged += new System.EventHandler(this.cbHopDong_CheckedChanged);
             // 
             // UC_ThongTinPhim_QLP
             // 
@@ -247,5 +261,6 @@
         private System.Windows.Forms.DataGridView dGVDanhSachPhim;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.ComboBox cBTimKiem;
+        private System.Windows.Forms.CheckBox cbHopDong;
     }
 }

@@ -179,12 +179,15 @@ namespace BLL
         {
             return HopDongPhimDAL.Instance.GetLichSuGiaHan(maHopDong, maPhim);
         }
-        public List<string> GetDanhSachMaPhimCoHopDong()
+        public List<string> GetDanhSachMaPhimConHopDong()
         {
             List<string> data = new List<string>();
             foreach(HopDongPhimDTO i in HopDongPhimDAL.Instance.GetAllHopDongPhim("0"))
             {
-                data.Add(i.MaPhim);
+                if(i.NgayKetThucBanQuyen >= DateTime.Now)
+                {
+                    data.Add(i.MaPhim);
+                }
             }
             return data.Distinct().ToList();
         }
@@ -195,6 +198,17 @@ namespace BLL
         public TongSoLuongPhimDTO GetChiTietTSLPhimByMaPhim(string MaPhim)
         {
             foreach(TongSoLuongPhimDTO i in GetTongSoLuongCuaTungPhim())
+            {
+                if(i.MaPhim == MaPhim)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+        public HopDongPhimDTO GetHopDongPhimByMaPhim(string MaPhim)
+        {
+            foreach(HopDongPhimDTO i in HopDongPhimDAL.Instance.GetAllHopDongPhim("0"))
             {
                 if(i.MaPhim == MaPhim)
                 {

@@ -15,6 +15,7 @@ namespace GUI.QLP_GUI
             SetDataTable();
             Reload();
             btnXemChiTiet.Enabled = false;
+            cbHopDong.Checked = false;
         }
         public void SetDataTable()
         {
@@ -26,22 +27,31 @@ namespace GUI.QLP_GUI
             dtDanhSachPhim.Columns.Add("Tên Hãng Sản Xuất Phim");
             dtDanhSachPhim.Columns.Add("Độ Tuổi Xem");
             dtDanhSachPhim.Columns.Add("Thể Loại");
+            dtDanhSachPhim.Columns.Add("Hợp đồng");
         }
         public void Reload(string txt = "", string TimKiem = "")
         {
             dtDanhSachPhim.Rows.Clear();
             foreach (PhimViewDTO i in PhimBLL.Instance.GetPhimViews(txt, TimKiem))
             {
-                dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
+                dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai,i.HopDong);
             }
             dGVDanhSachPhim.DataSource = dtDanhSachPhim;
             dGVDanhSachPhim.Columns["Mã Phim"].Visible = false;
+            if(cbHopDong.Checked == false)
+            {
+                dGVDanhSachPhim.Columns["Hợp đồng"].Visible = false;
+            }
+            else
+            {
+                dGVDanhSachPhim.Columns["Hợp đồng"].Visible = true;
+            }
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             if (cBTimKiem.SelectedIndex < 0)
             {
-                    MessageBox.Show("Chưa chọn loại tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Chưa chọn loại tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -142,6 +152,18 @@ namespace GUI.QLP_GUI
             else
             {
                 btnXemChiTiet.Enabled = false;
+            }
+        }
+
+        private void cbHopDong_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cBTimKiem.SelectedIndex >= 0)
+            {
+                Reload(txtTimKiem.Text, cBTimKiem.SelectedItem.ToString());
+            }
+            else
+            {
+                Reload();
             }
         }
     }

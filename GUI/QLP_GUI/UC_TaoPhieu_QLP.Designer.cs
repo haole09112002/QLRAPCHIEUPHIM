@@ -53,8 +53,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.dGVDanhSachPhim = new System.Windows.Forms.DataGridView();
-            this.cBDonViTinh = new System.Windows.Forms.ComboBox();
             this.btnChinhSua = new System.Windows.Forms.Button();
+            this.txtDonViTinh = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.gBPhimDaThem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVPhimDaThem)).BeginInit();
@@ -255,6 +255,7 @@
             // 
             // gBLuaChonPhim
             // 
+            this.gBLuaChonPhim.Controls.Add(this.txtDonViTinh);
             this.gBLuaChonPhim.Controls.Add(this.lbDonViTinh);
             this.gBLuaChonPhim.Controls.Add(this.lbSoLuong);
             this.gBLuaChonPhim.Controls.Add(this.btnThem);
@@ -265,7 +266,6 @@
             this.gBLuaChonPhim.Controls.Add(this.label2);
             this.gBLuaChonPhim.Controls.Add(this.label13);
             this.gBLuaChonPhim.Controls.Add(this.dGVDanhSachPhim);
-            this.gBLuaChonPhim.Controls.Add(this.cBDonViTinh);
             this.gBLuaChonPhim.Controls.Add(this.txtTenPhim);
             this.gBLuaChonPhim.Controls.Add(this.btnChinhSua);
             this.gBLuaChonPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
@@ -398,19 +398,7 @@
             this.dGVDanhSachPhim.RowTemplate.Height = 28;
             this.dGVDanhSachPhim.Size = new System.Drawing.Size(669, 203);
             this.dGVDanhSachPhim.TabIndex = 8;
-            this.dGVDanhSachPhim.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDanhSachPhim_CellDoubleClick);
-            // 
-            // cBDonViTinh
-            // 
-            this.cBDonViTinh.BackColor = System.Drawing.Color.White;
-            this.cBDonViTinh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cBDonViTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cBDonViTinh.FormattingEnabled = true;
-            this.cBDonViTinh.Location = new System.Drawing.Point(915, 171);
-            this.cBDonViTinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cBDonViTinh.Name = "cBDonViTinh";
-            this.cBDonViTinh.Size = new System.Drawing.Size(346, 27);
-            this.cBDonViTinh.TabIndex = 7;
+            this.dGVDanhSachPhim.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDanhSachPhim_CellClick);
             // 
             // btnChinhSua
             // 
@@ -429,6 +417,17 @@
             this.btnChinhSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnChinhSua.UseVisualStyleBackColor = false;
             this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
+            // 
+            // txtDonViTinh
+            // 
+            this.txtDonViTinh.BackColor = System.Drawing.Color.White;
+            this.txtDonViTinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDonViTinh.Location = new System.Drawing.Point(915, 173);
+            this.txtDonViTinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDonViTinh.Name = "txtDonViTinh";
+            this.txtDonViTinh.ReadOnly = true;
+            this.txtDonViTinh.Size = new System.Drawing.Size(346, 28);
+            this.txtDonViTinh.TabIndex = 74;
             // 
             // UC_TaoPhieu_QLP
             // 
@@ -472,7 +471,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown nUDSoLuong;
         private System.Windows.Forms.TextBox txtMaPhim;
-        private System.Windows.Forms.ComboBox cBDonViTinh;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label lbDonViTinh;
         private System.Windows.Forms.Label lbSoLuong;
@@ -481,5 +479,6 @@
         private System.Windows.Forms.Label lbPhimDaThem;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnChinhSua;
+        private System.Windows.Forms.TextBox txtDonViTinh;
     }
 }
