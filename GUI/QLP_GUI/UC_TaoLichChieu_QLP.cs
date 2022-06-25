@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BLL;
+﻿using BLL;
 using DTO;
+using System;
+using System.Data;
+using System.Windows.Forms;
 
 namespace GUI.QLP_GUI
 {
@@ -43,11 +37,11 @@ namespace GUI.QLP_GUI
             {
                 dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim);
             }
-            foreach(PhongChieuDTO i in PhongChieuBLL.Instance.GetAllPhongChieuByTinhTrang(1))
+            foreach (PhongChieuDTO i in PhongChieuBLL.Instance.GetAllPhongChieuByTinhTrang(1))
             {
                 dtDanhSachPhongChieu.Rows.Add(i.MaPhongChieu, i.TenPhong);
             }
-            foreach(KhungGioChieuDTO i in KhungGioChieuBLL.Instance.GetAllKhungGioChieu())
+            foreach (KhungGioChieuDTO i in KhungGioChieuBLL.Instance.GetAllKhungGioChieu())
             {
                 dtKhungGioChieu.Rows.Add(i.MaKhungGioChieu, i.TGBatDau.ToLongTimeString(), i.TGKetThuc.ToLongTimeString());
             }
@@ -62,7 +56,7 @@ namespace GUI.QLP_GUI
         public bool KiemTraTinhDungDang()
         {
             bool kt = true;
-            if(txtTenPhim.Text == "")
+            if (txtTenPhim.Text == "")
             {
                 lbTenPhim.Text = "*Vui lòng chọn phim";
                 kt = false;
@@ -71,7 +65,7 @@ namespace GUI.QLP_GUI
             {
                 lbTenPhim.Text = "";
             }
-            if(txtPhongChieu.Text == "")
+            if (txtPhongChieu.Text == "")
             {
                 lbPhongChieu.Text = "*Vui lòng chọn phòng chiếu";
                 kt = false;
@@ -80,7 +74,7 @@ namespace GUI.QLP_GUI
             {
                 lbPhongChieu.Text = "";
             }
-            if(txtGioChieu.Text == "")
+            if (txtGioChieu.Text == "")
             {
                 lbKhungGioChieu.Text = "*Vui lòng chọn khung giờ chiếu";
                 kt = false;
@@ -94,7 +88,7 @@ namespace GUI.QLP_GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(KiemTraTinhDungDang())
+            if (KiemTraTinhDungDang())
             {
                 DialogResult dialogResult = MessageBox.Show("Xác nhận lưu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.OK)
@@ -109,21 +103,21 @@ namespace GUI.QLP_GUI
                     {
                         MessageBox.Show(KiemTra, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+                    txtGioChieu.Text = txtMaKhungGioChieu.Text = txtMaPhim.Text = txtMaPhongChieu.Text = txtPhongChieu.Text = txtTenPhim.Text = "";
                 }
-                txtGioChieu.Text = txtMaKhungGioChieu.Text = txtMaPhim.Text = txtMaPhongChieu.Text = txtPhongChieu.Text = txtTenPhim.Text = "";
             }
         }
 
         private void dGVDanhSachPhim_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dGVDanhSachPhim.SelectedRows.Count == 1)
+            if (dGVDanhSachPhim.SelectedRows.Count == 1)
             {
                 txtMaPhim.Text = dGVDanhSachPhim.SelectedRows[0].Cells["Mã Phim"].Value.ToString();
                 txtTenPhim.Text = dGVDanhSachPhim.SelectedRows[0].Cells["Tên Phim"].Value.ToString();
             }
             else
             {
-                MessageBox.Show("Chỉ được chọn 1 hàng","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Chỉ được chọn 1 hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -163,7 +157,7 @@ namespace GUI.QLP_GUI
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if(rBDSPhim.Checked == true)
+            if (rBDSPhim.Checked == true)
             {
                 dtDanhSachPhim.Rows.Clear();
                 foreach (PhimDTO i in PhimBLL.Instance.GetAllPhimCoHopDong(txtTimKiem.Text))
@@ -172,10 +166,10 @@ namespace GUI.QLP_GUI
                 }
                 dGVDanhSachPhim.DataSource = dtDanhSachPhim;
             }
-            if(rBDSPChieu.Checked == true)
+            if (rBDSPChieu.Checked == true)
             {
                 dtDanhSachPhongChieu.Rows.Clear();
-                foreach (PhongChieuDTO i in PhongChieuBLL.Instance.GetAllPhongChieuByTinhTrang(1,txtTimKiem.Text))
+                foreach (PhongChieuDTO i in PhongChieuBLL.Instance.GetAllPhongChieuByTinhTrang(1, txtTimKiem.Text))
                 {
                     dtDanhSachPhongChieu.Rows.Add(i.MaPhongChieu, i.TenPhong);
                 }

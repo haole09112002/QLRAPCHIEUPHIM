@@ -45,7 +45,6 @@ namespace GUI.QLP_GUI
                     });
                 }
             }
-            cBDonViTinh.Items.AddRange(HopDongPhimBLL.Instance.GetAllDonViTinh().ToArray());
         }
         public void SetDataTable()
         {
@@ -58,21 +57,25 @@ namespace GUI.QLP_GUI
         }
         public void ReLoad()
         {
-            if(cBMaLoaiPhieu.SelectedIndex >= 0)
+            if (cBMaLoaiPhieu.SelectedIndex >= 0)
             {
                 dtDanhSachPhim.Rows.Clear();
                 if (((CBBItem)cBMaLoaiPhieu.SelectedItem).Value == "LP001")
                 {
-                    foreach (string i in HopDongPhimBLL.Instance.GetDanhSachMaPhimCoHopDong())
+                    foreach (string i in HopDongPhimBLL.Instance.GetDanhSachMaPhimConHopDong())
                     {
-                        dtDanhSachPhim.Rows.Add(i, PhimBLL.Instance.GetPhimByMaPhim(i).TenPhim);
+                        if (HopDongPhimBLL.Instance.GetChiTietTSLPhimByMaPhim(i).TongSoLuongPhim - ChiTietPhieuPhimBLL.Instance.GetTongSoLuongPhimTrongPhieuNhap(i) > 0)
+                        {
+                            dtDanhSachPhim.Rows.Add(i, PhimBLL.Instance.GetPhimByMaPhim(i).TenPhim);
+                        }
                     }
                 }
                 else
                 {
                     foreach (PhimDTO i in ChiTietKhoPhimBLL.Instance.GetListPhimByMaKho(((CBBItem)cBMaKho.SelectedItem).Value))
                     {
-                        dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim);
+                        if (ChiTietKhoPhimBLL.Instance.GetChiTietKhoPhimByKho(((CBBItem)cBMaKho.SelectedItem).Value, i.MaPhim).SoLuongSP > 0)
+                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim);
                     }
                 }
                 dGVDanhSachPhim.DataSource = dtDanhSachPhim;
@@ -102,43 +105,29 @@ namespace GUI.QLP_GUI
             }
             return kiemtra;
         }
-        private void dGVDanhSachPhim_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dGVDanhSachPhim_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dGVDanhSachPhim.SelectedRows.Count == 1)
+            if (KiemTraTinhDungDangP1() == true)
             {
-                if (KiemTraTinhDungDangP1() == true)
+                txtMaPhim.Text = dGVDanhSachPhim.SelectedRows[0].Cells["Mã Phim"].Value.ToString();
+                txtTenPhim.Text = dGVDanhSachPhim.SelectedRows[0].Cells["Tên Phim"].Value.ToString();
+                txtDonViTinh.Text = HopDongPhimBLL.Instance.GetHopDongPhimByMaPhim(txtMaPhim.Text).DonViTinh;
+                if (((CBBItem)cBMaLoaiPhieu.SelectedItem).Value == "LP002")
                 {
-                    txtMaPhim.Text = dGVDanhSachPhim.SelectedRows[0].Cells["Mã Phim"].Value.ToString();
-                    txtTenPhim.Text = dGVDanhSachPhim.SelectedRows[0].Cells["Tên Phim"].Value.ToString();
-                    if (((CBBItem)cBMaLoaiPhieu.SelectedItem).Value == "LP002")
-                    {
-                        nUDSoLuong.Maximum = ChiTietKhoPhimBLL.Instance.GetChiTietKhoPhimByKhoa(((CBBItem)cBMaKho.SelectedItem).Value, txtMaPhim.Text).SoLuongSP;
-                    }
-                    else
-                    {
-                        nUDSoLuong.Maximum = HopDongPhimBLL.Instance.GetChiTietTSLPhimByMaPhim(txtMaPhim.Text).TongSoLuongPhim;
-                    }
+                    nUDSoLuong.Maximum = ChiTietKhoPhimBLL.Instance.GetChiTietKhoPhimByKho(((CBBItem)cBMaKho.SelectedItem).Value, txtMaPhim.Text).SoLuongSP;
                 }
-                btnThem.Enabled = true;
+                else
+                {
+                    nUDSoLuong.Maximum = HopDongPhimBLL.Instance.GetChiTietTSLPhimByMaPhim(txtMaPhim.Text).TongSoLuongPhim - ChiTietPhieuPhimBLL.Instance.GetTongSoLuongPhimTrongPhieuNhap(txtMaPhim.Text);
+                }
             }
-            else
-            {
-                MessageBox.Show("Chỉ được chọn 1 dòng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            btnThem.Enabled = true;
         }
 
         public bool KiemTraTinhDungDangP2()
         {
             bool kiemtra = true;
-            if (cBDonViTinh.SelectedIndex < 0)
-            {
-                lbDonViTinh.Text = "*Vui lòng chọn đơn vị tính";
-                kiemtra = false;
-            }
-            else
-            {
-                lbDonViTinh.Text = "";
-            }
             if (nUDSoLuong.Value == 0)
             {
                 lbSoLuong.Text = "*Vui lòng nhập số lượng";
@@ -168,19 +157,19 @@ namespace GUI.QLP_GUI
             {
                 if (KiemTraTonTaiMaPhim(txtMaPhim.Text) == false)
                 {
-                    dtPhimDaThem.Rows.Add(txtMaPhim.Text, txtTenPhim.Text, nUDSoLuong.Value, cBDonViTinh.SelectedItem.ToString());
+                    dtPhimDaThem.Rows.Add(txtMaPhim.Text, txtTenPhim.Text, nUDSoLuong.Value, txtDonViTinh.Text);
                     dGVPhimDaThem.DataSource = dtPhimDaThem;
                     dGVPhimDaThem.Columns["Mã Phim"].Visible = false;
                 }
                 txtMaPhim.Text = "";
                 txtTenPhim.Text = "";
                 nUDSoLuong.Value = 0;
-                cBDonViTinh.Text = "";
+                txtDonViTinh.Text = "";
+                btnLuu.Enabled = true;
+                cBMaKho.Enabled = false;
+                cBMaLoaiPhieu.Enabled = false;
+                btnThem.Enabled = false;
             }
-            btnLuu.Enabled = true;
-            cBMaKho.Enabled = false;
-            cBMaLoaiPhieu.Enabled = false;
-            btnThem.Enabled = false;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -211,9 +200,8 @@ namespace GUI.QLP_GUI
                     }
                     ChiTietKhoPhimBLL.Instance.ThemCapNhatChiTietKhoPhim(data, ((CBBItem)cBMaLoaiPhieu.SelectedItem).Value);
                     MessageBox.Show("Thêm Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    cBDonViTinh.SelectedIndex = -1;
+                    txtDonViTinh.Text = "";
                     cBMaKho.SelectedIndex = -1;
-                    cBDonViTinh.SelectedIndex = -1;
                     cBMaLoaiPhieu.SelectedIndex = -1;
                     nUDSoLuong.Value = 0;
                     txtTenPhim.Text = "";
@@ -270,9 +258,8 @@ namespace GUI.QLP_GUI
                 DialogResult dialogResult = MessageBox.Show("Bạn chưa lưu có muốn thoát ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question); ;
                 if (dialogResult == DialogResult.OK)
                 {
-                    cBDonViTinh.SelectedIndex = -1;
+                    txtDonViTinh.Text = "";
                     cBMaKho.SelectedIndex = -1;
-                    cBDonViTinh.SelectedIndex = -1;
                     cBMaLoaiPhieu.SelectedIndex = -1;
                     nUDSoLuong.Value = 0;
                     txtTenPhim.Text = "";
@@ -286,9 +273,8 @@ namespace GUI.QLP_GUI
             }
             else
             {
-                cBDonViTinh.SelectedIndex = -1;
+                txtDonViTinh.Text = "";
                 cBMaKho.SelectedIndex = -1;
-                cBDonViTinh.SelectedIndex = -1;
                 cBMaLoaiPhieu.SelectedIndex = -1;
                 nUDSoLuong.Value = 0;
                 txtTenPhim.Text = "";
@@ -313,7 +299,7 @@ namespace GUI.QLP_GUI
                 txtMaPhim.Text = dGVPhimDaThem.CurrentRow.Cells["Mã Phim"].Value.ToString();
                 txtMaPhim.Enabled = false;
                 nUDSoLuong.Text = dGVPhimDaThem.CurrentRow.Cells["Số Lượng"].Value.ToString();
-                cBDonViTinh.Text = dGVPhimDaThem.CurrentRow.Cells["Đơn Vị Tính"].Value.ToString();
+                txtDonViTinh.Text = dGVPhimDaThem.CurrentRow.Cells["Đơn Vị Tính"].Value.ToString();
             }
             btnThem.Visible = false;
             btnChinhSua.Visible = true;
@@ -327,16 +313,16 @@ namespace GUI.QLP_GUI
             if (KiemTraTinhDungDangP2() == true)
             {
                 dGVPhimDaThem.CurrentRow.Cells["Số Lượng"].Value = nUDSoLuong.Text;
-                dGVPhimDaThem.CurrentRow.Cells["Đơn Vị Tính"].Value = cBDonViTinh.SelectedItem.ToString();
+                dGVPhimDaThem.CurrentRow.Cells["Đơn Vị Tính"].Value = txtDonViTinh.Text;
+                txtTenPhim.Text = "";
+                nUDSoLuong.Text = "0";
+                txtDonViTinh.Text = "";
+                btnThem.Visible = true;
+                btnChinhSua.Visible = false;
+                dGVPhimDaThem.Enabled = true;
+                dGVDanhSachPhim.Enabled = true;
+                btnXoa.Enabled = true;
             }
-            txtTenPhim.Text = "";
-            nUDSoLuong.Text = "0";
-            cBDonViTinh.Text = "";
-            btnThem.Visible = true;
-            btnChinhSua.Visible = false;
-            dGVPhimDaThem.Enabled = true;
-            dGVDanhSachPhim.Enabled = true;
-            btnXoa.Enabled = true;
         }
 
         private void cBMaKho_SelectedIndexChanged(object sender, EventArgs e)
@@ -344,12 +330,11 @@ namespace GUI.QLP_GUI
             if (cBMaKho.SelectedIndex >= 0)
             {
                 lbMaKho.Text = "";
-                if(cBMaLoaiPhieu.SelectedIndex >= 0)
+                if (cBMaLoaiPhieu.SelectedIndex >= 0)
                 {
                     ReLoad();
                 }
             }
         }
-
     }
 }

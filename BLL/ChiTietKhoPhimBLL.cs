@@ -38,7 +38,7 @@ namespace BLL
             }
             return data;
         }
-        public ChiTietKhoPhimDTO GetChiTietKhoPhimByKhoa(string MaKho, string MaPhim)
+        public ChiTietKhoPhimDTO GetChiTietKhoPhimByKho(string MaKho, string MaPhim)
         {
             foreach(ChiTietKhoPhimDTO i in GetListChiTietKhoPhimByMaKho(MaKho))
             {
@@ -105,6 +105,17 @@ namespace BLL
             {
                 if(i.MaPhim == MaPhim)
                     return i;
+            }
+            return null;
+        }
+        public TongSoLuongPhimDTO GetSoLuongPhim(string MaPhim)
+        {
+            foreach(TongSoLuongPhimDTO i in ChiTietKhoPhimDAL.Instance.GetTongSoLuongCuaTungPhim())
+            {
+                if(i.MaPhim == MaPhim)
+                {
+                    return i;
+                }
             }
             return null;
         }
