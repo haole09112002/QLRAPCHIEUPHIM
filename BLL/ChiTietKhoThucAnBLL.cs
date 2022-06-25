@@ -206,5 +206,16 @@ namespace BLL
         {
             ChiTietKhoThucAnDAL.Instance.LuuChiTietKhoThucAn(MaKho, MaThucAn, DonViTinh, SoLuongSP);
         }
+        public ChiTietKhoThucAnDTO GetChiTietKhoThucAnByKho(string MaKho, string MaThucAn)
+        {
+            foreach (ChiTietKhoThucAnDTO i in GetListChiTietKhoThucAnByMaKho(MaKho))
+            {
+                if (MaThucAn == i.MaThucAn)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
     }
 }

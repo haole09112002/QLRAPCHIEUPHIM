@@ -93,14 +93,20 @@ namespace GUI.QLVT_GUI
                 {
                     foreach (string i in HopDongThucAnBLL.Instance.GetDanhSachMaThucAnCoHopDong())
                     {
-                        dtDanhSachSanPham.Rows.Add(i, ThucAnBLL.Instance.GetThucAnByMaThucAn(i).TenThucAn);
+                        if (HopDongThucAnBLL.Instance.GetChiTietTSLThucAnByMaThucAn(i).TongSoLuongThucAn - ChiTietPhieuThucAnBLL.Instance.GetTongSoLuongThucAnTrongPhieuNhap(i) > 0)
+                        {
+                            dtDanhSachSanPham.Rows.Add(i, ThucAnBLL.Instance.GetThucAnByMaThucAn(i).TenThucAn);
+                        }
                     }
                 }
                 if (txtLoaiSanPham.Text == "Vật tư")
                 {
                     foreach (string i in HopDongVatTuBLL.Instance.GetDanhSachMaVatTuCoHopDong())
                     {
-                        dtDanhSachSanPham.Rows.Add(i, VatTuBLL.Instance.GetVatTuByMaVatTu(i).TenVatTu);
+                        if (HopDongVatTuBLL.Instance.GetChiTietTSLVatTuByMaVatTu(i).TongSoLuongVatTu - ChiTietPhieuVatTuBLL.Instance.GetTongSoLuongVatTuTrongPhieuNhap(i) > 0)
+                        {
+                            dtDanhSachSanPham.Rows.Add(i, VatTuBLL.Instance.GetVatTuByMaVatTu(i).TenVatTu);
+                        }
                     }
                 }
             }
@@ -110,14 +116,20 @@ namespace GUI.QLVT_GUI
                 {
                     foreach (ThucAnDTO i in ChiTietKhoThucAnBLL.Instance.GetListThucAnByMaKho(((CBBItem)cboMaKho.SelectedItem).Value))
                     {
-                        dtDanhSachSanPham.Rows.Add(i.MaThucAn, i.TenThucAn);
+                        if (ChiTietKhoThucAnBLL.Instance.GetChiTietKhoThucAnByKho(((CBBItem)cboMaKho.SelectedItem).Value, i.MaThucAn).SoLuongSP > 0)
+                        {
+                            dtDanhSachSanPham.Rows.Add(i.MaThucAn, i.TenThucAn);
+                        }
                     }
                 }
                 if (txtLoaiSanPham.Text == "Vật tư")
                 {
                     foreach (VatTuDTO i in ChiTietKhoVatTuBLL.Instance.GetListVatTuByMaKho(((CBBItem)cboMaKho.SelectedItem).Value))
                     {
-                        dtDanhSachSanPham.Rows.Add(i.MaVatTu, i.TenVatTu);
+                        if (ChiTietKhoVatTuBLL.Instance.GetChiTietKhoVatTuByKho(((CBBItem)cboMaKho.SelectedItem).Value, i.MaVatTu).SoLuongSP > 0)
+                        {
+                            dtDanhSachSanPham.Rows.Add(i.MaVatTu, i.TenVatTu);
+                        }
                     }
                 }
             }
@@ -333,11 +345,11 @@ namespace GUI.QLVT_GUI
                     {
                         if (txtLoaiSanPham.Text == "Thức ăn nhanh")
                         {
-                            nUDSoLuong.Maximum = HopDongThucAnBLL.Instance.GetChiTietTSLThucAnByMaThucAn(txtMaSanPham.Text).TongSoLuongThucAn;
+                            nUDSoLuong.Maximum = HopDongThucAnBLL.Instance.GetChiTietTSLThucAnByMaThucAn(txtMaSanPham.Text).TongSoLuongThucAn - ChiTietPhieuThucAnBLL.Instance.GetTongSoLuongThucAnTrongPhieuNhap(txtMaSanPham.Text);
                         }
                         else
                         {
-                            nUDSoLuong.Maximum = HopDongVatTuBLL.Instance.GetChiTietTSLVatTuByMaVatTu(txtMaSanPham.Text).TongSoLuongVatTu;
+                            nUDSoLuong.Maximum = HopDongVatTuBLL.Instance.GetChiTietTSLVatTuByMaVatTu(txtMaSanPham.Text).TongSoLuongVatTu - ChiTietPhieuVatTuBLL.Instance.GetTongSoLuongVatTuTrongPhieuNhap(txtMaSanPham.Text);
                         }
                     }
                 }

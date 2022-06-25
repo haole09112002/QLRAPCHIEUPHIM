@@ -177,11 +177,11 @@ namespace GUI.QLVT_GUI
                     nhanVien.SoDienThoai = txtDienThoai.Text;
                     if (rbNam.Checked == true)
                     {
-                        nhanVien.GioiTinh = false;
+                        nhanVien.GioiTinh = true;
                     }
                     else
                     {
-                        nhanVien.GioiTinh = true;
+                        nhanVien.GioiTinh = false;
                     }
                     nhanVien.NgaySinh = dtpNgaySinh.Value;
                     NhanVienBLL.Instance.AddUpdateNhanVien(nhanVien);

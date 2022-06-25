@@ -54,5 +54,19 @@ namespace DAL
                 $"('{MaPhieu}','{MaThucAn}','{DonViTinh}',{SoLuong})";
             DBHelper.Instance.ExcuteQuery(query);
         }
+        public List<TongSoLuongThucAnDTO> GetListTongSoLuongThucAnTrongPhieuNhap()
+        {
+            List<TongSoLuongThucAnDTO> data = new List<TongSoLuongThucAnDTO>();
+            string query = "select MaThucAn,SUM(Soluong) as 'TongSoLuong' from CHI_TIET_PHIEU_THUC_AN, PHIEU where MaLoaiPhieu = 'LP001' and CHI_TIET_PHIEU_THUC_AN.MaPhieu = PHIEU.MaPhieu Group By MaThucAn";
+            foreach (DataRow i in DBHelper.Instance.ExcuteQuery(query).Rows)
+            {
+                data.Add(new TongSoLuongThucAnDTO
+                {
+                    MaThucAn = i["MaThucAn"].ToString(),
+                    TongSoLuongThucAn = Convert.ToInt32(i["TongSoLuong"].ToString())
+                });
+            }
+            return data;
+        }
     }
 }
