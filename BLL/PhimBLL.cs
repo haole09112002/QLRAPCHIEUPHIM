@@ -30,10 +30,26 @@ namespace BLL
             List<PhimViewDTO> data = new List<PhimViewDTO>();
             List<TheLoaiPhimDTO> TLP = new List<TheLoaiPhimDTO>();
             TLP = TheLoaiPhimDAL.Instance.GetAllTheLoaiPhim();
+            string HopDong = "";
             foreach (PhimDTO i in PhimDAL.Instance.GetALLPhim())
             {
                 string TheLoaiPhim = "";
                 string TenHangSanXuatPhim = "";
+                HopDong = "Chưa có HĐ";
+                foreach(TongSoLuongPhimDTO j in HopDongPhimBLL.Instance.GetTongSoLuongCuaTungPhim())
+                {
+                    if(j.MaPhim == i.MaPhim)
+                    {
+                        HopDong = "Hết hợp đồng";
+                        foreach(string z in HopDongPhimBLL.Instance.GetDanhSachMaPhimConHopDong())
+                        {
+                            if(z == i.MaPhim)
+                            {
+                                HopDong = "Còn hợp đồng";
+                            }
+                        }
+                    }
+                }
                 if (TimKiem == "Tên Phim" || TimKiem == "")
                     if (i.TenPhim.ToLower().Contains(txt.ToLower()))
                     {
@@ -60,7 +76,8 @@ namespace BLL
                             NamSanXuat = i.NamSanXuat,
                             TenHangSanXuatPhim = TenHangSanXuatPhim,
                             DoTuoiXem = i.DoTuoiXem,
-                            TheLoai = TheLoaiPhim
+                            TheLoai = TheLoaiPhim,
+                            HopDong = HopDong
                         });
                     }
                 if (TimKiem == "Quốc Gia")
@@ -89,7 +106,8 @@ namespace BLL
                             NamSanXuat = i.NamSanXuat,
                             TenHangSanXuatPhim = TenHangSanXuatPhim,
                             DoTuoiXem = i.DoTuoiXem,
-                            TheLoai = TheLoaiPhim
+                            TheLoai = TheLoaiPhim,
+                            HopDong = HopDong
                         });
                     }
                 if (TimKiem == "Thời Lượng")
@@ -118,7 +136,8 @@ namespace BLL
                             NamSanXuat = i.NamSanXuat,
                             TenHangSanXuatPhim = TenHangSanXuatPhim,
                             DoTuoiXem = i.DoTuoiXem,
-                            TheLoai = TheLoaiPhim
+                            TheLoai = TheLoaiPhim,
+                            HopDong = HopDong
                         });
                     }
                 if (TimKiem == "Năm Sản Xuất")
@@ -147,7 +166,8 @@ namespace BLL
                             NamSanXuat = i.NamSanXuat,
                             TenHangSanXuatPhim = TenHangSanXuatPhim,
                             DoTuoiXem = i.DoTuoiXem,
-                            TheLoai = TheLoaiPhim
+                            TheLoai = TheLoaiPhim,
+                            HopDong = HopDong,
                         });
                     }
                 if(TimKiem == "Tên Hãng Sản Xuất Phim")
@@ -178,7 +198,8 @@ namespace BLL
                             NamSanXuat = i.NamSanXuat,
                             TenHangSanXuatPhim = TenHangSanXuatPhim,
                             DoTuoiXem = i.DoTuoiXem,
-                            TheLoai = TheLoaiPhim
+                            TheLoai = TheLoaiPhim,
+                            HopDong = HopDong
                         });
                     }
                 }
@@ -210,7 +231,8 @@ namespace BLL
                             NamSanXuat = i.NamSanXuat,
                             TenHangSanXuatPhim = TenHangSanXuatPhim,
                             DoTuoiXem = i.DoTuoiXem,
-                            TheLoai = TheLoaiPhim
+                            TheLoai = TheLoaiPhim,
+                            HopDong = HopDong
                         });
                     }
                 }
@@ -320,7 +342,7 @@ namespace BLL
         public List<PhimDTO> GetAllPhimCoHopDong(string txt = "")
         {
             List<PhimDTO> data = new List<PhimDTO>();
-            foreach(string i in HopDongPhimBLL.Instance.GetDanhSachMaPhimCoHopDong())
+            foreach(string i in HopDongPhimBLL.Instance.GetDanhSachMaPhimConHopDong())
             {
                 if(PhimBLL.Instance.GetPhimByMaPhim(i).TenPhim.Contains(txt))
                 {
