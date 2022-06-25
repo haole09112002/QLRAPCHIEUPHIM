@@ -78,7 +78,7 @@ namespace GUI.QLP_GUI
         public bool KiemTraTinhDungDang()
         {
             bool kt = true;
-            if (dGVDanhSachPhim.SelectedRows.Count <= 0)
+            if (txtMaPhim.Text == "")
             {
                 MessageBox.Show("Vui lòng chọn phim");
                 kt = false;
@@ -120,7 +120,7 @@ namespace GUI.QLP_GUI
                 {
                     foreach (DataGridViewRow i in dGVDanhSachPhim.SelectedRows)
                     {
-                        dtDeXuatPhim.Rows.Add(i.Cells["Mã Phim"].Value.ToString(), PhimBLL.Instance.GetPhimByMaPhim(i.Cells["Mã Phim"].Value.ToString()).TenPhim, nUDSoLuong.Text, cBDonViTinh.SelectedItem.ToString(), txtNoiDung.Text);
+                        dtDeXuatPhim.Rows.Add(txtMaPhim.Text, PhimBLL.Instance.GetPhimByMaPhim(txtMaPhim.Text).TenPhim, nUDSoLuong.Text, cBDonViTinh.SelectedItem.ToString(), txtNoiDung.Text);
                     }
                     dGVDeXuatPhim.DataSource = dtDeXuatPhim;
                 }
@@ -149,6 +149,7 @@ namespace GUI.QLP_GUI
             btnChinhSua.Visible = false;
             dGVDeXuatPhim.Enabled = true;
             btnThem.Enabled = false;
+            btnXoa.Enabled = true;
         }
 
         private void dGVDeXuatPhim_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -168,6 +169,7 @@ namespace GUI.QLP_GUI
             btnThem.Visible = false;
             btnChinhSua.Visible = true;
             dGVDeXuatPhim.Enabled = false;
+            btnXoa.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
