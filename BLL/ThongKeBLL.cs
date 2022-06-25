@@ -186,7 +186,45 @@ namespace BLL
                                                     && KhoBLL.Instance.GetKhoByMaKho(p.MaKho).MaLoaiKho == maLoaiKho).Select(p => p).ToList();      
             return ds.Count();
         }
+        public List<ThongKeTienHDTheoLoaiDTO> GetTienHopDongTheoLoaiHD(List<ThongKeTienNhapDTO> list)
+        {
+            double tongTien = 0;
+            foreach(ThongKeTienNhapDTO i in list)
+            {
+                if(i.LoaiHopDong == "LHD001")
+                {
+                    tongTien += i.TongTien;
+                }    
+            }
+            ThongKeTienHDTheoLoaiDTO phim = new ThongKeTienHDTheoLoaiDTO { LoaiHopDong = "Hợp đồng phim", TongTien = tongTien };
+            tongTien = 0;
+            foreach (ThongKeTienNhapDTO i in list)
+            {
+                if (i.LoaiHopDong == "LHD002")
+                {
+                    tongTien += i.TongTien;
+                }
+            }
+            ThongKeTienHDTheoLoaiDTO vt = new ThongKeTienHDTheoLoaiDTO { LoaiHopDong = "Hợp đồng vật tư", TongTien = tongTien };
+            tongTien = 0;
+            foreach (ThongKeTienNhapDTO i in list)
+            {
+                if (i.LoaiHopDong == "LHD003")
+                {
+                    tongTien += i.TongTien;
+                }
+            }
+            ThongKeTienHDTheoLoaiDTO ta = new ThongKeTienHDTheoLoaiDTO { LoaiHopDong = "Hợp đồng thức ăn", TongTien = tongTien };
 
+            List<ThongKeTienHDTheoLoaiDTO> data = new List<ThongKeTienHDTheoLoaiDTO>();
+            if (phim.TongTien != 0)
+                data.Add(phim);
+            if (vt.TongTien != 0)
+                data.Add(vt);
+            if (ta.TongTien != 0)
+                data.Add(ta);
+            return data;
+        }
 
     }
 }

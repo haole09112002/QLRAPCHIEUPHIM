@@ -276,5 +276,5 @@ namespace GUI.AD_GUI
             btnThem.Enabled = var;
         }
 
-    }
+     }
 }

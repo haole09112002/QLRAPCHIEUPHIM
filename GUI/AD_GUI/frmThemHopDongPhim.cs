@@ -74,7 +74,7 @@ namespace GUI.AD_GUI
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            if (btnLuu.Visible == true)
+            if (btnLuu.Enabled == true)
             {
                 DialogResult result = MessageBox.Show("Bạn có chắc muốn thoát!, Dữ liệu chưa được lưu lại", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
@@ -213,10 +213,10 @@ namespace GUI.AD_GUI
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            HopDongDTO hopDong = new HopDongDTO();
+             
             if(cbTenCungCap.SelectedIndex >= 0)
             {
-                hopDong = new HopDongDTO
+                HopDongDTO  hopDong = new HopDongDTO
                 {
                     MaHopDong = maHopDong,
                     TenHopDong = txtTenHopDong.Text,
@@ -242,7 +242,7 @@ namespace GUI.AD_GUI
                             }
                         }
                         HopDongPhimBLL.Instance.AddUpdateHopDongPhim(dsPhimDaChon, maHopDong);
-                       uc_LichSuGiaHan.LoadData(HopDongPhimBLL.Instance.GetLichSuGiaHan(maHopDong, dgvPhimDaThem.SelectedRows[0].Cells["MaPhim"].Value.ToString()));
+                        uc_LichSuGiaHan.LoadData(HopDongPhimBLL.Instance.GetLichSuGiaHan(maHopDong, dgvPhimDaThem.SelectedRows[0].Cells["MaPhim"].Value.ToString()));
                         ReLoadDGVPhimDaChon();
                         ReLoadDGVPhimLuaChon();
                         MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

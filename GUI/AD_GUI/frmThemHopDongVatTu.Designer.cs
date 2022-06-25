@@ -414,7 +414,7 @@
             this.gbLuaChonPhim.Size = new System.Drawing.Size(535, 316);
             this.gbLuaChonPhim.TabIndex = 12;
             this.gbLuaChonPhim.TabStop = false;
-            this.gbLuaChonPhim.Text = "Danh sách thức ăn đề xuất tạo hợp đồng";
+            this.gbLuaChonPhim.Text = "Danh sách vật tư đề xuất tạo hợp đồng";
             // 
             // dgvVatTu
             // 

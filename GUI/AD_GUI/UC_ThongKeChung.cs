@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using DTO;
 using BLL;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace GUI.AD_GUI
 {
@@ -27,8 +28,10 @@ namespace GUI.AD_GUI
             cbLoaiHopDong.SelectedIndex = 0;
             dtpNgayKT.Value = DateTime.Today;
             dtpNgayBD.Value = DateTime.Today.AddDays(-7);
-            LoadGDVThongKeHopDong( ThongKeBLL.Instance.ThongKeTienNhapPhim(((CBBItem)cbLoaiHopDong.SelectedItem).Value,
-                        dtpNgayBD.Value, dtpNgayKT.Value, lbSoLuongHD, lbTongTienThanhToanHD, lbDocTienThanhChu));
+            List<ThongKeTienNhapDTO> data = ThongKeBLL.Instance.ThongKeTienNhapPhim(((CBBItem)cbLoaiHopDong.SelectedItem).Value,
+                      dtpNgayBD.Value, dtpNgayKT.Value, lbSoLuongHD, lbTongTienThanhToanHD, lbDocTienThanhChu);
+            LoadGDVThongKeHopDong( data);
+            LoadChart(data);
             lbTongNhaCungCap.Text = ThongKeBLL.Instance.SoLuongNhaCungCap().ToString();
             lbSoLuongNhaCungCapPhim.Text = ThongKeBLL.Instance.SoLuongNhaCungCap("LNCC01").ToString();
             lbSoLuongNhaCungCapVT.Text = ThongKeBLL.Instance.SoLuongNhaCungCap("LNCC02").ToString();
@@ -64,8 +67,10 @@ namespace GUI.AD_GUI
             {
                 if (dtpNgayBD.Value <= dtpNgayKT.Value)
                 {
-                    LoadGDVThongKeHopDong(ThongKeBLL.Instance.ThongKeTienNhapPhim(((CBBItem)cbLoaiHopDong.SelectedItem).Value,
-                                          dtpNgayBD.Value, dtpNgayKT.Value, lbSoLuongHD, lbTongTienThanhToanHD, lbDocTienThanhChu));
+                    List<ThongKeTienNhapDTO> data = ThongKeBLL.Instance.ThongKeTienNhapPhim(((CBBItem)cbLoaiHopDong.SelectedItem).Value,
+                        dtpNgayBD.Value, dtpNgayKT.Value, lbSoLuongHD, lbTongTienThanhToanHD, lbDocTienThanhChu);
+                    LoadGDVThongKeHopDong(data);
+                    LoadChart(data);
                 }
                 else
                 {
@@ -76,6 +81,16 @@ namespace GUI.AD_GUI
             {
                 MessageBox.Show("Chưa chọn loại hợp đồng cần thống kê!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+        private void LoadChart(List<ThongKeTienNhapDTO> data)
+        {
+          
+            chart1.Titles.Clear();
+            chart1.DataSource = ThongKeBLL.Instance.GetTienHopDongTheoLoaiHD(data);
+            chart1.Series["Series1"].XValueMember = "LoaiHopDong";
+            chart1.Series["Series1"].YValueMembers = "TongTien";
+            chart1.Titles.Add("Biểu đồ tiền thanh toán hợp đồng theo các loại (VND)");
+            chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
         }
     }
 }
