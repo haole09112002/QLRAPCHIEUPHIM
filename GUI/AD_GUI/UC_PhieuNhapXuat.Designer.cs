@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvChiTiet = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dgvDSPhieu = new System.Windows.Forms.DataGridView();
             this.cbbTimKiem = new System.Windows.Forms.ComboBox();
             this.button6 = new System.Windows.Forms.Button();
@@ -71,14 +71,24 @@
             this.panel1.Size = new System.Drawing.Size(1297, 736);
             this.panel1.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(16, 710);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(194, 16);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "*Kích đúp 1 dòng để xem chi tiết";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgvChiTiet);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox3.Location = new System.Drawing.Point(654, 200);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(631, 506);
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
@@ -101,23 +111,13 @@
             this.groupBox2.Controls.Add(this.dgvDSPhieu);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.Location = new System.Drawing.Point(12, 200);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(634, 506);
             this.groupBox2.TabIndex = 35;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Phiếu";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(16, 710);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 16);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "*Kích đúp 1 dòng để xem chi tiết";
             // 
             // dgvDSPhieu
             // 
@@ -140,7 +140,7 @@
             "Tên Nhân Viên",
             "Ngày Lập Phiếu"});
             this.cbbTimKiem.Location = new System.Drawing.Point(750, 147);
-            this.cbbTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.cbbTimKiem.Name = "cbbTimKiem";
             this.cbbTimKiem.Size = new System.Drawing.Size(160, 25);
             this.cbbTimKiem.TabIndex = 34;
@@ -154,12 +154,13 @@
             this.button6.Image = global::GUI.Properties.Resources.Sort;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(27, 140);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(123, 38);
             this.button6.TabIndex = 32;
             this.button6.Text = "    SẮP XẾP";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button3
             // 
@@ -170,7 +171,7 @@
             this.button3.Image = global::GUI.Properties.Resources.SearchIcon;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(385, 142);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(123, 36);
             this.button3.TabIndex = 31;
