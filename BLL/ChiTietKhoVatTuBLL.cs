@@ -98,7 +98,7 @@ namespace BLL
             List<ChiTietKhoVatTuViewDTO> data = new List<ChiTietKhoVatTuViewDTO>();
             foreach(ChiTietKhoVatTuDTO i in GetAllChiTietKhoVatTu())
             {
-                if (VatTuBLL.Instance.GetVatTuByMaVatTu(i.MaVatTu).TenVatTu.Contains(txt))
+                if (VatTuBLL.Instance.GetVatTuByMaVatTu(i.MaVatTu).TenVatTu.Contains(txt) && i.SoLuongSP > 0)
                 {
                 data.Add(ConvertChiTietKhoVatTuDTOToView(i));
                 }

@@ -34,6 +34,8 @@ namespace GUI.QLVT_GUI
             dgvListThucAn.Columns["DonViTinh"].HeaderText = "Đơn Vị Tính";
             dgvListThucAn.Columns["SoLuongSP"].HeaderText = "Số Lượng";
             dgvListThucAn.Columns["GiaTien"].HeaderText = "Giá Tiền";
+            dgvListThucAn.Columns["GiaTien"].Visible = false;
+            dgvListVatTu.Columns["GiaTien"].Visible = false;
         }
         public void ReloadListThucAn(string txt = "")
         {

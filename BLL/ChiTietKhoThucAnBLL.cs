@@ -80,7 +80,7 @@ namespace BLL
             List<ChiTietKhoThucAnViewDTO> data = new List<ChiTietKhoThucAnViewDTO>();
             foreach (ChiTietKhoThucAnDTO i in GetAllChiTietKhoThucAn())
             {
-                if (ThucAnBLL.Instance.GetThucAnByMaThucAn(i.MaThucAn).TenThucAn.Contains(txt))
+                if (ThucAnBLL.Instance.GetThucAnByMaThucAn(i.MaThucAn).TenThucAn.Contains(txt) && i.SoLuongSP>0)
                 {
                 data.Add(ConvertChiTietKhoThucAnDTOToView(i));
                 }
