@@ -67,7 +67,7 @@ namespace GUI.QLP_GUI
                     {
                         foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTenPhim, txtTimKiem, cbTimKiem))
                         {
-                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
+                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai,i.HopDong);
                         }
                         break;
                     }
@@ -75,7 +75,7 @@ namespace GUI.QLP_GUI
                     {
                         foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareThoiLuong, txtTimKiem, cbTimKiem))
                         {
-                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
+                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai, i.HopDong);
                         }
                         break;
                     }
@@ -83,7 +83,7 @@ namespace GUI.QLP_GUI
                     {
                         foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareQuocGia, txtTimKiem, cbTimKiem))
                         {
-                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
+                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai, i.HopDong);
                         }
                         break;
                     }
@@ -91,7 +91,7 @@ namespace GUI.QLP_GUI
                     {
                         foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareNamSanXuat, txtTimKiem, cbTimKiem))
                         {
-                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
+                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai, i.HopDong);
                         }
                         break;
                     }
@@ -99,7 +99,7 @@ namespace GUI.QLP_GUI
                     {
                         foreach (PhimViewDTO i in PhimBLL.Instance.SortPhimView(PhimBLL.Instance.CompareTheLoai, txtTimKiem, cbTimKiem))
                         {
-                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai);
+                            dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim, i.ThoiLuong, i.QuocGia, i.NamSanXuat.ToShortDateString(), i.TenHangSanXuatPhim, i.DoTuoiXem, i.TheLoai, i.HopDong);
                         }
                         break;
                     }
