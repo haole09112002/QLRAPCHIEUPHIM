@@ -201,18 +201,17 @@ namespace GUI.QLP_GUI
                     ChiTietKhoPhimBLL.Instance.ThemCapNhatChiTietKhoPhim(data, ((CBBItem)cBMaLoaiPhieu.SelectedItem).Value);
                     MessageBox.Show("Thêm Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtDonViTinh.Text = "";
-                    cBMaKho.SelectedIndex = -1;
-                    cBMaLoaiPhieu.SelectedIndex = -1;
+                    cBMaKho.Enabled = true;
+                    cBMaLoaiPhieu.Enabled = true;
                     nUDSoLuong.Value = 0;
                     txtTenPhim.Text = "";
                     txtMaPhim.Text = "";
-                    dGVDanhSachPhim.DataSource = null;
-                    dGVPhimDaThem.DataSource = null;
+                    dtPhimDaThem.Rows.Clear();
+                    dGVPhimDaThem.DataSource = dtPhimDaThem;
+                    btnLuu.Enabled = false;
+                    ReLoad();
                 }
             }
-            dtPhimDaThem.Rows.Clear();
-            dGVPhimDaThem.DataSource = dtPhimDaThem;
-            btnLuu.Enabled = false;
         }
 
         private void cBMaLoaiPhieu_SelectedIndexChanged(object sender, EventArgs e)
@@ -253,10 +252,10 @@ namespace GUI.QLP_GUI
 
         private void UC_TaoPhieu_QLP_Leave(object sender, EventArgs e)
         {
-            if (btnLuu.Enabled == true)
+            if (btnLuu.Enabled == true || dGVDanhSachPhim.Columns != null)
             {
-                DialogResult dialogResult = MessageBox.Show("Bạn chưa lưu có muốn thoát ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question); ;
-                if (dialogResult == DialogResult.OK)
+                DialogResult dialogResult = MessageBox.Show("Xác nhận thoát!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question); ;
+                if (dialogResult == DialogResult.Yes)
                 {
                     txtDonViTinh.Text = "";
                     cBMaKho.SelectedIndex = -1;
@@ -267,23 +266,17 @@ namespace GUI.QLP_GUI
                     dGVDanhSachPhim.DataSource = null;
                     dGVPhimDaThem.DataSource = null;
                     lbMaKho.Text = "";
+                    lbDonViTinh.Text = "";
+                    lbLoaiPhieu.Text = "";
+                    lbPhimDaThem.Text = "";
+                    lbSoLuong.Text = "";
                     cBMaKho.Enabled = true;
                     cBMaLoaiPhieu.Enabled = true;
+                    btnChinhSua.Visible = false;
+                    btnThem.Visible = true;
+                    dGVDanhSachPhim.Enabled = true;
+                    dtPhimDaThem.Rows.Clear();
                 }
-            }
-            else
-            {
-                txtDonViTinh.Text = "";
-                cBMaKho.SelectedIndex = -1;
-                cBMaLoaiPhieu.SelectedIndex = -1;
-                nUDSoLuong.Value = 0;
-                txtTenPhim.Text = "";
-                txtMaPhim.Text = "";
-                dGVDanhSachPhim.DataSource = null;
-                dGVPhimDaThem.DataSource = null;
-                lbMaKho.Text = "";
-                cBMaKho.Enabled = true;
-                cBMaLoaiPhieu.Enabled = true;
             }
         }
 

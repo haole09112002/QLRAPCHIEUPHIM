@@ -36,14 +36,14 @@ namespace BLL
                 string TheLoaiPhim = "";
                 string TenHangSanXuatPhim = "";
                 HopDong = "Chưa có HĐ";
-                foreach(TongSoLuongPhimDTO j in HopDongPhimBLL.Instance.GetTongSoLuongCuaTungPhim())
+                foreach (TongSoLuongPhimDTO j in HopDongPhimBLL.Instance.GetTongSoLuongCuaTungPhim())
                 {
-                    if(j.MaPhim == i.MaPhim)
+                    if (j.MaPhim == i.MaPhim)
                     {
                         HopDong = "Hết hợp đồng";
-                        foreach(string z in HopDongPhimBLL.Instance.GetDanhSachMaPhimConHopDong())
+                        foreach (string z in HopDongPhimBLL.Instance.GetDanhSachMaPhimConHopDong())
                         {
-                            if(z == i.MaPhim)
+                            if (z == i.MaPhim)
                             {
                                 HopDong = "Còn hợp đồng";
                             }
@@ -170,17 +170,17 @@ namespace BLL
                             HopDong = HopDong,
                         });
                     }
-                if(TimKiem == "Tên Hãng Sản Xuất Phim")
+                if (TimKiem == "Tên Hãng Sản Xuất Phim")
                 {
-                    foreach(HangSanXuatPhimDTO j in HangSanXuatPhimDAL.Instance.GetAllHangSanXuatPhim())
+                    foreach (HangSanXuatPhimDTO j in HangSanXuatPhimDAL.Instance.GetAllHangSanXuatPhim())
                     {
-                        if(i.MaHangSanXuatPhim == j.MaHangSanXuatPhim)
+                        if (i.MaHangSanXuatPhim == j.MaHangSanXuatPhim)
                         {
                             TenHangSanXuatPhim = j.TenHangSanXuatPhim;
                             break;
                         }
                     }
-                    if(TenHangSanXuatPhim.Contains(txt))
+                    if (TenHangSanXuatPhim.Contains(txt))
                     {
                         foreach (TheLoaiPhimDTO j in TLP.ToArray())
                         {
@@ -203,7 +203,7 @@ namespace BLL
                         });
                     }
                 }
-                if(TimKiem == "Thể Loại")
+                if (TimKiem == "Thể Loại")
                 {
                     foreach (TheLoaiPhimDTO j in TLP.ToArray())
                     {
@@ -263,7 +263,7 @@ namespace BLL
         public List<PhimViewDTO> SortPhimView(Compare compare, string txt = "", string TimKiem = "")
         {
             List<PhimViewDTO> data = new List<PhimViewDTO>();
-            data = GetPhimViews(txt,TimKiem);
+            data = GetPhimViews(txt, TimKiem);
             for (int i = 0; i < data.Count - 1; i++)
                 for (int j = i + 1; j < data.Count; j++)
                 {
@@ -333,7 +333,7 @@ namespace BLL
         public List<PhimDTO> GetAllPhim()
         {
             List<PhimDTO> data = new List<PhimDTO>();
-            foreach(PhimDTO i in PhimDAL.Instance.GetALLPhim())
+            foreach (PhimDTO i in PhimDAL.Instance.GetALLPhim())
             {
                 data.Add(i);
             }
@@ -342,9 +342,9 @@ namespace BLL
         public List<PhimDTO> GetAllPhimCoHopDong(string txt = "")
         {
             List<PhimDTO> data = new List<PhimDTO>();
-            foreach(string i in HopDongPhimBLL.Instance.GetDanhSachMaPhimConHopDong())
+            foreach (string i in HopDongPhimBLL.Instance.GetDanhSachMaPhimConHopDong())
             {
-                if(PhimBLL.Instance.GetPhimByMaPhim(i).TenPhim.Contains(txt))
+                if (PhimBLL.Instance.GetPhimByMaPhim(i).TenPhim.Contains(txt))
                 {
                     data.Add(PhimBLL.Instance.GetPhimByMaPhim(i));
                 }

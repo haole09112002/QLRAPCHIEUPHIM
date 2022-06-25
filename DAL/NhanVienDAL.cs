@@ -109,7 +109,7 @@ namespace DAL
             string query = "EXEC CapNhatNhanVien @MaNhanVien , @TenNhanVien , @NgaySinh , @GioiTinh , @DiaChi , @SoDienThoai , @CCCD , @TenTaiKhoan , @MatKhau , @Anh , @MaChinhSach , @MaChucVu";
             object[] parameter = new object[]
             {
-                nhanVien.MaNhanVien,nhanVien.TenNhanVien, nhanVien.NgaySinh, nhanVien.GioiTinh , nhanVien.DiaChi , nhanVien.SoDienThoai, nhanVien.CCCD1, nhanVien.TenTaiKhoan,nhanVien.MatKhau ,nhanVien.Anh1 ,nhanVien.MaChinhSach,
+                nhanVien.MaNhanVien,nhanVien.TenNhanVien, nhanVien.NgaySinh, nhanVien.GioiTinh , nhanVien.DiaChi , nhanVien.SoDienThoai, nhanVien.CCCD1, nhanVien.TenTaiKhoan,nhanVien.MatKhau , nhanVien.Anh1 ,nhanVien.MaChinhSach,
                 nhanVien.MaChucVu
             };
             DBHelper.Instance.ExcuteNonQuery(query, parameter);

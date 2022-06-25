@@ -30,16 +30,16 @@ namespace GUI.QLVT_GUI
             {
                 rbNu.Checked = true;
             }
-            if (nhanVien.Anh1 != null)
+            if (nhanVien.Anh1 != null && nhanVien.Anh1.Length > 1)
             {
-            pbAnhNhanVien.Image = PhimBLL.Instance.ChuyeMangByteSangAnh(nhanVien.Anh1);
+                 pbAnhNhanVien.Image = PhimBLL.Instance.ChuyeMangByteSangAnh(nhanVien.Anh1);
             }
             else
             {
                 pbAnhNhanVien.Image = null;
             }
-            lblChucVu.Text = ChucVuBLL.Instance.GetChucVuByMaChucVu(nhanVien.MaChucVu).TenChucVu;
             txtTen.Text = nhanVien.TenNhanVien;
+            lblChucVu.Text = ChucVuBLL.Instance.GetChucVuByMaChucVu(nhanVien.MaChucVu).TenChucVu;
             dtpNgaySinh.Value = nhanVien.NgaySinh;
             txtDiaChi.Text = nhanVien.DiaChi;
             txtDienThoai.Text = nhanVien.SoDienThoai;
@@ -173,7 +173,15 @@ namespace GUI.QLVT_GUI
                     nhanVien.TenNhanVien = txtTen.Text;
                     nhanVien.CCCD1 = txtCCCD.Text;
                     nhanVien.DiaChi = txtDiaChi.Text;
-                    nhanVien.Anh1 = PhimBLL.Instance.ChuyenAnhThanhMangByte(pbAnhNhanVien);
+                    if(pbAnhNhanVien.Image != null)
+                    {
+                        nhanVien.Anh1 = PhimBLL.Instance.ChuyenAnhThanhMangByte(pbAnhNhanVien);
+                    }
+                    else
+                    {
+                        byte[] trunggian = { 0 };
+                        nhanVien.Anh1 = trunggian; 
+                    }
                     nhanVien.SoDienThoai = txtDienThoai.Text;
                     if (rbNam.Checked == true)
                     {
