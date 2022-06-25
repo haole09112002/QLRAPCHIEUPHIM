@@ -16,6 +16,7 @@ namespace DTO
         private int doTuoiXem;
         private string theLoai;
         private string tenHangSanXuatPhim;
+        private string hopDong;
 
         public string MaPhim { get => maPhim; set => maPhim = value; }
         public string TenPhim { get => tenPhim; set => tenPhim = value; }
@@ -25,5 +26,6 @@ namespace DTO
         public string TenHangSanXuatPhim { get => tenHangSanXuatPhim; set => tenHangSanXuatPhim = value; }
         public int DoTuoiXem { get => doTuoiXem; set => doTuoiXem = value; }
         public string TheLoai { get => theLoai; set => theLoai = value; }
+        public string HopDong { get => hopDong; set => hopDong = value; }
     }
 }
