@@ -70,6 +70,7 @@ namespace GUI.AD_GUI
             dgvDSPhimConHD.Columns["NgayKetThucBanQuyen"].HeaderText = "Ngày kết thúc bản quyền";
             dgvDSPhimConHD.Columns["NgayBatDauBanQuyen"].Visible = false;
             dgvDSPhimConHD.Columns["SoLuong"].HeaderText = "Số lượng";
+            dgvDSPhimConHD.Columns["GiaTien"].HeaderText = "Đơn giá";
         }
         public void loadDGV(string maLoaiHopDong = "0", string txt = "", string tieuChiTimKiem = "")
         {

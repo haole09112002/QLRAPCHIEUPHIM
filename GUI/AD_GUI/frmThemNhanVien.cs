@@ -8,7 +8,7 @@ namespace GUI.AD_GUI
 {
     public partial class frmThemNhanVien : Form
     {
-        public delegate void MyDel(string tt = "");
+        public delegate void MyDel(string tt = "1");
         public MyDel d { get; set; }
         string maNhanVienn { get; set; }
         NhanVienDTO nhanVien = new NhanVienDTO();
