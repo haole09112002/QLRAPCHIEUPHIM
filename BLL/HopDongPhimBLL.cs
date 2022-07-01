@@ -217,5 +217,17 @@ namespace BLL
             }
             return null;
         }
+        public List<string> GetDanhSachMaPhimHetHopDong()
+        {
+            List<string> data = new List<string>();
+            foreach (HopDongPhimDTO i in HopDongPhimDAL.Instance.GetAllHopDongPhim("0"))
+            {
+                if (i.NgayKetThucBanQuyen < DateTime.Now)
+                {
+                    data.Add(i.MaPhim);
+                }
+            }
+            return data.Distinct().ToList();
+        }
     }
 }

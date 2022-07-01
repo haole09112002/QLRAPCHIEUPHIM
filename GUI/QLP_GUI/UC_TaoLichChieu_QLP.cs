@@ -83,6 +83,15 @@ namespace GUI.QLP_GUI
             {
                 lbKhungGioChieu.Text = "";
             }
+            if(dTPNgayChieu.Value.Date > HopDongPhimBLL.Instance.GetHopDongPhimByMaPhim(txtMaPhim.Text).NgayKetThucBanQuyen)
+            {
+                lbTenPhim.Text = "*Phim đã hết hạn hợp đồng vào thời điểm chiếu";
+                kt = false;
+            }
+            else
+            {
+                lbTenPhim.Text = "";
+            }
             return kt;
         }
 
