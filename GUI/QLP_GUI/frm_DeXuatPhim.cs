@@ -302,7 +302,7 @@ namespace GUI.QLP_GUI
 
         private void cBDienVienChinh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienChinh.SelectedItem).Value, "P"))
+            if (KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienChinh.SelectedItem).Value, "P") || KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienChinh.SelectedItem).Value,"C"))
             {
                 MessageBox.Show("Diễn viên(Đạo Diễn) " + cBDienVienChinh.SelectedItem.ToString() + " đã có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -315,7 +315,7 @@ namespace GUI.QLP_GUI
 
         private void cBDienVienPhu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienPhu.SelectedItem).Value, "C"))
+            if (KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienPhu.SelectedItem).Value, "C") || KiemTraTonTaiDienVienDaoDien(((CBBItem)cBDienVienPhu.SelectedItem).Value, "P"))
             {
                 MessageBox.Show("Diễn viên(Đạo Diễn) " + cBDienVienPhu.SelectedItem.ToString() + " đã có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

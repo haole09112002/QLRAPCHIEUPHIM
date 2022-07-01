@@ -193,6 +193,9 @@ namespace GUI.AD_GUI
             dgvDSPhieu.Columns["Mã Phiếu"].Visible = false;
         }
 
-     
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
