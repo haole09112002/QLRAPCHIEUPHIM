@@ -72,11 +72,6 @@ namespace GUI.QLP_GUI
                 }
                 else
                 {
-                    //foreach (PhimDTO i in ChiTietKhoPhimBLL.Instance.GetListPhimByMaKho(((CBBItem)cBMaKho.SelectedItem).Value))
-                    //{
-                    //    if (ChiTietKhoPhimBLL.Instance.GetChiTietKhoPhimByKho(((CBBItem)cBMaKho.SelectedItem).Value, i.MaPhim).SoLuongSP > 0)
-                    //        dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim);
-                    //}
                     foreach(string i in HopDongPhimBLL.Instance.GetDanhSachMaPhimHetHopDong())
                     {
                         foreach(PhimDTO j in ChiTietKhoPhimBLL.Instance.GetListPhimByMaKho(((CBBItem)cBMaKho.SelectedItem).Value))
@@ -220,6 +215,13 @@ namespace GUI.QLP_GUI
                     dGVPhimDaThem.DataSource = dtPhimDaThem;
                     btnLuu.Enabled = false;
                     ReLoad();
+                }
+                foreach(ChiTietKhoPhimDTO i in ChiTietKhoPhimBLL.Instance.GetAllChiTietKhoPhim())
+                {
+                    if(ChiTietKhoPhimBLL.Instance.GetChiTietKhoPhimByKhoa(i.MaPhim,i.MaKho).SoLuongSP == 0)
+                    {
+                        ChiTietKhoPhimBLL.Instance.XoaPhimTrongKho(i.MaPhim, i.MaKho);
+                    }
                 }
             }
         }

@@ -35,7 +35,13 @@ namespace GUI.QLP_GUI
         {
             foreach (PhimDTO i in PhimBLL.Instance.GetAllPhimCoHopDong())
             {
-                dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim);
+                foreach(string j in ChiTietKhoPhimBLL.Instance.GetDanhSachMaPhimCoTrongKho())
+                {
+                    if(i.MaPhim == j)
+                    {
+                        dtDanhSachPhim.Rows.Add(i.MaPhim, i.TenPhim);
+                    }
+                }
             }
             foreach (PhongChieuDTO i in PhongChieuBLL.Instance.GetAllPhongChieuByTinhTrang(1))
             {
