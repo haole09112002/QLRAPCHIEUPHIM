@@ -75,5 +75,10 @@ namespace DAL
             }
             return data;
         }
+        public void XoaPhimTrongKho(string MaPhim, string MaKho)
+        {
+            string query = $"delete from CHI_TIET_KHO_PHIM where MaPhim = '{MaPhim}' and MaKho = '{MaKho}'";
+            DBHelper.Instance.ExcuteQuery(query);
+        }
     }
 }
