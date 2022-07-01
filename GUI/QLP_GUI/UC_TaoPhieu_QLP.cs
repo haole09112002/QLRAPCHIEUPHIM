@@ -120,7 +120,7 @@ namespace GUI.QLP_GUI
                 txtDonViTinh.Text = HopDongPhimBLL.Instance.GetHopDongPhimByMaPhim(txtMaPhim.Text).DonViTinh;
                 if (((CBBItem)cBMaLoaiPhieu.SelectedItem).Value == "LP002")
                 {
-                    nUDSoLuong.Maximum = ChiTietKhoPhimBLL.Instance.GetChiTietKhoPhimByKhoa(((CBBItem)cBMaKho.SelectedItem).Value, txtMaPhim.Text).SoLuongSP;
+                    nUDSoLuong.Maximum = ChiTietKhoPhimBLL.Instance.GetChiTietKhoPhimByKho(((CBBItem)cBMaKho.SelectedItem).Value, txtMaPhim.Text).SoLuongSP;
                 }
                 else
                 {
