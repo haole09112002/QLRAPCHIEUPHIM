@@ -159,40 +159,40 @@
             // lbSoLuong
             // 
             this.lbSoLuong.AutoSize = true;
-            this.lbSoLuong.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoLuong.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSoLuong.ForeColor = System.Drawing.Color.Red;
             this.lbSoLuong.Location = new System.Drawing.Point(241, 446);
             this.lbSoLuong.Name = "lbSoLuong";
-            this.lbSoLuong.Size = new System.Drawing.Size(0, 17);
+            this.lbSoLuong.Size = new System.Drawing.Size(0, 24);
             this.lbSoLuong.TabIndex = 77;
             // 
             // txtMaPhim
             // 
             this.txtMaPhim.Enabled = false;
-            this.txtMaPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtMaPhim.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaPhim.Location = new System.Drawing.Point(646, 415);
             this.txtMaPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaPhim.Name = "txtMaPhim";
             this.txtMaPhim.ReadOnly = true;
-            this.txtMaPhim.Size = new System.Drawing.Size(296, 28);
+            this.txtMaPhim.Size = new System.Drawing.Size(296, 32);
             this.txtMaPhim.TabIndex = 76;
             // 
             // nUDSoLuong
             // 
-            this.nUDSoLuong.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.nUDSoLuong.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nUDSoLuong.Location = new System.Drawing.Point(241, 416);
             this.nUDSoLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nUDSoLuong.Name = "nUDSoLuong";
-            this.nUDSoLuong.Size = new System.Drawing.Size(296, 28);
+            this.nUDSoLuong.Size = new System.Drawing.Size(296, 32);
             this.nUDSoLuong.TabIndex = 75;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(560, 418);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 19);
+            this.label4.Size = new System.Drawing.Size(85, 24);
             this.label4.TabIndex = 74;
             this.label4.Text = "Mã Phim";
             // 
@@ -232,20 +232,20 @@
             // 
             // txtNoiDung
             // 
-            this.txtNoiDung.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtNoiDung.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNoiDung.Location = new System.Drawing.Point(646, 470);
             this.txtNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNoiDung.Name = "txtNoiDung";
-            this.txtNoiDung.Size = new System.Drawing.Size(296, 28);
+            this.txtNoiDung.Size = new System.Drawing.Size(296, 32);
             this.txtNoiDung.TabIndex = 71;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(556, 473);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 19);
+            this.label3.Size = new System.Drawing.Size(88, 24);
             this.label3.TabIndex = 70;
             this.label3.Text = "Nội Dung";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -270,24 +270,21 @@
             // cBDonViTinh
             // 
             this.cBDonViTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cBDonViTinh.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.cBDonViTinh.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBDonViTinh.FormattingEnabled = true;
-            this.cBDonViTinh.Items.AddRange(new object[] {
-            "Đĩa",
-            "Cuộn"});
             this.cBDonViTinh.Location = new System.Drawing.Point(241, 469);
             this.cBDonViTinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBDonViTinh.Name = "cBDonViTinh";
-            this.cBDonViTinh.Size = new System.Drawing.Size(296, 27);
+            this.cBDonViTinh.Size = new System.Drawing.Size(296, 32);
             this.cBDonViTinh.TabIndex = 67;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(54, 477);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 19);
+            this.label2.Size = new System.Drawing.Size(111, 24);
             this.label2.TabIndex = 65;
             this.label2.Text = "Đơn Vị Tính";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -295,17 +292,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(58, 418);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 19);
+            this.label1.Size = new System.Drawing.Size(89, 24);
             this.label1.TabIndex = 64;
             this.label1.Text = "Số Lượng";
             // 
             // gBDanhSachPhim
             // 
             this.gBDanhSachPhim.Controls.Add(this.dGVDanhSachPhim);
-            this.gBDanhSachPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gBDanhSachPhim.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBDanhSachPhim.Location = new System.Drawing.Point(28, 78);
             this.gBDanhSachPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBDanhSachPhim.Name = "gBDanhSachPhim";
@@ -368,7 +365,7 @@
             // gBDeXuatPhim
             // 
             this.gBDeXuatPhim.Controls.Add(this.dGVDeXuatPhim);
-            this.gBDeXuatPhim.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gBDeXuatPhim.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBDeXuatPhim.Location = new System.Drawing.Point(40, 512);
             this.gBDeXuatPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gBDeXuatPhim.Name = "gBDeXuatPhim";

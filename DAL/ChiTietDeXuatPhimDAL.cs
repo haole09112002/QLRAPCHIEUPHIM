@@ -78,7 +78,7 @@ namespace DAL
         public void LuuChiTietDeXuatPhim(string MaDeXuat, string MaPhim, string NoiDung, string DonViTinh, int SoLuong, string TinhTrang)
         {
             string query = "Insert into CHI_TIET_DE_XUAT_PHIM values" +
-                $"('{MaDeXuat}','{MaPhim}',N'{NoiDung}',{SoLuong},'{DonViTinh}','{TinhTrang}')";
+                $"('{MaDeXuat}','{MaPhim}',N'{NoiDung}',{SoLuong},N'{DonViTinh}','{TinhTrang}')";
             DBHelper.Instance.ExcuteQuery(query);
         }
     }

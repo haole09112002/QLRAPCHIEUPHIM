@@ -15,6 +15,7 @@ namespace GUI.QLP_GUI
         {
             this.nhanvien = nhanvien;
             InitializeComponent();
+            cBDonViTinh.Items.AddRange(new string[] { "Đĩa", "Cuộn" });
             SetDataTable();
             Reload();
             btnChinhSua.Visible = false;

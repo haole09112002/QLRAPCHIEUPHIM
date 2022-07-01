@@ -20,26 +20,27 @@ namespace GUI.AD_GUI
         }
         public void Reload()
         {
-            if (nhanVien.GioiTinh == false)
-            {
-                radioButton1.Checked = true;
-            }
-            else
-            {
-                radioButton2.Checked = true;
-            }
-            txtHoTen.Text = nhanVien.TenNhanVien;
-            dtpNgaySinh.Value = nhanVien.NgaySinh;
-            txtDiaChi.Text = nhanVien.DiaChi;
-            txtDienThoai.Text = nhanVien.SoDienThoai;
-            txtTenTK.Text = nhanVien.TenTaiKhoan;
-            txtCCCD.Text = nhanVien.CCCD1;
+            //if (nhanVien.GioiTinh == false)
+            //{
+            //    radioButton1.Checked = true;
+            //}
+            //else
+            //{
+            //    radioButton2.Checked = true;
+            //}
+            //txtHoTen.Text = nhanVien.TenNhanVien;
+            //dtpNgaySinh.Value = nhanVien.NgaySinh;
+            //txtDiaChi.Text = nhanVien.DiaChi;
+            //txtDienThoai.Text = nhanVien.SoDienThoai;
+            //txtTenTK.Text = nhanVien.TenTaiKhoan;
+            //txtCCCD.Text = nhanVien.CCCD1;
             
-            lblValidatedCCCD.Visible = false;
-            lblValidatedDienThoai.Visible = false;
-            lblValidatedDiaChi.Visible = false;
-            lblValidatedTen.Visible = false;
-            lblValidatedNgaySinh.Visible = false;
+            
+            //lblValidatedCCCD.Visible = false;
+            //lblValidatedDienThoai.Visible = false;
+            //lblValidatedDiaChi.Visible = false;
+            //lblValidatedTen.Visible = false;
+            //lblValidatedNgaySinh.Visible = false;
         }
 
         public void SetGUI(string maNv)
@@ -50,7 +51,7 @@ namespace GUI.AD_GUI
             cbbChinhSach.Items.AddRange(ChinhSachBLL.Instance.GetCBBChinhSach().ToArray());
             if (maNv == "")
             {
-                txtMatKhau.Text = "123456";
+                txtMatKhau.Text = NhanVienBLL.Instance.MD5("123456");
                 btnChinhSua.Visible= false;
                 
             }
@@ -58,8 +59,8 @@ namespace GUI.AD_GUI
             {
                 setEnable(false);
            
-            NhanVienDTO nv=new NhanVienDTO();
-            nv = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv);
+      
+            nhanVien = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv);
             txtHoTen.Text = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).TenNhanVien;
             dtpNgaySinh.Value = NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).NgaySinh;
             if (NhanVienBLL.Instance.GetNhanVienByMaNhanVien(maNv).GioiTinh)
@@ -122,39 +123,50 @@ namespace GUI.AD_GUI
             if (cbbChinhSach.SelectedItem != null)
             {
                 maChinhSach = ((CBBItem)cbbChinhSach.SelectedItem).Value;
-            }
-            radioButton2.Checked = true;
-            NhanVienDTO nhanVien = new NhanVienDTO
+            }   
+            NhanVienDTO nv = new NhanVienDTO
             {
                 MaNhanVien = maNhanVienn,
                 TenNhanVien = txtHoTen.Text,
                 NgaySinh = dtpNgaySinh.Value,
-                GioiTinh = radioButton2.Checked,
+                GioiTinh = radioButton1.Checked,
                 SoDienThoai = txtDienThoai.Text,
                 DiaChi = txtDiaChi.Text,
                 CCCD1 = txtCCCD.Text,
                 TenTaiKhoan = txtTenTK.Text,
-                MatKhau = NhanVienBLL.Instance.MD5(txtMatKhau.Text),
+                MatKhau = txtMatKhau.Text,
                 MaChinhSach = maChinhSach,
                 MaChucVu = maChucVu,
-                TrangThai = "1"
+                TrangThai = "1",
+                Anh1 = nhanVien.Anh1
             };
-            if (NhanVienBLL.Instance.KiemTraDuLieu(nhanVien/*, lblValidatedNgaySinh, lblValidatedDienThoai, lblValidatedCCCD*/) == null )
+            if(nv.Anh1 == null)
+            {
+                byte[] trunggian = { 0 };
+                nv.Anh1 = trunggian;
+            }    
+            if (NhanVienBLL.Instance.KiemTraDuLieu(nv/*, lblValidatedNgaySinh, lblValidatedDienThoai, lblValidatedCCCD*/) == null )
             {
                 DialogResult result = MessageBox.Show("Bạn muốn lưu?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    NhanVienBLL.Instance.AddUpdateNhanVien(nhanVien);
+                    try
+                    {
+                        NhanVienBLL.Instance.AddUpdateNhanVien(nv);
+                       
+                    }
+                    catch(Exception ex) { MessageBox.Show("Lỗi:" + ex); }
                     DialogResult result2 = MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     {
                         d();
                         this.Close();
                     }
+
                 }
             }
             else
             {
-                MessageBox.Show(NhanVienBLL.Instance.KiemTraDuLieu(nhanVien/*, lblValidatedNgaySinh, lblValidatedDienThoai, lblValidatedCCCD*/), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(NhanVienBLL.Instance.KiemTraDuLieu(nv/*, lblValidatedNgaySinh, lblValidatedDienThoai, lblValidatedCCCD*/), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public bool checkvalidate()
@@ -197,7 +209,7 @@ namespace GUI.AD_GUI
             DialogResult result = MessageBox.Show("Bạn có muốn đặt lại mật khẩu?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
             {
-                txtMatKhau.Text = "123456";
+                txtMatKhau.Text = NhanVienBLL.Instance.MD5("123456");
             }
         }
 

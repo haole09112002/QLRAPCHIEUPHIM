@@ -100,6 +100,31 @@ namespace BLL
             }
             return data;
         }
+        public List<LichChieuViewDTO> GetLichChieuDuKien(string TrangThai, string TimKiem = "", string LoaiTimKiem = "")
+        {
+            List<LichChieuViewDTO> data =  GetLichChieuViewByTrangThai(TrangThai, TimKiem = "", LoaiTimKiem = "");
+            List<LichChieuViewDTO> r = (from i in data
+            where i.NgayChieu >= DateTime.Today
+            select i).ToList();
+            List<LichChieuViewDTO> r2 = (from i in data
+                                        where i.NgayChieu < DateTime.Today
+                                        select i).ToList();
+            if(r2.Count > 0)
+            {
+                foreach (LichChieuViewDTO i in r2)
+                {
+                    LichChieuDTO lichChieuDTO = new LichChieuDTO
+                    {
+                        MaPhim = i.MaPhim,
+                        MaPhongChieu = i.MaPhongChieu,
+                        MaKhungGioChieu = i.MaKhungGioChieu,
+                        NgayChieu = i.NgayChieu
+                    };
+                    LichChieuBLL.Instance.CapNhatLichChieu(lichChieuDTO, "0");
+                }
+            }    
+            return r;
+        }
         public List<LichChieuViewDTO> SortLichChieu(Compare compare,string TrangThai, string TimKiem = "", string LoaiTimKiem = "")
         {
             List<LichChieuViewDTO> data = new List<LichChieuViewDTO>();
