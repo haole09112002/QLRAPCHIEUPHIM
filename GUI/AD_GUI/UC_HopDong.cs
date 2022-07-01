@@ -58,7 +58,19 @@ namespace GUI.AD_GUI
             cbLoaiHopDong.SelectedIndex = 0;
             cbbTieuChiTimKiem.Items.AddRange(new string[] { "Tên hợp đồng", "Ngày kí kết", "Tên nhà cung cấp" });
             cbbTieuChiTimKiem.SelectedIndex = 0;
+            loadDGVPhim();
             loadDGV();  
+        }
+        private void loadDGVPhim(string txt = "")
+        {
+            dgvDSPhimConHD.DataSource = HopDongPhimBLL.Instance.GetDSPhimConHD(txt);
+            dgvDSPhimConHD.Columns["MaPhim"].Visible = false;
+            dgvDSPhimConHD.Columns["TenPhim"].HeaderText = "Tên phim";
+            dgvDSPhimConHD.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+            dgvDSPhimConHD.Columns["NgayKetThucBanQuyen"].HeaderText = "Ngày kết thúc bản quyền";
+            dgvDSPhimConHD.Columns["NgayBatDauBanQuyen"].Visible = false;
+            dgvDSPhimConHD.Columns["SoLuong"].HeaderText = "Số lượng";
+            dgvDSPhimConHD.Columns["GiaTien"].HeaderText = "Đơn giá";
         }
         public void loadDGV(string maLoaiHopDong = "0", string txt = "", string tieuChiTimKiem = "")
         {
@@ -138,6 +150,11 @@ namespace GUI.AD_GUI
                 }
                 dgvDSHopDong.DataSource = HopDongBLL.Instance.SortHopDong(HopDongBLL.Instance.GetHopDongDGV(now), dkSapXep);
             }
+        }
+
+        private void btnTimKiemPhim_Click(object sender, EventArgs e)
+        {
+            loadDGVPhim(txtTimKiemPhim.Text);
         }
     }
 }

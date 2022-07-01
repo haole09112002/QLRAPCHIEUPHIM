@@ -229,5 +229,19 @@ namespace BLL
             }
             return data.Distinct().ToList();
         }
+
+        public List<HopDongPhimViewDTO> GetDSPhimConHD(string txt)
+        {
+            List<HopDongPhimViewDTO> r = new List<HopDongPhimViewDTO>();
+            foreach(HopDongPhimDTO h in HopDongPhimDAL.Instance.GetAllHopDongPhim("0"))
+            {
+                if(h.NgayKetThucBanQuyen >= DateTime.Today && PhimBLL.Instance.GetPhimByMaPhim(h.MaPhim).TenPhim.ToLower().Contains(txt.ToLower()))
+                    r.Add(GetHopDongPhimViewByHopDongPhimDTO(h));
+            }    
+            
+            return r;
+             
+           
+        }
     }
 }

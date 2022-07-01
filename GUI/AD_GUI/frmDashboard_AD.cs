@@ -14,20 +14,18 @@ namespace GUI.AD_GUI
     public partial class frmDashboard_AD : Form
     {
         private NhanVienDTO nhanVien = new NhanVienDTO();
-        UC_LichChieu_AD ucLichChieu = new UC_LichChieu_AD();
-        UC_NhaCungCap ucNCC = new UC_NhaCungCap();
-        UC_HopDong ucHopDong = new UC_HopDong();
-        UC_DeXuat ucDeXuat = new UC_DeXuat();
+        
+      
+     
+    
         UCHoSoCaNhanQLVT ucCaNhan;
-
-        UC_MenuThongKe ucMenuThongKe = new UC_MenuThongKe();
-        UC_MenuNhanVien ucMenuNhanVien;
-        UC_MenuKho ucMenuKho = new UC_MenuKho();
+        
+      
         public frmDashboard_AD(NhanVienDTO nv)
         {
             InitializeComponent();
             nhanVien = nv;
-            ucMenuNhanVien = new UC_MenuNhanVien(nhanVien);
+            
             ucCaNhan = new UCHoSoCaNhanQLVT(nhanVien);
             AddControlsToPnCenter(ucCaNhan);
             changeColorButton(btnCaNhan);
@@ -53,7 +51,7 @@ namespace GUI.AD_GUI
      
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-
+             UC_MenuThongKe ucMenuThongKe = new UC_MenuThongKe();
             pnMenu.Controls.Clear();
             AddControlsToPnMenu(ucMenuThongKe);
             ucMenuThongKe.setColor();
@@ -65,6 +63,7 @@ namespace GUI.AD_GUI
 
         private void btnLichChieu_Click(object sender, EventArgs e)
         {
+            UC_LichChieu_AD ucLichChieu = new UC_LichChieu_AD();
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucLichChieu);
             changeColorButton(btnLichChieu);
@@ -72,6 +71,7 @@ namespace GUI.AD_GUI
 
         private void btnNCC_Click(object sender, EventArgs e)
         {
+            UC_NhaCungCap ucNCC = new UC_NhaCungCap();
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucNCC);
             changeColorButton(btnNCC);
@@ -91,6 +91,7 @@ namespace GUI.AD_GUI
 
         private void btnKho_Click(object sender, EventArgs e)
         {
+            UC_MenuKho ucMenuKho = new UC_MenuKho();
             pnMenu.Controls.Clear();
             AddControlsToPnMenu(ucMenuKho);
             ucMenuKho.setColor();
@@ -101,6 +102,7 @@ namespace GUI.AD_GUI
 
         private void btnNV_Click(object sender, EventArgs e)
         {
+            UC_MenuNhanVien ucMenuNhanVien = new UC_MenuNhanVien(nhanVien);
             pnMenu.Controls.Clear();
             ucMenuNhanVien.ucCaLam.ReLoad();
             AddControlsToPnMenu(ucMenuNhanVien);
@@ -119,6 +121,7 @@ namespace GUI.AD_GUI
 
         private void btnHopDong_Click(object sender, EventArgs e)
         {
+            UC_HopDong ucHopDong = new UC_HopDong();
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucHopDong);
             changeColorButton(btnHopDong);
@@ -126,6 +129,7 @@ namespace GUI.AD_GUI
 
         private void btnDeXuat_Click(object sender, EventArgs e)
         {
+            UC_DeXuat ucDeXuat = new UC_DeXuat();
             pnMenu.Controls.Clear();
             AddControlsToPnCenter(ucDeXuat);
             changeColorButton(btnDeXuat);

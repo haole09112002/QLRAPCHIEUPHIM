@@ -37,7 +37,7 @@ namespace GUI.QLVT_GUI
             nUDSoLuong.Enabled = false;
             txtNoiDung.Enabled = false;
             txtTimKiem.Text = "Nhập tên vật tư";
-            txtDonViTinh.Text = "Thùng";
+            txtDonViTinh.Text = "Cái";
             foreach (VatTuViewDTO i in VatTuBLL.Instance.GetVatTuViews(timKiem))
             {
                 dsDexuatVatTu.Rows.Add(i.MaVatTu, i.TenVatTu);

@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -78,6 +81,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbSoLuongPhimTrongKho = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -88,6 +92,7 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -102,6 +107,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chart1);
             this.groupBox1.Controls.Add(this.panel12);
             this.groupBox1.Controls.Add(this.panel11);
             this.groupBox1.Controls.Add(this.label21);
@@ -129,9 +135,9 @@
             this.panel12.Controls.Add(this.label16);
             this.panel12.Controls.Add(this.label13);
             this.panel12.Controls.Add(this.lbTongTienThanhToanHD);
-            this.panel12.Location = new System.Drawing.Point(524, 356);
+            this.panel12.Location = new System.Drawing.Point(447, 356);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(735, 85);
+            this.panel12.Size = new System.Drawing.Size(812, 85);
             this.panel12.TabIndex = 24;
             // 
             // label19
@@ -148,13 +154,14 @@
             this.lbDocTienThanhChu.AutoSize = true;
             this.lbDocTienThanhChu.Location = new System.Drawing.Point(132, 47);
             this.lbDocTienThanhChu.Name = "lbDocTienThanhChu";
-            this.lbDocTienThanhChu.Size = new System.Drawing.Size(0, 24);
+            this.lbDocTienThanhChu.Size = new System.Drawing.Size(21, 24);
             this.lbDocTienThanhChu.TabIndex = 11;
+            this.lbDocTienThanhChu.Text = "o";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(531, 8);
+            this.label16.Location = new System.Drawing.Point(562, 8);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(48, 24);
             this.label16.TabIndex = 10;
@@ -227,7 +234,7 @@
             this.dgvThongKeHopDong.Name = "dgvThongKeHopDong";
             this.dgvThongKeHopDong.RowHeadersWidth = 51;
             this.dgvThongKeHopDong.RowTemplate.Height = 24;
-            this.dgvThongKeHopDong.Size = new System.Drawing.Size(1224, 264);
+            this.dgvThongKeHopDong.Size = new System.Drawing.Size(798, 264);
             this.dgvThongKeHopDong.TabIndex = 18;
             // 
             // cbLoaiHopDong
@@ -616,6 +623,24 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Số lượng bộ phim  có trong kho";
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(839, 74);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(433, 276);
+            this.chart1.TabIndex = 28;
+            this.chart1.Text = "chart1";
+            // 
             // UC_ThongKeChung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -641,6 +666,7 @@
             this.panel7.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -697,5 +723,6 @@
         private System.Windows.Forms.DateTimePicker dtpNgayKT;
         private System.Windows.Forms.DateTimePicker dtpNgayBD;
         private System.Windows.Forms.Button btnThongKe;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

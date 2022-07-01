@@ -51,13 +51,13 @@ namespace DAL
         public void LuuChiTietKhoPhim(string MaKho, string MaPhim, string DonViTinh, int SoLuongSP)
         {
             string query = "insert into CHI_TIET_KHO_PHIM values" +
-                $"('{MaKho}','{MaPhim}','{DonViTinh}',{SoLuongSP})";
+                $"('{MaKho}','{MaPhim}',N'{DonViTinh}',{SoLuongSP})";
             DBHelper.Instance.ExcuteQuery(query);
         }
         public void CapNhatChiTietKhoPhim(string MaKho, string MaPhim, int SoLuongSP, string DonViTinh)
         {
             string query = "update CHI_TIET_KHO_PHIM set " +
-                $"SoLuongSP = {SoLuongSP}, DonViTinh = '{DonViTinh}'" +
+                $"SoLuongSP = {SoLuongSP}, DonViTinh = N'{DonViTinh}'" +
                 $"where MaKho = '{MaKho}' and MaPhim = '{MaPhim}'";
             DBHelper.Instance.ExcuteQuery(query);
         }

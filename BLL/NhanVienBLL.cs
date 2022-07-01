@@ -183,15 +183,15 @@ namespace BLL
             if (DateTime.Today <= nhanVien.NgaySinh)
             {
                 //lblValidatedNgaySinh.Visible = true;
-                return "Ngay sinh ncc";
+                return "Ngay sinh không hợp lệ";
             }
             if (nhanVien.SoDienThoai == "")
-                return "Số Điện Thoai còn trống!";
+                return "Số Điện Thoại còn trống!";
             else
             {
                 if (Regex.IsMatch(nhanVien.SoDienThoai, @"(84|0[3|5|7|8|9])+([0-9]{8})\b") != true)
                 {
-                    return "sdt ncc";
+                    return "Số điện thoại sai định dạng";
                     // lblValidatedDienThoai.Visible = true;
                     //   check = false;
                 }
@@ -202,12 +202,9 @@ namespace BLL
                 return "CCCD còn trống!";
             else
             {
-                //độ dài là 12 chữ số, bắt đầu bằng số 0
-                if (Regex.IsMatch(nhanVien.CCCD1, @"(0)+([1-9]{11})\b") != true)
+                if (Regex.IsMatch(nhanVien.CCCD1, @"(0)+([0-9]{11})\b") != true)
                 {
-                    // lblValidatedCCCD.Visible = true;
-                    // check = false;
-                    return "CCCD ncc";
+                    return "Căn cước công dân không hợp lệ";
                 }
             }
             if (nhanVien.MaChinhSach == "")

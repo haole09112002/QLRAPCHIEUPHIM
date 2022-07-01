@@ -11,7 +11,7 @@ namespace GUI.AD_GUI
         private string maNhaCungCap;
         public delegate void Mydel(string maNhaCungCap, string txt, string tieuChi);
         public Mydel d { get; set; }
-         
+      
         public frmThemNhaCungCap(string maNhaCungCap = "")
         {
             InitializeComponent();

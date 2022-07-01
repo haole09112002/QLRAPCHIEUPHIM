@@ -39,7 +39,7 @@ namespace GUI.AD_GUI
         public void ReloadDK(string TimKiem = "", string LoaiTimKiem = "")
         {
             dtDanhSachLichChieuDuKien.Rows.Clear();
-            foreach (LichChieuViewDTO i in LichChieuViewBLL.Instance.GetLichChieuViewByTrangThai("1", TimKiem, LoaiTimKiem))
+            foreach (LichChieuViewDTO i in LichChieuViewBLL.Instance.GetLichChieuDuKien("1", TimKiem, LoaiTimKiem))
             {
                 dtDanhSachLichChieuDuKien.Rows.Add(i.MaPhim, i.TenPhim, i.MaPhongChieu, i.TenPhongChieu, i.MaKhungGioChieu, i.GioBatDau.ToShortTimeString(), i.GioKetThuc.ToShortTimeString(), i.NgayChieu.ToShortDateString());
             }
@@ -62,7 +62,7 @@ namespace GUI.AD_GUI
         public void ReloadCT(string TimKiem = "", string LoaiTimKiem = "")
         {
             dtDanhSachLichChieuChinhThuc.Rows.Clear();
-            foreach (LichChieuViewDTO i in LichChieuViewBLL.Instance.GetLichChieuViewByTrangThai("2", TimKiem, LoaiTimKiem))
+            foreach (LichChieuViewDTO i in LichChieuViewBLL.Instance.GetLichChieuDuKien("2", TimKiem, LoaiTimKiem))
             {
                 dtDanhSachLichChieuChinhThuc.Rows.Add(i.MaPhim, i.TenPhim, i.MaPhongChieu, i.TenPhongChieu, i.MaKhungGioChieu, i.GioBatDau.ToShortTimeString(), i.GioKetThuc.ToShortTimeString(), i.NgayChieu.ToShortDateString());
             }

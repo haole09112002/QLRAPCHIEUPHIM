@@ -97,8 +97,6 @@ namespace GUI.AD_GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-
-
             string maThucAn = txtMaThucAn.Text;
             string DonViTinh = cbDonViTinh.SelectedItem.ToString();
             string GiaTien = txtGiaTien.Text;
@@ -167,10 +165,9 @@ namespace GUI.AD_GUI
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            HopDongDTO hopDong = new HopDongDTO();
             if (cbTenCungCap.SelectedIndex >= 0)
             {
-                hopDong = new HopDongDTO
+                HopDongDTO hopDong = new HopDongDTO
                 {
                     MaHopDong = maHopDong,
                     TenHopDong = txtTenHopDong.Text,
