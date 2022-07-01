@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cBTimKiem = new System.Windows.Forms.ComboBox();
             this.btnSapXep = new System.Windows.Forms.Button();
@@ -38,6 +38,7 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dGVDanhSachLichChieuDuKien = new System.Windows.Forms.DataGridView();
+            this.cbLichChieuBiTuChoi = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDanhSachLichChieuDuKien)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbLichChieuBiTuChoi);
             this.panel1.Controls.Add(this.cBTimKiem);
             this.panel1.Controls.Add(this.btnSapXep);
             this.panel1.Controls.Add(this.cBSapXep);
@@ -149,31 +151,43 @@
             // 
             this.dGVDanhSachLichChieuDuKien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVDanhSachLichChieuDuKien.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGVDanhSachLichChieuDuKien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVDanhSachLichChieuDuKien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dGVDanhSachLichChieuDuKien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGVDanhSachLichChieuDuKien.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVDanhSachLichChieuDuKien.DefaultCellStyle = dataGridViewCellStyle4;
             this.dGVDanhSachLichChieuDuKien.Location = new System.Drawing.Point(24, 100);
             this.dGVDanhSachLichChieuDuKien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dGVDanhSachLichChieuDuKien.Name = "dGVDanhSachLichChieuDuKien";
             this.dGVDanhSachLichChieuDuKien.ReadOnly = true;
             this.dGVDanhSachLichChieuDuKien.RowHeadersWidth = 62;
             this.dGVDanhSachLichChieuDuKien.RowTemplate.Height = 28;
-            this.dGVDanhSachLichChieuDuKien.Size = new System.Drawing.Size(1274, 621);
+            this.dGVDanhSachLichChieuDuKien.Size = new System.Drawing.Size(1274, 604);
             this.dGVDanhSachLichChieuDuKien.TabIndex = 40;
+            // 
+            // cbLichChieuBiTuChoi
+            // 
+            this.cbLichChieuBiTuChoi.AutoSize = true;
+            this.cbLichChieuBiTuChoi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbLichChieuBiTuChoi.Location = new System.Drawing.Point(581, 709);
+            this.cbLichChieuBiTuChoi.Name = "cbLichChieuBiTuChoi";
+            this.cbLichChieuBiTuChoi.Size = new System.Drawing.Size(190, 23);
+            this.cbLichChieuBiTuChoi.TabIndex = 49;
+            this.cbLichChieuBiTuChoi.Text = "Lịch chiếu bị từ chối";
+            this.cbLichChieuBiTuChoi.UseVisualStyleBackColor = true;
+            this.cbLichChieuBiTuChoi.CheckedChanged += new System.EventHandler(this.cbLichChieuBiTuChoi_CheckedChanged);
             // 
             // UC_DanhSachLichChieuDuKien_QLP
             // 
@@ -202,5 +216,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dGVDanhSachLichChieuDuKien;
         private System.Windows.Forms.ComboBox cBTimKiem;
+        private System.Windows.Forms.CheckBox cbLichChieuBiTuChoi;
     }
 }
